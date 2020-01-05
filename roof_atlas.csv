@@ -1,0 +1,6 @@
+name;count;rows;position;size;
+512x128
+roof_left;1;1;0x0;156x128
+roof_right;1;1;356x0;156x128
+roof_tile;2;1;156x0;200x128
+

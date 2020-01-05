@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<root>
+    <ani name="creature_dies" frames="6" framerate="7" continuously="false" order="1234567">
+        <layers>
+            <layer name="" file="gfx\characters\dead_anm" scale="0.500000" frames="6" show="true" height="206">
+                <moves>
+                    <move pos="0,0" />
+                </moves>
+            </layer>
+        </layers>
+    </ani>
+
+  <ani name="beetle_nest_die" frames="6" framerate="8" continuously="false" order="1234567" ani_scale="3">
+    <layers>
+      <layer name="" file="gfx\characters\dead_anm" scale="0.500000" frames="6" show="true" height="206"/>
+    </layers>
+  </ani>
+    <ani name="aquarium" frames="4" framerate="7" continuously="true">
+        <layers>
+            <layer name="" file="gfx\level_tiles\craft_obj\aquarium_anim" scale="0.600000" frames="4" show="true" height="100">
+                <moves>
+                    <move pos="0,0" />
+                </moves>
+            </layer>
+        </layers>
+    </ani>
+    <ani name="clock1" frames="8" framerate="10" continuously="true" order="12345678765432">
+        <layers>
+            <layer name="clock" file="gfx\level_tiles\craft_obj\clock_1" scale="0.600000" frames="1" show="true" height="100">
+                <moves>
+                    <move pos="0,0" />
+                </moves>
+            </layer>
+            <layer name="anim" file="gfx\level_tiles\craft_obj\clock_1_anim" scale="0.600000" frames="8" show="true" height="29">
+                <moves>
+                    <move pos="-0.13,20.44" />
+                </moves>
+            </layer>
+        </layers>
+    </ani>
+    <ani name="clock2" frames="7" framerate="7" continuously="true" order="123456765432">
+        <layers>
+            <layer name="clock" file="gfx\level_tiles\craft_obj\clock_2" scale="0.600000" frames="1" show="true" height="200">
+                <moves>
+                    <move pos="0,-29.98" />
+                </moves>
+            </layer>
+            <layer name="anim" file="gfx\level_tiles\craft_obj\clock_2_anim" scale="0.600001" frames="7" show="true" height="89">
+                <moves>
+                    <move pos="0.01,-18.57" />
+                </moves>
+            </layer>
+        </layers>
+    </ani>
+    <ani name="weaving_machine" frames="20" framerate="15" continuously="true">
+        <layers>
+            <layer name="layer1" file="gfx\level_tiles\craft_obj\workshops\weaving_machine_1" scale="0.600000" frames="1" show="true" height="121">
+                <moves>
+                    <move pos="0,-6.31" />
+                </moves>
+            </layer>
+            <layer name="layer2" file="gfx\level_tiles\craft_obj\workshops\weaving_machine_2" scale="0.600000" frames="1" show="true" height="31">
+                <moves>
+                    <move pos="0,-20" />
+                    <move pos="0,-17.20" />
+                    <move pos="0,-14.40" />
+                    <move pos="0,-11.60" />
+                    <move pos="0,-8.80" />
+                    <move pos="0,-6" />
+                    <move pos="0,-3.20" />
+                    <move pos="0,-0.40" />
+                    <move pos="0,2.40" />
+                    <move pos="0,5.20" />
+                    <move pos="0,8" />
+                    <move pos="0,5.09" />
+                    <move pos="0,2.19" />
+                    <move pos="0,-0.71" />
+                    <move pos="0,-3.61" />
+                    <move pos="0,-6.52" />
+                    <move pos="0,-9.42" />
+                    <move pos="0,-12.33" />
+                    <move pos="0,-15.23" />
+                    <move pos="0,-18.12" />
+                </moves>
+            </layer>
+        </layers>
+    </ani>
+</root>

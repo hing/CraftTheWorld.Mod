@@ -1,0 +1,6 @@
+name;count;rows;position;size;
+256x256
+bridge_center;2;1;0x0;200x100
+bridge_tile;2;1;0x200;200x56
+bridge_edge;1;1;0x100;100x100
+bridge_column;1;1;100x100;100x100

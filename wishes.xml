@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Пожелания -->
+<!-- Описание параметров: -->
+<!-- 'before' - задержка перед первым показом, сек.  -->
+<!-- 'show' - время показа, сек.  -->
+<!-- 'interval' - задержка перед следующим показом, сек.  -->
+<!-- 'showcounts' - количество показов.  -->
+<root>
+  <wish name="idle_day1" icon="gfx\characters\Ico_Char_emot\happy" before="4-20" show="4" interval="0" showcounts="1"/>
+  <wish name="idle_day2" icon="gfx\characters\Ico_Char_emot\mood02" before="4-20" show="4" interval="0" showcounts="1"/>
+  <wish name="idle_night1" icon="gfx\characters\Ico_Char_emot\night" before="4-20" show="4" interval="0" showcounts="1"/>
+
+  <wish name="idle_common1" icon="gfx\characters\Ico_Char_emot\mood01" before="4-20" show="4" interval="0" showcounts="1"/>
+  <wish name="idle_common2" icon="gfx\characters\Ico_Char_emot\mood03" before="4-20" show="4" interval="0" showcounts="1"/>
+  <wish name="idle_common3" icon="gfx\characters\Ico_Char_emot\mood04" before="4-20" show="4" interval="0" showcounts="1"/>
+  <wish name="idle_common4" icon="gfx\characters\Ico_Char_emot\mood05" before="4-20" show="4" interval="0" showcounts="1"/>
+  <wish name="idle_common5" icon="gfx\characters\Ico_Char_emot\mood06" before="4-20" show="4" interval="0" showcounts="1"/>
+
+  
+  <wish name="nobed" icon="gfx\characters\Ico_Char_emot\no_bed" before="5" show="6" interval="300"/>
+  <wish name="hangry" icon="gfx\characters\Ico_Char_emot\hangry" before="0" show="6" interval="60"/>
+  <wish name="inwater" icon="gfx\ui\icons\events\char_in_water" before="0" show="6" interval="20"/>
+  <wish name="want_sleep" icon="gfx\characters\Ico_Char_emot\want_sleep" before="0" show="6" interval="60"/>
+  <!--<wish name="dialog" icon="" before="0" show="3" interval="60" showcounts="1"/>-->
+  <wish name="waiting" icon="gfx\characters\Ico_Char_emot\waiting" before="1" show="5" interval="1" showcounts="0"/>
+  <wish name="need_home" icon="gfx\characters\Ico_Char_emot\21" before="0" show="6" interval="60"/>
+
+  <wish name="thinking" icon="gfx\characters\Ico_Char_emot\looking_for_way" before="1" show="6" interval="1" showcounts="0"/>
+  <wish name="noway" icon="gfx\characters\Ico_Char_emot\no_way" before="0" show="6" interval="5" showcounts="1"/>
+  <wish name="cant_dive" icon="gfx\characters\Ico_Char_emot\cant_swim" before="0" show="6" interval="5" showcounts="1"/>
+  <wish name="scared" icon="gfx\characters\Ico_Char_emot\scared" before="0" show="6" interval="5" showcounts="1"/>
+  
+  <wish name="low_energy" icon="gfx\characters\Ico_Char_emot\energy_low" before="0" show="6" interval="60"/>
+</root>

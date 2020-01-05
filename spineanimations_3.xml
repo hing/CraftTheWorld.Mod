@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<root>
+    <animations pak="Highland DLC">
+        <big_carpenter_hl path="gfx/HighlandDLC/spine/buildings/big_carpenter_hl" json="big_carpenter_hl.json" scale="0.300000" mirror="false">
+            <mixing all="true" />
+        </big_carpenter_hl>
+        <big_forge_hl path="gfx/HighlandDLC/spine/buildings/big_forge_hl" json="big_forge_hl.json" scale="0.300000" mirror="false">
+            <mixing all="true" />
+        </big_forge_hl>
+        <big_kitchen_hl path="gfx/HighlandDLC/spine/buildings/big_kitchen_hl" json="big_kitchen_hl.json" scale="0.300000" mirror="false">
+            <mixing all="true" />
+        </big_kitchen_hl>
+        <big_workshop_hl path="gfx/HighlandDLC/spine/buildings/big_workshop_hl" json="big_workshop_hl.json" scale="0.300000" mirror="false">
+            <mixing all="true" />
+        </big_workshop_hl>
+        <kitchen_hl path="gfx/HighlandDLC/spine/buildings/kitchen_hl" json="kitchen_hl.json" scale="0.300000" mirror="false">
+            <mixing all="true" />
+        </kitchen_hl>
+        <big_laboratory_hl path="gfx/HighlandDLC/spine/buildings/big_laboratory_hl" json="big_laboratory_hl.json" scale="0.300000" mirror="false">
+            <mixing all="true" />
+        </big_laboratory_hl>
+        <Elf_merchant path="gfx/HighlandDLC/spine/environment/Elf_merchant" json="Elf_merchant.json" scale="0.350000" mirror="false">
+            <mixing all="true" />
+        </Elf_merchant>
+        <Garklan path="gfx/HighlandDLC/spine/characters/Garklan" json="garklan.json" scale="0.296000" mirror="true">
+            <mixing all="true" />
+        </Garklan>
+        <ram path="gfx/HighlandDLC/spine/characters/ram" json="ram.json" scale="0.230000" mirror="true">
+            <mixing all="true" />
+            <settings>
+                <walk for_speed="37" />
+                <walk2 for_speed="37" />
+            </settings>
+        </ram>
+        <cave_orcs_buildings path="gfx/HighlandDLC/spine/buildings/cave_orcs_buildings" json="cave_orcs_camp.json" scale="0.900000" mirror="false">
+            <mixing all="true" />
+        </cave_orcs_buildings>
+        <cave_orcs_hatch_01 path="gfx/HighlandDLC/spine/buildings/cave_orcs_buildings" json="cave_orcs_hatch_01.json" scale="0.500000" mirror="false">
+            <mixing all="true" />
+        </cave_orcs_hatch_01>
+        <cave_orcs_hatch_02 path="gfx/HighlandDLC/spine/buildings/cave_orcs_buildings" json="cave_orcs_hatch_02.json" scale="0.500000" mirror="false">
+            <mixing all="true" />
+        </cave_orcs_hatch_02>
+        <cave_orcs_hatch_03 path="gfx/HighlandDLC/spine/buildings/cave_orcs_buildings" json="cave_orcs_hatch_03.json" scale="0.500000" mirror="false">
+            <mixing all="true" />
+        </cave_orcs_hatch_03>
+        <cave_orcs_kitchen path="gfx/HighlandDLC/spine/buildings/cave_orcs_kitchen" json="cave_orcs_kitchen.json" scale="0.200000" mirror="false">
+            <mixing all="true" />
+        </cave_orcs_kitchen>
+        <cave_orcs_totem path="gfx/HighlandDLC/spine/buildings/cave_orcs_totem" json="cave_orcs_totem.json" scale="0.300000" mirror="false">
+            <mixing all="true" />
+        </cave_orcs_totem>
+        <royal_throne_dwarves path="gfx/HighlandDLC/spine/buildings/royal_throne_dwarves" json="royal_throne_dwarves.json" scale="0.833000" mirror="false">
+            <mixing all="true" />
+        </royal_throne_dwarves>
+        <cave_orcs_warrior path="gfx/HighlandDLC/spine/characters/cave_orcs_anim" json="orc_warrior.json" scale="0.280000" mirror="false">
+            <mixing all="true" />
+            <settings>
+                <front_walk_01 for_speed="85" />
+                <front_run for_speed="200" />
+            </settings>
+        </cave_orcs_warrior>
+        <Additional_warehouse_hl path="gfx/HighlandDLC/spine/environment/Additional_warehouse_hl" json="additional_warehouse_hl.json" scale="0.300000" mirror="false" offset="2.00,0.00">
+            <mixing all="true" />
+        </Additional_warehouse_hl>
+        <bg_plan_1 path="gfx/HighlandDLC/spine/backgrounds/1_plan" json="1_plan.json" scale="1" mirror="false">
+            <mixing all="true" />
+        </bg_plan_1>
+        <bg_plan_2 path="gfx/HighlandDLC/spine/backgrounds/2_plan" json="2_plan.json" scale="1" mirror="false">
+            <mixing all="true" />
+        </bg_plan_2>
+        <bg_plan_3 path="gfx/HighlandDLC/spine/backgrounds/3_plan" json="3_plan.json" scale="1" mirror="false">
+            <mixing all="true" />
+        </bg_plan_3>
+        <cave_orcs_archer path="gfx/HighlandDLC/spine/characters/cave_orcs_anim" json="orc_archer.json" scale="0.280000" mirror="false">
+            <mixing all="true" />
+            <settings>
+                <front_walk_01 for_speed="85" />
+                <front_run for_speed="200" />
+            </settings>
+        </cave_orcs_archer>
+        <gap_inside_mountain path="gfx/HighlandDLC/spine/environment/gap_inside_mountain" json="gap_inside_mountain.json" scale="0.296000" mirror="false">
+            <mixing all="true" />
+        </gap_inside_mountain>
+        <troll path="gfx/HighlandDLC/spine/characters/troll" json="troll.json" scale="0.349000" mirror="false">
+            <mixing all="true" />
+            <settings>
+                <walk_01 for_speed="127" />
+            </settings>
+        </troll>
+        <main_gnome_statue_01 path="gfx/HighlandDLC/spine/buildings/main_gnome_statue_01" json="main_gnome_statue_01.json" scale="0.410000" mirror="false">
+            <mixing all="true" />
+        </main_gnome_statue_01>
+        <main_gnome_statue_02 path="gfx/HighlandDLC/spine/buildings/main_gnome_statue_02" json="main_gnome_statue_02.json" scale="0.420000" mirror="false">
+            <mixing all="true" />
+        </main_gnome_statue_02>
+        <main_gate_hl path="gfx/HighlandDLC/spine/buildings/main_gate_hl" json="main_gate_hl.json" scale="0.410000" mirror="false">
+            <mixing all="true" />
+        </main_gate_hl>
+    </animations>
+</root>

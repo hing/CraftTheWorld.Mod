@@ -1,0 +1,5 @@
+<root>
+    <ammo_resource value="ammo"/>
+    <bone value="pistol"/>
+    <shoot_sound value="pirate_shot"/>
+</root>

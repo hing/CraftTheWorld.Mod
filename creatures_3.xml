@@ -1,0 +1,401 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+
+  <creature name="orc_mountain_warrior">
+    <params>
+      <ai value="BaseMob"/>
+      <ico value="cave_orcs_warrior_mini"/>
+      <height value="50"/>
+      <width value="30"/>
+      <scale value="1"/>
+      <healt value="9"/>
+      <walk_speed value="60"/>
+      <laden_speed value="40"/>
+      <climbs_speed value="40"/>
+      <climbs_ladder_speed value="50"/>
+      <radius value="8"/>
+      <fall_height value="10"/>
+      <attack value="0.6"/>
+      <healt_restore value="0.12%"/>
+      <water_die_time value="180"/>
+      <shot_time value="1"/>
+      <resources value="brains-1,goblin_spear-1-10,skin-1-15,rope-1-15,coal-1-10,silver-1-10,gold-1-10,mithril-1-10"/>
+      <through_doors value="true"/>
+    </params>
+    <behaviours>
+      <behaviour value="CaveOrcLogic" instantiate="host">
+        <totem_item value="cave_orcs_totem"/>
+        <weight_patrol value="20"/>
+        <weight_sleep value="5"/>
+        <!-- <weight_build_totem value="2"/> -->
+        <weight_idle value="30"/>
+        <weight_talk value="5"/>
+        <activity_radius value="12,20,30"/>
+      </behaviour>
+      <behaviour value="PathfindingBehaviour" instantiate="host">
+        <can_jump value="true"/>
+        <can_climb value="true"/>
+      </behaviour>
+      <behaviour value="MeleBattleBehaviour" instantiate="host"/>
+
+      <behaviour value="MobRenderBehaviour"/>
+      <behaviour value="MobActionsBehaviour"/>
+      <behaviour value="MobControlAnimationSpeed"/>
+      <behaviour value="SpineBehaviour">
+        <spine value="cave_orcs_warrior"/>
+      </behaviour>
+      <behaviour value="SpineSkinGroupsBehaviour" saveable="true">
+        <groups>
+          <skin value="armor_01,armor_02,armor_03"/>
+          <skin value="hair_01,hair_02"/>
+          <skin value="weapon_01,weapon_02,weapon_03,weapon_04"/>
+        </groups>
+      </behaviour>
+      <behaviour value="AnimationBehaviour">
+        <states>
+          <state name="idle" ani="front_main|5,front_main_01|5,front_main_02|5" loop="false" next="idle"/>
+          <state name="sleep" ani="front_sleep" loop="true" />
+          <state name="attack" ani="front_attack_01,front_attack_02" loop="true"/>
+          <state name="walk" ani="front_walk_01,front_walk_02" loop="false" next="walk"/>
+          <state name="run" ani="front_run" loop="true"/>
+          <state name="jump" ani="front_jump" loop="false" next="walk" />
+          <state name="die" ani="front_death" loop="false"/>
+
+          <state name="dance" ani="front_dance_01,front_dance_02,front_dance_03" loop="false" next="dance" random_time="true"/>
+          <state name="talk" ani="front_main_03_talk,front_main_04_talk,front_main_05_talk" loop="true"/>
+
+          <state name="climb" ani="back_climb_up" loop="true"/>
+          <state name="climb_idle" ani="back_climb_idle" loop="true"/>
+          <state name="climb_down" ani="back_climb_down" loop="true"/>
+
+          <mix from="climb,climb_down,climb_idle" duration="0"/>
+          <mix to="climb,climb_down,climb_idle" duration="0"/>
+
+        </states>
+      </behaviour>
+      <behaviour value="EventSoundBehaviour">
+        <event value="speak" sound="Orc - man - idle - speech" />
+      </behaviour>
+    </behaviours>
+    <sounds>
+      <ambient value="Orc - man - idle"/>
+      <die value="Orc - man - death"/>
+    </sounds>
+  </creature>
+
+  <creature name="orc_mountain_archer">
+    <params>
+      <ai value="BaseMob"/>
+      <ico value="cave_orcs_archer_mini"/>
+      <height value="50"/>
+      <width value="30"/>
+      <scale value="1"/>
+      <healt value="6"/>
+      <walk_speed value="70"/>
+      <laden_speed value="40"/>
+      <climbs_speed value="40"/>
+      <climbs_ladder_speed value="50"/>
+      <radius value="8"/>
+      <fall_height value="10"/>
+      <attack value="0.4"/>
+      <healt_restore value="0.16%"/>
+      <water_die_time value="180"/>
+      <shot_time value="1"/>
+      <resources value="brains-1,rope-1-15,coal-1-10,silver-1-10,gold-1-10,mithril-1-10"/>
+      <through_doors value="true"/>
+    </params>
+    <behaviours>
+      <behaviour value="CaveOrcLogic" instantiate="host">
+        <totem_item value="cave_orcs_totem"/>
+        <weight_patrol value="20"/>
+        <weight_sleep value="5"/>
+        <weight_idle value="30"/>
+        <weight_talk value="5"/>
+        <activity_radius value="12,20,30"/>
+      </behaviour>
+      <behaviour value="PathfindingBehaviour" instantiate="host">
+        <can_jump value="true"/>
+        <can_climb value="true"/>
+      </behaviour>
+      <behaviour value="DistanceBattleBehaviour" instantiate="host">
+        <ammo_resource value="bow_arrow"/>
+        <bone value="bow"/>
+        <shoot_sound value="bow"/>
+      </behaviour>
+
+      <behaviour value="MobRenderBehaviour"/>
+      <behaviour value="MobActionsBehaviour"/>
+      <behaviour value="MobControlAnimationSpeed"/>
+      <behaviour value="SpineBehaviour">
+        <spine value="cave_orcs_archer"/>
+      </behaviour>
+      <behaviour value="SpineSkinGroupsBehaviour" saveable="true">
+        <groups>
+          <skin value="armor_01,armor_02,armor_03"/>
+          <skin value="hair_01,hair_02,hair_03"/>
+          <skin value="weapon_01,weapon_02,weapon_03"/>
+        </groups>
+      </behaviour>
+      <behaviour value="AnimationBehaviour">
+        <states>
+          <state name="idle" ani="front_main|5,front_main_01|5,front_main_02|5" loop="false" next="idle"/>
+          <state name="sleep" ani="front_sleep" loop="true" />
+          <state name="attack" ani="front_attack_01,front_attack_02" loop="true"/>
+          <state name="walk" ani="front_walk_01" loop="true"/>
+          <state name="run" ani="front_run" loop="true"/>
+          <state name="jump" ani="front_jump" loop="false" next="walk" />
+          <state name="die" ani="front_death" loop="false"/>
+
+          <state name="dance" ani="front_dance_01,front_dance_02" loop="false" next="dance" random_time="true"/>
+          <state name="talk" ani="front_main_03_talk,front_main_04_talk" loop="false"/>
+
+          <state name="climb" ani="back_climb_up" loop="true"/>
+          <state name="climb_down" ani="back_climb_down" loop="true"/>
+
+        </states>
+      </behaviour>
+      <behaviour value="EventSoundBehaviour">
+        <event value="speak" sound="Orc - fem - idle - speech" />
+      </behaviour>
+    </behaviours>
+    <sounds>
+      <ambient value="Orc - fem - idle"/>
+      <die value="Orc - fem - death"/>
+    </sounds>
+  </creature>
+
+
+  <creature name="kozel">
+    <params>
+      <group value="animal"/>
+      <ico value="ram_mini"/>
+      <ai value="yak"/>
+      <height value="45"/>
+      <width value="50"/>
+      <healt value="10"/>
+      <walk_speed value="90"/>
+      <climbs_speed value="10"/>
+      <radius value="3"/>
+      <fall_height value="10"/>
+      <over_high value="1"/>
+      <!--может преодолевать высоту-->
+      <jump_down value="1"/>
+      <!--может спрыгивать с высоты-->
+      <escape_distance value="2"/>
+      <!--расстояние, на которое старается убежать при атаке -->
+      <attack value="0.15"/>
+      <attack_healt value="20%" />
+      <!--мин. кол. жизни для атаки человечка в %-->
+      <resources value="skin-1|2,meat-2|5,bone-2|3,fat-3|5"/>
+      <water_die_time value="30"/>
+      <shot_time value="1.3"/>
+      <grazing value="4" />
+    </params>
+    <sounds>
+      <ambient value="Kozel scream"/>
+      <die value="Kozel death"/>
+      <attack value="hit"/>
+      <step value="Kozel step"/>
+
+    </sounds>
+    <animations>
+      <ani name="cantdo" ani="ram\idle_01"/>
+      <ani name="idle" ani="ram\idle_01,idle_02,idle_03"/>
+      <ani name="stop" ani="ram\idle_01"/>
+      <ani name="move" ani="ram\walk"/>
+      <ani name="action" ani="ram\attack_01,attack_02"/>
+      <ani name="climb" ani="ram\walk,walk2"/>
+      <ani name="jump" ani="ram\jump"/>
+      <ani name="dies_end" ani="ram\death"/>
+    </animations>
+  </creature>
+
+  <creature name="garklan">
+    <params>
+      <ico value="garklan_mini"/>
+      <group value="animal"/>
+      <ai value="chicken"/>
+      <height value="38"/>
+      <width value="30"/>
+      <healt value="2"/>
+      <walk_speed value="100"/>
+      <climbs_speed value="100"/>
+      <radius value="3"/>
+      <fall_height value="100"/>
+      <over_high value="3"/>
+      <jump_down value="10000"/>
+      <escape_distance value="1"/>
+      <resources value="egg-2|3,feather-2|3"/>
+      <water_die_time value="30"/>
+      <can_catch value="true"/>
+      <farm_population_ratio value="0.1"/>
+      <farm_resource value="egg"/>
+    </params>
+    <sounds>
+      <ambient value="Garklan_scream"/>
+      <die value="Garklan_death"/>
+    </sounds>
+    <animations>
+      <ani name="cantdo" ani="Garklan\main"/>
+      <ani name="idle" ani="Garklan\main"/>
+      <ani name="stop" ani="Garklan\main"/>
+      <ani name="move" ani="Garklan\walk_run"/>
+      <ani name="climb" ani="Garklan\jump"/>
+      <ani name="jump" ani="Garklan\jump"/>
+      <ani name="fall" ani="Garklan\jump"/>
+      <ani name="dies_end" ani="Garklan\death"/>
+    </animations>
+  </creature>
+
+
+  <creature name="goblin_mountain_worker">
+    <params>
+      <ico value="cave_goblin"/>
+      <ai value="BaseMob"/>
+      <beastiary_name value="cave_goblin"/>
+      <height value="50"/>
+      <width value="30"/>
+      <scale value="1"/>
+      <healt value="4"/>
+      <walk_speed value="90"/>
+      <laden_speed value="40"/>
+      <climbs_speed value="40"/>
+      <climbs_ladder_speed value="50"/>
+      <radius value="8"/>
+      <fall_height value="10"/>
+      <attack value="0.1"/>
+      <healt_restore value="0.16%"/>
+      <water_die_time value="180"/>
+      <shot_time value="1"/>
+      <resources value="brains-1-30,cave_goblin_spear-1-20,coal-1-20"/>
+      <through_doors value="true"/>
+    </params>
+    <behaviours>
+      <behaviour value="CaveOrcLogic" instantiate="host">
+        <totem_item value="cave_orcs_totem"/>
+        <weight_patrol value="20"/>
+        <weight_sleep value="0"/>
+        <weight_idle value="30"/>
+        <weight_talk value="0"/>
+        <weight_dig value="5"/>
+        <dig_timeout value="20"/>
+      </behaviour>
+      <behaviour value="PathfindingBehaviour" instantiate="host">
+        <can_jump value="true"/>
+      </behaviour>
+      <behaviour value="MeleBattleBehaviour" instantiate="host"/>
+
+      <behaviour value="MobRenderBehaviour"/>
+      <behaviour value="MobActionsBehaviour"/>
+      <behaviour value="MobControlAnimationSpeed"/>
+      <behaviour value="SpineBehaviour">
+        <spine value="cave_goblin"/>
+        <skins value="cave_goblin_01,cave_goblin_02,cave_goblin_03"/>
+      </behaviour>
+      <behaviour value="SpineSlotsVisibilityBehaviour">
+        <slots>
+          <show slots="cloths" chance="0.5"/>
+          <hide slots="shoulder,armor,helmet,helmet_back,weapon/goblin_shield,arm2_weapon"/>
+        </slots>
+      </behaviour>
+      <behaviour value="SpineSlotsAttachmentsBehaviour">
+        <slots>
+          <slot name="weapon" attachments="weapon/goblin_picke"/>
+        </slots>
+      </behaviour>
+      <behaviour value="AnimationBehaviour">
+        <states>
+          <state name="idle" ani="main_01" loop="false" next="idle"/>
+          <state name="sleep" ani="front_sleep" loop="true" />
+          <state name="attack" ani="attack_pickaxe" loop="true"/>
+          <state name="walk" ani="walk" loop="false" next="walk"/>
+          <state name="run" ani="walk_run" loop="true"/>
+          <state name="jump" ani="jump_point" loop="false" next="walk" />
+          <state name="die" ani="death" loop="false"/>
+
+          <state name="dance" ani="main_01" loop="false" next="dance" random_time="true"/>
+          <state name="talk" ani="main_01" loop="true"/>
+
+          <state name="climb" ani="climb_up" loop="true"/>
+          <state name="climb_down" ani="back_climb_down" loop="true"/>
+        </states>
+      </behaviour>
+    </behaviours>
+    <sounds>
+      <ambient value="cave_goblin_ambient"/>
+      <die value="cave_goblin_death"/>
+      <dig value="cave_goblin_dig"/>
+    </sounds>
+  </creature>
+
+  <creature name="troll">
+    <params>
+      <ico value="troll_mini"/>
+      <ai value="Troll"/>
+      <height value="170"/>
+      <width value="120"/>
+      <scale value="1" />
+      <healt value="150"/>
+      <walk_speed value="90"/>
+      <climbs_speed value="60"/>
+      <radius value="7"/>
+      <attack value="1.0"/>
+      <resources value="gold-3|5,mithril-1|3"/>
+      <shot_time value="5"/>
+      <arrow_resist value="3"/>
+      <attack_distance value="2"/>
+      <habitat_radius value="5"/>
+      <spine value="troll"/>
+    </params>
+    <behaviours>
+      <behaviour value="MobControlAnimationSpeed"/>
+      <behaviour value="EventSoundBehaviour">
+        <event value="step" sound="Troll step" />
+        <event value="attack" sound="skeleton_boss_hit" />
+      </behaviour>
+      <behaviour value="EventInstantiateBehaviour">
+        <event value="knockout">
+          <gameobject size="2,1.5">
+            <behaviour value="BoneAttachBehaviour">
+              <bone value="leg2_3_feet2" />
+              <offset value="0,0" />
+            </behaviour>
+            <behaviour value="StunBehaviour">
+              <chance value="0.2" />
+            </behaviour>
+            <behaviour value="DestroyDurationBehaviour">
+              <duration value="0.5" />
+            </behaviour>
+          </gameobject>
+        </event>
+        <event value="step,attack">
+          <behaviour value="EarthQuakeBehaviour">
+            <freq value="5" />
+            <amp value="2" />
+            <duration value="0.3" />
+          </behaviour>
+        </event>
+      </behaviour>
+    </behaviours>
+    <sounds>
+      <ambient value="Troll - IDLE"/>
+      <battle value="Troll - battle cry"/>
+      <die value="Troll - Scream of Death"/>
+    </sounds>
+    <animation_states>
+      <state name="idle" ani="main|5,main_talk|1" loop="false" next="idle"/>
+      <state name="move" ani="walk_01" loop="true"/>
+      <state name="sleep" ani="sleep" loop="true"/>
+      <!-- <state name="sleep" ani="to_sleep" loop="false" next="sleep_idle" denied="sleep_idle"/> -->
+      <!-- <state name="sleep_idle" ani="sleep" loop="true"/> -->
+      <!-- <state name="wakeup" ani="to_idle" loop="false" next="idle" allow="sleep_idle"/> -->
+      <state name="attack" ani="attack_01,attack_02" loop="false" next="idle"/>
+      <state name="die" ani="death" loop="false"/>
+      <state name="dance" ani="dance_01" loop="true"/>
+
+      <transition from="sleep" to="idle" ani="to_idle" />
+      <transition from="sleep" to="attack" ani="to_idle" />
+      <transition from="idle" to="sleep" ani="to_sleep" />
+    </animation_states>
+  </creature>
+</root>

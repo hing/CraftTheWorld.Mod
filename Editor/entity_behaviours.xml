@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+    <template name="static">
+    </template>
+
+    <template name="main_portal">
+        <params>
+            <param name="skin_normal" value="skin_normal" type="skin" source_prop="spine"/>
+            <param name="skin_biom" value="skin_biom" type="skin" source_prop="spine"/>
+            <param name="skin_normal1" value="skin_normal_damage_5" type="skin" source_prop="spine"/>
+            <param name="skin_normal2" value="skin_normal_damage_25" type="skin" source_prop="spine"/>
+            <param name="skin_normal3" value="skin_normal_damage_50" type="skin" source_prop="spine"/>
+            <param name="skin_normal4" value="skin_normal_damage_75" type="skin" source_prop="spine"/>
+
+            <param name="event_portal" value="open_portal" type="event" source_prop="spine"/>
+            <param name="event_spawn" value="spawn" type="event" source_prop="spine"/>
+        </params>
+        <states>
+            <state name="none"/>
+            <state name="cut" loop="false" ani="cut,cut2,cut3" next_state="idle"/>
+            <state name="idle" loop="true" ani="main"/>
+            <state name="arrival" loop="false" ani="arrival" next_state="idle"/>
+            <state name="portaling" loop="false" ani="new_dwarf" next_state="idle"/>
+            <state name="portaling_biome" loop="false" ani="new_dwarf" next_state="biome_search_begin"/>
+            <state name="biome_search_begin" loop="false" ani="biom_portal_begin" next_state="biome_search"/>
+            <state name="biome_search" loop="true" ani="biom_portal"/>
+            <state name="biome_search_end" loop="false" ani="biom_portal_end" next_state="idle"/>
+            <state name="die" loop="false" ani="explosion" next_state="dead"/>
+            <state name="dead" loop="true" ani="main"/>
+        </states>
+    </template>
+    <template name="elevator">
+        <params>
+            <param name="tunnel_end" value="elevator_bottom" type="spine"/>
+            <param name="sound" value="elevator" type="sound"/>
+            <param name="idle" value="off" type="ani" source_prop="spine"/>
+            <param name="working" value="on" type="ani" source_prop="spine"/>
+        </params>
+        <images>
+            <image file="gfx\Spine\buildings\elevator\ropes" tooltip="rope"/>
+            <image file="gfx\Spine\buildings\elevator\edge" tooltip="floor"/>
+            <image file="gfx\Spine\buildings\elevator\vagon_back" tooltip="vagon back"/>
+            <image file="gfx\Spine\buildings\elevator\vagon_front" tooltip="vagon front"/>
+        </images>
+    </template>
+    <template name="totem">   
+        <params>
+            <param name="mood0" value="angry" type="ani" source_prop="spine"/>
+            <param name="mood1" value="sad" type="ani" source_prop="spine"/>
+            <param name="mood2" value="neutral" type="ani" source_prop="spine"/>
+            <param name="mood3" value="smile" type="ani" source_prop="spine"/>
+            <param name="mood4" value="happy" type="ani" source_prop="spine"/>
+        </params>
+    </template>
+    <template name="device">
+        <params>
+            <param name="front_spine" value="device_front"  type="spine" tooltip="spine prefab or file for front layer"/>
+            <param name="front_off" value="idle" type="ani" source="front_spine" tooltip="idle animation"/>
+            <param name="front_on" value="idle" type="ani" source="front_spine" tooltip="working animation"/>
+            <param name="back_spine" value="device" type="spine" tooltip="spine prefab or file for back layer"/>
+            <param name="back_off" value="idle" type="ani" source="back_spine" tooltip="idle animation"/>
+            <param name="back_on" value="working" type="ani" source="back_spine" tooltip="working animation"/>
+            <param name="dust" value="trash_stone" tooltip="block name for device after destroying"/>
+            <param name="sound_work" value="" type="sound"/>
+        </params>
+    </template>  
+    <template name="arrow_tower">
+      <params>
+        <param name="idle" value="main" type="ani" source_prop="spine"/>
+        <param name="attack_up_30" value="attack_up_30" type="ani" source_prop="spine"/>
+        <param name="attack_up_60" value="attack_up_60" type="ani" source_prop="spine"/>
+        <param name="attack" value="attack_forw" type="ani" source_prop="spine"/>
+        <param name="attack_down_30" value="attack_down_30" type="ani" source_prop="spine"/>
+        <param name="attack_down_60" value="attack_down_60" type="ani" source_prop="spine"/>
+        <param name="barrel_bone" value="arrow_point"  type="bone" source_prop="spine"/>
+        <param name="sound_shot" value="bow" type="sound"/>
+        <param name="bullet" value="tower_arrow" type="resource"/>
+        <param name="damage" value="0.7" type="float"/>
+        <param name="event_attack" value="attack" type="event" source_prop="spine"/>
+    </params>
+    </template>  
+    <template name="catapult_tower">
+      <states>
+        <state name="idle" loop="true" ani="idle"/>
+        <state name="attack" loop="false" ani="attack" next_state="idle"/>
+        <state name="death" loop="false" ani="dead"/>
+      </states>
+      <params>
+        <param name="core_slot" value="core" type="slot" source_prop="spine"/>
+        <param name="charge_event" value="core_on" type="event" source_prop="spine"/>
+        <param name="attack_event" value="core_off" type="event" source_prop="spine"/>
+      </params>
+    </template>
+    <template name="trap">
+      <params>
+        <param name="attack" value="iron_trap_closing" type="ani" source_prop="spine"/>
+        <param name="sound_action" value="iron_trap" type="sound"/>
+      </params>
+    </template>
+    <template name="staging" draw_to_chunks="true">
+    </template>
+
+    <template name="static_portal">
+      <states>
+        <state name="off_idle" loop="true" ani="off"/>
+        <state name="on" loop="false" ani="off_to_on" next_state="on_idle"/>
+        <state name="on_idle" loop="false" ani="on" next_state="on_idle"/>
+        <state name="off" loop="false" ani="on_to_off" next_state="off_idle"/>
+      </states>
+      <params>
+        <param name="sound_on" value="gate_on" type="sound"/>
+        <param name="sound_off" value="gate_off" type="sound"/>
+        <param name="use_mana" value="1" type="float"/>
+        <param name="effect_portal_entity" value="mportal_s"/>
+      </params>
+    </template>
+
+    <template name="dig_machine">
+        <params>
+            <param name="wheel_bones" value="wheel1,wheel2,wheel1_back,wheel2_back" />
+            <param name="dig_effect" value="dig_machine_smoke" />
+            <param name="dig_ratio" value="2" type="float"/>
+            <param name="start_velocity" value="15" />
+            <param name="move_velocity" value="10" />
+            <param name="wheel_radius_coeff" value="3"  type="float"/>
+            <param name="rail_capacity" value="30" />
+            <param name="rail_res" value="rail"  type="resource"/>
+            <param name="bridge_capacity" value="10" />
+            <param name="bridge_res" value="stone_bridge" type="resource"/>
+            <param name="mana" value="1" />
+            <param name="mana_interval" value="60" />
+            <param name="auger_skin" value="iron_auger" type="skin" source_prop="spine"/>
+            <param name="light_on_event" value="light_on" type="event" source_prop="spine" />
+            <param name="light_off_event" value="light_off" type="event" source_prop="spine" />
+            <param name="light_bone" value="lamp2"  type="bone" source_prop="spine"/>
+        </params>
+        <states>
+            <state name="off" loop="true" ani="off" next_state="" />
+            <state name="warning" loop="true" ani="off_warning" next_state="" />
+            <state name="move" loop="true" ani="on" next_state="" />
+            <state name="dig" loop="true" ani="on_dig" next_state="" />
+            <state name="turning_on" loop="false" ani="off_to_on" next_state="move" />
+            <state name="turning_off" loop="false" ani="on_to_off" next_state="off" />
+        </states>
+    </template>
+
+    <template name="pirate_cannon" gameobject="PirateCannonEntity"/>
+    <template name="pirate_lighthouse" gameobject="PirateLighthouseEntity"/>
+    <template name="scorpio_base" gameobject="ScorpioBaseEntity"/>
+    <template name="incubator" gameobject="IncubatorEntity"/>
+    <template name="shop"/>
+
+    <template name="prison_door">
+        <states>
+            <state name="closed" loop="true" ani="closed" />
+            <state name="open" loop="false" ani="open" next_state="opened" />
+            <state name="opened" loop="true" ani="opened" />
+        </states>
+        <params>
+            <param name="drop" value="rune1,rune2,rune3,rune4,rune5,rune6" />
+            <param name="baseChance" value="5" />
+            <param name="crash_drop" value="stone-5|10,iron-4|6" />
+            <param name="low_monsters" value="skeleton,zombie,zombie_solder" />
+            <param name="high_monsters" value="zombie_boost,zombie" />
+        </params>
+    </template>
+    <item name="ancient_door">
+        <states>
+            <state name="closed" loop="true" ani="closed" />
+            <state name="open" loop="false" ani="open" next_state="opened" />
+            <state name="opened" loop="true" ani="opened" />
+        </states>
+        <params>
+            <param name="drop" value="regen_ring1,regen_ring2,regen_ring3,skills_ring1,skills_ring2,skills_ring3,undead_amulet1,undead_amulet2,undead_amulet3,miner_amulet1,miner_amulet2,miner_amulet3" />
+            <param name="baseChance" value="20" />
+            <param name="crash_drop" value="stone-5|10,iron-4|6" />
+        </params>
+    </item>
+    <item name="std_building"/>
+</root>

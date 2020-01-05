@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+<!-- 
+This file specifies weights and other conditions for the spawn of monsters during a night attack.
+For multiplayer mode.
+
+  attributes:
+name - unique name of creature
+weight - weight, which is the ratio of all monsters in the wave
+level - the player's level after which this monster will start to spawn
+count - number of monsters forming a unit
+type - type of attack, or place of spawn: air, ground or underground
+exclude_planets - a list of planets separated by a comma on which this monster will not spawns
+necessarily - monster appears anyway
+ -->
+  <ratios>
+    <!-- 
+    <ratio name="gargoyley" weight="5" level="8" count="4" type="air"/>
+    <ratio name="skeleton" weight="10" count="5" necessarily="true" type="ground"/>
+    <ratio name="skeleton_archer" value="15" exclude_planets="underground"/>
+    <ratio name="skeleton" weight="30" type="underground"/> 
+    -->
+  </ratios>
+</root>

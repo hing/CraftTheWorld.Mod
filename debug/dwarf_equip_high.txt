@@ -1,0 +1,4 @@
+helm_gold,helm_mithril
+gold_armor,mithril_armor
+mithril_boots,gold_boots
+sword_mithril,godeus_sword_th,mstaff_mithril,bow_heavy,heavy_rifle

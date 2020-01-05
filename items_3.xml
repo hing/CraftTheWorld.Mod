@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<root>
+    <item name="big_carpenter_hl" size="5.00,3.00" properties="device,workbench,efficiency=3,item_part_lighting,dead_radius_x=3,dead_radius_y=3,nodig_under=3,create_sound=craft_wood" spine="big_carpenter_hl" offsety="-100" pak="Highland DLC">
+        <this>
+            <behaviour value="SpawnBlockBehaviour" saveable="true">
+                <spawn_once value="true" />
+                <destroy value="none" />
+                <spawn value="disable_device" />
+                <offset value="1, 0" />
+            </behaviour>
+            <behaviour value="LayoutTitleHintBehaviour" />
+        </this>
+        <params>
+            <param name="front_spine" value="" />
+            <param name="front_off" value="work_off" />
+            <param name="front_on" value="work_on" />
+            <param name="back_spine" value="big_carpenter_hl" />
+            <param name="back_off" value="work_off" />
+            <param name="back_on" value="work_on" />
+            <param name="dust" value="trash_stone" />
+            <param name="sound_work" value="craft_wood" />
+        </params>
+        <images>
+            <image file="gfx/HighlandDLC/item_icons/big_carpenter_hl_mini.png" />
+        </images>
+    </item>
+    <item name="big_forge_hl" size="5.00,3.00" properties="device,smithy,efficiency=3,item_part_lighting,create_sound=craft_metall" spine="big_forge_hl" offsety="-100" spine_ani="work_off" spine_skin="default" pak="Highland DLC">
+        <this>
+            <behaviour value="SpawnBlockBehaviour" saveable="true">
+                <spawn_once value="true" />
+                <destroy value="none" />
+                <spawn value="disable_device" />
+                <offset value="1, 0" />
+            </behaviour>
+            <behaviour value="LayoutTitleHintBehaviour" />
+        </this>
+        <params>
+            <param name="front_spine" value="device_front" />
+            <param name="front_off" value="idle" />
+            <param name="front_on" value="idle" />
+            <param name="back_spine" value="big_forge_hl" />
+            <param name="back_off" value="work_off" />
+            <param name="back_on" value="work_on" />
+            <param name="dust" value="trash_stone" />
+            <param name="sound_work" value="craft_metall" />
+        </params>
+        <images>
+            <image file="gfx/HighlandDLC/item_icons/big_forge_hl_mini.png" />
+        </images>
+    </item>
+    <item name="big_kitchen_hl" size="5.00,4.00" properties="device,kitchen,efficiency=4,item_part_lighting" spine="big_kitchen_hl" offsety="-100" pak="Highland DLC">
+        <this>
+            <behaviour value="SpawnBlockBehaviour" saveable="true">
+                <spawn_once value="true" />
+                <destroy value="none" />
+                <spawn value="disable_device" />
+                <offset value="1, 0" />
+            </behaviour>
+            <behaviour value="LayoutTitleHintBehaviour" />
+        </this>
+        <params>
+            <param name="front_spine" value="device_front" />
+            <param name="front_off" value="idle" />
+            <param name="front_on" value="idle" />
+            <param name="back_spine" value="big_kitchen_hl" />
+            <param name="back_off" value="work_off" />
+            <param name="back_on" value="work_on" />
+            <param name="dust" value="trash_stone" />
+            <param name="sound_work" value="craft_food" />
+        </params>
+        <images>
+            <image file="gfx/HighlandDLC/item_icons/big_kitchen_hl_mini.png" />
+        </images>
+    </item>
+    <item name="kitchen_hl" size="3.00,1.00" properties="device,kitchen,efficiency=2,item_part_lighting" spine="kitchen_hl" offsety="-100" pak="Highland DLC">
+        <this>
+            <behaviour value="SpawnBlockBehaviour" saveable="true">
+                <spawn_once value="true" />
+                <destroy value="none" />
+                <spawn value="disable_device" />
+                <offset value="1, 0" />
+            </behaviour>
+            <behaviour value="LayoutTitleHintBehaviour" />
+        </this>
+        <params>
+            <param name="front_spine" value="device_front" />
+            <param name="front_off" value="idle" />
+            <param name="front_on" value="idle" />
+            <param name="back_spine" value="kitchen_hl" />
+            <param name="back_off" value="work_off" />
+            <param name="back_on" value="work_on" />
+            <param name="dust" value="trash_stone" />
+            <param name="sound_work" value="craft_food" />
+        </params>
+        <images>
+            <image file="gfx/HighlandDLC/item_icons/kitchen_hl_mini.png" />
+        </images>
+    </item>
+    <item name="big_laboratory_hl" size="5.00,3.00" properties="device,lab,item_part_lighting" spine="big_laboratory_hl" offsety="-100" spine_ani="work_off" pak="Highland DLC">
+        <this>
+            <behaviour value="SpawnBlockBehaviour" saveable="true">
+                <spawn_once value="true" />
+                <destroy value="none" />
+                <spawn value="disable_device" />
+                <offset value="1, 0" />
+            </behaviour>
+            <behaviour value="LayoutTitleHintBehaviour" />
+        </this>
+        <params>
+            <param name="front_spine" value="device_front" />
+            <param name="front_off" value="idle" />
+            <param name="front_on" value="idle" />
+            <param name="back_spine" value="lab" />
+            <param name="back_off" value="main_off" />
+            <param name="back_on" value="main_on" />
+            <param name="dust" value="trash_stone" />
+            <param name="sound_work" value="" />
+        </params>
+        <images>
+            <image file="gfx/HighlandDLC/item_icons/big_laboratory_hl_mini.png" />
+        </images>
+    </item>
+    <item name="big_workshop_hl" size="5.00,3.00" properties="device,workshop,item_part_lighting" spine="big_workshop_hl" offsety="-100" pak="Highland DLC">
+        <this>
+            <behaviour value="SpawnBlockBehaviour" saveable="true">
+                <spawn_once value="true" />
+                <destroy value="none" />
+                <spawn value="disable_device" />
+                <offset value="1, 0" />
+            </behaviour>
+            <behaviour value="LayoutTitleHintBehaviour" />
+        </this>
+        <params>
+            <param name="front_spine" value="device_front" />
+            <param name="front_off" value="idle" />
+            <param name="front_on" value="idle" />
+            <param name="back_spine" value="scabbler_workshop" />
+            <param name="back_off" value="off" />
+            <param name="back_on" value="on" />
+            <param name="dust" value="trash_stone" />
+            <param name="sound_work" value="craft_wood" />
+        </params>
+        <images>
+            <image file="gfx/HighlandDLC/item_icons/big_workshop_hl_mini.png" />
+        </images>
+    </item>
+    <item name="shop_elf" properties="dead_radius_x=4,dead_radius_y=4,nodig_under=4,shop" light="3" light_intensity="0.5" spine="Elf_merchant" spine_ani="idle_01_elf" pak="Highland DLC">
+        <behaviours>
+            <behaviour value="AnimationBehaviour">
+                <track value="0" />
+                <states>
+                    <state name="idle" loop="false" ani="idle_01_elf|3,idle_02_elf|1,idle_03_elf|2" next="idle" />
+                </states>
+            </behaviour>
+            <behaviour value="AnimationBehaviour" allow_dublicate="true">
+                <track value="1" />
+                <states>
+                    <state name="idle" loop="false" ani="idle_01_ram,idle_02_ram,idle_03_ram" next="idle" />
+                </states>
+            </behaviour>
+            <behaviour value="EventInstantiateBehaviour">
+                <event value="breath">
+                    <gameobject>
+                        <behaviour value="BoneAttachBehaviour">
+                            <bone value="head_CTRL" />
+                            <offset value="0,30" />
+                        </behaviour>
+                        <behaviour value="EffectPlayBehaviour">
+                            <effect value="cold_steam" />
+                            <time value="0.7" />
+                        </behaviour>
+                        <behaviour value="DestroyDurationBehaviour">
+                            <duration value="0.7" />
+                        </behaviour>
+                    </gameobject>
+                </event>
+            </behaviour>
+            <behaviour value="EventSoundBehaviour">
+                <event value="elf_cough" sound="Elf Merchant cough" chance="0.3" />
+                <event value="elf_sigh_fin" sound="Elf Merchant Sigh_fin" chance="0.3" />
+                <event value="book" sound="Elf Merchant Book" />
+            </behaviour>
+        </behaviours>
+    </item>
+    <item name="cave_orcs_totem" properties="removable,healt=50,break_sound=breaking wooden box" spine="cave_orcs_totem" spine_ani="idle" size="1.00,1.00" pak="Highland DLC">
+        <this name="Totem Colony">
+            <behaviour value="PopulationBehaviour" config="Highland/ColonyPopulation.xml" />
+            <behaviour value="TotemColonyBehaviour" config="Highland/Totem.xml" />
+            <behaviour value="SpellForbidBehaviour">
+                <radius value="10" />
+            </behaviour>
+            <behaviour value="ResourceDropBehaviour">
+                <resources value="wood-3|5,plank-3|3,nail-3|5,miner_amulet1-1-10,skills_ring1-1-10" />
+            </behaviour>
+        </this>
+    </item>
+    <item name="hidden_hole" spine="gap_inside_mountain" spine_ani="idle" properties="allow_build,dead_radius_x=1,dead_radius_y=1" size="1.00,1.00" pak="Highland DLC">
+        <this name="Hole">
+            <behaviour value="PopulationBehaviour" config="Highland/ColonyPopulation.xml" />
+            <behaviour value="RequestMonsterSpawnerBehaviour" config="Highland/MonsterPortal.xml" />
+            <behaviour value="AnimationBehaviour" saveable="true">
+                <states>
+                    <state name="close" loop="true" ani="close" />
+                    <state name="idle" loop="true" ani="idle" />
+                    <state name="open" loop="false" ani="open" next="idle" allow="close,open_idle" />
+                    <state name="open_idle" loop="true" ani="open_idle" allow="close" next="open" duration="5" />
+                </states>
+            </behaviour>
+            <behaviour value="ResourceDropBehaviour">
+                <resources value="dirt-5|15,stone-5|10" />
+            </behaviour>
+            <behaviour value="EventInstantiateBehaviour">
+                <event value="dust">
+                    <gameobject>
+                        <transform parent_depended="true" />
+                        <behaviour value="EffectPlayBehaviour">
+                            <effect value="dig_machine_dig" />
+                            <loop value="false" />
+                            <time value="3" />
+                        </behaviour>
+                    </gameobject>
+                </event>
+                <event value="quake">
+                    <behaviour value="EarthQuakeBehaviour">
+                        <freq value="5" />
+                        <amp value="2" />
+                        <duration value="0.3" />
+                    </behaviour>
+                </event>
+            </behaviour>
+            <gameobject name="Area Scanner" active="false">
+                <transform parent_depended="true" />
+                <behaviour value="AreaScanAsyncBehaviour" config="Highland/HoleAreaScanner.xml" />
+            </gameobject>
+        </this>
+    </item>
+    <item name="cave_orcs_camp" spine="cave_orcs_buildings" pak="Highland DLC" properties="dead_radius_x=3,dead_radius_y=3,nodig_under=3,std_building,healt=50">
+        <this>
+            <behaviour value="ResourceDropBehaviour">
+                <resources value="wood-3|5,plank-3|3,nail-3|5,iron-3|5,skin-1|3,club_iron-1|2,backpack_01-1|2,miners_lamp-1|2,healt_elexir-1|5,mana_elexir-1|5,big_elixir_health-1-30,big_elixir_mana-1-30,fireball_staff_elexir-1-30,coal-10|20,money-5|15,cone-5|10,crackers_mine-5|15,dried_fish-5|15,mushroom_dry-5|15,icearrow_elexir-1-30,transform_elexir-1-30,eye-1-30,fabric-1-30,pen-1|5,wine-2|3,helmet_mine-1-10,miner_lamp-1-15,mushroom-1|5,oil_berries-1|5,boot_mine-1-10,resin-1|5,root-2|3,sand-2|3,torch-5|10" />
+            </behaviour>
+        </this>
+    </item>
+    <item name="cave_orcs_hatch_01" spine="cave_orcs_hatch_01" pak="Highland DLC" properties="dead_radius_x=2,dead_radius_y=2,nodig_under=2,std_building,healt=50">
+        <this>
+            <behaviour value="ResourceDropBehaviour">
+                <resources value="wood-3|5,plank-3|3,nail-3|5,iron-3|5,skin-1|3,club_iron-1|2,backpack_01-1|2,miners_lamp-1|2,healt_elexir-1|5,mana_elexir-1|5,big_elixir_health-1-30,big_elixir_mana-1-30,fireball_staff_elexir-1-30,coal-10|20,money-5|15,cone-5|10,crackers_mine-5|15,dried_fish-5|15,mushroom_dry-5|15,icearrow_elexir-1-30,transform_elexir-1-30,eye-1-30,fabric-1-30,pen-1|5,wine-2|3,helmet_mine-1-10,miner_lamp-1-15,mushroom-1|5,oil_berries-1|5,boot_mine-1-10,resin-1|5,root-2|3,sand-2|3,torch-5|10" />
+            </behaviour>
+        </this>
+    </item>
+    <item name="cave_orcs_hatch_02" spine="cave_orcs_hatch_02" pak="Highland DLC" properties="dead_radius_x=2,dead_radius_y=2,nodig_under=2,std_building,healt=50">
+        <this>
+            <behaviour value="ResourceDropBehaviour">
+                <resources value="wood-3|5,plank-3|3,nail-3|5,iron-3|5,skin-1|3,club_iron-1|2,backpack_01-1|2,miners_lamp-1|2,healt_elexir-1|5,mana_elexir-1|5,big_elixir_health-1-30,big_elixir_mana-1-30,fireball_staff_elexir-1-30,coal-10|20,money-5|15,cone-5|10,crackers_mine-5|15,dried_fish-5|15,mushroom_dry-5|15,icearrow_elexir-1-30,transform_elexir-1-30,eye-1-30,fabric-1-30,pen-1|5,wine-2|3,helmet_mine-1-10,miner_lamp-1-15,mushroom-1|5,oil_berries-1|5,boot_mine-1-10,resin-1|5,root-2|3,sand-2|3,torch-5|10" />
+            </behaviour>
+        </this>
+    </item>
+    <item name="cave_orcs_hatch_03" spine="cave_orcs_hatch_03" pak="Highland DLC" properties="dead_radius_x=2,dead_radius_y=2,nodig_under=2,std_building,healt=50">
+        <this>
+            <behaviour value="ResourceDropBehaviour">
+                <resources value="wood-3|5,plank-3|3,nail-3|5,iron-3|5,skin-1|3,club_iron-1|2,backpack_01-1|2,miners_lamp-1|2,healt_elexir-1|5,mana_elexir-1|5,big_elixir_health-1-30,big_elixir_mana-1-30,fireball_staff_elexir-1-30,coal-10|20,money-5|15,cone-5|10,crackers_mine-5|15,dried_fish-5|15,mushroom_dry-5|15,icearrow_elexir-1-30,transform_elexir-1-30,eye-1-30,fabric-1-30,pen-1|5,wine-2|3,helmet_mine-1-10,miner_lamp-1-15,mushroom-1|5,oil_berries-1|5,boot_mine-1-10,resin-1|5,root-2|3,sand-2|3,torch-5|10" />
+            </behaviour>
+        </this>
+    </item>
+    <item name="drilling_machine_01" properties="draw_align=down,scale=12.00" size="1.00,1.00" pak="Highland DLC">
+        <images>
+            <image file="gfx/HighlandDLC/blocks/drilling_machine_01.png" />
+        </images>
+    </item>
+    <item name="drilling_machine_02" properties="draw_align=down,scale=5.00" pak="Highland DLC">
+        <images>
+            <image file="gfx/HighlandDLC/blocks/drilling_machine_02.png" />
+        </images>
+    </item>
+    <item name="main_gnome_statue_01" properties="item_part_lighting,draw_align=down,scale=8.30" size="3.00,5.00" offsety="0" spine="main_gnome_statue_01" />
+    <item name="main_gnome_statue_02" properties="item_part_lighting,draw_align=down,scale=7.00" size="3.00,5.00" offsety="0" spine="main_gnome_statue_02" />
+    <item name="main_gate_hl" properties="item_part_lighting,draw_align=down,scale=7.00" size="3.00,5.00" offsety="0" spine="main_gate_hl" spine_ani="idle" />
+    <item name="loading_crane_01" properties="draw_align=down,scale=4.50" pak="Highland DLC">
+        <images>
+            <image file="gfx/HighlandDLC/blocks/loading_crane_01.png" />
+        </images>
+    </item>
+    <item name="loading_crane_02" properties="draw_align=down,scale=4.50" pak="Highland DLC">
+        <images>
+            <image file="gfx/HighlandDLC/blocks/loading_crane_02.png" />
+        </images>
+    </item>
+    <item name="melting_plant_01" properties="item_part_lighting,draw_align=down,scale=6.00" size="1.00,1.00" pak="Highland DLC">
+        <images>
+            <image file="gfx/HighlandDLC/blocks/melting_plant_01.png" />
+        </images>
+    </item>
+    <item name="melting_plant_02" properties="draw_align=down,scale=2.50" pak="Highland DLC">
+        <images>
+            <image file="gfx/HighlandDLC/blocks/melting_plant_02.png" />
+        </images>
+    </item>
+    <item name="tractor_bucket_01" properties="draw_align=down,scale=4.50" pak="Highland DLC">
+        <images>
+            <image file="gfx/HighlandDLC/blocks/tractor_bucket_01.png" />
+        </images>
+    </item>
+    <item name="large_crystal_of_the_main_hall" properties="draw_align=down,scale=10.00" pak="Highland DLC">
+        <images>
+            <image file="gfx/HighlandDLC/blocks/large_crystal_of_the_main_hall.png" />
+        </images>
+    </item>
+    <item name="royal_throne_dwarves" spine="royal_throne_dwarves" properties="item_part_lighting" size="1.00,1.00" pak="Highland DLC" />
+    <item name="workbench_hl" properties="removable,device,workbench,draw_align=down,scale_xaxis" pak="Highland DLC">
+        <params>
+            <param name="front_spine" value="device_front" />
+            <param name="front_off" value="idle" />
+            <param name="front_on" value="idle" />
+            <param name="back_spine" value="device" />
+            <param name="back_off" value="idle" />
+            <param name="back_on" value="working" />
+            <param name="dust" value="trash_stone" />
+            <param name="sound_work" value="" />
+        </params>
+        <images>
+            <image file="gfx/level_tiles/craft_obj/workshops/craft_table.png" />
+        </images>
+    </item>
+    <item name="Additional_warehouse_hl" properties="warehouse,draw_image_as_mini" spine="Additional_warehouse_hl" size="1.00,1.00" pak="Highland DLC">
+        <this>
+            <behaviour value="LayoutTitleHintBehaviour" />
+        </this>
+        <images>
+            <image file="gfx/HighlandDLC/item_icons/additional_warehouse_hl_mini.png" />
+        </images>
+    </item>
+    <item name="disable_device" properties="staging" spine="signs" spine_skin="not_build" spine_ani="idle" light="1" light_intensity="0.63" pak="Highland DLC">
+        <this>
+            <behaviour value="UIDrawRadiusBehaviour" config="DrawRadius.xml" />
+            <behaviour value="DisableDevicesBehaviour">
+                <radius value="2" />
+            </behaviour>
+            <behaviour value="AnimationBehaviour" saveable="true">
+                <states>
+                    <state name="put" loop="false" ani="arrive" next="idle" />
+                    <state name="idle" loop="true" ani="idle" />
+                    <state name="remove" loop="false" ani="delete" />
+                </states>
+            </behaviour>
+        </this>
+    </item>
+    <item name="hand_flare" properties="removable" size="1.00,1.00" offsety="0" pak="Highland DLC">
+        <this>
+            <behaviour value="DestroyDurationBehaviour">
+                <duration value="10" />
+            </behaviour>
+            <behaviour value="RigidBodySimplyfied">
+                <dampingByWater value="true" />
+                <bounceRatio value="0.7,0.7" />
+                <randomBounce value="0.5,0.5" />
+                <bounceVelocityClamp value="80" />
+                <velocityDamping value="2000" />
+                <gravity value="0,200" />
+                <max_velocity value="200" />
+            </behaviour>
+            <behaviour value="DynamicLightBehaviour">
+                <radius value="5" />
+                <color value="1|0.3|0.3" />
+                <explore value="true" />
+            </behaviour>
+            <behaviour value="EffectPlayBehaviour">
+                <effect value="spell_fireball_tail" />
+                <loop value="true" />
+            </behaviour>
+        </this>
+        <images>
+            <image file="gfx/HighlandDLC/blocks/hand_flare.png" />
+        </images>
+    </item>
+</root>

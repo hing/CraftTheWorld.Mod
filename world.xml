@@ -1,0 +1,325 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--World`s settings-->
+<root>
+  <param name="pointAndClickRadius" value="20"/>
+
+
+  <!-- кол-во однотипных задач для начала поиска скилованного гнома - по умолчанию 5 единиц -->
+  <param name="SkillTaskMinCount" value="5"/>
+  
+  <!-- коэф. прочности блоков, построеных гномами, за пределами дома -->
+  <param name="HouseOutBlocksDurabilityRatio" value="0.5"/>
+
+  <!-- максимальное время пути рабочего, после чего он останавливается -->
+  <param name="WorkerRunTotalTimeLimit" value="1000"/>
+
+  <!-- максимальное время пути между точками пути (блоками) -->
+  <param name="WorkerRunPerPointTimeLimit" value="4"/>
+
+  <!-- время, через которое недоступное задание удаляется -->
+  <param name="InvalidTaskLifeTime" value="60"/>
+
+  <!-- максимальное количество активных квестов показываемых в дневнике -->
+  <param name="DiaryMaxViewQuests" value="5"/>
+
+  <!-- размер блока в пикселях -->
+  <param name="BlockSize" value="60"/>
+
+  <!-- время дня -->
+  <!--<param name="DayTime" value="200"/>-->
+  <param name="DayTime" value="300"/>
+
+  <!-- время ночи -->
+  <!--<param name="NightTime" value="200"/>-->
+  <param name="NightTime" value="200"/>
+  
+  <!-- время перехода между днем и ночью -->
+  <param name="RiseFallTime" value="60"/>
+  <!--<param name="RiseFallTime" value="55"/>-->
+
+  <!-- вероятность сорваться по умолчанию 10% -->
+  <param name="ChanceOfBreak" value="2"/>
+
+  <!-- время, через которое человечек вновь сможет срываться -->
+  <param name="BreakAgainTime" value="60"/>
+
+  <!-- коэф. ускорения человечка при непосредственном управлении -->
+  <param name="DirectControlSpeedRatio" value="1.5"/>
+
+  <!-- время уменьшение сытости во время бездействия, за 25мин(1500с) -->
+  <!--<param name="SatietyDecrement" value="750"/>-->
+  <param name="SatietyDecrement" value="550"/>
+
+  <!-- время уменьшение сытости во время работы, за 15мин(900с) -->
+  <!--<param name="SatietyDecrementRun" value="450"/>-->
+  <param name="SatietyDecrementRun" value="350"/>
+
+  <!--время восстановления единицы здоровья при сытости более 7-->
+  <param name="HealtRestoreTime" value="300"/>
+
+  <!-- максимальное количиство подряд добываемых блоков одним гномом  -->
+  <param name="MaxInSeqDigCount" value="5"/>
+
+  <!-- параметры для роста деревьев -->
+
+  <!-- интервал появления нового дерева -->
+  <!--<param name="NewTreeInterval" value="180"/>-->
+  <!--<param name="NewTreeInterval" value="5"/>-->
+  
+  <!-- максимальное кол-во деревьев в процентах от ширины уровня -->
+  <param name="MaxTreeCountProcent" value="40"/>
+
+  <!-- время в течение которого на месте срубленного дерева не должно вырастать новое (по умолчанию 30 сек) -->
+  <param name="TreeFelledTime" value="30"/>
+
+  <!-- вероятность появления нового дерева рядом с существующими -->
+  <param name="ChanceNearTreeProcent" value="10"/>
+
+  <!-- радиус для вычисления вероятности появления нового дерева -->
+  <param name="RadiusNearTree" value="4"/>
+
+  <!-- максимальная высота деревьев --><!--
+  <param name="TreeHeightMax" value="6"/>-->
+
+  <!-- время за которое должны подрасти все деревья на уровне -->
+  <!--<param name="TreesGrowthTime" value="600"/>-->
+  <param name="TreesGrowthTime" value="600"/>
+
+  <!-- радиус появления дерева около склада -->
+  <param name="NewTreeNearHomeRadius" value="10"/>
+
+  <!-- вероятность появления нового дерева около склада -->
+  <param name="NewTreeNearHomeChanceProcent" value="50"/>
+
+  <!-- количество деревьев, после появления которых, вероятность появления нового дерева около склада обнуляется -->
+  <param name="NewTreeNearHomeCount" value="3"/>
+
+  <!-- начальное значение кол-ва деревьев около склада при генерации -->
+  <param name="TreesNearHome" value="5"/>
+
+  <!-- максимальная высота от уровня горизнта, после которой новые деревья не растут -->
+  <param name="MaxTreeHeightOverHorizont" value="10"/>
+
+  <!-- максимальное кол-во деревьев в роще -->
+  <param name="GroveMaxNumber" value="10"/>
+
+  <!-- минимальное расстояние между рощами -->
+  <param name="GroveBetweenDistance" value="5"/>
+
+  <!-- коэф. k1 в формуле расчета количества кристалов и грибов при генерации уровня: count = worldSizeX * worldSizeY / k1 --><!--
+  <param name="CrystalAndMushroomsRatio" value="1000"/>-->
+
+  <!-- количество рандомных мест, где могут быть деревья, для которых потом будет расчитываться вероятность появления нового дерева --><!--
+  <param name="RandomPlaces" value="10"/>-->
+
+  <!-- скорость прокрутки уровня при старте игры -->
+  <param name="WorldScrollSpeed" value="50"/>
+
+  <!-- интервал времени проверки условий для установки признака дома -->
+  <!--<param name="HouseCheckTime" value="120"/>-->
+  <param name="HouseCheckTime" value="10"/>
+
+  <!-- количество проверок домов на валидность -->
+  <param name="HouseCheckCount" value="4"/>
+
+  <!-- количество блоков периметра дома на 1 эффект звездочки, для расчета кол-ва звездочек обегающих перимметр дома -->
+  <param name="HouseEffectFor" value="50"/>
+
+  <!-- минимальная площадь дома -->
+  <param name="HouseMinArea" value="20"/>
+
+  <!-- радиус дома от тотема -->
+  <param name="HouseTotemRadius" value="7"/>
+
+  <!-- минимальный интервал времени между снами -->
+  <param name="RestTimeInterval" value="30"/>
+
+  <!-- интервал времени перед появлением новых человечков взамен погибших -->
+  <param name="RespawnWorkerTimeInterval" value="300"/>
+  <!-- частота появления новых человечков взамен погибших -->
+  <param name="RespawnWorkerTimeFreq" value="120"/>
+
+  <!-- время между неудачными попытками что-то сделать -->
+  <param name="DoAgainTime" value="10"/>
+
+  <!-- интервал между поеданиями выпавших ресурсов человечками -->
+  <param name="EatBetweenTime" value="30"/>
+
+  <!-- интервал в рецептах для появления почтой купленного предмета в новом уровне-->
+  <!--в данный момент это выкопаные блоки-->
+  <!--<param name="ShopStuffSpawnIntervalInRecipes" value="15"/>-->
+  <param name="ShopStuffSpawnIntervalInRecipes" value="15"/>
+
+  <!-- время актуальности событий -->
+  <param name="EventValidTimeBattle" value="60"/>
+  <param name="EventValidTimeBuildHouse" value="30"/>
+  <param name="EventValidTimeCrashHouse" value="180"/>
+  <param name="EventValidTimeHunger" value="60"/>
+  <!-- интервал времени повторного показа актуального события -->
+  <param name="EventRepeat" value="30"/>
+
+  <!-- расстояние от двери дома, на которое отходит человечек когда убегает от монстра и прячется в доме -->
+  <param name="WorkerFearDistanceFromDoor" value="4"/>
+
+  <!--замедление в воде-->
+  <param name="WaterSlowDown" value="0.5"/>
+
+  <!--процент от площади уровня, выделяемый для предопределенных комнат -->
+  <param name="PredefinedRoomsAreaProcent" value="7"/>
+
+  <!--количество блоков в предопределенных областях для появления одного бехолдера -->
+  <param name="BeholderOnBlocks" value="100"/>
+
+  <!--интервалы появления пятен воды для грибного дождя, обычнного и шторма соответственно-->
+  <param name="mrainDownfall" value="10-15"/>
+  <param name="rainDownfall" value="7-10"/>
+  <param name="stormDownfall" value="3-6"/>
+
+  <param name="stormWidth" value="100-200"/>
+  <param name="rainWidth" value="40-80"/>
+  <param name="mrainWidth" value="30-50"/>
+
+  <param name="stormSpeed" value="6"/>
+  <param name="rainSpeed" value="4"/>
+  <param name="mrainSpeed" value="2"/>
+
+
+  <!--переодичность автосохранения-->
+  <param name="AutoSaveTime" value="60"/>
+
+  <!-- интервал кол-ва блоков земли из которого случайным образом находится кол-во блоков, после добычи которых выпадают рецепты с неуказаным правилом появления --><!--
+  <param name="UnrequiredRecipesFrom" value="10"/>  
+  <param name="UnrequiredRecipesTo" value="30"/>-->
+
+  <!--расстояние, в радиусе которого гном ищет себе задание по ресурсам, которые только что подобрал-->
+  <param name="GiveMeTaskDistance" value="10"/>
+  
+  <!-- не работает -->
+  <param name="DebugPath" value="\\192.168.1.33\Public\Craft\debug_saves"/>
+
+  <!-- период мигания -->
+  <param name="BlinkTime" value="0.3"/>
+  <!-- количество миганий -->
+  <param name="BlinkCount" value="3"/>
+
+  <!-- размер выпавшего ресурса -->
+  <param name="ResourceSize" value="25"/>
+
+  <!-- максимальное кол-во подряд съедания гномом однообразной еды -->
+  <param name="MaxMonoResEat" value="3"/>
+
+  <!-- высота, выше которой гном не будет срываться (по умолчанию 6) со скалы и мостов -->
+  <param name="NoFallHeight" value="5"/>
+
+  <!--Останавливать рост кустарника, если игрок начал его рубить на определенное время (по умолчанию 5 мин)-->
+  <param name="PauseGrownPlant" value="300"/>
+  
+  <!--Запретить возникновения нового от предыдущих мест вырастания в течение ограниченного параметром времени (по умолчанию 15 мин)-->
+  <param name="GrownNewPlantTime" value="900"/>
+
+  <!--Запретить возникновения нового кустарника ближе заданного расстояния (по умолчанию 10)-->
+  <param name="GrownNewPlantDistance" value="10"/>
+
+  <!--время, в течение которого действует испуг, чтобы затем сменить задачу-->
+  <param name="FearListValidTime" value="120"/>
+
+  <!--количество испугов, после чего гном временно забывает ту задачу, при выполнении которой он испугался-->
+  <param name="FearListChangeTaskCount" value="2"/>
+
+  <!--время, на которое гном забывает задачу при испуге-->
+  <param name="FearExcludeTaskTime" value="120"/>
+
+  <!--время восстановления единицы маны-->
+  <!--<param name="ManaRestoreTime" value="300"/>-->
+  <param name="ManaRestoreTime" value="180"/>
+
+  <!--максимальное время жизни портала -->
+  <param name="DefaultMagicPortalTime" value="300"/>
+  <!--<param name="DefaultMagicPortalTime" value="30"/>-->
+
+  <!--Если нет подходящего инструмента для добычи ресурса и гном оказывается в пределах заданного параметром радиуса (по умолчанию 5) от места добычи и пытается взять задачу, то выводит фразу -->
+  <param name="RadiusSpeechNoTool" value="5"/>
+
+  <!-- количество промахов метательным оружием до снятия задачи -->
+  <param name="CancelMissCount" value="3"/>
+
+
+  <!-- коэфициенты нахождения монет -->
+  <!-- коэф. щедрости -->
+  <param name="GenerosityRatio" value="50"/>
+  <!-- степень жадности -->
+  <param name="GreedDegree" value="3"/>
+
+
+  <!--параметры для гор и холмов-->
+  <param name="MountainBase" value="10-20" />           <!--ширина основания гор-->
+  <param name="MountainMaxHeight" value="8-16" />       <!--максимальная высота гор-->
+  <param name="MountainElevation" value="2-5" />        <!--перепад высот для гор-->
+  <param name="MountainDirtHeight" value="4-6" />       <!--высота покрытия горы глиной-->
+  <param name="MountainRockBase" value="30-50" />       <!--процент каменного основания-->
+
+  <param name="HillBase" value="5-12" />               <!--ширина основания холма-->
+  <param name="HillMaxHeight" value="5-8" />           <!--максимальная высота холма-->
+  <param name="HillElevation" value="1" />             <!--перепад высот для холма-->
+
+  <!--параметры температуры-->
+  <param name="TColdLine" value="-3" />               <!--граница замерзания при холоде-->
+  <!--<param name="TNormalLine" value="17" />-->             <!--граница замерзания при нормальной температуре-->
+  <param name="TNormalLine" value="45" />
+  <!--<param name="THotLine" value="25" />-->                <!--граница замерзания при жаре-->
+  <param name="THotLine" value="45" />
+
+
+  <!-- минимальное количество монет в начале уровня-->
+  <param name="MinMoneyStart" value="5" />
+
+  <!-- грузоподъемность лифта -->
+  <param name="LiftCapacity" value="3"/>
+
+  
+  <!--время перед первоначальной активации квеста-->
+  <param name="QuestActivateDelay" value="2" />
+
+  <!--пропорция появления свитка скилла-->
+  <param name="SkillScrollProportion" value="5" />
+
+  <!--макс. кол-во монстров, которые учитываются при одновременном разрушении ими одного блока-->
+  <!--<param name="MonstersCrashMaxCount" value="5" />-->
+  <param name="MonstersCrashMaxCount" value="20" />
+
+  <param name="TechTreeV2BaseProcent" value="0.7" />
+  
+  <param name="CollectGuardTime" value="600" />
+
+
+  <param name="PlayerDefenceLevel" value="3"/>
+  <param name="PlayerDefenceRadius" value="10"/>
+
+  <param name="FisherSkillStep" value="25"/>
+  <param name="LoggerGrownRadius" value="25"/>
+
+
+  <!--***************************************************************************************-->
+  <!--Параметры, влияющие на производительность игры-->
+
+  <!--количество итераций в поиске пути за один проход-->
+  <!--<param name="PathCalcIterations" value="30"/>-->
+  <!--<param name="PathCalcIterations" value="15"/>-->
+  <!--<param name="PathCalcIterations" value="35"/>-->
+  <param name="PathCalcIterations" value="40"/>
+
+
+  <!--количество одновременно расчитываемых путей за один проход. В каждом пути по 'PathCalcIterations' итераций -->
+  <param name="PathCalcCount" value="50"/>
+
+  <!--дальность сбора вещей для гномов(оружие, доспехи итд)-->
+  <param name="ItemsCollectDistance" value="40"/>
+   
+  <!-- время, через которое динамические объекты (выпадающие ресурсы) будут снова доступны, если рядом есть гномы-->
+  <param name="DynamicRevalidTime" value="30"/>
+
+  <!-- радиус, в пределах которого пересчитывается путь гномов идущих на склад при открытии портала-->
+  <param name="PathRecalcRadius" value="10"/>
+
+  <param name="PathCalcWarehousesMax" value="3"/>
+</root>

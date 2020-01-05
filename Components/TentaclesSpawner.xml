@@ -1,0 +1,12 @@
+<root>
+    <tentacles>
+        <weak name="tentacles_weak" range="10,30"/>
+        <middle name="tentacles_middle" range="31,60"/>
+        <strong name="tentacles_strong" range="60,99"/>
+    </tentacles>
+
+    <interval_min value="3"/>
+    <max_population value="15"/>
+    <distance value="20"/>
+
+</root>

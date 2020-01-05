@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<root>
+    <equip name="totem" levels="2,7,12" include="all" exclude="dlc_temples" slot="-1" count="1" enable_recipe="false" />
+    <equip name="totem_china" levels="2,7,12" include="dlc_temples" exclude="" slot="-1" count="1" enable_recipe="false" />
+    <equip name="mportal" levels="1" include="all" exclude="" slot="0" count="1" enable_recipe="false" />
+    <equip name="point_click" levels="1" include="all" exclude="" slot="1" count="1" enable_recipe="true" />
+    <equip name="chopper_iron" levels="1" include="lonely_mountain" exclude="" slot="-1" count="1" enable_recipe="false" />
+    <equip name="pick_iron" levels="1" include="lonely_mountain" exclude="" slot="-1" count="1" enable_recipe="false" />
+    <equip name="disable_device" levels="1" include="lonely_mountain" exclude="" slot="-1" count="1" enable_recipe="false" />
+</root>

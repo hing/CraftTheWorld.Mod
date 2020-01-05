@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--'propperties': 
+  distance=x  - расстояние слышимости, х-относительная величина (в игре от размера экрана)
+  -->
+
+<root>
+  <!--<sound name="gnome_eat" properties="distance=0.5" file="sfx\apple.ogg" />-->
+  <sound name="gnome_eat" properties="distance=0.5" file="sfx\ChewingPretzels.ogg" />
+  <sound name="gnome_snore" properties="distance=0.5,loop=1" file="sfx\CartoonSnore1.ogg,sfx\CartoonSnore2.ogg" />
+  <sound name="gnome_extreme_fall" properties="distance=0.5" file="sfx\00350_SFX_BodyFallOnDirt.ogg" />
+  <sound name="gnome_scary" properties="distance=0.5,time=0.5" file="sfx\27558_SFX_ComicalMaleAdultVoiceScream1.ogg" />
+  <sound name="gnome_step_dirt" disable="true" properties="distance=0.5" file="sfx\01109_SFX_FootstepsCarpetBootsSteppingLeft.ogg" />
+  <sound name="gnome_step_wood" disable="true" properties="distance=0.5" file="sfx\01141_SFX_FootstepsCementTennisShoesSteppingLeft.ogg,sfx\01142_SFX_FootstepsCementTennisShoesSteppingRight.ogg" />
+  <sound name="gnome_collect" properties="distance=0.5" file="sfx\11866_SFX_ClothRustleBedsheet1.ogg" />
+  <sound name="gnome_fishing" properties="distance=0.5" file="sfx\02934_SFX_FishingRodReelLineLetOut.ogg" />
+  <sound name="gnome_catch_fish" properties="distance=0.5" file="sfx\02941_SFX_FishingRodReelSpinning.ogg" />
+  <sound name="gnome_breath" properties="distance=0.5,loop=5" file="sfx\05296_SFX_BreathingMale.ogg" />
+
+  <sound name="pig_embient" properties="time=8-15,distance=0.5,loop=8-15" file="sfx\00305_SFX_PigGrunt.ogg,sfx\00308_SFX_PigGruntAndSniff.ogg" />
+  <sound name="sheep_embient" properties="time=8-15,distance=0.5,loop=8-15" file="sfx\00317_SFX_SheepBaa.ogg,sfx\00316_SFX_SheepBaa.ogg" />
+  <sound name="chicken_embient" properties="time=8-15,distance=0.5,loop=8-15" file="sfx\27463_SFX_AnimalsChicken.ogg" />
+  <sound name="ghost" properties="distance=0.5,loop=15" file="sfx\ghost.ogg" />
+
+  <sound name="item_drop_d" properties="distance=0.5,count=3" file="sfx\BodyHeadFallOnGround.ogg" />
+  <sound name="item_drop_w" properties="distance=0.5,count=3" file="sfx\LiquidLogThrowInPond1.ogg,sfx\LiquidLogThrowInPond2.ogg" />
+
+  <sound name="pick_dirt" properties="distance=0.5" file="sfx\ImpactEarthGroundDirt1.ogg,sfx\ImpactEarthGroundDirt10.ogg" />
+  <sound name="hit_metall_metall" properties="distance=0.5" file="sfx\FoleyMedievalSwordVibratingHit2.ogg" />
+  <sound name="hit_body_body" properties="distance=0.5" file="sfx\01877_SFX_PunchFace.ogg" />
+  <sound name="hit_metal_body" properties="distance=0.5" file="sfx\01410_SFX_SwordImpactIntoHuman.ogg" />
+  <sound name="build" properties="distance=0.5" file="sfx\13719_SFX_ImpactMacheteHitOnTreeStump9.ogg" />
+  <sound name="chopper" properties="distance=1" file="sfx\WoodImpact2x4BlockHammer2.ogg" />
+  <sound name="wood_drop" properties="distance=0.5" file="sfx\ImpactObjectsDebrisDroppingOnHollowWood5.ogg" />
+  <sound name="pick_stone" properties="distance=1" file="sfx\13650_SFX_ImpactChizzleHammerConcreteHit10.ogg" />
+  <sound name="water_dig" properties="distance=0.5" file="sfx\LiquidLakeObjectThrownInLake1.ogg" />
+  <sound name="bow" properties="distance=0.5" file="sfx\03743_SFX_BowRelease.ogg,sfx\03744_SFX_BowRelease.ogg" />
+  <sound name="hit_plant" properties="distance=0.5" file="sfx\01738_SFX_Crunch.ogg" />
+
+  <sound name="tesla" properties="distance=1" file="sfx\01314_SFX_ElectricalDeviceZap.ogg,sfx\01315_SFX_ElectricalDeviceZap.ogg,sfx\02694_SFX_SciFiElectricalZap.ogg" />
+  <sound name="portal" properties="distance=0.5,loop" file="sfx\01372_SFX_LaboratoryElectricalDrone.ogg" />
+  <sound name="elevator" properties="distance=1,loop" file="sfx\OfficeElevatorDoorsOpenClose.ogg" />
+  <sound name="trolley" properties="distance=0.5,loop" file="sfx\03654_SFX_TrolleyCarPassBy.ogg" />
+  <sound name="horn" properties="" file="sfx\07631_SFX_SoloTrumpetRiff.ogg" />
+
+  <sound name="rain" properties="loop=0,ambient" file="sfx\WeatherRainAmbienceLite1.ogg" />
+  <sound name="amb_nature" properties="loop=0,ambient" file="sfx\AmbienceNatureMeadow.ogg" />
+  <sound name="amb_night" properties="loop=0,ambient" file="sfx\00057_SFX_AmbienceCountryAtNight.ogg" />
+  <sound name="amb_graveyard" properties="distance=0.25,loop=0,ambient,count=1" file="sfx\GraveyardAmbience.ogg" />
+  <sound name="amb_desert" properties="loop=180,ambient" file="sfx\DesertWindLight.ogg" />
+  <sound name="amb_space" properties="loop=0,ambient" file="sfx\02556_SFX_SciFiAmbienceDeepSpace.ogg" />
+  <sound name="amb_cave" properties="distance=1,loop=0,ambient,count=1" file="sfx\BasementCellarWaterDrips.ogg" />
+  <sound name="amb_lava" properties="distance=1,loop=0,ambient,count=1" file="sfx\03954_SFX_LavaFlowing.ogg" />
+
+  <sound name="new_event" properties="" file="sfx\11766_SFX_CartoonBellMetalBellRing4.ogg" />
+  <sound name="drop_money_shop" properties="" file="sfx\00953_SFX_MoneyCoinsDroppedOntoFloor.ogg" />
+  <sound name="drop_money" properties="distance=0.5" file="sfx\00946_SFX_MoneyCoinDroppedOnCounter.ogg" />
+  <sound name="page_turn" properties="" file="sfx\00935_SFX_MagazinePageTurn.ogg" />
+  <sound name="page_turn" properties="" file="sfx\00935_SFX_MagazinePageTurn.ogg" />
+  <sound name="craft" properties="" file="sfx\01703_SFX_AnvilStrikeWithHammer.ogg,sfx\01704_SFX_AnvilStrikeWithHammer.ogg" />
+  <sound name="scroll" properties="" file="sfx\02327_SFX_EnvelopePaperRemoved.ogg" />
+  <sound name="select_dig" properties="" file="sfx\12517_SFX_FoleySwitchRadioButtonClicking2.ogg" />
+
+  <sound name="zombie_death" properties="distance=0.5" file="sfx\39355_SFX_CreatureAttackAxedToDeath.ogg" />
+  <sound name="fireball" properties="distance=1" file="sfx\00618_SFX_ArrowFlamingImpact.ogg" />
+  <sound name="fireball_event" properties="" file="sfx\00698_SFX_FireBall.ogg" />
+  <sound name="water_fall" properties="distance=0.5,count=2,loop" file="sfx\14193_SFX_LiquidWaterMovementPlasticTub3.ogg" />
+  <sound name="door" properties="distance=0.5" file="sfx\00874_SFX_DoorOfficeDoorClose.ogg" />
+  <sound name="fire" properties="distance=0.25,loop" file="sfx\00718_SFX_FireSmallWithCrackle.ogg" />
+  <sound name="monster_portal" properties="distance=0.5" file="sfx\29038_SFX_MelodiousMagicalSwells.ogg" />
+  <sound name="mportal" properties="distance=0.5" file="sfx\47140_SFX_MagicalSweetTone.ogg" />
+
+  <sound name="stone_breaks" properties="distance=0.5" file="sfx\ToolPickaxeBreaksRock1.ogg" />
+  <sound name="brick_breaks" properties="distance=0.5" file="sfx\FoleyBrickFall.ogg,sfx\FoleyBrickFall2.ogg" />
+
+</root>

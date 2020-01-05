@@ -1,0 +1,64 @@
+<root>
+  <creature name="elven_mage">
+    <params>
+      <ai value="BaseMob"/>
+      <ico value="elven_mage_of_nature_mini"/>
+      <height value="80"/>
+      <width value="40"/>
+      <healt value="2"/>
+      <targets value="worker,friend"/>
+      <hostility value="harmless"/>
+      <clan value="other"/>
+      <attack_interval value="4,6"/>
+      <walk_speed value="65"/>
+      <climbs_speed value="35"/>
+      <radius value="6"/>
+      <fall_height value="10"/>
+      <fear_radius value="8"/>
+      <attack value="0.4"/>
+      <resources value="stone-7|10,money-10|20,leaves-2|5,root-3|5,portal_krs_blue-1|3,portal_krs_dblue,portal_krs_green-1|3,portal_krs_violet-1|3,portal_krs_red-1|3"/>
+      <shot_time value="1"/>
+      <use_jump_begin/>
+      <day_not_kill/>
+      <water_die_time value="0"/>
+      <skins value="elven_mage_of_nature"/>
+      <tags value="elven_mage,mcompas_target"/>
+    </params>
+    <wrapper>
+      <behaviour value="PauseUnexploredCreature"/>
+    </wrapper>
+    <behaviours>
+      <behaviour value="UISpeakerBehaviour" config="GrottoesMageSpeaker.xml"/>
+      <behaviour value="TargetLogicBehaviour"/>
+      <behaviour value="PathfindingBehaviour">
+        <can_jump value="true"/>
+      </behaviour>
+      <behaviour value="GetCanHealEnemyBehavoiur"/>
+      <behaviour value="DistanceBattleExBehaviour">
+        <bone value="arm1_weapon"/>
+        <attack_behaviours value="healing"/>
+        <healing>
+          <behaviour value="DestroyDurationBehaviour"><duration value="0.5"/></behaviour>
+          <behaviour value="HealingRangeBehaviour" config="GrottoesMageHealing.xml"/>
+        </healing>
+      </behaviour>
+      <behaviour value="DynamicLightBehaviour">
+        <radius value="5"/>
+        <intensity value="0.7"/>
+      </behaviour>
+    </behaviours>
+    <sounds>
+      <battle value="ice_elves_battlecry"/>
+      <die value="ice_elves_death"/>
+    </sounds>
+    <animations>
+      <ani name="idle" ani="elven_mage_of_nature\mage_idle"/>
+      <ani name="stop" ani="elven_mage_of_nature\mage_idle"/>
+      <ani name="move" ani="elven_mage_of_nature\mage_walk"/>
+      <ani name="action" ani="elven_mage_of_nature\mage_attack"/>
+      <ani name="climb" ani="elven_mage_of_nature\mage_walk"/>
+      <ani name="jump" ani="elven_mage_of_nature\mage_jump"/>
+      <ani name="dies_end" ani="elven_mage_of_nature\mage_death"/>
+    </animations>
+  </creature>
+</root>

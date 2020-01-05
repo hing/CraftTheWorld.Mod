@@ -1,0 +1,5 @@
+<root>
+    <mob_blink_image value="gfx/ui/new_interface/dig_machine/stop"/>
+    <duration value="3"/>
+    <frequency value="3"/>
+</root>

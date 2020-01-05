@@ -1,0 +1,15 @@
+<root>
+    <texture value="gfx/MonstersDLC/spine/environment/water/water_tile_back_layer"/> 
+    <tile_offset value="5"/>
+    <tile_offset_v value="0.07"/>
+    <vertical_size value="2"/>
+    <use_dynamic_color value="true"/>
+
+    <coasts value="left|right"/>
+    <resolution value="0.1"/>
+
+    <springconstant value="1.9"/>
+    <damping value="0.1"/>
+    <spread value="0.2"/>
+    <delta_ratio value="2"/>
+</root>

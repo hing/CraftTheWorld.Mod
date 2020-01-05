@@ -1,0 +1,9 @@
+<root>
+    <radius value="1" />
+    <interval value="0" />
+    <maxCount value="1" />
+    <duration value="3" />
+    <healing value="3" />
+    <target_effect value="spell_HP1" />
+    <targets value="worker,friend"/>
+</root>

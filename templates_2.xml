@@ -1,0 +1,19 @@
+<root>
+    <fauna merge="partial">
+        <normal>
+            <creature name="zombie_mine" enabled="true"/>
+       </normal>
+        <underground>
+            <creature name="zombie_mine" enabled="true"/>
+        </underground>
+        <desert>
+            <creature name="zombie_mine" enabled="true"/>
+       </desert>
+        <snow>
+            <creature name="zombie_mine" enabled="true"/>
+      </snow>
+      <dlc_temples>
+            <creature name="zombie_mine" enabled="true"/>
+      </dlc_temples>      
+    </fauna>
+</root>

@@ -1,0 +1,12 @@
+<root>
+    <spawn_mobs value="pirate_skeleton_1,pirate_skeleton_2"/>
+    <!-- <spawn_mobs value="pirate_skeleton_2"/> -->
+    <radius value="10"/>
+    <min_mobs value="5"/>
+    <healt value="40"/>
+    <!-- <guards_count value="2|3"/> -->
+    <guards_radius value="10"/>
+    <patrol_points value="4"/>
+    <patrol_points_distance value="4"/>
+    <save_patrol_points value="false"/>
+</root>

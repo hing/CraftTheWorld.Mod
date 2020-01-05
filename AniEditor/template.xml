@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!--<details value="base_hat"/>
+  <layer name="cloak_hat_back" file="gfx\Dwarves\Clothes\cloak_hat_down_layer" frames="2" order="1" before="face_mask"/>
+  <layer name="diver_helm" file="gfx\Dwarves\Clothes\diver_helm" frames="3" after="base_hat"/>
+  <layer name="cloak_hat" file="gfx\Dwarves\Clothes\cloak_hat" frames="3" after="base_hat"/>
+  <layer name="forest_hat" file="gfx\Dwarves\Clothes\foresters_hat" frames="3" after="base_hat"/>
+  <layer name="tinker_hat" file="gfx\Dwarves\Clothes\tinkers_hat" frames="3" after="base_hat"/>
+  <layer name="woodman_hat" file="gfx\Dwarves\Clothes\woodmans_hat" frames="3" after="base_hat"/>-->
+  <!--<details value="base_hat"/>
+  <layer name="diver_helm" file="gfx\Dwarves\Clothes\diver_helm_back" frames="1" after="base_hat"/>
+  <layer name="cloak_hat" file="gfx\Dwarves\Clothes\cloak_hat_back" frames="1" after="base_hat"/>
+  <layer name="forest_hat" file="gfx\Dwarves\Clothes\foresters_hat_back" frames="1" after="base_hat"/>
+  <layer name="tinker_hat" file="gfx\Dwarves\Clothes\tinkers_hat_back" frames="1" after="base_hat"/>
+  <layer name="woodman_hat" file="gfx\Dwarves\Clothes\woodmans_hat_back" frames="1" after="base_hat"/>-->
+
+  <!--<layer name="face4" file="gfx\Dwarves\Head_1\face_04\turn_face4_s" mask="gfx\Dwarves\Head_1\face_01\turn_face1_c" frames="3" after="face_mask" details="face_mask"/>
+  <layer name="face3" file="gfx\Dwarves\Head_1\face_03\turn_face3_s" mask="gfx\Dwarves\Head_1\face_01\turn_face1_c" frames="3" after="face_mask" details="face_mask"/>
+  <layer name="face2" file="gfx\Dwarves\Head_1\face_02\turn_face2_s" mask="gfx\Dwarves\Head_1\face_01\turn_face1_c" frames="3" after="face_mask" details="face_mask"/>
+  <layer name="face1" file="gfx\Dwarves\Head_1\face_01\turn_face1_s" mask="gfx\Dwarves\Head_1\face_01\turn_face1_c" frames="3" after="face_mask" details="face_mask"/>
+
+  <layer name="head4" file="gfx\Dwarves\Head_1\beard_04\turn_head4_s" mask="gfx\Dwarves\Head_1\beard_04\turn_head4_c" frames="3" after="head" details="head"/>
+  <layer name="head3" file="gfx\Dwarves\Head_1\beard_03\turn_head3_s" mask="gfx\Dwarves\Head_1\beard_03\turn_head3_c" frames="3" after="head" details="head"/>
+  <layer name="head2" file="gfx\Dwarves\Head_1\beard_02\turn_head2_s" mask="gfx\Dwarves\Head_1\beard_02\turn_head2_c" frames="3" after="head" details="head"/>
+  <layer name="head1" file="gfx\Dwarves\Head_1\beard_01\turn_head1_s" mask="gfx\Dwarves\Head_1\beard_01\turn_head1_c" frames="3" after="head" details="head"/>-->
+
+  <layer name="hair3"  file="gfx\characters\goblin\hair\g_hair_03_s" mask="gfx\characters\goblin\hair\g_hair_03_c" scale="0.620000" frames="3" after="layer1" details="layer1"/>
+  <layer name="hair2"  file="gfx\characters\goblin\hair\g_hair_02_s" mask="gfx\characters\goblin\hair\g_hair_02_c" scale="0.620000" frames="3" after="layer1" details="layer1"/>
+  <layer name="hair1"  file="gfx\characters\goblin\hair\g_hair_01_s" mask="gfx\characters\goblin\hair\g_hair_01_c" scale="0.620000" frames="3" after="layer1" details="layer1"/>
+
+</root>

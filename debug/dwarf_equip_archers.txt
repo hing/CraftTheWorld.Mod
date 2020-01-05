@@ -1,0 +1,4 @@
+helm_gold,helm_mithril
+gold_armor,mithril_armor
+mithril_boots,gold_boots
+bow_heavy,heavy_rifle,rifle,bow_long

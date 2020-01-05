@@ -1,0 +1,10 @@
+<root>
+   <size value="90"/>
+   <bone value="right_eye"/>
+   <group value="2"/>
+   <states>
+      <state name="idle" ani="eye_right_idle" loop="true"/>
+      <state name="close" ani="eye_right_close" loop="true"/>
+      <state name="hit" ani="eye_right_cut" loop="false" next="idle"/>
+   </states>
+</root>

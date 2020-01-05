@@ -1,0 +1,911 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!--типы планет-->
+  <planets>
+    <planet id="2" name="usual_medium" default="true" local="MediumPlanet" temp="normal" fauna="normal" landscape="hills" />
+    <planet id="3" name="usual_cold" default="true" local="IcePlanet" temp="cold" fauna="snow" landscape="mountains"/>
+    <planet id="1" name="usual_desert" default="true" local="DesertPlanet" temp="hot" fauna="desert" landscape="plain"/>
+    <planet id="4" name="underground" default="true" local="UndergroudPlanet" temp="normal" fauna="underground" landscape="mountains" file="levels/4.xml" file_tmp="levels/underground_truemp.xml"/>
+    <planet id="5" name="biome1" default="true" local="BiomPlanet" temp="normal" fauna="biome1" landscape="plain" show="false"/>
+    <planet id="6" name="biome_usual_medium" default="true" local="MediumPlanet" temp="normal" fauna="normal" landscape="hills" use="usual_medium" show="false"/>
+    <planet id="7" name="biome_underground" default="true" use="underground" show="false" local="UndergroudPlanet" temp="normal" fauna="underground" landscape="mountains"/>
+    <planet id="8" name="biome_beetles" default="true" show="false" local="BeetlesPlanet" temp="normal" fauna="biome_beetles" landscape="plain"/>
+    
+    <planet id="9" name="dlc_temples" default="true" local="MountainValley" temp="normal" fauna="dlc_temples" landscape="mountains" file="levels/dlc_temples.xml" file_tmp="levels/dlc_temples_truemp.xml"/>
+  </planets>
+
+  <block_replace>
+    <dlc_temples>
+      <dirt to="dirt_china"/>
+      <wheat to="rice"/> 
+      <dirt_seed to="dirt_china_seed"/>
+      <dirt_roots to="dirt_china_roots"/>
+    </dlc_temples>  
+    <underground>
+      <dirt to="dirt_under"/>
+      <dirt1 to="dirt1_under"/>
+      <dirt2 to="dirt2_under"/>
+      <dirt_stalactite to="dirt_stalactite_under"/>
+      <dirt_stalagmite to="dirt_stalagmite_under"/>
+      <dirt_seed to="dirt_under_seed"/>
+      <dirt_roots to="dirt_under_roots"/>
+    </underground>
+    <biome1>
+      <dirt to="dirt_biome1"/>
+      <dirt1 to="dirt_biome2"/>
+      <dirt2 to="dirt_biome3"/>
+      <!--<dirt_stalactite to="ice_stalactite3"/>-->
+      <!--<dirt_stalagmite to="dirt_stalagmite_under"/>-->
+      <!--<dirt_roots to="dirt_biome1_roots"/>-->
+    </biome1>
+    <biome_beetles>
+      <dirt to="biome_spider_dirt1"/>
+      <dirt1 to="biome_spider_dirt2"/>
+      <dirt2 to="biome_spider_dirt3"/>
+      <dirt_roots to="biome_spider_dirt1_roots"/>
+    </biome_beetles>
+  </block_replace>
+  
+  <!--шаблоны для растительности от типа планеты-->
+  <vegetation>
+    <dlc_temples>
+      <item name="tree_china" points="15%" height="1-4"/>
+      <item name="tree_baomboo" points="10%" height="1-4"/>
+      <item name="bush" points="9%" height="1"/>
+    </dlc_temples>
+    <usual_medium>
+      <!--<item name="tree_cactus" points="5%" height="1-3" />-->
+      <item name="tree" points="5%" height="1-4"/>
+      <item name="tree_pine" points="8%" height="1-5"/>
+      <item name="tree_white" points="5%" height="1-4"/>
+      <item name="tree_fir" points="5%" height="1-2"/>
+      <item name="bush" points="9%" height="1"/>
+      <item name="wheat" points="2%" width="3-5"/>
+    </usual_medium>
+    <usual_cold>
+      <item name="tree_pine" points="9%" height="1-5"/>
+      <item name="tree_black" points="9%" height="1-5"/>
+      <item name="tree_fir" points="5%" height="1-2"/>
+      <item name="bush_snow" points="4%" height="1"/>
+      <item name="bush_snow2" points="4%" height="1"/>
+    </usual_cold>
+    <usual_desert>
+      <item name="tree_cactus" points="4%" height="1-2"/>
+      <item name="tree_cactus2" points="4%" height="1-2"/>
+      <item name="tree_cactus3" points="4%" height="1-2"/>
+      <item name="tree_palm" points="5%" height="1-4"/>
+      <item name="tree_palm2" points="5%" height="1-4"/>
+      <item name="bush_desert" points="2%" height="1"/>
+      <item name="bush_desert1" points="2%" height="1"/>
+      <item name="bush_desert2" points="2%" height="1"/>
+      <item name="bush_desert3" points="2%" height="1"/>
+      <item name="bush_desert4" points="2%" height="1"/>
+      <item name="bush_desert_wood" points="9%" height="1"/>
+    </usual_desert>
+    <underground>
+      <item name="tree_mushroom1" points="10%" height="1-3"/>
+      <item name="tree_mushroom2" points="8%" height="1-6"/>
+      <item name="tree_mushroom3" points="8%" height="1-5"/>
+      <item name="tree_mushroom4" points="8%" height="1-5"/>
+      <item name="tree_mushroom5" points="8%" height="1-5"/>
+      <item name="bush_und1" points="3%" height="1"/>
+      <item name="bush_und2" points="3%" height="1"/>
+      <item name="bush_und3" points="3%" height="1"/>
+      <item name="wheat" points="2%" width="3-5"/>
+    </underground>
+    <biome1>
+      <item name="biome1_bush1" points="10%" height="1"/>
+      <item name="biome1_bush2" points="10%" height="1"/>
+      <item name="biome1_bush3" points="10%" height="1"/>
+      <item name="biome1_bush4" points="10%" height="1"/>
+      <item name="biome1_bush5" points="15%" height="1"/>
+      <item name="biome1_bush6" points="15%" height="1"/>
+      <item name="biome1_bush7" points="15%" height="1"/>
+      <item name="biome1_bush8" points="15%" height="1"/>
+      <item name="biome1_tree1" points="20%" height="1-6"/>
+    </biome1>
+  <biome_beetles>
+      <item name="beetle_biome_bush1" points="10%" height="1"/>
+      <item name="beetle_biome_bush2" points="10%" height="1-2"/>
+      <item name="beetle_biome_bush3" points="10%" height="1-2"/>
+      <item name="beetle_biome_bush4" points="10%" height="1-2"/>
+  </biome_beetles>
+  </vegetation>
+  
+  <!--генерация поверхностного слоя песка или снега-->
+  <!--<generateSand planets="usual_desert,usual_medium" humidity="low" range="1-5" oasis="20%" oasisRange="5-15" block="sand"/>-->
+  <surfaces>
+    <surface planets="usual_desert" range="2-5" oasis="20%" oasisRange="5-15" block="sand"/>
+    <surface planets="usual_cold" range="2-4" block="snow"/>
+  </surfaces>
+
+  <!--размеры уровня-->
+  <sizes>
+    <!--<small value="100,80" local="SizeSmall"/>-->
+    <small value="230,100" local="SizeSmall" exclude="underground"/>
+    <normal value="260,140" local="SizeMedium" exclude="underground"/>
+    <large value="320,160" local="SizeLarge" exclude="underground"/>
+    <large_vertical value="200,220" local="SizeLarge" include="underground"/>
+    <biome value="100,50" local="SizeSmall" exclude="all"/>
+    <l1_pvp value="120,60" local="SizeSmall" exclude="all"/>
+    <biome_pvp value="120,50" local="SizeSmall" exclude="all"/>
+    <l4_mp value="120,90" local="SizeLarge" exclude="all"/>
+    <biome_beetles value="120,50" local="SizeSmall" exclude="all"/>
+    
+    <!--IOS Sizes-->
+    <small_IOS value="180,100" local="SizeSmall" exclude="underground" ios="true"/>
+    <normal_IOS value="200,100" local="SizeMedium" exclude="underground" ios="true"/>
+    <large_IOS value="220,110" local="SizeLarge" exclude="underground" ios="true"/>
+    <large_vertical_IOS value="190,160" local="SizeLarge" include="underground" ios="true"/>
+  </sizes>
+
+  <!--влажность-->
+  <humidity>
+    <low local="HumLow">
+      <rainInterval value="100-500"/>      <!--интервал между дождями-->
+      <rainDuration value="10-30"/>      <!--продолжительность дождя-->
+      <mrain value="65%"/>      <!--вероятность грибного дождя-->
+      <rain value="30%"/>      <!--вероятность обычного дождя-->
+      <storm value="5%"/>      <!--вероятность шторма-->
+      <waterAbsorb value="200"/>      <!--базовое время впитывания воды в формуле-->
+      <smallWARatio value="0.2"/>      <!--коэф. для базового времени впитывания воды в формуле для одной полоски воды-->
+      <waterPondsArea value="5%"/>      <!--процент длины водоемов от длины уровня-->
+      <waterPondHeight value="2-4"/>      <!--максимальная глубина -->
+      <waterPondWidth value="5-10"/>      <!--максимальная ширина -->
+    </low>
+    <normal local="HumNormal">
+      <rainInterval value="60-300"/>      <!--интервал между дождями-->
+      <rainDuration value="20-50"/>      <!--продолжительность дождя-->
+      <mrain value="60%"/>      <!--вероятность грибного дождя-->
+      <rain value="30%"/>      <!--вероятность обычного дождя-->
+      <storm value="10%"/>      <!--вероятность шторма-->
+      <waterAbsorb value="300"/>      <!--базовое время впитывания воды в формуле-->
+      <smallWARatio value="0.33"/>      <!--коэф. для базового времени впитывания воды в формуле для одной полоски воды-->
+      <waterPondsArea value="13%"/>      <!--процент длины водоемов от длины уровня-->
+      <waterPondHeight value="2-5"/>      <!--максимальная глубина -->
+      <waterPondWidth value="5-10"/>      <!--максимальная ширина -->
+    </normal>
+    <high local="HumHigh">
+      <rainInterval value="40-200"/>      <!--интервал между дождями-->
+      <rainDuration value="25-60"/>      <!--продолжительность дождя-->
+      <mrain value="40%"/>      <!--вероятность грибного дождя-->
+      <rain value="30%"/>      <!--вероятность обычного дождя-->
+      <storm value="30%"/>      <!--вероятность шторма-->
+      <waterAbsorb value="350"/>      <!--базовое время впитывания воды в формуле-->
+      <smallWARatio value="0.33"/>      <!--коэф. для базового времени впитывания воды в формуле для одной полоски воды-->
+      <waterPondsArea value="25%"/>      <!--процент длины водоемов от длины уровня-->
+      <waterPondHeight value="2-5"/>      <!--максимальная глубина -->
+      <waterPondWidth value="5-10"/>      <!--максимальная ширина -->
+    </high>
+  </humidity>
+
+  <!--замена монстров в зависимости от типа планеты-->
+  <creatures>
+    <dlc_temples>
+      <slug bind="toad"/>
+      <chicken bind="duck"/>
+    </dlc_temples>
+    <usual_cold>
+      <zombie bind="yeti" chance="60%"/>  <!--меняем зомби на йети для холодной планеты-->
+      <zombie_boss bind="yeti_boss"/>      <!--меняем зомби на йети для холодной планеты-->
+      <chicken bind="lizard"/>
+      <yak bind="ice_beast"/>
+    </usual_cold>
+    <usual_desert>
+      <zombie bind="mummy"/>
+      <zombie_boss bind="mummy_boss"/>
+      <yak bind="buffalo"/>
+      <sheep bind="lama"/>
+      <chicken bind="chick"/>
+    </usual_desert>
+    <underground>
+      <sheep bind="caterpillar"/>
+      <yak bind="cave_beast"/>
+      <zombie bind="orc"/>
+      <zombie_boss bind="orc_boss"/>
+      <slug bind="slug2"/>
+      <little_dragon bind="little_dragon_black"/>
+    </underground> 
+  </creatures>
+
+  <backgrounds>
+    <dlc_temples>
+      <layers>
+        <layer fullscreen="true">
+          <day file="gfx\level_tiles\BG\sky_day"/>
+          <sunset file="gfx\level_tiles\BG\sky_sunset"/>
+          <night file="gfx\level_tiles\BG\sky_night"/>
+        </layer>
+        <layer scale="1" offset="-300,250" spine="bg_moon" parallax_ratio="0.05,0"/>
+        <layer repeat="true" scale="0.8" offset="0,0" spine="temples_bg2" spine_size="2098,1100" parallax_ratio="0.08,0.08">
+          <anims>
+            <day anim="day"/>
+            <night anim="night"/>
+            <day_night anim="day_to_night"/>
+            <night_day anim="night_to_day"/>
+          </anims>
+        </layer>
+        <layer repeat="true" scale="0.8" offset="0,-60" spine="temples_bg1" spine_size="2098,1100" parallax_ratio="0.11,0.11">
+          <anims>
+            <day anim="day"/>
+            <night anim="night"/>
+            <day_night anim="day_to_night"/>
+            <night_day anim="night_to_day"/>
+          </anims>
+        </layer>
+        <layer velocity="5,15" type="cloud" spine="gfx/Spine/environment/backgrounds/clouds/new_hope_cloud_01.json" spine_size="334,74">
+          <anims>
+            <day anim="day"/>
+            <night anim="night"/>
+            <day_night anim="day_to_night"/>
+            <night_day anim="night_to_day"/>
+          </anims>
+        </layer>
+        <layer velocity="5,15" type="cloud" spine="gfx/Spine/environment/backgrounds/clouds/new_hope_cloud_02.json" spine_size="615,198">
+          <anims>
+            <day anim="day"/>
+            <night anim="night"/>
+            <day_night anim="day_to_night"/>
+            <night_day anim="night_to_day"/>
+          </anims>
+        </layer>
+        <layer velocity="5,15" type="cloud" spine="gfx/Spine/environment/backgrounds/clouds/new_hope_cloud_03.json" spine_size="568,157">
+          <anims>
+            <day anim="day"/>
+            <night anim="night"/>
+            <day_night anim="day_to_night"/>
+            <night_day anim="night_to_day"/>
+          </anims>
+        </layer>
+      </layers>
+    </dlc_temples>
+
+    <underground>
+      <layers>
+        <layer fullscreen="true">
+          <day file="gfx\level_tiles\BG\sky_4th_world"/>
+          <sunset file="gfx\level_tiles\BG\sky_4th_world"/>
+          <night file="gfx\level_tiles\BG\sky_4th_world_night"/>
+        </layer>
+
+        <layer repeat="true" scale="1" offset="0,300" spine="four_world_bg4" spine_size="1757,784" parallax_ratio="0.02,0.02">
+          <anims>
+            <day anim="day"/>
+            <night anim="night"/>
+            <day_night anim="day_to_night"/>
+            <night_day anim="night_to_day"/>
+          </anims>
+        </layer>
+        <layer repeat="true" scale="1" offset="0,600" spine="four_world_bg3" spine_size="1757,784" parallax_ratio="0.02,0.02">
+          <anims>
+            <day anim="fly_day"/>
+            <night anim="fly_night"/>
+            <day_night anim="fly_day"/>
+            <night_day anim="fly_night"/>
+          </anims>
+        </layer>
+        <layer repeat="true" scale="1" offset="0,160" spine="four_world_bg2" spine_size="1757,784" parallax_ratio="0.08,0.08">
+          <anims>
+            <day anim="day"/>
+            <night anim="night"/>
+            <day_night anim="day_to_night"/>
+            <night_day anim="night_to_day"/>
+          </anims>
+        </layer>
+        <layer repeat="true" scale="1" offset="0,-20" spine="four_world_bg1" spine_size="1757,784" parallax_ratio="0.11,0.11">
+          <anims>
+            <day anim="day"/>
+            <night anim="night"/>
+            <day_night anim="day_to_night"/>
+            <night_day anim="night_to_day"/>
+          </anims>
+        </layer>
+      </layers>
+    </underground>
+
+<!--    <biome_usual_medium>
+      <layers>
+        <layer fullscreen="true">
+          <day file="gfx\level_tiles\BG\biom_1st_forest\biom_1st_forest_sky"/>
+          <sunset file="gfx\level_tiles\BG\sky_sunset"/>
+          <night file="gfx\level_tiles\BG\sky_night"/>
+        </layer>
+        <layer velocity="5,15" type="cloud" parallax_ratio="0.08,0.08" scale="0.6">
+          <day file="gfx\level_tiles\BG\cloud_2_day"/>
+          <sunset file="gfx\level_tiles\BG\cloud_2_sunset"/>
+          <night file="gfx\level_tiles\BG\cloud_2_night"/>
+        </layer>
+        <layer repeat="true" scale="1" offset="0,200" parallax_ratio="0.08,0.08">
+          <day file="gfx\level_tiles\BG\biom_1st_forest\biom_1st_forest_2plan"/>
+          <sunset file="gfx\level_tiles\BG\biom_1st_forest\biom_1st_forest_2plan_evening"/>
+          <night file="gfx\level_tiles\BG\biom_1st_forest\biom_1st_forest_2plan_night"/>
+        </layer>
+        <layer velocity="5,15" type="cloud" parallax_ratio="0.11,0.11" scale="0.8">
+          <day file="gfx\level_tiles\BG\cloud_1_day"/>
+          <sunset file="gfx\level_tiles\BG\cloud_1_sunset"/>
+          <night file="gfx\level_tiles\BG\cloud_1_night"/>
+        </layer>
+        <layer repeat="true" scale="1" offset="0,0" parallax_ratio="0.11,0.11">
+          <day file="gfx\level_tiles\BG\biom_1st_forest\biom_1st_forest_1plan"/>
+          <sunset file="gfx\level_tiles\BG\biom_1st_forest\biom_1st_forest_1plan_evening"/>
+          <night file="gfx\level_tiles\BG\biom_1st_forest\biom_1st_forest_1plan_night"/>
+        </layer>
+        <layer velocity="5,15" type="cloud">
+          <day file="gfx\level_tiles\BG\cloud_3_day"/>
+          <sunset file="gfx\level_tiles\BG\cloud_3_sunset"/>
+          <night file="gfx\level_tiles\BG\cloud_3_night"/>
+        </layer>
+      </layers>
+    </biome_usual_medium>-->
+    
+    <biome_usual_medium>
+      <layers>
+        <layer fullscreen="true">
+          <day file="gfx\level_tiles\BG\biom_1st_forest\biom_1st_forest_sky"/>
+          <sunset file="gfx\level_tiles\BG\sky_sunset"/>
+          <night file="gfx\level_tiles\BG\sky_night"/>
+        </layer>
+        <layer scale="1" offset="-300,250" spine="bg_moon" parallax_ratio="0.05,0"/>
+
+        <layer repeat="true" scale="0.8" offset="0,160" spine="world1_bg2" spine_size="1920,752" parallax_ratio="0.08,0.08">
+        </layer>
+        <layer repeat="true" scale="0.8" offset="0,-20" spine="world1_bg1" spine_size="1920,752" parallax_ratio="0.11,0.11">
+        </layer>
+      </layers>
+    </biome_usual_medium>
+    
+    <biome_underground>
+      <layers>
+        <layer fullscreen="true">
+          <day file="gfx\level_tiles\BG\biom_4th_world\biom_4th_world_4plan"/>
+        </layer>
+        <layer repeat="true" scale="1" offset="0,300" parallax_ratio="0.02,0.02">
+          <day file="gfx\level_tiles\BG\biom_4th_world\biom_4th_world_3plan"/>
+        </layer>
+        <layer repeat="true" scale="1" offset="0,0" parallax_ratio="0.08,0.08">
+          <day file="gfx\level_tiles\BG\biom_4th_world\biom_4th_world_2plan"/>
+        </layer>
+        <layer repeat="true" scale="1" offset="0,0" parallax_ratio="0.11,0.11">
+          <day file="gfx\level_tiles\BG\biom_4th_world\biom_4th_world_1plan"/>
+        </layer>
+      </layers>
+    </biome_underground>
+    
+    <usual_medium>
+      <layers>
+        <layer fullscreen="true">
+          <day file="gfx\level_tiles\BG\sky_day"/>
+          <sunset file="gfx\level_tiles\BG\sky_sunset"/>
+          <night file="gfx\level_tiles\BG\sky_night"/>
+        </layer>
+        <layer scale="1" offset="-300,250" spine="bg_moon" parallax_ratio="0.05,0"/>
+        <layer repeat="true" scale="1" offset="0,300" spine="new_hope" spine_size="1920,670" parallax_ratio="0.11,0.11">
+        </layer>
+        <layer velocity="5,15" type="cloud" spine="gfx/Spine/environment/backgrounds/clouds/new_hope_cloud_01.json" spine_size="334,74">
+        </layer>
+        <layer velocity="5,15" type="cloud" spine="gfx/Spine/environment/backgrounds/clouds/new_hope_cloud_02.json" spine_size="615,198">
+        </layer>
+        <layer velocity="5,15" type="cloud" spine="gfx/Spine/environment/backgrounds/clouds/new_hope_cloud_03.json" spine_size="568,157">
+        </layer>
+      </layers>
+    </usual_medium>
+    <usual_cold>
+      <layers>
+        <layer fullscreen="true">
+           <day file="gfx\level_tiles\BG\sky_day_wint"/>
+          <sunset file="gfx\level_tiles\BG\sky_sunset"/>
+          <night file="gfx\level_tiles\BG\sky_night"/>
+        </layer>
+        <layer scale="1" offset="-300,250" spine="bg_moon" parallax_ratio="0.05,0"/>
+        <layer repeat="true" scale="1" offset="0,460" spine="winter_heaven" spine_size="1920,916" parallax_ratio="0.11,0.11">
+        </layer>
+        <!--<layer repeat="true" scale="1" offset="0,0">
+          <day file="gfx\level_tiles\BG\wint_day"/>
+          <sunset file="gfx\level_tiles\BG\wint_evening"/>
+          <night file="gfx\level_tiles\BG\wint_night"/>
+        </layer>-->
+        <layer velocity="5,15" type="cloud">
+          <day file="gfx\level_tiles\BG\cloud_1_day_wint"/>
+          <sunset file="gfx\level_tiles\BG\cloud_1_sunset_wint"/>
+          <night file="gfx\level_tiles\BG\cloud_1_night"/>
+        </layer>
+        <layer velocity="5,15" type="cloud">
+          <day file="gfx\level_tiles\BG\cloud_2_day_wint"/>
+          <sunset file="gfx\level_tiles\BG\cloud_2_sunset_wint"/>
+          <night file="gfx\level_tiles\BG\cloud_2_night"/>
+        </layer>
+        <layer velocity="5,15" type="cloud">
+          <day file="gfx\level_tiles\BG\cloud_3_day_wint"/>
+          <sunset file="gfx\level_tiles\BG\cloud_3_sunset_wint"/>
+          <night file="gfx\level_tiles\BG\cloud_3_night"/>
+        </layer>
+      </layers>
+    </usual_cold>
+    <usual_desert>
+      <layers>
+        <layer fullscreen="true">
+          <day file="gfx\level_tiles\BG\sky_day_desert"/>
+          <sunset file="gfx\level_tiles\BG\sky_sunset_desert"/>
+          <night file="gfx\level_tiles\BG\sky_night"/>
+        </layer>
+        <layer scale="1" offset="-300,250" spine="bg_moon" parallax_ratio="0.05,0"/>
+        <layer repeat="true" scale="1" offset="0,550" spine="dry_wind" spine_size="1920,1104" parallax_ratio="0.11,0.11">
+        </layer>
+        <!--<layer repeat="true" scale="1" offset="0,0">
+          <day file="gfx\level_tiles\BG\desert_day"/>
+          <sunset file="gfx\level_tiles\BG\desert_evening"/>
+          <night file="gfx\level_tiles\BG\desert_night"/>
+        </layer>-->
+        <layer velocity="5,15" type="cloud">
+          <day file="gfx\level_tiles\BG\cloud_1_day_desert"/>
+          <sunset file="gfx\level_tiles\BG\cloud_1_sunset_desert"/>
+          <night file="gfx\level_tiles\BG\cloud_1_night"/>
+        </layer>
+        <layer velocity="5,15" type="cloud">
+          <day file="gfx\level_tiles\BG\cloud_2_day_desert"/>
+          <sunset file="gfx\level_tiles\BG\cloud_2_sunset_desert"/>
+          <night file="gfx\level_tiles\BG\cloud_2_night"/>
+        </layer>
+        <layer velocity="5,15" type="cloud">
+          <day file="gfx\level_tiles\BG\cloud_3_day_desert"/>
+          <sunset file="gfx\level_tiles\BG\cloud_3_sunset_desert"/>
+          <night file="gfx\level_tiles\BG\cloud_3_night"/>
+        </layer>
+      </layers>
+    </usual_desert>
+  </backgrounds>
+
+  <parallax>
+    <biome1>
+      <item name="bg1">
+        <layer spine="biome1_bg6" ani="idle" scale="1" factor="0.35"/>
+        <layer spine="biome1_bg5" ani="idle" scale="1" factor="0.25"/>
+        <layer spine="biome1_bg4" ani="idle" scale="1" factor="0.2"/>
+        <layer spine="biome1_bg3" ani="idle" scale="1" factor="0.16"/>
+        <layer spine="biome1_bg2" ani="idle" scale="1" factor="0.13"/>
+        <layer spine="biome1_bg1" ani="idle" scale="1" factor="0.11"/>
+      </item>
+    </biome1>
+    <biome_beetles>
+      <item name="bg1">
+        <layer file="gfx\Spine\environment\backgrounds\underworld_03\3" scale="1" factor="0.35"/>
+        <layer file="gfx\Spine\environment\backgrounds\underworld_03\2" scale="1" factor="0.2"/>
+        <layer file="gfx\Spine\environment\backgrounds\underworld_03\1" scale="1" factor="0.11"/>
+      </item>
+    </biome_beetles>
+    <all_ios>
+      <item name="bg1">
+        <layer file="gfx\Spine\environment\backgrounds\underworld_IOS\background" scale="1" factor="0.11"/>
+      </item>
+      <item name="bg2">
+        <layer file="gfx\Spine\environment\backgrounds\underworld_IOS\background2" scale="1" factor="0.11"/>
+      </item>   
+    </all_ios>
+    <all>
+      <item name="underground1">
+        <layer spine="under_bg1" ani="day" scale="1" factor="0.15"/>
+        <layer spine="under_stalactites" ani="day" scale="1" factor="0.22"/>
+        <layer spine="under_back1" ani="day" scale="1" factor="0.26"/>
+        <layer spine="under_forw1" ani="day" scale="1" factor="0.27"/>
+      </item>
+      <item name="underground2">
+        <layer spine="under_bg2" ani="day" scale="1" factor="0.15"/>
+        <layer spine="under_stalactites" ani="day" scale="1" factor="0.22"/>
+        <layer spine="under_back2" ani="day" scale="1" factor="0.26"/>
+        <layer spine="under_forw2" ani="day" scale="1" factor="0.27"/>
+      </item>
+      <item name="underground3">
+        <layer spine="under_bg3" ani="day" scale="1" factor="0.15"/>
+        <layer spine="under_stalactites" ani="day" scale="1" factor="0.22"/>
+        <layer spine="under_back3" ani="day" scale="1" factor="0.26"/>
+        <layer spine="under_forw3" ani="day" scale="1" factor="0.27"/>
+      </item>
+    </all>
+  </parallax>
+
+  <underground_layers>
+    <solid file="gfx\level_tiles\tile\background\background"/>
+    <left_top file="gfx\level_tiles\tile\background\corner_1" mask="11010000" empty_mask="00001011"/>
+    <left_bottom file="gfx\level_tiles\tile\background\corner_3" mask="00010110" empty_mask="01101000"/>
+    <right_top file="gfx\level_tiles\tile\background\corner_2" mask="01101000" empty_mask="00010110"/>
+    <right_bottom file="gfx\level_tiles\tile\background\corner_4" mask="00001011" empty_mask="11010000"/>
+
+    <left file="gfx\level_tiles\tile\background\left_" mask="00010000" empty_mask="00101001" properties="draw_align=left,scale_yaxis"/>
+    <right file="gfx\level_tiles\tile\background\right_" mask="00001000" empty_mask="10010100" properties="draw_align=right,scale_yaxis"/>
+    <top file="gfx\level_tiles\tile\background\top1" mask="01000000" empty_mask="00000111" properties="draw_align=up,scale_xaxis"/>
+    <bottom file="gfx\level_tiles\tile\background\bottom1" mask="00000010" empty_mask="11100000" properties="draw_align=down,scale_xaxis"/>
+
+    <left_top_out file="gfx\level_tiles\tile\background\outside_corner_1" mask="10000000" empty_mask="00101111" properties="draw_align=left|up,scale=0.23"/>
+    <right_top_out file="gfx\level_tiles\tile\background\outside_corner_2" mask="00100000" empty_mask="10010111" properties="draw_align=right|up,scale=0.24"/>
+    <left_bottom_out file="gfx\level_tiles\tile\background\outside_corner_3" mask="00000100" empty_mask="11101001" properties="draw_align=left|down,scale=0.24"/>
+    <right_bottom_out file="gfx\level_tiles\tile\background\outside_corner_4" mask="00000001" empty_mask="11110100" properties="draw_align=right|down,scale=0.27"/>
+
+    <left_right file="gfx\level_tiles\tile\background\outside_corners2" mask="10000001" empty_mask="00100100"/>
+    <right_left file="gfx\level_tiles\tile\background\outside_corners1" mask="00100100" empty_mask="10000001"/>
+
+  </underground_layers>
+  
+  <!--шаблоны фауны или монстров, определяется доступность монстров для каждого шаблона-->
+  <fauna>
+    <all enableAll="true"/>   <!--доступны все монстры-->
+
+    <dlc_temples enableAll="false">
+      <creature name="duck" enabled="true"/>
+      <creature name="toad" enabled="true"/>
+      <creature name="fish_china" enabled="true"/>
+      <creature name="fish_beast" enabled="true"/>
+      <creature name="cave_beast" enabled="true"/>
+      <creature name="temple_witch" enabled="true"/>
+      <creature name="temple_golem" enabled="true"/>
+      <creature name="dragon_guard" enabled="true"/>
+      <creature name="golem" enabled="true"/>
+      <creature name="gargoyley_ancient" enabled="true"/>
+      <creature name="zombie_boss_santa" enabled="true"/>
+      <creature name="goblin_elf" enabled="true"/>
+      <creature name="christmas_shaman" enabled="true"/>
+      <creature name="zombie_solder" enabled="true"/>
+      <creature name="zombie_boost" enabled="true"/>
+      <creature name="zombie_crookshank" enabled="true"/>
+      <creature name="thrower_giant" enabled="true"/>
+      <creature name="zombie_armorbreaker" enabled="true"/>
+      <creature name="madness_rider" enabled="true"/>
+      <creature name="banshee" enabled="true"/>
+      <creature name="beholder_terrible" enabled="true"/>
+      <creature name="skeleton_archer" enabled="true"/>
+      <creature name="gargoyley_fire" enabled="true"/>
+      <creature name="zombie_fire" enabled="true"/>
+      <creature name="sheep" enabled="true"/>
+      <creature name="yak" enabled="true"/>
+      <creature name="skeleton" enabled="true"/>
+      <creature name="skeleton_shielder" enabled="true"/>
+      <creature name="skeleton_builder" enabled="true"/>
+      <creature name="skeleton_boss" enabled="true"/>
+      <creature name="mite" enabled="true"/>
+      <creature name="slug" enabled="true"/>
+      <creature name="chicken" enabled="true"/>
+      <creature name="beholder" enabled="true"/>
+      <creature name="goblin" enabled="true"/>
+      <creature name="goblin_shaman" enabled="true"/>
+      <creature name="beetle" enabled="true"/>
+      <creature name="gargoyley" enabled="true"/>
+      <creature name="zombie" enabled="true"/>
+      <creature name="zombie_boss" enabled="true"/>
+      <creature name="larva" enabled="true"/>
+      <creature name="black_fluffy" enabled="true"/>
+      <creature name="spider" enabled="true"/>
+      <creature name="vampire_guard" enabled="true"/>
+      <creature name="little_dragon" enabled="true"/>
+      <creature name="piranha" enabled="true"/>
+      <creature name="piranha_deep" enabled="true"/>
+      <creature name="fish_red" enabled="true"/>
+      <creature name="fish_yellow" enabled="true"/>
+      <creature name="ghost" enabled="true"/>
+      <creature name="imp" enabled="true"/>
+      <creature name="imp_cargo" enabled="true"/>
+      <creature name="rat" enabled="true"/>
+      <creature name="basilisk_pet" enabled="true"/>
+      <creature name="catowl_pet" enabled="true"/>
+      <creature name="ball_fish" enabled="true"/>
+      <creature name="crip_catowl_pet" enabled="true"/>
+    </dlc_temples>
+
+
+    <normal enableAll="false">  <!--доступны все кроме червя-->
+      <creature name="golem" enabled="true"/>
+      <creature name="gargoyley_ancient" enabled="true"/>
+      <creature name="zombie_boss_santa" enabled="true"/>
+      <creature name="goblin_elf" enabled="true"/>
+      <creature name="christmas_shaman" enabled="true"/>
+      <creature name="zombie_solder" enabled="true"/>
+      <creature name="zombie_boost" enabled="true"/>
+      <creature name="zombie_crookshank" enabled="true"/>
+      <creature name="thrower_giant" enabled="true"/>
+      <creature name="zombie_armorbreaker" enabled="true"/>
+      <creature name="madness_rider" enabled="true"/>
+      <creature name="banshee" enabled="true"/>
+      <creature name="beholder_terrible" enabled="true"/>
+      <creature name="skeleton_archer" enabled="true"/>
+      <creature name="gargoyley_fire" enabled="true"/>
+      <creature name="zombie_fire" enabled="true"/>
+      <creature name="sheep" enabled="true"/>
+      <creature name="yak" enabled="true"/>
+      <creature name="skeleton" enabled="true"/>
+      <creature name="skeleton_shielder" enabled="true"/>
+      <creature name="skeleton_builder" enabled="true"/>
+      <creature name="skeleton_boss" enabled="true"/>
+      <creature name="mite" enabled="true"/>
+      <creature name="slug" enabled="true"/>
+      <creature name="chicken" enabled="true"/>
+      <creature name="beholder" enabled="true"/>
+      <creature name="goblin" enabled="true"/>
+      <creature name="goblin_shaman" enabled="true"/>
+      <creature name="beetle" enabled="true"/>
+      <creature name="gargoyley" enabled="true"/>
+      <creature name="zombie" enabled="true"/>
+      <creature name="zombie_boss" enabled="true"/>
+      <creature name="larva" enabled="true"/>
+      <creature name="black_fluffy" enabled="true"/>
+      <creature name="spider" enabled="true"/>
+      <creature name="vampire_guard" enabled="true"/>
+      <creature name="little_dragon" enabled="true"/>
+      <creature name="piranha" enabled="true"/>
+      <creature name="piranha_deep" enabled="true"/>
+      <creature name="fish_red" enabled="true"/>
+      <creature name="fish_yellow" enabled="true"/>
+      <creature name="ghost" enabled="true"/>
+      <creature name="imp" enabled="true"/>
+      <creature name="imp_cargo" enabled="true"/>
+      <creature name="rat" enabled="true"/>
+      <creature name="basilisk_pet" enabled="true"/>
+      <creature name="catowl_pet" enabled="true"/>
+      <creature name="ball_fish" enabled="true"/>
+      <creature name="crip_catowl_pet" enabled="true"/>
+    </normal>
+    <snow enableAll="false">
+      <creature name="golem" enabled="true"/>
+      <creature name="gargoyley_ancient" enabled="true"/>
+      <creature name="zombie_boss_santa" enabled="true"/>
+      <creature name="goblin_elf" enabled="true"/>
+      <creature name="christmas_shaman" enabled="true"/>
+      <creature name="zombie_solder" enabled="true"/>
+      <creature name="zombie_boost" enabled="true"/>
+      <creature name="zombie_crookshank" enabled="true"/>
+      <creature name="thrower_giant" enabled="true"/>
+      <creature name="zombie_armorbreaker" enabled="true"/>
+      <creature name="madness_rider" enabled="true"/>
+      <creature name="banshee" enabled="true"/>
+      <creature name="beholder_terrible" enabled="true"/>
+      <creature name="skeleton_archer" enabled="true"/>
+      <creature name="gargoyley_fire" enabled="true"/>
+      <creature name="zombie_fire" enabled="true"/>
+      <creature name="sheep" enabled="true"/>
+      <creature name="lizard" enabled="true"/>
+      <creature name="ice_beast" enabled="true"/>
+      <creature name="skeleton" enabled="true"/>
+      <creature name="skeleton_shielder" enabled="true"/>
+      <creature name="skeleton_builder" enabled="true"/>
+      <creature name="skeleton_boss" enabled="true"/>
+      <creature name="zombie" enabled="true"/>
+      <creature name="zombie_boss" enabled="true"/>
+      <creature name="mite" enabled="true"/>
+      <creature name="slug" enabled="true"/>
+      <creature name="beholder" enabled="true"/>
+      <creature name="beetle" enabled="true"/>
+      <creature name="gargoyley" enabled="true"/>
+      <creature name="yeti" enabled="true"/>
+      <creature name="yeti_boss" enabled="true"/>
+      <creature name="larva" enabled="true"/>
+      <creature name="black_fluffy" enabled="true"/>
+      <creature name="spider" enabled="true"/>
+      <creature name="vampire_guard" enabled="true"/>
+      <creature name="frostling" enabled="true"/>
+      <creature name="frostling_knight" enabled="true"/>
+      <creature name="little_dragon" enabled="true"/>
+      <creature name="worm" enabled="true"/>
+      <creature name="piranha" enabled="true"/>
+      <creature name="piranha_deep" enabled="true"/>
+      <creature name="fish_red" enabled="true"/>
+      <creature name="fish_yellow" enabled="true"/>
+      <creature name="ghost" enabled="true"/>
+      <creature name="imp" enabled="true"/>
+      <creature name="rat" enabled="true"/>
+      <creature name="basilisk_pet" enabled="true"/>
+       <creature name="catowl_pet" enabled="true"/>
+      <creature name="ball_fish" enabled="true"/>
+      <creature name="crip_catowl_pet" enabled="true"/>
+      <creature name="imp_cargo" enabled="true"/>
+
+    </snow>
+    <desert enableAll="false">
+      <creature name="golem" enabled="true"/>
+      <creature name="gargoyley_ancient" enabled="true"/>
+      <creature name="zombie_boss_santa" enabled="true"/>
+      <creature name="goblin_elf" enabled="true"/>
+      <creature name="christmas_shaman" enabled="true"/>
+      <creature name="zombie_solder" enabled="true"/>
+      <creature name="zombie_boost" enabled="true"/>
+      <creature name="zombie_crookshank" enabled="true"/>
+      <creature name="thrower_giant" enabled="true"/>
+      <creature name="zombie_armorbreaker" enabled="true"/>
+      <creature name="madness_rider" enabled="true"/>
+      <creature name="banshee" enabled="true"/>
+      <creature name="beholder_terrible" enabled="true"/>
+      <creature name="skeleton_archer" enabled="true"/>
+      <creature name="gargoyley_fire" enabled="true"/>
+      <creature name="zombie_fire" enabled="true"/>
+      <creature name="lama" enabled="true"/>
+      <creature name="buffalo" enabled="true"/>
+      <creature name="chick" enabled="true"/>
+      <creature name="skeleton" enabled="true"/>
+      <creature name="skeleton_shielder" enabled="true"/>
+      <creature name="skeleton_builder" enabled="true"/>
+      <creature name="skeleton_boss" enabled="true"/>
+      <creature name="zombie" enabled="true"/>
+      <creature name="zombie_boss" enabled="true"/>
+      <creature name="mite" enabled="true"/>
+      <creature name="slug" enabled="true"/>
+      <creature name="beholder" enabled="true"/>
+      <creature name="beetle" enabled="true"/>
+      <creature name="gargoyley" enabled="true"/>
+      <creature name="mummy" enabled="true"/>
+      <creature name="mummy_boss" enabled="true"/>
+      <creature name="larva" enabled="true"/>
+      <creature name="black_fluffy" enabled="true"/>
+      <creature name="spider" enabled="true"/>
+      <creature name="vampire_guard" enabled="true"/>
+      <creature name="little_dragon" enabled="true"/>
+      <creature name="scorpion" enabled="true"/>
+      <creature name="worm" enabled="true"/>
+      <creature name="piranha" enabled="true"/>
+      <creature name="piranha_deep" enabled="true"/>
+      <creature name="fish_red" enabled="true"/>
+      <creature name="fish_yellow" enabled="true"/>
+      <creature name="ghost" enabled="true"/>
+      <creature name="imp" enabled="true"/>
+      <creature name="rat" enabled="true"/>
+      <creature name="basilisk_pet" enabled="true"/>
+       <creature name="catowl_pet" enabled="true"/>
+      <creature name="ball_fish" enabled="true"/>
+      <creature name="crip_catowl_pet" enabled="true"/>
+      <creature name="imp_cargo" enabled="true"/>
+    </desert>
+    <underground enableAll="false">
+      <creature name="golem" enabled="true"/>
+      <creature name="gargoyley_ancient" enabled="true"/>
+      <creature name="zombie_boss_santa" enabled="true"/>
+      <creature name="goblin_elf" enabled="true"/>
+      <creature name="christmas_shaman" enabled="true"/>
+      <creature name="zombie_solder" enabled="true"/>
+      <creature name="zombie_boost" enabled="true"/>
+      <creature name="zombie_crookshank" enabled="true"/>
+      <creature name="thrower_giant" enabled="true"/>
+      <creature name="zombie_armorbreaker" enabled="true"/>
+      <creature name="madness_rider" enabled="true"/>
+      <creature name="banshee" enabled="true"/>
+      <creature name="beholder_terrible" enabled="true"/>
+      <creature name="skeleton_archer" enabled="true"/>
+      <creature name="gargoyley_fire" enabled="true"/>
+      <creature name="zombie_fire" enabled="true"/>
+      <creature name="octopus" enabled="true"/>
+      <creature name="caterpillar" enabled="true"/>
+      <creature name="cave_beast" enabled="true"/>
+      <creature name="cave_beast_invasion" enabled="true"/>
+      <creature name="mite" enabled="true"/>
+      <creature name="slug2" enabled="true"/>
+      <creature name="beholder" enabled="true"/>
+      <creature name="beetle" enabled="true"/>
+      <creature name="gargoyley" enabled="true"/>
+      <creature name="cave_goblin" enabled="true"/>
+      <creature name="cave_goblin_warrior" enabled="true"/>
+      <creature name="larva" enabled="true"/>
+      <creature name="altar_shaman" enabled="true"/>
+      <creature name="black_fluffy" enabled="true"/>
+      <creature name="vampire_guard" enabled="true"/>
+      <creature name="little_dragon_black" enabled="true"/>
+      <creature name="dragon_guard" enabled="true"/>
+      <creature name="orc" enabled="true"/>
+      <creature name="orc_skeleton" enabled="true"/>
+      <creature name="orc_boss" enabled="true"/>
+      <creature name="orc_boss_skeleton" enabled="true"/>
+      <creature name="cave_goblin_green" enabled="true"/>
+      <creature name="piranha" enabled="true"/>
+      <creature name="piranha_deep" enabled="true"/>
+      <creature name="fish_red" enabled="true"/>
+      <creature name="fish_yellow" enabled="true"/>
+      <creature name="ghost" enabled="true"/>
+      <creature name="imp" enabled="true"/>
+      <creature name="rat" enabled="true"/>
+      <creature name="basilisk_pet" enabled="true"/>
+      <creature name="catowl_pet" enabled="true"/>
+      <creature name="ball_fish" enabled="true"/>
+      <creature name="crip_catowl_pet" enabled="true"/>
+      <creature name="imp_cargo" enabled="true"/>
+
+    </underground>
+    <biome1 enableAll="false">
+      <creature name="golem" enabled="true"/>
+      <creature name="gargoyley_ancient" enabled="true"/>
+      <creature name="zombie_boss_santa" enabled="true"/>
+      <creature name="goblin_elf" enabled="true"/>
+      <creature name="christmas_shaman" enabled="true"/>
+      <creature name="elf_archer" enabled="true"/>
+      <creature name="elf_spearman" enabled="true"/>
+      <creature name="elf_witch" enabled="true"/>
+      <creature name="yeti_biome" enabled="true"/>
+      <creature name="slug" enabled="true"/>
+      <creature name="zombie_boost" enabled="true"/>
+      <creature name="black_fluffy" enabled="true"/>
+      <creature name="piranha" enabled="true"/>
+      <creature name="piranha_deep" enabled="true"/>
+      <creature name="fish_red" enabled="true"/>
+      <creature name="fish_yellow" enabled="true"/>
+      <creature name="imp" enabled="true"/>
+      <creature name="rat" enabled="true"/>
+      <creature name="basilisk_pet" enabled="true"/>
+        <creature name="catowl_pet" enabled="true"/>
+      <creature name="ball_fish" enabled="true"/>
+    </biome1>
+    <biome_usual_medium enableAll="false">
+      <creature name="golem" enabled="true"/>
+      <creature name="gargoyley_ancient" enabled="true"/>
+      <creature name="zombie_boss_santa" enabled="true"/>
+      <creature name="goblin_elf" enabled="true"/>
+      <creature name="christmas_shaman" enabled="true"/>
+      <creature name="sheep" enabled="true"/>
+      <creature name="yak" enabled="true"/>
+      <creature name="skeleton" enabled="true"/>
+      <creature name="cave_goblin" enabled="true"/>
+      <creature name="skeleton_shielder" enabled="true"/>
+      <creature name="skeleton_builder" enabled="true"/>
+      <creature name="skeleton_boss" enabled="true"/>
+      <creature name="mite" enabled="true"/>
+      <creature name="slug" enabled="true"/>
+      <creature name="chicken" enabled="true"/>
+      <creature name="zombie" enabled="true"/>
+      <creature name="zombie_boss" enabled="true"/>
+      <creature name="black_fluffy" enabled="true"/>
+      <creature name="dead_lord" enabled="true"/>
+      <creature name="piranha" enabled="true"/>
+      <creature name="piranha_deep" enabled="true"/>
+      <creature name="fish_red" enabled="true"/>
+      <creature name="fish_yellow" enabled="true"/>
+      <creature name="imp" enabled="true"/>
+      <creature name="zombie_solder" enabled="true"/>
+      <creature name="zombie_boost" enabled="true"/>
+      <creature name="beetle" enabled="true"/>
+      <creature name="rat" enabled="true"/>
+      <creature name="basilisk_pet" enabled="true"/>
+      <creature name="catowl_pet" enabled="true"/>
+      <creature name="ball_fish" enabled="true"/>
+    </biome_usual_medium>
+    <biome_underground enableAll="false">
+      <creature name="golem" enabled="true"/>
+      <creature name="gargoyley_ancient" enabled="true"/>
+      <creature name="orc" enabled="true"/>
+      <creature name="orc_boss" enabled="true"/>
+      <creature name="orc_skeleton" enabled="true"/>
+      <creature name="orc_boss_skeleton" enabled="true"/>
+      <creature name="cave_goblin" enabled="true"/>
+      <creature name="cave_goblin_warrior" enabled="true"/>
+      <creature name="cave_goblin_green" enabled="true"/>
+      <creature name="cave_beast_invasion" enabled="true"/>
+      <creature name="cave_beast" enabled="true"/>
+      <creature name="caterpillar" enabled="true"/>
+      <creature name="little_dragon_black" enabled="true"/>
+      <creature name="piranha" enabled="true"/>
+      <creature name="piranha_deep" enabled="true"/>
+      <creature name="fish_red" enabled="true"/>
+      <creature name="fish_yellow" enabled="true"/>
+      <creature name="slug2" enabled="true"/>
+      <creature name="imp" enabled="true"/>
+      <creature name="zombie_boost" enabled="true"/>
+      <creature name="dragon_guard" enabled="true"/>
+      <creature name="rat" enabled="true"/>
+      <creature name="basilisk_pet" enabled="true"/>
+      <creature name="catowl_pet" enabled="true"/>
+      <creature name="ball_fish" enabled="true"/>
+    </biome_underground>
+    <biome_beetles enableAll="false">
+      <creature name="golem" enabled="true"/>
+      <creature name="gargoyley_ancient" enabled="true"/>
+      <creature name="beetle_queen" enabled="true"/>
+      <creature name="beetle_worker" enabled="true"/>
+      <creature name="beetle_warrior" enabled="true"/>
+      <creature name="slug" enabled="true"/>
+      <creature name="zombie_boost" enabled="true"/>
+      <creature name="black_fluffy" enabled="true"/>
+      <creature name="piranha" enabled="true"/>
+      <creature name="piranha_deep" enabled="true"/>
+      <creature name="fish_red" enabled="true"/>
+      <creature name="fish_yellow" enabled="true"/>
+      <creature name="imp" enabled="true"/>
+      <creature name="beetle_boss_stage1" enabled="true"/>
+      <creature name="beetle_boss_stage2" enabled="true"/>
+      <creature name="rat" enabled="true"/>
+      <creature name="basilisk_pet" enabled="true"/>
+      <creature name="catowl_pet" enabled="true"/>
+      <creature name="ball_fish" enabled="true"/>
+    </biome_beetles>
+  </fauna>
+</root>
+

@@ -1,0 +1,4 @@
+fire_staff,sword_soul_reaper,thunderbolt_bow,flamethrower
+Rhinoceros_helmet
+Rhinoceros_chest
+Rhinoceros_boots

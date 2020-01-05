@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<root name="Monsters DLC" id="monsters_dlc">
+    <resource name="vivern_baby" title="%vivern_babyT" desc="%vivern_babyD" application="equip" build="" properties="jetpack,no_shop" shop_count="1" shop_cost="1" file="gfx/MonstersDLC/item_icons/Vivern_icon.png" class="item" dlc="monsters_dlc" />
+    <resource name="durable_shell" title="%durable_shellT" desc="%durable_shellD" application="halfstuff" build="" properties="secret_item,no_shop" shop_count="1" shop_cost="3" file="gfx/MonstersDLC/item_icons/durable_shell.png" dlc="monsters_dlc" />
+    <resource name="fire_essence" title="%fire_essenceT" desc="%fire_essenceD" application="halfstuff" build="" properties="secret_item,no_shop,shine,vip" shop_count="1" shop_cost="1" file="gfx/MonstersDLC/item_icons/fire_essence.png" dlc="monsters_dlc" />
+    <resource name="lightning_essence" title="%lightning_essenceT" desc="%lightning_essenceD" application="halfstuff" build="" properties="secret_item,no_shop,shine,vip" shop_count="1" shop_cost="1" file="gfx/MonstersDLC/item_icons/lightning_essence.png" dlc="monsters_dlc" />
+    <resource name="living_tree" title="%living_treeT" desc="%living_treeD" application="halfstuff" build="" properties="secret_item,no_shop,vip" shop_count="1" shop_cost="1" file="gfx/MonstersDLC/item_icons/living_tree.png" dlc="monsters_dlc" />
+    <resource name="pen" title="%penT" desc="%penD" application="halfstuff" build="" properties="" shop_count="3" shop_cost="1" file="gfx/MonstersDLC/item_icons/pen.png" dlc="monsters_dlc" />
+    <resource name="technology_learning_books_01" title="%technology_learning_books_01T" desc="%technology_learning_books_01D" application="equip" build="" properties="allow_craft,no_shop,no_char_inv,library_book,tech_scroll,tech_ratio=x3" shop_count="1" shop_cost="1" file="gfx/MonstersDLC/item_icons/technology_learning_books_01.png" dlc="monsters_dlc" />
+    <resource name="technology_learning_books_02" title="%technology_learning_books_02T" desc="%technology_learning_books_02D" application="equip" build="" properties="allow_craft,no_shop,no_char_inv,library_book,tech_scroll,tech_ratio=x3" shop_count="1" shop_cost="1" file="gfx/MonstersDLC/item_icons/technology_learning_books_02.png" dlc="monsters_dlc" />
+    <resource name="technology_learning_books_03" title="%technology_learning_books_03T" desc="%technology_learning_books_03D" application="equip" build="" properties="allow_craft,no_shop,library_book,tech_scroll,no_char_inv,tech_ratio=x3" shop_count="1" shop_cost="1" file="gfx/MonstersDLC/item_icons/technology_learning_books_03.png" dlc="monsters_dlc" />
+    <resource name="technology_learning_books_04" title="%technology_learning_books_04T" desc="%technology_learning_books_04D" application="equip" build="" properties="allow_craft,no_shop,no_char_inv,library_book,tech_scroll,tech_ratio=x3" shop_count="1" shop_cost="1" file="gfx/MonstersDLC/item_icons/technology_learning_books_04.png" dlc="monsters_dlc" />
+    <resource name="wyvern_egg" title="%wyvern_eggT" desc="%wyvern_eggD" application="halfstuff" build="" properties="secret_item,no_shop,vip" shop_count="1" shop_cost="1" file="gfx/MonstersDLC/item_icons/wyvern_egg.png" dlc="monsters_dlc" />
+    <resource name="cave_goblin_bow" title="%cave_goblin_bowT" desc="%cave_goblin_bowD" application="equip" build="" properties="no_shop" shop_count="1" shop_cost="1" file="gfx/MonstersDLC/item_icons/cave_goblin_bow_icon.png" dlc="monsters_dlc">
+        <skin type="bow" file="gfx/MonstersDLC/equip/cave_goblin_bow.png" />
+    </resource>
+    <resource name="green_goblin_bow" title="%green_goblin_bowT" desc="%green_goblin_bowD" application="equip" build="" properties="no_shop" shop_count="1" shop_cost="1" file="gfx/MonstersDLC/item_icons/green_goblin_bow_icon.png" dlc="monsters_dlc">
+        <skin type="bow" file="gfx/MonstersDLC/equip/green_goblin_bow.png" />
+    </resource>
+    <resource name="library" title="%libraryT" desc="%libraryD" application="block" build="library" properties="no_char_inv,comfort=0.2" shop_count="1" shop_cost="15" file="gfx/MonstersDLC/item_icons/Library_icon.png" dlc="monsters_dlc" />
+    <resource name="dig_machine" title="%dig_machineT" desc="%dig_machineD" application="block" build="dig_machine" properties="allow_craft,no_shop" shop_count="1" shop_cost="1" file="gfx/MonstersDLC/item_icons/Dig_machine_icon.png" dlc="monsters_dlc" />
+    <resource name="dig_machine_crystal" title="%dig_machine_crystalT" desc="%dig_machine_crystalD" application="block" build="dig_machine_crystal" properties="allow_craft,no_shop" shop_count="1" shop_cost="1" file="gfx/MonstersDLC/item_icons/Dig_machine_2_icon.png" dlc="monsters_dlc" />
+    <resource name="pirate_ship" title="%pirate_shipT" desc="%pirate_shipD" application="block" build="pirate_ship" properties="no_shop,no_char_inv,no_inv" shop_count="1" shop_cost="1" file="gfx/level_tiles/monsters/pirate_ship.png" dlc="monsters_dlc" />
+    <resource name="service_ladder" title="%service_ladderT" desc="%service_ladderD" application="block" build="service_ladder" properties="no_shop,no_char_inv,no_inv" shop_count="1" shop_cost="1" file="gfx/level_tiles/craft_constructions/ladder.png" dlc="monsters_dlc" />
+    <resource name="service_bridge" title="%service_bridgeT" desc="%service_bridgeD" application="block" build="service_bridge" properties="no_shop,no_char_inv,no_inv" shop_count="1" shop_cost="1" file="gfx/level_tiles/craft_constructions/bridge_wood_small.png" dlc="monsters_dlc" />
+    <resource name="service_block" title="%service_blockT" desc="%service_blockD" application="block" build="service_block" properties="no_shop,no_char_inv,no_inv" shop_count="1" shop_cost="1" file="gfx/level_tiles/tile/granite/granite.png" dlc="monsters_dlc" />
+    <resource name="service_pirate_spawner" title="%service_pirate_spawnerT" desc="%service_pirate_spawnerD" application="block" build="service_pirate_spawner" properties="no_shop,no_char_inv,no_inv" shop_count="1" shop_cost="1" file="gfx/MonstersDLC/item_icons/fire_essence.png" dlc="monsters_dlc" />
+    <resource name="service_light" title="%service_lightT" desc="%service_lightD" application="block" build="service_light" properties="no_shop,no_char_inv,no_inv" shop_count="1" shop_cost="1" file="gfx/level_tiles/craft_constructions/light/lamp.png" dlc="monsters_dlc" />
+    <resource name="sea_water" title="%sea_waterT" desc="%sea_waterD" application="block" build="sea_water" properties="no_shop,no_char_inv" shop_count="1" shop_cost="1" file="gfx/level_tiles/tile/seawater/seawater.png" dlc="monsters_dlc" />
+    <resource name="pirate_cannon" title="%pirate_cannonT" desc="%pirate_cannonD" application="block" build="pirate_cannon" properties="no_shop" shop_count="1" shop_cost="1" file="gfx/MonstersDLC/item_icons/Dwarf_cannon.png" dlc="monsters_dlc" />
+    <resource name="cannon_ammo" title="%cannon_ammoT" desc="%cannon_ammoD" application="halfstuff" build="" properties="" shop_count="2" shop_cost="1" file="gfx/MonstersDLC/item_icons/cannonball.png" tech="" dlc="monsters_dlc" />
+    <resource name="tech_book_craft" title="%tech_book_craftT" desc="%tech_book_craftD" application="equip" build="" properties="allow_craft,no_shop,no_char_inv,library_book" shop_count="1" shop_cost="1" file="gfx/MonstersDLC/item_icons/tech_book_craft.png" dlc="monsters_dlc" />
+    <resource name="tech_book_health" title="%tech_book_healthT" desc="%tech_book_healthD" application="equip" build="" properties="allow_craft,no_shop,no_char_inv,library_book" shop_count="1" shop_cost="1" file="gfx/MonstersDLC/item_icons/tech_book_health.png" dlc="monsters_dlc" />
+    <resource name="tech_book_mana" title="%tech_book_manaT" desc="%tech_book_manaD" application="equip" build="" properties="allow_craft,no_shop,no_char_inv,library_book" shop_count="1" shop_cost="1" file="gfx/MonstersDLC/item_icons/tech_book_mana.png" dlc="monsters_dlc" />
+    <resource name="tech_book_skills" title="%tech_book_skillsT" desc="%tech_book_skillsD" application="equip" build="" properties="allow_craft,no_shop,no_char_inv,library_book" shop_count="1" shop_cost="1" file="gfx/MonstersDLC/item_icons/tech_book_skills.png" dlc="monsters_dlc" />
+    <resource name="cannon_barrel" title="%cannon_barrelT" desc="%cannon_barrelD" application="halfstuff" build="" properties="no_shop,secret_item,vip" shop_count="1" shop_cost="1" file="gfx/MonstersDLC/item_icons/cannon_barrel.png" dlc="monsters_dlc" />
+    <resource name="ink" title="%inkT" desc="%inkD" application="halfstuff" build="" properties="no_char_inv" shop_count="2" shop_cost="1" file="gfx/MonstersDLC/item_icons/ink.png" tech="" dlc="monsters_dlc" />
+    <resource name="lighthouse" title="%lighthouseT" desc="%lighthouseD" application="block" build="lighthouse" properties="no_shop,no_char_inv,no_inv" shop_count="1" shop_cost="1" file="" dlc="monsters_dlc" />
+    <resource name="fire_staff" title="%fire_staffT" desc="%fire_staffD" application="equip" build="" properties="no_shop,add_res=fireball_staff_elexir,attack=x2,missile,mace,magic_staff=0,distance=5" shop_count="1" shop_cost="1" class="weapon" file="gfx/MonstersDLC/item_icons/fire_staff_icon.png" dlc="monsters_dlc">
+        <skin type="tool" file="gfx/MonstersDLC/equip/fire_staff.png" />
+        <params>
+            <param name="ammo" value="fireball_staff_elexir" />
+        </params>
+    </resource>
+    <resource name="tick_staff" title="%tick_staffT" desc="%tick_staffD" application="equip" build="" properties="no_shop,attack=x1.5,missile,mace,magic_staff=3,distance=5" shop_count="1" shop_cost="1" file="gfx/MonstersDLC/item_icons/flower_staff_icon.png" class="weapon" dlc="monsters_dlc">
+        <skin type="tool" file="gfx/MonstersDLC/equip/flower_staff.png" />
+        <behaviours>
+            <behaviour value="CreatureSpawnBehaviour" tags="on_cast" chance="0.4">
+                <mob value="dwarf_tick" />
+            </behaviour>
+        </behaviours>
+        <params>
+            <param name="ammo" value="spark_elexir,fireball_elexir,icearrow_elexir,transform_elexir,healt_elexir" />
+        </params>
+    </resource>
+    <resource name="Rhinoceros_boots" title="%Rhinoceros_bootsT" desc="%Rhinoceros_bootsD" application="equip" build="" properties="no_shop,slowdown=2.00%,armor=65.00%,skill_value=5.00%,skill=swordsman" shop_count="1" shop_cost="1" file="gfx/MonstersDLC/item_icons/Rhinoceros_boots_icon.png" class="boots" dlc="monsters_dlc">
+        <skin type="boots" file="gfx/MonstersDLC/equip/Rhinoceros_boots_tp.png" />
+    </resource>
+    <resource name="Rhinoceros_chest" title="%Rhinoceros_chestT" desc="%Rhinoceros_chestD" application="equip" build="" properties="no_shop,slowdown=12.00%,armor=125.00%,skill_value=5.00%,skill=swordsman" shop_count="1" shop_cost="1" file="gfx/MonstersDLC/item_icons/Rhinoceros_chest_icon.png" class="armor" dlc="monsters_dlc">
+        <skin type="armor" file="gfx/MonstersDLC/equip/Rhinoceros_chest_tp.png" />
+    </resource>
+    <resource name="Rhinoceros_helmet" title="%Rhinoceros_helmetT" desc="%Rhinoceros_helmetD" application="equip" build="" properties="no_shop,slowdown=2.50%,armor=70.00%,skill_value=5.00%,skill=swordsman" shop_count="1" shop_cost="1" file="gfx/MonstersDLC/item_icons/Rhinoceros_helmet_icon.png" class="helmet" dlc="monsters_dlc">
+        <skin type="helmet" file="gfx/MonstersDLC/equip/Rhinoceros_helmet_tp.png" />
+    </resource>
+    <resource name="sword_soul_reaper" title="%sword_soul_reaperT" desc="%sword_soul_reaperD" application="equip" build="" properties="allow_craft,no_shop,iron,mithril,sword,undead_armor=100.00%,skill_value=20.00%,skill=swordsman,attack=x4" shop_count="1" shop_cost="1" file="gfx/MonstersDLC/item_icons/sword_soul_reaper_icon.png" class="weapon" dlc="monsters_dlc">
+        <skin type="tool" file="gfx/MonstersDLC/equip/sword_soul_reaper.png" />
+    </resource>
+    <resource name="thunderbolt_bow" title="%thunderbolt_bowT" desc="%thunderbolt_bowD" application="equip" build="" properties="add_res=lighting_arrow,missile,no_shop,accuracy=1,distance=6,attack=x4" shop_count="1" shop_cost="1" file="gfx/MonstersDLC/item_icons/thunderbolt_bow_icon.png" class="weapon" dlc="monsters_dlc">
+        <skin type="bow" file="gfx/MonstersDLC/equip/thunderbolt_bow_template.png" />
+        <params>
+            <param name="ammo" value="lighting_arrow,tunder_bolt" />
+        </params>
+    </resource>
+    <resource name="lighthouse_part1" title="%lighthouse_part1T" desc="%lighthouse_part1D" application="halfstuff" build="" properties="allow_craft,no_shop,no_char_inv,no_back_craft,max_count=0" shop_count="1" shop_cost="1" file="gfx/MonstersDLC/item_icons/lighthouse_part1.png" dlc="monsters_dlc" />
+    <resource name="lighthouse_part2" title="%lighthouse_part2T" desc="%lighthouse_part2D" application="halfstuff" build="" properties="allow_craft,no_shop,no_char_inv,no_back_craft,max_count=0" shop_count="1" shop_cost="1" file="gfx/MonstersDLC/item_icons/lighthouse_part2.png" dlc="monsters_dlc" />
+    <resource name="lighthouse_part3" title="%lighthouse_part3T" desc="%lighthouse_part3D" application="halfstuff" build="" properties="allow_craft,no_shop,no_char_inv,no_back_craft,max_count=0" shop_count="1" shop_cost="1" file="gfx/MonstersDLC/item_icons/lighthouse_part3.png" dlc="monsters_dlc" />
+    <resource name="lighthouse_chest" title="%lighthouse_chestT" desc="%lighthouse_chestD" application="block" build="lighthouse_chest" properties="no_shop,no_char_inv,no_inv,no_back_craft" shop_count="1" shop_cost="1" file="gfx/level_tiles/map_obj/Ancient_rooms/chest.png" dlc="monsters_dlc" />
+    <resource name="lighthouse_activator" title="%lighthouse_activatorT" desc="%lighthouse_activatorD" application="halfstuff" build="" properties="allow_craft,no_shop,no_char_inv,no_back_craft,shine,max_count=0" shop_count="1" shop_cost="1" file="gfx/MonstersDLC/item_icons/lighthouse_activator.png" dlc="monsters_dlc" />
+    <resource name="service_remover" title="%service_removerT" desc="%service_removerD" application="block" build="service_remover" properties="no_shop,no_char_inv,no_inv" shop_count="1" shop_cost="1" file="gfx/ui/buttons/obj_square.png" dlc="monsters_dlc" />
+    <resource name="service_pirate_aggro_marker" title="%service_pirate_aggro_markerT" desc="%service_pirate_aggro_markerD" application="block" build="service_pirate_aggro_marker" properties="no_shop,no_char_inv,no_inv" shop_count="1" shop_cost="1" file="gfx/ui/new_interface/iphone_tile/arrow_aim.png" dlc="monsters_dlc" />
+    <resource name="spawn_pirate_boss" title="%spawn_pirate_bossT" desc="%spawn_pirate_bossD" application="block" build="spawn_pirate_boss" properties="no_shop,no_char_inv,no_inv" shop_count="1" shop_cost="1" file="gfx/level_tiles/monsters/squeegee_skil.png" dlc="monsters_dlc" />
+    <resource name="scorpio_base" title="%scorpio_baseT" desc="%scorpio_baseD" application="block" build="scorpio_base" properties="no_shop,no_char_inv,no_inv" shop_count="1" shop_cost="1" file="gfx/MonstersDLC/item_icons/ScorpioSphinx_base_icon.png" dlc="monsters_dlc" />
+    <resource name="incubator" title="%incubatorT" desc="%incubatorD" application="block" build="incubator" properties="" shop_count="1" shop_cost="20" file="gfx/MonstersDLC/item_icons/incubator_icon.png" dlc="monsters_dlc" />
+    <resource name="lighting_arrow" title="%lighting_arrowT" desc="%lighting_arrowD" application="equip" build="" properties="infinity_count,no_shop,arrow,disable_drag,attack=x3" shop_count="1" shop_cost="1" file="gfx/MonstersDLC/item_icons/lightening_bolt.png" class="weapon" dlc="monsters_dlc">
+        <behaviours>
+            <behaviour value="ChainProjectileBehaviour" tags="on_use">
+                <effect value="lightning_arrow" />
+                <damage value="1" />
+                <range value="5" />
+                <targets value="workers_enemies" />
+                <light value="0.7" />
+                <chain_count value="3" />
+                <damage_degradation_ratio value="0.8" />
+                <start_velocity value="600" />
+                <size value="15" />
+                <duration value="2" />
+                <target_tag value="electroshock" />
+                <!-- rigidbody -->
+                <bounceRatio value="0" />
+                <bounceVelocityClamp value="0" />
+                <gravity value="0" />
+            </behaviour>
+            <behaviour value="RandomBoneDamage" tags="electroshock">
+                <effect value="lightning_bolt_damage_y" />
+                <bone_count value="1" />
+                <damage value="0.1" />
+                <duration value="2" />
+                <light value="1" />
+            </behaviour>
+        </behaviours>
+    </resource>
+    <resource name="tunder_bolt" title="%tunder_boltT" desc="%tunder_boltD" application="equip" build="" properties="disable_drag,attack=x5,arrow" shop_count="3" shop_cost="1" file="gfx/MonstersDLC/item_icons/Tunder_bolt.png" class="weapon" dlc="monsters_dlc">
+        <behaviours>
+            <behaviour value="ChainProjectileBehaviour" tags="on_use">
+                <effect value="lightning_bolt_y" />
+                <damage value="1.5" />
+                <range value="6" />
+                <targets value="workers_enemies" />
+                <light value="0.7" />
+                <chain_count value="3" />
+                <damage_degradation_ratio value="0.8" />
+                <start_velocity value="600" />
+                <size value="15" />
+                <duration value="2" />
+                <target_tag value="electroshock" />
+                <!-- rigidbody -->
+                <bounceRatio value="0" />
+                <bounceVelocityClamp value="0" />
+                <gravity value="0" />
+            </behaviour>
+            <behaviour value="RandomBoneDamage" tags="electroshock">
+                <effect value="lightning_bolt_damage_y" />
+                <bone_count value="1" />
+                <damage value="0.2" />
+                <duration value="3" />
+                <light value="1" />
+            </behaviour>
+        </behaviours>
+    </resource>
+    <resource name="wolf_heart" title="%wolf_heartT" desc="%wolf_heartD" application="halfstuff" build="" properties="no_shop,no_char_inv,secret_item,vip" shop_count="1" shop_cost="1" file="gfx/MonstersDLC/item_icons/wolf_heart.png" dlc="monsters_dlc" />
+    <resource name="flamethrower" title="%flamethrowerT" desc="%flamethrowerD" application="equip" build="" properties="missile,rifle,spine=flamethrower,add_res=flame_fuel,attack=x1,accuracy=1,distance=3,no_shop" shop_count="1" shop_cost="1" class="weapon" file="gfx/MonstersDLC/item_icons/flamethrower.png" dlc="monsters_dlc">
+        <params>
+            <param name="idle" value="main" />
+            <param name="action" value="shot" />
+            <param name="ammo" value="flame_fuel,flame_fuel_heat" />
+        </params>
+    </resource>
+    <resource name="flame_fuel" title="%flame_fuelT" desc="%flame_fuelD" application="equip" build="" properties="infinity_count,disable_drag,no_shop,attack=x1,bullet" shop_count="1" shop_cost="1" file="gfx/MonstersDLC/item_icons/flamethrower_ammo.png" class="weapon" dlc="monsters_dlc">
+        <behaviours>
+            <behaviour value="RangeAttackBehaviour" tags="on_use">
+                <effect value="flamethrower" />
+                <damage value="1" />
+                <range value="3" />
+                <duration value="2" />
+                <max_count value="5" />
+                <damage_collider_size value="1" />
+                <damage_collider_count value="4" />
+                <size_ratio value="1.2" />
+                <target_tag value="burning" />
+                <targets value="workers_enemies" />
+            </behaviour>
+            <behaviour value="RandomBoneDamage" tags="burning">
+                <effect value="fire8" />
+                <bone_count value="2,3" />
+                <damage value="0.1" />
+                <duration value="10" />
+                <light value="0.7" />
+            </behaviour>
+        </behaviours>
+    </resource>
+    <resource name="flame_fuel_heat" title="%flame_fuel_heatT" desc="%flame_fuel_heatD" application="equip" build="" properties="disable_drag,attack=x2,bullet" shop_count="3" shop_cost="1" file="gfx/MonstersDLC/item_icons/flamethrower_heat_of_gorn.png" class="weapon" dlc="monsters_dlc">
+        <behaviours>
+            <behaviour value="RangeAttackBehaviour" tags="on_use">
+                <effect value="flamethrower_heat" />
+                <damage value="1.5" />
+                <range value="3" />
+                <duration value="2" />
+                <max_count value="7" />
+                <damage_collider_size value="1" />
+                <damage_collider_count value="4" />
+                <size_ratio value="1.2" />
+                <target_tag value="burning" />
+                <targets value="workers_enemies" />
+            </behaviour>
+            <behaviour value="RandomBoneDamage" tags="burning">
+                <effect value="fire8" />
+                <bone_count value="2,3" />
+                <damage value="0.1" />
+                <duration value="15" />
+                <light value="0.7" />
+            </behaviour>
+        </behaviours>
+    </resource>
+    <resource name="anti_lycathropin" title="%anti_lycathropinT" desc="%anti_lycathropinD" application="equip" build="" properties="elixir,lycanthrope=-25" shop_count="1" shop_cost="5" file="gfx/MonstersDLC/item_icons/Antidote_lycanthropy.png" dlc="monsters_dlc" />
+    <resource name="vivern_firebreath" title="%vivern_firebreathT" desc="%vivern_firebreathD" application="equip" build="" properties="disable_drag,no_shop,no_char_inv,no_inv,bullet" shop_count="1" shop_cost="1" file="gfx/MonstersDLC/item_icons/fire_essence.png" class="weapon" dlc="monsters_dlc">
+        <behaviours>
+            <behaviour value="RangeAttackBehaviour" tags="on_use">
+                <effect value="flamethrower_vivern" />
+                <damage value="0.9" />
+                <range value="8" />
+                <duration value="2.5" />
+                <max_count value="5" />
+                <damage_collider_size value="1.5" />
+                <damage_collider_count value="4" />
+                <size_ratio value="1.2" />
+                <target_tag value="burning" />
+                <targets value="worker" />
+                <light value="0.7" />
+                <light_on_delay value="0.1" />
+                <use_raycast value="true"/>
+            </behaviour>
+            <behaviour value="RandomBoneDamage" tags="burning">
+                <effect value="fire8" />
+                <bone_count value="2,3" />
+                <damage value="0.1" />
+                <duration value="10" />
+                <light value="0.7" />
+            </behaviour>
+            <behaviour value="RangeAttackConstructBurner" tags="on_use">
+                <chance value="0.04" />
+                <use_raycast value="true"/>
+            </behaviour>
+        </behaviours>
+    </resource>
+    <resource name="vivern_firebreath_underworld" title="%vivern_firebreathT" desc="%vivern_firebreathD" application="equip" build="" properties="disable_drag,no_shop,no_char_inv,no_inv,bullet" shop_count="1" shop_cost="1" file="gfx/MonstersDLC/item_icons/fire_essence.png" class="weapon" dlc="monsters_dlc">
+        <behaviours>
+            <behaviour value="RangeAttackBehaviour" tags="on_use">
+                <effect value="flamethrower_vivern" />
+                <damage value="0.3" />
+                <range value="8" />
+                <duration value="2.5" />
+                <max_count value="3" />
+                <damage_collider_size value="1.5" />
+                <damage_collider_count value="4" />
+                <size_ratio value="1.2" />
+                <target_tag value="burning" />
+                <targets value="worker" />
+                <light value="0.7" />
+                <light_on_delay value="0.1" />
+                <use_raycast value="true"/>
+            </behaviour>
+            <behaviour value="RandomBoneDamage" tags="burning">
+                <effect value="fire8" />
+                <bone_count value="1,2" />
+                <damage value="0.05" />
+                <duration value="5" />
+                <light value="0.7" />
+            </behaviour>
+            <behaviour value="RangeAttackConstructBurner" tags="on_use">
+                <chance value="0.1" />
+                <use_raycast value="true"/>
+            </behaviour>
+        </behaviours>
+    </resource>
+    <resource name="rune1_desert" title="%RuneT" desc="%RuneD" application="mining" build="rune1_desert" properties="no_shop,no_char_inv,rune" shop_count="1" shop_cost="1" file="gfx/MonstersDLC/item_icons/temple_rune_01_icon.png" dlc="monsters_dlc" />
+    <resource name="rune2_desert" title="%RuneT" desc="%RuneD" application="mining" build="rune2_desert" properties="rune,no_shop,no_char_inv" shop_count="1" shop_cost="1" file="gfx/MonstersDLC/item_icons/temple_rune_02_icon.png" dlc="monsters_dlc" />
+    <resource name="rune3_desert" title="%RuneT" desc="%RuneD" application="mining" build="rune3_desert" properties="rune,no_shop,no_char_inv" shop_count="1" shop_cost="1" file="gfx/MonstersDLC/item_icons/temple_rune_03_icon.png" dlc="monsters_dlc" />
+    <resource name="rune4_desert" title="%RuneT" desc="%RuneD" application="mining" build="rune4_desert" properties="rune,no_shop,no_char_inv" shop_count="1" shop_cost="1" file="gfx/MonstersDLC/item_icons/temple_rune_04_icon.png" dlc="monsters_dlc" />
+    <resource name="rune5_desert" title="%RuneT" desc="%RuneD" application="mining" build="rune5_desert" properties="rune,no_shop,no_char_inv" shop_count="1" shop_cost="1" file="gfx/MonstersDLC/item_icons/temple_rune_05_icon.png" dlc="monsters_dlc" />
+    <resource name="rune6_desert" title="%RuneT" desc="%RuneD" application="mining" build="rune6_desert" properties="rune,no_shop,no_char_inv" shop_count="1" shop_cost="1" file="gfx/MonstersDLC/item_icons/temple_rune_06_icon.png" dlc="monsters_dlc" />
+    <resource name="service_sand_temple" title="%service_sand_templeT" desc="%service_sand_templeD" application="block" build="service_sand_temple" properties="no_shop,no_char_inv,no_inv" shop_count="1" shop_cost="1" dlc="monsters_dlc" />
+    <resource name="iron_wheel" title="%iron_wheelT" desc="%iron_wheelD" application="halfstuff" build="" properties="" shop_count="1" shop_cost="3" file="gfx/MonstersDLC/item_icons/iron_wheels.png" dlc="monsters_dlc" />
+    <resource name="auger_iron" title="%auger_ironT" desc="%auger_ironD" application="halfstuff" build="" properties="" shop_count="1" shop_cost="4" file="gfx/MonstersDLC/item_icons/iron_icon.png" dlc="monsters_dlc" />
+    <resource name="wood_wheel" title="%wood_wheelT" desc="%wood_wheelD" application="halfstuff" build="" properties="" shop_count="1" shop_cost="2" file="gfx/MonstersDLC/item_icons/wood_wheels.png" dlc="monsters_dlc" />
+    <resource name="auger_crystal" title="%auger_crystalT" desc="%auger_crystalD" application="halfstuff" build="" properties="" shop_count="1" shop_cost="10" file="gfx/MonstersDLC/item_icons/crystal_icon.png" dlc="monsters_dlc" />
+    <resource name="dig_machine_chassis" title="%dig_machine_chassisT" desc="%dig_machine_chassisD" application="halfstuff" build="" properties="" shop_count="1" shop_cost="15" file="gfx/MonstersDLC/item_icons/Dig_machine_hull.png" dlc="monsters_dlc" />
+    <resource name="arch_01" title="%arch_01T" desc="%arch_01D" application="furniture" build="arch_01" properties="no_shop,no_char_inv,no_inv" shop_count="1" shop_cost="1" file="gfx/MonstersDLC/item_icons/arch_01_icon.png" dlc="monsters_dlc" />
+    <resource name="arch_02" title="%arch_02T" desc="%arch_02D" application="furniture" build="arch_02" properties="no_shop,no_char_inv,no_inv" shop_count="1" shop_cost="1" file="gfx/MonstersDLC/item_icons/arch_02_icon.png" dlc="monsters_dlc" />
+    <resource name="chafing_dish_01" title="%chafing_dish_01T" desc="%chafing_dish_01D" application="furniture" build="chafing_dish_01" properties="no_shop,no_char_inv,no_inv" shop_count="1" shop_cost="1" file="gfx/MonstersDLC/item_icons/chafing_dish_01_icon.png" dlc="monsters_dlc" />
+    <resource name="chafing_dish_02" title="%chafing_dish_02T" desc="%chafing_dish_02D" application="furniture" build="chafing_dish_02" properties="no_shop,no_char_inv,no_inv" shop_count="1" shop_cost="1" file="gfx/MonstersDLC/item_icons/chafing_dish_02_icon.png" dlc="monsters_dlc" />
+    <resource name="chest" title="%chestT" desc="%chestD" application="furniture" build="chest" properties="no_shop,no_char_inv,no_inv" shop_count="1" shop_cost="1" file="gfx/MonstersDLC/item_icons/chest_icon.png" dlc="monsters_dlc" />
+    <resource name="sarcophagus_01" title="%sarcophagus_01T" desc="%sarcophagus_01D" application="furniture" build="sarcophagus_01" properties="no_shop,no_char_inv,no_inv" shop_count="1" shop_cost="1" file="gfx/MonstersDLC/item_icons/sarcophagus_01_icon.png" dlc="monsters_dlc" />
+    <resource name="sarcophagus_02" title="%sarcophagus_02T" desc="%sarcophagus_02D" application="furniture" build="sarcophagus_02" properties="no_shop,no_char_inv,no_inv" shop_count="1" shop_cost="1" file="gfx/MonstersDLC/item_icons/sarcophagus_02_icon.png" dlc="monsters_dlc" />
+    <resource name="statue_desert" title="%statue_desertT" desc="%statue_desertD" application="furniture" build="statue_desert" properties="no_shop,no_char_inv,no_inv" shop_count="1" shop_cost="1" file="gfx/MonstersDLC/item_icons/statue_icon.png" dlc="monsters_dlc" />
+    <resource name="torch_desert" title="%torch_desertT" desc="%torch_desertD" application="furniture" build="torch_desert" properties="no_shop,no_char_inv,no_inv" shop_count="1" shop_cost="1" file="gfx/MonstersDLC/item_icons/torch_icon.png" dlc="monsters_dlc" />
+    <resource name="vase_01_desert" title="%vase_01_desertT" desc="%vase_01_desertD" application="furniture" build="vase_01_desert" properties="no_shop,no_char_inv,no_inv" shop_count="1" shop_cost="1" file="gfx/MonstersDLC/item_icons/vase_01_icon.png" dlc="monsters_dlc" />
+    <resource name="vase_02_desert" title="%vase_02_desertT" desc="%vase_02_desertD" application="furniture" build="vase_02_desert" properties="no_shop,no_char_inv,no_inv" shop_count="1" shop_cost="1" file="gfx/MonstersDLC/item_icons/vase_02_icon.png" dlc="monsters_dlc" />
+    <resource name="vase_03_desert" title="%vase_03_desertT" desc="%vase_03_desertD" application="furniture" build="vase_03_desert" properties="no_shop,no_char_inv,no_inv" shop_count="1" shop_cost="1" file="gfx/MonstersDLC/item_icons/vase_03_icon.png" dlc="monsters_dlc" />
+    <resource name="vase_04_desert" title="%vase_04_desertT" desc="%vase_04_desertD" application="furniture" build="vase_04_desert" properties="no_shop,no_char_inv,no_inv" shop_count="1" shop_cost="1" file="gfx/MonstersDLC/item_icons/vase_04_icon.png" dlc="monsters_dlc" />
+    <resource name="block_01_desert_temple" title="%block_01_desert_templeT" desc="%block_01_desert_templeD" application="block" build="block_01_desert_temple" properties="no_shop,wall" shop_count="1" shop_cost="1" file="gfx/MonstersDLC/item_icons/block_01_desert_temple_icon.png" dlc="monsters_dlc" />
+    <resource name="block_02_desert_temple" title="%block_02_desert_templeT" desc="%block_02_desert_templeD" application="block" build="block_02_desert_temple" properties="no_shop,wall" shop_count="1" shop_cost="1" file="gfx/MonstersDLC/item_icons/block_02_desert_temple_icon.png" dlc="monsters_dlc" />
+    <resource name="ladder_desert_temple" title="%ladder_desert_templeT" desc="%ladder_desert_templeD" application="block" build="ladder_desert_temple" properties="no_shop,no_char_inv,no_inv" shop_count="1" shop_cost="1" file="gfx/MonstersDLC/item_icons/ladder_desert_temple_icon.png" dlc="monsters_dlc" />
+    <resource name="column_desert_temple" title="%column_desert_templeT" desc="%column_desert_templeD" application="block" build="column_desert_temple" properties="no_shop,no_char_inv,no_inv" shop_count="1" shop_cost="1" file="gfx/MonstersDLC/item_icons/column_desert_temple_icon.png" dlc="monsters_dlc" />
+    <resource name="door_desert_temple" title="%door_desert_templeT" desc="%door_desert_templeD" application="block" build="door_desert_temple" properties="no_shop,no_char_inv,no_inv" shop_count="1" shop_cost="1" file="gfx/MonstersDLC/item_icons/door_desert_temple_icon.png" dlc="monsters_dlc" />
+    <resource name="magic_engine" title="%magic_engineT" desc="%magic_engineD" application="halfstuff" build="" properties="no_shop,secret_item,vip" shop_count="1" shop_cost="1" file="gfx/MonstersDLC/item_icons/magic_engine.png" dlc="monsters_dlc" />
+    <resource name="fireball_staff_elexir" title="" desc="" file="gfx\level_tiles\shop_obj\e_speed" application="equip" properties="magic_elexir,magic_item=magic_fireball,attack,vip,distance=12,infinity_count,no_shop,no_char_inv,no_inv" shop_count="4" shop_cost="1" dlc="monsters_dlc" />
+    <resource name="sand_room_door" title="%sand_room_doorT" desc="%sand_room_doorD" application="block" build="sand_room_door" properties="no_shop,no_char_inv,no_inv" shop_count="1" shop_cost="1" dlc="monsters_dlc" />
+    <resource name="sand_rune_door" title="%sand_rune_doorT" desc="%sand_rune_doorD" application="block" build="sand_rune_door" properties="no_shop,no_char_inv,no_inv" shop_count="1" shop_cost="1" dlc="monsters_dlc" />
+    <resource name="rusty_gun" title="%rusty_gunT" desc="%rusty_gunD" application="equip" build="" properties="missile,pistol,spine=rusty_gun,add_res=ammo,attack=x3.5,accuracy=0.9,distance=4,no_shop" shop_count="1" shop_cost="1" file="gfx/MonstersDLC/item_icons/rusty_gun_icon.png" class="weapon" dlc="monsters_dlc">
+        <params>
+            <param name="idle" value="main" />
+            <param name="action" value="shot" />
+            <param name="ammo" value="ammo,ammo_steel,ammo_fire" />
+            <param name="sound_shot" value="pistol_shot" />
+            <param name="sound_reload" value="rifle_reload" />
+        </params>
+    </resource>
+</root>

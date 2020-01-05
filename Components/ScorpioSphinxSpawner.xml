@@ -1,0 +1,5 @@
+<root>
+    <altar value="scorpio_base"/>
+    <boss value="scorpio_sphinx"/>
+    <distance_to_warehouse value="20"/>
+</root>

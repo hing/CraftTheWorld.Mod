@@ -1,0 +1,370 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--'propperties': 
+  distance=x  - расстояние слышимости, х-относительная величина (в игре от размера экрана)
+  loop=x - зацикленый звук, х - пауза между циклами
+  seq=x - кол-во повторов звука в одном цикле
+  -->
+
+<root>
+  <sound name="gnome_eat" properties="distance=0.5" file="sfx\upd\eating_1.ogg,sfx\upd\eating_2.ogg,sfx\upd\eating_3.ogg" />
+  <sound name="gnome_sleep" properties="distance=0.5,loop=1" file="sfx\gnome_sleep_1.ogg,sfx\gnome_sleep_2.ogg,sfx\gnome_sleep_3.ogg,sfx\gnome_sleep_4.ogg" />
+  <sound name="gnome_extreme_fall" properties="distance=0.5" file="sfx\gnome_fall_1.ogg,sfx\gnome_fall_2.ogg,sfx\gnome_fall_3.ogg,sfx\gnome_fall_4.ogg,sfx\gnome_fall_5.ogg" />
+  <sound name="gnome_scary" properties="distance=0.5,time=0.5" file="sfx\gnome_cry_1.ogg,sfx\gnome_cry_2.ogg,sfx\gnome_cry_3.ogg,sfx\gnome_cry_4.ogg,sfx\gnome_cry_5.ogg,sfx\gnome_cry_6.ogg,sfx\gnome_cry_7.ogg,sfx\gnome_cry2_1.ogg,sfx\gnome_cry2_2.ogg,sfx\gnome_cry2_3.ogg,sfx\gnome_cry2_4.ogg" />
+  <sound name="gnome_step_dirt" properties="distance=0.5,count=2" file="sfx\dwarf_step_ground1.ogg,sfx\dwarf_step_ground2.ogg,sfx\dwarf_step_ground3.ogg" />
+  <sound name="gnome_step_wood" properties="distance=0.5,count=2" file="sfx\dwarf_step_wood_1.ogg,sfx\dwarf_step_wood_2.ogg,sfx\dwarf_step_wood_3.ogg" />
+  <sound name="gnome_step_snow" properties="distance=0.5,count=2" file="sfx\snow_step1.ogg,sfx\snow_step2.ogg,sfx\snow_step3.ogg,sfx\snow_step4.ogg" />
+  <!--<sound name="gnome_step_stone" properties="distance=0.5,count=2" file="sfx\dwarf_step_stone_1.ogg,sfx\dwarf_step_stone_2.ogg,sfx\dwarf_step_stone_3.ogg" />-->
+  <sound name="gnome_step_stone" properties="distance=0.5,count=2" file="sfx\dwarf_stone_footstep1.ogg,sfx\dwarf_stone_footstep2.ogg,sfx\dwarf_stone_footstep3.ogg,sfx\dwarf_stone_footstep4.ogg" />
+  <sound name="gnome_swim" properties="distance=0.5,count=2" file="sfx\dwarf_swimming_1.ogg,sfx\dwarf_swimming_2ogg,sfx\dwarf_swimming_3.ogg,sfx\dwarf_swimming_4.ogg" />
+  <sound name="gnome_collect" properties="distance=0.5" file="sfx\luggage1.ogg,sfx\luggage2.ogg,sfx\luggage3.ogg" />
+  <sound name="gnome_fishing" properties="distance=0.5,count=1,replace" file="sfx\fishing1.ogg,sfx\fishing2.ogg" />
+  <sound name="gnome_catch_fish" properties="distance=0.5,count=1,replace" file="sfx\catch_fish1.ogg,sfx\catch_fish2.ogg" />
+  <sound name="gnome_breath" properties="distance=0.5,loop=5" file="sfx\gnome_creep_1.ogg,sfx\gnome_creep_2.ogg,sfx\gnome_creep_3.ogg,sfx\gnome_creep_4.ogg" />
+  <sound name="gnome_battle" properties="distance=0.5,count=2" file="sfx\gnome_battle_1.ogg,sfx\gnome_battle_2.ogg,sfx\gnome_battle_3.ogg,sfx\gnome_battle_4.ogg,sfx\gnome_battle_5.ogg,sfx\gnome_battle_6.ogg" />
+  <sound name="gnome_soul" properties="distance=0.5" file="sfx\dwarf_soul.ogg" />
+  <sound name="dwarf_displeasure" properties="distance=0.5" file="sfx\upd\dwarf_displeasure_1.ogg,sfx\upd\dwarf_displeasure_2.ogg,sfx\upd\dwarf_displeasure_3.ogg,sfx\upd\dwarf_displeasure_4.ogg,sfx\upd\dwarf_displeasure_5.ogg" />
+  <sound name="dwarf_laugh" properties="distance=0.5" file="sfx\upd\dwarf_laugh_1.ogg,sfx\upd\dwarf_laugh_2.ogg" />
+  <sound name="dwarf_talk" properties="distance=0.5" file="sfx\upd\dwarf_talk_1.ogg,sfx\upd\dwarf_talk_2.ogg,sfx\upd\dwarf_talk_3.ogg,sfx\upd\dwarf_talk_4.ogg" />
+  <sound name="dwarf_died" properties="distance=0.5" file="sfx\upd\dwarf_died.ogg" />
+  <sound name="gnome_drinking" properties="distance=0.5,count=2" file="sfx\upd\drinking.ogg" />
+  <sound name="gnome_monk_hit" properties="distance=0.5,count=2" file="sfx\Temples\Monk - Attack 1.ogg,sfx\Temples\Monk - Attack 2.ogg" />
+ 
+  <sound name="shield_block" properties="distance=0.5,count=2" file="sfx\upd\shield_block_1.ogg,sfx\upd\shield_block_2.ogg" />
+  
+  <sound name="map_win" properties="" file="sfx\upd\map_win.ogg" />
+  <sound name="map_lose" properties="" file="sfx\upd\map_lose.ogg" />
+ 
+  <sound name="female_scary" properties="distance=0.5,time=0.5" file="sfx\upd\female_scary_1.ogg,sfx\upd\female_scary_2.ogg,sfx\upd\female_scary_3.ogg,sfx\upd\female_scary_4.ogg" />
+  <sound name="female_fall" properties="distance=0.5" file="sfx\upd\female_angry_1.ogg,sfx\upd\female_angry_2.ogg,sfx\upd\female_angry_3.ogg,sfx\upd\female_angry_4.ogg,sfx\upd\female_angry_5.ogg,sfx\upd\female_angry_6.ogg" />
+  <sound name="female_attack" properties="distance=0.5,count=2" file="sfx\upd\female_attack_1.ogg,sfx\upd\female_attack_2.ogg,sfx\upd\female_attack_3.ogg,sfx\upd\female_attack_4.ogg" />
+  <sound name="female_displeasure" properties="distance=0.5" file="sfx\upd\female_displeasure_1.ogg,sfx\upd\female_displeasure_2.ogg,sfx\upd\female_displeasure_3.ogg,sfx\upd\female_displeasure_4.ogg,sfx\upd\female_displeasure_5.ogg,sfx\upd\female_displeasure_6.ogg" />
+  <sound name="female_tired" properties="distance=0.5,loop=5" file="sfx\upd\female_tired_1.ogg,sfx\upd\female_tired_2.ogg,sfx\upd\female_tired_3.ogg,sfx\upd\female_tired_4.ogg" />
+  <sound name="female_talk" properties="distance=0.5,volume=x0.6" file="sfx\upd\female_talk_1.ogg,sfx\upd\female_talk_2.ogg,sfx\upd\female_talk_3.ogg" />
+  <sound name="female_died" properties="distance=0.5" file="sfx\upd\female_died_1.ogg,sfx\upd\female_died_2.ogg,sfx\upd\female_died_3.ogg,sfx\upd\female_died_4.ogg" />
+  <sound name="female_sleep" properties="distance=0.5,loop=1" file="sfx\upd\female_sleep_2.ogg,sfx\upd\female_sleep_3.ogg" />
+  <sound name="female_laugh" properties="distance=0.5" file="sfx\upd\female_laugh_1.ogg,sfx\upd\female_laugh_2.ogg,sfx\upd\female_laugh_3.ogg,sfx\upd\female_laugh_4.ogg,sfx\upd\female_laugh_5.ogg" />
+
+  <sound name="owlcat_love" properties="distance=0.5" file="sfx\upd\owlcat_love_1.ogg,sfx\upd\owlcat_love_2.ogg,sfx\upd\owlcat_love_3.ogg" />
+  <sound name="owlcat_punch" properties="distance=0.5" file="sfx\upd\owlcat_punch_1.ogg,sfx\upd\owlcat_punch_2.ogg" />
+  <sound name="owlcat_attack" properties="distance=0.5" file="sfx\upd\owlcat_attack_1.ogg,sfx\upd\owlcat_attack_2.ogg" />
+
+  <sound name="basilisk_tongue" properties="distance=0.5" file="sfx\upd\basilisk_tongue.ogg" />
+  <sound name="basilisk_idle" properties="distance=0.5" file="sfx\upd\basilisk_idle_1.ogg,sfx\upd\basilisk_idle_2.ogg,sfx\upd\basilisk_idle_3.ogg,sfx\upd\basilisk_idle_4.ogg,sfx\upd\basilisk_idle_5.ogg,sfx\upd\basilisk_idle_6.ogg,sfx\upd\basilisk_idle_7.ogg" />
+  <sound name="basilisk_smell" properties="distance=0.5" file="sfx\upd\basilisk_smell_1.ogg,sfx\upd\basilisk_smell_2.ogg" />
+  <sound name="basilisk_bite" properties="distance=0.5" file="sfx\upd\basilisk_bite_1.ogg,sfx\upd\basilisk_bite_2.ogg" />
+  <sound name="basilisk_attack" properties="distance=0.5" file="sfx\upd\basilisk_attack_1.ogg,sfx\upd\basilisk_attack_2.ogg" />
+  
+  <sound name="new_bottle" properties="distance=0.5,count=2" file="sfx\upd\new_bottle_1.ogg,sfx\upd\new_bottle_2.ogg,sfx\upd\new_bottle_3.ogg" />
+
+  <sound name="ice_elves_battlecry" properties="distance=0.5,count=2" file="sfx\upd\ice_elves_battlecry_1.ogg,sfx\upd\ice_elves_battlecry_2.ogg" />
+  <sound name="ice_elves_death" properties="distance=0.5" file="sfx\upd\ice_elves_die_1.ogg,sfx\upd\ice_elves_die_2.ogg" />
+  <!--<sound name="ice_elves_death" properties="distance=0.5" file="sfx\upd\ice_witch_die_1.ogg,sfx\upd\ice_witch_die_2.ogg" />-->
+
+
+  <sound name="ice_witch_battlecry" properties="distance=0.5,count=2" file="sfx\upd\ice_witch_battlecry_1.ogg,sfx\upd\ice_witch_battlecry_2.ogg" />
+  <sound name="ice_witch_death" properties="distance=0.5" file="sfx\upd\ice_witch_die_1.ogg,sfx\upd\ice_witch_die_2.ogg" />
+
+  <sound name="pig_ambient" properties="time=8-15,distance=0.5,loop=8-15" file="sfx\pig_1.ogg,sfx\pig_2.ogg,sfx\pig_3.ogg" />
+  <sound name="pig_death" properties="distance=0.5" file="sfx\pig_death.ogg,sfx\pig_death_1.ogg,sfx\pig_death_2.ogg" />
+  <sound name="sheep_ambient" properties="time=8-15,distance=0.5,loop=8-15" file="sfx\sheep_1.ogg,sfx\sheep_2.ogg,sfx\sheep1.ogg,sfx\sheep2.ogg" />
+  <sound name="sheep_death" properties="distance=0.5" file="sfx\sheep_death.ogg" />
+  <sound name="chicken_ambient" properties="time=8-15,distance=0.5,loop=8-15" file="sfx\chicken1.ogg,sfx\chicken2.ogg" />
+  <sound name="chicken_death" properties="distance=0.5" file="sfx\chicken_death.ogg" />
+  <sound name="ghost" properties="distance=0.5,loop=0" file="sfx\ghost.ogg" />
+  <sound name="ghost_death" properties="distance=0.5" file="sfx\ghost_death.ogg" />
+  <sound name="bug" properties="distance=0.5" file="sfx\bug_1.ogg,sfx\bug_2.ogg" />
+  <sound name="bug_death" properties="distance=0.5" file="sfx\bug_death.ogg" />
+  <sound name="insect_ambient" properties="time=8-15,distance=0.5,loop=8-15" file="sfx\insect_1.ogg,sfx\insect_2.ogg,sfx\insect_3.ogg" />
+  <sound name="skeleton_ambient" properties="time=8-15,distance=0.5,loop=8-15" file="sfx\skeleton_bones_1.ogg,sfx\skeleton_bones_2.ogg,sfx\skeleton_bones_3.ogg,sfx\skeleton_bones_4.ogg,sfx\skeleton_bones_5.ogg" />
+  <sound name="skeleton_step" properties="distance=0.5,count=4" file="sfx\skeleton_step_1.ogg,sfx\skeleton_step_2.ogg,sfx\skeleton_step_3.ogg,sfx\skeleton_step1.ogg,sfx\skeleton_step2.ogg,sfx\skeleton_step3.ogg" />
+  <sound name="skeleton_death" properties="distance=0.5" file="sfx\skeleton_falling_bones_1.ogg,sfx\skeleton_falling_bones_2.ogg" />
+  <sound name="goblin_ambient" properties="time=8-15,distance=0.5,loop=8-15" file="sfx\goblin_walk_1.ogg,sfx\goblin_walk_2.ogg,sfx\goblin_walk_3.ogg,sfx\goblin_walk_4.ogg,sfx\goblin_walk_5.ogg,sfx\goblin_walk_6.ogg,sfx\goblin_walk_7.ogg,sfx\goblin_walk_8.ogg" />
+  <sound name="goblin_death" properties="distance=0.5" file="sfx\goblin_die_1.ogg,sfx\goblin_die_2.ogg,sfx\goblin_die_3.ogg,sfx\goblin_die_4.ogg" />
+
+  <sound name="beetle_biome_ambient" properties="time=8-15,distance=0.5,loop=15-30" file="sfx\beetle_biome_ambient_1.ogg,sfx\beetle_biome_ambient_2.ogg,sfx\beetle_biome_ambient_3.ogg" />
+
+  <sound name="dragon_step" properties="distance=0.5,count=4" file="sfx\dragon_wing_1.ogg,sfx\dragon_wing_2.ogg,sfx\dragon_wing_3.ogg" />
+  <sound name="dragon_attack" properties="distance=0.5,count=4" file="sfx\dragon_1.ogg,sfx\dragon_2.ogg,sfx\dragon_3.ogg" />
+
+  <sound name="zombie_ambient" properties="time=8-15,distance=0.5,loop=8-15" file="sfx\zombie_walk_1.ogg,sfx\zombie_walk_2.ogg,sfx\zombie_walk_3.ogg,sfx\zombie_walk_4.ogg,sfx\zombie_walk_5.ogg" />
+  <sound name="zombie_step" properties="distance=0.5,count=4" file="sfx\zombie_step_1.ogg,sfx\zombie_step_2.ogg,sfx\zombie_step_3.ogg,sfx\zombie_step_4.ogg" />
+  <sound name="zombie_death" properties="distance=0.5" file="sfx\zombie_die_1.ogg,sfx\zombie_die_2.ogg,sfx\zombie_die_3.ogg,sfx\zombie_die_4.ogg" />
+
+  <sound name="skeleton_boss_step" properties="distance=0.5,count=4" file="sfx\sceleton_boss_step.ogg,sfx\sceleton_boss_step_2.ogg,sfx\sceleton_boss_step_3.ogg" />
+  <sound name="skeleton_boss_hit" properties="distance=0.5,count=4" file="sfx\sceleton_boss_hit.ogg,sfx\sceleton_boss_hit_2.ogg" />
+
+  <sound name="frostling_ambient" properties="time=8-15,distance=0.5,loop=8-15,count=3" file="sfx\frostling_idle_01.ogg,sfx\frostling_idle_02.ogg,sfx\frostling_idle_03.ogg,sfx\frostling_idle_04.ogg,sfx\frostling_idle_05.ogg" />
+  <sound name="frostling_death" properties="distance=0.5" file="sfx\frostling_die_01.ogg,sfx\frostling_die_02.ogg" />
+
+  <sound name="yeti_ambient" properties="time=8-15,distance=0.5,loop=8-15" file="sfx\yeti_idle_01.ogg,sfx\yeti_idle_02.ogg,sfx\yeti_idle_03.ogg" />
+  <sound name="yeti_death" properties="distance=0.5" file="sfx\yeti_die_01.ogg,sfx\yeti_die_02.ogg,sfx\yeti_die_03.ogg,sfx\yeti_die_04.ogg" />
+
+  <sound name="beholder_ambient" properties="time=8-15,distance=0.5,loop=8-15" file="sfx\blue_monster.ogg,sfx\blue_monster_2.ogg" />
+  <sound name="blackfluffy_ambient" properties="time=8-15,distance=0.5,loop=8-15" file="sfx\hedgehog_monster.ogg,sfx\hedgehog_monster_2.ogg" />
+
+  <sound name="mummy_ambient" properties="time=8-15,distance=0.5,loop=8-15" file="sfx\mummy_idle_01.ogg,sfx\mummy_idle_02.ogg,sfx\mummy_idle_03.ogg,sfx\mummy_idle_04.ogg,sfx\mummy_idle_05.ogg" />
+  <sound name="mummy_death" properties="distance=0.5" file="sfx\mummy_die_01.ogg,sfx\mummy_die_02.ogg,sfx\mummy_die_03.ogg,sfx\mummy_die_04.ogg,sfx\mummy_die_05.ogg" />
+
+  <sound name="blue_bird_ambient" properties="time=8-15,distance=0.5,loop=8-15" file="sfx\blue_bird.ogg,sfx\blue_bird2.ogg" />
+  <sound name="blue_bird_death" properties="distance=0.5" file="sfx\blue_bird.ogg,sfx\blue_bird2.ogg" />
+  <sound name="lama_ambient" properties="time=8-15,distance=0.5,loop=8-15" file="sfx\lama.ogg,sfx\lama2.ogg" />
+  <sound name="lama_death" properties="distance=0.5" file="sfx\lama.ogg,sfx\lama2.ogg" />
+  <sound name="lizard_ambient" properties="time=8-15,distance=0.5,loop=8-15" file="sfx\lizard.ogg,sfx\lizard2.ogg" />
+  <sound name="lizard_death" properties="distance=0.5" file="sfx\lizard.ogg" />
+  <sound name="bull_ambient" properties="time=8-15,distance=0.5,loop=8-15" file="sfx\bull.ogg,sfx\bull2.ogg" />
+  <sound name="bull_death" properties="distance=0.5" file="sfx\bull.ogg" />
+  <sound name="scorpion_ambient" properties="time=8-15,distance=0.5,loop=8-15" file="sfx\scorpion.ogg,sfx\scorpion2.ogg" />
+  <sound name="scorpion_action" properties="distance=0.5" file="sfx\scorpion.ogg" />
+  <sound name="small_bird_ambient" properties="time=8-15,distance=0.5,loop=8-15" file="sfx\small_bird.ogg,sfx\small_bird2.ogg" />
+  <sound name="small_bird_death" properties="distance=0.5" file="sfx\small_bird.ogg" />
+
+  <sound name="rat_ambient" properties="time=10-20,distance=0.5,loop=10-20,count=3" file="sfx\upd\rat_1.ogg,sfx\upd\rat_2.ogg,sfx\upd\rat_3.ogg,sfx\upd\rat_4.ogg,sfx\upd\rat_5.ogg,sfx\upd\rat_6.ogg,sfx\upd\rat_7.ogg" />
+  <sound name="rat_spawn" properties="distance=0.5" file="sfx\upd\rat_spawn_1.ogg,sfx\upd\rat_spawn_2.ogg" />
+
+
+  <sound name="tree_crash" properties="distance=0.5,count=1" file="sfx\wood_drop1.ogg,sfx\wood_drop2.ogg" />
+
+  <!--level four-->
+  <!--creatures list:
+  octopus
+  cave_goblin
+  cave_goblin_warrior
+  orc
+  orc_boss
+  orc_skeleton
+  orc_boss_skeleton
+  cave_beast
+  caterpillar
+  gargoyley-->
+
+  <sound name="fish_beast_ambient" properties="time=8-15,distance=0.5,loop=8-15" file="sfx\Temples\Beast - Cycle 1.ogg,fx\Temples\Beast - Cycle 2.ogg" />
+  <sound name="fish_beast_agro" properties="distance=0.5" file="sfx\Temples\Beast - Agro.ogg" />
+  <sound name="fish_beast_attack" properties="distance=0.5" file="sfx\Temples\Beast - Attack.ogg" />
+
+  <sound name="temple_golem_in" properties="distance=0.8" file="sfx\Temples\Golem - In.ogg" />
+  <sound name="temple_golem_attack" properties="distance=0.5" file="sfx\Temples\Golem - Attack.ogg" />
+
+  <sound name="frog" properties="distance=0.5" file="sfx\Temples\Frog.ogg" />
+  <sound name="duck_wings" properties="distance=0.5,count=10" file="sfx\Temples\Duck - Wings 1.ogg,sfx\Temples\Duck - Wings 2.ogg" />
+  <!--<sound name="duck_wings2" properties="distance=0.5,count=10" file="sfx\Temples\Duck - Wings 2.ogg" />-->
+  <sound name="duck_ambient" properties="distance=0.5,count=4,loop=1-5" file="sfx\Temples\Duck - Quack.ogg" />
+
+  <sound name="octopus_ambient" properties="time=8-15,distance=0.5,loop=8-15" file="sfx\lvl4\octopus_ambient.ogg" />
+  <sound name="octopus_death" properties="distance=0.5" file="sfx\lvl4\octopus_death.ogg,sfx\lvl4\octopus_death2.ogg" />
+  <sound name="octopus_attack" properties="distance=0.5" file="sfx\lvl4\octopus_attack.ogg" />
+
+  <sound name="cave_goblin_ambient" properties="time=8-15,distance=0.5,loop=8-15" file="sfx\lvl4\cave_goblin_ambient.ogg" />
+  <sound name="cave_goblin_death" properties="distance=0.5" file="sfx\lvl4\cave_goblin_death.ogg" />
+  <sound name="cave_goblin_dig" properties="distance=0.5" file="sfx\lvl4\cave_goblin_dig.ogg" />
+
+  <sound name="orc_ambient" properties="time=8-15,distance=0.5,loop=8-15" file="sfx\lvl4\orc_ambient.ogg" />
+  <sound name="orc_death" properties="distance=0.5" file="sfx\lvl4\orc_death.ogg" />
+
+  <sound name="orc_skeleton_ambient" properties="time=8-15,distance=0.5,loop=8-15" file="sfx\lvl4\orc_skeleton_ambient.ogg" />
+  <sound name="orc_skeleton_death" properties="distance=0.5" file="sfx\lvl4\orc_skeleton_death.ogg" />
+
+  <sound name="cave_beast_ambient" properties="time=8-15,distance=0.5,loop=8-15" file="sfx\lvl4\cave_beast_ambient.ogg" />
+  <sound name="cave_beast_death" properties="distance=0.5" file="sfx\lvl4\cave_beast_death.ogg" />
+  <sound name="cave_beast_attack" properties="distance=0.5" file="sfx\lvl4\cave_beast_attack.ogg" />
+
+  <sound name="caterpillar_ambient" properties="time=8-15,distance=0.5,loop=8-15" file="sfx\lvl4\caterpillar_ambient.ogg" />
+  <sound name="caterpillar_death" properties="distance=0.5" file="sfx\lvl4\caterpillar_death.ogg" />
+
+  <sound name="gargoyley_ambient" properties="time=8-15,distance=0.5,loop=8-15" file="sfx\lvl4\gargoyley_ambient.ogg" />
+  <sound name="gargoyley_death" properties="distance=0.5" file="sfx\lvl4\gargoyley_death.ogg" />
+  <sound name="gargoyley_wing" properties="distance=0.5" file="sfx\lvl4\gargoyley_wing.ogg" />
+
+  <sound name="larva_ambient" properties="time=8-15,distance=0.5,loop=8-15" file="sfx\lvl4\larva_ambient.ogg" />
+  <sound name="larva_death" properties="distance=0.5" file="sfx\lvl4\larva_death.ogg" />
+  <sound name="larva_dig" properties="distance=0.5" file="sfx\lvl4\larva_dig.ogg" />
+
+  <sound name="goblin_speak" properties="distance=0.5,count=1" file="sfx\lvl4\goblin_speak.ogg" />
+  <sound name="god_wakeup" properties="distance=0.5,count=1" file="sfx\lvl4\god_wakeup.ogg" />
+ 
+  <!--drops-->
+  <sound name="item_drop_w" properties="distance=0.5,count=2" file="sfx\drop_in_water1.ogg,sfx\drop_in_water2.ogg,sfx\drop_in_water3.ogg" />
+  <sound name="item_default_drop" properties="distance=0.5,count=2" file="sfx\unit_fall_1.ogg,sfx\unit_fall_2.ogg,sfx\unit_fall_3.ogg" />
+  <sound name="stone_drop" properties="distance=0.5,count=2" file="sfx\stone_fall1.ogg,sfx\stone_fall2.ogg,sfx\stone_fall3.ogg" />
+  <sound name="water_drop" properties="distance=0.5,count=2" file="sfx\water_fall1.ogg,sfx\water_fall2.ogg" />
+
+  <!--doors-->
+  <sound name="wood_door_open" properties="distance=0.5" file="sfx\wooddoor_open.ogg" />
+  <sound name="wood_door_close" properties="distance=0.5" file="sfx\wooddoor_close.ogg" />
+  <sound name="iron_door_open" properties="distance=0.5" file="sfx\metaldoor_open.ogg" />
+  <sound name="iron_door_close" properties="distance=0.5" file="sfx\metaldoor_close.ogg" />
+
+  <sound name="wood_hatch_open" properties="distance=0.5" file="sfx\wood_hatch_open.ogg" />
+  <sound name="wood_hatch_close" properties="distance=0.5" file="sfx\wood_hatch_close.ogg" />
+  <sound name="iron_hatch_open" properties="distance=0.5" file="sfx\metal_hatch_open.ogg" />
+  <sound name="iron_hatch_close" properties="distance=0.5" file="sfx\metal_hatch_close.ogg" />
+
+  <!--hits-->  
+  <sound name="pick_dirt" properties="distance=0.5" file="sfx\hit_ground_1.ogg,sfx\hit_ground_2.ogg,sfx\hit_ground_3.ogg,sfx\hit_ground_4.ogg" />
+  <sound name="hit_metall_metall" properties="distance=0.5" file="sfx\punch_shield1.ogg,sfx\punch_shield2.ogg,sfx\punch_shield3.ogg" />
+  <sound name="hit_body_body" properties="distance=0.5" file="sfx\punch_body1.ogg,sfx\punch_body2.ogg,sfx\punch_body3.ogg" />
+  <sound name="hit_metal_body" properties="distance=0.5" file="sfx\metal_punch_body1.ogg,sfx\metal_punch_body2.ogg,sfx\metal_punch_body3.ogg" />
+  <sound name="build" properties="distance=0.5" file="sfx\13719_SFX_ImpactMacheteHitOnTreeStump9.ogg" />
+  <sound name="chopper" properties="distance=1" file="sfx\chopper1.ogg,sfx\chopper2.ogg,sfx\chopper3.ogg" />
+  <sound name="pick_stone" properties="distance=1" file="sfx\hit_stone_1.ogg,sfx\hit_stone_2.ogg,sfx\hit_stone_3.ogg" />
+  <sound name="water_dig" properties="distance=0.5" file="sfx\get_water_1.ogg,sfx\get_water_2.ogg,sfx\get_water_3.ogg" />
+  <sound name="bow" properties="distance=0.5" file="sfx\bow1.ogg,sfx\bow2.ogg,sfx\bow3.ogg" />
+  <sound name="arrow_hit" properties="distance=0.5" file="sfx\arrow_hit1.ogg,sfx\arrow_hit2.ogg,sfx\arrow_hit3.ogg,sfx\arrow_hit4.ogg,sfx\arrow_hit5.ogg" />
+  <sound name="hit_bush" properties="distance=0.5" file="sfx\hit_bush.ogg,sfx\hit_bush2.ogg,sfx\hit_bush3.ogg" />
+  <sound name="hit_sand" properties="distance=0.5" file="sfx\hit_sand_1.ogg,sfx\hit_sand_2.ogg,sfx\hit_sand_3.ogg" />
+  <sound name="bullet_hit" properties="distance=0.5" file="sfx\lvl4\bullet_hit.ogg" />
+  <sound name="mushroom_chop" properties="distance=0.5" file="sfx\lvl4\mushroom_chop.ogg" />
+  
+  <sound name="hit_god" properties="distance=0.5" file="sfx\lvl4\hit_god.ogg" />
+  <sound name="earthquake" properties="distance=0.5" file="sfx\lvl4\earthquake.ogg" />
+  <sound name="pistol_shot" properties="distance=0.5" file="sfx\lvl4\pistol_shot.ogg" />
+  <sound name="rifle_shot" properties="distance=0.5" file="sfx\lvl4\rifle_shot.ogg" />
+  <sound name="heavy_rifle_shot" properties="distance=0.5" file="sfx\lvl4\heavy_rifle_shot.ogg" />
+  <sound name="rifle_reload" properties="distance=0.5" file="sfx\lvl4\rifle_reload.ogg" />
+ 
+ <!--build-->
+  <sound name="build_ladder" properties="distance=0.5" file="sfx\building_ladder_1.ogg,sfx\building_ladder_2.ogg" />
+  <sound name="build_brick" properties="distance=0.5" file="sfx\stone_building.ogg" />
+  <sound name="build_stone" properties="distance=0.5" file="sfx\stone_building.ogg" />
+  <sound name="build_wood" properties="distance=0.5" file="sfx\wood_building.ogg" />
+  <sound name="build_metall" properties="distance=0.5" file="sfx\metal_building.ogg" />
+  <sound name="build_torch_wood" properties="distance=0.5" file="sfx\wooden_torch_1.ogg,sfx\wooden_torch_2.ogg" />
+  <sound name="build_torch_stone" properties="distance=0.5" file="sfx\stone_torch_1.ogg,sfx\stone_torch_2.ogg" />
+
+  
+  <!--<sound name="build_wood" properties="distance=0.5" file="sfx\hammer_wood_1.ogg,sfx\hammer_wood_2.ogg,sfx\hammer_wood_3.ogg,sfx\hammer_wood_4.ogg" />
+  <sound name="build_metall" properties="distance=0.5" file="sfx\hammer_metal1.ogg,sfx\hammer_metal2.ogg,sfx\hammer_metal3.ogg,sfx\hammer_metal4.ogg" />-->
+
+  <!--breaks-->
+  <sound name="stone_breaks" properties="distance=0.5" file="sfx\stone_split1.ogg,sfx\stone_split2.ogg,sfx\stone_split3.ogg" />
+  <sound name="brick_breaks" properties="distance=0.5" file="sfx\brick_break1.ogg,sfx\brick_break2.ogg,sfx\brick_break3.ogg" />
+  <sound name="wood_breaks" properties="distance=0.5" file="sfx\wood_break1.ogg,sfx\wood_break2.ogg,sfx\wood_break3.ogg" />
+  <sound name="bush_breaks" properties="distance=0.5" file="sfx\bush_break1.ogg,sfx\bush_break2.ogg,sfx\bush_break3.ogg" />
+  <sound name="dirt_breaks" properties="distance=0.5" file="sfx\ground_down1.ogg,sfx\ground_down2.ogg,sfx\ground_down3.ogg" />
+  <sound name="sand_breaks" properties="distance=0.5" file="sfx\sand_break1.ogg,sfx\sand_break2.ogg,sfx\sand_break3.ogg" />
+
+  <!--buildings-->
+  <sound name="tesla" properties="distance=1" file="sfx\tesla_1.ogg,sfx\tesla_2.ogg,sfx\tesla_3.ogg" />
+  <sound name="portal" properties="distance=0.5,loop" file="sfx\portal_roomtone.ogg" />
+  <sound name="elevator" properties="distance=1,loop" file="sfx\elevator.ogg" />
+  <sound name="trolley" properties="distance=0.5,loop" file="sfx\railway.ogg" />
+  <sound name="horn" properties="" file="sfx\07631_SFX_SoloTrumpetRiff.ogg" />
+  <sound name="tornado" properties="distance=0.5,loop" file="sfx\tornado.ogg" />
+ 
+  <sound name="catapult_shot" properties="distance=1" file="sfx\upd\catapult_shot_1.ogg,sfx\upd\catapult_shot_2.ogg" />
+  <sound name="catapult_hit" properties="distance=1" file="sfx\upd\catapult_hit_1.ogg,sfx\upd\catapult_hit_2.ogg" />
+  <sound name="catapult_charging" properties="distance=1" file="sfx\upd\catapult_charging.ogg" />
+
+  <sound name="air_temple" properties="distance=2" file="sfx\Temples\Air - In.ogg" />
+  <sound name="air_temple_bg" properties="distance=0.5,loop" file="sfx\Temples\Air - Cycle.ogg" />
+  <sound name="ground_temple" properties="distance=2" file="sfx\Temples\Earth - In.ogg" />
+  <sound name="ground_temple_bg" properties="distance=0.5,loop" file="sfx\Temples\Earth - Cycle.ogg" />
+  <sound name="fire_temple" properties="distance=2" file="sfx\Temples\Fire - In.ogg" />
+  <sound name="fire_temple_bg" properties="distance=0.5,loop" file="sfx\Temples\Fire - Cycle.ogg" />
+  <sound name="water_temple" properties="distance=2" file="sfx\Temples\Water - In.ogg" />
+  <sound name="water_temple_bg" properties="distance=0.5,loop" file="sfx\Temples\Water - Cycle.ogg" />
+
+  <!--ambients-->
+  <sound name="rain" properties="loop=0,ambient" file="sfx\small_rain.ogg" />
+  <sound name="medium_rain" properties="loop=0,ambient" file="sfx\medium_rain.ogg" />
+  <sound name="strong_rain" properties="loop=0,ambient" file="sfx\strong_rain.ogg" />
+  <sound name="amb_nature" properties="loop=0,ambient" file="sfx\day_ambient.ogg" />
+  <sound name="amb_winter" properties="loop=0,ambient" file="sfx\winter_ambience.ogg" />
+  <sound name="amb_desert" properties="loop=0,ambient" file="sfx\desert_ambience.ogg" />
+  <sound name="amb_night" properties="loop=0,ambient" file="sfx\night_ambient.ogg" />
+  <sound name="amb_cave" properties="distance=1,loop=0,ambient,count=1" file="sfx\cave_ambient.ogg" />
+  <sound name="amb_lava" properties="loop=0,ambient,count=1" file="sfx\lava_ambient.ogg" />
+  <sound name="amb_graveyard" properties="loop=0,ambient,count=1" file="sfx\cemetery_ambient.ogg" />
+  <sound name="amb_space" properties="loop=0,ambient" file="sfx\02556_SFX_SciFiAmbienceDeepSpace.ogg" />
+  <sound name="amb_sea" properties="loop=0,ambient,count=1" file="sfx\sea_ambient.ogg" />
+
+  <sound name="cave_water" properties="loop=0,ambient" file="sfx\lvl4\cave_water.ogg" />
+  <sound name="dungeons_ambient" properties="loop=0,ambient,count=1" file="sfx\lvl4\dungeons_ambient.ogg" />
+  <!--<sound name="lighting_strike" properties="ambient" file="sfx\upd\LightningStrike_1.ogg,sfx\upd\LightningStrike_2.ogg,sfx\upd\LightningStrike_3.ogg,sfx\upd\LightningStrike_4.ogg" />-->
+  <sound name="lighting_strike" properties="ambient" file="sfx\upd\LightningStrike_1(db+).ogg,sfx\upd\LightningStrike_2(db+).ogg,sfx\upd\LightningStrike_3(db+).ogg,sfx\upd\LightningStrike_4(db+).ogg" />
+
+  <!--music-->
+  <sound name="day_gameplay" properties="loop=600,seq=1,ambient,music" file="sfx\music\CraftTheWorld_gameplay.ogg" />
+  <sound name="night_gameplay" properties="loop=600,seq=1,ambient,music" file="sfx\music\CTW_Gameplay_F2.ogg" />
+  <sound name="menu" properties="loop=0,ambient,count=1,music" file="sfx\music\Menu_title_CTW_f_ogg.ogg" />
+
+  <!--events-->
+  <sound name="chat_message" properties="volume=x5" file="sfx\upd\ChatSound.ogg" />
+  <sound name="new_event" properties="volume=x0.5" file="sfx\important_notification.ogg" />
+  <sound name="new_quest" properties="volume=x0.5" file="sfx\new_task_v.2.ogg" />
+  <sound name="quest_completed" properties="" file="sfx\task_complete.ogg" />
+  <sound name="build_ready" properties="" file="sfx\build_ready.ogg" />
+  <sound name="enemy_attack" properties="volume=x0.5" file="sfx\enemy_attack.ogg" />
+  <sound name="drop_money_shop" properties="" file="sfx\buy.ogg" />
+  <sound name="select_dig" properties="" file="sfx\action_select.ogg" />
+  <sound name="window_appear" file="sfx\window_appear.ogg" />
+  <sound name="level_up" file="sfx\level_up.ogg" />
+  <sound name="population_up" file="sfx\population_up.ogg" />
+  <sound name="item_move" file="sfx\item_move.ogg" />
+  <sound name="info_appear" file="sfx\info_appear.ogg" />
+  <sound name="take_scroll" file="sfx\take_scroll.ogg" />
+  <sound name="take_bonus" file="sfx\take_bonus.ogg" />
+  <sound name="take_magic" file="sfx\take_bonus.ogg" />
+  <sound name="item_fly" file="sfx\item_fly.ogg" />
+  <sound name="money_fail" file="sfx\money_fail.ogg" />
+  <sound name="use_skill" file="sfx\use_skill_v.2.ogg" />
+  <sound name="take_control" file="sfx\take_control.ogg" />
+  <sound name="release" file="sfx\release.ogg" />
+  <sound name="hit_zombie_score" file="sfx\metal_punch_body3.ogg" />
+  <sound name="hit_zombie" file="sfx\zombie_die_4.ogg" />
+  <sound name="complete_zombie_score" file="sfx\task_complete_v2.ogg" />
+  <sound name="mana_down" file="sfx\upd1\Mana-.ogg" properties="volume=x0.5,count=2,distance=0.5"/>
+  <sound name="mana_up" file="sfx\upd1\Mana+.ogg" properties="volume=x0.5,count=2,distance=0.5"/>
+
+  <sound name="bubbles" file="sfx\upd1\Bubbles.ogg" properties="count=2,distance=0.5"/>
+  <sound name="gate_off" file="sfx\upd1\GateOff.ogg" properties="distance=0.5"/>
+  <sound name="gate_on" file="sfx\upd1\GateOn.ogg" properties="distance=0.5"/>
+  <sound name="pump_down" file="sfx\upd1\PumpDown.ogg" properties="count=2,distance=0.5"/>
+  <sound name="pump_up" file="sfx\upd1\PumpUp.ogg" properties="count=2,distance=0.5"/>
+
+  <sound name="craft_food" properties="loop=0,count=2,distance=0.5" file="sfx\food_boil.ogg,sfx\food_fry.ogg,sfx\food_slice.ogg" />
+  <sound name="craft_metall" properties="loop=0,count=3,distance=0.5" file="sfx\smithy.ogg" />
+  <sound name="craft_wood" properties="loop=0,count=3,distance=0.5" file="sfx\joinery.ogg" />
+  <sound name="craft_default" properties="count=1" file="sfx\joinery.ogg" />
+
+  <sound name="haircut" properties="distance=0.5,count=2,loop=0" file="sfx\haircut.ogg" />
+  <sound name="horn_deep" properties="" file="sfx\horn_deep.ogg" />
+
+
+  <sound name="main_menu_button" properties="" file="sfx\button_gear.ogg" />
+  <sound name="main_menu_gear" properties="time=0.5" file="sfx\menu_gear.ogg" />
+ 
+  <!--others-->
+  <sound name="fireball_explode" properties="distance=1" file="sfx\fireball_fall.ogg" />
+  <sound name="fireball" properties="distance=1" file="sfx\fireball_hit.ogg" />
+  <sound name="water_fall" properties="distance=0.5,count=3,loop=0.7" file="sfx\water_stream1.ogg,sfx\water_stream2.ogg" />
+  <sound name="monster_portal" properties="distance=0.5" file="sfx\monster_portal.ogg" />
+  <!--<sound name="mportal" properties="distance=0.5" file="sfx\47140_SFX_MagicalSweetTone.ogg" />-->
+  <sound name="fire" properties="distance=0.4,loop" file="sfx\fire_small.ogg,sfx\fire_medium.ogg" />
+  <sound name="clock" properties="distance=0.4,loop,count=1" file="sfx\clock.ogg" />
+  <sound name="set_totem" properties="distance=0.5" file="sfx\set_totem.ogg" />
+  <sound name="monster_teleport" properties="distance=0.5" file="sfx\lvl4\monster_teleport.ogg" />
+
+  <sound name="wood_trap" properties="distance=0.5" file="sfx\wooden_trap.ogg" />
+  <sound name="iron_trap" properties="distance=0.5" file="sfx\metal_trap.ogg" />
+  
+  <sound name="prison_door_open" properties="distance=0.5" file="sfx\metal_hatch_open.ogg" />
+  <sound name="prison_door_knock" properties="distance=0.5" file="sfx\metal_trap.ogg" />
+
+  <sound name="fireworks_shot" properties="distance=0.5,volume=x0.3,count=7" file="sfx\lvl4\rifle_shot3.ogg" />
+  <sound name="fireworks_spark" properties="distance=0.5,volume=x6,count=7" file="sfx\upd2\Fireworks_1.ogg,sfx\upd2\Fireworks_2.ogg,sfx\upd2\Fireworks_3.ogg,sfx\upd2\Fireworks_4.ogg" />
+
+  <!--spells-->
+  <sound name="spell_compas" properties="" file="sfx\Spell_Compas.ogg" />
+  <sound name="spell_thunder" properties="" file="sfx\spell_thunder.ogg" />
+  <sound name="spell_imps" properties="" file="sfx\spell_imps.ogg" />
+  <sound name="spell_magic_collection" properties="distance=0.5" file="sfx\spell_magic_collection.ogg" />
+  <sound name="spell_explosion" properties="" file="sfx\spell_explosion.ogg" />
+  <sound name="spell_light" properties="" file="sfx\spell_light.ogg" />
+  <sound name="spell_portal" properties="" file="sfx\spell_portal.ogg" />
+  <sound name="spell_forest_long" properties="distance=0.5" file="sfx\spell_forest_long.ogg" />
+  <sound name="spell_horn" properties="distance=0.5" file="sfx\spell_horn.ogg" />
+
+  <sound name="snow_magic" properties="distance=0.5" file="sfx\lvl4\snow_magic.ogg" />
+  <sound name="dwarf_heal" properties="distance=0.5" file="sfx\lvl4\dwarf_heal.ogg" />
+  
+</root>

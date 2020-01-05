@@ -1,0 +1,1059 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <creature name="worker" merge="partial">
+    <params>
+      <fly_speed value="180"/>
+    </params>
+    <attach_spines>
+      <attach resource="vivern_baby" slot="wyvern">
+        <spine attach="dwarf" value="vivern_baby_prof" idle="prof_idle" move="prof_fly"/>
+        <spine attach="dwarf_back" value="vivern_baby_back" idle="back_idle"/>
+        <spine attach="dwarf_main" value="vivern_baby_main" idle="main_idle"/>
+      </attach>
+    </attach_spines>
+    <animations>
+      <ani name="jetpack" ani="dwarf\jetpack_fly"/>
+    </animations>
+    <behaviours>
+      <behaviour value="UIDwarfActionBehaviour">
+        <offset value="0,-40"/>
+        <spine value="action_icon"/>
+        <ani value="idle"/>
+      </behaviour>
+      <behaviour value="BlockPositionTracker">
+        <event_message value="DwarfBlockChange"/>
+      </behaviour>
+      <behaviour value="LycanthropyBehaviour">
+        <increment_speed value="0.01"/>
+        <spawn value="werewolf"/>
+        <healt_ratio value="5"/>
+        <reverse_healt_min value="0.1"/>
+        <reverse_healt_penalty value="0.3"/>
+        <hidder_effect value="transform_hider"/>
+      </behaviour>
+    </behaviours>
+  </creature>
+
+  <creature name="worker_female" merge="partial">
+    <params>
+      <fly_speed value="180"/>
+    </params>
+    <attach_spines>
+      <attach resource="vivern_baby" slot="wyvern">
+        <spine attach="dwarf" value="vivern_baby_prof" idle="prof_idle" move="prof_fly"/>
+        <spine attach="dwarf_back" value="vivern_baby_back" idle="back_idle"/>
+        <spine attach="dwarf_main" value="vivern_baby_main" idle="main_idle"/>
+      </attach>
+    </attach_spines>
+    <animations>
+      <ani name="jetpack" ani="dwarf\jetpack_fly"/>
+    </animations>
+    <behaviours>
+      <behaviour value="UIDwarfActionBehaviour">
+        <offset value="0,-40"/>
+        <spine value="action_icon"/>
+        <ani value="idle"/>
+      </behaviour>
+      <behaviour value="BlockPositionTracker">
+        <event_message value="DwarfBlockChange"/>
+      </behaviour>
+      <behaviour value="LycanthropyBehaviour">
+        <increment_speed value="0.01"/>
+        <spawn value="werewolf_female"/>
+        <healt_ratio value="5"/>
+        <reverse_healt_min value="0.1"/>
+        <reverse_healt_penalty value="0.3"/>
+        <hidder_effect value="transform_hider"/>
+      </behaviour>
+    </behaviours>
+  </creature>
+
+  <creature name="vivern_boss">
+    <params>
+      <ico value="vivern_goblin"/>
+      <ai value="VivernBoss"/>
+      <height value="120"/>
+      <width value="150"/>
+      <healt value="60"/>
+      <walk_speed value="120"/>
+      <climbs_speed value="120"/>
+      <radius value="10"/>
+      <firebreath_radius value="8"/>
+      <attack value="0.6"/>
+      <resources value="fire_essence-2"/>
+      <shot_time value="1"/>
+      <day_not_kill/>
+      <skins value="vivern_boss"/>
+      <skin_stage_2 value="vivern_only"/>
+      <fire_breath_ammo value="vivern_firebreath"/>
+      <firebreath_bone value="fire_bone"/>
+      <firebreath_interval value="20,40"/>
+      <kill_dwarfs_procent value="20"/>
+      <goblins_ratio value="1.2"/>
+      <escort value="vivern_escort"/>
+    </params>
+    <sounds>
+      <wing value="vivern_boss_wing"/>
+      <fire value="vivern_boss_fire"/>
+      <fall value="vivern_boss_fall"/>
+    </sounds>
+    <animations>
+      <ani name="stop" ani="vivern_boss\fly_idle"/>
+      <ani name="move" ani="vivern_boss\fly_forw"/>
+      <ani name="action_up" ani="vivern_boss\attack_renged_top"/>
+      <ani name="action" ani="vivern_boss\attack_renged_forw"/>
+      <ani name="action_down" ani="vivern_boss\attack_renged_down"/>
+      <ani name="climb" ani="vivern_boss\fly_forw"/>
+      <ani name="stage_2" ani="vivern_boss\death"/>
+      <ani name="fire_breath" ani="vivern_boss\attack_firebreath"/>
+      <ani name="fire_breath_up" ani="vivern_boss\attack_firebreath_top"/>
+      <ani name="fire_breath_down" ani="vivern_boss\attack_firebreath_down"/>
+    </animations>
+  </creature>
+
+  <creature name="vivern_boss_underworld">
+    <params>
+      <ico value="vivern_goblin"/>
+      <ai value="VivernBoss"/>
+      <height value="120"/>
+      <width value="150"/>
+      <healt value="30"/>
+      <walk_speed value="120"/>
+      <climbs_speed value="120"/>
+      <radius value="10"/>
+      <firebreath_radius value="8"/>
+      <attack value="0.15"/>
+      <resources value="fire_essence-1-30,wyvern_egg-1-50"/>
+      <shot_time value="1"/>
+      <day_not_kill/>
+      <skins value="vivern_underworld"/>
+      <fire_breath_ammo value="vivern_firebreath_underworld"/>
+      <firebreath_bone value="fire_bone"/>
+      <firebreath_interval value="10,20"/>
+      <kill_dwarfs_procent value="0"/>
+    </params>
+    <sounds>
+      <wing value="vivern_boss_wing"/>
+      <fire value="vivern_boss_fire"/>
+      <fall value="vivern_boss_fall"/>
+    </sounds>
+    <animations>
+      <ani name="stop" ani="vivern_boss\fly_idle"/>
+      <ani name="move" ani="vivern_boss\fly_forw"/>
+      <ani name="action_up" ani="vivern_boss\attack_renged_top"/>
+      <ani name="action" ani="vivern_boss\attack_renged_forw"/>
+      <ani name="action_down" ani="vivern_boss\attack_renged_down"/>
+      <ani name="climb" ani="vivern_boss\fly_forw"/>
+      <ani name="stage_2" ani="vivern_boss\death"/>
+      <ani name="fire_breath" ani="vivern_boss\attack_firebreath"/>
+      <ani name="fire_breath_up" ani="vivern_boss\attack_firebreath_top"/>
+      <ani name="fire_breath_down" ani="vivern_boss\attack_firebreath_down"/>
+    </animations>
+  </creature>
+
+  <creature name="vivern_goblin">
+    <params>
+      <ai value="cave_goblin"/>
+      <height value="50"/>
+      <width value="30"/>
+      <healt value="50"/>
+      <scale value="1.1"/>
+      <walk_speed value="80"/>
+      <laden_speed value="80"/>
+      <climbs_speed value="60"/>
+      <climbs_ladder_speed value="60"/>
+      <radius value="8"/>
+      <fall_height value="10"/>
+      <attack value="0.5"/>
+      <healt_restore value="1%"/>
+      <wait_time value="120"/>
+      <attack_healt value="30%"/>
+      <camp_fight_radius value="5"/>
+      <tour_distance value="3-5"/>
+      <water_die_time value="180"/>
+      <shot_time value="1"/>
+      <resources value="wyvern_egg-2|3"/>
+      <skins value="vivern_boss"/>
+      <specialization value="invasion"/>
+    </params>
+    <sounds>
+      <ambient value="goblin_ambient"/>
+      <die value="goblin_death"/>
+    </sounds>
+    <animations>
+      <ani name="cantdo" ani="cave_goblin\main_02"/>
+      <ani name="stop" ani="cave_goblin\main_01"/>
+      <ani name="move" ani="cave_goblin\walk"/>
+      <ani name="run" ani="cave_goblin\walk_run"/>
+      <ani name="action" ani="cave_goblin\attack_spear"/>
+      <ani name="climb" ani="cave_goblin_back\climb_up"/>
+      <ani name="climb_down" ani="cave_goblin_back\climb_down"/>
+      <ani name="jump" ani="cave_goblin\jump_point"/>
+      <ani name="swim" ani="cave_goblin\sweem"/>
+      <ani name="fly" ani="cave_goblin\fly"/>
+      <ani name="landing" ani="cave_goblin\landing"/>
+
+      <ani name="dies_end" ani="cave_goblin\death"/>
+    </animations>
+    <spine_elements>
+      <random_color slots="hair_skin">
+        <colors>
+          245, 45, 0,
+          255, 240, 0,
+          147, 8,  8,
+          200, 179, 82,
+          48, 152, 0,
+          255, 138, 0,
+        </colors>
+      </random_color>
+    </spine_elements>
+  </creature>
+
+  <creature name="vivern_escort">
+    <params>
+      <ai value="cave_goblin"/>
+      <height value="50"/>
+      <width value="30"/>
+      <healt value="12"/>
+      <walk_speed value="80"/>
+      <laden_speed value="80"/>
+      <climbs_speed value="60"/>
+      <climbs_ladder_speed value="60"/>
+      <radius value="8"/>
+      <fall_height value="10"/>
+      <attack value="0.3"/>
+      <healt_restore value="1%"/>
+      <wait_time value="120"/>
+      <attack_healt value="30%"/>
+      <camp_fight_radius value="5"/>
+      <tour_distance value="3-5"/>
+      <water_die_time value="180"/>
+      <shot_time value="1"/>
+      <resources value="goblin_spear-1-4,skin-1-15,rope-1-15,coal-1-10,silver-1-3,gold-1-2,mithril-1-2"/>
+      <!-- <skins value="green_goblin_01,green_goblin_02,green_goblin_03"/> -->
+      <skins value="vivern_boss_underworld"/>
+      <specialization value="invasion"/>
+    </params>
+    <sounds>
+      <ambient value="goblin_ambient"/>
+      <die value="goblin_death"/>
+    </sounds>
+    <animations>
+      <ani name="cantdo" ani="cave_goblin\main_02"/>
+      <ani name="stop" ani="cave_goblin\main_01"/>
+      <ani name="move" ani="cave_goblin\walk"/>
+      <ani name="run" ani="cave_goblin\walk_run"/>
+      <ani name="action" ani="cave_goblin\attack_spear"/>
+      <ani name="climb" ani="cave_goblin_back\climb_up"/>
+      <ani name="climb_down" ani="cave_goblin_back\climb_down"/>
+      <ani name="jump" ani="cave_goblin\jump_point"/>
+      <ani name="swim" ani="cave_goblin\sweem"/>
+      <ani name="fly" ani="cave_goblin\fly"/>
+      <ani name="landing" ani="cave_goblin\landing"/>
+      <ani name="dies_end" ani="cave_goblin\death"/>
+    </animations>
+    <!-- <spine_elements>
+      <random_color slots="hair_skin">
+        <colors>
+          245, 45, 0,
+          255, 240, 0,
+          147, 8,  8,
+          200, 179, 82,
+          48, 152, 0,
+          255, 138, 0,
+        </colors>
+      </random_color>
+    </spine_elements> -->
+  </creature>
+
+  <creature name="skeleton_heavy">
+    <params>
+      <ico_tc value="reptilian_skeletons"/>
+      <ico value="skeleton"/>
+      <ai value="skeleton"/>
+      <height value="55"/>
+      <width value="35"/>
+      <healt value="15"/>
+      <scale value="1"/>
+      <walk_speed value="52"/>
+      <climbs_speed value="45"/>
+      <radius value="6"/>
+      <distance value="2-3"/>
+      <fall_height value="10"/>
+      <fear_radius value="8"/>
+      <attack value="0.4"/>
+      <tour_distance value="3-4"/>
+      <resources value="bone-1-50,rusty_sceleton_heavy_mace-1-3,rusty_sceleton_helmet-1-3,money-1-5"/>
+      <water_die_time value="0"/>
+      <shot_time value="1.6"/>
+
+      <armor_tesla value="5"/>
+      <!-- damage divider -->
+      <armor_arrow value="3"/>
+      <armor_fireball value="2"/>
+      <no_static value="true"/>
+    </params>
+    <sounds>
+      <hit value="hit_metall_metall"/>
+      <step value="skeleton_step"/>
+      <ambient value="skeleton_ambient"/>
+      <die value="skeleton_death"/>
+    </sounds>
+    <animations>
+      <ani name="idle" ani="skeleton_heavy\main2"/>
+      <ani name="stop" ani="skeleton_heavy\main"/>
+      <ani name="move" ani="skeleton_heavy\walk|walk2|walk3|walk4"/>
+      <ani name="action" ani="skeleton_heavy\attack"/>
+      <ani name="climb" ani="skeleton_heavy\walk"/>
+      <ani name="jump" ani="skeleton_heavy\jump"/>
+      <ani name="dies_end" ani="skeleton_heavy\death"/>
+    </animations>
+  </creature>
+
+
+  <creature name="ent">
+    <params>
+      <ico value="ent"/>
+      <ai value="Ent"/>
+      <height value="200"/>
+      <width value="120"/>
+      <scale value="1" />
+      <healt value="150"/>
+      <walk_speed value="60"/>
+      <climbs_speed value="60"/>
+      <radius value="7"/>
+      <attack value="1.0"/>
+      <resources value="living_tree-3,leaves-10,wood-20"/>
+      <shot_time value="3"/>
+      <effect value="ent_fog"/>
+      <arrow_resist value="3"/>
+      <attack_distance value="2"/>
+      <habitat_radius value="5"/>
+      <spine value="ent"/>
+      <ally value="reinforced_tick"/>
+      <ally_chance value="0.30"/>
+      <ally_count value="6-10"/>
+      <ally_population_ratio value="3"/>
+    </params>
+    <sounds>
+      <!-- <battle value="ice_witch_battlecry"/>
+      <die value="ice_witch_death"/> -->
+    </sounds>
+    <animation_states>
+      <state name="idle" ani="idle" loop="true"/>
+      <state name="move" ani="walk" loop="true"/>
+      <state name="attack" ani="attack" loop="false" next="idle"/>
+      <state name="die" ani="death" loop="false"/>
+    </animation_states>
+  </creature>
+
+  <creature name="reinforced_tick">
+    <params>
+      <ico value="reinforced_tick"/>
+      <ai value="BaseMob"/>
+      <height value="40"/>
+      <width value="40"/>
+      <healt value="5"/>
+      <walk_speed value="80"/>
+      <climbs_speed value="80"/>
+      <radius value="7"/>
+      <fall_height value="10"/>
+      <attack value="0.2"/>
+      <shot_time value="1"/>
+      <skins value="reinforced_tick"/>
+      <resources value="chitin-1-50"/>
+    </params>
+    <behaviours>
+      <behaviour value="MonsterLogicBehaviour">
+        <script value="data/components/ai/defender.lua"/>
+      </behaviour>
+      <behaviour value="PathfindingBehaviour">
+        <can_climb value="true"/>
+        <can_fly_up value="true"/>
+        <can_jump value="true"/>
+      </behaviour>
+      <behaviour value="MeleBattleBehaviour"/>
+    </behaviours>
+    <sounds>
+      <attack value="bug"/>
+      <die value="bug_death"/>
+    </sounds>
+    <animations>
+      <ani name="idle" ani="reinforced_tick\main_02"/>
+      <ani name="stop" ani="reinforced_tick\main"/>
+      <ani name="move" ani="reinforced_tick\walk"/>
+      <ani name="action" ani="reinforced_tick\attack|attack_02"/>
+      <ani name="climb" ani="reinforced_tick\fly"/>
+      <ani name="jump" ani="reinforced_tick\main"/>
+      <ani name="fall" ani="reinforced_tick\fallling"/>
+      <ani name="dies_end" ani="reinforced_tick\death"/>
+    </animations>
+  </creature>
+
+  <creature name="dwarf_tick">
+    <params>
+      <ico value="reinforced_tick"/>
+      <beastiary_name value="reinforced_tick"/>
+      <ai value="BaseMob"/>
+      <id value="creature"/>
+      <targets value="workers_enemies"/>
+      <targets_exclude value="animal"/>
+      <hostility value="harmless"/>
+      <clan value="dwarfs"/>
+      <height value="40"/>
+      <width value="40"/>
+      <healt value="3"/>
+      <walk_speed value="80"/>
+      <climbs_speed value="80"/>
+      <radius value="7"/>
+      <fall_height value="10"/>
+      <attack value="0.1"/>
+      <shot_time value="1"/>
+      <resources value="chitin-1-50"/>
+      <through_doors value="true"/>
+      <skins value="flower_tick"/>
+    </params>
+    <behaviours>
+      <behaviour value="MonsterLogicBehaviour">
+        <script value="data/components/ai/defender.lua"/>
+      </behaviour>
+      <behaviour value="PathfindingBehaviour">
+        <can_climb value="true"/>
+        <can_fly_up value="true"/>
+        <can_jump value="true"/>
+      </behaviour>
+      <behaviour value="MeleBattleBehaviour"/>
+      <behaviour value="KillMobBehaviour">
+        <life_time value="30"/>
+      </behaviour>
+    </behaviours>
+    <sounds>
+      <attack value="bug"/>
+      <die value="bug_death"/>
+    </sounds>
+    <animations>
+      <ani name="idle" ani="reinforced_tick\main_02"/>
+      <ani name="stop" ani="reinforced_tick\main"/>
+      <ani name="move" ani="reinforced_tick\walk"/>
+      <ani name="action" ani="reinforced_tick\attack|attack_02"/>
+      <ani name="climb" ani="reinforced_tick\fly"/>
+      <ani name="jump" ani="reinforced_tick\main"/>
+      <ani name="fall" ani="reinforced_tick\fallling"/>
+      <ani name="dies_end" ani="reinforced_tick\death"/>
+    </animations>
+  </creature>
+
+  <creature name="worm_dig">
+    <params>
+      <ico value="worm_01"/>
+      <ai value="DigWorm"/>
+      <height value="60"/>
+      <width value="60"/>
+      <healt value="150"/>
+      <walk_speed value="20"/>
+      <dig_speed value="2"/>
+      <attack value="0.2"/>
+      <resources value="chitin-2,mucus-1,durable_shell-2"/>
+      <shot_time value="0.9"/>
+      <base_length value="6"/>
+      <max_length value="9"/>
+      <spine value="worm_dig"/>
+      <head_skin value="head"/>
+      <body_skin value="body1,body2,body3,body4,body5"/>
+      <tail_skin value="tail1,tail2,tail3"/>
+      <enrichment_chance value="0.4"/>
+
+      <habitat_radius value="10"/>
+      <!-- <attack_interval value="1"/> -->
+      <go_away_process value="10"/>
+      <dig_effect value="worm_dig"/>
+    </params>
+    <animations>
+      <ani name="idle" ani="idle"/>
+      <ani name="move" ani="dig"/>
+    </animations>
+    <sounds>
+      <attack value="dig_worm_attack"/>
+      <allotment value="dig_worm_allotment"/>
+      <digging value="dig_worm_digging"/>
+      <die value="dig_worm_die"/>
+    </sounds>
+  </creature>
+
+  <creature name="pirate_skeleton_1">
+    <params>
+      <ico value="squeegee_skil"/>
+      <ai value="Pirate"/>
+      <height value="55"/>
+      <width value="35"/>
+      <healt value="6"/>
+      <walk_speed value="52"/>
+      <climbs_speed value="45"/>
+      <radius value="6"/>
+      <fall_height value="10"/>
+      <attack value="0.3"/>
+      <resources value="bone-1-50,brains-1-50,rusty_sceleton_saber-1-30,money-1-30"/>
+      <water_die_time value="0"/>
+      <shot_time value="1.6"/>
+      <skins value="man_1,man_2"/>
+      <night_skins value="skeleton_1,skeleton_2"/>
+      <use_jump_begin/>
+    </params>
+    <behaviours>
+      <behaviour value="PirateBehaviour" config="PirateAI.xml"/>
+      <behaviour value="MeleBattleBehaviour"/>
+    </behaviours>
+    <sounds>
+      <hit value="hit_metall_metall"/>
+      <step value="skeleton_step"/>
+      <ambient value="skeleton_ambient"/>
+      <die value="skeleton_death"/>
+    </sounds>
+    <animations>
+      <ani name="idle" ani="pirate_squeegee\main_01_man|main_02_man"/>
+      <ani name="stop" ani="pirate_squeegee\main_01_man"/>
+      <ani name="move" ani="pirate_squeegee\walk_01_man|walk_02_man|walk_03_man|walk_04_man"/>
+      <ani name="action" ani="pirate_squeegee\attack_man"/>
+      <ani name="climb" ani="pirate_squeegee\walk_01_man"/>
+      <ani name="jump" ani="pirate_squeegee\jump_man"/>
+      <ani name="dies_end" ani="pirate_squeegee\death_man"/>
+    </animations>
+    <night_animations>
+      <ani name="idle" ani="pirate_squeegee\main_01_skeleton|main_02_skeleton"/>
+      <ani name="stop" ani="pirate_squeegee\main_01_skeleton"/>
+      <ani name="move" ani="pirate_squeegee\walk_01_skeleton|walk_02_skeleton|walk_03_skeleton|walk_04_skeleton"/>
+      <ani name="action" ani="pirate_squeegee\attack_skeleton"/>
+      <ani name="climb" ani="pirate_squeegee\walk_01_skeleton"/>
+      <ani name="jump" ani="pirate_squeegee\jump_skeleton"/>
+      <ani name="dies_end" ani="pirate_squeegee\death_skeleton"/>
+    </night_animations>
+  </creature>
+
+  <creature name="pirate_skeleton_2">
+    <params>
+      <ico value="pistol_skel"/>
+      <ai value="Pirate"/>
+      <height value="55"/>
+      <width value="35"/>
+      <healt value="5"/>
+      <walk_speed value="52"/>
+      <climbs_speed value="45"/>
+      <radius value="6"/>
+      <fall_height value="10"/>
+      <attack value="0.3"/>
+      <resources value="bone-1-50,brains-1-50,money-1-30,rusty_gun-1-20"/>
+      <water_die_time value="0"/>
+      <shot_time value="1.6"/>
+      <skins value="man_1,man_2"/>
+      <night_skins value="skeleton_1,skeleton_2"/>
+      <use_jump_begin/>
+    </params>
+    <behaviours>
+      <behaviour value="PirateBehaviour" config="PirateAI.xml"/>
+      <behaviour value="DistanceBattleBehaviour" config="PirateShooter.xml"/>
+    </behaviours>
+    <sounds>
+      <!-- <hit value="hit_metall_metall"/> -->
+      <step value="skeleton_step"/>
+      <ambient value="skeleton_ambient"/>
+      <die value="skeleton_death"/>
+    </sounds>
+    <animations>
+      <ani name="idle" ani="pirate_skeleton\main_01_man|main_02_man"/>
+      <ani name="stop" ani="pirate_skeleton\main_01_man"/>
+      <ani name="move" ani="pirate_skeleton\walk_01_man|walk_02_man|walk_03_man|walk_04_man"/>
+      <ani name="action" ani="pirate_skeleton\attack_man"/>
+      <ani name="climb" ani="pirate_skeleton\walk_01_man"/>
+      <ani name="jump" ani="pirate_skeleton\jump_man"/>
+      <ani name="dies_end" ani="pirate_skeleton\death_man"/>
+    </animations>
+    <night_animations>
+      <ani name="idle" ani="pirate_skeleton\main_01_skeleton|main_02_skeleton"/>
+      <ani name="stop" ani="pirate_skeleton\main_01_skeleton"/>
+      <ani name="move" ani="pirate_skeleton\walk_01_skeleton|walk_02_skeleton|walk_03_skeleton|walk_04_skeleton"/>
+      <ani name="action" ani="pirate_skeleton\attack_skeleton"/>
+      <ani name="climb" ani="pirate_skeleton\walk_01_skeleton"/>
+      <ani name="jump" ani="pirate_skeleton\jump_skeleton"/>
+      <ani name="dies_end" ani="pirate_skeleton\death_skeleton"/>
+    </night_animations>
+  </creature>
+
+  <creature name="pirate_boss">
+    <params>
+      <ico value="captain_octopus_mini"/>
+      <ai value="PirateBoss"/>
+      <height value="80"/>
+      <width value="35"/>
+      <healt value="250"/>
+      <walk_speed value="52"/>
+      <climbs_speed value="45"/>
+      <radius value="3"/>
+      <fall_height value="10"/>
+      <attack value="1"/>
+      <resources value="bone-3|4,brains-1,cannon_barrel-1,money-20|40,gold-5|15,healt_elexir-10|20,portal_krs_dblue-1|3,quartz-2|5,pirat_hat,regen_ring1-1-50,regen_ring2-1-30,regen_ring3-1-20,undead_amulet1-1-50,undead_amulet2-1-30,undead_amulet3-1-20"/>
+      <water_die_time value="0"/>
+      <shot_time value="1.6"/>
+      <use_jump_begin/>
+      <skins value="human"/>
+      <night_skins value="skeleton"/>
+      <levelup_healt value="0.3"/>
+      <levelup_damage value="0.3"/>
+      <!-- <spine value="captain_octopus"/> -->
+    </params>
+    <behaviours>
+      <behaviour value="MonsterLogicBehaviour">
+        <script value="data/components/ai/PirateBoss.lua"/>
+      </behaviour>
+      <behaviour value="MeleBattleBehaviour"/>
+    </behaviours>
+    <sounds>
+      <hit value="hit_metall_metall"/>
+      <step value="skeleton_step"/>
+      <die value="captain_die"/>
+      <order value="captain_order"/>
+    </sounds>
+    <!-- <animation_states>
+      <state name="idle" ani="idle_01" loop="true"/>
+      <state name="move" ani="walk" loop="true"/>
+      <state name="attack" ani="attack" loop="true"/>
+      <state name="jump" ani="jump" loop="false" next="idle"/>
+      <state name="die" ani="death" loop="false"/>
+    </animation_states> -->
+    <animations>
+      <ani name="idle" ani="captain_octopus\idle_01"/>
+      <ani name="stop" ani="captain_octopus\idle_01"/>
+      <ani name="move" ani="captain_octopus\walk"/>
+      <ani name="action" ani="captain_octopus\attack"/>
+      <ani name="climb" ani="captain_octopus\walk"/>
+      <ani name="jump" ani="captain_octopus\jump"/>
+      <ani name="dance" ani="captain_octopus\idle_02"/>
+      <ani name="dance1" ani="captain_octopus\idle_03"/>
+      <ani name="dies_end" ani="captain_octopus\death"/>
+    </animations>
+  </creature>
+
+  <creature name="kraken">
+    <params>
+      <ico value="kraken_mini"/>
+      <ai value="Kraken"/>
+      <height value="400"/>
+      <width value="500"/>
+      <healt value="450"/>
+      <attack value="3.0"/>
+      <eat_damage value="0.3"/>
+      <resources value="money-150|200,chitin-20"/>
+      <shot_time value="3"/>
+      <effect value="ent_fog"/>
+      <spine value="kraken"/>
+      <attack_colldown value="6"/>
+      <eat_event value="eat_in"/>
+      <self_luminate value="main_eye_left,main_eye_dot_left,main_eye_right,main_eye_dot_right,eye_1,eye_2,eye_3,eye_4,eye_5,eye_dot1,eye_dot2,eye_dot3,eye_dot4,eye_dot5" />
+    </params>
+    <behaviours>
+      <behaviour value="KrakenTentaclesSpawner" config="Kraken/KrakenTentaclesSpawner.xml" new_gameobject="true" saveable="true">
+      </behaviour>
+    </behaviours>
+    <parts>
+      <left_eye behaviour="KrakenEye" config="Kraken/EyeLeft.xml" />
+      <right_eye behaviour="KrakenEye" config="Kraken/EyeRight.xml"/>
+      <left_tentacles behaviour="KrakenTentacles" config="Kraken/TentaclesLeft.xml"/>
+      <left_tentacles behaviour="KrakenTentacles" config="Kraken/TentaclesGroundLeft.xml"/>
+      <right_tentacles behaviour="KrakenTentacles" config="Kraken/TentaclesRight.xml"/>
+      <right_tentacles behaviour="KrakenTentacles" config="Kraken/TentaclesGroundRight.xml"/>
+    </parts>
+    <animation_states>
+      <!-- <ani name="idle" ani="body_idle"/> -->
+      <state name="idle" ani="body_idle" loop="true"/>
+      <state name="eat" ani="body_eat" loop="false" next="eat_idle"/>
+      <state name="eat_idle" ani="body_eat_idle" loop="true" next="throw_out" duration="20"/>
+      <state name="throw_out" ani="body_eat_throw_out" loop="false" next="idle"/>
+      <state name="die" ani="death" loop="false"/>
+    </animation_states>
+  </creature>
+
+  <creature name="tentacles_weak">
+    <params>
+      <ico value="tentacle_mini"/>
+      <beastiary_name value="tentacles"/>
+      <ai value="Tentacles"/>
+      <height value="60"/>
+      <width value="70"/>
+      <healt value="15"/>
+      <attack value="0.2"/>
+      <resources value="mucus-1,money-1-10,fish-1"/>
+      <shot_time value="1"/>
+      <spine value="tentacles"/>
+      <skin value="small"/>
+    </params>
+    <animation_states>
+      <state name="idle" ani="idle" loop="true"/>
+      <state name="show" ani="arrive" loop="false" next="idle"/>
+      <state name="hide" ani="hide" loop="false" />
+      <state name="attack_left" ani="attack_left" loop="false" next="idle"/>
+      <state name="attack_left_range" ani="attack_range_left" loop="false" next="idle"/>
+      <state name="attack_right" ani="attack_right" loop="false" next="idle"/>
+      <state name="attack_right_range" ani="attack_range_right" loop="false" next="idle"/>
+      <state name="die" ani="death" loop="false"/>
+    </animation_states>
+  </creature>
+
+  <creature name="tentacles_middle">
+    <params>
+      <ico value="tentacle_mini"/>
+      <beastiary_name value="tentacles"/>
+      <ai value="Tentacles"/>
+      <height value="70"/>
+      <width value="70"/>
+      <healt value="30"/>
+      <attack value="0.3"/>
+      <resources value="mucus-1,money-1-25,fish-1|2"/>
+      <shot_time value="1"/>
+      <spine value="tentacles"/>
+      <skin value="middle"/>
+    </params>
+    <animation_states>
+      <state name="idle" ani="idle" loop="true"/>
+      <state name="show" ani="arrive" loop="false" next="idle"/>
+      <state name="hide" ani="hide" loop="false" />
+      <state name="attack_left" ani="attack_left" loop="false" next="idle"/>
+      <state name="attack_left_range" ani="attack_range_left" loop="false" next="idle"/>
+      <state name="attack_right" ani="attack_right" loop="false" next="idle"/>
+      <state name="attack_right_range" ani="attack_range_right" loop="false" next="idle"/>
+      <state name="die" ani="death" loop="false"/>
+    </animation_states>
+  </creature>
+
+  <creature name="tentacles_strong">
+    <params>
+      <ico value="tentacle_mini"/>
+      <beastiary_name value="tentacles"/>
+      <ai value="Tentacles"/>
+      <height value="130"/>
+      <width value="70"/>
+      <healt value="60"/>
+      <attack value="0.5"/>
+      <resources value="mucus-1,money-1-50,fish-1|3"/>
+      <shot_time value="1"/>
+      <spine value="tentacles"/>
+      <skin value="big"/>
+    </params>
+    <animation_states>
+      <state name="idle" ani="idle" loop="true"/>
+      <state name="show" ani="arrive" loop="false" next="idle"/>
+      <state name="hide" ani="hide" loop="false" />
+      <state name="attack_left" ani="attack_left" loop="false" next="idle"/>
+      <state name="attack_left_range" ani="attack_range_left" loop="false" next="idle"/>
+      <state name="attack_right" ani="attack_right" loop="false" next="idle"/>
+      <state name="attack_right_range" ani="attack_range_right" loop="false" next="idle"/>
+      <state name="die" ani="death" loop="false"/>
+    </animation_states>
+  </creature>
+
+  <creature name="scorpio_sphinx">
+    <params>
+      <ico value="ScorpioSphinx_mini"/>
+      <ai value="ScorpioSphinx"/>
+      <height value="400"/>
+      <width value="400"/>
+      <healt value="450"/>
+      <attack value="2.0"/>
+      <resources value="money-150|200,sword_soul_reaper-1"/>
+      <shot_time value="3"/>
+      <spine value="scorpio_sphinx"/>
+      <attack_colldown value="8"/>
+      <self_luminate value="eye,stone,neckless_glow" />
+      <quake_event value="quake"/>
+      <spawn_bone value="spawner"/>
+      <spawn_event value="spawn"/>
+      <scream_event value="scream"/>
+      <spawn_effect value="sphinx_spawn"/>
+      <assaul_interval value="3|6"/>
+      <assaults_count value="10"/>
+    </params>
+    <behaviours>
+      <behaviour value="DropRecipeOnDieBehaviour">
+        <recipes>
+          <recipe name="sword_soul_reaper"/>
+        </recipes>
+      </behaviour>
+      <behaviour value="EnergyUIBehaviour" config="EnergyUI_Monster.xml"/>
+      <behaviour value="ClickListenerBehaviour"/>
+      <behaviour value="MissileCatchBehaviour"/>
+    </behaviours>
+    <allies>
+      <ally name="scarab_defender" weight="1" type="defend"/>
+      <ally name="scarab_assault" weight="3" type="assault"/>
+      <ally name="gorgoyle_mummy" weight="2" type="assault"/>
+    </allies>
+    <animation_states>
+      <state name="idle" ani="idle_01" loop="true"/>
+      <state name="sleep" ani="sleep" loop="true" />
+      <state name="sleep_idle" ani="sleep_to_idle" loop="false" next="spawn"/>
+      <state name="spawn" ani="spawn" loop="false" next="sit"/>
+      <state name="sit" ani="idle_02" loop="false" next="idle"/>
+      <state name="attack" ani="attack" loop="false" next="idle"/>
+      <state name="die" ani="death" loop="false"/>
+      <state name="spawn_allies" ani="spawn_monster" loop="false" next="idle"/>
+    </animation_states>
+  </creature>
+
+  <creature name="gorgoyle_mummy">
+    <params>
+      <ico value="gargoyle_mummy_mini"/>
+      <ai value="gargoyley"/>
+      <height value="40"/>
+      <width value="40"/>
+      <scale value="1"/>
+      <healt value="5"/>
+      <radius value="9"/>
+      <walk_speed value="110"/>
+      <attack value="0.2"/>
+      <shot_time value="1.6"/>
+      <independent value="true"/>
+      <resources value="mucus-1-70,rusty_sceleton_heavy_mace-1-25,bone-1-70,money-1-10"/>
+      <skins value="skin_01"/>
+    </params>
+    <sounds>
+      <ambient value="gargoyley_ambient"/>
+      <die value="gargoyley_death"/>
+      <step value="gargoyley_wing"/>
+    </sounds>
+    <animations>
+      <ani name="idle" ani="gorgoyle_mummy\main_01"/>
+      <ani name="idle1" ani="gorgoyle_mummy\main_02"/>
+      <ani name="stop" ani="gorgoyle_mummy\main_01"/>
+      <ani name="move" ani="gorgoyle_mummy\fly_forw"/>
+      <ani name="move1" ani="gorgoyle_mummy\fly_forw_02"/>
+      <ani name="move2" ani="gorgoyle_mummy\fly_forw_03"/>
+      <ani name="move_up" ani="gorgoyle_mummy\fly_up"/>
+      <ani name="move_down" ani="gorgoyle_mummy\main_01"/>
+      <ani name="action" ani="gorgoyle_mummy\attack_regular"/>
+      <ani name="convert" ani="gorgoyle_mummy\to_stone"/>
+      <ani name="attack_super" ani="gorgoyle_mummy\attack_super|attack_super_02"/>
+    </animations>
+  </creature>
+
+  <creature name="scarab_defender">
+    <params>
+      <ico value="scarab_mini"/>
+      <beastiary_name value="scarab"/>
+      <ai value="BaseMob"/>
+      <height value="50"/>
+      <width value="50"/>
+      <healt value="3"/>
+      <radius value="7"/>
+      <walk_speed value="100"/>
+      <climbs_speed value="75"/>
+      <fall_height value="10"/>
+      <attack value="0.2"/>
+      <shot_time value="1"/>
+      <resources value="chitin-1-40"/>
+      <!-- <water_immune value="false"/>
+      <can_swim value="false"/>
+      <can_dive value="false"/> -->
+    </params>
+    <behaviours>
+      <behaviour value="MonsterLogicBehaviour" config="AI/ScarabDefender.xml"/>
+      <behaviour value="PathfindingBehaviour" config="AI/ScarabDefender.xml"/>
+      <behaviour value="MeleBattleBehaviour"/>
+    </behaviours>
+    <sounds>
+      <ambient value="insect_ambient"/>
+    </sounds>
+    <animations>
+      <ani name="idle" ani="scarab\main_02"/>
+      <ani name="idle1" ani="scarab\main"/>
+      <ani name="stop" ani="scarab\main"/>
+      <ani name="move" ani="scarab\walk"/>
+      <ani name="action" ani="scarab\attack"/>
+      <ani name="climb" ani="scarab\fly"/>
+      <ani name="climb_down" ani="scarab\fly"/>
+      <ani name="jump" ani="scarab\jump"/>
+      <ani name="dies_end" ani="scarab\death"/>
+    </animations>
+  </creature>
+
+  <creature name="scarab_assault" from="scarab_defender">
+    <params>
+      <beastiary_name value="scarab" merge="replace"/>
+    </params>
+    <behaviours merge="replace">
+      <behaviour value="MonsterLogicBehaviour" config="AI/ScarabAssault.xml"/>
+      <behaviour value="PathfindingBehaviour" config="AI/ScarabAssault.xml"/>
+      <behaviour value="MeleBattleBehaviour"/>
+    </behaviours>
+  </creature>
+
+  <creature name="lurker">
+    <params>
+      <ico value="lurker"/>
+      <ai value="BaseMob"/>
+      <height value="50"/>
+      <width value="50"/>
+      <healt value="15"/>
+      <radius value="7"/>
+      <walk_speed value="38"/>
+      <climbs_speed value="38"/>
+      <attack value="0.5"/>
+      <shot_time value="1"/>
+      <resources value="chitin-1-30,durable_shell-1-25"/>
+      <through_doors value="true"/>
+    </params>
+    <behaviours>
+      <behaviour value="LurkerLogic" instantiate="host">
+        <excitation_stage1 value="5"/>
+        <excitation_stage2 value="10"/>
+        <score_degradation_speed value="0.05"/>
+      </behaviour>
+      <behaviour value="PathfindingBehaviour" instantiate="host">
+        <can_jump value="true"/>
+      </behaviour>
+      <behaviour value="MeleBattleBehaviour" instantiate="host"/>
+      <!-- <beaviour value="RandomStateBehaviour" config="LurkerRandomStates.xml"/> -->
+      <behaviour value="RandomStateBehaviour" instantiate="host">
+        <switches>
+          <switch state="idle" to="idle2" interval="3,5" />
+        </switches>
+      </behaviour>
+      <behaviour value="MobRenderBehaviour"/>
+      <behaviour value="MobControlAnimationSpeed"/>
+      <behaviour value="MobActionsBehaviour"/>
+      <behaviour value="SpineBehaviour">
+        <spine value="lurker"/>
+      </behaviour>
+      <behaviour value="AnimationBehaviour">
+        <states>
+          <state name="sleep" ani="sleep" loop="true" />
+          <state name="idle" ani="idle" loop="true" random_time="true"/>
+          <state name="idle2" ani="idle2" loop="false" next="idle" allow="idle"/>
+          <state name="sleep_idle" ani="sleep_to_idle" loop="false" next="idle" allow="sleep"/>
+          <state name="idle_sleep" ani="idle_to_sleep" loop="false" next="sleep" denied="sleep"/>
+          <state name="vibra" ani="sleep_vibr" loop="true" random_time="true"/>
+          <state name="attack" ani="attack" loop="false" next="idle"/>
+          <state name="walk" ani="walk" loop="true"/>
+          <state name="jump" ani="jump" loop="false" next="walk" />
+          <state name="die" ani="death" loop="false"/>
+        </states>
+      </behaviour>
+    </behaviours>
+  </creature>
+
+
+  <creature name="wolf">
+    <params>
+      <ico value="wolf"/>
+      <ai value="cave_beast"/>
+      <height value="45"/>
+      <width value="50"/>
+      <healt value="30"/>
+      <walk_speed value="60"/>
+      <climbs_speed value="10"/>
+      <radius value="8"/>
+      <fall_height value="10"/>
+      <over_high value="3"/>
+      <jump_down value="3"/>
+      <escape_distance value="2"/>
+      <attack value="0.8"/>
+      <attack_healt value="20%" />
+      <resources value="skin-1,skin-1-50,meat-1,meat-1-50,wolf_heart-1"/>
+      <water_die_time value="30"/>
+      <shot_time value="1.3"/>
+      <grazing value="4" />
+      <use_jump_begin/>
+      <skins value="skin_01"/>
+      <aggressive/>
+    </params>
+    <behaviours>
+      <behaviour value="WolfAttackBehaviour">
+        <!-- infect probably = max(k1 - k2 * infect_count^k3 ; 0) -->
+        <k1 value="20"/>
+        <k2 value="2"/>
+        <k3 value="1.2"/>
+        <infect value="0.15,0.3"/>
+      </behaviour>
+    </behaviours>
+    <sounds>
+      <ambient value="cave_beast_ambient"/>
+      <die value="cave_beast_death"/>
+      <attack value="cave_beast_attack"/>
+    </sounds>
+    <animations>
+      <ani name="cantdo" ani="wolf\main_02"/>
+      <ani name="idle" ani="wolf\main_02"/>
+      <ani name="stop" ani="wolf\main"/>
+      <ani name="move" ani="wolf\walk_01"/>
+      <ani name="action" ani="wolf\attack"/>
+      <ani name="climb" ani="wolf\walk_01"/>
+      <ani name="jump" ani="wolf\jump_point"/>
+      <ani name="big_jump" ani="wolf\jump_climb_point"/>
+      <ani name="dies_end" ani="wolf\death"/>
+    </animations>
+  </creature>
+
+  <creature name="werewolf">
+    <params>
+      <ico value="werewolf"/>
+      <ai value="Werewolf"/>
+      <height value="55"/>
+      <width value="45"/>
+      <walk_speed value="105"/>
+      <climbs_speed value="55"/>
+      <radius value="5"/>
+      <shot_time value="1"/>
+      <day_not_kill/>
+      <use_jump_begin/>
+      <healt value="30"/>
+      <attack value="1.2"/>
+      <escape_healt value="0.15"/>
+      <skins value="werewolf_male"/>
+      <through_doors value="true"/>
+    </params>
+    <behaviours>
+      <behaviour value="WeredwarfLogic">
+        <regenerate_max_healt value="0.5"/>
+        <regenerate_time value="60"/>
+      </behaviour>
+      <behaviour value="PathfindingBehaviour">
+        <can_jump value="true"/>
+        <can_climb value="true"/>
+        <can_rock_climb value="true"/>
+      </behaviour>
+      <behaviour value="MeleBattleBehaviour"/>
+      <behaviour value="TransformToParent"/>
+      <behaviour value="TransformToParentAI"/>
+      <behaviour value="UIDwarfActionBehaviour">
+        <offset value="0,-40"/>
+        <spine value="action_icon"/>
+        <ani value="idle"/>
+      </behaviour>
+    </behaviours>
+    <animations>
+      <ani name="action" ani="werewolf\attack_01|attack_02|attack_03"/>
+      <ani name="idle" ani="werewolf\idle_01|idle_02"/>
+      <ani name="stop" ani="werewolf\idle_02"/>
+      <ani name="move" ani="werewolf\walk_01"/>
+
+      <ani name="rock_climb" ani="werewolf\climb_up"/>
+      <ani name="rock_climb_end" ani="werewolf\climb_end"/>
+      <ani name="rock_climb_down" ani="werewolf\climb_down"/>
+      <ani name="rock_climb_down_end" ani="werewolf\climb_end_down"/>
+
+      <ani name="climb" ani="werewolf_back\climb_up"/>
+      <ani name="climb_down" ani="werewolf_back\climb_down"/>
+
+      <ani name="run" ani="werewolf\run_01"/>
+      <ani name="sleep" ani="werewolf\regenerate"/>
+
+      <ani name="pain" ani="werewolf\damage_01|damage_02"/>
+      <ani name="jump" ani="werewolf\jump"/>
+      <ani name="dies_end" ani="werewolf\death"/>
+    </animations>
+  </creature>
+
+  <creature name="werewolf_female" from="werewolf">
+    <params>
+      <beastiary_name value="werewolf"/>
+      <skins value="werewolf_female"/>
+    </params>
+  </creature>
+</root>

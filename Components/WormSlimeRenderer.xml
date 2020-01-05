@@ -1,0 +1,5 @@
+<root>
+    <image_path value="gfx\MonstersDLC\other\worm_slime"/>
+    <images value="slime_v1,slime_v2,slime_v3,slime_v4,slime_v5,slime_v6,slime_v7"/>
+    <resources value="mucus-1-30"/>
+</root>

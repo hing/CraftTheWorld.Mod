@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!--start new campaign-->
+  <tutorial name="start" panel="warrior" close="any" sound="12.ogg"/>
+  <tutorial name="start1" panel="scientist" start_on_close="start" close="any" sound="13.ogg"/>
+  <tutorial name="start2" panel="warrior" start_on_close="start1" close="any" sound="14.ogg"/>
+
+  <!--first task-->
+  <!--<tutorial name="first_task" panel="scientist" start="start task" close_event_layout="ui_game" close_event="diary" arrow_type="hand_left_up" arrow_dest_layout="ui_game" arrow_dest="diary"/>-->
+  <tutorial name="first_task" panel="scientist" close="any" arrow_type="hand_left_up" arrow_dest_layout="ui_game" arrow_dest="diary" sound="15.ogg"/>
+  <tutorial name="diary_open" panel="scientist" close="any" sound="16.ogg"/>
+  <tutorial name="beastiary" panel="scientist" start_on_close="diary_open" close="any" sound="17.ogg"/>
+  <tutorial name="beastiary_open" panel="scientist" close="any" sound="18.ogg"/>
+  <tutorial name="notes_open" panel="scientist" close="any" sound="19.ogg"/>
+  <tutorial name="diary_close" panel="warrior" close="any" sound="20.ogg"/>
+  <tutorial name="tree_cut" panel="warrior" start_on_task_completed="cut_tree" close="any" sound="21.ogg"/>
+
+  <!--extend-->
+  <tutorial name="tick_spawn" panel="warrior" close="any" sound="22.ogg"/>
+  <tutorial name="level_up" panel="scientist" close="any" sound="23.ogg"/>
+  <!--craft-->
+  <tutorial name="first_tool" panel="scientist" close="any" sound="24.ogg"/>
+  <tutorial name="craft_open" panel="scientist" close="any" block_dialog="ui_inventory"  sound="25.ogg"/>  <!--14-->
+  <tutorial name="craft_open1" panel="scientist" start_on_close="craft_open" close="any" block_dialog="ui_inventory" sound="26.ogg"/>
+  <tutorial name="weapon" sound="27.ogg" panel="warrior" start_on_close="craft_open1" arrow_type="hand_left_up" arrow_dest_layout="ui_inventory" arrow_dest="weapon_but" close="any"/>
+  <tutorial name="club_craft" sound="28.ogg" panel="warrior" close="any" />  <!--17-->
+  
+  <tutorial name="weapon_res" sound="29.ogg" panel="scientist" arrow_type="hand_left_up" arrow_dest_layout="ui_inventory" arrow_dest="resources_but" close="any"/>
+  <tutorial name="drag_res" sound="30.ogg" panel="scientist" need="club_craft" close="any" catch_mouse="false" arrow_dest_layout="ui_inventory"/>  <!--19-->
+  <tutorial name="now_craft" sound="31.ogg" panel="scientist" close="any" arrow_type="hand_left_up" arrow_dest_layout="ui_inventory" arrow_dest="apply_craft"/>  <!--20-->
+  
+  <!--equip--> 
+  <tutorial name="go_equip" sound="32.ogg" panel="warrior" close="any" />  <!--21-->
+  <tutorial name="equiping" sound="33.ogg" panel="warrior" close="any" need="go_equip" arrow_type="arrow_right_up" arrow_dest_layout="ui_char_info" arrow_dest="cell_6" />  <!--22-->
+  <tutorial name="the_end" sound="34.ogg" panel="warrior" close="any"/>  <!--23-->
+
+  <!--monsters wave-->
+  <tutorial name="wave" sound="35.ogg" panel="warrior" close="any" arrow_type="arrow_right_up" arrow_dest_layout="ui_game" arrow_dest="wave_bar"/>
+  <tutorial name="wave_comming" sound="36.ogg" panel="warrior" close="any" arrow_type="arrow_right_up" arrow_dest_layout="ui_game" arrow_dest="wave_bar"/>
+    
+  <tutorial name="first_house" sound="37.ogg" panel="scientist" close="any" />
+
+  <tutorial name="game_speed" panel="scientist" close="any" start_on_close="the_end" arrow_type="hand_right_up" arrow_dest_layout="ui_game" arrow_dest="change_sp" sound="1.ogg"/>
+  <!--23-->
+
+  <!--multiplayer-->
+ <!--28--> <tutorial name="expedition_begin_1" panel="scientist" close="any" important="true"/>
+ <!--29--> <tutorial name="expedition_begin_2" panel="scientist" close="any" start_on_close="expedition_begin_1" important="true"/>
+ <!--30--> <tutorial name="activate_biome_portal" panel="warrior" close="any" arrow_type="hand_left_down" arrow_dest_layout="ui_game" arrow_dest="but1" important="true"/>
+ <!--31--> <tutorial name="pvp_or_coop" panel="scientist" close="any" arrow_type="arrow_left_up" arrow_dest_layout="ui_multiplayer" arrow_dest="game_mode" important="true"/>
+ <!--32--> <tutorial name="start_multiplayer" panel="warrior" close="any" start_on_close="pvp_or_coop" arrow_type="hand_left_up" arrow_dest_layout="ui_multiplayer" arrow_dest="ok" important="true" sound="10.ogg"/>
+ <!--33--> <tutorial name="how_to_play_multiplayer" panel="scientist" close="any" arrow_type="hand_left_up" arrow_dest_layout="ui_game" arrow_dest="diary" important="true"/>
+
+  <!--tmp-->
+  <tutorial name="begin_tmp" group="tmp" panel="warrior" close="any" arrow_type="hand_left_down" arrow_dest_layout="ui_game" arrow_dest="but1" important="true"/>
+  <tutorial name="admin_tmp" group="tmp" panel="scientist" close="any" start_on_close="begin_tmp" arrow_type="hand_left_up" arrow_dest_layout="ui_game" arrow_dest="menu_tmp" important="true"/>
+  <tutorial name="exchange_tmp"  group="tmp" panel="warrior" close="any" arrow_type="arrow_right_down" arrow_dest_layout="ui_inventory" arrow_dest="export" important="true"/>
+
+  <!--ftp-->
+  <tutorial name="first_long_craft" group="ftp" panel="scientist" close="any" important="true"/>
+  <tutorial name="ftp_shop" group="ftp_shop" panel="goblin" close="any" important="true"/>
+ 
+  <tutorial name="first_temple" group="temple" panel="scientist" close="any" important="true"/>
+  <tutorial name="first_temple1" group="temple" panel="scientist" close="any" important="true" start_on_close="first_temple" />
+  <tutorial name="first_temple_activate_1" group="temple" panel="scientist" close="any" important="true"/>
+  <tutorial name="first_temple_activate_2" group="temple" panel="scientist" close="any" important="true" start_on_close="first_temple_activate_1"/>
+  <tutorial name="first_temple_activate_3" group="temple" panel="scientist" close="any" important="true" start_on_close="first_temple_activate_2"/>
+
+  <tutorial name="temple_activate_1" group="temple" panel="scientist" close="any" important="true" repeatable="true"/>
+  <tutorial name="temple_activate_2" group="temple" panel="scientist" close="any" important="true" repeatable="true"/>
+  <tutorial name="temple_activate_3" group="temple" panel="scientist" close="any" important="true" repeatable="true"/>
+  <tutorial name="temple_activate_4" group="temple" panel="scientist" close="any" important="true" repeatable="true"/>
+
+  <tutorial name="first_goblin_warning" group="goblins" panel="goblin_boss_left" close="any" important="true" repeatable="true" no_skip="true"/>
+  <tutorial name="second_goblin_warning" group="goblins" panel="goblin_boss_left" close="any" important="true" repeatable="true" no_skip="true"/>
+  <tutorial name="third_goblin_warning" group="goblins" panel="goblin_boss_left" close="any" important="true" repeatable="true" no_skip="true"/>
+  <tutorial name="next_goblin_warning" group="goblins" panel="goblin_boss_left" close="any" important="true" repeatable="true" no_skip="true"/>
+
+  <tutorial name="sphinx" group="sphinx" panel="sphinx" close="any" important="true" repeatable="false" no_skip="true"/>
+  <tutorial name="pirate" group="pirate" panel="pirate" close="any" important="true" repeatable="true" no_skip="true"/>
+
+</root>

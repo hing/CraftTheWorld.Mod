@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <beast creature="zombie" hostility="danger" file="gfx\level_tiles\monsters\zombie" aliases="zombie_fire" undead="true"/>
+  <beast creature="zombie_boss" hostility="danger" file="gfx\level_tiles\monsters\big_zombie" undead="true" />
+  <beast creature="mummy" hostility="danger" file="gfx\level_tiles\monsters\mummy" undead="true" />
+  <beast creature="mummy_boss" hostility="danger" file="gfx\level_tiles\monsters\big_mummy" undead="true" />
+  <beast creature="yeti" hostility="danger" file="gfx\level_tiles\monsters\yetti" />
+  <beast creature="yeti_boss" hostility="danger" file="gfx\level_tiles\monsters\big_yetti" />
+  <beast creature="skeleton" hostility="danger" file="gfx\level_tiles\monsters\sceleton" undead="true" />
+  <beast creature="skeleton_shielder" hostility="danger" file="gfx\level_tiles\monsters\sceleton_shield" undead="true" />
+  <beast creature="skeleton_builder" hostility="danger" desc="Coming soon" file="gfx\level_tiles\monsters\sceleton_builder" undead="true" />
+  <beast creature="skeleton_boss" hostility="verydanger" file="gfx\level_tiles\monsters\big_sceleton" undead="true" />
+  <beast creature="mite" hostility="nodanger" file="gfx\level_tiles\monsters\tick" />
+  <beast creature="slug" hostility="harmless" file="gfx\level_tiles\monsters\snail" />
+  <beast creature="ghost" hostility="harmless" file="gfx\level_tiles\monsters\ghost" undead="true" />
+  <beast creature="chicken" hostility="harmless" file="gfx\level_tiles\monsters\chicken" />
+  <beast creature="chick" hostility="harmless" file="gfx\level_tiles\monsters\blue_bird" />
+  <beast creature="lizard" hostility="harmless" file="gfx\level_tiles\monsters\ice_lizard" />
+  <beast creature="beholder" hostility="verydanger" file="gfx\level_tiles\monsters\beholder" />
+  <beast creature="goblin" hostility="danger" file="gfx\level_tiles\monsters\goblin" />
+  <beast creature="frostling" hostility="danger" file="gfx\level_tiles\monsters\frostling" />
+  <beast creature="frostling_knight" hostility="danger" file="gfx\level_tiles\monsters\frostling_knight" />
+  <beast creature="goblin_shaman" hostility="harmless" file="gfx\level_tiles\monsters\shaman" />
+  <beast creature="imp" hostility="harmless" file="gfx\level_tiles\monsters\imp" />
+  <beast creature="sheep" hostility="harmless" file="gfx\level_tiles\monsters\lamb" />
+  <beast creature="lama" hostility="harmless" file="gfx\level_tiles\monsters\lama" />
+  <beast creature="beetle" hostility="danger" file="gfx\level_tiles\monsters\red_tail_bug" />
+  <beast creature="yak" hostility="nodanger" file="gfx\level_tiles\monsters\boar" />
+  <beast creature="larva" hostility="nodanger" file="gfx\level_tiles\monsters\larva" />
+  <beast creature="buffalo" hostility="nodanger" file="gfx\level_tiles\monsters\buffalo" />
+  <beast creature="ice_beast" hostility="nodanger" file="gfx\level_tiles\monsters\snow_beast" />
+  <beast creature="worm" hostility="danger" file="gfx\level_tiles\monsters\worm" />
+  <beast creature="little_dragon" hostility="danger"  file="gfx\level_tiles\monsters\little_dragon" />
+  <beast creature="black_fluffy" hostility="nodanger" file="gfx\level_tiles\monsters\black_fluffy" />
+  <beast creature="spider" hostility="nodanger" file="gfx\level_tiles\monsters\spider" />
+  <beast creature="scorpion" hostility="danger" file="gfx\level_tiles\monsters\scorpion" />
+  <beast creature="vampire_guard" hostility="verydanger" file="gfx\level_tiles\monsters\guard" />
+  <beast creature="gargoyley" hostility="danger" file="gfx\level_tiles\monsters\gorgoyle" aliases="gargoyley_fire"/>
+  <beast creature="slug2" hostility="harmless" file="gfx\level_tiles\monsters\slug" />
+  <beast creature="octopus" hostility="nodanger" file="gfx\level_tiles\monsters\octopus" />
+  <beast creature="caterpillar" hostility="harmless" file="gfx\level_tiles\monsters\caterpillar" />
+  <beast creature="cave_beast" hostility="nodanger" file="gfx\level_tiles\monsters\cave_beast" />
+  <beast creature="little_dragon_black" hostility="danger"  file="gfx\level_tiles\monsters\little_dragon" />
+  <beast creature="cave_goblin" hostility="danger" file="gfx\level_tiles\monsters\cave_goblin" />
+  <beast creature="cave_goblin_warrior" hostility="danger" file="gfx\level_tiles\monsters\goblin_warrior" />
+  <beast creature="altar_shaman" hostility="verydanger" file="gfx\level_tiles\monsters\gobl_sham" />
+  <beast creature="orc" hostility="danger" file="gfx\level_tiles\monsters\orc" />
+  <beast creature="orc_skeleton" hostility="verydanger" file="gfx\level_tiles\monsters\orc_skeleton" undead="true" />
+  <beast creature="takmak" hostility="nodanger" file="gfx\level_tiles\monsters\takmak" />
+  <beast creature="elf_witch" hostility="danger" file="gfx\level_tiles\monsters\elf_witch" />
+  <beast creature="yeti_biome" hostility="nodanger" file="gfx\level_tiles\monsters\smart_yetti" />
+  <beast creature="elf_archer" hostility="danger" file="gfx\level_tiles\monsters\elf_archer" />
+  <beast creature="elf_spearman" hostility="danger" file="gfx\level_tiles\monsters\elf_spearman" />
+  <beast creature="zombie_boost" hostility="verydanger" file="gfx\level_tiles\monsters\zombie_dwarf"  undead="true"/>
+  <beast creature="dead_lord" hostility="verydanger" file="gfx\level_tiles\monsters\dead_lord"  undead="true"/>
+  <beast creature="zombie_solder" hostility="danger" file="gfx\level_tiles\monsters\zombie_solder"  undead="true"/>
+  <beast creature="beetle_queen" hostility="verydanger" file="gfx\level_tiles\monsters\mother" />
+  <beast creature="beetle_boss_stage2" hostility="verydanger" file="gfx\level_tiles\monsters\greate_mother" />
+  <beast creature="beetle_worker" hostility="nodanger" file="gfx\level_tiles\monsters\worker" />
+  <beast creature="beetle_warrior" hostility="danger" file="gfx\level_tiles\monsters\warrior" />
+  <beast creature="rat" hostility="nodanger" file="gfx\level_tiles\monsters\rat" />
+  <beast creature="basilisk_pet" hostility="harmless" file="gfx\level_tiles\monsters\frogolisk" />
+  <beast creature="catowl_pet" hostility="harmless" file="gfx\level_tiles\monsters\catowl" />
+
+  <beast creature="banshee" hostility="danger" file="gfx\level_tiles\monsters\banshee"  undead="true"/>
+  <beast creature="madness_rider" hostility="danger" file="gfx\level_tiles\monsters\madness_rider" undead="true" />
+  <beast creature="skeleton_archer" hostility="danger" file="gfx\level_tiles\monsters\skeleton_archer" undead="true" />
+  <beast creature="zombie_armorbreaker" hostility="verydanger" file="gfx\level_tiles\monsters\zombie_armorbreaker"  undead="true"/>
+  <beast creature="zombie_crookshank" hostility="verydanger" file="gfx\level_tiles\monsters\zombie_crookshank"  undead="true"/>
+  <beast creature="thrower_giant" hostility="verydanger" file="gfx\level_tiles\monsters\thrower_giant"  undead="true"/>
+  <beast creature="beholder_terrible" hostility="verydanger" file="gfx\level_tiles\monsters\beholder_terrible" />
+  <beast creature="golem" hostility="verydanger" file="gfx\level_tiles\monsters\golem" />
+  <beast creature="gargoyley_ancient" hostility="verydanger" file="gfx\level_tiles\monsters\gorgoyle_boss" />
+  <beast creature="fish_beast" hostility="danger" file="gfx\level_tiles\monsters\beat_of_the_deep" />
+  <beast creature="toad" hostility="harmless" file="gfx\level_tiles\monsters\toad" />
+  <beast creature="temple_witch" hostility="verydanger" file="gfx\level_tiles\monsters\wind_witch" />
+  <beast creature="temple_golem" hostility="verydanger" file="gfx\level_tiles\monsters\earth_golem" />
+  <beast creature="duck" hostility="harmless" file="gfx\level_tiles\monsters\duck" />
+  <beast creature="water_monk" hostility="danger" file="gfx\level_tiles\monsters\water_monk" />
+  <beast creature="earth_monk" hostility="danger" file="gfx\level_tiles\monsters\earth_monk" />
+  <beast creature="fire_monk" hostility="danger" file="gfx\level_tiles\monsters\fire_monk" />
+  <beast creature="air_monk" hostility="danger" file="gfx\level_tiles\monsters\air_monk" />
+
+  <beast creature="vivern_boss" hostility="danger" file="gfx\level_tiles\monsters\vivern_boss" />
+  <beast creature="ent" hostility="danger" file="gfx\level_tiles\monsters\ent" />
+  <beast creature="reinforced_tick" hostility="danger" file="gfx\level_tiles\monsters\reinforced_tick" />
+  <beast creature="worm_dig" hostility="danger" file="gfx\level_tiles\monsters\worm_dig" />
+  <beast creature="pirate_skeleton_1" hostility="danger" file="gfx\level_tiles\monsters\squeegee_skil" />
+  <beast creature="pirate_skeleton_2" hostility="danger" file="gfx\level_tiles\monsters\pistol_skel" />
+  <beast creature="pirate_boss" hostility="danger" file="gfx\level_tiles\monsters\captain_octopus" />
+  <beast creature="kraken" hostility="danger" file="gfx\level_tiles\monsters\kraken" />
+  <beast creature="tentacles" hostility="danger" file="gfx\level_tiles\monsters\tentacle" />
+  <beast creature="scorpio_sphinx" hostility="danger" file="gfx\level_tiles\monsters\ScorpioSphinx" />
+  <beast creature="gorgoyle_mummy" hostility="danger" file="gfx\level_tiles\monsters\gargoyle_mummy" />
+  <beast creature="scarab" hostility="danger" file="gfx\level_tiles\monsters\scarab" />
+  <beast creature="lurker" hostility="danger" file="gfx\level_tiles\monsters\lurker" />
+  <beast creature="wolf" hostility="danger" file="gfx\level_tiles\monsters\wolf" />
+  <beast creature="werewolf" hostility="danger" file="gfx\level_tiles\monsters\werewolf" />
+  <beast creature="ant_queen" hostility="danger" file="gfx\level_tiles\monsters\ant_queen" />
+  <beast creature="pirate_ship" hostility="danger" file="gfx\level_tiles\monsters\pirate_ship" />
+
+  <beast creature="troll" hostility="verydanger" file="gfx\level_tiles\monsters\troll" />
+  <beast creature="garklan" hostility="harmless" file="gfx\level_tiles\monsters\garklan" />
+  <beast creature="kozel" hostility="harmless" file="gfx\level_tiles\monsters\kozel" />
+  <beast creature="orc_mountain_warrior" hostility="danger" file="gfx\level_tiles\monsters\orc_mountain_warrior" />
+  <beast creature="orc_mountain_archer" hostility="danger" file="gfx\level_tiles\monsters\orc_mountain_archer" />
+
+
+</root>

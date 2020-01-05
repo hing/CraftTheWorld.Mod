@@ -1,0 +1,643 @@
+<?xml version="1.0" encoding="windows-1251" standalone="yes" ?>
+<root>
+    <block name="block_land_01" atlas="gfx/HighlandDLC/blocks/block_mountain_land_01.png" type="solid block" properties="editor=DLC_highland,can_climb,stony,can_replace" atlas_element="block" resource="dirt-1|2" build="25" extract="100" stayon="true" crack="true" draw_layer="front_a3" pak="Highland DLC" />
+    <block name="block_stone_01" atlas="gfx/HighlandDLC/blocks/block_mountain_stone_01.png" type="solid block" properties="editor=DLC_highland,can_climb,stony,can_replace" atlas_element="block" resource="stone-2|3" build="100" extract="400" crack="true" stayon="true" draw_layer="front_a9" pak="Highland DLC" />
+    <block name="column_luxury" atlas="gfx/HighlandDLC/blocks/column_luxury.png" type="column" properties="can_climb,true,editor=DLC_highland,stony" atlas_element="column_base" resource="column_luxury" build="10" extract="100" stayon="true" pak="Highland DLC">
+        <collumn>
+            <block name="top" atlas_element="column_top" properties="" build="10" extract="100" through="true" crack="false" ontop="true" stayon="true" />
+            <block name="trunk" atlas_element="column_tile" properties="" build="10" extract="100" through="true" crack="false" ontop="true" stayon="true" />
+            <block name="bottom" atlas_element="column_bottom" properties="" build="10" extract="100" through="true" crack="false" ontop="true" stayon="true" />
+        </collumn>
+    </block>
+    <block name="column_ordinary" atlas="gfx/HighlandDLC/blocks/column_ordinary.png" type="column" properties="editor=DLC_highland,true,stony" atlas_element="column_base" resource="column_ordinary" build="10" extract="50" stayon="true" pak="Highland DLC">
+        <collumn>
+            <block name="top" atlas_element="column_top" properties="" build="10" extract="50" through="true" crack="false" ontop="true" stayon="true" />
+            <block name="trunk" atlas_element="column_tile" properties="" build="10" extract="50" through="true" crack="false" ontop="true" stayon="true" />
+            <block name="bottom" atlas_element="column_bottom" properties="" build="10" extract="50" through="true" crack="false" ontop="true" stayon="true" />
+        </collumn>
+    </block>
+    <block name="interroom_door" type="simple" properties="editor=DLC_highland,user_mirror_switch,switch,door=door_right,replace_with=interroom_door_broken,wooden,draw_align=right,two_layers" resource="plank-1|2,nail-1|2,wood-1|2,padlock-1-50" draw_layer="normal" extract="200" crack="true" ontop="true" through="true" build="20" pak="Highland DLC">
+        <file path="gfx/HighlandDLC/blocks/interroom_door_opened.png" />
+        <file path="gfx/HighlandDLC/blocks/interroom_door_closed.png" />
+        <layers count="1">
+            <layer file="gfx/HighlandDLC/blocks/interroom_door_forw.png" properties="draw_align=right" />
+        </layers>
+    </block>
+    <block name="middle_wall_01" atlas="gfx/HighlandDLC/blocks/middle_wall_01.png" type="wall" properties="editor=DLC_highland,can_replace,can_climb,bricken" atlas_element="block" resource="middle_wall_01" draw_layer="front_a10" build="5" extract="200" crack="true" stayon="true" pak="Highland DLC">
+        <wall>
+            <block name="top" atlas_element="corner_left" properties="collide=up|left,offset=25%,narrow" build="5" extract="200" through="true" crack="true" />
+            <block name="trunk" atlas_element="ceiling" properties="collide=up,draw_align=up,offset=25%,narrow,scale_xaxis" build="5" extract="200" through="true" crack="true" />
+            <block name="bottom" atlas_element="corner_right" properties="collide=right|up,offset=25%,narrow" build="5" extract="200" through="true" crack="true" />
+            <block name="middle_left" atlas_element="wall_left" properties="collide=left,draw_align=left,offset=25%,narrow,scale_yaxis" build="5" extract="200" through="true" crack="true" />
+            <block name="middle_right" atlas_element="wall_right" properties="collide=right,draw_align=right,offset=25%,narrow,scale_yaxis" build="5" extract="200" through="true" crack="true" />
+        </wall>
+    </block>
+    <block name="staircase_with_railinge" atlas="gfx/HighlandDLC/blocks/staircase_with_railinge.png" type="column" properties="editor=DLC_highland,can_climb,ladder=x2.5,true,metallic,narrow,no_chain_crash" atlas_element="column_base" resource="staircase_with_railinge" build="5" extract="10" crack="true" stayon="true" through="true" pak="Highland DLC">
+        <collumn>
+            <block name="top" atlas_element="column_top" properties="ladder=x2.5,narrow" build="5" extract="10" through="true" crack="false" ontop="true" stayon="true" />
+            <block name="trunk" atlas_element="column_tile" properties="ladder=x2.5,narrow" build="5" extract="10" through="true" crack="false" ontop="true" stayon="true" />
+            <block name="bottom" atlas_element="column_bottom" properties="ladder=x2.5,narrow" build="5" extract="10" through="true" crack="false" ontop="true" stayon="true" />
+        </collumn>
+    </block>
+    <block name="strong_hatch" type="simple" properties="editor=DLC_highland,switch,door=hatch,metallic,draw_align=down,two_layers" resource="strong_hatch" draw_layer="normal" build="20" extract="200" through="true" crack="true" ontop="true" pak="Highland DLC">
+        <file path="gfx/HighlandDLC/blocks/strong_hatch.png" />
+        <file path="gfx/HighlandDLC/blocks/strong_hatch_o.png" />
+        <layers count="1">
+            <layer file="gfx/HighlandDLC/blocks/strong_hatch_layer.png" properties="draw_align=down,draw_offset_x=0.0,draw_offset_y=48.0" />
+        </layers>
+    </block>
+    <block name="bookcase" type="simple" properties="editor=DLC_highland,can_fall,user_mirror_switch,wooden,draw_align=down,scale=3.00" file="gfx/HighlandDLC/blocks/bookcase.png" resource="bookcase" draw_layer="normal" build="5" crack="true" through="true" ontop="true" extract="100" pak="Highland DLC">
+        <params>
+            <param name="sound_on_break" value="bookcase fall" />
+        </params>
+    </block>
+    <block name="bookshelf_lm" type="simple" properties="editor=DLC_highland,user_mirror_switch,no_break_fall,wooden" file="gfx/HighlandDLC/blocks/bookshelf_lm.png" resource="bookshelf_lm" draw_layer="normal" build="5" extract="10" through="true" crack="true" ontop="true" pak="Highland DLC">
+        <params>
+            <param name="sound_on_break" value="bookcase fall" />
+        </params>
+    </block>
+    <block name="chest_ordinary" type="simple" properties="editor=DLC_highland,can_fall,user_mirror_switch,narrow,metallic,draw_align=down,scale=1.07" file="gfx/HighlandDLC/blocks/chest_ordinary.png" resource="chest_ordinary" draw_layer="normal" build="3" extract="5" through="true" crack="true" pak="Highland DLC" />
+    <block name="lamp_wall" type="simple" properties="editor=DLC_highland,light=3,metallic,narrow,scale=0.60" file="gfx/HighlandDLC/blocks/lamp_wall.png" resource="lamp_wall" draw_layer="normal" build="5" extract="5" crack="true" through="true" ontop="true" effect="fire.xml" effect_scale="0.38" effect_offset="0.00,-0.30" pak="Highland DLC" />
+    <block name="ordinary_chair" type="simple" properties="editor=DLC_highland,can_fall,user_mirror_switch,narrow,user_cycle_switch,wooden,draw_align=down" file="gfx/HighlandDLC/blocks/ordinary_chair.png" resource="ordinary_chair" draw_layer="normal" build="3" extract="5" crack="true" through="true" ontop="true" pak="Highland DLC" />
+    <block name="pennant" type="simple" properties="editor=DLC_highland,user_cycle_switch,no_break_fall,narrow,wooden,draw_align=up,scale=2.00" resource="pennant" draw_layer="normal" build="5" extract="5" crack="true" through="true" ontop="true" pak="Highland DLC">
+        <file path="gfx/HighlandDLC/blocks/pennant_01.png" />
+        <file path="gfx/HighlandDLC/blocks/pennant_02.png" />
+        <file path="gfx/HighlandDLC/blocks/pennant_03.png" />
+    </block>
+    <block name="picture_lm" type="simple" properties="editor=DLC_highland,user_cycle_switch,no_break_fall,narrow,wooden" resource="picture_lm" draw_layer="normal" build="3" extract="3" through="true" crack="true" ontop="true" pak="Highland DLC">
+        <file path="gfx/HighlandDLC/blocks/picture_lm_01.png" />
+        <file path="gfx/HighlandDLC/blocks/picture_lm_02.png" />
+        <file path="gfx/HighlandDLC/blocks/picture_lm_03.png" />
+        <file path="gfx/HighlandDLC/blocks/picture_lm_04.png" />
+    </block>
+    <block name="stained_window" type="simple" properties="editor=DLC_highland,user_cycle_switch,window,no_break_fall" resource="stained_window" draw_layer="normal" build="5" extract="5" crack="true" through="true" ontop="true" pak="Highland DLC">
+        <file path="gfx/HighlandDLC/blocks/stained_window_01.png" />
+        <file path="gfx/HighlandDLC/blocks/stained_window_02.png" />
+        <file path="gfx/HighlandDLC/blocks/stained_window_03.png" />
+        <file path="gfx/HighlandDLC/blocks/stained_window_04.png" />
+        <file path="gfx/HighlandDLC/blocks/stained_window_05.png" />
+        <params>
+            <param name="sound_on_hit" value="breaking dishes" />
+            <param name="sound_on_break" value="breaking dishes" />
+        </params>
+    </block>
+    <block name="flowers_in_a_pot" type="simple" properties="editor=DLC_highland,can_fall,narrow,user_mirror_switch,no_break_fall" file="gfx/HighlandDLC/blocks/flowers_in_a_pot.png" resource="clay_vase,dirt-2|3,leaves-20|40,root-10|20" crack="true" through="true" draw_layer="normal" build="5" extract="5" pak="Highland DLC">
+        <params>
+            <param name="sound_on_hit" value="breaking ceramics" />
+            <param name="sound_on_break" value="breaking ceramics" />
+        </params>
+    </block>
+    <block name="bookcase_broken" type="simple" properties="editor=DLC_highland,can_fall,user_mirror_switch,wooden,draw_align=down,scale=3.00" file="gfx/HighlandDLC/blocks/bookcase_broken.png" resource="bookcase_broken" crack="true" through="true" draw_layer="normal" build="5" ontop="true" extract="10" pak="Highland DLC" />
+    <block name="pennant_broken" type="simple" properties="user_cycle_switch,editor=DLC_highland,narrow,draw_align=up,scale=2.00" crack="true" through="true" resource="pennant_broken" draw_layer="normal" build="5" extract="10" pak="Highland DLC">
+        <file path="gfx/HighlandDLC/blocks/pennant_01_broken.png" />
+        <file path="gfx/HighlandDLC/blocks/pennant_02_broken.png" />
+        <file path="gfx/HighlandDLC/blocks/pennant_03_broken.png" />
+        <params>
+            <param name="sound_on_hit" value="breaking a bag" />
+            <param name="sound_on_break" value="breaking a bag" />
+        </params>
+    </block>
+    <block name="bookshelf_lm_broken" type="simple" properties="user_mirror_switch,editor=DLC_highland,wooden" resource="bookshelf_lm_broken" through="true" crack="true" file="gfx/HighlandDLC/blocks/bookshelf_lm_broken.png" draw_layer="normal" build="5" extract="10" pak="Highland DLC" />
+    <block name="chest_ordinary_broken" type="simple" properties="can_fall,user_mirror_switch,editor=DLC_highland,narrow,metallic,draw_align=down,scale=1.13" file="gfx/HighlandDLC/blocks/chest_ordinary_broken.png" resource="chest_ordinary_broken" through="true" crack="true" draw_layer="normal" build="3" extract="10" pak="Highland DLC" />
+    <block name="chest_ordinary_closed" type="simple" properties="can_fall,user_mirror_switch,editor=DLC_highland,replace_with=chest_ordinary_broken,no_break_fall,narrow,metallic,draw_align=down,scale=1.07" file="gfx/HighlandDLC/blocks/chest_ordinary_closed.png" resource="money-5|15,portal_krs_blue-1-30,portal_krs_dblue-1-30,portal_krs_green-1-30,portal_krs_violet-1-30,portal_krs_red-1-30,healt_elexir-2|6,mana_elexir-2|4" through="true" crack="true" draw_layer="normal" build="3" extract="100" pak="Highland DLC" />
+    <block name="ordinary_chair_broken" type="simple" properties="can_fall,user_mirror_switch,editor=DLC_highland,narrow,user_cycle_switch,wooden" through="true" crack="true" file="gfx/HighlandDLC/blocks/ordinary_chair_broken.png" resource="ordinary_chair_broken" draw_layer="normal" build="3" extract="10" pak="Highland DLC" />
+    <block name="comfortable_bed_broken" type="simple" properties="can_fall,user_mirror_switch,editor=DLC_highland,wide,stony,draw_align=down,scale=1.40" crack="true" through="true" file="gfx/HighlandDLC/blocks/comfortable_bed_broken.png" resource="comfortable_bed_broken" draw_layer="normal" build="5" extract="10" pak="Highland DLC" />
+    <block name="comfortable_bed" type="simple" properties="can_fall,user_mirror_switch,editor=DLC_highland,bed,wide,no_break_fall,stony,draw_align=down,scale=1.40" through="true" crack="true" file="gfx/HighlandDLC/blocks/comfortable_bed.png" resource="comfortable_bed" draw_layer="normal" build="5" extract="5" pak="Highland DLC" />
+    <block name="middle_wall_broken" atlas="gfx/HighlandDLC/blocks/middle_wall_01_broken.png" type="wall" properties="can_replace,editor=DLC_highland,can_climb,bricken" atlas_element="block" resource="middle_wall_broken" crack="true" draw_layer="front_a10" build="5" stayon="true" extract="100" pak="Highland DLC">
+        <wall>
+            <block name="top" atlas_element="corner_left" properties="collide=up|left,offset=25%,narrow" build="5" extract="100" through="true" crack="true" />
+            <block name="trunk" atlas_element="ceiling" properties="collide=up,draw_align=up,offset=25%,narrow,scale_xaxis" build="5" extract="100" through="true" crack="true" />
+            <block name="bottom" atlas_element="corner_right" properties="collide=right|up,offset=25%,narrow" build="5" extract="100" through="true" crack="true" />
+            <block name="middle_left" atlas_element="wall_left" properties="collide=left,draw_align=left,offset=25%,narrow,scale_yaxis" build="5" extract="100" through="true" crack="true" />
+            <block name="middle_right" atlas_element="wall_right" properties="collide=right,draw_align=right,offset=25%,narrow,scale_yaxis" build="5" extract="100" through="true" crack="true" />
+        </wall>
+    </block>
+    <block name="poor_wall_broken_02" atlas="gfx/HighlandDLC/blocks/poor_wall_broken_02.png" type="wall" properties="editor=DLC_highland,can_replace,can_climb,wooden" atlas_element="block" resource="stone-2|3,wood-1|2" crack="true" draw_layer="front_a1" build="5" stayon="true" extract="50" pak="Highland DLC">
+        <wall>
+            <block name="top" atlas_element="corner_left" properties="collide=up|left,offset=25%,narrow" build="5" extract="50" through="true" crack="true" />
+            <block name="trunk" atlas_element="ceiling" properties="collide=up,draw_align=up,offset=25%,narrow,scale_xaxis" build="5" extract="50" through="true" crack="true" />
+            <block name="bottom" atlas_element="corner_right" properties="collide=right|up,offset=25%,narrow" build="5" extract="50" through="true" crack="true" />
+            <block name="middle_left" atlas_element="wall_left" properties="collide=left,draw_align=left,offset=25%,narrow,scale_yaxis" build="5" extract="50" through="true" crack="true" />
+            <block name="middle_right" atlas_element="wall_right" properties="collide=right,draw_align=right,offset=25%,narrow,scale_yaxis" build="5" extract="50" through="true" crack="true" />
+        </wall>
+    </block>
+    <block name="poor_wall_broken_01" atlas="gfx/HighlandDLC/blocks/poor_wall_broken_01.png" type="wall" properties="editor=DLC_highland,can_replace,can_climb,wooden" atlas_element="block" resource="poor_wall_broken_01" crack="true" draw_layer="front_a1" build="5" stayon="true" extract="50" pak="Highland DLC">
+        <wall>
+            <block name="top" atlas_element="corner_left" properties="collide=up|left,offset=25%,narrow" build="5" extract="50" through="true" crack="true" />
+            <block name="trunk" atlas_element="ceiling" properties="collide=up,draw_align=up,offset=25%,narrow,scale_xaxis" build="5" extract="50" through="true" crack="true" />
+            <block name="bottom" atlas_element="corner_right" properties="collide=right|up,offset=25%,narrow" build="5" extract="50" through="true" crack="true" />
+            <block name="middle_left" atlas_element="wall_left" properties="collide=left,draw_align=left,offset=25%,narrow,scale_yaxis" build="5" extract="50" through="true" crack="true" />
+            <block name="middle_right" atlas_element="wall_right" properties="collide=right,draw_align=right,offset=25%,narrow,scale_yaxis" build="5" extract="50" through="true" crack="true" />
+        </wall>
+    </block>
+    <block name="poor_wall_02" atlas="gfx/HighlandDLC/blocks/poor_wall_02.png" type="wall" properties="editor=DLC_highland,can_replace,can_climb,wooden" atlas_element="block" resource="plank-1|2,wood-1|3,stone,stone-1-70,stone-1-50" crack="true" draw_layer="front_a1" build="5" extract="100" stayon="true" pak="Highland DLC">
+        <wall>
+            <block name="top" atlas_element="corner_left" properties="collide=up|left,offset=25%,narrow" build="5" extract="100" through="true" crack="true" />
+            <block name="trunk" atlas_element="ceiling" properties="collide=up,draw_align=up,offset=25%,narrow,scale_xaxis" build="5" extract="100" through="true" crack="true" />
+            <block name="bottom" atlas_element="corner_right" properties="collide=right|up,offset=25%,narrow" build="5" extract="100" through="true" crack="true" />
+            <block name="middle_left" atlas_element="wall_left" properties="collide=left,draw_align=left,offset=25%,narrow,scale_yaxis" build="5" extract="100" through="true" crack="true" />
+            <block name="middle_right" atlas_element="wall_right" properties="collide=right,draw_align=right,offset=25%,narrow,scale_yaxis" build="5" extract="100" through="true" crack="true" />
+        </wall>
+    </block>
+    <block name="poor_wall_01" atlas="gfx/HighlandDLC/blocks/poor_wall_01.png" type="wall" properties="editor=DLC_highland,can_replace,can_climb,wooden" atlas_element="block" resource="poor_wall_01" crack="true" draw_layer="front_a1" build="5" stayon="true" extract="100" pak="Highland DLC">
+        <wall>
+            <block name="top" atlas_element="corner_left" properties="collide=up|left,offset=25%,narrow" build="5" extract="100" through="true" crack="true" />
+            <block name="trunk" atlas_element="ceiling" properties="collide=up,draw_align=up,offset=25%,narrow,scale_xaxis" build="5" extract="100" through="true" crack="true" />
+            <block name="bottom" atlas_element="corner_right" properties="collide=right|up,offset=25%,narrow" build="5" extract="100" through="true" crack="true" />
+            <block name="middle_left" atlas_element="wall_left" properties="collide=left,draw_align=left,offset=25%,narrow,scale_yaxis" build="5" extract="100" through="true" crack="true" />
+            <block name="middle_right" atlas_element="wall_right" properties="collide=right,draw_align=right,offset=25%,narrow,scale_yaxis" build="5" extract="100" through="true" crack="true" />
+        </wall>
+    </block>
+    <block name="poor_wall_plaster" type="simple" properties="editor=DLC_highland,user_cycle_switch,no_break_fall,wooden,can_replace" crack="true" through="true" resource="poor_wall_plaster" draw_layer="normal" build="5" extract="50" pak="Highland DLC">
+        <file path="gfx/HighlandDLC/blocks/poor_wall_plaster_01.png" />
+        <file path="gfx/HighlandDLC/blocks/poor_wall_plaster_02.png" />
+        <file path="gfx/HighlandDLC/blocks/poor_wall_plaster_03.png" />
+        <file path="gfx/HighlandDLC/blocks/poor_wall_plaster_04.png" />
+    </block>
+    <block name="food_bags_01" type="simple" properties="editor=DLC_highland,can_fall,user_mirror_switch,draw_align=down,scale=1.30" through="true" crack="true" file="gfx/HighlandDLC/blocks/food_bags_01.png" resource="fabric-1|2,rope-1|2-70,needle-1-50,flour-1|5,dirt-1|2-50,mucus-1-60,web-1-30,seed-10|20-50,coal-10|20" draw_layer="normal" build="5" extract="10" pak="Highland DLC">
+        <params>
+            <param name="sound_on_hit" value="breaking a bag" />
+            <param name="sound_on_break" value="breaking a bag" />
+        </params>
+    </block>
+    <block name="food_bags_02" type="simple" properties="editor=DLC_highland,can_fall,user_mirror_switch,scale=1.10" through="true" crack="true" file="gfx/HighlandDLC/blocks/food_bags_02.png" resource="fabric-1|2,rope-1|2-70,needle-1-50,flour-1|5,dirt-1|2-50,mucus-1-60,web-1-30,seed-10|20-50,coal-10|20" draw_layer="normal" build="5" extract="10" pak="Highland DLC">
+        <params>
+            <param name="sound_on_hit" value="breaking a bag" />
+            <param name="sound_on_break" value="breaking a bag" />
+        </params>
+    </block>
+    <block name="food_bags_03" type="simple" properties="editor=DLC_highland,can_fall,user_mirror_switch,draw_align=down,scale=1.40" through="true" crack="true" file="gfx/HighlandDLC/blocks/food_bags_03.png" resource="fabric-1|2,rope-1|2-70,needle-1-50,flour-1|5,dirt-1|2-50,mucus-1-60,web-1-30,seed-10|20-50,coal-10|20" draw_layer="normal" build="5" extract="10" pak="Highland DLC">
+        <params>
+            <param name="sound_on_hit" value="breaking a bag" />
+            <param name="sound_on_break" value="breaking a bag" />
+        </params>
+    </block>
+    <block name="food_bags_04" type="simple" properties="editor=DLC_highland,can_fall,user_mirror_switch" through="true" crack="true" file="gfx/HighlandDLC/blocks/food_bags_04.png" resource="fabric-1|2,rope-1|2-70,needle-1-50,flour-1|5,dirt-1|2-50,mucus-1-60,web-1-30,seed-10|20-50,coal-10|20" draw_layer="normal" build="5" extract="10" pak="Highland DLC">
+        <params>
+            <param name="sound_on_hit" value="breaking a bag" />
+            <param name="sound_on_break" value="breaking a bag" />
+        </params>
+    </block>
+    <block name="food_bags_05" type="simple" properties="editor=DLC_highland,can_fall,user_mirror_switch,draw_align=down,scale=1.20" through="true" crack="true" file="gfx/HighlandDLC/blocks/food_bags_05.png" resource="fabric-1|2,rope-1|2-70,needle-1-50,flour-1|5,dirt-1|2-50,mucus-1-60,web-1-30,seed-10|20-50,coal-10|20" draw_layer="normal" build="5" extract="10" pak="Highland DLC">
+        <params>
+            <param name="sound_on_hit" value="breaking a bag" />
+            <param name="sound_on_break" value="breaking a bag" />
+        </params>
+    </block>
+    <block name="rack_with_utensils_01" type="simple" properties="editor=DLC_highland,user_mirror_switch,no_break_fall,narrow,wooden" crack="true" through="true" file="gfx/HighlandDLC/blocks/rack_with_utensils_01.png" resource="plank-1|2,nail-1|2,serving_spoon-1|2,rope-1-50" draw_layer="normal" build="3" extract="3" pak="Highland DLC" />
+    <block name="rack_with_utensils_02" type="simple" properties="editor=DLC_highland,user_mirror_switch,no_break_fall,narrow,wooden" through="true" crack="true" file="gfx/HighlandDLC/blocks/rack_with_utensils_02.png" resource="plank-2|4,chopper_iron-1|2,nail,iron-1|3" draw_layer="normal" build="3" extract="3" pak="Highland DLC" />
+    <block name="rack_with_utensils_03" type="simple" properties="editor=DLC_highland,user_mirror_switch,no_break_fall,narrow,wooden" through="true" crack="true" file="gfx/HighlandDLC/blocks/rack_with_utensils_03.png" resource="iron-1|3,plank-1|2,nail-1|2,rope-1-50" draw_layer="normal" build="3" extract="3" pak="Highland DLC" />
+    <block name="stacks_of_dishes_01" type="simple" properties="editor=DLC_highland,can_fall,user_mirror_switch,narrow,draw_align=down,scale=0.70" through="true" crack="true" file="gfx/HighlandDLC/blocks/stacks_of_dishes_01.png" resource="plank-1|3,iron-1|2,resin-1|3,splinters_hl-1|3" draw_layer="normal" build="3" extract="3" pak="Highland DLC">
+        <params>
+            <param name="sound_on_hit" value="breaking ceramics" />
+            <param name="sound_on_break" value="breaking ceramics" />
+        </params>
+    </block>
+    <block name="stacks_of_dishes_02" type="simple" properties="editor=DLC_highland,can_fall,user_mirror_switch,narrow,draw_align=down,scale=0.70" through="true" crack="true" file="gfx/HighlandDLC/blocks/stacks_of_dishes_02.png" resource="plank-2|3,nail-1|2,iron-1|2,splinters_hl-1|3" draw_layer="normal" build="3" extract="3" pak="Highland DLC">
+        <params>
+            <param name="sound_on_hit" value="breaking ceramics" />
+            <param name="sound_on_break" value="breaking ceramics" />
+        </params>
+    </block>
+    <block name="stacks_of_dishes_03" type="simple" properties="editor=DLC_highland,can_fall,user_mirror_switch,narrow,draw_align=down,scale=0.70" through="true" crack="true" file="gfx/HighlandDLC/blocks/stacks_of_dishes_03.png" resource="pot-1|2,serving_spoon-1|2,iron-2|4,plank-1|2,water-3|5,splinters_hl-1|3,glass-1|3" draw_layer="normal" build="3" extract="3" pak="Highland DLC">
+        <params>
+            <param name="sound_on_hit" value="breaking ceramics" />
+            <param name="sound_on_break" value="breaking ceramics" />
+        </params>
+    </block>
+    <block name="block_strong_stone_01" atlas="gfx/HighlandDLC/blocks/block_strong_stone_01.png" type="solid block" properties="editor=DLC_highland,can_climb,stony,can_replace" atlas_element="block" resource="stone-4|8" build="240" extract="900" stayon="true" crack="true" draw_layer="front_a14" pak="Highland DLC" />
+    <block name="stacks_of_dishes_04" type="simple" properties="editor=DLC_highland,user_mirror_switch,no_break_fall,scale=0.90" through="true" crack="true" file="gfx/HighlandDLC/blocks/stacks_of_dishes_04.png" resource="plank-2|3,nail-1|2,iron-1|2,splinters_hl-1|2" draw_layer="normal" build="3" extract="3" pak="Highland DLC">
+        <params>
+            <param name="sound_on_hit" value="breaking ceramics" />
+            <param name="sound_on_break" value="breaking ceramics" />
+        </params>
+    </block>
+    <block name="stacks_of_dishes_05" type="simple" properties="editor=DLC_highland,user_mirror_switch,no_break_fall,scale=0.90" through="true" crack="true" file="gfx/HighlandDLC/blocks/stacks_of_dishes_05.png" resource="plank-2|3,glass-2|3,empty_bottle-1|2,nail-1|2,seed-10|20,splinters_hl-1|2" draw_layer="normal" build="3" extract="3" pak="Highland DLC">
+        <params>
+            <param name="sound_on_hit" value="breaking dishes" />
+            <param name="sound_on_break" value="breaking dishes" />
+        </params>
+    </block>
+    <block name="stacks_of_dishes_06" type="simple" properties="editor=DLC_highland,user_mirror_switch,no_break_fall,scale=0.90" through="true" crack="true" file="gfx/HighlandDLC/blocks/stacks_of_dishes_06.png" resource="plank-2,glass-1|2,empty_bottle,nail-1|2,seed-10|20,splinters_hl-1|2" draw_layer="normal" build="3" extract="3" pak="Highland DLC">
+        <params>
+            <param name="sound_on_hit" value="breaking dishes" />
+            <param name="sound_on_break" value="breaking dishes" />
+        </params>
+    </block>
+    <block name="kitchen_cabinet_02" type="simple" properties="editor=DLC_highland,narrow,user_mirror_switch,no_break_fall,wooden,draw_align=up,scale=0.69" through="true" crack="true" file="gfx/HighlandDLC/blocks/kitchen_cabinet_02.png" resource="kitchen_cabinet_02" draw_layer="normal" build="5" extract="5" pak="Highland DLC">
+        <params>
+            <param name="sound_on_break" value="breaking ceramics" />
+        </params>
+    </block>
+    <block name="kitchen_cabinet_01" type="simple" properties="editor=DLC_highland,narrow,user_mirror_switch,no_break_fall,wooden,draw_align=up,scale=0.79" through="true" crack="true" file="gfx/HighlandDLC/blocks/kitchen_cabinet_01.png" resource="kitchen_cabinet_01" draw_layer="normal" build="5" extract="5" pak="Highland DLC">
+        <params>
+            <param name="sound_on_break" value="breaking ceramics" />
+        </params>
+    </block>
+    <block name="flowers_on_a_stand" type="simple" properties="editor=DLC_highland,can_fall,user_mirror_switch,wide,wooden,draw_align=down,scale=1.31" through="true" crack="true" file="gfx/HighlandDLC/blocks/flowers_on_a_stand.png" resource="wood-2|5,plank-1|2,leaves-10|20,clay_vase-1|2,dirt-2|5,nail-1|2" draw_layer="normal" build="5" extract="20" pak="Highland DLC" />
+    <block name="rich_wall_broken_01" atlas="gfx/HighlandDLC/blocks/rich_wall_broken_01.png" type="wall" properties="editor=DLC_highland,can_climb,can_replace,stony" atlas_element="block" resource="rich_wall_broken_01" draw_layer="front_a1" build="5" extract="150" stayon="true" crack="true" pak="Highland DLC">
+        <wall>
+            <block name="top" atlas_element="corner_left" properties="collide=up|left,offset=25%,narrow" build="5" extract="150" through="true" crack="true" />
+            <block name="trunk" atlas_element="ceiling" properties="collide=up,draw_align=up,offset=25%,narrow,scale_xaxis" build="5" extract="150" through="true" crack="true" />
+            <block name="bottom" atlas_element="corner_right" properties="collide=right|up,offset=25%,narrow" build="5" extract="150" through="true" crack="true" />
+            <block name="middle_left" atlas_element="wall_left" properties="collide=left,draw_align=left,offset=25%,narrow,scale_yaxis" build="5" extract="150" through="true" crack="true" />
+            <block name="middle_right" atlas_element="wall_right" properties="collide=right,draw_align=right,offset=25%,narrow,scale_yaxis" build="5" extract="150" through="true" crack="true" />
+        </wall>
+    </block>
+    <block name="rich_wall_01" atlas="gfx/HighlandDLC/blocks/rich_wall_01.png" type="wall" properties="editor=DLC_highland,can_climb,can_replace,stony" atlas_element="block" resource="rich_wall_01" draw_layer="front_a1" build="5" extract="300" stayon="true" crack="true" pak="Highland DLC">
+        <wall>
+            <block name="top" atlas_element="corner_left" properties="collide=up|left,offset=25%,narrow" build="5" extract="300" through="true" crack="true" />
+            <block name="trunk" atlas_element="ceiling" properties="collide=up,draw_align=up,offset=25%,narrow,scale_xaxis" build="5" extract="300" through="true" crack="true" />
+            <block name="bottom" atlas_element="corner_right" properties="collide=right|up,offset=25%,narrow" build="5" extract="300" through="true" crack="true" />
+            <block name="middle_left" atlas_element="wall_left" properties="collide=left,draw_align=left,offset=25%,narrow,scale_yaxis" build="5" extract="300" through="true" crack="true" />
+            <block name="middle_right" atlas_element="wall_right" properties="collide=right,draw_align=right,offset=25%,narrow,scale_yaxis" build="5" extract="300" through="true" crack="true" />
+        </wall>
+    </block>
+    <block name="armor_stand_03" type="simple" properties="can_fall,user_mirror_switch,editor=DLC_highland,user_cycle_switch,metallic,draw_align=down,scale=1.20" resource="helm_silver-1-30,silver_armor-1-30,silver_boots-1-30,silver_axe-1-20,pick_silver-1-20,sword_silver-1-20,silver-1|2,bow_arrow_silver-5|10-20" file="gfx/HighlandDLC/blocks/armor_stand_03.png" through="true" draw_layer="normal" build="5" extract="20" ontop="true" pak="Highland DLC" />
+    <block name="armor_stand_01" type="simple" properties="can_fall,user_mirror_switch,editor=DLC_highland,user_cycle_switch,metallic,draw_align=down,scale=1.20" file="gfx/HighlandDLC/blocks/armor_stand_01.png" resource="helmet_guardians_mountain-1-25,cuirass_guardians_mountain-1-25,boot_guardians_mountain-1-25,shield_guardians_mountain-1-25,weapon_guardians_mountain-1-25,money-1-50,boot_guardians_mountain_broken-1-40,cuirass_guardians_mountain_broken-1-40,helmet_guardians_mountain_broken-1-40,shield_guardians_mountain_broken-1-40,weapon_guardians_mountain_broken-1-30" through="true" crack="true" draw_layer="normal" build="5" extract="20" ontop="true" pak="Highland DLC" />
+    <block name="armor_stand_02" type="simple" properties="can_fall,user_mirror_switch,editor=DLC_highland,user_cycle_switch,metallic,draw_align=down,scale=1.20" file="gfx/HighlandDLC/blocks/armor_stand_02.png" resource="boot_patrol_mountain-1-25,bow_patrol_mountain-1-25,cuirass_patrol_mountain-1-25,helmet_patrol_mountain-1-25,weapon_patrol_mountain-1-25,money,boot_patrol_mountain_broken-1-30,bow_patrol_mountain_broken-1-30,cuirass_patrol_mountain_broken-1-30,helmet_patrol_mountain_broken-1-30,weapon_patrol_mountain_broken-1-30" crack="true" through="true" draw_layer="normal" build="5" extract="20" ontop="true" pak="Highland DLC" />
+    <block name="bed_barracks_01" type="simple" properties="can_fall,bed,user_mirror_switch,editor=DLC_highland,wide,no_break_fall,max_height=2,user_cycle_switch,wooden,draw_align=down,scale=1.40" file="gfx/HighlandDLC/blocks/bed_barracks_01.png" resource="bed_barracks_01" through="true" draw_layer="normal" build="5" extract="5" crack="true" ontop="true" pak="Highland DLC" />
+    <block name="bed_barracks_02" type="simple" properties="can_fall,bed,user_mirror_switch,editor=DLC_highland,wide,no_break_fall,max_height=3,user_cycle_switch,wooden,draw_align=down,scale=1.40" file="gfx/HighlandDLC/blocks/bed_barracks_02.png" resource="bed_barracks_02" through="true" crack="true" draw_layer="normal" build="5" extract="5" ontop="true" stayon="true" pak="Highland DLC" />
+    <block name="weapon_stand_01" type="simple" properties="can_fall,user_mirror_switch,editor=DLC_highland,user_cycle_switch,wooden,draw_align=down,scale=1.50" file="gfx/HighlandDLC/blocks/weapon_stand_01.png" resource="wood-2|5,rope-1|2,wooden_staff-1-70,rusty_sceleton_saber-1-70,bow_long-1-40,bow_arrow_fire-10|20-70,bow_patrol_mountain-1-20,bow_patrol_mountain_broken-1-40,weapon_patrol_mountain-1-20,weapon_patrol_mountain_broken-1-40" through="true" crack="true" draw_layer="normal" build="5" extract="20" ontop="true" pak="Highland DLC" />
+    <block name="weapon_stand_02" type="simple" properties="can_fall,user_mirror_switch,editor=DLC_highland,user_cycle_switch,wooden,draw_align=down,scale=1.20" file="gfx/HighlandDLC/blocks/weapon_stand_02.png" resource="wood-2|5,rope-1|2,bow_arrow_fire-10|20-70,sword_iron-1-70,club_iron-1-70,sword_silver-1-70,axe_steel-1-70,bow_patrol_mountain-1-30,bow_patrol_mountain_broken-1-40,weapon_patrol_mountain-1-30,weapon_patrol_mountain_broken-1-40" crack="true" through="true" draw_layer="normal" build="5" extract="20" ontop="true" pak="Highland DLC" />
+    <block name="weapon_stand_03" type="simple" properties="can_fall,user_mirror_switch,editor=DLC_highland,user_cycle_switch,wooden,draw_align=down,scale=1.20" file="gfx/HighlandDLC/blocks/weapon_stand_03.png" resource="wood-2|5,rope-1|2,axe_stone-1-70,frostling_bow-1-70,bow_arrow_fire-1-70,rusty_sceleton_mace-1-70,bow_patrol_mountain-1-30,bow_patrol_mountain_broken-1-40,weapon_patrol_mountain-1-30,weapon_patrol_mountain_broken-1-40" through="true" crack="true" draw_layer="normal" build="5" extract="20" ontop="true" pak="Highland DLC" />
+    <block name="luxury_bed" type="simple" properties="editor=DLC_highland,can_fall,bed,user_mirror_switch,wide,no_break_fall,stony,draw_align=down,scale=1.40" through="true" crack="true" file="gfx/HighlandDLC/blocks/luxury_bed.png" resource="luxury_bed" draw_layer="normal" build="5" extract="5" pak="Highland DLC" />
+    <block name="luxury_bed_broken" type="simple" properties="editor=DLC_highland,can_fall,user_mirror_switch,wide,stony,draw_align=down,scale=1.16" through="true" crack="true" file="gfx/HighlandDLC/blocks/luxury_bed_broken.png" resource="luxury_bed_broken" draw_layer="normal" build="5" extract="10" pak="Highland DLC" />
+    <block name="bed_barracks_01_broken" type="simple" properties="editor=DLC_highland,can_fall,user_mirror_switch,wide,wooden,draw_align=down,scale=1.50" through="true" crack="true" file="gfx/HighlandDLC/blocks/bed_barracks_01_broken.png" resource="bed_barracks_01_broken" draw_layer="normal" build="5" extract="10" ontop="true" pak="Highland DLC" />
+    <block name="bed_barracks_02_broken" type="simple" properties="editor=DLC_highland,can_fall,user_mirror_switch,wide,wooden,draw_align=down,scale=1.50" through="true" crack="true" file="gfx/HighlandDLC/blocks/bed_barracks_02_broken.png" resource="bed_barracks_02_broken" draw_layer="normal" build="5" extract="10" ontop="true" pak="Highland DLC" />
+    <block name="vase" type="simple" properties="can_fall,narrow,user_mirror_switch,editor=DLC_highland,stony,draw_align=down,scale=0.76" file="gfx/HighlandDLC/blocks/vase.png" resource="stone-2|4,sand-1|2,money-1-50" through="true" crack="true" draw_layer="normal" build="5" extract="5" pak="Highland DLC" />
+    <block name="corridor_light" type="simple" properties="editor=DLC_highland,light=4,metallic,narrow,scale=0.45" effect="fire.xml" file="gfx/HighlandDLC/blocks/corridor_light.png" resource="corridor_light" through="true" crack="true" draw_layer="normal" build="5" extract="5" effect_scale="0.65" effect_offset="0.00,-0.15" ontop="true" pak="Highland DLC" />
+    <block name="staircase_without_railings" atlas="gfx/HighlandDLC/blocks/staircase_without_railings.png" type="column" properties="ladder=x1.5,true,editor=DLC_highland,can_climb,metallic,narrow,no_chain_crash" atlas_element="column_base" resource="staircase_without_railings" build="5" extract="10" crack="true" through="true" stayon="true" pak="Highland DLC">
+        <collumn>
+            <block name="top" atlas_element="column_top" properties="ladder=x1.5,narrow" build="5" extract="10" through="true" crack="false" ontop="true" stayon="true" />
+            <block name="trunk" atlas_element="column_tile" properties="ladder=x1.5,narrow" build="5" extract="10" through="true" crack="false" ontop="true" stayon="true" />
+            <block name="bottom" atlas_element="column_bottom" properties="ladder=x1.5,narrow" build="5" extract="10" through="true" crack="false" ontop="true" stayon="true" />
+        </collumn>
+    </block>
+    <block name="statue_01" type="simple" properties="can_fall,wide,user_mirror_switch,editor=DLC_highland,stony,draw_align=down,scale=2.00" through="true" crack="true" file="gfx/HighlandDLC/blocks/statue_01.png" resource="stone-5|10,sand-1|3,silver-1|10" draw_layer="normal" build="100" extract="500" pak="Highland DLC" />
+    <block name="statue_02" type="simple" properties="can_fall,wide,user_mirror_switch,editor=DLC_highland,stony,draw_align=down,scale=2.00" through="true" crack="true" file="gfx/HighlandDLC/blocks/statue_02.png" resource="stone-5|10,sand-1|3,silver-1|10" draw_layer="normal" build="100" extract="500" pak="Highland DLC" />
+    <block name="statue_03" type="simple" properties="can_fall,wide,user_mirror_switch,editor=DLC_highland,stony,draw_align=down,scale=2.00" through="true" crack="true" file="gfx/HighlandDLC/blocks/statue_03.png" resource="stone-5|10,sand-1|3,silver-1|10" draw_layer="normal" build="100" extract="500" pak="Highland DLC" />
+    <block name="statue_04" type="simple" properties="wide,user_mirror_switch,editor=DLC_highland,stony,draw_align=down,scale=2.00" through="true" file="gfx/HighlandDLC/blocks/statue_04.png" resource="stone-3|5,sand-1|3,money-1-50" draw_layer="normal" build="100" extract="500" crack="true" pak="Highland DLC" />
+    <block name="statue_05" type="simple" properties="wide,user_mirror_switch,editor=DLC_highland,stony,draw_align=down,scale=2.00" crack="true" through="true" file="gfx/HighlandDLC/blocks/statue_05.png" resource="stone-3|5,sand-1|3,money-1-50" draw_layer="normal" build="100" extract="500" pak="Highland DLC" />
+    <block name="statue_06" type="simple" properties="wide,user_mirror_switch,editor=DLC_highland,stony,draw_align=down,scale=2.00" through="true" crack="true" file="gfx/HighlandDLC/blocks/statue_06.png" resource="stone-3|5,sand-1|3,money-1-50" draw_layer="normal" build="100" extract="500" pak="Highland DLC" />
+    <block name="statue_07" type="simple" properties="wide,user_mirror_switch,editor=DLC_highland,stony,draw_align=down,scale=2.00" through="true" crack="true" file="gfx/HighlandDLC/blocks/statue_07.png" resource="stone-3|5,sand-1|3,money-1-50" draw_layer="normal" build="100" extract="500" pak="Highland DLC" />
+    <block name="statue_08" type="simple" properties="wide,user_mirror_switch,editor=DLC_highland,stony,draw_align=down,scale=2.00" through="true" crack="true" file="gfx/HighlandDLC/blocks/statue_08.png" resource="stone-3|5,sand-1|3,money-1-50" draw_layer="normal" build="100" extract="500" pak="Highland DLC" />
+    <block name="statue_09" type="simple" properties="wide,user_mirror_switch,editor=DLC_highland,stony,draw_align=down,scale=2.00" through="true" crack="true" file="gfx/HighlandDLC/blocks/statue_09.png" resource="stone-3|5,sand-1|3,money-1-50" draw_layer="normal" build="100" extract="500" pak="Highland DLC" />
+    <block name="column_prop" atlas="gfx/HighlandDLC/blocks/column_prop.png" type="column" properties="editor=DLC_highland,wooden,true" atlas_element="column_base" resource="column_prop" ontop="true" build="10" extract="25" stayon="true" pak="Highland DLC">
+        <collumn>
+            <block name="top" atlas_element="column_top" properties="" build="10" extract="25" through="true" crack="false" ontop="true" stayon="true" />
+            <block name="trunk" atlas_element="column_tile" properties="" build="10" extract="25" through="true" crack="false" ontop="true" stayon="true" />
+            <block name="bottom" atlas_element="column_bottom" properties="" build="10" extract="25" through="true" crack="false" ontop="true" stayon="true" />
+        </collumn>
+    </block>
+    <block name="chair_wooden" type="simple" properties="editor=DLC_highland,can_fall,narrow,user_cycle_switch,user_mirror_switch,wooden,draw_align=down" file="gfx/HighlandDLC/blocks/chair_wooden.png" resource="chair_wooden" draw_layer="normal" build="3" extract="3" through="true" crack="true" ontop="true" pak="Highland DLC" />
+    <block name="chair_wooden_broken" type="simple" properties="editor=DLC_highland,can_fall,narrow,user_cycle_switch,user_mirror_switch,wooden,draw_align=down" file="gfx/HighlandDLC/blocks/chair_wooden_broken.png" resource="chair_wooden_broken" draw_layer="normal" build="3" extract="10" ontop="true" through="true" crack="true" pak="Highland DLC" />
+    <block name="wooden_table_broken" type="simple" properties="editor=DLC_highland,can_fall,user_cycle_switch,user_mirror_switch,narrow,wooden,draw_align=down,scale=1.10" file="gfx/HighlandDLC/blocks/wooden_table_broken.png" resource="wooden_table_broken" draw_layer="normal" build="5" extract="10" crack="true" through="true" ontop="true" pak="Highland DLC" />
+    <block name="wooden_table" type="simple" properties="table=3,editor=DLC_highland,can_fall,user_cycle_switch,user_mirror_switch,narrow,wooden,draw_align=down,scale=1.10" file="gfx/HighlandDLC/blocks/wooden_table.png" resource="wooden_table" draw_layer="normal" build="5" extract="5" through="true" crack="true" ontop="true" pak="Highland DLC" />
+    <block name="chair_wooden_02" type="simple" properties="editor=DLC_highland,can_fall,narrow,user_cycle_switch,user_mirror_switch,wooden,draw_align=down,scale=0.94" file="gfx/HighlandDLC/blocks/chair_wooden_02.png" resource="chair_wooden_02" draw_layer="normal" build="3" extract="3" through="true" crack="true" ontop="true" pak="Highland DLC" />
+    <block name="chair_wooden_02_broken" type="simple" properties="editor=DLC_highland,can_fall,narrow,user_cycle_switch,user_mirror_switch,wooden,draw_align=down" file="gfx/HighlandDLC/blocks/chair_wooden_02_broken.png" resource="chair_wooden_02_broken" draw_layer="normal" build="3" extract="10" ontop="true" through="true" crack="true" pak="Highland DLC" />
+    <block name="wooden_chest_broken" type="simple" properties="editor=DLC_highland,can_fall,user_mirror_switch,narrow,wooden,draw_align=down,scale=1.08" file="gfx/HighlandDLC/blocks/wooden_chest_broken.png" resource="wooden_chest_broken" draw_layer="normal" build="3" through="true" crack="true" extract="10" pak="Highland DLC" />
+    <block name="wooden_chest" type="simple" properties="editor=DLC_highland,can_fall,user_mirror_switch,narrow,wooden,draw_align=down" file="gfx/HighlandDLC/blocks/wooden_chest.png" resource="wooden_chest" draw_layer="normal" build="3" extract="5" through="true" crack="true" pak="Highland DLC" />
+    <block name="wooden_chest_closed" type="simple" properties="editor=DLC_highland,can_fall,user_mirror_switch,replace_with=wooden_chest_broken,no_break_fall,narrow,wooden,draw_align=down,scale=1.05" file="gfx/HighlandDLC/blocks/wooden_chest_closed.png" resource="money-5|10,portal_krs_blue-1-20,portal_krs_dblue-1-20,portal_krs_green-1-20,portal_krs_violet-1-20,portal_krs_red-1-20,healt_elexir-1|5,mana_elexir-1|3" draw_layer="normal" build="3" extract="50" through="true" crack="true" pak="Highland DLC" />
+    <block name="kitchen_light" type="simple" properties="editor=DLC_highland,light=3,metallic,narrow,draw_align=down" effect="fire.xml" effect_scale="0.51" effect_offset="0.00,-0.30" file="gfx/HighlandDLC/blocks/kitchen_light.png" resource="kitchen_light" through="true" crack="true" draw_layer="normal" build="5" extract="5" ontop="true" pak="Highland DLC" />
+    <block name="compatible_boxes_01" type="simple" properties="editor=DLC_highland,can_fall,user_mirror_switch,wooden,draw_align=down,scale=1.30" resource="wood-1|5,plank-1|2,nail-1|2,web-1-10,padlock-1-5,glass-1-5,iron-1-5,skin-1-5,seed-3|5-5,empty_bottle-1-5,chopper_iron-1-5,iron-1-5,pick_iron-1-5,trap_iron-1-5,club_iron-1-5,steel-1-5,scissors-1-5,backpack_01-1-5,saw-1-5,miners_lamp-1-5,lamp-1-5,skills_ring3-1-1,skills_ring2-1-1,regen_ring3-1-1,regen_ring2-1-1,regen_ring1-1-1,miner_amulet1-1-1,skills_ring1-1-1,undead_amulet1-1-1,healt_elexir-1-5,mana_elexir-1-5,big_elixir_health-1-5,big_elixir_mana-1-5,fireball_staff_elexir-1-5,winter_hat2-1-5,winter_hat3-1-5,archer_skill-1-5,archer_glove-1-5,bone-1-5,clay-1-5,clay_vase-1-5,climber_skill-1-10,climbing_cats-1-10,coal-10|20-50,money-3|5-50,cone-1|10-5,crackers_mine-3|5-5,dried_fish-3|5-5,mushroom_dry-3|5-5,icearrow_elexir-1-5,transform_elexir-1-5,eye-1-5,fabric-1-5,pen-1-5,flamethrower-1-1,gargoyley_spawner-1|3-5,grinding_stone-1-5,gunpowder-1-5,wine-2|3-10,ammo_fire-5|10-5,ink-2|3-5,wheel_for_trolley-1-5,minner_skill-1-5,helmet_mine-1-1,miner_lamp-1-5,mushroom-1-5,oil_berries-1-5,boot_mine-1-1,paper-1-5,pistol-1-5,pot-1-5,resin-1-5,Rhinoceros_boots-1-1,Rhinoceros_chest-1-1,Rhinoceros_helmet-1-1,root-2|3-5,sand-2|3-5,mucus-2|3-5,smith_skill-1-5,ammo_steel-5|10-5,durable_shell-1-5,thread-1-5,torch-5|10-5,animal_trap-3|5-5,decorative_skin-1-5,swordsman_skill-1-5,winter_hat1-1-5,trap_wood-3|5-5,wool-1-5,pennant-1-5" file="gfx/HighlandDLC/blocks/compatible_boxes_01.png" crack="true" through="true" draw_layer="normal" build="5" extract="100" stayon="true" pak="Highland DLC">
+        <params>
+            <param name="sound_on_break" value="breaking wooden box" />
+        </params>
+    </block>
+    <block name="compatible_boxes_02" type="simple" properties="editor=DLC_highland,can_fall,user_mirror_switch,wooden" resource="wood-1|5,plank-1|2,nail-1|2,web-1-10,padlock-1-5,glass-1-5,iron-1-5,skin-1-5,seed-3|5-5,empty_bottle-1-5,chopper_iron-1-5,iron-1-5,pick_iron-1-5,trap_iron-1-5,club_iron-1-5,steel-1-5,scissors-1-5,backpack_01-1-5,saw-1-5,miners_lamp-1-5,lamp-1-5,skills_ring3-1-1,skills_ring2-1-1,regen_ring3-1-1,regen_ring2-1-1,regen_ring1-1-1,miner_amulet1-1-1,skills_ring1-1-1,undead_amulet1-1-1,healt_elexir-1-5,mana_elexir-1-5,big_elixir_health-1-5,big_elixir_mana-1-5,fireball_staff_elexir-1-5,winter_hat2-1-5,winter_hat3-1-5,archer_skill-1-5,archer_glove-1-5,bone-1-5,clay-1-5,clay_vase-1-5,climber_skill-1-10,climbing_cats-1-10,coal-10|20-50,money-3|5-50,cone-1|10-5,crackers_mine-3|5-5,dried_fish-3|5-5,mushroom_dry-3|5-5,icearrow_elexir-1-5,transform_elexir-1-5,eye-1-5,fabric-1-5,pen-1-5,flamethrower-1-1,gargoyley_spawner-1|3-5,grinding_stone-1-5,gunpowder-1-5,wine-2|3-10,ammo_fire-5|10-5,ink-2|3-5,wheel_for_trolley-1-5,minner_skill-1-5,helmet_mine-1-1,miner_lamp-1-5,mushroom-1-5,oil_berries-1-5,boot_mine-1-1,paper-1-5,pistol-1-5,pot-1-5,resin-1-5,Rhinoceros_boots-1-1,Rhinoceros_chest-1-1,Rhinoceros_helmet-1-1,root-2|3-5,sand-2|3-5,mucus-2|3-5,smith_skill-1-5,ammo_steel-5|10-5,durable_shell-1-5,thread-1-5,torch-5|10-5,animal_trap-3|5-5,decorative_skin-1-5,swordsman_skill-1-5,winter_hat1-1-5,trap_wood-3|5-5,wool-1-5,pennant-1-5" file="gfx/HighlandDLC/blocks/compatible_boxes_02.png" through="true" draw_layer="normal" build="5" extract="100" crack="true" pak="Highland DLC">
+        <params>
+            <param name="sound_on_break" value="breaking wooden box" />
+        </params>
+    </block>
+    <block name="ordinary_armchair_broken" type="simple" properties="can_fall,user_mirror_switch,editor=DLC_highland,narrow,user_cycle_switch,wooden,draw_align=down" file="gfx/HighlandDLC/blocks/ordinary_armchair_broken.png" resource="ordinary_armchair_broken" draw_layer="normal" build="3" extract="10" through="true" pak="Highland DLC" />
+    <block name="ordinary_armchair" type="simple" properties="can_fall,user_mirror_switch,editor=DLC_highland,narrow,user_cycle_switch,wooden" file="gfx/HighlandDLC/blocks/ordinary_armchair.png" resource="ordinary_armchair" draw_layer="normal" build="3" extract="5" through="true" pak="Highland DLC" />
+    <block name="interroom_ordinary_door" type="simple" properties="switch,door=door_right,editor=DLC_highland,user_mirror_switch,replace_with=interroom_ordinary_door_broken,stony,two_layers" resource="stone-1|2,padlock-1-50,steel-1|2,stone_wall-1|2" draw_layer="normal" extract="300" through="true" crack="true" ontop="true" build="30" pak="Highland DLC">
+        <file path="gfx/HighlandDLC/blocks/interroom_ordinary_door_closed.png" />
+        <file path="gfx/HighlandDLC/blocks/interroom_ordinary_door_opened.png" />
+        <layers count="1">
+            <layer file="gfx/HighlandDLC/blocks/interroom_ordinary_door_forw.png" properties="" />
+        </layers>
+    </block>
+    <block name="interroom_door_broken" type="simple" properties="editor=DLC_highland,user_mirror_switch,wooden,draw_align=left|down,two_layers" file="gfx/HighlandDLC/blocks/interroom_door_broken_closed.png" resource="plank-1|2,steel-1|2,wood-2|3,nail-1|2,iron-1|2" draw_layer="normal" through="true" ontop="true" extract="100" build="10" pak="Highland DLC">
+        <layers count="1">
+            <layer file="gfx/HighlandDLC/blocks/interroom_door_broken_forw.png" properties="draw_align=left|down" />
+        </layers>
+    </block>
+    <block name="corridor_light_broken" type="simple" properties="editor=DLC_highland,replace_with=corridor_light,metallic,narrow" file="gfx/HighlandDLC/blocks/corridor_light_broken.png" resource="web-1-50" draw_layer="normal" build="5" extract="5" through="true" crack="true" ontop="true" pak="Highland DLC" />
+    <block name="picture_lm_broken_01" type="simple" properties="editor=DLC_highland,can_fall,narrow,wooden" resource="picture_lm_broken_01" draw_layer="normal" build="3" extract="10" through="true" pak="Highland DLC">
+        <file path="gfx/HighlandDLC/blocks/picture_lm_broken_01.png" />
+        <file path="gfx/HighlandDLC/blocks/picture_lm_broken_02.png" />
+    </block>
+    <block name="compatible_boxes_03" type="simple" properties="editor=DLC_highland,can_fall,user_mirror_switch,wooden" file="gfx/HighlandDLC/blocks/compatible_boxes_03.png" resource="wood-1|5,plank-1|2,nail-1|2,web-1-10,padlock-1-5,glass-1-5,iron-1-5,skin-1-5,seed-3|5-5,empty_bottle-1-5,chopper_iron-1-5,iron-1-5,pick_iron-1-5,trap_iron-1-5,club_iron-1-5,steel-1-5,scissors-1-5,backpack_01-1-5,saw-1-5,miners_lamp-1-5,lamp-1-5,skills_ring3-1-1,skills_ring2-1-1,regen_ring3-1-1,regen_ring2-1-1,regen_ring1-1-1,miner_amulet1-1-1,skills_ring1-1-1,undead_amulet1-1-1,healt_elexir-1-5,mana_elexir-1-5,big_elixir_health-1-5,big_elixir_mana-1-5,fireball_staff_elexir-1-5,winter_hat2-1-5,winter_hat3-1-5,archer_skill-1-5,archer_glove-1-5,bone-1-5,clay-1-5,clay_vase-1-5,climber_skill-1-10,climbing_cats-1-10,coal-10|20-50,money-3|5-50,cone-1|10-5,crackers_mine-3|5-5,dried_fish-3|5-5,mushroom_dry-3|5-5,icearrow_elexir-1-5,transform_elexir-1-5,eye-1-5,fabric-1-5,pen-1-5,flamethrower-1-1,gargoyley_spawner-1|3-5,grinding_stone-1-5,gunpowder-1-5,wine-2|3-10,ammo_fire-5|10-5,ink-2|3-5,wheel_for_trolley-1-5,minner_skill-1-5,helmet_mine-1-1,miner_lamp-1-5,mushroom-1-5,oil_berries-1-5,boot_mine-1-1,paper-1-5,pistol-1-5,pot-1-5,resin-1-5,Rhinoceros_boots-1-1,Rhinoceros_chest-1-1,Rhinoceros_helmet-1-1,root-2|3-5,sand-2|3-5,mucus-2|3-5,smith_skill-1-5,ammo_steel-5|10-5,durable_shell-1-5,thread-1-5,torch-5|10-5,animal_trap-3|5-5,decorative_skin-1-5,swordsman_skill-1-5,winter_hat1-1-5,trap_wood-3|5-5,wool-1-5,pennant-1-5" draw_layer="normal" build="5" extract="100" through="true" crack="true" pak="Highland DLC">
+        <params>
+            <param name="sound_on_break" value="breaking wooden box" />
+        </params>
+    </block>
+    <block name="compatible_boxes_04" type="simple" properties="editor=DLC_highland,can_fall,user_mirror_switch,wooden,draw_align=down,scale=1.80,two_layers" file="gfx/HighlandDLC/blocks/compatible_boxes_04.png" resource="wood-1|5,plank-1|2,nail-1|2,web-1-10,padlock-1-5,glass-1-5,iron-1-5,skin-1-5,seed-3|5-5,empty_bottle-1-5,chopper_iron-1-5,iron-1-5,pick_iron-1-5,trap_iron-1-5,club_iron-1-5,steel-1-5,scissors-1-5,backpack_01-1-5,saw-1-5,miners_lamp-1-5,lamp-1-5,skills_ring3-1-1,skills_ring2-1-1,regen_ring3-1-1,regen_ring2-1-1,regen_ring1-1-1,miner_amulet1-1-1,skills_ring1-1-1,undead_amulet1-1-1,healt_elexir-1-5,mana_elexir-1-5,big_elixir_health-1-5,big_elixir_mana-1-5,fireball_staff_elexir-1-5,winter_hat2-1-5,winter_hat3-1-5,archer_skill-1-5,archer_glove-1-5,bone-1-5,clay-1-5,clay_vase-1-5,climber_skill-1-10,climbing_cats-1-10,coal-10|20-50,money-3|5-50,cone-1|10-5,crackers_mine-3|5-5,dried_fish-3|5-5,mushroom_dry-3|5-5,icearrow_elexir-1-5,transform_elexir-1-5,eye-1-5,fabric-1-5,pen-1-5,flamethrower-1-1,gargoyley_spawner-1|3-5,grinding_stone-1-5,gunpowder-1-5,wine-2|3-10,ammo_fire-5|10-5,ink-2|3-5,wheel_for_trolley-1-5,minner_skill-1-5,helmet_mine-1-1,miner_lamp-1-5,mushroom-1-5,oil_berries-1-5,boot_mine-1-1,paper-1-5,pistol-1-5,pot-1-5,resin-1-5,Rhinoceros_boots-1-1,Rhinoceros_chest-1-1,Rhinoceros_helmet-1-1,root-2|3-5,sand-2|3-5,mucus-2|3-5,smith_skill-1-5,ammo_steel-5|10-5,durable_shell-1-5,thread-1-5,torch-5|10-5,animal_trap-3|5-5,decorative_skin-1-5,swordsman_skill-1-5,winter_hat1-1-5,trap_wood-3|5-5,wool-1-5,pennant-1-5" draw_layer="normal" build="5" extract="100" through="true" crack="true" stayon="true" pak="Highland DLC">
+        <layers count="1">
+            <layer file="gfx/HighlandDLC/blocks/compatible_boxes_05.png" properties="draw_align=down,scale=1.80" />
+        </layers>
+        <params>
+            <param name="sound_on_break" value="breaking wooden box" />
+        </params>
+    </block>
+    <block name="barrel_hl_01" type="simple" properties="editor=DLC_highland,can_fall,user_mirror_switch,wooden" file="gfx/HighlandDLC/blocks/barrel_hl_01.png" resource="barrel_hl_01" draw_layer="normal" build="5" extract="5" through="true" crack="true" stayon="true" pak="Highland DLC" />
+    <block name="barrel_hl_02" type="simple" properties="editor=DLC_highland,can_fall,user_mirror_switch,wooden" file="gfx/HighlandDLC/blocks/barrel_hl_02.png" resource="barrel_hl_02" draw_layer="normal" build="5" extract="5" through="true" crack="true" stayon="true" pak="Highland DLC" />
+    <block name="barrel_hl_03" type="simple" properties="editor=DLC_highland,can_fall,user_mirror_switch,wooden,draw_align=down,scale=2.00" file="gfx/HighlandDLC/blocks/barrel_hl_03.png" resource="barrel_hl_02-2|3,web-1|2,plank-1|3,iron-2|5,nail-2|4,wood-3|7,rope-1|2" draw_layer="normal" build="5" extract="10" through="true" crack="true" pak="Highland DLC" />
+    <block name="food_shelf_01" type="simple" properties="editor=DLC_highland,can_fall,user_mirror_switch,wooden,draw_align=down,scale=1.65" file="gfx/HighlandDLC/blocks/food_shelf_01.png" resource="wood-1|2,plank-1|3,empty_bottle-1|3,glass-1|2,water-1|3,mucus-1|2,seed-10|20,berries-10|30-30,mushroom-10|30-30,money-1|2-30" draw_layer="normal" build="5" extract="10" through="true" crack="true" stayon="true" pak="Highland DLC">
+        <params>
+            <param name="sound_on_break" value="breaking dishes" />
+        </params>
+    </block>
+    <block name="food_shelf_02" type="simple" properties="editor=DLC_highland,can_fall,user_mirror_switch,wide,wooden,draw_align=down,scale=1.70" file="gfx/HighlandDLC/blocks/food_shelf_02.png" resource="wood-1|2,plank-1|3,mucus-1|3,berries-10|20-30,mushroom-10|20-30,leaves-10|20,mushroom_dry-10|20,dried_meat-10|20,dried_fish-10|20,crackers_mine-10|20,money-1|2-30" draw_layer="normal" build="5" extract="10" through="true" crack="true" stayon="true" pak="Highland DLC">
+        <params>
+            <param name="sound_on_break" value="breaking wooden box" />
+        </params>
+    </block>
+    <block name="wine_shelf_01" type="simple" properties="editor=DLC_highland,can_fall,user_mirror_switch,wooden,draw_align=down,scale=1.25" file="gfx/HighlandDLC/blocks/wine_shelf_01.png" resource="wood-3|5,plank-3|5,empty_bottle-1|3,glass-1|3,berries-10|30-30,wine-10|20,money-1|2-30" draw_layer="normal" build="5" extract="10" through="true" crack="true" stayon="true" pak="Highland DLC">
+        <params>
+            <param name="sound_on_break" value="breaking dishes" />
+        </params>
+    </block>
+    <block name="rock_hl_01" type="simple" properties="editor=DLC_highland,user_mirror_switch,can_fall,no_break_fall,stony,draw_align=down,scale=1.32" file="gfx/HighlandDLC/blocks/rock_hl_01.png" resource="stone-3|5,sand-1|2" draw_layer="normal" build="10" extract="50" through="true" pak="Highland DLC" />
+    <block name="rock_hl_02" type="simple" properties="editor=DLC_highland,user_mirror_switch,can_fall,no_break_fall,stony,draw_align=down,scale=2.00" file="gfx/HighlandDLC/blocks/rock_hl_02.png" resource="stone-3|6,wood-3|6,plank-3|6,nail-1|2,money-1-10,sand-1|3-50,rope-1-50,iron-1|5,money-1-30" draw_layer="normal" build="10" extract="50" through="true" pak="Highland DLC" />
+    <block name="rock_hl_03" type="simple" properties="editor=DLC_highland,user_mirror_switch,can_fall,no_break_fall,stony,draw_align=down,scale=1.70,two_layers" file="gfx/HighlandDLC/blocks/rock_hl_03.png" resource="stone-2|3,wood-1|3,plank-1|3,nail-1-50,sand-1-50,iron-1|2,money-1-30" draw_layer="normal" build="10" extract="50" through="true" pak="Highland DLC">
+        <layers count="1">
+            <layer file="gfx/HighlandDLC/blocks/rock_hl_07.png" properties="draw_align=down,scale=1.70" />
+        </layers>
+    </block>
+    <block name="rock_hl_04" type="simple" properties="editor=DLC_highland,user_mirror_switch,can_fall,no_break_fall,stony,draw_align=down,scale=1.60" file="gfx/HighlandDLC/blocks/rock_hl_04.png" resource="stone-2|3,wood-1|3,plank-1|3,nail-1-50,sand-1-50,iron-1|2,money-1-30" draw_layer="normal" build="10" extract="50" through="true" pak="Highland DLC" />
+    <block name="rock_hl_05" type="simple" properties="editor=DLC_highland,user_mirror_switch,can_fall,no_break_fall,stony,draw_align=down,scale=2.00" file="gfx/HighlandDLC/blocks/rock_hl_05.png" resource="stone-2|3,wood-1|3,plank-1|3,nail-1-50,sand-1-50,iron-1|2,money-1-30" draw_layer="normal" build="10" extract="50" through="true" pak="Highland DLC" />
+    <block name="rock_hl_06" type="simple" properties="editor=DLC_highland,user_mirror_switch,can_fall,no_break_fall,stony,draw_align=down,scale=1.50" file="gfx/HighlandDLC/blocks/rock_hl_06.png" resource="stone-2|3,wood-1|3,plank-1|3,nail-1-50,sand-1-50,iron-1|2,web-1-70,money-1-30" draw_layer="normal" build="10" extract="50" through="true" pak="Highland DLC" />
+    <block name="poor_wall_plaster_broken" type="simple" properties="editor=DLC_highland,wooden,can_replace" resource="poor_wall_plaster_broken" draw_layer="normal" build="5" extract="25" through="true" pak="Highland DLC">
+        <file path="gfx/HighlandDLC/blocks/poor_wall_plaster_broken_01.png" />
+        <file path="gfx/HighlandDLC/blocks/poor_wall_plaster_broken_02.png" />
+        <file path="gfx/HighlandDLC/blocks/poor_wall_plaster_broken_03.png" />
+        <file path="gfx/HighlandDLC/blocks/poor_wall_plaster_broken_04.png" />
+    </block>
+    <block name="column_prop_broken" atlas="gfx/HighlandDLC/blocks/column_prop_broken.png" type="column" properties="editor=DLC_highland,true,wooden" atlas_element="column_base" resource="column_prop_broken" build="10" extract="25" stayon="true" pak="Highland DLC">
+        <collumn>
+            <block name="top" atlas_element="column_top" properties="" build="1" extract="1" through="true" crack="false" ontop="true" stayon="true" />
+            <block name="trunk" atlas_element="column_tile" properties="" build="1" extract="1" through="true" crack="false" ontop="true" stayon="true" />
+            <block name="bottom" atlas_element="column_bottom" properties="" build="1" extract="1" through="true" crack="false" ontop="true" stayon="true" />
+        </collumn>
+    </block>
+    <block name="column_ordinary_broken" atlas="gfx/HighlandDLC/blocks/column_ordinary_broken.png" type="column" properties="editor=DLC_highland,true,stony" atlas_element="column_base" resource="column_ordinary_broken" build="10" extract="50" stayon="true" pak="Highland DLC">
+        <collumn>
+            <block name="top" atlas_element="column_top" properties="" build="1" extract="1" through="true" crack="false" ontop="true" stayon="true" />
+            <block name="trunk" atlas_element="column_tile" properties="" build="1" extract="1" through="true" crack="false" ontop="true" stayon="true" />
+            <block name="bottom" atlas_element="column_bottom" properties="" build="1" extract="1" through="true" crack="false" ontop="true" stayon="true" />
+        </collumn>
+    </block>
+    <block name="column_luxury_broken" atlas="gfx/HighlandDLC/blocks/column_luxury_broken.png" type="column" properties="editor=DLC_highland,true,stony,=true,=true" atlas_element="column_base" resource="column_luxury_broken" build="10" extract="100" stayon="true" pak="Highland DLC">
+        <collumn>
+            <block name="top" atlas_element="column_top" properties="" build="10" extract="100" through="true" crack="false" ontop="true" stayon="true" />
+            <block name="trunk" atlas_element="column_tile" properties="" build="10" extract="100" through="true" crack="false" ontop="true" stayon="true" />
+            <block name="bottom" atlas_element="column_bottom" properties="" build="10" extract="100" through="true" crack="false" ontop="true" stayon="true" />
+        </collumn>
+    </block>
+    <block name="interroom_ordinary_door_broken" type="simple" properties="editor=DLC_highland,user_mirror_switch,stony,two_layers" file="gfx/HighlandDLC/blocks/interroom_ordinary_door_broken_opened.png" resource="stone-2|3,iron-1|2,steel-1|2,stone_wall-1|2" draw_layer="normal" build="5" extract="20" through="true" crack="true" ontop="true" pak="Highland DLC">
+        <layers count="1">
+            <layer file="gfx/HighlandDLC/blocks/interroom_ordinary_door_broken_forw.png" properties="" />
+        </layers>
+    </block>
+    <block name="strong_hatch_broken" type="simple" properties="editor=DLC_highland,user_mirror_switch,metallic,draw_align=down,draw_offset_x=0.0,draw_offset_y=25.0,two_layers" file="gfx/HighlandDLC/blocks/strong_hatch_broken_o.png" resource="strong_hatch_broken" draw_layer="normal" build="10" extract="100" through="true" ontop="true" crack="true" pak="Highland DLC">
+        <layers count="1">
+            <layer file="gfx/HighlandDLC/blocks/strong_hatch_broken_layer.png" properties="draw_align=down,draw_offset_x=0.0,draw_offset_y=45.0" />
+        </layers>
+    </block>
+    <block name="kitchen_light_broken" type="simple" properties="editor=DLC_highland,replace_with=kitchen_light,wooden,narrow,draw_align=down" file="gfx/HighlandDLC/blocks/kitchen_light_broken.png" resource="web-1-50" draw_layer="normal" build="5" extract="5" through="true" crack="true" ontop="true" pak="Highland DLC" />
+    <block name="lamp_wall_broken" type="simple" properties="editor=DLC_highland,replace_with=lamp_wall,wooden,narrow,scale=0.60" file="gfx/HighlandDLC/blocks/lamp_wall_broken.png" resource="web-1-50" draw_layer="normal" build="5" extract="5" crack="true" through="true" ontop="true" pak="Highland DLC" />
+    <block name="staircase_with_railinge_broken" type="column" properties="true,editor=DLC_highland,can_climb,ladder=x1.7,metallic,narrow,no_chain_crash" resource="staircase_with_railinge_broken" atlas="gfx/HighlandDLC/blocks/staircase_with_railinge_broken.png" atlas_element="column_base" ontop="true" build="5" extract="10" crack="true" through="true" stayon="true" pak="Highland DLC">
+        <collumn>
+            <block name="top" atlas_element="column_top" properties="narrow,ladder=x1.7" build="5" extract="10" through="true" crack="false" ontop="true" stayon="true" />
+            <block name="trunk" atlas_element="column_tile" properties="narrow,ladder=x1.7" build="5" extract="10" through="true" crack="false" ontop="true" stayon="true" />
+            <block name="bottom" atlas_element="column_bottom" properties="narrow,ladder=x1.7" build="5" extract="10" through="true" crack="false" ontop="true" stayon="true" />
+        </collumn>
+    </block>
+    <block name="staircase_without_railings_broken" atlas="gfx/HighlandDLC/blocks/staircase_without_railings_broken.png" type="column" properties="true,editor=DLC_highland,can_climb,ladder=x1.2,metallic,narrow,no_chain_crash" atlas_element="column_base" resource="staircase_without_railings_broken" ontop="true" build="5" extract="10" crack="true" through="true" stayon="true" pak="Highland DLC">
+        <collumn>
+            <block name="top" atlas_element="column_top" properties="narrow,ladder=x1.2" build="5" extract="10" through="true" crack="false" ontop="true" stayon="true" />
+            <block name="trunk" atlas_element="column_tile" properties="narrow,ladder=x1.2" build="5" extract="10" through="true" crack="false" ontop="true" stayon="true" />
+            <block name="bottom" atlas_element="column_bottom" properties="narrow,ladder=x1.2" build="5" extract="10" through="true" crack="false" ontop="true" stayon="true" />
+        </collumn>
+    </block>
+    <block name="big_carpenter_hl" type="entity" item="big_carpenter_hl" properties="editor=DLC_highland" resource="big_carpenter_hl" build="9999" extract="9999" pak="Highland DLC" />
+    <block name="big_forge_hl" type="entity" item="big_forge_hl" properties="editor=DLC_highland" resource="big_forge_hl" build="9999" extract="9999" pak="Highland DLC" />
+    <block name="big_kitchen_hl" type="entity" item="big_kitchen_hl" properties="editor=DLC_highland" resource="big_kitchen_hl" build="9999" extract="9999" pak="Highland DLC" />
+    <block name="kitchen_hl" type="entity" item="kitchen_hl" properties="editor=DLC_highland" resource="kitchen_hl" build="9999" extract="9999" pak="Highland DLC" />
+    <block name="big_laboratory_hl" type="entity" item="big_laboratory_hl" properties="editor=DLC_highland" resource="big_laboratory_hl" build="9999" extract="9999" pak="Highland DLC" />
+    <block name="big_workshop_hl" type="entity" item="big_workshop_hl" properties="editor=DLC_highland" resource="big_workshop_hl" build="9999" extract="9999" pak="Highland DLC" />
+    <block name="kitchen_hl_broken" type="simple" properties="editor=DLC_highland,replace_with=kitchen_hl,draw_align=down,scale=2.00" resource="" draw_layer="normal" build="10" extract="100" file="gfx/HighlandDLC/blocks/kitchen_hl_broken.png" pak="Highland DLC" />
+    <block name="metal_wall" atlas="gfx/HighlandDLC/blocks/metal_wall.png" type="wall" properties="editor=DLC_highland,can_climb,metallic,can_replace" atlas_element="block" resource="metal_wall" draw_layer="front_a14" extract="500" stayon="true" crack="true" build="5" pak="Highland DLC">
+        <wall>
+            <block name="top" atlas_element="corner_left" properties="collide=up|left,offset=25%,narrow" build="5" extract="500" through="true" crack="true" />
+            <block name="trunk" atlas_element="ceiling" properties="collide=up,draw_align=up,offset=25%,narrow,scale_xaxis" build="5" extract="500" through="true" crack="true" />
+            <block name="bottom" atlas_element="corner_right" properties="collide=right|up,offset=25%,narrow" build="5" extract="500" through="true" crack="true" />
+            <block name="middle_left" atlas_element="wall_left" properties="collide=left,draw_align=left,offset=25%,narrow,scale_yaxis" build="5" extract="500" through="true" crack="true" />
+            <block name="middle_right" atlas_element="wall_right" properties="collide=right,draw_align=right,offset=25%,narrow,scale_yaxis" build="5" extract="500" through="true" crack="true" />
+        </wall>
+    </block>
+    <block name="metal_wall_broken" atlas="gfx/HighlandDLC/blocks/metal_wall_broken.png" type="wall" properties="editor=DLC_highland,can_climb,metallic,can_replace" atlas_element="block" resource="metal_wall_broken" draw_layer="front_a14" extract="250" stayon="true" crack="true" build="5" pak="Highland DLC">
+        <wall>
+            <block name="top" atlas_element="corner_left" properties="collide=up|left,offset=25%,narrow" build="5" extract="250" through="true" crack="true" />
+            <block name="trunk" atlas_element="ceiling" properties="collide=up,draw_align=up,offset=25%,narrow,scale_xaxis" build="5" extract="250" through="true" crack="true" />
+            <block name="bottom" atlas_element="corner_right" properties="collide=right|up,offset=25%,narrow" build="5" extract="250" through="true" crack="true" />
+            <block name="middle_left" atlas_element="wall_left" properties="collide=left,draw_align=left,offset=25%,narrow,scale_yaxis" build="5" extract="250" through="true" crack="true" />
+            <block name="middle_right" atlas_element="wall_right" properties="collide=right,draw_align=right,offset=25%,narrow,scale_yaxis" build="5" extract="250" through="true" crack="true" />
+        </wall>
+    </block>
+    <block name="drilling_machine_02" type="entity" properties="editor=DLC_highland,user_mirror_switch,draw_align=down,scale=5.00" resource="" build="999" extract="999" item="drilling_machine_02" pak="Highland DLC" />
+    <block name="drilling_machine_01" type="entity" properties="editor=DLC_highland,user_mirror_switch,draw_align=down,scale=5.00" resource="" build="999" extract="999" item="drilling_machine_01" pak="Highland DLC" />
+    <block name="main_gnome_statue_02" type="entity" properties="editor=DLC_highland,user_mirror_switch,draw_align=down,scale=7.00" resource="main_gnome_statue_02" build="100" extract="500" item="main_gnome_statue_02" />
+    <block name="main_gnome_statue_01" type="entity" properties="editor=DLC_highland,user_mirror_switch,draw_align=down,scale=7.00" resource="main_gnome_statue_01" build="100" extract="500" item="main_gnome_statue_01" />
+    <block name="entrance_rock_big_04" type="simple" properties="editor=DLC_highland,user_mirror_switch,stony,draw_align=down,scale=4.00,two_layers" resource="stone-5" draw_layer="normal" build="999" extract="999" through="true" pak="Highland DLC">
+        <layers count="1">
+            <layer file="gfx/HighlandDLC/blocks/entrance_rock_big_04.png" properties="draw_align=down,scale=4.00" />
+        </layers>
+    </block>
+    <block name="entrance_rock_big_03" type="simple" properties="editor=DLC_highland,user_mirror_switch,stony,draw_align=down,scale=3.00,two_layers" resource="stone" draw_layer="normal" build="999" extract="999" through="true" pak="Highland DLC">
+        <layers count="1">
+            <layer file="gfx/HighlandDLC/blocks/entrance_rock_big_03.png" properties="draw_align=down,scale=3.00" />
+        </layers>
+    </block>
+    <block name="boiler_broken_01" type="simple" properties="editor=DLC_highland,user_mirror_switch,can_fall,no_break_fall,metallic" file="gfx/HighlandDLC/blocks/boiler_broken_01.png" resource="iron-3|5" draw_layer="normal" build="5" extract="5" through="true" pak="Highland DLC" />
+    <block name="boiler_broken_02" type="simple" properties="editor=DLC_highland,user_mirror_switch,can_fall,no_break_fall,metallic" file="gfx/HighlandDLC/blocks/boiler_broken_02.png" resource="iron-5|8" draw_layer="normal" build="5" extract="5" through="true" pak="Highland DLC" />
+    <block name="boiler_broken_03" type="simple" properties="editor=DLC_highland,user_mirror_switch,can_fall,no_break_fall,metallic" file="gfx/HighlandDLC/blocks/boiler_broken_03.png" resource="iron-4|6" draw_layer="normal" build="5" extract="5" through="true" pak="Highland DLC" />
+    <block name="brazier_hl_01" type="simple" properties="editor=DLC_highland,stony" file="gfx/HighlandDLC/blocks/brazier_hl_01.png" resource="stone-2|3,sand-1|2" draw_layer="normal" build="25" extract="25" through="true" pak="Highland DLC" />
+    <block name="brazier_hl_02" type="simple" properties="editor=DLC_highland,can_fall,stony,draw_align=down,scale=2.00" file="gfx/HighlandDLC/blocks/brazier_hl_02.png" resource="stone-3|5,sand-1|3" draw_layer="normal" build="25" extract="25" through="true" pak="Highland DLC" />
+    <block name="column_entrance" atlas="gfx/HighlandDLC/blocks/column_entrance.png" type="column" properties="editor=DLC_highland,true,stony" atlas_element="column_base" resource="stone-2|3,sand-1|2" ontop="true" build="999" extract="999" pak="Highland DLC">
+        <collumn>
+            <block name="top" atlas_element="column_top" properties="" build="999" extract="999" through="true" crack="false" ontop="true" stayon="false" />
+            <block name="trunk" atlas_element="column_tile" properties="" build="999" extract="999" through="true" crack="false" ontop="true" stayon="false" />
+            <block name="bottom" atlas_element="column_bottom" properties="" build="999" extract="999" through="true" crack="false" ontop="true" stayon="false" />
+        </collumn>
+    </block>
+    <block name="entrance_rock_01" type="simple" properties="editor=DLC_highland,user_mirror_switch,stony" file="gfx/HighlandDLC/blocks/entrance_rock_01.png" resource="stone" draw_layer="normal" build="999" extract="999" through="true" pak="Highland DLC" />
+    <block name="entrance_rock_02" type="simple" properties="editor=DLC_highland,user_mirror_switch,stony" file="gfx/HighlandDLC/blocks/entrance_rock_02.png" resource="stone" draw_layer="normal" build="999" extract="999" through="true" pak="Highland DLC" />
+    <block name="entrance_rock_big_01" type="simple" properties="editor=DLC_highland,user_mirror_switch,stony,two_layers" resource="stone" draw_layer="normal" build="999" extract="999" through="true" pak="Highland DLC">
+        <layers count="1">
+            <layer file="gfx/HighlandDLC/blocks/entrance_rock_big_01.png" properties="" />
+        </layers>
+    </block>
+    <block name="entrance_rock_big_02" type="simple" properties="editor=DLC_highland,user_mirror_switch,stony,two_layers" resource="stone" draw_layer="normal" build="999" extract="999" through="true" pak="Highland DLC">
+        <layers count="1">
+            <layer file="gfx/HighlandDLC/blocks/entrance_rock_big_02.png" properties="" />
+        </layers>
+    </block>
+    <block name="main_gate_hl" type="entity" properties="editor=DLC_highland,draw_align=down,scale=7.00" resource="main_gate_hl" build="9999" extract="9999" item="main_gate_hl" />
+    <block name="big_safe_closed" type="simple" properties="editor=DLC_highland,can_fall,user_mirror_switch,replace_with=big_safe_broken,no_break_fall,metallic,draw_align=down,scale=2.00" file="gfx/HighlandDLC/blocks/big_safe_closed.png" resource="money-15|30,fire_essence-1-20,lightning_essence-1-20,gold_ingot-5|15,picture3-1-30,living_tree-1-20,mithril_ingot-5|15,wyvern_egg-1-20" through="true" draw_layer="normal" build="10" extract="1000" pak="Highland DLC">
+        <params>
+            <param name="sound_on_break" value="bank safe" />
+        </params>
+    </block>
+    <block name="big_safe_broken" type="simple" properties="editor=DLC_highland,can_fall,no_break_fall,metallic,draw_align=down,scale=2.00" file="gfx/HighlandDLC/blocks/big_safe_broken.png" resource="big_safe_broken" draw_layer="normal" build="10" extract="100" through="true" pak="Highland DLC" />
+    <block name="big_safe" type="simple" properties="editor=DLC_highland,can_fall,no_break_fall,metallic,draw_align=down,scale=2.00" file="gfx/HighlandDLC/blocks/big_safe.png" resource="big_safe" draw_layer="normal" build="10" extract="10" through="true" pak="Highland DLC" />
+    <block name="bookcase_closed" type="simple" properties="editor=DLC_highland,replace_with=bookcase_broken,can_fall,no_break_fall,wooden,draw_align=down,scale=3.00" file="gfx/HighlandDLC/blocks/bookcase_closed.png" resource="archer_skill-3|5-20,climber_skill-3|5-20,mage_skill-3|5-20,minner_skill-3|5-20,stonecutter_skill-3|5-20,swordsman_skill-3|5-20,paper-5|10,ink-3|10,pen-5|10,money-2|3" draw_layer="normal" build="5" extract="10" through="true" pak="Highland DLC">
+        <params>
+            <param name="sound_on_break" value="bookcase fall" />
+        </params>
+    </block>
+    <block name="armor_stand_04" type="simple" properties="editor=DLC_highland,user_mirror_switch,can_fall,metallic,draw_align=down,scale=1.20" file="gfx/HighlandDLC/blocks/armor_stand_04.png" resource="boot_patrol_mountain_broken-1-40,bow_patrol_mountain_broken-1-40,cuirass_patrol_mountain_broken-1-40,helmet_patrol_mountain_broken-1-40,weapon_patrol_mountain_broken-1-40,money-1|2-50" draw_layer="normal" build="5" extract="20" through="true" pak="Highland DLC" />
+    <block name="kitchen_cabinet_broken_01" type="simple" properties="editor=DLC_highland,user_mirror_switch,narrow,wooden" resource="kitchen_cabinet_broken_01" draw_layer="normal" build="5" extract="10" through="true" pak="Highland DLC">
+        <file path="gfx/HighlandDLC/blocks/kitchen_cabinet_broken_01.png" />
+        <file path="gfx/HighlandDLC/blocks/kitchen_cabinet_broken_02.png" />
+    </block>
+    <block name="rack_with_utensils_broken_01" type="simple" properties="editor=DLC_highland,user_mirror_switch,narrow,wooden" file="gfx/HighlandDLC/blocks/rack_with_utensils_broken_01.png" resource="wood-1|2,web-1-60,nail-1|2,rope-1-30" draw_layer="normal" build="3" extract="3" through="true" pak="Highland DLC" />
+    <block name="stacks_of_dishes_broken_01" type="simple" properties="editor=DLC_highland,user_mirror_switch,can_fall,narrow" file="gfx/HighlandDLC/blocks/stacks_of_dishes_broken_01.png" resource="plank-1|2,web-1|2-60,wood-1|3,splinters_hl-1|3,money-1-50" draw_layer="normal" build="3" extract="5" through="true" pak="Highland DLC">
+        <params>
+            <param name="sound_on_hit" value="breaking ceramics" />
+            <param name="sound_on_break" value="breaking ceramics" />
+        </params>
+    </block>
+    <block name="rock_hl_08" type="simple" properties="editor=DLC_highland,user_mirror_switch,can_fall,no_break_fall,stony,draw_align=down,scale=1.20" file="gfx/HighlandDLC/blocks/rock_hl_08.png" resource="stone-1|2" draw_layer="normal" build="10" extract="50" through="true" pak="Highland DLC" />
+    <block name="rock_hl_09" type="simple" properties="editor=DLC_highland,user_mirror_switch,can_fall,no_break_fall,stony,draw_align=down,scale=2.00" file="gfx/HighlandDLC/blocks/rock_hl_09.png" resource="stone-2|3,column_ordinary_broken,sand,money-1-30" draw_layer="normal" build="10" extract="50" through="true" pak="Highland DLC" />
+    <block name="rock_hl_10" type="simple" properties="editor=DLC_highland,user_mirror_switch,can_fall,no_break_fall,stony,draw_align=down,scale=2.00" file="gfx/HighlandDLC/blocks/rock_hl_10.png" resource="stone-1|2,plank-1|2,nail-1|2,wood-1|2,sand,money-1-30" draw_layer="normal" build="10" extract="50" through="true" pak="Highland DLC" />
+    <block name="rock_hl_11" type="simple" properties="user_mirror_switch,can_fall,no_break_fall,stony,draw_align=down,scale=1.27" file="gfx/HighlandDLC/blocks/rock_hl_11.png" resource="stone-1|2" draw_layer="normal" build="10" extract="50" through="true" pak="Highland DLC" />
+    <block name="rock_hl_12" type="simple" properties="editor=DLC_highland,user_mirror_switch,can_fall,no_break_fall,stony,draw_align=down,scale=1.29" file="gfx/HighlandDLC/blocks/rock_hl_12.png" resource="stone-1|2,wood-1-70,money-1-30" draw_layer="normal" build="10" extract="50" through="true" pak="Highland DLC" />
+    <block name="rock_hl_13" type="simple" properties="editor=DLC_highland,user_mirror_switch,can_fall,no_break_fall,stony,draw_align=down,scale=1.31" file="gfx/HighlandDLC/blocks/rock_hl_13.png" resource="stone-1|2,wood-1-70,money-1-30" draw_layer="normal" build="10" extract="50" through="true" pak="Highland DLC" />
+    <block name="rock_hl_14" type="simple" properties="editor=DLC_highland,user_mirror_switch,can_fall,no_break_fall,stony,draw_align=down,scale=2.00" file="gfx/HighlandDLC/blocks/rock_hl_14.png" resource="stone-1|3,wood-1|2,nail-1-80,sand,money-1-30" draw_layer="normal" build="10" extract="50" through="true" pak="Highland DLC" />
+    <block name="rock_hl_15" type="simple" properties="editor=DLC_highland,user_mirror_switch,can_fall,no_break_fall,stony,draw_align=down,scale=1.19" file="gfx/HighlandDLC/blocks/rock_hl_15.png" resource="stone" draw_layer="normal" build="10" extract="50" through="true" pak="Highland DLC" />
+    <block name="rock_hl_16" type="simple" properties="editor=DLC_highland,user_mirror_switch,can_fall,no_break_fall,stony,draw_align=down,scale=2.00" file="gfx/HighlandDLC/blocks/rock_hl_16.png" resource="stone-2|4,plank-1|2,nail-1|2-80,column_ordinary_broken,money-1-30" draw_layer="normal" build="10" extract="50" ontop="true" through="true" pak="Highland DLC" />
+    <block name="rock_hl_17" type="simple" properties="editor=DLC_highland,user_mirror_switch,can_fall,no_break_fall,stony,draw_align=down,scale=1.36" file="gfx/HighlandDLC/blocks/rock_hl_17.png" resource="stone,wood-1|2,money-1-30" draw_layer="normal" build="10" extract="50" through="true" pak="Highland DLC" />
+    <block name="rock_hl_18" type="simple" properties="editor=DLC_highland,user_mirror_switch,can_fall,no_break_fall,stony,draw_align=down" file="gfx/HighlandDLC/blocks/rock_hl_18.png" resource="stone" draw_layer="normal" build="10" extract="50" through="true" pak="Highland DLC" />
+    <block name="rock_hl_19" type="simple" properties="editor=DLC_highland,user_mirror_switch,can_fall,no_break_fall,stony,draw_align=down" file="gfx/HighlandDLC/blocks/rock_hl_19.png" resource="stone,wood-1-50,money-1-30" draw_layer="normal" build="10" extract="50" through="true" pak="Highland DLC" />
+    <block name="rock_hl_20" type="simple" properties="editor=DLC_highland,user_mirror_switch,can_fall,no_break_fall,stony,draw_align=down" file="gfx/HighlandDLC/blocks/rock_hl_20.png" resource="stone" draw_layer="normal" build="10" extract="50" through="true" pak="Highland DLC" />
+    <block name="stacks_of_dishes_broken_03" type="simple" properties="editor=DLC_highland,user_mirror_switch,can_fall" file="gfx/HighlandDLC/blocks/stacks_of_dishes_broken_03.png" resource="nail-1|2,iron-1|2,wood-1|2,glass-1|2,splinters_hl-1|3,money-1-50" draw_layer="normal" build="3" extract="5" through="true" pak="Highland DLC">
+        <params>
+            <param name="sound_on_hit" value="breaking ceramics" />
+            <param name="sound_on_break" value="breaking ceramics" />
+        </params>
+    </block>
+    <block name="stacks_of_dishes_broken_02" type="simple" properties="editor=DLC_highland,user_mirror_switch,can_fall" file="gfx/HighlandDLC/blocks/stacks_of_dishes_broken_02.png" resource="wood-1|2,plank-1-60,nail-1|3,iron-1-60,splinters_hl,money-1-50" draw_layer="normal" build="3" extract="5" through="true" pak="Highland DLC">
+        <params>
+            <param name="sound_on_hit" value="breaking ceramics" />
+            <param name="sound_on_break" value="breaking ceramics" />
+        </params>
+    </block>
+    <block name="arch_hl" atlas="gfx/HighlandDLC/blocks/arch_hl.png" type="column" properties="editor=DLC_highland,no_break" atlas_element="column_base" resource="arch_hl" ontop="true" build="1" extract="1" pak="Highland DLC">
+        <collumn>
+            <block name="top" atlas_element="column_top" properties="" build="1" extract="1" through="true" crack="false" ontop="true" stayon="false" />
+            <block name="trunk" atlas_element="column_tile" properties="" build="1" extract="1" through="true" crack="false" ontop="true" stayon="false" />
+            <block name="bottom" atlas_element="column_bottom" properties="" build="1" extract="1" through="true" crack="false" ontop="true" stayon="false" />
+        </collumn>
+    </block>
+    <block name="service_warehouse_spawn_place" type="simple" properties="editor=DLC_highland,behaviour_only,draw_align=down,scale_yaxis" file="gfx/HighlandDLC/item_icons/warehouse_spawn_place.png" resource="" draw_layer="normal" build="9999" extract="9999" ontop="true" pak="Highland DLC">
+        <gameobject tags="level_warehouse">
+            <behaviour value="SpawnMarkerBehaviour" />
+        </gameobject>
+    </block>
+    <block name="service_shop_spawn_place" type="simple" properties="editor=DLC_highland,behaviour_only" file="gfx/HighlandDLC/item_icons/shop_spawn_place.png" resource="" draw_layer="normal" build="1" extract="1" pak="Highland DLC">
+        <gameobject tags="level_shop">
+            <behaviour value="SpawnMarkerBehaviour" />
+        </gameobject>
+    </block>
+    <block name="shop_elf" type="entity" item="shop_elf" properties="" resource="shop_elf" build="1" extract="1" pak="Highland DLC" />
+    <block name="cave_orcs_totem" type="entity" properties="editor=DLC_highland" item="cave_orcs_totem" resource="cave_orcs_totem" build="50" extract="500" pak="Highland DLC" />
+    <block name="hidden_hole" type="entity" item="hidden_hole" properties="editor=DLC_highland" resource="hidden_hole" build="1" extract="400" pak="Highland DLC" />
+    <block name="loading_crane_01" type="entity" properties="editor=DLC_highland,no_break,draw_align=down,scale=4.50" resource="loading_crane_01" build="50" extract="300" item="loading_crane_01" pak="Highland DLC" />
+    <block name="loading_crane_02" type="entity" properties="editor=DLC_highland,no_break,draw_align=down,scale=4.50" resource="loading_crane_02" build="50" extract="300" item="loading_crane_02" pak="Highland DLC" />
+    <block name="lot_of_ore_01" type="simple" properties="editor=DLC_highland,can_fall,no_break_fall,wide,draw_align=down,scale=3.00" file="gfx/HighlandDLC/blocks/lot_of_ore_01.png" resource="iron-10|15,dirt-3|5" draw_layer="normal" build="50" extract="300" through="true" pak="Highland DLC" />
+    <block name="lot_of_ore_02" type="simple" properties="editor=DLC_highland,can_fall,no_break_fall,draw_align=down,scale=2.00" file="gfx/HighlandDLC/blocks/lot_of_ore_02.png" resource="iron-5,dirt-1|3" draw_layer="normal" build="50" extract="250" through="true" pak="Highland DLC" />
+    <block name="lot_of_ore_03" type="simple" properties="editor=DLC_highland,can_fall,no_break_fall" file="gfx/HighlandDLC/blocks/lot_of_ore_03.png" resource="iron-1|3" draw_layer="normal" build="50" extract="150" through="true" pak="Highland DLC" />
+    <block name="many_ingots_01" type="simple" properties="editor=DLC_highland,can_fall,no_break_fall,metallic,draw_align=down,scale=2.00" file="gfx/HighlandDLC/blocks/many_ingots_01.png" resource="steel-8|10" draw_layer="normal" build="50" extract="250" through="true" pak="Highland DLC" />
+    <block name="many_ingots_02" type="simple" properties="editor=DLC_highland,can_fall,no_break_fall,metallic" file="gfx/HighlandDLC/blocks/many_ingots_02.png" resource="steel-4|6" draw_layer="normal" build="25" extract="150" through="true" pak="Highland DLC" />
+    <block name="melting_plant_01" type="entity" properties="editor=DLC_highland,no_break,draw_align=down,scale=6.00" resource="melting_plant_01" build="9999" extract="9999" item="melting_plant_01" pak="Highland DLC" />
+    <block name="melting_plant_02" type="entity" properties="editor=DLC_highland,no_break,draw_align=down,scale=2.50" resource="melting_plant_02" build="9999" extract="9999" item="melting_plant_02" pak="Highland DLC" />
+    <block name="tractor_bucket_01" type="entity" properties="editor=DLC_highland,no_break,draw_align=down,scale=4.50" resource="tractor_bucket_01" build="9999" extract="9999" item="tractor_bucket_01" pak="Highland DLC" />
+    <block name="trolley_hl_01" type="simple" properties="editor=DLC_highland,can_fall,no_break_fall,wooden" file="gfx/HighlandDLC/blocks/trolley_hl_01.png" resource="trolley_hl_01" draw_layer="normal" build="5" extract="5" through="true" pak="Highland DLC" />
+    <block name="large_crystal_of_the_main_hall" type="entity" properties="editor=DLC_highland,no_break,draw_align=down,scale=10.00" resource="large_crystal_of_the_main_hall" build="9999" extract="9999" item="large_crystal_of_the_main_hall" pak="Highland DLC" />
+    <block name="rock_hl_21" type="simple" properties="editor=DLC_highland,stony,draw_align=down,scale=2.66" file="gfx/HighlandDLC/blocks/rock_hl_21.png" resource="stone-3|5" draw_layer="normal" build="10" extract="50" through="true" pak="Highland DLC" />
+    <block name="royal_throne_dwarves" type="entity" properties="editor=DLC_highland,no_break" spine="royal_throne_dwarves" resource="royal_throne_dwarves" build="9999" extract="9999" item="royal_throne_dwarves" pak="Highland DLC" />
+    <block name="water_bottle_hl" type="simple" properties="can_fall,editor=DLC_highland,draw_align=down,scale=0.77" file="gfx/HighlandDLC/blocks/water_bottle_hl.png" resource="water_bottle_hl" draw_layer="normal" build="5" extract="5" through="true" pak="Highland DLC" />
+    <block name="elevator_blockage_01" type="simple" properties="editor=DLC_highland,stony,scale=3.10,two_layers" resource="stone-3|5,iron-3|5" draw_layer="normal" build="250" extract="250" pak="Highland DLC">
+        <layers count="1">
+            <layer file="gfx/HighlandDLC/blocks/elevator_blockage_01.png" properties="scale=3.10" />
+        </layers>
+    </block>
+    <block name="engine_compartment_01" type="simple" properties="editor=DLC_highland,no_break,metallic,draw_align=up,scale=3.00" file="gfx/HighlandDLC/blocks/engine_compartment_01.png" resource="iron-3|5" draw_layer="normal" build="250" extract="250" through="true" pak="Highland DLC" />
+    <block name="production_container_03" type="simple" properties="editor=DLC_highland,can_fall,no_break_fall,metallic,draw_align=down,scale=3.00" file="gfx/HighlandDLC/blocks/production_container_03.png" resource="stone-10|20-10,sand-10|20-10,dirt-10|20-10,wood-20|30-10,plank-5|10-10,portal_krs_blue-3|5-10,portal_krs_dblue-3|5-10,portal_krs_green-3|5-10,portal_krs_violet-3|5-10,portal_krs_red-3|5-10,metal_wall-3|5-10,nail-1|3" draw_layer="normal" build="50" extract="250" through="true" pak="Highland DLC" />
+    <block name="production_container_02" type="simple" properties="editor=DLC_highland,can_fall,no_break_fall,metallic,draw_align=down,scale=3.00" file="gfx/HighlandDLC/blocks/production_container_02.png" resource="gold-5|10-10,iron-10|20-10,mithril-5|10-10,silver-10|20-10,coal-20|40-30,metal_wall-3|5,nail-1|3" draw_layer="normal" build="50" extract="250" through="true" pak="Highland DLC" />
+    <block name="production_container_01" type="simple" properties="editor=DLC_highland,can_fall,no_break_fall,metallic,draw_align=down,scale=3.00" file="gfx/HighlandDLC/blocks/production_container_01.png" resource="gold_ingot-3|6-10,mithril_ingot-3|6-10,silver_ingot-3|6-10,steel-5|10-10,metal_wall-3|5,nail-1|3" draw_layer="normal" build="50" extract="250" through="true" pak="Highland DLC" />
+    <block name="production_box_03" type="simple" properties="editor=DLC_highland,can_fall,no_break_fall,wooden,draw_align=down,scale=3.00" file="gfx/HighlandDLC/blocks/production_box_03.png" resource="wooden_table-1|2-10,wooden_chest-1|2-10,wall_clock-1|2-10,stained_window-4-10,rich_wall_01-6|12-10,poor_wall_01-6|12-10,poor_wall_02-6|12-10,pennant-2|3-10,ordinary_chair-2|3-10,corridor_light-4|8-10,comfortable_bed-2|4-10,chair_wooden_02-2-10,bed_barracks_02-2|3-10,plank-2|5,nail-1|3" draw_layer="normal" build="50" extract="250" through="true" pak="Highland DLC" />
+    <block name="production_box_02" type="simple" properties="editor=DLC_highland,can_fall,no_break_fall,wooden,draw_align=down,scale=3.00" file="gfx/HighlandDLC/blocks/production_box_02.png" resource="boot_patrol_mountain-1-10,boot_patrol_mountain_broken-1|2-10,cuirass_patrol_mountain-1-10,cuirass_patrol_mountain_broken-1|2-10,helmet_patrol_mountain-1-10,helmet_patrol_mountain_broken-1|2-10,boot_guardians_mountain-1-10,boot_guardians_mountain_broken-1|2-10,cuirass_guardians_mountain-1-10,cuirass_guardians_mountain_broken-1|2-10,helmet_guardians_mountain-1-10,helmet_guardians_mountain_broken-1|2-10,shield_guardians_mountain-1-10,shield_guardians_mountain_broken-1|2-10,weapon_guardians_mountain-1-10,weapon_guardians_mountain_broken-1|2-10,plank-2|5,nail-1|3" draw_layer="normal" build="50" extract="250" through="true" pak="Highland DLC" />
+    <block name="production_box_01" type="simple" properties="editor=DLC_highland,can_fall,no_break_fall,wooden,draw_align=down,scale=3.00" file="gfx/HighlandDLC/blocks/production_box_01.png" resource="archer_glove,backpack_01,bow_arrow_fire-5|10-10,flame_fuel_heat-5|10-10,grinding_stone-2|5-10,saw-2|5-10,wood_tower_2-3|5-5,chopper_iron-2|3-10,pick_iron-2|3-10,catapult_tower-1|2-5,warrior_training-1|2-5,ladders_kit-1|2-10,vivern_baby-1-3,scissors-1-10,bow_arrow_silver-10|20-10,pick_silver-1|2-10,pick_steel-1|2-10,trap_wood-5|10-10,weapon_patrol_mountain-1-10,plank-2|5,nail-1|3,shield_guardians_mountain-2|3-15,weapon_guardians_mountain-2|3-15" draw_layer="normal" build="50" extract="250" through="true" pak="Highland DLC" />
+    <block name="stones_for_machine_tools_04" type="simple" properties="editor=DLC_highland,can_fall,no_break_fall,stony,draw_align=down,scale=3.00,two_layers" resource="stone-3|5" draw_layer="normal" build="100" extract="300" through="true" pak="Highland DLC">
+        <layers count="1">
+            <layer file="gfx/HighlandDLC/blocks/stones_for_machine_tools_04.png" properties="draw_align=down,scale=3.00" />
+        </layers>
+    </block>
+    <block name="stones_for_machine_tools_03" type="simple" properties="editor=DLC_highland,can_fall,no_break_fall,stony,draw_align=down,scale=2.00,two_layers" resource="stone-2|3" draw_layer="normal" build="100" extract="300" through="true" pak="Highland DLC">
+        <layers count="1">
+            <layer file="gfx/HighlandDLC/blocks/stones_for_machine_tools_03.png" properties="draw_align=down,scale=2.00" />
+        </layers>
+    </block>
+    <block name="stones_for_machine_tools_02" type="simple" properties="editor=DLC_highland,can_fall,no_break_fall,stony,draw_align=down,two_layers" resource="stone-1|2" draw_layer="normal" build="100" extract="300" through="true" pak="Highland DLC">
+        <layers count="1">
+            <layer file="gfx/HighlandDLC/blocks/stones_for_machine_tools_02.png" properties="draw_align=down" />
+        </layers>
+    </block>
+    <block name="stones_for_machine_tools_01" type="simple" properties="editor=DLC_highland,can_fall,no_break_fall,stony,draw_align=down,scale=2.00,two_layers" resource="stone-3|5" draw_layer="normal" build="100" extract="300" through="true" pak="Highland DLC">
+        <layers count="1">
+            <layer file="gfx/HighlandDLC/blocks/stones_for_machine_tools_01.png" properties="draw_align=down,scale=2.00" />
+        </layers>
+    </block>
+    <block name="Additional_warehouse_hl" type="entity" properties="no_break,editor=DLC_highland" spine="Additional_warehouse_hl" spine_ani="idle" resource="Additional_warehouse_hl" build="1" extract="1" item="Additional_warehouse_hl" pak="Highland DLC" />
+    <block name="service_hidden_ladder" type="simple" properties="editor=DLC_highland,can_climb,service_item,no_render,scale_yaxis" through="true" file="gfx/level_tiles/craft_constructions/portable_ladder.png" resource="" draw_layer="normal" build="1" extract="1" stayon="true" pak="Highland DLC" />
+    <block name="cave_orcs_camp" type="entity" properties="editor=DLC_highland" spine="cave_orcs_buildings" resource="cave_orcs_camp" build="1" extract="1" item="cave_orcs_camp" pak="Highland DLC" />
+    <block name="cave_orcs_hatch_01" type="entity" properties="editor=DLC_highland" spine="cave_orcs_hatch_01" resource="cave_orcs_hatch_01" build="1" extract="1" item="cave_orcs_hatch_01" pak="Highland DLC" />
+    <block name="cave_orcs_hatch_02" type="entity" properties="editor=DLC_highland" spine="cave_orcs_hatch_02" resource="cave_orcs_hatch_02" build="1" extract="1" item="cave_orcs_hatch_02" pak="Highland DLC" />
+    <block name="cave_orcs_hatch_03" type="entity" properties="editor=DLC_highland" spine="cave_orcs_hatch_03" resource="cave_orcs_hatch_03" build="1" extract="1" item="cave_orcs_hatch_03" pak="Highland DLC" />
+    <block name="torch_orcs_01" type="simple" properties="light=2,can_fall,no_break_fall,wooden,draw_align=down,scale=1.57" effect="fire.xml" effect_offset="0.00,-1.00" file="gfx/HighlandDLC/blocks/torch_orcs_01.png" resource="wood-2|3,rope-1|2,iron-1|2,silver-1|10,gold-1|10" draw_layer="normal" build="1" extract="100" through="true" pak="Highland DLC" />
+    <block name="torch_orcs_02" type="simple" properties="light=2,can_fall,no_break_fall,wooden,editor=DLC_highland,draw_align=down,scale=1.50" effect="fire.xml" effect_offset="0.00,-0.80" file="gfx/HighlandDLC/blocks/torch_orcs_02.png" resource="wood-3|5,rope-1|2" draw_layer="normal" build="1" extract="100" through="true" pak="Highland DLC" />
+    <block name="torch_orcs_03" type="simple" properties="light=2,can_fall,no_break_fall,wooden,editor=DLC_highland,draw_align=down,scale=1.58" effect="fire.xml" effect_offset="0.00,-0.80" file="gfx/HighlandDLC/blocks/torch_orcs_03.png" resource="wood-3|5" draw_layer="normal" build="1" extract="100" through="true" pak="Highland DLC" />
+    <block name="high_tree_fir" file="gfx\Spine\environment\tree4_1" extract="7" growth="true" through="true" resource="wood-2,resin-1-50" nodigunder="true" crack="false" ontop="true" properties="tree,apply_tool2,max_height=110,props=dirt|snow,param1=tree4" pak="Highland DLC">
+        <collumn>
+            <block name="top" file="gfx\Spine\environment\tree4_1" through="true" resource="wood-2,resin-2-50,needle-1-15" crack="false" ontop="true" />
+            <block name="trunk" file="gfx\Spine\environment\tree4_2" through="true" resource="wood-2,resin-2-50,needle-1-15" crack="false" ontop="true" />
+            <block name="bottom" file="gfx\Spine\environment\tree4_2" through="true" resource="wood-2,resin-2-50,needle-1-15" crack="false" ontop="true" />
+        </collumn>
+    </block>
+    <block name="high_tree_pine" file="gfx\Spine\environment\tree3_1" extract="7" growth="true" through="true" resource="wood-2,resin-1-50,cone" nodigunder="true" crack="false" ontop="true" properties="tree,apply_tool2,max_height=110,props=dirt|snow,param1=tree3" pak="Highland DLC">
+        <collumn>
+            <block name="top" file="gfx\Spine\environment\tree3_1" through="true" resource="wood-2,resin-2-50,cone" crack="false" ontop="true" />
+            <block name="trunk" file="gfx\Spine\environment\tree3_2" through="true" resource="wood-2,resin-2-50,cone" crack="false" ontop="true" />
+            <block name="bottom" file="gfx\Spine\environment\tree3_2" through="true" resource="wood-2,resin-2-50,cone" crack="false" ontop="true" />
+        </collumn>
+    </block>
+    <block name="high_tree_black" file="gfx\Spine\environment\wint_tree1_3" extract="7" growth="true" through="true" resource="wood" nodigunder="true" crack="false" ontop="true" properties="tree,apply_tool2,max_height=110,props=dirt|snow,param1=tree_wint" pak="Highland DLC">
+        <collumn>
+            <block name="top" file="gfx\Spine\environment\wint_tree1_3" through="true" resource="wood" crack="false" ontop="true" />
+            <block name="trunk" file="gfx\Spine\environment\wint_tree1_2" through="true" resource="wood" crack="false" ontop="true" />
+            <block name="bottom" file="gfx\Spine\environment\wint_tree1_1" through="true" resource="wood" crack="false" ontop="true" />
+        </collumn>
+    </block>
+    <block name="high_bush_snow" file="gfx\level_tiles\tile\Level_Snowland\bush_snow1" extract="3" growth="true" through="true" resource="wood,berries-3,leaves-1-50" nodigunder="true" crack="false" ontop="true" properties="tree,apply_tool2,max_height=110,props=dirt|snow,param1=snow_bush" pak="Highland DLC" />
+    <block name="high_bush_snow1" file="gfx\level_tiles\tile\Level_Snowland\bush_snow1" extract="3" growth="true" through="true" resource="wood,berries-3,leaves-1-50" nodigunder="true" crack="false" ontop="true" properties="tree,apply_tool2,max_height=110,props=dirt|snow,param1=snow_bush2" pak="Highland DLC" />
+    <block name="workbench_hl" build="1" extract="1" type="entity" item="workbench_hl" properties="editor=DLC_highland" resource="workbench_hl" pak="Highland DLC" />
+    <block name="ceiling_chandelier" type="simple" properties="light=3,stony,draw_align=up,scale=1.55" file="gfx/HighlandDLC/blocks/ceiling_chandelier.png" resource="ceiling_chandelier" draw_layer="normal" build="1" extract="1" pak="Highland DLC" />
+    <block name="ceiling_chandelier_broken" type="simple" properties="metallic,draw_align=up,scale=1.97" file="gfx/HighlandDLC/blocks/ceiling_chandelier_broken.png" resource="ceiling_chandelier_broken" draw_layer="normal" build="1" extract="1" pak="Highland DLC" />
+    <block name="disable_device" type="entity" properties="" spine="signs" spine_skin="not_build" resource="disable_device" item="disable_device" build="1" extract="1" pak="Highland DLC" />
+    <block name="hand_flare" type="entity" item="hand_flare" properties="" resource="hand_flare" build="1" extract="1" pak="Highland DLC" />
+</root>

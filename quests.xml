@@ -1,0 +1,209 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <quest name="cut_tree" title="%CutthetreeT" desc="%CutthetreeD" file="gfx\level_tiles\craft_tools\axe\axe" tech="basic_tools_making" important="true" auto="true">
+    <require>
+      <dig_property prop="tree" count="1" />
+    </require>
+    <!--<awards exp="99999999"/>-->
+    <!--<awards exp="10" resources="chopper_iron-2,pick_iron-3"/>-->
+  </quest>
+  <quest name="dig_tunnel" title="%DigatunnelT" desc="%DigatunnelD" file="gfx\level_tiles\craft_tools\pick\pick_iron" tech="basic_tools_making" important="true" auto="true">
+    <require>
+      <dig_tunnel block="dirt,dirt_under,stone,sand,snow" series="3" include_parents="true" />
+      <!--вырыть последовательно 3 блока-->
+    </require>
+    <!--<awards exp="15"/>-->
+  </quest>
+  <quest name="collect_sand" title="%CollectasandT" desc="%CollectasandD" file="gfx\level_tiles\craft_res\craft_send_01" activate_on_process="true" tech="basic_processing" important="true" auto="true">
+    <require>
+      <dig_property prop="sand" count="10" />
+      <!--Квест выполнен: После добычи 5 блоков песка-->
+    </require>
+  </quest>
+
+  <quest name="collect_stone" title="%CollectstonesT" desc="%CollectstonesD" file="gfx\level_tiles\craft_res\craft_stone_01" important="true" activate_on_process="true" auto="true">
+    <require>
+      <dig_property prop="stone" count="10" />
+      <!--Квест выполнен: После добычи 5 каменных блоков -->
+    </require>
+  </quest>
+  <!--  <quest name="find_resources" title="%FindundergroundresoursesT" desc="%FindundergroundresoursesD" file="gfx\level_tiles\craft_res\iron" important="true" auto="true">
+    <require>
+      <dig_property prop="resource" count="1" />
+      <!--Квест выполнен: После добычи блока с вкраплением
+    </require>
+  </quest>
+  -->
+  <quest name="complete_shelter" title="%CompleteashelterT" activate="build_beds" desc="%CompleteashelterD" file="gfx\level_tiles\craft_constructions\totem\totem" tech="basic_tools_making" important="true">
+    <require>
+      <house_activate />
+      <!--- 9. Постройте убежище
+          Квест выполнен: При активации дома -->
+    </require>
+  </quest>
+  <quest name="find_iron" title="%FindironoreT" activate="make_iron_sword" auto="true" desc="%FindironoreD" file="gfx\level_tiles\craft_res\iron" activate_on_process="true" tech="basic_iron_works" important="true">
+    <require>
+      <dig_property prop="iron" count="10" />
+      <!--Квест выполнен: После выкапывания 5 блоков с железом-->
+    </require>
+  </quest>
+  <!--15. Приготовьте еду-->
+  <quest name="prepare_food" title="%PreaparefoodT" desc="%PreaparefoodD" file="gfx\level_tiles\craft_res\food\craft_fruit" tech="basic_cooking" important="true">
+    <require>
+      <food_to_table count="1" />
+      <!--Появляется после квеста(ов):
+ - 14. Сделайте стол
+Квест выполнен: После помещения еды на стол -->
+    </require>
+  </quest>
+
+  <!-- 17. Убейте 10 скелетов-->
+  <quest name="kill_10_skeletons" title="%Kill10skeletonsT" auto="true" desc="%Kill10skeletonsD" file="gfx\level_tiles\craft_res\bone" activate_on_process="true"  tech="basic_weaponry" important="true">
+    <require>
+      <kill creatures="skeleton" count="10" />
+      <!--Квест выполнен: После убийства 10-го скелета. -->
+    </require>
+  </quest>
+  <!-- 18. Расширьте убежище--
+  <quest name="enlarge_shelter" title="%EnlargetheshelterT" activate="protect_home" desc="%EnlargetheshelterD" file="gfx\level_tiles\craft_obj\Beds\bed_01" important="true">
+    <require>
+      <house_area area="50" />
+      <!--Появляется после квеста(ов):
+       - 14. Сделайте стол
+      Квест выполнен: При увеличении площади дома до 50
+    </require>
+  </quest>
+  -->
+  <!--19. Соберите уголь-->
+  <quest name="collect_coal" title="%CollectacoalT" auto="true" activate="explore_deep" desc="%CollectacoalD" file="gfx\level_tiles\craft_res\coal3" activate_on_process="true" tech="advanced_iron_works" important="true">
+    <require>
+      <dig_property prop="coal" count="10" />
+      <!--Квест выполнен: После добычи 10 блоков угля.-->
+    </require>
+  </quest>
+  <!--20. Срубите 30 деревьев-->
+  <quest name="cut_30_trees" title="%Cut30treesT" auto="true" desc="%Cut30treesD" file="gfx\level_tiles\craft_res\craft_log" tech="basic_armouring" important="true">
+    <require>
+      <dig_property prop="tree" count="30" />
+      <!--Квест выполнен: После рубки 30 деревьев.-->
+    </require>
+  </quest>
+  <!-- 21. Охота на зверей-->
+  <quest name="hunt_beast" title="%HuntabeastT" auto="false" desc="%HuntabeastD" file="gfx\level_tiles\craft_res\food\craft_meat" important="true">
+    <require>
+      <kill creatures="animal" count="1" />
+      <!--Квест выполнен: После убийства зверя. -->
+    </require>
+  </quest>
+  <!-- 22. Исследование глубин-->
+  <quest name="explore_deep" title="%ExploredeepT" desc="%ExploredeepD" file="gfx\level_tiles\craft_tools\pick\pick_iron" tech="advanced_illuminating" important="true">
+    <require>
+      <deep count="25" />
+      <!--Появляется после квеста(ов):
+       - 19. Соберите уголь
+      Квест выполнен: При достижении глубины 25 блоков от горизонта земли. -->
+    </require>
+  </quest>
+  <!--23. Защитите дом-->
+  <quest name="protect_home" title="%ProtectyourhomeT" activate="inc_comfort" desc="%ProtectyourhomeD" file="gfx\level_tiles\craft_constructions\cell_tree" tech="basic_fortifications" important="true">
+    <require>
+      <build_block block="cell_wood,cell_iron,trap_wood,trap_iron" count="1" />
+      <!--Появляется после квеста(ов):
+ - 18. Расширьте убежище
+Квест выполнен: После постройки клетки или капкана. -->
+    </require>
+  </quest>
+  <!--24. Сделайте дом уютнее-->
+  <quest name="inc_comfort" title="%IncreasecomfortathomeT" activate="fortify_home" desc="%IncreasecomfortathomeD" file="gfx\level_tiles\craft_obj\chair_leather" tech="basic_decorating" important="true">
+    <require>
+      <build_block prop="comfort" count="1" />
+      <!--Появляется после квеста(ов):
+ - 23. Защитите дом
+Квест выполнен: После установки предмета, увеличивающего уют. -->
+    </require>
+  </quest>
+  <!-- 25. Сделайте амуницию-->
+  <quest name="give_equipment" title="%MakeequipmentT" auto="true" desc="%MakeequipmentD" file="gfx\level_tiles\craft_tools\clothes\steel-helmet" tech="basic_armouring" important="true">
+    <require>
+      <put_to_char_inv class="helmet,cloth,boots" />
+      <!--Квест выполнен: После одевания предмета на гнома. -->
+    </require>
+  </quest>
+  <!--26. Укрепите дом-->
+  <quest name="fortify_home" title="%FortifythehouseT" activate="inc_comfort" desc="%FortifythehouseD" file="gfx\level_tiles\craft_constructions\block\wall_stone" tech="basic_stone_works" important="true">
+    <require>
+      <build_block block="stone_wall,brick_wall,stone" with_childs="true" in_house="true" count="5" />
+      <!--Появляется после квеста(ов):
+ - 24. Сделайте дом уютнее
+Квест выполнен: После установки 5 каменных или кирпичных стен. -->
+    </require>
+  </quest>
+
+  <!-- 31. Найдите драгоценные металлы-->
+  <quest name="find_preciuos" title="%FindpreciousmetalsT" desc="%FindpreciousmetalsD" file="gfx\level_tiles\craft_res\gold" tech="advanced_illuminating" important="true" auto="true">
+    <require>
+      <dig_res resources="gold,silver,mithril,diamond" count="1" />
+      <!--Квест выполнен: При добыче одного из ценных металлов.-->
+    </require>
+  </quest>
+  <!-- 32. Угостите гномов-->
+  <quest name="noshup" title="%Nosh-upT" desc="%Nosh-upD" file="gfx\level_tiles\craft_obj\workshops\kitchen_stone_big" tech="advanceed_cooking" important="true" auto="true">
+    <require>
+      <use_device device="kitchen" count="1" />
+      <!--Квест выполнен: После приготовления любого блюда, требующего печь-->
+    </require>
+  </quest>
+  <!--33. Укрепите вооружение-->
+  <quest name="strengthen_arms" title="%StrengthenarmsT" desc="%StrengthenarmsD" file="gfx\level_tiles\craft_obj\workshops\smithy" tech="advanced_iron_works" important="true" auto="true">
+    <require>
+      <use_device device="smithy" count="1" />
+      <!--Квест выполнен: После изготовления 1-го предмета, требующего кузницу-->
+    </require>
+  </quest>
+
+  <!--36. Рыбалка-->
+  <quest name="fishing" title="%FishingT" desc="%FishingD" file="gfx\level_tiles\craft_tools\rod1" tech="fishing" important="true" auto="true">
+    <require>
+      <collect resources="fish" count="1" />
+      <!--Квест выполнен: После поимки 1-й рыбы-->
+    </require>
+  </quest>
+  <!--37. Фермерство-->
+  <quest name="farming" title="%FarmingT" desc="%FarmingD" file="gfx\level_tiles\map_obj\wheat" tech="basic_cooking" important="true" auto="true">
+    <require>
+      <dig_res resources="wheat" count="1" />
+      <!--Квест выполнен: После сбора пшеницы-->
+    </require>
+  </quest>
+  <!-- 38. Постройте ж/д-->
+  <quest name="railway" title="%BuildrailwayT" desc="%BuildrailwayD" file="gfx\level_tiles\craft_constructions\trolley\switch_1" tech="railroad_constructing" important="true" auto="true">
+    <require>
+      <build_block block="trolley" count="1" />
+      <!--Квест выполнен: После установки 1-й вагонетки на рельсы-->
+    </require>
+  </quest>
+  <!-- 39. Найди скрытую комнату-->
+  <quest name="hidden_place" title="%FindahiddenplaceT" desc="%FindahiddenplaceD" file="gfx\ui\icons\magic\compas" tech="master_alchemy" important="true" auto="true">
+    <require>
+      <find_hidden />
+      <!--Квест выполнен: После нахождения скрытой комнаты-->
+    </require>
+  </quest>
+  <!-- 40. Восстановите портал-->
+  <quest name="repair_portal" title="%RepairtheportalT" desc="%RepairtheportalD" file="gfx\level_tiles\tile\Portal\portal_block3" tech="master_constructing" important="true" auto="true">
+    <require>
+      <craft resources="portal_block1,portal_block2,portal_block3,portal_block4,portal_block5" count="1" />
+      <!--Квест выполнен: После создания 1-го блока портала-->
+    </require>
+    <awards resources="money-30" />
+  </quest>
+  
+  <quest name="activate_temple" title="%ActivateTempleT" desc="%ActivateTempleD" file="gfx\ui\icons\events\temple_earth"  important="true">
+    <awards resources="money-30" />
+    <awards exp="5000"/>
+  </quest>
+  <quest name="activate_other_temple" title="%ActivateTemple1T" desc="%ActivateTemple1D" file="gfx\ui\icons\events\temple_of_air"  important="true">
+    <awards resources="money-40" />
+    <awards exp="10000"/>
+  </quest>
+</root>

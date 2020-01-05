@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--World`s settings-->
+<root>
+	<mask name="corner1" file="gfx/level_tiles/masks/corner_1"/>
+	<mask name="corner2" file="gfx/level_tiles/masks/corner_2"/>
+	<mask name="corner2op" file="gfx/level_tiles/masks/corner_2op"/>
+	<mask name="corner3" file="gfx/level_tiles/masks/corner_3"/>
+	<mask name="corner4" file="gfx/level_tiles/masks/corner_4"/>
+	<mask name="side1" file="gfx/level_tiles/masks/side_1"/>
+	<mask name="side2" file="gfx/level_tiles/masks/side_2"/>
+	<mask name="side2_and_corner" file="gfx/level_tiles/masks/side_2_and_corner"/>
+	<mask name="side2op" file="gfx/level_tiles/masks/side_2op"/>
+	<mask name="side3" file="gfx/level_tiles/masks/side_3"/>
+	<mask name="side4" file="gfx/level_tiles/masks/side_4"/>
+	<mask name="side_and_2corners" file="gfx/level_tiles/masks/side_and_2corners"/>
+	<mask name="side_and_corner" file="gfx/level_tiles/masks/side_and_corner"/>
+	<mask name="side_and_cornerM" file="gfx/level_tiles/masks/side_and_cornerM"/>
+</root>

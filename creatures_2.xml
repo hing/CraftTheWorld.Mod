@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <creature name="zombie_mine">
+    <params>
+      <ico value="zombie_mine_mini"/>
+      <ai value="zombie"/>
+      <height value="47"/>
+      <width value="30"/>
+      <healt value="15"/>
+      <walk_speed value="40"/>
+      <climbs_speed value="30"/>
+      <radius value="3"/>
+      <fall_height value="10"/>
+      <healt_restore value="0.166%"/>
+      <tour_distance value="3-4"/>
+      <fear_radius value="8"/>
+      <attack value="0.5"/>
+      <resources value="brains-1,bone-3"/>
+      <water_die_time value="0"/>
+      <attack_push value="true"/>
+      <effect value="zombie_eff"/>
+      <shot_time value="1.3"/>
+      <skins value="zombie_mine_1,zombie_mine_2,zombie_mine_3,zombie_mine_4"/>
+      <hold_position/>
+    </params>
+    <sounds>
+      <die value="zombie_death"/>
+      <step value="zombie_step"/>
+      <ambient value="zombie_ambient"/>
+    </sounds>
+    <animations>
+      <ani name="cantdo" ani="zombie_mine\main"/>
+      <ani name="idle" ani="zombie_mine\main"/>
+      <ani name="stop" ani="zombie_mine\main2"/>
+      <ani name="move" ani="zombie_mine\walk|walk2|walk3"/>
+      <ani name="action" ani="zombie_mine\attack"/>
+      <ani name="climb" ani="zombie_mine\walk"/>
+      <ani name="jump" ani="zombie_mine\jump"/>
+      <ani name="dies_end" ani="zombie_mine\death"/>
+    </animations>
+    <spine_elements>
+      <random slots="body_scar" attach_count="4"/>
+      <random slots="weapon" attach_count="2"/>
+      <show_hide slots="part1,part2,part3,part4,pert5,chain_forward,chain_back" random_hit="25%"/>
+      <random_color slots="eyebrows_c,hair_c">
+        <colors>
+          82,23,5,
+          137,71,0,
+          25,40,0,
+          15,10,5,
+          129,107,54,
+          135,135,135,
+        </colors>
+      </random_color>
+    </spine_elements>
+  </creature>
+</root>

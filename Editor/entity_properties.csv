@@ -1,0 +1,87 @@
+group;name;title;type;min;max;required_property;values;behaviour types;exclude behaviour types;tooltip;default value;properties also set;parent
+// name prefix
+// ! - use as attribute
+// * - use as param
+// & - set value to all childrens
+// # - can multiple values separated by |
+// @ - hide slide bar
+
+;!@size;size;vector;0;30;;;;;bounds of entity;1,1
+;!gameobject;object name;switch;0;0;;PirateCannonEntity,PirateLighthouseEntity,ScorpioBaseEntity,IncubatorEntity,DigMachineEntity
+;@dead_radius_x;half width;int;0;6;;;;;;0
+sameline|200
+;@dead_radius_y;height;int;0;10;;;;;;0
+;dead_radius;area radius(deprecated);int;0;10;;;;;;0
+;nodig_under;dig ban radius;int;0;10;;;;;the radius of the basement area where it is forbidden to dig;0
+separator
+;!spine;spine;spine;0;0;;;;;spine animation prefab or file (*.json);
+sameline
+;!spine_ani;spine ani;ani;0;0;spine;;;;initial spine animation;;;spine
+sameline
+;!spine_skin;spine skin;skin;0;0;spine;;;;initial spine skin;;;spine
+;user_color_slot;user color slot;slot;0;0;spine;;;;slot in the spine animation, which will be painted in the color of the player in multiplayer mode
+;!offsety;vertical offset;int;-100;100;;;;;vertical offset (px);0
+;user_color_img;user color image num;int;0;10;;;;;image, which will be painted in the color of the player in multiplayer mode;0
+;sound;idle sound;sound;0;0;;;;;;
+sameline
+;create_sound;build sound;sound;0;0;;;;;;
+sameline
+;break_sound;break sound;sound;0;0;;;;;;
+separator
+;workshop;workshop;check;0;0;;;device;;
+sameline
+;smithy;smithy;check;0;0;;;device;;
+sameline
+;lab;lab;check;0;0;;;device;;
+;kitchen;kitchen;check;0;0;;;device;;
+sameline
+;workbench;workbench;check;0;0;;;device;;
+;library;library;check;0;0;;;device;;
+sameline
+;millstone;millstone;check;0;0;;;device;;
+;efficiency;device efficiency;int;0;10;;;device;;;1
+separator
+;staging;staging;check;0;0;
+;beware;beware sign;check;0;0;;;;;
+;beware;beware radius;int;1;10;beware;;;;;
+
+//;healt;healt;int;-500;500;;;totem,main_portal,tesla_tower,arrow_tower,trap;;;0
+;healt;healt;int;-500;500;;;;;;0
+
+
+;can_fall;can_fall;check;0;0;;;;;
+sameline
+;crash_after_fall;crash_after_fall;check;0;0;;;;;
+;removable;removable;check;0;0;;;;;can dwarfs remove entity
+sameline
+;stayon;stay on;check;0;0;;;;;
+sameline
+;ladder;is ladder;check;0;0;;;;;
+;warehouse;is warehouse;check;0;0;;;;;
+;draw_all;draw all images;check;0;0;;;;;draw all specified images in the order of
+sameline
+;draw_image_as_mini;image as mini;check;0;0;;;;;draw image as mini icon
+
+//;creature;enable creature interact;check;0;0;;;;;;
+//;creature;creatures;string;0;5;creature;;trap;;list of creatures separated by '|'
+;count;count;int;0;100;;;trap,catapult_tower;;;0
+;radius;radius;int;0;100;;;arrow_tower;;;0
+;time;time;int;0;100;;;arrow_tower;;;0
+;healt;healt;float;0;999;;;prison_door,ancient_door,std_building;;;0
+
+//;speed;change walk speed;check;0;0;;;;;;
+;speed;speed;int;0;10;;;elevator;;;0
+
+;max_height;elevator height;int;0;100;;;elevator;;;0
+;lost;lost resources;float;0;1;;;;;coefficient that determines the amount of resources that will be lost during the remove of this entity;0
+
+separator
+;!light;enable light;check;0;0;;;;;;
+;!light;radius of emitted light;int;1;5;light;;;;;1
+;!light_intensity;light intensity;float;0;1;light;;;;;1
+
+;item_part_lighting;use polygon lighting;check;0;0;;;;;
+;allow_build;allows building blocks on top;check;0;0;;;;;
+
+;creature;enable creature interact;check;0;0;;;;;;
+;creature;creatures;string;0;5;creature;;;;list of creatures separated by '|'

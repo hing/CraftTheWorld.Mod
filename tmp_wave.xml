@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <ratios>
+    <!--<ratio name="gargoyley" weight="10" count="4" level="8" type="air"/>-->
+    <ratio name="gargoyley" weight="5" type="air"/>
+    <ratio name="gargoyley_fire" weight="5" type="air"/>
+    <ratio name="banshee" weight="1" type="air"/>
+    <ratio name="beholder" weight="1" type="air" />
+    <ratio name="beholder_terrible" weight="1" type="air"/>
+
+    <ratio name="skeleton" weight="10" necessarily="true" type="ground"/>
+    <ratio name="skeleton_shielder" weight="10" type="ground"/>
+    <ratio name="skeleton_builder" weight="10" type="ground"/>
+    <ratio name="zombie" weight="7" type="ground"/>
+    <ratio name="zombie_fire" weight="7" type="ground"/>
+    <ratio name="skeleton_archer" weight="6" count="5" type="ground"/>
+    <ratio name="zombie_boss" weight="4" type="ground"/>
+    <ratio name="skeleton_boss" weight="2" type="ground"/>
+    <ratio name="zombie_armorbreaker" weight="2"  type="ground"/>
+    <ratio name="zombie_crookshank" weight="2" type="ground"/>
+    <ratio name="madness_rider" weight="2" type="ground"/>
+    <ratio name="thrower_giant" weight="1" type="ground"/>
+
+    <ratio name="skeleton" weight="30" type="underground"/>
+    <ratio name="larva" weight="22" type="underground"/>
+    <ratio name="spider" weight="16" type="underground"/>
+    <ratio name="zombie_solder" weight="10" type="underground"/>
+    <ratio name="little_dragon" weight="8" type="underground"/>
+    <ratio name="little_dragon_black" weight="8" type="underground"/>
+    <ratio name="vampire_guard" weight="1" type="underground"/>
+  </ratios>
+</root>

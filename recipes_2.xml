@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<root>
+    <recipe name="new_item" ingredients="" produce="new_item" group="1" />
+    <recipe name="box_mine_04" ingredients="" produce="box_mine_04" group="1" />
+    <recipe name="rock_iron_01" ingredients="" produce="rock_iron_01" group="1" />
+    <recipe name="rock_iron_02" ingredients="" produce="rock_iron_02" group="1" />
+    <recipe name="rock_iron_03" ingredients="" produce="rock_iron_03" group="1" />
+    <recipe name="chain_lamp_mine" ingredients="" produce="chain_lamp_mine" group="1" />
+    <recipe name="skeleton_02" ingredients="" produce="skeleton_02" group="1" />
+    <recipe name="cupboard_mine_01" ingredients="" produce="cupboard_mine_01" group="1" />
+    <recipe name="cupboard_mine_02" ingredients="" produce="cupboard_mine_02" group="1" />
+    <recipe name="cupboard_mine_03" ingredients="" produce="cupboard_mine_03" group="1" />
+    <recipe name="cupboard_mine_04" ingredients="" produce="cupboard_mine_04" group="1" />
+    <recipe name="boot_mine" ingredients="rope-5,skin-7,iron-8" produce="boot_mine" group="1" />
+    <recipe name="helmet_mine" ingredients="miners_lamp-4,iron-5,rope-7" produce="helmet_mine" group="1" />
+    <recipe name="prison_door_mine" ingredients="" produce="prison_door_mine" group="1" />
+    <recipe name="crackers_mine" ingredients="" produce="crackers_mine" group="1" />
+    <recipe name="dried_fish" ingredients="" produce="dried_fish" group="1" />
+    <recipe name="dried_meat" ingredients="" produce="dried_meat" group="1" />
+    <recipe name="bag_mine_04" ingredients="" produce="bag_mine_04" group="1" />
+    <recipe name="bag_mine_05" ingredients="" produce="bag_mine_05" group="1" />
+    <recipe name="bag_mine_06" ingredients="" produce="bag_mine_06" group="1" />
+    <recipe name="cupboard_mine_05" ingredients="" produce="cupboard_mine_05" group="1" />
+    <recipe name="cupboard_mine_06" ingredients="" produce="cupboard_mine_06" group="1" />
+    <recipe name="cupboard_mine_07" ingredients="" produce="cupboard_mine_07" group="1" />
+    <recipe name="cupboard_mine_08" ingredients="" produce="cupboard_mine_08" group="1" />
+    <recipe name="trolley_coal" ingredients="" produce="trolley_coal" group="1" />
+    <recipe name="trolley_iron" ingredients="" produce="trolley_iron" group="1" />
+    <recipe name="trolley_rock" ingredients="" produce="trolley_rock" group="1" />
+    <recipe name="pick_ax_01" ingredients="" produce="pick_ax_01" group="1" />
+    <recipe name="pick_ax_02" ingredients="" produce="pick_ax_02" group="1" />
+    <recipe name="pick_ax_03" ingredients="" produce="pick_ax_03" group="1" />
+    <recipe name="pick_ax_04" ingredients="" produce="pick_ax_04" group="1" />
+    <recipe name="chain_mine_L" ingredients="" produce="chain_mine_L" group="1" />
+    <recipe name="chain_mine_M1" ingredients="" produce="chain_mine_M1" group="1" />
+    <recipe name="chain_mine_M2" ingredients="" produce="chain_mine_M2" group="1" />
+    <recipe name="chain_mine_R" ingredients="" produce="chain_mine_R" group="1" />
+</root>

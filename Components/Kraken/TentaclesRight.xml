@@ -1,0 +1,41 @@
+<root>
+   <size value="90"/>
+   <bone value="main_tant_right_spot"/>
+   <catch_bone value="main_tant_right8"/>
+   <healt value="20"/>
+   <group value="2"/>
+   <regrowth_time value="30"/>
+   <catch_time value="15"/>
+
+   <event_attack value="right_attack"/>
+   <event_catch value="catch_right"/>
+   <event_catch_eat_end value="right_hide"/>
+   <event_catch_out value="eat_out"/>
+
+   <blood_effect value="tent_blood_right"/>
+   <blood_bone value="main_tant_right3"/>
+
+   <attack_area_offset value="7|0"/>
+   <attack_area_size value="7|2"/>
+   <attack_chance value="0.8"/>
+   <attack_water_velocity value="30"/>
+
+   <actions>
+      <action name="attack" weight="6"/>
+      <action name="_catch" weight="2"/>
+   </actions>
+
+   <states>
+      <state name="idle" ani="right_tant_idle" loop="true"/>
+      <state name="attack" ani="right_tant_attack" loop="false" next="idle"/>
+      <state name="_catch" ani="right_tant_catch" loop="false" next="_catch_idle"/>
+      <state name="_catch_idle" ani="right_tant_catch_idle" loop="true" />
+      <state name="_catch_eat" ani="right_tant_catch_eat" loop="false" next="idle"/>
+      <state name="hit" ani="right_tant_idle_cut" loop="false" next="idle"/>
+      <state name="hit_catch" ani="right_tant_idle_cut" loop="false" next="_catch_idle"/>
+
+      <state name="cut" ani="right_tant_cut" loop="false" next="cut_idle"/>
+      <state name="cut_idle" ani="right_tant_cut_idle" loop="true"/>
+      <state name="cut_regen" ani="right_tant_cut_regen" loop="false" next="idle"/>
+   </states>
+</root>

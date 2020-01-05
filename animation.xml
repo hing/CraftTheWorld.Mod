@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--список функций: SineIn, SineOut, SineInOut, BounceIn, BounceOut, BounceInOut-->
+<root>
+	<Fade time="1.0">
+		<fade begin="0" end="1" func="Linear"/>
+	</Fade>
+</root>

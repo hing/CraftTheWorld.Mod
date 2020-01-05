@@ -1,0 +1,8 @@
+<root>
+    <width value="3"/>
+    <velocity value="-10"/>
+    <interval value="1"/>
+    <interval_variance value="0.1"/>
+    <use_all_area value="true"/>
+    <search_radius value="10"/>
+</root>

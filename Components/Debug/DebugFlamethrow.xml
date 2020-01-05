@@ -1,0 +1,13 @@
+<root>
+                <effect value="flamethrower" />
+                <damage value="1" />
+                <range value="3" />
+                <duration value="99999" />
+                <max_count value="5" />
+                <damage_collider_size value="1" />
+                <damage_collider_count value="3" />
+                <size_ratio value="1.2" />
+                <target_tag value="burning" />
+                <targets value="workers_enemies" />
+                <angle value="0"/>
+</root>

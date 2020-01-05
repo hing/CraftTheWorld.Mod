@@ -1,0 +1,9 @@
+<root>
+    <script value="data/components/ai/scarab_defender.lua"/>
+
+    <!-- pathfinding setup -->
+    <can_climb value="true"/>
+    <can_fly_up value="true"/>
+    <can_jump value="true"/>
+    
+</root>

@@ -1,0 +1,87 @@
+<root>
+    <behaviours>
+        <common>
+            <behaviour value="Blackboard" saveable="true"/>
+            <behaviour value="DigWormSpawner" config="DigWormSpawner.xml" saveable="true"/>
+            <behaviour value="LibraryBehaviour" config="LibraryBehaviour.xml" saveable="true"/>
+            <behaviour value="LurkerSpawner" config="LurkerSpawner.xml" saveable="true"/>
+            <behaviour value="TechnologyScrollBehaviour" config="" saveable="true">
+                <observ_item value="library"/>
+            </behaviour>
+
+            <behaviour value="DynamicEntityNotify" config="DynamicEntityNotify.xml"/>
+            <behaviour value="WaterController"/>
+            <behaviour value="ClickCatcherBehaviour"/>
+            <behaviour value="SecretRecipesListener"/>
+            <behaviour value="GameBehaviourNetworkTools"/>
+           <!-- <behaviour value="OpenTechnologiesOnStart"/> -->
+        </common>
+        
+        <usual_desert>
+            <behaviour value="ScorpioSphinxSpawner" config="ScorpioSphinxSpawner.xml" saveable="true"/>
+        </usual_desert>
+        <usual_cold>
+            <behaviour value="BloodMoonBehaviour" config="BloodMoon.xml" saveable="true"/>
+            <behaviour value="WolfSpawner" config="BloodMoon.xml" saveable="true"/>
+        </usual_cold>
+    </behaviours>
+
+    <fauna merge="partial">
+        <normal>
+            <creature name="dwarf_tick" enabled="true"/>
+            <creature name="vivern_boss" enabled="true"/>
+            <creature name="vivern_goblin" enabled="true"/>
+            <creature name="vivern_escort" enabled="true"/>
+            <creature name="skeleton_heavy" enabled="true"/>
+            <creature name="ent" enabled="true"/>
+            <creature name="worm_dig" enabled="true"/>
+            <creature name="reinforced_tick" enabled="true"/>
+            <creature name="pirate_skeleton_1" enabled="true"/>
+            <creature name="pirate_skeleton_2" enabled="true"/>
+            <creature name="pirate_boss" enabled="true"/>
+            <creature name="lurker" enabled="true"/>
+       </normal>
+        <underground>
+            <creature name="dwarf_tick" enabled="true"/>
+            <creature name="kraken" enabled="true"/>
+            <creature name="tentacles_weak" enabled="true"/>
+            <creature name="tentacles_middle" enabled="true"/>
+            <creature name="tentacles_strong" enabled="true"/>
+            <creature name="worm_dig" enabled="true"/>
+            <creature name="lurker" enabled="true"/>
+            <creature name="vivern_boss_underworld" enabled="true"/>
+        </underground>
+        <desert>
+            <creature name="dwarf_tick" enabled="true"/>
+            <creature name="skeleton_heavy" enabled="true"/>
+            <creature name="worm_dig" enabled="true"/>
+            <creature name="scorpio_sphinx" enabled="true"/>
+            <creature name="gorgoyle_mummy" enabled="true"/>
+            <creature name="scarab_defender" enabled="true"/>
+            <creature name="scarab_assault" enabled="true"/>
+            <creature name="lurker" enabled="true"/>
+       </desert>
+        <snow>
+            <creature name="dwarf_tick" enabled="true"/>
+            <creature name="skeleton_heavy" enabled="true"/>
+            <creature name="worm_dig" enabled="true"/>
+            <creature name="pirate_skeleton_1" enabled="true"/>
+            <creature name="pirate_skeleton_2" enabled="true"/>
+            <creature name="pirate_boss" enabled="true"/>
+            <creature name="lurker" enabled="true"/>
+            <creature name="wolf" enabled="true"/>
+            <creature name="werewolf" enabled="true"/>
+            <creature name="werewolf_female" enabled="true"/>
+      </snow>
+      <dlc_temples>
+            <creature name="dwarf_tick" enabled="true"/>
+            <creature name="vivern_boss" enabled="true"/>
+            <creature name="vivern_goblin" enabled="true"/>
+            <creature name="vivern_escort" enabled="true"/>
+            <creature name="skeleton_heavy" enabled="true"/>
+            <creature name="worm_dig" enabled="true"/>
+            <creature name="reinforced_tick" enabled="true"/>
+            <creature name="lurker" enabled="true"/>
+      </dlc_temples>
+    </fauna>
+</root>

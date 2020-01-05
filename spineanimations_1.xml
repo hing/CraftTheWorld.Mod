@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<root>
+    <animations>
+        <vivern_boss path="gfx/Spine/characters/Goblins" json="vivern_boss.json" scale="0.600000" mirror="false">
+            <mixing all="true" time="0.4f" />
+        </vivern_boss>
+        <skeleton_heavy path="gfx/Spine/characters/skeleton" json="skeleton_heavy.json" scale="0.400000" mirror="true">
+            <mixing all="true" />
+            <settings>
+                <walk for_speed="30" />
+                <walk2 for_speed="30" />
+                <walk3 for_speed="30" />
+                <walk4 for_speed="30" />
+            </settings>
+        </skeleton_heavy>
+        <bg_moon path="gfx/Spine/environment/backgrounds/moon" json="moon.json" scale="0.645000" mirror="false">
+            <mixing all="true" />
+        </bg_moon>
+        <vivern_baby_prof path="gfx/MonstersDLC/spine/characters/wyvern_baby" json="wyvern_backpack_prof.json" scale="0.300000" mirror="true">
+            <mixing all="true" time="0.3f" />
+        </vivern_baby_prof>
+        <vivern_baby_main path="gfx/MonstersDLC/spine/characters/wyvern_baby" json="wyvern_backpack_main.json" scale="0.300000" mirror="true">
+            <mixing all="true" time="0.3f" />
+        </vivern_baby_main>
+        <vivern_baby_back path="gfx/MonstersDLC/spine/characters/wyvern_baby" json="wyvern_backpack_back.json" scale="0.300000" mirror="false">
+            <mixing all="true" time="0.3f" />
+        </vivern_baby_back>
+        <ent path="gfx/MonstersDLC/spine/characters/Ent" json="ent.json" scale="0.300000" mirror="false">
+            <mixing all="true" />
+        </ent>
+        <dig_machine path="gfx/MonstersDLC/spine/builds/dig_machine" json="dig_machine.json" scale="0.280000" mirror="true">
+            <mixing all="true" />
+        </dig_machine>
+        <pirate_ship path="gfx/MonstersDLC/spine/builds/pirate_ship" json="pirate_ship.json" scale="0.600000" mirror="true">
+            <mixing all="true" />
+        </pirate_ship>
+        <water path="gfx/MonstersDLC/spine/environment/water" json="skeleton.json" scale="0.117100" mirror="false">
+            <mixing all="true" />
+        </water>
+        <worm_dig path="gfx/MonstersDLC/spine/characters/worm" json="worm.json" scale="0.450000" mirror="true">
+            <mixing all="true" />
+        </worm_dig>
+        <pirate_cannon path="gfx/MonstersDLC/spine/builds/cannon" json="dwarf_cannon.json" scale="0.457000" mirror="false">
+            <mixing all="true" />
+        </pirate_cannon>
+        <lighthouse path="gfx/MonstersDLC/spine/builds/lighthouse" json="lighthouse.json" scale="0.260000" mirror="false">
+            <mixing all="true" />
+        </lighthouse>
+        <library path="gfx/MonstersDLC/spine/builds/library" json="Library.json" scale="0.380000" mirror="false">
+            <mixing all="true" />
+        </library>
+        <reinforced_tick path="gfx/MonstersDLC/spine/characters/reinforced_tick" json="reinforced_tick.json" scale="0.200000" mirror="true">
+            <mixing all="true" />
+            <settings>
+                <walk for_speed="55" />
+            </settings>
+        </reinforced_tick>
+        <ant_queen path="gfx/MonstersDLC/spine/characters/ant_queen" json="ant_queen.json" scale="0.457000" mirror="false">
+            <mixing all="true" />
+        </ant_queen>
+        <captain_octopus path="gfx/MonstersDLC/spine/characters/captain_octopus" json="captain_octopus.json" scale="0.403000" mirror="false">
+            <mixing all="true" />
+            <settings>
+                <walk for_speed="70" />
+            </settings>
+        </captain_octopus>
+        <lurker path="gfx/MonstersDLC/spine/characters/lurker" json="lurker.json" scale="0.242000" mirror="true">
+            <mixing all="true" />
+            <settings>
+                <walk for_speed="27" />
+            </settings>
+        </lurker>
+        <pirate_skeleton path="gfx/MonstersDLC/spine/characters/pistol_skeleton" json="pistol_skeleton.json" scale="0.376000" mirror="true">
+            <mixing all="true" />
+            <settings>
+                <walk_01_skeleton for_speed="27" />
+                <walk_02_skeleton for_speed="27" />
+                <walk_03_skeleton for_speed="27" />
+                <walk_04_skeleton for_speed="27" />
+                <walk_01_man for_speed="27" />
+                <walk_02_man for_speed="27" />
+                <walk_03_man for_speed="27" />
+                <walk_04_man for_speed="27" />
+            </settings>
+        </pirate_skeleton>
+        <scorpio_sphinx path="gfx/MonstersDLC/spine/characters/ScorpioSphinx" json="ScorpioSphinx.json" scale="0.484000" mirror="true">
+            <mixing all="true" />
+        </scorpio_sphinx>
+        <pirate_squeegee path="gfx/MonstersDLC/spine/characters/squeegee_skeleton" json="squeegee_skeleton.json" scale="0.376000" mirror="true">
+            <mixing all="true" />
+            <settings>
+                <walk_01_skeleton for_speed="27" />
+                <walk_02_skeleton for_speed="27" />
+                <walk_03_skeleton for_speed="27" />
+                <walk_04_skeleton for_speed="27" />
+                <walk_01_man for_speed="27" />
+                <walk_02_man for_speed="27" />
+                <walk_03_man for_speed="27" />
+                <walk_04_man for_speed="27" />
+            </settings>
+        </pirate_squeegee>
+        <kraken path="gfx/MonstersDLC/spine/characters/Kraken" json="Kraken.json" scale="1" mirror="false">
+            <mixing all="true" />
+        </kraken>
+        <tentacles path="gfx/MonstersDLC/spine/characters/tentacle" json="tentacle.json" scale="0.403000" mirror="false">
+            <mixing all="true" />
+        </tentacles>
+        <scorpio_base path="gfx/MonstersDLC/spine/builds/ScorpioSphinx_base" json="ScorpioSphinx_base.json" scale="0.591000" mirror="false">
+            <mixing all="true" />
+        </scorpio_base>
+        <gorgoyle_mummy path="gfx/MonstersDLC/spine/characters/gargoyle_mummy" json="gorgoyle_mummy.json" scale="0.300000" mirror="true">
+            <mixing all="true" />
+        </gorgoyle_mummy>
+        <scarab path="gfx/MonstersDLC/spine/characters/scarab" json="scarab.json" scale="0.269000" mirror="true">
+            <mixing all="true" />
+            <settings>
+                <walk for_speed="36" />
+            </settings>
+        </scarab>
+        <incubator path="gfx/MonstersDLC/spine/builds/incubator" json="incubator.json" scale="0.376000" mirror="false">
+            <mixing all="true" />
+        </incubator>
+        <wolf path="gfx/MonstersDLC/spine/characters/wolf" json="wolf.json" scale="0.323000" mirror="false">
+            <mixing all="true" />
+            <settings>
+                <walk_01 for_speed="40" />
+            </settings>
+        </wolf>
+        <werewolf path="gfx/MonstersDLC/spine/characters/werewolf" json="werewolf.json" scale="0.296000" mirror="true">
+            <mixing all="true" />
+            <settings>
+                <walk_01 for_speed="45" />
+                <run_01 for_speed="200" />
+            </settings>
+        </werewolf>
+        <werewolf_back path="gfx/MonstersDLC/spine/characters/werewolf" json="werewolf_back.json" scale="0.242000" mirror="false">
+            <mixing all="true" />
+        </werewolf_back>
+        <flamethrower path="gfx/MonstersDLC/spine/weapon/flamethrower" json="flamethrower.json" scale="0.215000" mirror="false">
+            <mixing all="true" />
+        </flamethrower>
+        <sand_temple path="gfx/MonstersDLC/spine/environment/sand_temple" json="sand_temple.json" scale="0.300000" mirror="false">
+            <mixing all="true" />
+        </sand_temple>
+        <sand_room_door path="gfx/MonstersDLC/spine/environment/sand_room_door" json="sand_room_door.json" scale="0.600000" mirror="false">
+            <mixing all="true" />
+        </sand_room_door>
+        <sand_rune_door path="gfx/MonstersDLC/spine/environment/sand_rune_door" json="sand_rune_door.json" scale="0.230000" mirror="false">
+            <mixing all="true" />
+        </sand_rune_door>
+        <rusty_gun path="gfx/MonstersDLC/spine/weapon/rusty_gun" json="gun_template.json" scale="0.215000" mirror="false">
+            <mixing all="true" />
+        </rusty_gun>
+        <chicken_egg path="gfx/MonstersDLC/spine/characters/chicken_egg" json="chicken_egg.json" scale="0.269000" mirror="false">
+            <mixing all="true" />
+        </chicken_egg>
+        <wyvern_egg path="gfx/MonstersDLC/spine/characters/wyvern_egg" json="wyvern_egg.json" scale="0.242000" mirror="false">
+            <mixing all="true" />
+        </wyvern_egg>
+        <water_plant path="gfx/MonstersDLC/spine/environment/water_plants" json="water_plant.json" scale="0.484000" mirror="false">
+            <mixing all="true" />
+        </water_plant>
+    </animations>
+</root>

@@ -1,0 +1,10 @@
+class;female skin;male skin
+
+boots;boot_template_female;boot_template_male
+armor;cuirass_template_female;cuirass_template_male
+helmet;helmet_template_female;helmet_template_male
+shield;shield_template;shield_template
+tool;weapon_template;weapon_template
+bow;bow_template;bow_template
+body;1.female_body_template;1.male_body_template
+backpack;backpack_template;backpack_template

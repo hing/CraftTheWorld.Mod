@@ -1,0 +1,18 @@
+<root>
+    <spawns_max_count value="80"/>
+    <interval_days value="3"/>
+    <start_level value="4"/>
+    <start_population value="12"/>
+    <spawn_interval value="2"/>
+    <difficult_ratio value="0.2"/>
+
+    <start_sound value="monsters wave"/>
+    <start_sound_delay value="30"/>
+    <start_sound_duration value="500"/>
+</root>
+
+<!-- 
+    spawns_max_count - максимальное кол-во мобов в волне (без учета коэф. сложности)
+    spawn_interval - интервал выхода мобов из лаза
+    difficult_ratio - процент увеличения максимального кол-ва мобов в зависимости от уровня сложности. (коф. сложности: очень легко - 0, легко - 1, нормал - 2)
+ -->

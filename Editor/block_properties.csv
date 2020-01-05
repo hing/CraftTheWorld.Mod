@@ -1,0 +1,122 @@
+group;name;title;type;min;max;required_property;values;block types;exclude block types;tooltip;default value;properties also set;parent
+// name prefix
+// ! - use as attribute
+// * - use as param
+// & - set value to all childrens
+// # - can multiple values separated by |
+// - - dont show property in editor
+
+;!behaviour;behaviour;switch;0;0;;PirateSpawner
+;!spine;spine animation;spine;0;10;;;;;spine animation prefab
+;!spine_ani;idle animation;ani;0;10;spine;;simple;;;;;spine
+;!spine_skin;skin;skin;0;10;spine;;simple;;;;;spine
+;!spine_skin_mp;skin MP;skin;0;10;spine;;simple;;spine skin in multiplayer mode;;;spine
+
+;editor;editor group;string;0;0;;;;;category name in the room editor, for most cases use 'mod';;
+;!draw_layer;draw layer;switch;0;0;;prefix=front_a|1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24;wall;;affects how the blocks are displayed;front_a1
+;!draw_layer;draw layer;switch;0;0;;normal,front,top,back;simple;;affects how the blocks are displayed;normal
+;!effect;effect;file_list;;;;gfx/particles/*.xml;simple
+sameline
+;!effect1;effect for off state;file_list;;;;gfx/particles/*.xml;simple
+;!effect_offset;effect offset;vector;;;effect;;simple
+sameline
+;!effect_scale;effect scale;float;0;5;effect;;simple;;;1
+;!build;build time;int;1;50;;;;;;1
+;!extract;dig time;int;1;500;;;;;;1
+;table;table;int;0;3;;;simple;;if item is table, select amount of layers of food that can be put on the table;0
+;!through;through;check;0;0;;;;roof;creatures can walking through block;
+sameline
+;!backneed;backneed;check;0;0;;;simple;;item needed wall on back layer;false
+sameline
+;!ontop;ontop;check;0;0;;;;bridge,roof,column;item can be placed on front layer only;false
+;!stayon;stay on;check;0;0;;;;roof;;false
+sameline
+;can_climb;can climb;check;0;0;
+sameline
+;no_break;no break;check;0;0;
+
+;replace_with;replace with;resource;;;;;;;the block will be replaced by this after a break
+
+;&ladder;is ladder;check;0;0;;;;;;
+;&ladder;ladder speed ratio;ratio;0;10;ladder
+;!topneed;topneed;check;0;0;;;;roof,column;item needed a roof;
+;!crack;crack;check;0;0;;;;;show crack effect then block is digging;
+;!tornado_resist;tornado resist;check;0;0;;;;;forbids tornadoes to take this block;
+sameline
+;can_replace;replaceable;check;;;;;
+sameline
+;crash_back;remove back on install;check;0;0;;;simple;;during install removes the back layer and put to them
+separator
+;can_fall;can falling;check;0;0;;;simple
+sameline
+;no_break_fall;not break after fall;check;0;0;;;simple;
+sameline
+;crash_up;breaks as ceil;check;0;0;;;simple;;breaks the block if the ceiling is broken
+;no_chain_crash;disable chain crash;check;0;0;;;column;
+;wide;is wide;check;0;0;;;simple;;wide objects can not be located in neighboring blocks
+sameline
+;narrow;is narrow;check;;;;;simple;;narrow objects can be placed with wide items in neighboring blocks
+;bed;is bed;check;0;0;;;simple
+;max_height;max height;int;0;20;bed;;simple;;;0
+;window;is window;check;0;0;;;simple;;window passes light
+sameline
+;user_cycle_switch;allow image switch;check;;;;;simple;;player can switch block images
+;user_mirror_switch;allow mirror switch;check;;;;;simple;;player can mirrored block via X axis
+;same_as_neighbors;same as neighbors;check;;;;;;;after the block is installed, an image is selected as well as the neighboring blocks
+;switch;switch;check;;;;;simple;;switch item, for example lamp, door or torch
+;door;is door;check;0;0;switch;;simple;;The block is represented as a door, the first image - the door is closed, the second one is open. You must check a 'switch' property;door;;
+sameline
+;door;door type;switch;0;0;door;door_left,door_right,hatch;simple;;;;
+;offset;door width;procent;0;100;door;;simple;;door width in procent of block width;;
+separator
+;affect_block;apply static affect;check;;;;;;;applies to the construction affect on certain parameters
+;unique;unique affect;check;;;affect_block;;;;applies affect once
+;skill_value;skill change value;int;0;100;affect_block;;;;increase selected skills on this value (passive);0
+;skill;affect on skills;multi_select;0;9;affect_block;logger,miner,fisher,swordsman,archer,cook,smith,carpenter,mage,miller,hunter,climber,swimmer,stonecutter
+
+separator
+;fire;enable fire ignite;check;0;0;;;;;;
+;fire;fire shape;switch;0;0;fire;fire_block,fire_vertical,fire_up,fire_down,fire_T
+;light;enable light;check;0;0;;;;;;
+;light;radius of emitted light;int;0;5;light;1
+
+;creature;enable creature interact;check;0;0;;;;;;
+;creature;creatures;string;0;5;creature;;;;list of creatures separated by '|'
+;time;action time;range;0;9999;creature;;;;walk speed time period;
+;speed;apply speed;procent;0;200;creature;;;;creature walk speed;100
+
+separator
+;wooden;has wooden sound;check;;;;;;entity;use standart sounds
+;metallic;has metallic sound;check;;;;;;entity;use standart sounds
+;bricken;has brick sound;check;;;;;;entity;use standart sounds
+;stony;has stony sound;check;;;;;;entity;use standart sounds
+separator
+;*sound_on_hit;on hit sound;sound;;;;;;entity;define action sound
+;*sound_on_break;on break sound;sound;;;;;;entity;define action sound
+;*sound_on_build;on build sound;sound;;;;;;entity;define action sound
+;*sound_on_open;on open sound;sound;;;;;;entity;define action sound for doors
+;*sound_on_close;on close sound;sound;;;;;;entity;define action sound for doors
+
+;rune;rune;check;0;0;
+;no_fade;no_fade;check;0;0;
+
+;service_item;service item;check;0;0;
+;spawn;spawn creature name;string;0;0;service_item
+;ani_time_offset;animation time offset;float;0;1;;;simple;;;0
+
+;behaviour_only;behaviour_only;check;0;0;
+;apply_tool2;apply_tool2;check;0;0;
+sameline
+;apply_tool1;apply_tool1;check;0;0;
+;no_render;no_render;check;0;0;
+
+;-param1;param1;string;0;0;
+;-param2;param2;string;0;0;
+;-param3;param3;string;0;0;
+;-layer;layer;string;0;0;
+;-tree;tree;string;0;0;
+;-max_height;max_height;int;0;0;
+;-props;props;string;0;0;
+
+
+;-inverse_ends;;check;;;

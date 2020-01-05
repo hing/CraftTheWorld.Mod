@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<root>
+    <equip name="hand_flare" levels="1" include="all" exclude="" slot="5" count="5" enable_recipe="false" />
+</root>

@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+<!-- 
+  attributes:
+    horizont - height of airspace to the surface of the earth
+    startpoint - the spread of the starting point relative to the center
+ -->
+  <level horizont="45" startpoint="20%">
+    <params>
+
+      <!--<nosea/>-->                       <!--sea water woll replace to granite, uncomment for use -->
+      <!--<underground/>-->                 <!--underworld, caves with goblins are generated, affects the way in which precipitation is delivered, uncomment for use-->
+      <caveBorder value="6"/>               <!--increases non visual width of caves, affects the location of caves relative to each other-->
+      <!--<startTutorial/>-->               <!--restart of the level in the company starts the tutorial, uncomment for use-->
+      <!--<biomeBeetles/>-->                <!-- generates environment and caves with beetles, uncomment for use  -->
+
+<!-- parameters set the level for the campaign -->
+      <lanscapeTemplate value="hills"/>                    <!--plain,hills,mountains-->
+      <temperatureTemplate value="normal"/>                <!--cold,normal,hot-->
+      <techTreeTemplate value="default_techtree"/>     <!--technology tree, if it empty then use default_techtree-->
+
+      <!-- below from the file templates.xml -->
+      <difficulty value="easy"/>                          <!--very_easy,easy,normal,hard,very_hard,nightmare-->
+      <planetType value="usual_medium"/>      
+      <vegetationTemplate value="usual_medium"/> 
+      <sizeTemplate value="small"/>              
+      <humidityTemplate value="normal"/>        
+      <faunaTemplate value="normal"/>
+<!-- *************************************** -->
+
+      <coastline value="3-15"/>             <!--coastline x-y, indent x-bottom, y-up -->
+      <newTreeParam value="10"/>            <!--parameter for the time calculation formula for new trees -->
+      <minGraves value="2-3"/>              <!--минимальное кол-во надгробий в кладбище-->
+      <graveyards value="3"/>               <!--кол-во кладбищь на уровне-->
+      
+      <!--generate caves-->
+      <caveArea value="5%"/>                <!--percentage of the cave area from the area of the level-->
+      <caveHeight value="3-6"/>             <!--cave height-->
+      <caveWidth value="5-15"/>             <!--cave width-->
+      <caveNoStoneNumber value="2"/>        <!--each n-th cave with a bottom-fed water-->
+      <caveDirtFloor value="10-50"/>        <!--range of percentage of earthen and sand blocks in non-stone caves-->
+      <caveStalactite value="66%"/>         <!--percentage of stalactites on the ceiling of the cave-->
+      <!--generate moves-->
+      <movesArea value="3%"/>               <!--percentage of area -->
+      <movesLength value="5-15"/>           <!--stroke length -->
+
+      <!--creatures params-->
+      <monsterHealt value="1%"/>            <!--percent increase in creature health per removal cell from the base warehouse-->
+      <monsterStrength value="0.5%"/>       <!--percent increase in creature damage per removal cell from the base warehouse-->
+
+      <!--plants params-->
+      <plantsLevelCoef value="10"/>         <!--coefficient. level for the shrub growth formula-->
+      <plantHarmlessDeep value="3"/>        <!--Max. depth from the ground for a harmless shrub-->
+      <plantHarmlessMaxPoints value="5"/>   <!--the maximum number of points of growth of a harmless bush-->
+      <plantPredatorMaxPoints value="10"/>  <!--the maximum number of points of growth of a carnivorous shrub-->
+      <plantPredatorAttack value="10%"/>    <!--The attack power of a carnivorous bush as a percentage of the base damage of a gnome-->
+      <plantPredatorSpawnTime value="150"/> <!--time of appearance of a place for growth of a carnivorous bush-->
+      <plantHarmlessSpawnTime value="150"/> <!--time of appearance of a place for growth of a harmless bush-->
+      
+      <!--monsters waves -->      
+      <monstersWaveTime value="5"/>         <!--time in days between waves of monsters, 5-->
+      <monstersWaveLevel value="4"/>        <!--the level at which monster waves begin, 4-->
+      <monstersWavePortalOffset value="20-30"/>      <!--distance from main warehouse to portal-->
+      <monstersWaveCount value="10"/>       <!--initial number of monsters, 10-->
+
+      <!--parameters of waves of different colors of the earth-->
+      <dirtWaveFreq value="4"/>           <!--frequency 4 -->
+      <dirtWaveSlope value="0"/>         <!--steepness +-  30-->
+      <dirtWaveAmp value="3"/>           <!--amplitude-->
+      <dirtWaveNoise value="3"/>          <!--noise level 4-->
+
+      <mountainsSpace value="20-40"/>     <!--gap between mountains and hills-->
+
+      <!-- coefficient. k1 in the formula for calculating the number of crystals and fungi in the generation of the level: count = worldSizeX * worldSizeY / k1 -->
+      <crystalAndMushroomsRatio value="1000"/>  <!--default: 1000-->      
+      <crystalAndMushroomsDistance value="5"/>  <!-- distance between crystals and mushrooms, by default 5-->
+      <crystalAndMushroomsTimer value="30"/>      <!-- the interval between the appearance of fungi and crystals, by default 30с-->
+      <crystalAndMushroomsIterMax value="20"/>    <!-- the maximum number of iterations of the point search, by default 20-->
+
+    </params>
+
+      <!-- generation of impregnations of resources
+        attributes:
+      name - name of block
+      points - number of spots of this type of resource (block). Set both in absolute and in% of the width of the level
+      count - range of blocks in a spot
+      range - range of arrangement of spots along the Y axis. Negative values are below ground level. Values in both absolute and percentage form 
+      onblock имя блока, на котором может располагаться пятно. Опять же параметр для деревьев
+      dheight - height difference, typical 1 or 2
+      -->
+    <blocks>
+      <block name="roots" points="70%" count="1" range="0,-15%" dheight="1"/>
+      <block name="iron" points="25%" count="10-15" range="-6%,-43%" dheight="2"/>
+      <block name="coal" points="30%" count="10-20" range="-6%,-53%" dheight="2"/>
+      <block name="silver" points="15%" count="10-15" range="-35%,-58%" dheight="2"/>
+      <block name="gold" points="10%" count="10-15" range="-40%,-76%" dheight="2"/>
+      <block name="mithril" points="6%" count="10-15" range="-58%,-99%" dheight="2"/>
+      <block name="diamond" points="12%" count="3-8" range="-73%,-99%" dheight="2"/>
+
+      <block name="sand" points="10%" count="5-10" range="4,0" dheight="1"/>
+      <block name="sand" points="10%" count="5-10" range="-6%,-53%" dheight="1"/>
+      <block name="stone" points="12%" count="5-10" range="4,0" dheight="1"/>
+    </blocks>
+  </level>
+</root>

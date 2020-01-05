@@ -1,0 +1,4603 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Живые создания -->
+<!-- Описание парамметров: -->
+<!-- 'height, width' - ширина высота в пикселях  -->
+<!-- 'capacity' - грузоподъемность  -->
+<!-- 'fall_height' - макс. высота падения, без последствий  -->
+<!-- 'walk_speed' - скорость бега  -->
+<!-- 'climbs_speed' - скорость заползания  -->
+<!-- 'healt' - макс. значение здоровья  -->
+<!-- 'satiety' - макс. значение сытности  -->
+
+<root>
+  <creature name="worker">
+    <params>
+      <ai value="worker"/>
+      <!--<height value="57"/>-->
+      <height value="50"/>
+      <width value="27"/>
+      <!--<ratio value="0.6"/>      -->      <!--пропорция ширины к высоте-->
+      <scale value="1"/>      <!--скейл для всех анимаций-->
+      <healt value="10"/>
+      <satiety value="10"/>
+      <walk_speed value="105"/>      <!--<walk_speed value="80"/>-->
+      <climbs_speed value="55"/>
+      <climbs_ladder_speed value="80"/>
+      <radius value="4"/>
+      <fall_height value="3"/>
+      <capacity value="3"/>
+      <rest_healt value="40%"/>      <!--'rest_healt' - мин. процент жизни, чтобы идти отдыхать-->
+      <attack value="0.3"/>      <!--сила атаки без оружия-->
+      <attack_healt value="0.5"/>      <!--коэф. от макс. жизни, при которой гном может атаковать врагов-->
+      <fatal_attack_healt value="0.4"/>      <!--коэф. от макс. жизни, при которой гном может атаковать врагов, если их скорость выше собственной-->
+      <escape_alone_healt value="0.25"/>      <!--коэф. от макс. жизни, при которой гном бежит от врагов, если он бьется один-->
+      <escape_most_healt value="0.15"/>      <!--коэф. от макс. жизни, при которой гном бежит от врагов, если он бьется не один-->
+      <call_help_radius value="12"/>      <!--радиус, в пределах которого гном зовет на помощь других гномов, если вступил в битву-->
+      <water_die_time value="180"/>      
+      <retreat value="3"/>      <!--отбегает на расстояние, при атаке, когда в руках метательное оружие-->
+      <base_armor value="0.2"/>      <!--учавствует в процентном определении защиты для брони-->
+      <magic_stuff_end_bone value="staff_end"/>
+      <fishing_pole_end_bone value="pole_end" />
+      <resources_end_bone value="for_resurses" />
+      <shot_time value="1.3"/>
+      <glow_slots slots="torse_light,arm1_light,arm2_light,head_light" enemy_color="255|0|30" friend_color="0|110|255"/>
+      <mp_color_slots value="torse_cloth_color,cloth_arm1_1_color,cloth_arm2_1_color,cloth_torse_color,cloth_arm1_1_color,cloth_arm2_1_color,cloth_body_color,cloth_arm1_1_up_color,cloth_arm1_down_color,cloth_arm2_1_up_color,cloth_arm2_down_color,hat_color"/>
+      <gender value="male"/>
+      <use_jump_begin/>
+    </params>
+    <monk>
+      <air_skin value="1_male_air_monk"/>
+      <earth_skin value="1_male_earth_monk"/>
+      <fire_skin value="1_male_fire_monk"/>
+      <water_skin value="1_male_water_monk"/>
+      <attack value="1"/>
+      <super_attack_chance value="0.1"/>
+      <air_armor value="1.5"/>
+      <fire_armor value="1.7"/>
+      <earth_armor value="2"/>
+      <water_armor value="1.6"/>
+      <fire_effect bone="fire_effect" effect="monk_fire"/>
+    </monk>
+    <!--*****************************************************************-->
+    <!--*********** новые параметры скинованных персонажей **************-->
+    <!--из каждой группы выбирается один скин-->
+    <appearance_groups>
+      <body skins="1.male_body_01,1.male_body_02,1.male_body_03,1.male_body_04,1.male_body_05"/>
+      <hair skins="1.male_hair_01,1.male_hair_02,1.male_hair_03,1.male_hair_04,1.male_hair_05"/>
+      <beard skins="1.male_beard_01,1.male_beard_02,1.male_beard_03,1.male_beard_04"/>
+      <mustache skins="1.male_mustache_01,1.male_mustache_02,1.male_mustache_03,1.male_mustache_04,1.male_mustache_05,1.male_mustache_06"/>
+      <!--<shield skins="shield_02"/>-->
+      <!--<base_cloth skins="1.male_cloth_01,1.male_cloth_02,1.male_cloth_03"/>-->
+    </appearance_groups>
+
+    <!--*****************************************************************-->
+    <animal_bag>
+      <prof>
+        <spine value="animal_bag_prof"/>
+        <ani value="walk"/>
+      </prof>
+      <back>
+        <spine value="animal_bag_back"/>
+        <ani value="walk"/>
+      </back>
+    </animal_bag>
+    <sounds>
+      <extreme_fall value="gnome_extreme_fall"/>
+      <scary value="gnome_scary"/>
+      <battle value="gnome_battle"/>
+      <die value="dwarf_died"/>
+    </sounds>
+    <spine_elements>
+      <random_color name="hairs" slots="beard,brow,hair,hair_back,mustache,hair_forw">
+        <colors>
+          126, 59, 5,
+          65, 18, 18,
+          255, 50, 0,
+          50, 15, 0,
+          250, 200, 120
+        </colors>
+      </random_color>
+    </spine_elements>
+    <animations>
+      <ani name="extinguish_fire" ani="dwarf\fire_extinguishing"/>
+      <ani name="stop" ani="dwarf\main_01"/>
+      <!--<ani name="move" ani="dwarf\walk|walk_02|walk_03"/>-->
+      <ani name="move" ani="dwarf\walk"/>
+      <ani name="jump" ani="dwarf\jump"/>
+      
+      <ani name="shield_block" ani="dwarf\block"/>
+
+      <ani name="attack_spear" ani="dwarf\attack_spear|attack_spear_02"/>
+      <ani name="attack_sword" ani="dwarf\attack_sword|attack_jump|attack_upper|attack_04_dagger"/>
+      <ani name="attack_mace" ani="dwarf\attack_sword|attack_04_mining_heavy_weapon|attack_jump"/>
+      <ani name="attack_dagger" ani="dwarf\attack_sword|attack_04_dagger|attack_spear_02|attack_upper"/>
+
+      <ani name="dig_up" ani="dwarf\attack_mining_high"/>
+      <ani name="dig_down" ani="dwarf\attack_mining_down"/>
+      <ani name="dig" ani="dwarf\attack_04_mining_heavy_weapon|attack_sword"/>
+      <ani name="cut" ani="dwarf\attack_sword|attack_04_mining_heavy_weapon"/>
+
+      <ani name="craft" ani="dwarf\crafting_long,crafting_cyclic"/>
+      <ani name="craft_short" ani="dwarf\crafting_short"/>
+      <ani name="run" ani="dwarf\run"/>
+      <ani name="run_attack" ani="dwarf\run_to_battle"/>
+      <ani name="escape" ani="dwarf\runaway"/>
+      <ani name="sleep" ani="dwarf\sleep"/>
+      <ani name="swim" ani="dwarf\sweem"/>
+      <ani name="swim_to_walk" ani="dwarf\sweem_to_walk"/>
+      <ani name="fall" ani="dwarf\main_01"/>
+      <ani name="fall_fast" ani="dwarf\falling"/>
+      <ani name="fall_end" ani="dwarf\landing,knockout_continue,get_up"/>
+      <ani name="dies_end" ani="dwarf\death"/>
+      <ani name="fishing" ani="dwarf\fishing,fishing_continue"/>
+      <ani name="fish_catch" ani="dwarf\fishing_success"/>
+      <ani name="walk_carry" ani="dwarf\walk_carry"/>
+      <ani name="walk_happy" ani="dwarf\walk_happy"/>
+      <ani name="walk_sad" ani="dwarf\walk_sad"/>
+      <ani name="water_gather" ani="dwarf\water_gather"/>
+      <ani name="rock_climb" ani="dwarf\rock-climber"/>
+      <ani name="rock_climb_down" ani="dwarf\rock-climber_down"/>
+
+      <ani name="rock_climb_end" ani="dwarf\rock-climber_end_point"/>
+      <ani name="rock_climb_down_end" ani="dwarf\rock-climber_end_down_point"/>
+      
+      <ani name="rock_climb_down_skill" ani="dwarf\rock-climber_down_skill"/>
+      <ani name="rock_climb_down_end_skill" ani="dwarf\rock-climber_end_down_point_skill"/>
+      <ani name="climb_down_skill" ani="dwarf_back\rock-climber_down_skill"/>
+      <ani name="climb_down_end_skill" ani="dwarf_back\ladder_climb_end_down_point_skill"/>
+
+      <ani name="slide_off" ani="dwarf\sliping"/>
+      <ani name="rock_climb_fall_off" ani="dwarf\rock-climber_fall"/>
+      <ani name="rock_climb_idle" ani="dwarf\rock-climber_stay"/>
+      <ani name="climb_fall_off" ani="dwarf_back\rock-climber_fall"/>
+      <ani name="climb_idle" ani="dwarf_back\rock-climbe_stay"/>
+
+      <ani name="catching" ani="dwarf\take_resurces_03"/>
+
+
+      <ani name="idle" ani="dwarf_main\main_12(inventory)|main_07"/>
+      <!--<ani name="idle1" ani="dwarf_main\main_12(inventory)"/>-->
+      <!--<ani name="idle2" ani="dwarf_main\main_04(tolking)"/>-->
+      <ani name="cantdo" ani="dwarf_main\main_06(tolking)"/>
+      <ani name="dialog" ani="dwarf_main\main_03(tolking)"/>
+      <ani name="dialog1" ani="dwarf_main\main_08(tolking)"/>
+      <ani name="dialog2" ani="dwarf_main\main_10(tolking)"/>
+      <ani name="dialog3" ani="dwarf_main\main_11(angry)"/>
+      <ani name="dialog4" ani="dwarf_main\main_12(want_sleep)"/>
+      <ani name="dialog5" ani="dwarf_main\main_05(tolking_laugh)"/>
+      <ani name="dialog_idle" ani="dwarf_main\main_dialog(tolking)"/>
+
+      <ani name="inventory" ani="dwarf_main\main_12(inventory)"/>
+      <!--<ani name="inventory" ani="dwarf\main_01"/>-->
+      <ani name="inventory_pistol" ani="dwarf_main\main_12(inventory)_pistole"/>
+      <ani name="inventory_rifle" ani="dwarf_main\main_12(inventory)_rifle"/>
+
+      <ani name="inventory_spirit" ani="dwarf_spirit\idle_01,idle_02"/>
+      <ani name="inventory_resurrection" ani="dwarf_spirit\alive"/>
+      <ani name="inventory_onover" ani="dwarf_spirit\scared"/>
+      <ani name="inventory_exile" ani="dwarf_spirit\death"/>
+
+      <ani name="attack_pistol" ani="dwarf_main\gun_shoot"/>
+      <ani name="attack_rifle" ani="dwarf_main\rifle_shoot"/>
+
+      <ani name="attack_pistol_up" ani="dwarf_main\gun_shoot_high"/>
+      <ani name="attack_pistol_down" ani="dwarf_main\gun_shoot_down"/>
+      <ani name="attack_rifle_up" ani="dwarf_main\rifle_shoot_high"/>
+      <ani name="attack_rifle_down" ani="dwarf_main\rifle_shoot_down"/>
+
+      <ani name="walk_pistol" ani="dwarf\walk_pistol"/>
+      <ani name="walk_rifle" ani="dwarf\walk_rifle"/>
+      <ani name="run_attack_pistol" ani="dwarf\run_to_battle_pistol"/>
+      <ani name="run_attack_rifle" ani="dwarf\run_to_battle_rifle"/>
+      <ani name="escape_pistol" ani="dwarf\runaway_pistol"/>
+      <ani name="escape_rifle" ani="dwarf\runaway_rifle"/>
+      <ani name="escape_shield" ani="dwarf\runaway(shield)"/>
+
+      <ani name="stop_pistol" ani="dwarf\main_pistol"/>
+      <ani name="stop_rifle" ani="dwarf\main_rifle"/>
+      <ani name="idle_pistol" ani="dwarf_main\main_12(inventory)_pistole"/>
+      <ani name="idle_rifle" ani="dwarf_main\main_12(inventory)_rifle"/>
+      
+      <ani name="pleasure" ani="dwarf_main\happy"/>
+      <ani name="eat" ani="dwarf_main\eating"/>
+      <ani name="dance" ani="dwarf_main\happy"/>
+      <ani name="bow" ani="dwarf_main\archery"/>
+      <ani name="bow_heavy" ani="dwarf_main\archery_heavy"/>
+      <ani name="bow_up" ani="dwarf_main\archery_high"/>
+      <ani name="bow_down" ani="dwarf_main\archery_down"/>
+
+
+      <ani name="climb" ani="dwarf_back\rock-climber"/>
+      <ani name="climb_down" ani="dwarf_back\rock-climber_down"/>
+      <ani name="climb_ladder" ani="dwarf_back\ladder_climb"/>
+      <ani name="climb_ladder_down" ani="dwarf_back\ladder_climb_down"/>
+      
+      <ani name="climb_end" ani="dwarf_back\ladder_climb_end_point"/>
+      <ani name="climb_down_end" ani="dwarf_back\ladder_climb_end_down_point"/>
+
+      <ani name="craft_back" ani="dwarf_back\back_crafting"/>
+      <ani name="craft_back2" ani="dwarf_back\back_crafting_02"/>
+      <ani name="craft_back3" ani="dwarf_back\back_crafting_03"/>
+
+      <ani name="sitting" ani="dwarf\sit"/>
+      <ani name="magic_attack" ani="dwarf\attack_02_staff_cast|attack_02_staff_cast_01"/>
+      
+      <ani name="inventory_shield" ani="dwarf_main\main_12(inventory)(shield)"/>
+      <ani name="attack_spear_shield" ani="dwarf\attack_spear(shield)"/>
+      <ani name="attack_sword_shield" ani="dwarf\attack_sword(shield)|attack_04_dagger(shield)"/>
+      <ani name="attack_mace_shield" ani="dwarf\attack_sword(shield)|attack_04_mining_heavy_weapon(shield)"/>
+      <ani name="attack_dagger_shield" ani="dwarf\attack_sword(shield)|attack_04_dagger(shield)"/>
+      <ani name="fall_fast_shield" ani="dwarf\falling_shield"/>
+      <ani name="fall_end_shield" ani="dwarf\landing(shield),knockout_continue,get_up"/>
+      <ani name="walk_shield" ani="dwarf\walk(shield)"/>
+      <ani name="walk_carry_shield" ani="dwarf\walk_carry(shield)"/>
+      <ani name="walk_happy_shield" ani="dwarf\walk_happy(shield)"/>
+      <ani name="stop_shield" ani="dwarf\main_01(shield)"/>
+      <ani name="run_attack_shield" ani="dwarf\run_to_battle(shield)"/>
+      <ani name="idle_shield" ani="dwarf_main\main_01(shield)|main_07(shield)"/>
+      <ani name="jump_shield" ani="dwarf\jump(shield)"/>
+
+      <ani name="fly" ani="dwarf\fly"/>
+      <ani name="landing" ani="dwarf\fly_landing"/>
+      
+      <ani name="idle_energy_low" ani="dwarf_main\main_energy_low"/>
+      <ani name="walk_energy_low" ani="dwarf\walk_energy_low"/>
+      <ani name="walk_energy_low_shield" ani="dwarf\walk_energy_low(shield)"/>
+      <ani name="walk_energy_low_pistol" ani="dwarf\walk_energy_low_pistol"/>
+      <ani name="walk_energy_low_rifle" ani="dwarf\walk_energy_low_rifle"/>
+
+      <ani name="monk_attack" ani="dwarf\attack_monk_01|attack_monk_02|attack_monk_03"/>
+
+    </animations>
+  </creature>
+  
+  <creature name="worker_female">
+    <params>
+      <ico value="worker_fem"/>
+      <ai value="worker"/>
+      <height value="50"/>
+      <width value="27"/>
+      <scale value="1"/>
+      <healt value="8"/>
+      <satiety value="10"/>
+      <walk_speed value="120"/>
+      <climbs_speed value="60"/>
+      <climbs_ladder_speed value="80"/>
+      <radius value="4"/>
+      <fall_height value="3"/>
+      <capacity value="3"/>
+      <rest_healt value="40%"/>      <!--'rest_healt' - мин. процент жизни, чтобы идти отдыхать-->
+      <attack value="0.3"/>      <!--сила атаки без оружия-->
+      <attack_healt value="0.5"/>      <!--коэф. от макс. жизни, при которой гном может атаковать врагов-->
+      <fatal_attack_healt value="0.4"/>      <!--коэф. от макс. жизни, при которой гном может атаковать врагов, если их скорость выше собственной-->
+      <escape_alone_healt value="0.29"/>      <!--коэф. от макс. жизни, при которой гном бежит от врагов, если он бьется один-->
+      <escape_most_healt value="0.19"/>      <!--коэф. от макс. жизни, при которой гном бежит от врагов, если он бьется не один-->
+      <call_help_radius value="12"/>      <!--радиус, в пределах которого гном зовет на помощь других гномов, если вступил в битву-->
+      <water_die_time value="180"/> 
+      <retreat value="3"/>      <!--отбегает на расстояние, при атаке, когда в руках метательное оружие-->
+      <base_armor value="0.18"/>      <!--учавствует в процентном определении защиты для брони-->
+      <magic_stuff_end_bone value="staff_end"/>
+      <fishing_pole_end_bone value="pole_end" />
+      <resources_end_bone value="for_resurses" />
+      <shot_time value="1.3"/>
+      <glow_slots slots="torse_light,arm1_light,arm2_light,head_light" enemy_color="255|0|30" friend_color="0|110|255"/>
+      <mp_color_slots value="torse_cloth_color,cloth_arm1_1_color,cloth_arm2_1_color,cloth_torse_color,cloth_arm1_1_color,cloth_arm2_1_color,cloth_body_color,cloth_arm1_1_up_color,cloth_arm1_down_color,cloth_arm2_1_up_color,cloth_arm2_down_color,hat_color"/>
+      <gender value="female"/>
+      <use_jump_begin/>
+
+    </params>
+    <!--*****************************************************************-->
+    <!--*********** новые параметры скинованных персонажей **************-->
+    <!--из каждой группы выбирается один скин-->
+    <appearance_groups>
+      <body skins="1.female_body_01,1.female_body_02,1.female_body_03,1.female_body_04,1.female_body_06,1.female_body_07,1.female_body_08,1.female_body_09"/>
+      <hair skins="1.female_hair_02,1.female_hair_03,1.female_hair_04,1.female_hair_05"/>
+    </appearance_groups>
+
+    <!--*****************************************************************-->
+    <animal_bag>
+      <prof>
+        <spine value="animal_bag_prof"/>
+        <ani value="walk"/>
+      </prof>
+      <back>
+        <spine value="animal_bag_back"/>
+        <ani value="walk"/>
+      </back>
+    </animal_bag>
+    <sounds>
+      <extreme_fall value="female_fall"/>
+      <scary value="female_scary"/>
+      <battle value="female_attack"/>
+      <die value="dwarf_died"/>
+    </sounds>
+    <spine_elements>
+      <random_color name="hairs" slots="beard,brow,hair,hair_back,mustache,hair_forw">
+        <colors>
+          126, 59, 5,
+          65, 18, 18,
+          255, 50, 0,
+          50, 15, 0,
+          250, 200, 120
+        </colors>
+      </random_color>
+    </spine_elements>
+    <animations>
+      <ani name="extinguish_fire" ani="dwarf\fire_extinguishing"/>
+      <ani name="stop" ani="dwarf\main_01"/>
+      <!--<ani name="move" ani="dwarf\walk|walk_02|walk_03"/>-->
+      <ani name="move" ani="dwarf\female_walk|female_walk_02"/>
+      <ani name="jump" ani="dwarf\jump"/>
+      <ani name="shield_block" ani="dwarf\block2|block2|block"/>
+      <ani name="helmet_off" ani="dwarf_main\helm_off"/>
+
+      <ani name="attack_spear" ani="dwarf\attack_spear|attack_spear_02"/>
+      <ani name="attack_sword" ani="dwarf\attack_sword|attack_jump|attack_upper|attack_04_dagger"/>
+      <ani name="attack_mace" ani="dwarf\attack_sword|attack_04_mining_heavy_weapon|attack_jump"/>
+      <ani name="attack_dagger" ani="dwarf\attack_sword|attack_04_dagger|attack_spear_02|attack_upper"/>
+
+      <ani name="dig_up" ani="dwarf\attack_mining_high"/>
+      <ani name="dig_down" ani="dwarf\attack_mining_down"/>
+      <ani name="dig" ani="dwarf\attack_04_mining_heavy_weapon|attack_sword"/>
+      <ani name="cut" ani="dwarf\attack_sword|attack_04_mining_heavy_weapon"/>
+
+      <ani name="craft" ani="dwarf\crafting_long,crafting_cyclic"/>
+      <ani name="craft_short" ani="dwarf\crafting_short"/>
+      <ani name="run" ani="dwarf\female_run"/>
+      <ani name="run_attack" ani="dwarf\female_run_to_battle"/>
+      <ani name="escape" ani="dwarf\female_runaway"/>
+      <ani name="sleep" ani="dwarf\sleep"/>
+      <ani name="swim" ani="dwarf\sweem"/>
+      <ani name="swim_to_walk" ani="dwarf\sweem_to_walk"/>
+      <ani name="fall" ani="dwarf\main_01"/>
+      <ani name="fall_fast" ani="dwarf\falling"/>
+      <ani name="fall_end" ani="dwarf\landing,knockout_continue,get_up"/>
+      <ani name="dies_end" ani="dwarf\death"/>
+      <ani name="fishing" ani="dwarf\fishing,fishing_continue"/>
+      <ani name="fish_catch" ani="dwarf\fishing_success"/>
+      <ani name="walk_carry" ani="dwarf\walk_carry"/>
+      <ani name="walk_happy" ani="dwarf\walk_happy"/>
+      <ani name="walk_sad" ani="dwarf\walk_sad"/>
+      <ani name="water_gather" ani="dwarf\water_gather"/>
+      <ani name="rock_climb" ani="dwarf\rock-climber"/>
+      <ani name="rock_climb_down" ani="dwarf\rock-climber_down"/>
+
+      <ani name="rock_climb_end" ani="dwarf\rock-climber_end_point"/>
+      <ani name="rock_climb_down_end" ani="dwarf\rock-climber_end_down_point"/>
+
+      <ani name="slide_off" ani="dwarf\sliping"/>
+      <ani name="rock_climb_fall_off" ani="dwarf\rock-climber_fall"/>
+      <ani name="rock_climb_idle" ani="dwarf\rock-climber_stay"/>
+      <ani name="climb_fall_off" ani="dwarf_back\rock-climber_fall"/>
+      <ani name="climb_idle" ani="dwarf_back\rock-climbe_stay"/>
+
+      <ani name="catching" ani="dwarf\take_resurces_03"/>
+
+
+      <ani name="idle" ani="dwarf_main\female_main_12(inventory)"/>
+      <!--<ani name="idle1" ani="dwarf_main\main_12(inventory)"/>-->
+      <!--<ani name="idle2" ani="dwarf_main\main_04(tolking)"/>-->
+      <ani name="cantdo" ani="dwarf_main\main_06(tolking)"/>
+      <ani name="dialog" ani="dwarf_main\main_03(tolking)"/>
+      <ani name="dialog1" ani="dwarf_main\main_08(tolking)"/>
+      <ani name="dialog2" ani="dwarf_main\main_10(tolking)"/>
+      <ani name="dialog3" ani="dwarf_main\main_11(angry)"/>
+      <ani name="dialog4" ani="dwarf_main\main_12(want_sleep)"/>
+      <ani name="dialog5" ani="dwarf_main\female_main_05(tolking_laugh)"/>
+      <ani name="dialog_idle" ani="dwarf_main\main_dialog(tolking)"/>
+
+      <ani name="inventory" ani="dwarf_main\female_main_12(inventory)"/>
+      <!--<ani name="inventory" ani="dwarf\main_01"/>-->
+      <ani name="inventory_pistol" ani="dwarf_main\female_main_12(inventory)_pistole"/>
+      <ani name="inventory_rifle" ani="dwarf_main\female_main_12(inventory)_rifle"/>
+
+      <ani name="inventory_spirit" ani="dwarf_spirit\idle_01,idle_02"/>
+      <ani name="inventory_resurrection" ani="dwarf_spirit\alive"/>
+      <ani name="inventory_onover" ani="dwarf_spirit\scared"/>
+      <ani name="inventory_exile" ani="dwarf_spirit\death"/>
+
+      <ani name="attack_pistol" ani="dwarf_main\gun_shoot"/>
+      <ani name="attack_rifle" ani="dwarf_main\rifle_shoot"/>
+
+      <ani name="attack_pistol_up" ani="dwarf_main\gun_shoot_high"/>
+      <ani name="attack_pistol_down" ani="dwarf_main\gun_shoot_down"/>
+      <ani name="attack_rifle_up" ani="dwarf_main\rifle_shoot_high"/>
+      <ani name="attack_rifle_down" ani="dwarf_main\rifle_shoot_down"/>
+
+      <ani name="walk_pistol" ani="dwarf\walk_pistol"/>
+      <ani name="walk_rifle" ani="dwarf\walk_rifle"/>
+      <ani name="run_attack_pistol" ani="dwarf\run_to_battle_pistol"/>
+      <ani name="run_attack_rifle" ani="dwarf\run_to_battle_rifle"/>
+      <ani name="escape_pistol" ani="dwarf\runaway_pistol"/>
+      <ani name="escape_rifle" ani="dwarf\runaway_rifle"/>
+      <ani name="escape_shield" ani="dwarf\runaway(shield)"/>
+
+      <ani name="stop_pistol" ani="dwarf\main_pistol"/>
+      <ani name="stop_rifle" ani="dwarf\main_rifle"/>
+      <ani name="idle_pistol" ani="dwarf_main\main_12(inventory)_pistole"/>
+      <ani name="idle_rifle" ani="dwarf_main\main_12(inventory)_rifle"/>
+
+      <ani name="pleasure" ani="dwarf_main\happy"/>
+      <ani name="eat" ani="dwarf_main\eating"/>
+      <ani name="dance" ani="dwarf_main\happy"/>
+      <ani name="bow" ani="dwarf_main\archery"/>
+      <ani name="bow_heavy" ani="dwarf_main\archery_heavy"/>
+      <ani name="bow_up" ani="dwarf_main\archery_high"/>
+      <ani name="bow_down" ani="dwarf_main\archery_down"/>
+
+
+      <ani name="climb" ani="dwarf_back\rock-climber"/>
+      <ani name="climb_down" ani="dwarf_back\rock-climber_down"/>
+      <ani name="climb_ladder" ani="dwarf_back\ladder_climb"/>
+      <ani name="climb_ladder_down" ani="dwarf_back\ladder_climb_down"/>
+
+      <ani name="climb_end" ani="dwarf_back\ladder_climb_end_point"/>
+      <ani name="climb_down_end" ani="dwarf_back\ladder_climb_end_down_point"/>
+      
+      <ani name="rock_climb_down_skill" ani="dwarf\rock-climber_down_skill"/>
+      <ani name="rock_climb_down_end_skill" ani="dwarf\rock-climber_end_down_point_skill"/>
+      <ani name="climb_down_skill" ani="dwarf_back\rock-climber_down_skill"/>
+      <ani name="climb_down_end_skill" ani="dwarf_back\ladder_climb_end_down_point_skill"/>
+
+      <ani name="craft_back" ani="dwarf_back\back_crafting"/>
+      <ani name="craft_back2" ani="dwarf_back\back_crafting_02"/>
+      <ani name="craft_back3" ani="dwarf_back\back_crafting_03"/>
+
+      <ani name="sitting" ani="dwarf\sit"/>
+      <ani name="magic_attack" ani="dwarf\attack_02_staff_cast|attack_02_staff_cast_01"/>
+
+      <ani name="inventory_shield" ani="dwarf_main\female_main_01(shield)"/>
+      <ani name="attack_spear_shield" ani="dwarf\attack_spear(shield)"/>
+      <ani name="attack_sword_shield" ani="dwarf\attack_sword(shield)|attack_04_dagger(shield)"/>
+      <ani name="attack_mace_shield" ani="dwarf\attack_sword(shield)|attack_04_mining_heavy_weapon(shield)"/>
+      <ani name="attack_dagger_shield" ani="dwarf\attack_sword(shield)|attack_04_dagger(shield)"/>
+      <ani name="fall_fast_shield" ani="dwarf\falling_shield"/>
+      <ani name="fall_end_shield" ani="dwarf\landing(shield),knockout_continue,get_up"/>
+      <ani name="walk_shield" ani="dwarf\female_walk(shield)|female_walk_02(shield)"/>
+      <ani name="walk_carry_shield" ani="dwarf\walk_carry(shield)"/>
+      <ani name="walk_happy_shield" ani="dwarf\walk_happy(shield)"/>
+      <ani name="stop_shield" ani="dwarf\main_01(shield)"/>
+      <ani name="run_attack_shield" ani="dwarf\female_run_to_battle(shield)"/>
+      <ani name="idle_shield" ani="dwarf_main\female_main_01(shield)"/>
+      <ani name="jump_shield" ani="dwarf\jump(shield)"/>
+
+      <ani name="fly" ani="dwarf\fly"/>
+      <ani name="landing" ani="dwarf\fly_landing"/>
+      
+      <ani name="idle_energy_low" ani="dwarf_main\main_energy_low"/>
+      <ani name="walk_energy_low" ani="dwarf\walk_energy_low"/>
+      <ani name="walk_energy_low_shield" ani="dwarf\walk_energy_low(shield)"/>
+      <ani name="walk_energy_low_pistol" ani="dwarf\walk_energy_low_pistol"/>
+      <ani name="walk_energy_low_rifle" ani="dwarf\walk_energy_low_rifle"/>
+
+    </animations>
+  </creature>
+  
+  
+  
+  
+  <!--<creature name="worker">
+    <params>
+      <ai value="worker"/>
+      --><!--<height value="57"/>--><!--
+      <height value="50"/>
+      <width value="27"/>
+      --><!--<ratio value="0.6"/>      --><!--пропорция ширины к высоте--><!--
+      <scale value="0.8"/>      --><!--скейл для всех анимаций--><!--
+      <healt value="10"/>
+      <satiety value="10"/>
+      <walk_speed value="80"/>--><!--<walk_speed value="80"/>--><!--
+      <climbs_speed value="50"/>
+      <radius value="4"/>
+      <fall_height value="3"/>
+      <capacity value="3"/>
+      <rest_healt value="40%"/>        --><!--'rest_healt' - мин. процент жизни, чтобы идти отдыхать--><!--
+      <attack value="0.3"/>            --><!--сила атаки без оружия--><!--
+      <attack_healt value="0.5"/>      --><!--коэф. от макс. жизни, при которой гном может атаковать врагов--><!--
+      <fatal_attack_healt value="0.4"/>      --><!--коэф. от макс. жизни, при которой гном может атаковать врагов, если их скорость выше собственной--><!--
+      <escape_alone_healt value="0.25"/>      --><!--коэф. от макс. жизни, при которой гном бежит от врагов, если он бьется один--><!--
+      <escape_most_healt value="0.15"/>      --><!--коэф. от макс. жизни, при которой гном бежит от врагов, если он бьется не один--><!--
+      <call_help_radius value="12"/>      --><!--радиус, в пределах которого гном зовет на помощь других гномов, если вступил в битву--><!--
+      <water_die_time value="180"/>
+      <retreat value="3"/>              --><!--отбегает на расстояние, при атаке, когда в руках метательное оружие--><!--
+      <base_armor value="0.2"/>           --><!--учавствует в процентном определении защиты для брони--><!--
+      <ani_cloths value="base_cuirass,leather_cuirass,steel_cuirass,gold_cuirass,mitril_cuirass,steel_shoulder"/>
+      <ani_helms value="base_hat,steel_helmet,leather_helmet,gold_helmet,mitril_helmet,diver_helm,cloak_hat,cloak_hat_back,forest_hat,tinker_hat,woodman_hat"/>
+      <ani_bows value="bow_wooden,bow_silver,bow_iron,bow_gold,bucket"/>
+      <blankets value="blanket1,blanket2,blanket3,blanket4,blanket5,blanket6"/>
+      <ani_faces value="face1,face2,face3,face4"/>
+      <ani_hairs value="head1,head2,head3,head4"/>
+    </params>
+    <sounds>
+      <extreme_fall value="gnome_extreme_fall"/>
+      <scary value="gnome_scary"/>
+    </sounds>
+    <colors>
+      <skin>
+        255, 161, 121,
+        255, 187, 137,
+        174, 87, 23,
+        255, 165, 153,
+        218, 117, 43,
+        255, 189, 163
+      </skin>
+      <hair>
+        149, 66, 0,
+        57, 25, 0,
+        247, 199, 96,
+        212, 97, 4,
+        216, 226, 229,
+        150, 92, 0
+      </hair>
+    </colors>
+    <animations>
+      <ani name="idle" ani="_worker_idle"/>
+      <ani name="idle1" ani="_worker_idle1"/>
+      <ani name="idle2" ani="_worker_idle2"/>
+      <ani name="cantdo" ani="_worker_confusion"/>
+      <ani name="stop" ani="_worker_stop"/>
+      <ani name="move" ani="_worker_move"/>
+      <ani name="run" ani="_worker_run"/>
+      <ani name="action" ani="_worker_attack"/>
+      <ani name="attack_above" ani="_worker_attack_above"/>
+      <ani name="attack_stab" ani="_worker_attack_stab"/>
+      <ani name="craft" ani="_worker_craft"/>
+      <ani name="climb" ani="_worker_climb"/>
+      <ani name="climb_ladder" ani="_worker_climb_ladder"/>
+      <ani name="jump" ani="_worker_jump"/>
+      <ani name="jump_end" ani="_worker_jump_end"/>
+      <ani name="dies" ani="_worker_death"/>
+      <ani name="dies_end" ani="_worker_death_end"/>
+      <ani name="eat" ani="_worker_eat"/>
+      <ani name="sleep" ani="_worker_sleep"/>
+      <ani name="fall" ani="_worker_fall"/>
+      <ani name="fall_fast" ani="_worker_fall_fast"/>
+      <ani name="fall_end" ani="_worker_fall_end"/>
+      <ani name="bow" ani="_worker_archery"/>
+      <ani name="fishing" ani="_worker_fishing"/>
+      <ani name="fish_catch" ani="_worker_fish_catch"/>
+      <ani name="pain" ani="_worker_damage"/>
+      <ani name="swim" ani="_worker_swim"/>
+      <ani name="dialog" ani="_worker_dialog"/>
+      <ani name="craft_back" ani="_worker_craftback"/>
+      <ani name="craft_back2" ani="_worker_craftback2"/>
+      <ani name="dance" ani="_worker_dance"/>
+      <ani name="dance1" ani="_worker_dance1"/>
+      <ani name="pleasure" ani="_worker_pleasure"/>
+    </animations>
+  </creature>-->
+
+  <creature name="vampire_guard">
+    <params>
+      <ai value="vampire_guard"/>
+      <height value="120"/>
+      <width value="50"/>
+      <healt value="230"/>
+      <scale value="1"/>
+      <walk_speed value="50"/>
+      <climbs_speed value="45"/>
+      <radius value="6"/>
+      <fear_radius value="9"/>
+      <attack value="3"/>
+      <tour_distance value="3-4"/>
+      <water_die_time value="0"/>
+      <shot_time value="2"/>
+      <attack_push value="true"/>
+      <vulnerability_mithril value="2"/>
+      <vulnerability_short_range value="1.2"/>
+      <skins value="portal_guard"/>
+      <resources value="mithril-1-70,mithril-2-60,mithril_ingot-1-50,money-2-70,money-1-50,portal_krs_blue-1-40,portal_krs_red-1-40,portal_krs_dblue-1-40,portal_krs_green-1-40,portal_krs_violet-1-40,rune1-1-10,rune2-1-10,rune3-1-10,rune4-1-10,rune5-1-10,rune6-1-10,rune1_desert-1-10,rune2_desert-1-10,rune3_desert-1-10,rune4_desert-1-10,rune5_desert-1-10,rune6_desert-1-10"/>
+    </params>
+    <sounds>
+      <hit value="skeleton_boss_hit"/>
+      <step value="skeleton_boss_step"/>
+      <ambient value="skeleton_ambient"/>
+      <die value="skeleton_death"/>
+    </sounds>
+    <animations>
+      <ani name="idle" ani="vampire_guard\main"/>
+      <ani name="stop" ani="vampire_guard\main"/>
+      <ani name="move" ani="vampire_guard\walk_point"/>
+      <ani name="action" ani="vampire_guard\attack_02"/>
+      <ani name="bow" ani="vampire_guard\attack_01"/>
+      <ani name="action_up" ani="vampire_guard\attack_03"/>
+      <ani name="climb" ani="vampire_guard\walk_point"/>
+      <ani name="dies_end" ani="vampire_guard\death"/>
+    </animations>
+  </creature>
+
+  <creature name="dead_lord">
+    <params>
+      <ai value="vampire_guard"/>
+      <height value="120"/>
+      <width value="50"/>
+      <healt value="666"/>
+      <scale value="1"/>
+      <walk_speed value="50"/>
+      <climbs_speed value="45"/>
+      <radius value="6"/>
+      <fear_radius value="9"/>
+      <attack value="1"/>
+      <tour_distance value="3-4"/>
+      <water_die_time value="0"/>
+      <shot_time value="2"/>
+      <attack_push value="true"/>
+      <skins value="dead_lord"/>
+      <vulnerability_mithril value="4"/>
+      <vulnerability_short_range value="1.5"/>
+      <resources value="mithril-1-70,mithril-2-60,mithril_ingot-1-50,money-2-70,money-1-50,portal_krs_blue-1-40,portal_krs_red-1-40,portal_krs_dblue-1-40,portal_krs_green-1-40,portal_krs_violet-1-40"/>
+      <dead_lord/>
+    </params>
+    <sounds>
+      <hit value="skeleton_boss_hit"/>
+      <step value="skeleton_boss_step"/>
+      <ambient value="skeleton_ambient"/>
+      <die value="skeleton_death"/>
+    </sounds>
+    <animations>
+      <ani name="idle" ani="vampire_guard\dead_lord_main"/>
+      <ani name="stop" ani="vampire_guard\dead_lord_main"/>
+      <ani name="move" ani="vampire_guard\dead_lord_walk_point"/>
+      <ani name="action" ani="vampire_guard\dead_lord_attack_02"/>
+      <ani name="attack_stab" ani="vampire_guard\dead_lord_attack_04"/>
+      <ani name="action_up" ani="vampire_guard\dead_lord_attack_03"/>
+      <ani name="climb" ani="vampire_guard\dead_lord_walk_point"/>
+      <ani name="dies_end" ani="vampire_guard\dead_lord_death"/>
+      <ani name="pleasure" ani="vampire_guard\dead_lord_sit"/>
+      <ani name="eat" ani="vampire_guard\dead_lord_rise"/>
+    </animations>
+  </creature>
+  
+  <creature name="scorpion">
+    <params>
+      <ai value="scorpion"/>
+      <height value="40"/>
+      <width value="40"/>
+      <scale value="1"/>
+      <healt value="3"/>
+      <walk_speed value="40"/>
+      <climbs_speed value="40"/>
+      <radius value="3"/>
+      <fall_height value="10"/>
+      <attack value="0.2"/>
+      <shot_time value="1.3"/>
+      <resources value="chitin-1-70"/>
+    </params>
+    <sounds>
+      <attack value="scorpion_action"/>
+      <die value="scorpion_action"/>
+      <ambient value="scorpion_ambients"/>
+    </sounds>
+    <animations>
+      <ani name="stop" ani="scorpion\main"/>
+      <ani name="move" ani="scorpion\walk"/>
+      <ani name="action" ani="scorpion\attack"/>
+      <ani name="climb" ani="scorpion\walk"/>
+      <ani name="jump" ani="scorpion\main"/>
+      <ani name="dies_end" ani="scorpion\death"/>
+    </animations>
+  </creature>
+
+  <creature name="larva">
+    <params>
+      <ai value="larva"/>
+      <height value="45"/>
+      <width value="35"/>
+      <healt value="15"/>
+      <scale value="1"/>
+      <radius value="1"/>
+      <walk_speed value="80"/>
+      <climbs_speed value="80"/>
+      <attack value="0.3"/>
+      <dig_damage value="1"/>
+      <dig_interval value="50"/>
+      <shot_time value="1.3"/>
+      <water_die_time value="120"/>
+      <resources value="chitin,chitin-1-50,meat-1-30,mucus-1-30"/>
+    </params>
+    <sounds>
+      <ambient value="larva_ambient"/>
+      <die value="larva_death"/>
+      <dig value="larva_dig"/>
+    </sounds>
+    <animations>
+      <ani name="idle" ani="larva\main"/>
+      <ani name="idle1" ani="larva\main_02"/>
+      <ani name="stop" ani="larva\main"/>
+      <ani name="move" ani="larva\walk_point"/>
+      <ani name="idle2" ani="larva\sleep"/>
+      <ani name="action" ani="larva\dig_forw"/>
+      <ani name="climb" ani="larva\climb_01_point"/>
+      <ani name="climb_down" ani="larva\climb_02_point"/>
+      <ani name="dies_end" ani="larva\death"/>
+    </animations>
+  </creature>
+  
+  <creature name="frostling">
+    <params>
+      <ai value="frostling"/>
+      <height value="45"/>
+      <width value="25"/>
+      <scale value="1"/>      <!--скейл для всех анимаций-->
+      <healt value="10"/>
+      <walk_speed value="70"/>
+      <climbs_speed value="60"/>
+      <radius value="6"/>
+      <fall_height value="10"/>
+      <attack value="0.5"/>
+      <healt_restore value="0.16%"/>      <!--процент восстановления жизни в сек-->
+      <camp_radius value="3"/>      <!--радиус вокруг лагеря, который считается лагерем-->
+      <attack_healt value="25%"/>      <!--мин. кол. жизни для атаки человечка в %-->
+      <camp_fight_radius value="5"/>      <!--радиус вокруг лагеря, в пределах которого гоблины дерутся до смерти-->
+      <tour_distance value="1-4"/>      <!--радиус прогулки монстра вокруг да около-->
+      <water_die_time value="180"/>
+      <shot_time value="2"/>
+      <resources value="frostling_bow-1-4,skin-1-20,rope-1-15,feather-1-20,silver-1-3,gold-1-2,mithril-1-2"/>
+    </params>
+    <sounds>
+      <ambient value="frostling_ambient"/>
+      <die value="frostling_death"/>
+    </sounds>
+    <animations>
+      <ani name="cantdo" ani="snow_archer_main\main1"/>
+      <ani name="stop" ani="snow_archer_prof\main"/>
+      <ani name="idle" ani="snow_archer_main\main1"/>
+      <ani name="idle1" ani="snow_archer_main\main2"/>
+      <ani name="move1" ani="snow_archer_prof\run_point"/>
+      <ani name="move2" ani="snow_archer_prof\run_point2"/>
+      <ani name="move3" ani="snow_archer_prof\run_point3"/>
+      <ani name="attack1" ani="snow_archer_main\attack"/>
+      <ani name="climb" ani="snow_archer_prof\run_point2"/>
+      <ani name="jump" ani="snow_archer_prof\jump"/>
+      <ani name="dies_end" ani="snow_archer_prof\death"/>
+
+      <ani name="rock_climb" ani="snow_archer_prof\climb_up_point"/>
+      <ani name="rock_climb_down" ani="snow_archer_prof\climb_down_point"/>
+
+      <ani name="rock_climb_end" ani="snow_archer_prof\climb_end_point"/>
+      <ani name="rock_climb_down_end" ani="snow_archer_prof\climb_end_down_point"/>
+    </animations>
+  </creature>
+
+  <creature name="frostling_knight">
+    <params>
+      <ai value="frostling"/>
+      <height value="90"/>
+      <width value="50"/>
+      <scale value="1"/>      <!--скейл для всех анимаций-->
+      <healt value="15"/>
+      <walk_speed value="25"/>
+      <climbs_speed value="0"/>
+      <radius value="6"/>
+      <fall_height value="10"/>
+      <attack value="0.7"/>
+      <healt_restore value="0.16%"/>      <!--процент восстановления жизни в сек-->
+      <camp_radius value="3"/>      <!--радиус вокруг лагеря, который считается лагерем-->
+      <attack_healt value="5%"/>      <!--мин. кол. жизни для атаки человечка в %-->
+      <camp_fight_radius value="5"/>      <!--радиус вокруг лагеря, в пределах которого гоблины дерутся до смерти-->
+      <tour_distance value="1-3"/>      <!--радиус прогулки монстра вокруг да около-->
+      <water_die_time value="180"/>
+      <enable_hunting value="false"/>
+      <enable_missile value="false"/>
+      <shot_time value="1.7"/>
+
+      <!--<resources value="bone-2"/>-->
+	  <resources value="frostling_spear-1-4,skin-1-20,rope-1-15,feather-1-20,silver-1-3,gold-1-2,mithril-1-2"/>
+    </params>
+    <sounds>
+      <ambient value="frostling_ambient"/>
+      <die value="frostling_death"/>
+    </sounds>
+    <animations>
+      <ani name="cantdo" ani="ice_knight\main2"/>
+      <ani name="stop" ani="ice_knight\main"/>
+      <ani name="idle" ani="ice_knight\main2"/>
+      <ani name="move1" ani="ice_knight\walk"/>
+      <ani name="attack1" ani="ice_knight\attack"/>
+      <ani name="attack2" ani="ice_knight\attack_02"/>
+      <ani name="climb" ani="ice_knight\walk"/>
+      <ani name="jump" ani="ice_knight\jump"/>
+      <ani name="dies_end" ani="ice_knight\death"/>
+    </animations>
+  </creature>
+
+  <creature name="black_fluffy">
+    <params>
+      <ai value="black_fluffy"/>
+      <height value="50"/>
+      <width value="30"/>
+      <scale value="1"/>      --><!--скейл к размеру блока-->
+      <healt value="3"/>
+      <walk_speed value="40"/>
+      <climbs_speed value="25"/>
+      <radius value="5"/>
+      <fall_height value="10"/>
+      <attack_healt value="20%"/>       <!--мин. кол. жизни для атаки человечка в %-->
+      <healt_restore value="0.33%"/>    <!--процент восстановления жизни в темном месте-->
+      <max_pray value="2"/>             <!--макс. кол-во человечков, на которых может напасть, иначе убегает-->
+      <escape_distance value="10"/>     <!--расстояние, на которое старается убежать в темноту-->
+      <fear_radius value="8"/>          <!--радиус боязни человечков-->
+      <attack value="0.5"/>
+      <resources value="needle-3"/>
+      <effect value="cr_black"/>
+      <shot_time value="1.3"/>
+
+      <!--<water_die_time value="180"/>-->
+    </params>
+    <sounds>
+      <ambient value="blackfluffy_ambient"/>
+    </sounds>
+    <animations>
+      <ani name="cantdo" ani="black_fluffy\main4"/>
+      <ani name="idle" ani="black_fluffy\main3"/>
+      <ani name="idle1" ani="black_fluffy\main4"/>
+      <ani name="idle2" ani="black_fluffy\main5"/>
+      <ani name="stop" ani="black_fluffy\main2"/>
+      <ani name="move" ani="black_fluffy\main"/>
+      <ani name="climb" ani="black_fluffy\main"/>
+      <ani name="action" ani="black_fluffy\attack"/>
+      <ani name="jump" ani="black_fluffy\main"/>
+      <ani name="dies_end" ani="creature_dies"/>
+    </animations>
+  </creature>
+
+  <creature name="beholder">
+    <params>
+      <ai value="beholder"/>
+      <scale value="2" />
+      <height value="66"/>
+      <!--<width value="58"/>-->
+      <width value="45"/>
+      <healt value="30"/>
+      <walk_speed value="35"/>
+      <climbs_speed value="55"/>
+      <radius value="7"/>
+      <fall_height value="10"/>
+      <attack value="0.8"/>
+      <attack_push value="true"/>     <!--отталкивает врага при ударе-->
+      <shot_time value="2"/>
+	    <resources value="eye-1,eye-1-50,money-1"/>
+    </params>
+    <sounds>
+      <ambient value="beholder_ambient"/>
+    </sounds>
+    <animations>
+      <ani name="cantdo" ani="beholder\main_03"/>
+      <ani name="stop" ani="beholder\main"/>
+      <ani name="idle" ani="beholder\main_02"/>
+      <ani name="move" ani="beholder\walk"/>
+      <ani name="action" ani="beholder\attack"/>
+      <ani name="climb" ani="beholder\walk"/>
+      <ani name="jump" ani="beholder\main"/>
+      <ani name="dies_end" ani="beholder\death"/>
+    </animations>
+  </creature>
+
+  <creature name="beholder_terrible">
+    <params>
+      <ai value="beholder"/>
+      <scale value="1" />
+      <height value="66"/>
+      <!--<width value="58"/>-->
+      <width value="45"/>
+      <healt value="40"/>
+      <walk_speed value="35"/>
+      <climbs_speed value="55"/>
+      <radius value="7"/>
+      <fall_height value="10"/>
+      <attack value="0.6"/>
+      <attack_push value="true"/><!--отталкивает врага при ударе-->
+      <shot_time value="1.5"/>
+      <resources value="eye-1,eye-1-50,money-1"/>
+      <fireball value="beholder_fire"/>
+      <fireball_bone value="Fireball"/>
+    </params>
+    <sounds>
+      <ambient value="beholder_ambient"/>
+    </sounds>
+    <animations>
+      <ani name="cantdo" ani="terrible_beholder\idle"/>
+      <ani name="stop" ani="terrible_beholder\idle"/>
+      <ani name="idle" ani="terrible_beholder\idle2"/>
+      <ani name="move" ani="terrible_beholder\walk"/>
+      <ani name="action" ani="terrible_beholder\bite"/>
+      <ani name="craft" ani="terrible_beholder\spit"/>
+      <ani name="climb" ani="terrible_beholder\walk"/>
+      <ani name="jump" ani="terrible_beholder\idle"/>
+      <ani name="dies_end" ani="terrible_beholder\death"/>
+    </animations>
+  </creature>
+  
+  <creature name="zombie">
+    <params>
+      <ico_tc value="reptilian"/>
+      <ai value="zombie"/>
+      <height value="47"/>
+      <width value="30"/>
+      <healt value="5"/>
+      <scale value="1"/>
+      <walk_speed value="30"/>
+      <climbs_speed value="20"/>
+      <radius value="3"/>
+      <fall_height value="10"/>
+      <healt_restore value="0.166%"/>    <!--процент восстановления жизни при бездействии, в сек.-->
+      <tour_distance value="3-4"/>       <!--радиус прогулки монстра вокруг да около-->
+      <fear_radius value="8"/>           <!--радиус боязни человечков-->
+      <attack value="0.3"/>
+      <resources value="brains-1,bone-1-25"/>
+      <water_die_time value="0"/>
+      <attack_push value="true"/>      <!--отталкивает врага при ударе-->
+      <!--<pieces value="gfx\characters\zombie\piece_"/>-->
+      <effect value="zombie_eff"/>
+      <life_time value="3"/>
+      <shot_time value="1.3"/>
+      <can_be_throwed/>
+      <skins value="zombie_01,zombie_02,zombie_03,zombie_04,zombie_05"/>
+    </params>
+    <sounds>
+      <die value="zombie_death"/>
+      <step value="zombie_step"/>
+      <ambient value="zombie_ambient"/>
+    </sounds>
+    <animations>
+      <ani name="cantdo" ani="zombie\main2"/>
+      <ani name="idle" ani="zombie\main2"/>
+      <ani name="stop" ani="zombie\main"/>
+      <ani name="move" ani="zombie\walk"/>
+      <ani name="move1" ani="zombie\walk2"/>
+      <ani name="move2" ani="zombie\walk3"/>
+      <ani name="move3" ani="zombie\walk4"/>
+      <ani name="action" ani="zombie\attack"/>
+      <ani name="climb" ani="zombie\walk"/>
+      <ani name="jump" ani="zombie\jump"/>
+      <ani name="dies_end" ani="zombie\death"/>
+
+      <ani name="catched" ani="zombie\catch_throw_no_main_CTRL"/>
+      <ani name="clash_ground" ani="zombie\clash_ground|clash_ground2|clash_ground3|clash_ground4"/>
+      <ani name="clash_wall" ani="zombie\clash_wall"/>
+      <ani name="falling" ani="zombie\falling"/>
+      <ani name="get_up" ani="zombie\get_up"/>
+      <ani name="lay_ground" ani="zombie\lay_ground"/>
+      <ani name="throw_idle" ani="zombie\throw_idle"/>
+    </animations>
+    <spine_elements>
+      <random slots="body_scar" attach_count="4"/>
+      <show_hide slots="part1,part2,part3,part4,pert5,chain_forward,chain_back" random_hit="25%"/>
+      <random_color slots="eyebrows_c,hair_c">
+        <colors>
+            82,23,5,
+            137,71,0,
+            25,40,0,
+            15,10,5,
+            129,107,54,
+            135,135,135,
+        </colors>        
+      </random_color>
+    </spine_elements>    
+  </creature>
+
+  <creature name="zombie_fire">
+    <params>
+      <ico_tc value="reptilian"/>
+      <ai value="zombie"/>
+      <height value="47"/>
+      <width value="30"/>
+      <healt value="5"/>
+      <scale value="1"/>
+      <walk_speed value="30"/>
+      <climbs_speed value="20"/>
+      <radius value="3"/>
+      <fall_height value="10"/>
+      <healt_restore value="0.166%"/>
+      <tour_distance value="3-4"/>
+      <fear_radius value="8"/>
+      <attack value="0.3"/>
+      <resources value="brains-1,bone-1-25,torch-1-50"/>
+      <water_die_time value="0"/>
+      <attack_push value="true"/>
+      <effect value="zombie_eff"/>
+      <life_time value="3"/>
+      <shot_time value="1.3"/>
+      <skins value="torcher"/>
+      <bone_effect bone="fire" effect="torch_fire"/>
+      <bone_light bone="fire" radius="3"/>
+    </params>
+    <sounds>
+      <die value="zombie_death"/>
+      <step value="zombie_step"/>
+      <ambient value="zombie_ambient"/>
+    </sounds>
+    <animations>
+      <ani name="cantdo" ani="zombie\torcher_main"/>
+      <ani name="idle" ani="zombie\torcher_main"/>
+      <ani name="stop" ani="zombie\torcher_main"/>
+      <ani name="move" ani="zombie\torcher_walk"/>
+      <ani name="action" ani="zombie\torcher_attack"/>
+      <ani name="climb" ani="zombie\torcher_walk"/>
+      <ani name="jump" ani="zombie\torcher_jump"/>
+      <ani name="dies_end" ani="zombie\torcher_death"/>
+    </animations>
+    <spine_elements>
+      <random slots="body_scar" attach_count="4"/>
+      <show_hide slots="part1,part2,part3,part4,pert5,chain_forward,chain_back" random_hit="25%"/>
+      <random_color slots="eyebrows_c,hair_c">
+        <colors>
+          82,23,5,
+          137,71,0,
+          25,40,0,
+          15,10,5,
+          129,107,54,
+          135,135,135,
+        </colors>
+      </random_color>
+    </spine_elements>
+  </creature>
+
+  <creature name="zombie_boss">
+    <params>
+      <ico_tc value="big_reptilian"/>
+      <ai value="zombie"/>
+      <height value="70"/>
+      <width value="50"/>
+      <scale value="1.4" />
+      <healt value="10"/>
+      <!--<walk_speed value="70"/>-->
+      <walk_speed value="30"/>
+      <climbs_speed value="25"/>
+      <radius value="3"/>
+      <fall_height value="10"/>
+      <healt_restore value="0.166%"/>      <!--процент восстановления жизни при бездействии, в сек.-->
+      <tour_distance value="3-4"/>      <!--радиус прогулки монстра вокруг да около-->
+      <fear_radius value="8"/>      <!--радиус боязни человечков-->
+      <attack value="0.65"/>
+      <attack_push value="true"/>      <!--отталкивает врага при ударе-->
+      <resources value="brains-1,bone-1-25,mucus-1-10,money-1-10"/>
+      <water_die_time value="0"/>
+      <effect value="zombie_eff"/>
+      <life_time value="3"/>
+      <shot_time value="2"/>
+      <skins value="big_zombie"/>
+    </params>
+    <sounds>
+      <die value="zombie_death"/>
+      <step value="zombie_step"/>
+      <ambient value="zombie_ambient"/>
+    </sounds>
+    <animations>
+      <ani name="idle" ani="zombie_boss\main2"/>
+      <ani name="stop" ani="zombie_boss\main"/>
+      <ani name="move" ani="zombie_boss\walk_01|walk_02"/>
+      <ani name="action" ani="zombie_boss\attack"/>
+      <ani name="climb" ani="zombie_boss\walk_01"/>
+      <ani name="jump" ani="zombie_boss\jump"/>
+      <ani name="dies_end" ani="zombie_boss\death"/>
+    </animations>
+  </creature>
+
+  <creature name="zombie_boss_santa">
+    <params>
+      <no_beastiary/>
+      <ai value="zombie"/>
+      <height value="70"/>
+      <width value="50"/>
+      <scale value="1.4" />
+      <healt value="10"/>
+      <walk_speed value="30"/>
+      <climbs_speed value="25"/>
+      <radius value="3"/>
+      <fall_height value="10"/>
+      <healt_restore value="0.166%"/>
+      <tour_distance value="3-4"/>
+      <fear_radius value="8"/>
+      <attack value="0.65"/>
+      <attack_push value="true"/>
+      <resources value="cabels-1-50,garland-1-10,christmas_wreath-1-10,gingerbread_cookies-1-50"/>
+      <water_die_time value="0"/>
+      <effect value="zombie_eff"/>
+      <life_time value="3"/>
+      <shot_time value="2"/>
+      <skins value="santa_z"/>
+    </params>
+    <sounds>
+      <die value="zombie_death"/>
+      <step value="zombie_step"/>
+      <ambient value="zombie_ambient"/>
+    </sounds>
+    <animations>
+      <ani name="idle" ani="zombie_boss\main2"/>
+      <ani name="stop" ani="zombie_boss\main"/>
+      <ani name="move" ani="zombie_boss\walk_01|walk_02"/>
+      <ani name="action" ani="zombie_boss\attack"/>
+      <ani name="climb" ani="zombie_boss\walk_01"/>
+      <ani name="jump" ani="zombie_boss\jump"/>
+      <ani name="dies_end" ani="zombie_boss\death"/>
+    </animations>
+  </creature>
+
+  <creature name="yeti">
+    <params>
+      <ai value="zombie"/>
+      <height value="55"/>
+      <width value="30"/>
+      <healt value="6"/>
+      <walk_speed value="45"/>
+      <climbs_speed value="30"/>
+      <radius value="3"/>
+      <fall_height value="10"/>
+      <healt_restore value="0.166%"/>      <!--процент восстановления жизни при бездействии, в сек.-->
+      <tour_distance value="3-4"/>      <!--радиус прогулки монстра вокруг да около-->
+      <fear_radius value="8"/>      <!--радиус боязни человечков-->
+      <attack value="0.3"/>
+      <attack_push value="true"/>
+      <!--отталкивает врага при ударе-->
+      <resources value="fat-1,skin-1-20,wool-1-10"/>
+      <water_die_time value="180"/>
+      <cold_breath value="cold_steam"/>
+      <day_not_kill/>
+      <life_time value="3"/>
+      <shot_time value="1"/>
+    </params>
+    <sounds>
+      <ambient value="yeti_ambient"/>
+      <die value="yeti_death"/>
+    </sounds>
+    <animations>
+      <ani name="cantdo" ani="yeti_main\main_fist_into_a_brist"/>
+      <ani name="idle" ani="yeti_main\main"/>
+      <ani name="idle1" ani="yeti_main\main_fist_into_a_brist"/>
+      <ani name="stop" ani="yeti\main"/>
+      <ani name="move" ani="yeti\walk"/>
+      <ani name="action" ani="yeti\attack"/>
+      <ani name="climb" ani="yeti\walk"/>
+      <ani name="jump" ani="yeti\jump"/>
+      <!--<ani name="jump_end" ani="yeti_jump_end"/>-->
+      <ani name="dies_end" ani="yeti\death"/>
+    </animations>
+  </creature>
+
+  <creature name="yeti_boss">
+    <params>
+      <ai value="zombie"/>
+      <height value="85"/>
+      <width value="35"/>
+      <healt value="11"/>
+      <walk_speed value="40"/>
+      <climbs_speed value="30"/>
+      <radius value="3"/>
+      <fall_height value="10"/>
+      <healt_restore value="0.166%"/>      <!--процент восстановления жизни при бездействии, в сек.-->
+      <tour_distance value="3-4"/>      <!--радиус прогулки монстра вокруг да около-->
+      <fear_radius value="8"/>      <!--радиус боязни человечков-->
+      <attack value="0.65"/>
+      <attack_push value="true"/>      <!--отталкивает врага при ударе-->
+      <resources value="fat-2,skin-1-30,wool-1-10,club-1-30"/>
+      <water_die_time value="180"/>
+      <cold_breath value="cold_steam"/>
+      <day_not_kill/>
+      <can_save_others/>
+      <life_time value="3"/>
+      <shot_time value="1.4"/>
+    </params>
+    <sounds>
+      <ambient value="yeti_ambient"/>
+      <die value="yeti_death"/>
+    </sounds>
+    <animations>
+      <ani name="idle" ani="yeti_boss\main2"/>
+      <ani name="stop" ani="yeti_boss\main1"/>
+      <ani name="move" ani="yeti_boss\walk"/>
+      <ani name="action" ani="yeti_boss\attack"/>
+      <ani name="kick" ani="yeti_boss\kick"/>
+      <ani name="climb" ani="yeti_boss\walk"/>
+      <ani name="jump" ani="yeti_boss\jump"/>
+      <ani name="dies_end" ani="yeti_boss\death"/>
+    </animations>
+  </creature>
+  
+  <creature name="mummy">
+    <params>
+      <ai value="zombie"/>
+      <height value="55"/>
+      <width value="30"/>
+      <healt value="6"/>
+      <scale value="1"/>
+      <walk_speed value="35"/>
+      <climbs_speed value="20"/>
+      <radius value="3"/>
+      <fall_height value="10"/>
+      <healt_restore value="0.166%"/>      <!--процент восстановления жизни при бездействии, в сек.-->
+      <tour_distance value="3-4"/>      <!--радиус прогулки монстра вокруг да около-->
+      <fear_radius value="8"/>      <!--радиус боязни человечков-->
+      <attack value="0.3"/>
+      <resources value="brains-1,fabric-1-25,thread-1-15,portal_krs_blue-1-2,portal_krs_red-1-2"/>
+      <attack_push value="true"/>      <!--отталкивает врага при ударе-->
+      <water_die_time value="0"/>
+      <day_not_kill/>
+      <life_time value="3"/>
+      <shot_time value="1.5"/>
+      <!--<pieces value="gfx\characters\zombie\piece_"/>-->
+    </params>
+    <sounds>
+      <ambient value="mummy_ambient"/>
+      <die value="mummy_death"/>
+    </sounds>
+    <animations>
+      <ani name="stop" ani="mummy\main_01"/>
+      <ani name="idle" ani="mummy\main_01"/>
+      <ani name="idle1" ani="mummy\main_02"/>
+      <ani name="idle2" ani="mummy\main_03"/>
+      <ani name="move" ani="mummy\walk_01_point"/>
+      <ani name="move1" ani="mummy\walk_02_point"/>
+      <ani name="move2" ani="mummy\walk_03_point"/>
+      <ani name="action" ani="mummy\attack"/>
+      <ani name="jump" ani="mummy\jump"/>
+      <ani name="dies_end" ani="mummy\death"/>
+    </animations>
+  </creature>
+   <creature name="mummy_reptilian">
+    <params>
+      <ico value="reptilian"/>
+      <ai value="zombie"/>
+      <height value="55"/>
+      <width value="30"/>
+      <healt value="6"/>
+      <scale value="1"/>
+      <walk_speed value="35"/>
+      <climbs_speed value="20"/>
+      <radius value="3"/>
+      <fall_height value="10"/>
+      <healt_restore value="0.166%"/>      <!--процент восстановления жизни при бездействии, в сек.-->
+      <tour_distance value="3-4"/>      <!--радиус прогулки монстра вокруг да около-->
+      <fear_radius value="8"/>      <!--радиус боязни человечков-->
+      <attack value="0.3"/>
+      <resources value="brains-1,fabric-1-25,thread-1-15,portal_krs_blue-1-2,portal_krs_red-1-2"/>
+      <attack_push value="true"/>      <!--отталкивает врага при ударе-->
+      <water_die_time value="0"/>
+      <day_not_kill/>
+      <life_time value="3"/>
+      <shot_time value="1.5"/>
+      <skins value="zombie_01,zombie_02,zombie_03,zombie_04,zombie_05"/>
+
+      <!--<pieces value="gfx\characters\zombie\piece_"/>-->
+    </params>
+    <sounds>
+      <ambient value="mummy_ambient"/>
+      <die value="mummy_death"/>
+    </sounds>
+    <animations>
+      <ani name="cantdo" ani="reptilian_zombie\main2"/>
+      <ani name="idle" ani="reptilian_zombie\main2"/>
+      <ani name="stop" ani="reptilian_zombie\main"/>
+      <ani name="move" ani="reptilian_zombie\walk"/>
+      <ani name="move1" ani="reptilian_zombie\walk2"/>
+      <ani name="move2" ani="reptilian_zombie\walk3"/>
+      <ani name="move3" ani="reptilian_zombie\walk4"/>
+      <ani name="action" ani="reptilian_zombie\attack"/>
+      <ani name="climb" ani="reptilian_zombie\walk"/>
+      <ani name="jump" ani="reptilian_zombie\jump"/>
+      <ani name="dies_end" ani="reptilian_zombie\death"/>
+    </animations>
+  </creature> 
+  <creature name="mummy_boss">
+    <params>
+      <ai value="zombie"/>
+      <height value="70"/>
+      <width value="35"/>
+      <healt value="12"/>
+      <scale value="1"/>
+      <walk_speed value="30"/>
+      <climbs_speed value="20"/>
+      <radius value="3"/>
+      <fall_height value="10"/>
+      <healt_restore value="0.166%"/>      <!--процент восстановления жизни при бездействии, в сек.-->
+      <tour_distance value="3-4"/>      <!--радиус прогулки монстра вокруг да около-->
+      <fear_radius value="8"/>      <!--радиус боязни человечков-->
+      <attack value="0.65"/>
+      <attack_push value="true"/>      <!--отталкивает врага при ударе-->
+      <resources value="brains-1,rusty_mummy_saber-1-4,fabric-1-40,thread-1-25,portal_krs_dblue-1-2,portal_krs_green-1-2,portal_krs_violet-1-2"/>
+      <water_die_time value="0"/>
+      <shot_time value="2"/>
+      <day_not_kill/>
+      <life_time value="3"/>
+      
+    </params>
+    <sounds>
+      <ambient value="mummy_ambient"/>
+      <die value="mummy_death"/>
+    </sounds>
+    <animations>
+      <ani name="stop" ani="mummy_boss\main_02"/>
+      <ani name="move" ani="mummy_boss\walk"/>
+      <ani name="action" ani="mummy_boss\attack"/>
+      <ani name="climb" ani="mummy_boss\walk"/>
+      <ani name="jump" ani="mummy_boss\jump"/>
+      <ani name="dies_end" ani="mummy_boss\death"/>
+    </animations>
+  </creature>
+  <creature name="mummy_boss_reptilian">
+    <params>
+      <ico value="big_reptilian"/>
+      <ai value="zombie"/>
+      <height value="70"/>
+      <width value="35"/>
+      <healt value="12"/>
+      <scale value="1"/>
+      <walk_speed value="30"/>
+      <climbs_speed value="20"/>
+      <radius value="3"/>
+      <fall_height value="10"/>
+      <healt_restore value="0.166%"/>      <!--процент восстановления жизни при бездействии, в сек.-->
+      <tour_distance value="3-4"/>      <!--радиус прогулки монстра вокруг да около-->
+      <fear_radius value="8"/>      <!--радиус боязни человечков-->
+      <attack value="0.65"/>
+      <attack_push value="true"/>      <!--отталкивает врага при ударе-->
+      <resources value="brains-1,rusty_mummy_saber-1-4,fabric-1-40,thread-1-25,portal_krs_dblue-1-2,portal_krs_green-1-2,portal_krs_violet-1-2"/>
+      <water_die_time value="0"/>
+      <shot_time value="2"/>
+      <day_not_kill/>
+      <life_time value="3"/>
+      <skins value="big_zombie"/>
+    </params>
+    <sounds>
+      <ambient value="mummy_ambient"/>
+      <die value="mummy_death"/>
+    </sounds>
+    <animations>
+      <ani name="idle" ani="reptilian_zombie_boss\main2"/>
+      <ani name="stop" ani="reptilian_zombie_boss\main"/>
+      <ani name="move" ani="reptilian_zombie_boss\walk_01|walk_02"/>
+      <ani name="action" ani="reptilian_zombie_boss\attack"/>
+      <ani name="climb" ani="reptilian_zombie_boss\walk_01"/>
+      <ani name="jump" ani="reptilian_zombie_boss\jump"/>
+      <ani name="dies_end" ani="reptilian_zombie_boss\death"/>
+    </animations>
+  </creature>
+  <creature name="ghost">
+    <params>
+      <ai value="ghost"/>
+      <healt value="1"/>
+      <height value="60"/>
+      <width value="40"/>
+      <scale value="1"/>
+      <fast_speed value="160"/>
+      <slow_speed value="24"/>
+      <totem_fear_radius value="5"/>
+      <tour_distance value="3-4"/>      <!--радиус прогулки монстра вокруг да около-->
+      <water_die_time value="0"/>
+      <resources value="web-1-25"/>
+    </params>
+    <sounds>
+      <ambient value="ghost"/>
+      <die value="ghost_death"/>
+    </sounds>
+    <animations>
+      <ani name="move" ani="ghost\main"/>
+      <ani name="run" ani="ghost\main"/>
+      <ani name="action" ani="ghost\main_scream_disorder"/>
+      <ani name="escape" ani="ghost\main_scream_disorder"/>
+      <ani name="dies_end" ani="ghost\main_scream_disorder"/>
+    </animations>
+  </creature>
+  
+  <creature name="walk_pumpkin">
+    <params>
+      <no_beastiary/>
+      <ai value="slug"/>
+      <healt value="1"/>
+      <height value="30"/>
+      <width value="35"/>
+      <scale value="1"/>
+      <climbs_speed value="8"/>
+      <tour_time value="60-300"/>            <!--время прогулки в одну сторону-->
+      <volume_kill value="9"/>               <!--минимальный объем помещения, в котором может существовать слизняк-->
+      <volume_kill_time value="30-60"/>      <!-- время через которое убирать слизняка в замкнутом пространстве объемом меньше заданного-->
+      <resources value="mucus-1"/>
+      <water_die_time value="0"/>
+      <life_time value="1"/>
+      <dont_use_speed_events value="true"/>
+    </params>
+    <animations>
+      <ani name="idle" ani="walk_pumpkin\idle_01|idle_02"/>
+      <ani name="stop" ani="walk_pumpkin\idle_01"/>
+      <ani name="move" ani="walk_pumpkin\walk"/>
+      <ani name="dies_end" ani="walk_pumpkin\death"/>
+    </animations>
+  </creature>
+  
+  <creature name="banshee">
+    <params>
+      <ai value="banshee"/>
+      <healt value="5"/>
+      <height value="60"/>
+      <width value="40"/>
+      <scale value="1"/>
+      <walk_speed value="50"/>
+      <water_die_time value="0"/>
+      <resources value="web-1-25"/>
+      <radius value="15"/>
+      <attack_radius value="5"/>
+      <skins value="witch_01"/>
+    </params>
+    <sounds>
+      <ambient value="ghost"/>
+      <die value="ice_witch_death"/>
+    </sounds>
+    <animations>
+      <ani name="stop" ani="banshee\idle"/>
+      <ani name="move" ani="banshee\walk"/>
+      <ani name="action" ani="banshee\attack"/>
+      <ani name="dies_end" ani="banshee\death"/>
+    </animations>
+  </creature>
+
+  <creature name="madness_rider">
+    <params>
+      <ai value="madness_rider"/>
+      <healt value="15"/>
+      <height value="60"/>
+      <width value="40"/>
+      <scale value="1"/>
+      <walk_speed value="50"/>
+      <climbs_speed value="30"/>
+      <water_die_time value="0"/>
+      <resources value="web-1-25"/>
+      <radius value="5"/>
+      <skins value="skin_01"/>
+      <attack value="0.3"/>
+      <use_jump_begin/>
+    </params>
+    <sounds>
+      <die value="zombie_death"/>
+      <step value="zombie_step"/>
+    </sounds>
+    <animations>
+      <ani name="cantdo" ani="madness_rider\idle_01"/>
+      <ani name="idle" ani="madness_rider\idle_01|idle_02"/>
+      <ani name="stop" ani="madness_rider\idle_01"/>
+      <ani name="move" ani="madness_rider\walk_01|walk_02"/>
+      <ani name="action" ani="madness_rider\attack_01|attack_02"/>
+      <ani name="climb" ani="madness_rider\walk_01"/>
+      <ani name="jump" ani="madness_rider\jump"/>
+      <ani name="run" ani="madness_rider\run"/>
+      <ani name="dies_end" ani="madness_rider\death"/>
+      <ani name="catch" ani="madness_rider\attack_catch"/>
+      <ani name="catch_idle" ani="madness_rider\attack_idle_01|attack_idle_02"/>
+    </animations>
+  </creature>
+
+  <creature name="slug">
+    <params>
+      <ai value="slug"/>
+      <healt value="1"/>
+      <height value="30"/>
+      <width value="35"/>
+      <scale value="0.7"/>
+      <climbs_speed value="8"/>
+      <tour_time value="60-300"/>            <!--время прогулки в одну сторону-->
+      <volume_kill value="9"/>               <!--минимальный объем помещения, в котором может существовать слизняк-->
+      <volume_kill_time value="30-60"/>      <!-- время через которое убирать слизняка в замкнутом пространстве объемом меньше заданного-->
+      <resources value="mucus-1"/>
+      <water_die_time value="0"/>
+      <life_time value="1"/>
+    </params>
+    <animations>
+      <ani name="idle" ani="snail\main_02"/>
+      <ani name="stop" ani="snail\main"/>
+      <ani name="move" ani="snail\walk"/>
+      <ani name="dies_end" ani="snail\daeth"/>
+    </animations>
+  </creature>
+
+  <creature name="toad">
+    <params>
+      <ai value="toad"/>
+      <healt value="1"/>
+      <height value="30"/>
+      <width value="35"/>
+      <scale value="0.7"/>
+      <climbs_speed value="8"/>
+      <tour_time value="60-300"/>      <!--время прогулки в одну сторону-->
+      <volume_kill value="9"/>      <!--минимальный объем помещения, в котором может существовать слизняк-->
+      <volume_kill_time value="30-60"/>      <!-- время через которое убирать слизняка в замкнутом пространстве объемом меньше заданного-->
+      <resources value="toad_meat-1,mucus-1"/>
+      <water_die_time value="0"/>
+      <life_time value="1"/>
+    </params>
+    <sounds>
+      <action1 value="frog"/>
+    </sounds>
+    <animations>
+      <ani name="idle" ani="toad\main|main2"/>
+      <ani name="stop" ani="toad\main|main2"/>
+      <ani name="move" ani="toad\walk"/>
+      <ani name="dies_end" ani="toad\death"/>
+    </animations>
+  </creature>
+
+  <creature name="slug2">
+    <params>
+      <ico value="slug_4th_world"/>
+      <ai value="slug"/>
+      <healt value="1"/>
+      <height value="30"/>
+      <width value="35"/>
+      <scale value="1"/>
+      <climbs_speed value="13"/>
+      <tour_time value="60-300"/>
+      <!--время прогулки в одну сторону-->
+      <volume_kill value="9"/>
+      <!--минимальный объем помещения, в котором может существовать слизняк-->
+      <volume_kill_time value="30-60"/>
+      <!-- время через которое убирать слизняка в замкнутом пространстве объемом меньше заданного-->
+      <resources value="mucus-1"/>
+      <water_die_time value="0"/>
+      <life_time value="1"/>
+    </params>
+    <animations>
+      <ani name="idle" ani="slug\main_02"/>
+      <ani name="stop" ani="slug\main"/>
+      <ani name="move" ani="slug\walk"/>
+      <ani name="dies_end" ani="slug\deaph"/>
+    </animations>
+  </creature>
+
+  <creature name="skeleton">
+    <params>
+      <ico_tc value="reptilian_skeletons"/>
+      <ai value="skeleton"/>
+      <height value="55"/>
+      <width value="35"/>
+      <healt value="2"/>
+      <scale value="1"/>
+      <walk_speed value="52"/>
+      <climbs_speed value="45"/>
+      <radius value="6"/>
+      <distance value="2-3"/>      <!--расстояние до зомби при его приследовании-->
+      <fall_height value="10"/>
+      <fear_radius value="8"/>      <!--радиус боязни человечков-->
+      <attack value="0.3"/>
+      <tour_distance value="3-4"/>      <!--радиус прогулки монстра вокруг да около-->
+      <resources value="bone-1-50,iron_boots-1-1,rusty_sceleton_mace-1-3,rusty_sceleton_saber-1-3"/>
+      <water_die_time value="0"/>
+      <life_time value="3"/>
+      <shot_time value="1.6"/>
+    </params>
+    <sounds>
+      <hit value="hit_metall_metall"/>
+      <step value="skeleton_step"/>
+      <ambient value="skeleton_ambient"/>
+      <die value="skeleton_death"/>
+    </sounds>
+    <animations>
+      <ani name="cantdo" ani="skeleton\main2"/>
+      <ani name="idle" ani="skeleton\main2"/>
+      <ani name="stop" ani="skeleton\main"/>
+      <ani name="move" ani="skeleton\walk"/>
+      <ani name="move1" ani="skeleton\walk2"/>
+      <ani name="move2" ani="skeleton\walk3"/>
+      <ani name="move3" ani="skeleton\walk4"/>
+      <ani name="shield" ani="skeleton\shield_up,shield_up_continue"/>
+      <ani name="shield_down" ani="skeleton\shield_down"/>
+      <ani name="action" ani="skeleton\attack"/>
+      <ani name="climb" ani="skeleton\walk"/>
+      <ani name="jump" ani="skeleton\jump"/>
+      <!--<ani name="dies_end" ani="creature_dies"/>-->
+      <ani name="dies_end" ani="skeleton\death"/>
+    </animations>
+    <spine_elements>
+      <random slots="leg1_feet2,leg1_feet1,leg1_2" attach_count="2"/>  <!--выбираем рандомно один из аттачей к указаным слотам, атачей должно быть одинаковое кол-во-->
+      <random slots="head" attach_count="3"/>
+      <random slots="wipon" attach_count="2"/>
+      <show_hide slots="shoulder"/>
+    </spine_elements>
+  </creature>
+
+  <creature name="skeleton_archer">
+    <params>
+      <ai value="skeleton"/>
+      <height value="55"/>
+      <width value="35"/>
+      <healt value="1"/>
+      <scale value="1"/>
+      <walk_speed value="52"/>
+      <climbs_speed value="45"/>
+      <radius value="5"/>
+      <distance value="2-3"/><!--расстояние до зомби при его приследовании-->
+      <fall_height value="10"/>
+      <fear_radius value="8"/><!--радиус боязни человечков-->
+      <attack value="0.2"/>
+      <tour_distance value="3-4"/><!--радиус прогулки монстра вокруг да около-->
+      <resources value="bone-1-50,iron_boots-1-1"/>
+      <water_die_time value="0"/>
+      <life_time value="3"/>
+      <shot_time value="2"/>
+      <no_static value="true"/>
+      <archer/>
+      <skins value="skin_01,skin_02,skin_03,skin_04,skin_05,skin_06,skin_07"/>
+    </params>
+    <sounds>
+      <hit value="hit_metall_metall"/>
+      <step value="skeleton_step"/>
+      <ambient value="skeleton_ambient"/>
+      <die value="skeleton_death"/>
+    </sounds>
+    <animations>
+      <ani name="cantdo" ani="skeleton_archer\main2"/>
+      <ani name="idle" ani="skeleton_archer\main2"/>
+      <ani name="stop" ani="skeleton_archer\main"/>
+      <ani name="move" ani="skeleton_archer\walk"/>
+      <ani name="move1" ani="skeleton_archer\walk2"/>
+      <ani name="move2" ani="skeleton_archer\walk3"/>
+      <ani name="move3" ani="skeleton_archer\walk4"/>
+      <ani name="shield" ani="skeleton_archer\shield_up,shield_up_continue"/>
+      <ani name="shield_down" ani="skeleton_archer\shield_down"/>
+      <ani name="action" ani="skeleton_archer\attack"/>
+      <ani name="climb" ani="skeleton_archer\walk"/>
+      <ani name="jump" ani="skeleton_archer\jump"/>
+      <ani name="dies_end" ani="skeleton_archer\death"/>
+    </animations>
+  </creature>
+
+  <creature name="skeleton_shielder">
+    <params>
+      <ico_tc value="reptilian_skeletons"/>
+      <ico value="skeleton"/>
+      <ai value="skeleton"/>
+      <height value="55"/>
+      <width value="35"/>
+      <healt value="3"/>
+      <scale value="1"/>
+      <walk_speed value="52"/>
+      <climbs_speed value="45"/>
+      <radius value="6"/>
+      <distance value="2-3"/>      <!--расстояние до зомби при его приследовании-->
+      <fall_height value="10"/>
+      <fear_radius value="8"/>      <!--радиус боязни человечков-->
+      <attack value="0.3"/>
+      <tour_distance value="3-4"/>      <!--радиус прогулки монстра вокруг да около-->
+      <resources value="bone-1-50,rusty_sceleton_heavy_mace-1-3,rusty_sceleton_helmet-1-3,money-1-5"/>
+      <water_die_time value="0"/>
+      <life_time value="3"/>
+      <shot_time value="1.6"/>
+
+      <armor_tesla value="5"/>      <!-- damage divider -->
+      <armor_arrow value="3"/>
+      <armor_fireball value="2"/>
+      <no_static value="true"/>
+    </params>
+    <sounds>
+      <hit value="hit_metall_metall"/>
+      <step value="skeleton_step"/>
+      <ambient value="skeleton_ambient"/>
+      <die value="skeleton_death"/>
+    </sounds>
+    <animations>
+      <ani name="idle" ani="shield_skeleton\main2"/>
+      <ani name="stop" ani="shield_skeleton\main"/>
+      <ani name="move" ani="shield_skeleton\walk"/>
+      <ani name="move1" ani="shield_skeleton\walk2"/>
+      <ani name="action" ani="shield_skeleton\attack"/>
+      <ani name="climb" ani="shield_skeleton\walk"/>
+      <ani name="jump" ani="shield_skeleton\jump"/>
+      <ani name="dies_end" ani="shield_skeleton\death"/>
+    </animations>
+  </creature>
+
+  <creature name="skeleton_builder">
+    <params>
+      <ico_tc value="reptilian_skeletons"/>
+      <ico value="skeleton"/>
+      <ai value="skeleton"/>
+      <height value="55"/>
+      <width value="35"/>
+      <healt value="3"/>
+      <scale value="1"/>
+      <walk_speed value="  52"/>
+      <climbs_speed value="45"/>
+      <radius value="6"/>
+      <distance value="2-3"/>      <!--расстояние до зомби при его приследовании-->
+      <fall_height value="10"/>
+      <fear_radius value="8"/>      <!--радиус боязни человечков-->
+      <attack value="0.3"/>
+      <tour_distance value="3-4"/>      <!--радиус прогулки монстра вокруг да около-->
+      <resources value="bone-1-50,bone-2-50,rusty_sceleton_saber-1-3,money-1-5"/>
+      <water_die_time value="0"/>
+      <life_time value="3"/>
+      <shot_time value="1.6"/>
+      <no_static value="true"/>
+      <builder value="1"/>
+      <max_hole value="10"/>  
+    </params>
+    <sounds>
+      <hit value="hit_metall_metall"/>
+      <step value="skeleton_step"/>
+      <ambient value="skeleton_ambient"/>
+      <die value="skeleton_death"/>
+    </sounds>
+    <animations>
+      <ani name="idle" ani="builder_skeleton\main2"/>
+      <ani name="stop" ani="builder_skeleton\main"/>
+      <ani name="move" ani="builder_skeleton\walk"/>
+      <ani name="move1" ani="builder_skeleton\walk2"/>
+      <ani name="move2" ani="builder_skeleton\walk3"/>
+      <ani name="move3" ani="builder_skeleton\walk4"/>
+      <ani name="craft" ani="builder_skeleton\build"/>
+      <ani name="action" ani="builder_skeleton\attack"/>
+      <ani name="climb" ani="builder_skeleton\walk"/>
+      <ani name="jump" ani="builder_skeleton\jump"/>
+      <ani name="dies_end" ani="builder_skeleton\death"/>
+    </animations>
+  </creature>
+
+  <creature name="skeleton_boss">
+    <params>
+      <ico_tc value="big_reptilian"/>
+      <ai value="skeleton"/>
+      <height value="80"/>
+      <width value="40"/>
+      <healt value="15"/>
+      <scale value="1.4"/>
+      <walk_speed value="52"/>
+      <climbs_speed value="45"/>
+      <radius value="7"/>
+      <distance value="2-3"/>      <!--расстояние до зомби при его приследовании-->
+      <fall_height value="10"/>
+      <fear_radius value="8"/>      <!--радиус боязни человечков-->
+      <attack value="3"/>
+      <attack_push value="true"/>     <!--отталкивает врага при ударе-->
+      <tour_distance value="3-4"/>      <!--радиус прогулки монстра вокруг да около-->
+      <resources value="bone-1-50,iron_boots-1-5,money-1-70"/>
+      <water_die_time value="0"/>
+      <no_static value="true"/>
+      <life_time value="4"/>
+      <shot_time value="2.3"/>
+    </params>
+    <sounds>
+      <hit value="skeleton_boss_hit"/>
+      <step value="skeleton_boss_step"/>
+      <ambient value="skeleton_ambient"/>
+      <die value="skeleton_death"/>
+    </sounds>
+    <animations>
+      <ani name="cantdo" ani="skeleton_boss\main2"/>
+      <ani name="idle" ani="skeleton_boss\main2"/>
+      <ani name="stop" ani="skeleton_boss\main"/>
+      <ani name="move" ani="skeleton_boss\walk|walk_01|walk_02"/>
+      <ani name="action" ani="skeleton_boss\attack"/>
+      <ani name="climb" ani="skeleton_boss\walk"/>
+      <ani name="jump" ani="skeleton_boss\jump"/>
+      <ani name="dies_end" ani="skeleton_boss\death"/>
+    </animations>
+  </creature>
+  
+  <creature name="imp">
+    <params>
+      <ai value="imp"/>
+      <height value="30"/>
+      <width value="30"/>
+      <scale value="1"/>
+      <healt value="1"/>
+      <empty_speed value="120"/>
+      <cargo_speed value="100"/>
+      <catch_count value="10"/>
+      <life_time value="300"/>
+    </params>
+    <animations>
+      <ani name="idle" ani="imp\fly_empty"/>
+      <ani name="stop" ani="imp\fly_carry"/>
+      <ani name="run" ani="imp\fly_empty"/>
+      <ani name="move" ani="imp\fly_carry"/>
+      <ani name="action" ani="imp\take"/>
+    </animations>
+  </creature>
+
+  <creature name="imp_cargo">
+    <params>
+      <ai value="imp"/>
+      <height value="30"/>
+      <width value="30"/>
+      <scale value="1"/>
+      <healt value="1"/>
+      <empty_speed value="80"/>
+      <cargo_speed value="60"/>
+    </params>
+    <animations>
+      <ani name="idle" ani="imp_cargo\fly_empty"/>
+      <ani name="stop" ani="imp_cargo\fly_carry"/>
+      <ani name="run" ani="imp_cargo\fly_empty"/>
+      <ani name="move" ani="imp_cargo\fly_carry"/>
+      <ani name="action" ani="imp_cargo\take"/>
+    </animations>
+  </creature>
+
+  <creature name="gargoyley">
+    <params>
+      <ai value="gargoyley"/>
+      <height value="40"/>
+      <width value="40"/>
+      <scale value="1"/>
+      <healt value="5"/>
+      <radius value="9"/>
+      <walk_speed value="110"/>
+      <attack value="0.2"/>
+      <shot_time value="1.6"/>
+      <petrifaction_resource value="gargoyley_spawner"/>
+      <independent value="true"/>
+      <resources value="mucus-1-70,rusty_sceleton_heavy_mace-1-25,bone-1-70,money-1-10"/>
+      <skins value="skin_01,skin_02,skin_03"/>
+    </params>
+    <sounds>
+      <ambient value="gargoyley_ambient"/>
+      <die value="gargoyley_death"/>
+      <step value="gargoyley_wing"/>
+    </sounds>
+    <animations>
+      <ani name="idle" ani="gargoyley\main_01"/>
+      <ani name="idle1" ani="gargoyley\main_02"/>
+      <ani name="stop" ani="gargoyley\main_01"/>
+      <ani name="move" ani="gargoyley\fly_forw"/>
+      <ani name="move1" ani="gargoyley\fly_forw_02"/>
+      <ani name="move2" ani="gargoyley\fly_forw_03"/>
+      <ani name="move_up" ani="gargoyley\fly_up"/>
+      <ani name="move_down" ani="gargoyley\main_01"/>
+      <ani name="action" ani="gargoyley\attack_regular"/>
+      <ani name="convert" ani="gargoyley\to_stone"/>
+      <ani name="attack_super" ani="gargoyley\attack_super|attack_super_02"/>
+    </animations>
+  </creature>
+
+  <creature name="gargoyley_ancient">
+    <params>
+      <ico value="gargoyley"/>
+      <ai value="gargoyley"/>
+      <height value="40"/>
+      <width value="40"/>
+      <scale value="1"/>
+      <healt value="50"/>
+      <radius value="9"/>
+      <walk_speed value="110"/>
+      <attack value="0.5"/>
+      <shot_time value="1.6"/>
+      <independent value="true"/>
+      <resources value="mucus-1-70,rusty_sceleton_heavy_mace-1-25,bone-1-70,money-5-40"/>
+      <skins value="skin_04"/>
+      <from_stone/>
+    </params>
+    <sounds>
+      <ambient value="gargoyley_ambient"/>
+      <die value="gargoyley_death"/>
+      <step value="gargoyley_wing"/>
+    </sounds>
+    <animations>
+      <ani name="idle" ani="gargoyley\main_01"/>
+      <ani name="idle1" ani="gargoyley\main_02"/>
+      <ani name="stop" ani="gargoyley\main_01"/>
+      <ani name="move" ani="gargoyley\fly_forw"/>
+      <ani name="move1" ani="gargoyley\fly_forw_02"/>
+      <ani name="move2" ani="gargoyley\fly_forw_03"/>
+      <ani name="move_up" ani="gargoyley\fly_up"/>
+      <ani name="move_down" ani="gargoyley\main_01"/>
+      <ani name="action" ani="gargoyley\attack_regular"/>
+      <ani name="convert" ani="gargoyley\to_stone"/>
+      <ani name="convert_out" ani="gargoyley\revive"/>
+      <ani name="attack_super" ani="gargoyley\attack_super|attack_super_02"/>
+    </animations>
+  </creature>
+
+  <creature name="gargoyley_fire">
+    <params>
+      <ico value="gargoyley"/>
+      <ai value="gargoyley"/>
+      <height value="40"/>
+      <width value="40"/>
+      <scale value="1"/>
+      <healt value="5"/>
+      <radius value="9"/>
+      <walk_speed value="110"/>
+      <attack value="0.2"/>
+      <shot_time value="1.6"/>
+      <petrifaction_resource value="gargoyley_spawner"/>
+      <independent value="true"/>
+      <resources value="mucus-1-70,rusty_sceleton_heavy_mace-1-25,bone-1-70,money-1-10"/>
+      <skins value="skin_01,skin_02,skin_03"/>
+      <bone_effect bone="fire" effect="torch_fire"/>
+      <bone_light bone="fire" radius="3"/>
+    </params>
+    <sounds>
+      <ambient value="gargoyley_ambient"/>
+      <die value="gargoyley_death"/>
+      <step value="gargoyley_wing"/>
+    </sounds>
+    <animations>
+      <ani name="idle" ani="gargoyley\torcher_main_01"/>
+      <ani name="stop" ani="gargoyley\torcher_main_01"/>
+      <ani name="move" ani="gargoyley\torcher_fly_forw"/>
+      <ani name="move1" ani="gargoyley\torcher_fly_forw"/>
+      <ani name="move_up" ani="gargoyley\torcher_fly_up"/>
+      <ani name="move_down" ani="gargoyley\torcher_main_01"/>
+      <ani name="action" ani="gargoyley\torcher_attack_regular"/>
+      <ani name="convert" ani="gargoyley\torcher_to_stone"/>
+      <ani name="attack_super" ani="gargoyley\torcher_attack_super"/>
+    </animations>
+  </creature>
+
+  <creature name="mite">
+    <params>
+      <ai value="mite"/>
+      <height value="30"/>
+      <width value="30"/>
+      <scale value="0.6"/>
+      <healt value="2"/>
+      <walk_speed value="40"/>
+      <climbs_speed value="40"/>
+      <radius value="3"/>
+      <fall_height value="10"/>
+      <attack value="0.2"/>
+      <shot_time value="1.3"/>
+      <resources value="chitin-1-50"/>
+    </params>
+    <sounds>
+      <attack value="bug"/>
+      <die value="bug_death"/>
+    </sounds>
+    <animations>
+      <ani name="idle" ani="tick\main_02"/>
+      <ani name="stop" ani="tick\main"/>
+      <ani name="move" ani="tick\walk"/>
+      <ani name="action" ani="tick\attack"/>
+      <ani name="climb" ani="tick\walk"/>
+      <ani name="jump" ani="tick\main"/>
+      <ani name="fall" ani="tick\fallling"/>
+      <ani name="dies_end" ani="tick\death"/>
+    </animations>
+  </creature>
+  
+  <creature name="spider">
+    <params>
+      <ai value="spider"/>
+      <height value="45"/>
+      <width value="45"/>
+      <scale value="1"/>
+      <!--<healt value="1.5"/>-->
+      <healt value="6"/>
+      <walk_speed value="30"/>
+      <climbs_speed value="30"/>
+      <fall_height value="10"/>
+      <!--<attack value="0.4"/>-->
+      <attack value="0.5"/>
+      <healt_restore value="0.33%"/>      <!--процент восстановления жизни в секунду-->
+      <web_max value="100"/>                 <!--максимальное кол-во блоков паутины для паука-->
+      <resources value="web-1-25"/>
+      <skins value="stage_01,stage_02,stage_03"/>
+    </params>
+    <animations>
+      <ani name="cantdo" ani="spider\main"/>
+      <ani name="stop" ani="spider\main"/>
+      <ani name="move" ani="spider\walk_point"/>
+      <ani name="action" ani="spider\attack"/>
+      <ani name="climb" ani="spider\walk_point"/>
+      <ani name="jump" ani="spider\main"/>
+      <ani name="dies_end" ani="spider\death"/>
+    </animations>
+  </creature>
+
+  <creature name="beetle">
+    <params>
+      <ai value="beetle"/>
+      <height value="50"/>
+      <width value="45"/>
+      <!--<scale value="1"/>-->
+      <healt value="1"/>
+      <radius value="7"/>
+      <walk_speed value="100"/>
+      <climbs_speed value="75"/>
+      <fall_height value="10"/>
+      <attack value="0.2"/>
+      <brood_radius value="15"/>
+      <shot_time value="1"/>
+		<resources value="chitin-1-40"/>
+    </params>
+    <sounds>
+      <ambient value="insect_ambient"/>
+    </sounds>        
+    <animations>
+      <ani name="idle" ani="beetle\main_02"/>
+      <ani name="idle1" ani="beetle\main"/>
+      <ani name="stop" ani="beetle\main"/>
+      <ani name="move" ani="beetle\walk"/>
+      <ani name="action" ani="beetle\attack"/>
+      <ani name="climb" ani="beetle\fly"/>
+      <ani name="climb_down" ani="beetle\fly"/>
+      <ani name="jump" ani="beetle\jump"/>
+      <!--<ani name="dies_end" ani="creature_dies"/>-->
+      <ani name="dies_end" ani="beetle\death"/>
+    </animations>
+  </creature>
+  
+  <creature name="goblin">
+    <params>
+      <ai value="goblin"/>
+      <height value="50"/>
+      <width value="30"/>
+      <scale value="1"/>      <!--скейл для всех анимаций-->
+      <healt value="8"/>
+      <walk_speed value="70"/>
+      <laden_speed value="40"/>         <!--скорость загруженного гоблина-->
+      <climbs_speed value="40"/>
+      <climbs_ladder_speed value="50"/>
+      <radius value="8"/>
+      <fall_height value="10"/>
+      <attack value="0.3"/>
+      <healt_restore value="0.16%"/>      <!--процент восстановления жизни в сек-->
+      <camp_radius value="2"/>            <!--радиус вокруг лагеря, который считается лагерем-->
+      <wait_time value="120"/>            <!--время ожидания в засаде-->
+      <attack_healt value="30%"/>        <!--мин. кол. жизни для атаки человечка в %-->
+      <camp_fight_radius value="5"/>      <!--радиус вокруг лагеря, в пределах которого гоблины дерутся до смерти-->
+      <tour_distance value="3-5"/>      <!--радиус прогулки монстра вокруг да около-->
+      <water_die_time value="180"/>
+      <shot_time value="1"/>
+      <resources value="goblin_spear-1-4,skin-1-15,rope-1-15,coal-1-10,silver-1-3,gold-1-2,mithril-1-2"/>
+      <skins value="green_goblin_01,green_goblin_02,green_goblin_03"/>
+    </params>
+    <sounds>
+      <ambient value="goblin_ambient"/>
+      <die value="goblin_death"/>
+    </sounds>
+    <animations>
+      <ani name="cantdo" ani="cave_goblin\main_02"/>
+      <ani name="stop" ani="cave_goblin\main_01"/>
+      <ani name="move" ani="cave_goblin\walk"/>
+      <ani name="run" ani="cave_goblin\walk_run"/>
+      <ani name="action" ani="cave_goblin\attack_spear"/>
+      <ani name="climb" ani="cave_goblin_back\climb_up"/>
+      <ani name="climb_down" ani="cave_goblin_back\climb_down"/>
+      <ani name="jump" ani="cave_goblin\jump_point"/>
+      <ani name="swim" ani="cave_goblin\sweem"/>
+      <ani name="fly" ani="cave_goblin\fly"/>
+      <ani name="landing" ani="cave_goblin\landing"/>
+      <ani name="dies_end" ani="cave_goblin\death"/>
+    </animations>
+    <spine_elements>
+      <random_color slots="hair_skin">
+        <colors>
+          245, 45, 0,
+          255, 240, 0,
+          147, 8,  8,
+          200, 179, 82,
+          48, 152, 0,
+          255, 138, 0,
+        </colors>
+      </random_color>
+    </spine_elements>
+  </creature>
+  <creature name="goblin_elf">
+    <params>
+      <no_beastiary/>
+      <ai value="goblin"/>
+      <height value="50"/>
+      <width value="30"/>
+      <scale value="1"/>
+      <healt value="8"/>
+      <walk_speed value="70"/>
+      <laden_speed value="40"/>
+      <climbs_speed value="40"/>
+      <climbs_ladder_speed value="50"/>
+      <radius value="8"/>
+      <fall_height value="10"/>
+      <attack value="0.3"/>
+      <healt_restore value="0.16%"/>
+      <camp_radius value="2"/>
+      <wait_time value="120"/>
+      <attack_healt value="30%"/>
+      <camp_fight_radius value="5"/>
+      <tour_distance value="3-5"/>
+      <water_die_time value="180"/>
+      <shot_time value="1"/>
+      <resources value="cabels-1-50,garland-1-10,christmas_wreath-1-10,gingerbread_cookies-1-50"/>
+      <skins value="green_goblin_elf_01,green_goblin_elf_02,green_goblin_elf_03"/>
+    </params>
+    <sounds>
+      <ambient value="goblin_ambient"/>
+      <die value="goblin_death"/>
+    </sounds>
+    <animations>
+      <ani name="cantdo" ani="cave_goblin\main_02"/>
+      <ani name="stop" ani="cave_goblin\main_01"/>
+      <ani name="move" ani="cave_goblin\walk"/>
+      <ani name="run" ani="cave_goblin\walk_run"/>
+      <ani name="action" ani="cave_goblin\attack_spear"/>
+      <ani name="climb" ani="cave_goblin_back\climb_up"/>
+      <ani name="climb_down" ani="cave_goblin_back\climb_down"/>
+      <ani name="jump" ani="cave_goblin\jump_point"/>
+      <ani name="swim" ani="cave_goblin\sweem"/>
+      <ani name="fly" ani="cave_goblin\fly"/>
+      <ani name="landing" ani="cave_goblin\landing"/>
+      <ani name="dies_end" ani="cave_goblin\death"/>
+    </animations>
+    <spine_elements>
+      <random_color slots="hair_skin">
+        <colors>
+          245, 45, 0,
+          255, 240, 0,
+          147, 8,  8,
+          200, 179, 82,
+          48, 152, 0,
+          255, 138, 0,
+        </colors>
+      </random_color>
+    </spine_elements>
+  </creature>
+
+  <creature name="goblin_shaman">
+    <params>
+      <ai value="goblin_shaman"/>
+      <height value="50"/>
+      <width value="50"/>
+      <scale value="1.1"/>      <!--скейл для всех анимаций-->
+      <healt value="10"/>
+      <walk_speed value="25"/>
+      <climbs_speed value="25"/>
+      <radius value="8"/>
+      <water_die_time value="180"/>
+	    <resources value="skin-1-15,rope-1-15,root-1-30,grey_mushroom-1-30,pink_mushroom-1-30,quartz-1-10,feather-3-25"/>
+      <skins value="shaman"/>
+    </params>
+    <sounds>
+      <die value="goblin_death"/>
+    </sounds>
+    <animations>
+      <ani name="stop" ani="shaman\main_no_drums"/>
+      <ani name="move" ani="shaman_move\walk"/>
+      <ani name="action" ani="shaman\main_drums"/>
+      <ani name="climb" ani="shaman_move\walk"/>
+      <ani name="jump" ani="shaman_move\walk"/>
+      <ani name="dies_end" ani="shaman_ad\death"/>
+    </animations>
+  </creature>
+  <creature name="christmas_shaman">
+    <params>
+      <ai value="goblin_shaman"/>
+      <height value="50"/>
+      <width value="50"/>
+      <scale value="1.1"/>
+      <!--скейл для всех анимаций-->
+      <healt value="10"/>
+      <walk_speed value="25"/>
+      <climbs_speed value="25"/>
+      <radius value="8"/>
+      <water_die_time value="180"/>
+      <resources value="cabels-1-50,garland-1-10,christmas_wreath-1-10,gingerbread_cookies-1-50"/>
+      <skins value="christmas_shaman"/>
+    </params>
+    <sounds>
+      <die value="goblin_death"/>
+    </sounds>
+    <animations>
+      <ani name="stop" ani="shaman\main_no_drums"/>
+      <ani name="move" ani="shaman_move\walk"/>
+      <ani name="action" ani="shaman\main_drums"/>
+      <ani name="climb" ani="shaman_move\walk"/>
+      <ani name="jump" ani="shaman_move\walk"/>
+      <ani name="dies_end" ani="shaman_ad\death"/>
+    </animations>
+  </creature>
+
+  <creature name="worm">
+    <params>
+      <ai value="worm"/>
+      <height value="110"/>
+      <width value="40"/>
+      <healt value="50"/>
+      <walk_speed value="96"/>
+      <attack value="3"/>
+      <dirtChance value="20%"/>    <!--вероятность выпадения земли-->
+      <distance value="10-20"/>    <!--расстояние в блоках, которое проползает червь-->
+      <resources value="chitin-5,needle-3,mucus-2,silver-10-50,gold-10-50,mithril-10-50,money-10"/>
+    </params>
+    <animations>
+      <!--<ani name="stop" ani="worm_stop"/>-->
+      <!--<ani name="move" ani="worm_move"/>-->
+      <ani name="move" ani="worm\walk3"/>
+      <ani name="action" ani="worm_main\worm_main"/>
+      <ani name="dies_end" ani="creature_dies"/>
+    </animations>
+  </creature>
+  <!-- *******************  Animals  **********************************  -->
+
+    <creature name="octopus">
+    <params>
+      <ai value="octopus"/>
+      <height value="30"/>
+      <width value="30"/>
+      <!--<ratio value="1"/>      -->      <!--пропорция ширины к высоте-->
+      <scale value="1"/>            <!--скейл к размеру блока-->
+      <healt value="10"/>
+      <walk_speed value="45"/>
+      <climbs_speed value="45"/>
+      <radius value="5"/>      <!--радиус видимости и радиус цели-->
+      <fall_height value="100"/>
+      <!--<weight_coeff value="1"/>-->
+      <over_high value="3"/>      <!--может преодолевать высоту-->
+      <jump_down value="10000"/>      <!--может спрыгивать с любой высоты-->
+      <escape_distance value="1"/>      <!--расстояние, на которое старается убежать при атаке -->
+      <resources value="egg-2,feather-2"/>
+      <water_die_time value="30"/>
+      <attack value="0.25"/>
+
+      <can_catch value="true"/>
+      <farm_population_ratio value="0.1"/>
+      <farm_resource value="egg"/>
+    </params>
+    <sounds>
+      <ambient value="octopus_ambient"/>
+      <die value="octopus_death"/>
+      <attack value="octopus_attack"/>
+    </sounds>
+    <animations>
+      <ani name="cantdo" ani="octopus\main"/>
+      <ani name="idle" ani="octopus\main"/>
+      <ani name="idle1" ani="octopus\main"/>
+      <ani name="stop" ani="octopus\main"/>
+      <ani name="action" ani="octopus\attack"/>
+      <ani name="move" ani="octopus\walk"/>
+      <ani name="climb" ani="octopus\walk"/>
+      <ani name="jump" ani="octopus\walk"/>
+      <ani name="fall" ani="octopus\walk"/>
+      <ani name="dies_end" ani="octopus\deaph"/>
+    </animations>
+  </creature>
+    
+  <creature name="chicken">
+    <params>
+      <group value="animal"/>
+      <ai value="chicken"/>
+      <height value="38"/>
+      <width value="30"/>
+      <!--<ratio value="1"/>      -->      <!--пропорция ширины к высоте-->
+      <!--<scale value="0.5"/>      -->      <!--скейл к размеру блока-->
+      <healt value="2"/>
+      <walk_speed value="100"/>
+      <climbs_speed value="100"/>
+      <radius value="3"/>      <!--радиус видимости и радиус цели-->
+      <fall_height value="100"/>
+      <!--<weight_coeff value="1"/>-->
+      <over_high value="3"/>      <!--может преодолевать высоту-->
+      <jump_down value="10000"/>      <!--может спрыгивать с любой высоты-->
+      <escape_distance value="1"/>      <!--расстояние, на которое старается убежать при атаке -->
+      <resources value="egg-2,feather-2"/>
+      <water_die_time value="30"/>
+
+      <can_catch value="true"/>
+      <farm_population_ratio value="0.1"/>
+      <farm_resource value="egg"/>
+    </params>
+    <sounds>
+      <ambient value="chicken_ambient"/>
+      <die value="chicken_death"/>
+    </sounds>
+    <animations>
+      <ani name="cantdo" ani="chicken\main_02"/>
+      <ani name="idle" ani="chicken\main_02"/>
+      <ani name="idle1" ani="chicken\main"/>
+      <ani name="stop" ani="chicken\main"/>
+      <ani name="move" ani="chicken\walk_run"/>
+      <ani name="climb" ani="chicken\fly"/>
+      <ani name="jump" ani="chicken\fly"/>
+      <ani name="fall" ani="chicken\fly"/>
+      <ani name="dies_end" ani="chicken\death"/>
+    </animations>
+  </creature>
+
+  <creature name="duck">
+    <params>
+      <group value="animal"/>
+      <ai value="chicken"/>
+      <height value="38"/>
+      <width value="30"/>
+      <healt value="2"/>
+      <walk_speed value="100"/>
+      <climbs_speed value="100"/>
+      <radius value="3"/>
+      <fall_height value="100"/>
+      <over_high value="3"/>
+      <jump_down value="10000"/>
+      <escape_distance value="1"/>
+      <resources value="duck_meat-2,egg-2,feather-2"/>
+      <water_die_time value="30"/>
+      <can_catch value="true"/>
+      <farm_population_ratio value="0.1"/>
+      <farm_resource value="egg"/>
+    </params>
+    <sounds>
+      <ambient value="duck_ambient"/>
+      <step value="duck_wings"/>
+    </sounds>
+    <animations>
+      <ani name="cantdo" ani="duck\main_02"/>
+      <ani name="idle" ani="duck\main_02"/>
+      <ani name="idle1" ani="duck\main"/>
+      <ani name="stop" ani="duck\main"/>
+      <ani name="move" ani="duck\walk_run"/>
+      <ani name="climb" ani="duck\fly"/>
+      <ani name="jump" ani="duck\fly"/>
+      <ani name="fall" ani="duck\fly"/>
+      <ani name="dies_end" ani="duck\death"/>
+    </animations>
+  </creature>
+
+  <creature name="chick">
+    <params>
+      <group value="animal"/>
+      <ai value="chicken"/>
+      <height value="38"/>
+      <width value="30"/>
+      <healt value="2"/>
+      <scale value="1"/>
+      <walk_speed value="100"/>
+      <climbs_speed value="100"/>
+      <radius value="3"/>      <!--радиус видимости и радиус цели-->
+      <fall_height value="100"/>      <!--<weight_coeff value="1"/>-->
+      <over_high value="3"/>      <!--может преодолевать высоту-->
+      <jump_down value="10000"/>      <!--может спрыгивать с любой высоты-->
+      <escape_distance value="1"/>      <!--расстояние, на которое старается убежать при атаке -->
+      <resources value="egg-2,feather-2"/>
+      <water_die_time value="30"/>
+
+      <can_catch value="true"/>
+      <farm_population_ratio value="0.1"/>
+      <farm_resource value="egg"/>
+
+    </params>
+    <sounds>
+      <ambient value="blue_bird_ambient"/>
+      <die value="blue_bird_death"/>
+    </sounds>
+    <animations>
+      <ani name="cantdo" ani="chick\main_02"/>
+      <ani name="idle" ani="chick\main_02"/>
+      <ani name="idle1" ani="chick\main"/>
+      <ani name="stop" ani="chick\main"/>
+      <ani name="move" ani="chick\walk_run"/>
+      <ani name="climb" ani="chick\fly"/>
+      <ani name="jump" ani="chick\fly"/>
+      <ani name="fall" ani="chick\fly"/>
+      <ani name="dies_end" ani="chick\death"/>
+    </animations>
+  </creature>
+  
+  <creature name="lizard">
+    <params>
+      <group value="animal"/>
+      <ai value="chicken"/>
+      <height value="38"/>
+      <width value="30"/>      
+      <!--<ratio value="1"/>      -->      <!--пропорция ширины к высоте-->
+      <!--<scale value="0.5"/>      -->      <!--скейл к размеру блока-->
+      <healt value="2"/>
+      <walk_speed value="100"/>
+      <climbs_speed value="100"/>
+      <radius value="3"/>      <!--радиус видимости и радиус цели-->
+      <fall_height value="100"/>
+      <weight_coeff value="1"/>
+      <over_high value="3"/>      <!--может преодолевать высоту-->
+      <jump_down value="10000"/>      <!--может спрыгивать с любой высоты-->
+      <escape_distance value="1"/>      <!--расстояние, на которое старается убежать при атаке -->
+      <resources value="egg-2,feather-2"/>
+      <water_die_time value="30"/>
+
+      <can_catch value="true"/>
+      <farm_population_ratio value="0.1"/>
+      <farm_resource value="egg"/>
+
+    </params>
+    <sounds>
+      <ambient value="lizard_ambient"/>
+      <ambient value="lizard_death"/>
+    </sounds>
+    <animations>
+      <ani name="cantdo" ani="ice_lizard\main_02"/>
+      <ani name="idle" ani="ice_lizard\main_02"/>
+      <ani name="idle1" ani="ice_lizard\main"/>
+      <ani name="stop" ani="ice_lizard\main"/>
+      <ani name="move" ani="ice_lizard\walk_run"/>
+      <ani name="climb" ani="ice_lizard\fly"/>
+      <ani name="jump" ani="ice_lizard\fly"/>
+      <ani name="fall" ani="ice_lizard\fly"/>
+      <ani name="dies_end" ani="ice_lizard\death"/>
+    </animations>
+  </creature>
+
+  <creature name="sheep">
+    <params>
+      <group value="animal"/>
+      <ai value="sheep"/>
+      <height value="36"/>
+      <width value="40"/>
+      <!--<ratio value="1.14"/>      --><!--пропорция ширины к высоте--><!--
+      <scale value="0.6"/>      --><!--скейл к размеру блока-->
+      <healt value="3"/>
+      <walk_speed value="80"/>
+      <climbs_speed value="10"/>
+      <radius value="3"/>
+      <fall_height value="100"/>
+      <!--<weight_coeff value="1"/>-->
+      <over_high value="1"/>      <!--может преодолевать высоту-->
+      <jump_down value="2"/>      <!--может спрыгивать с высоты-->
+      <escape_distance value="2"/>  <!--расстояние, на которое старается убежать при атаке -->
+      <resources value="wool-1,meat-1"/>
+      <water_die_time value="30"/>
+      
+      <can_cut value="true"/>
+      <can_catch value="true"/>
+      <cut_resources value="wool-1"/>
+      <growing_time value="600"/>
+      <growing_stage_max value="2"/>
+      <farm_population_ratio value="0.05"/>
+    </params>
+    <sounds>
+      <ambient value="sheep_ambient"/>
+      <die value="sheep_death"/>
+    </sounds>
+    <skins>
+      <stage1 value="bold_lamb"/>
+      <stage2 value="hairy_lamb"/>
+      <stage3 value="curly_lamb"/>
+    </skins>
+    <animations>
+      <ani name="cantdo" ani="lamb\main"/>
+      <ani name="idle" ani="lamb\main"/>
+      <ani name="stop" ani="lamb\main_02"/>
+      <ani name="move" ani="lamb\walk"/>
+      <ani name="climb" ani="lamb\walk"/>
+      <ani name="jump" ani="lamb\jump"/>      
+      <ani name="dies_end" ani="lamb\death"/>
+    </animations>
+  </creature>
+
+    <creature name="lama">
+    <params>
+      <group value="animal"/>
+      <ai value="sheep"/>
+      <height value="36"/>
+      <width value="40"/>
+      <healt value="3"/>
+      <scale value="1"/>
+      <walk_speed value="60"/>
+      <climbs_speed value="10"/>
+      <radius value="3"/>
+      <fall_height value="100"/>
+      <over_high value="1"/>      <!--может преодолевать высоту-->
+      <jump_down value="2"/>      <!--может спрыгивать с высоты-->
+      <escape_distance value="2"/>  <!--расстояние, на которое старается убежать при атаке -->
+      <resources value="wool-1,meat-1"/>
+      <water_die_time value="30"/>
+
+      <can_cut value="true"/>
+      <can_catch value="true"/>
+      <cut_resources value="wool-1"/>
+      <growing_time value="600"/>
+      <growing_stage_max value="2"/>
+      <farm_population_ratio value="0.05"/>
+    </params>
+      <skins>
+        <stage1 value="1_skin"/>
+        <stage2 value="2_skin"/>
+        <stage3 value="3_skin"/>
+      </skins>
+    <sounds>
+      <ambient value="lama_ambient"/>
+      <die value="lama_death"/>
+    </sounds>
+    <animations>
+      <ani name="cantdo" ani="lama\main"/>
+      <ani name="idle" ani="lama\main"/>
+      <ani name="stop" ani="lama\main_02"/>
+      <ani name="move" ani="lama\walk_point|walk_point_02"/>
+      <ani name="climb" ani="lama\walk_point"/>
+      <ani name="jump" ani="lama\jump"/>      
+      <ani name="dies_end" ani="lama\death"/>
+    </animations>
+  </creature>
+
+  <creature name="caterpillar">
+    <params>
+      <group value="animal"/>
+      <ai value="sheep"/>
+      <height value="36"/>
+      <width value="50"/>
+      <healt value="3"/>
+      <scale value="1"/>
+      <walk_speed value="60"/>
+      <climbs_speed value="10"/>
+      <radius value="3"/>
+      <fall_height value="100"/>
+      <over_high value="1"/>
+      <!--может преодолевать высоту-->
+      <jump_down value="2"/>
+      <!--может спрыгивать с высоты-->
+      <escape_distance value="2"/>
+      <!--расстояние, на которое старается убежать при атаке -->
+      <resources value="wool-1,meat-1"/>
+      <water_die_time value="30"/>
+
+      <can_cut value="true"/>
+      <can_catch value="true"/>
+      <cut_resources value="wool-1"/>
+      <growing_time value="600"/>
+      <growing_stage_max value="2"/>
+      <farm_population_ratio value="0.05"/>
+      <use_jump_begin/>
+    </params>
+    <skins>
+      <stage1 value="1"/>
+      <stage2 value="2"/>
+      <stage3 value="3"/>
+    </skins>
+    <sounds>
+      <ambient value="caterpillar_ambient"/>
+      <die value="caterpillar_death"/>
+    </sounds>
+    <animations>
+      <ani name="cantdo" ani="caterpillar\main_03"/>
+      <ani name="idle" ani="caterpillar\main_03"/>
+      <ani name="stop" ani="caterpillar\main_02"/>
+      <ani name="move" ani="caterpillar\walk_01_point"/>
+      <ani name="climb" ani="caterpillar\walk_01_point"/>
+      <ani name="jump" ani="caterpillar\jump_point"/>
+      <ani name="dies_end" ani="caterpillar\death"/>
+      <ani name="change_skin" ani="caterpillar\change_skin"/>     
+    </animations>
+  </creature>
+
+
+  <creature name="yak">
+    <params>
+      <group value="animal"/>
+      <ai value="yak"/>
+      <height value="45"/>
+      <width value="50"/>
+      <!--<ratio value="0.5"/>      --><!--пропорция ширины к высоте--><!--
+      <scale value="0.9"/>      --><!--скейл к размеру блока-->      
+      <healt value="10"/>
+      <walk_speed value="90"/>
+      <climbs_speed value="10"/>
+      <radius value="3"/>
+      <fall_height value="10"/>
+      <!--<weight_coeff value="1"/>-->
+      <over_high value="1"/>      <!--может преодолевать высоту-->
+      <jump_down value="1"/>      <!--может спрыгивать с высоты-->
+      <escape_distance value="2"/>  <!--расстояние, на которое старается убежать при атаке -->
+      <attack value="0.15"/>
+      <attack_healt value="20%" />     <!--мин. кол. жизни для атаки человечка в %-->
+      <resources value="skin-2,meat-3,bone-2"/>
+      <water_die_time value="30"/>
+      <shot_time value="1.3"/>
+      <grazing value="4" />
+    </params>
+    <sounds>
+      <ambient value="pig_ambient"/>
+      <die value="pig_death"/>
+      <attack value="hit"/>
+    </sounds>
+    <animations>
+      <ani name="cantdo" ani="boar\main"/>
+      <ani name="idle" ani="boar\main"/>
+      <ani name="stop" ani="boar\main_02"/>
+      <ani name="move" ani="boar\walk"/>
+      <ani name="action" ani="boar\attack"/>
+      <ani name="climb" ani="boar\walk"/>
+      <ani name="jump" ani="boar\jump_up"/>
+      <ani name="dies_end" ani="boar\death"/>
+    </animations>
+  </creature>
+
+  <creature name="buffalo">
+    <params>
+      <group value="animal"/>
+      <ai value="yak"/>
+      <height value="45"/>
+      <width value="50"/>
+      <healt value="13"/>
+      <scale value="1"/>
+      <walk_speed value="30"/>
+      <climbs_speed value="10"/>
+      <radius value="3"/>
+      <fall_height value="10"/>      <!--<weight_coeff value="1"/>-->
+      <over_high value="1"/>      <!--может преодолевать высоту-->
+      <jump_down value="1"/>      <!--может спрыгивать с высоты-->
+      <escape_distance value="2"/>      <!--расстояние, на которое старается убежать при атаке -->
+      <attack value="0.15"/>
+      <attack_healt value="20%" />      <!--мин. кол. жизни для атаки человечка в %-->
+      <resources value="skin-2,meat-3,bone-2"/>
+      <water_die_time value="30"/>
+      <shot_time value="1.5"/>
+      <grazing value="10" />
+    </params>
+    <sounds>
+      <ambient value="bull_ambient"/>
+      <die value="bull_death"/>
+      <attack value="hit"/>
+
+    </sounds>
+    <animations>
+      <ani name="cantdo" ani="buffalo\main"/>
+      <ani name="idle" ani="buffalo\main"/>
+      <ani name="stop" ani="buffalo\main_02"/>
+      <ani name="move" ani="buffalo\walk"/>
+      <ani name="action" ani="buffalo\attack"/>
+      <ani name="climb" ani="buffalo\walk"/>
+      <ani name="jump" ani="buffalo\jump"/>
+      <ani name="dies_end" ani="buffalo\death"/>
+    </animations>
+  </creature>
+  
+  <creature name="ice_beast">
+    <params>
+      <group value="animal"/>
+      <ai value="yak"/>
+      <height value="45"/>
+      <width value="50"/>
+      <!--<ratio value="0.5"/>      -->      <!--пропорция ширины к высоте-->
+      <!--<scale value="0.9"/>      -->      <!--скейл к размеру блока-->
+      <healt value="10"/>
+      <walk_speed value="40"/>
+      <climbs_speed value="10"/>
+      <radius value="3"/>
+      <fall_height value="10"/>
+      <weight_coeff value="1"/>
+      <over_high value="1"/>      <!--может преодолевать высоту-->
+      <jump_down value="1"/>      <!--может спрыгивать с высоты-->
+      <escape_distance value="2"/>      <!--расстояние, на которое старается убежать при атаке -->
+      <attack value="0.15"/>
+      <attack_healt value="20%" />
+      <!--мин. кол. жизни для атаки человечка в %-->
+      <resources value="skin-2,meat-3,bone-2"/>
+      <water_die_time value="30"/>
+      <shot_time value="1.6"/>
+
+    </params>
+    <sounds>
+      <ambient value="pig_ambient"/>
+      <attack value="hit"/>
+
+    </sounds>
+    <animations>
+      <ani name="cantdo" ani="ice_beast\main"/>
+      <ani name="idle" ani="ice_beast\main"/>
+      <ani name="stop" ani="ice_beast\main2"/>
+      <ani name="move" ani="ice_beast\walk"/>
+      <ani name="action" ani="ice_beast\attack"/>
+      <ani name="climb" ani="ice_beast\walk"/>
+      <ani name="jump" ani="ice_beast\jump"/>
+      <ani name="dies_end" ani="ice_beast\death"/>
+    </animations>
+  </creature>
+
+  <creature name="cave_beast">
+    <params>
+      <group value="animal"/>
+      <ai value="cave_beast"/>
+      <height value="45"/>
+      <width value="50"/>
+      <scale value="1"/>
+      <healt value="10"/>
+      <walk_speed value="90"/>
+      <climbs_speed value="10"/>
+      <radius value="3"/>
+      <fall_height value="10"/>
+      <over_high value="3"/>
+      <jump_down value="3"/>
+      <escape_distance value="2"/>
+      <attack value="0.15"/>
+      <attack_healt value="20%" />
+      <resources value="skin-1,skin-1-50,meat-1,meat-1-50,bone-1"/>
+      <water_die_time value="30"/>
+      <shot_time value="1.3"/>
+      <grazing value="4" />
+      <use_jump_begin/>
+      <skins value="skin_01,skin_02,skin_03,skin_04,skin_05,skin_06"/>
+    </params>
+    <sounds>
+      <ambient value="cave_beast_ambient"/>
+      <die value="cave_beast_death"/>
+      <attack value="cave_beast_attack"/>
+    </sounds>
+    <animations>
+      <ani name="cantdo" ani="cave_beast\main_02"/>
+      <ani name="idle" ani="cave_beast\main_02"/>
+      <ani name="stop" ani="cave_beast\main"/>
+      <ani name="move" ani="cave_beast\walk_01|walk_02"/>
+      <ani name="action" ani="cave_beast\attack|attack_02|attack_03"/>
+      <ani name="climb" ani="cave_beast\walk_01"/>
+      <ani name="jump" ani="cave_beast\jump_point"/>
+      <ani name="big_jump" ani="cave_beast\jump_climb_point"/>
+      <ani name="dies_end" ani="cave_beast\death"/>
+    </animations>
+  </creature>
+
+  <creature name="fish_beast">
+    <params>
+      <group value="animal"/>
+      <ai value="cave_beast"/>
+      <height value="45"/>
+      <width value="50"/>
+      <scale value="1"/>
+      <healt value="10"/>
+      <walk_speed value="90"/>
+      <climbs_speed value="10"/>
+      <radius value="3"/>
+      <fall_height value="10"/>
+      <over_high value="3"/>
+      <jump_down value="3"/>
+      <escape_distance value="2"/>
+      <attack value="0.15"/>
+      <attack_healt value="20%" />
+      <resources value="skin-1,skin-1-50,meat-1,meat-1-50"/>
+      <water_die_time value="30"/>
+      <shot_time value="1.3"/>
+      <grazing value="4" />
+      <use_jump_begin/>
+      <skins value="skin_01"/>
+    </params>
+    <sounds>
+      <ambient value="fish_beast_ambient"/>
+      <attack value="fish_beast_attack"/>
+      <battle value="fish_beast_agro"/>
+    </sounds>
+    <animations>
+      <ani name="cantdo" ani="fishbeast\main_02"/>
+      <ani name="idle" ani="fishbeast\main_02"/>
+      <ani name="stop" ani="fishbeast\main"/>
+      <ani name="move" ani="fishbeast\walk_01|walk_02"/>
+      <ani name="action" ani="fishbeast\attack|attack_02|attack_03"/>
+      <ani name="climb" ani="fishbeast\walk_01"/>
+      <ani name="jump" ani="fishbeast\jump_point"/>
+      <ani name="big_jump" ani="fishbeast\jump_climb_point"/>
+      <ani name="dies_end" ani="fishbeast\death"/>
+      <ani name="fly" ani="fishbeast\fly"/>
+      <ani name="landing" ani="fishbeast\landing"/>
+    </animations>
+  </creature>
+
+  <creature name="cave_beast_invasion">
+    <params>
+      <ico value="cave_beast"/>
+      <ai value="cave_beast"/>
+      <height value="45"/>
+      <width value="50"/>
+      <scale value="1"/>
+      <healt value="10"/>
+      <walk_speed value="90"/>
+      <climbs_speed value="10"/>
+      <radius value="3"/>
+      <fall_height value="10"/>
+      <over_high value="3"/>
+      <jump_down value="3"/>
+      <escape_distance value="2"/>
+      <attack value="0.15"/>
+      <attack_healt value="20%" />
+      <resources value="skin-1-30,meat-1-30,bone-1-30"/>
+      <water_die_time value="30"/>
+      <shot_time value="1.3"/>
+      <use_jump_begin/>
+      <skins value="skin_hound"/>
+    </params>
+    <sounds>
+      <ambient value="cave_beast_ambient"/>
+      <die value="cave_beast_death"/>
+      <attack value="cave_beast_attack"/>
+    </sounds>
+    <animations>
+      <ani name="cantdo" ani="cave_beast\main_02"/>
+      <ani name="idle" ani="cave_beast\main_02"/>
+      <ani name="stop" ani="cave_beast\main"/>
+      <ani name="move" ani="cave_beast\walk_01"/>
+      <ani name="action" ani="cave_beast\attack|attack_02|attack_03"/>
+      <ani name="climb" ani="cave_beast\walk_01"/>
+      <ani name="fly" ani="cave_beast\fly"/>
+      <ani name="landing" ani="cave_beast\landing"/>
+      <ani name="jump" ani="cave_beast\jump_point"/>
+      <ani name="big_jump" ani="cave_beast\jump_climb_point"/>
+      <ani name="dies_end" ani="cave_beast\death"/>
+    </animations>
+  </creature>
+  <!-- ********************************** Fish *********************************** -->
+  <creature name="fish_china">
+    <params>
+      <ai value="fish"/>
+      <height value="25"/>
+      <width value="30"/>
+      <healt value="5"/>
+      <scale value="1" />
+      <walk_speed value="50"/>
+      <climbs_speed value="40"/>
+      <weight_coeff value="1"/>
+      <attack value="0.15"/>
+      <resources value="fish-1"/>
+      <water_die_time value="0"/>
+    </params>
+    <animations>
+      <ani name="stop" ani="fish_koi\animation"/>
+      <ani name="move" ani="fish_koi\animation"/>
+      <ani name="action" ani="fish_koi\animation"/>
+      <ani name="climb" ani="fish_koi\animation"/>
+      <ani name="jump" ani="fish_koi\animation"/>
+      <ani name="dies_end" ani="fish_koi\animation"/>
+      <ani name="swim" ani="fish_koi\animation"/>
+    </animations>
+  </creature>
+  
+  <creature name="fish_red">
+    <params>
+      <ai value="fish"/>
+      <height value="25"/>
+      <width value="30"/>
+      <healt value="5"/>
+      <scale value="1" />
+      <walk_speed value="50"/>
+      <climbs_speed value="40"/>
+      <weight_coeff value="1"/>
+      <attack value="0.15"/>
+      <resources value="fish-1"/>
+      <water_die_time value="0"/>
+    </params>
+    <animations>
+      <ani name="stop" ani="fish_red\animation"/>
+      <ani name="move" ani="fish_red\animation"/>
+      <ani name="action" ani="fish_red\animation"/>
+      <ani name="climb" ani="fish_red\animation"/>
+      <ani name="jump" ani="fish_red\animation"/>
+      <ani name="dies_end" ani="fish_red\animation"/>
+      <ani name="swim" ani="fish_red\animation"/>
+    </animations>
+  </creature>
+
+  <creature name="fish_yellow">
+    <params>
+      <ai value="fish"/>
+      <height value="30"/>
+      <width value="30"/>
+      <healt value="5"/>
+      <scale value="1" />
+      <walk_speed value="40"/>
+      <climbs_speed value="30"/>
+      <weight_coeff value="1"/>
+      <attack value="0.15"/>
+      <resources value="fish-1"/>
+      <water_die_time value="0"/>
+    </params>
+    <animations>
+      <ani name="stop" ani="fish_blue\animation"/>
+      <ani name="move" ani="fish_blue\animation"/>
+      <ani name="action" ani="fish_blue\animation"/>
+      <ani name="climb" ani="fish_blue\animation"/>
+      <ani name="jump" ani="fish_blue\animation"/>
+      <ani name="dies_end" ani="fish_blue\animation"/>
+      <ani name="swim" ani="fish_blue\animation"/>
+    </animations>
+  </creature>
+
+  <creature name="ball_fish">
+    <params>
+      <ai value="fish"/>
+      <height value="33"/>
+      <width value="40"/>
+      <scale value="1"/>
+      <healt value="5"/>
+      <walk_speed value="40"/>
+      <climbs_speed value="30"/>
+      <weight_coeff value="1"/>
+      <attack value="0.15"/>
+      <resources value="fish-1"/>
+      <water_die_time value="0"/>
+    </params>
+    <animations>
+      <ani name="cantdo" ani="ball_fish\walk"/>
+      <ani name="stop" ani="ball_fish\walk"/>
+      <ani name="move" ani="ball_fish\walk"/>
+      <ani name="action" ani="ball_fish\walk"/>
+      <ani name="climb" ani="ball_fish\walk"/>
+      <ani name="jump" ani="ball_fish\walk"/>
+      <ani name="dies_end" ani="ball_fish\walk"/>
+      <ani name="swim" ani="ball_fish\walk"/>
+    </animations>
+  </creature>
+
+  <creature name="piranha_deep">
+    <params>
+      <ai value="fish"/>
+      <height value="25"/>
+      <width value="35"/>
+      <scale value="1"/>
+      <healt value="5"/>
+      <walk_speed value="40"/>
+      <climbs_speed value="30"/>
+      <weight_coeff value="1"/>
+      <attack value="0.15"/>
+      <resources value="fish-1"/>
+      <deep value="true"/>
+      <water_die_time value="0"/>
+    </params>
+    <animations>
+      <ani name="stop" ani="glow_fish\sweem"/>
+      <ani name="move" ani="glow_fish\sweem"/>
+      <ani name="action" ani="glow_fish\sweem"/>
+      <ani name="climb" ani="glow_fish\sweem"/>
+      <ani name="jump" ani="glow_fish\sweem"/>
+      <ani name="dies_end" ani="glow_fish\sweem"/>
+      <ani name="swim" ani="glow_fish\sweem"/>
+    </animations>
+  </creature>
+
+
+  <creature name="little_dragon">
+    <params>
+      <ai value="little_dragon"/>
+      <height value="60"/>
+      <width value="30"/>
+      <scale value="1"/>
+      <healt value="2"/>
+      <walk_speed value="120"/>
+      <climbs_speed value="120"/>
+      <attack value="0.06"/>
+      <water_die_time value="180"/>
+      <radius value="8"/>
+      <!--<rise_time value="648000"/>-->
+      <rise_time value="600"/>
+      <shot_time value="2"/>
+      <skins value="red"/>
+		  <resources value="meat-4,bone-2-60,bone-4-40,sword_iron-1-25,steel_chain_armor-1-15,silver_armor-1-8,shirt_skin-1-20,helm_mithril-1-4,chopper_iron-1-25,money-3,fire_essence-1-75"/>
+    </params>
+    <sounds>
+      <hit value="dragon_attack"/>
+      <step value="dragon_step"/>
+    </sounds>
+    <animations>
+      <ani name="stop" ani="little_dragon_new\fly_main"/>
+      <ani name="move" ani="little_dragon_new\fly_forward"/>
+      <ani name="action" ani="little_dragon_new\fly_main_scream"/>
+      <ani name="climb" ani="little_dragon_new\fly_forward"/>
+      <ani name="jump" ani="little_dragon_new\fly_forward"/>
+      <ani name="dies_end" ani="little_dragon_new\death"/>
+    </animations>
+  </creature>
+
+  <creature name="little_dragon_black">
+    <params>
+      <ico value="black_dragon"/>
+      <ai value="little_dragon"/>
+      <height value="60"/>
+      <width value="30"/>
+      <scale value="1"/>
+      <healt value="3"/>
+      <walk_speed value="120"/>
+      <climbs_speed value="120"/>
+      <attack value="0.06"/>
+      <water_die_time value="180"/>
+      <radius value="8"/>
+      <!--<rise_time value="648000"/>-->
+      <rise_time value="600"/>
+      <shot_time value="2"/>
+      <skins value="black"/>
+      <resources value="meat-4,bone-2-60,bone-4-40,sword_iron-1-25,steel_chain_armor-1-15,silver_armor-1-8,shirt_skin-1-20,helm_mithril-1-4,chopper_iron-1-25,money-3,fire_essence-1|2-75"/>
+    </params>
+    <sounds>
+      <hit value="dragon_attack"/>
+      <step value="dragon_step"/>
+    </sounds>
+    <animations>
+      <ani name="stop" ani="little_dragon_new\fly_main"/>
+      <ani name="move" ani="little_dragon_new\fly_forward"/>
+      <ani name="action" ani="little_dragon_new\fly_main_scream"/>
+      <ani name="climb" ani="little_dragon_new\fly_forward"/>
+      <ani name="jump" ani="little_dragon_new\fly_forward"/>
+      <ani name="dies_end" ani="little_dragon_new\death"/>
+    </animations>
+  </creature>
+
+  <creature name="dragon_guard">
+    <params>
+      <ico value="black_dragon"/>
+      <ai value="little_dragon"/>
+      <height value="60"/>
+      <width value="30"/>
+      <scale value="1.2"/>
+      <healt value="5"/>
+      <walk_speed value="120"/>
+      <climbs_speed value="120"/>
+      <attack value="0.06"/>
+      <water_die_time value="180"/>
+      <radius value="8"/>
+      <rise_time value="0"/>
+      <shot_time value="2"/>
+      <skins value="black_guard"/>
+      <resources value="meat-4,bone-2-60,bone-4-40,sword_iron-1-25,steel_chain_armor-1-15,silver_armor-1-8,shirt_skin-1-20,helm_mithril-1-4,chopper_iron-1-25,money-3,fire_essence-1|2-75"/>
+      <fire value="dragon_fire1"/>
+      <use_spawn_home/>
+      <home_center_radius value="20"/>
+    </params>
+    <sounds>
+      <hit value="dragon_attack"/>
+      <step value="dragon_step"/>
+    </sounds>
+    <animations>
+      <ani name="stop" ani="little_dragon_new\fly_main"/>
+      <ani name="move" ani="little_dragon_new\fly_forward"/>
+      <ani name="action" ani="little_dragon_new\fly_main_scream"/>
+      <ani name="climb" ani="little_dragon_new\fly_forward"/>
+      <ani name="jump" ani="little_dragon_new\fly_forward"/>
+      <ani name="dies_end" ani="little_dragon_new\death"/>
+    </animations>
+  </creature>
+
+  <creature name="cave_goblin">
+    <params>
+      <ai value="cave_goblin"/>
+      <height value="50"/>
+      <width value="30"/>
+      <scale value="1"/>
+      <healt value="8"/>
+      <walk_speed value="70"/>
+      <laden_speed value="40"/>
+      <climbs_speed value="40"/>
+      <climbs_ladder_speed value="50"/>
+      <radius value="8"/>
+      <fall_height value="10"/>
+      <attack value="0.3"/>
+      <healt_restore value="0.16%"/>
+      <water_die_time value="180"/>
+      <shot_time value="1"/>
+      <use_jump_begin/>
+      <resources value="cave_goblin_spear-1-4,skin-1-15,rope-1-15,coal-1-10,silver-1-3,gold-1-2,mithril-1-2"/>
+      <skins value="cave_goblin_01,cave_goblin_02,cave_goblin_03"/>
+      <specialization value="common"/>
+      <activity_radius value="50"/>
+      <dig_radius value="30"/>
+    </params>
+    <sounds>
+      <ambient value="cave_goblin_ambient"/>
+      <die value="cave_goblin_death"/>
+      <dig value="cave_goblin_dig"/>
+    </sounds>
+    <animations>
+      <ani name="cantdo" ani="cave_goblin\main_02"/>
+      <ani name="stop" ani="cave_goblin\main_01"/>
+      <ani name="move" ani="cave_goblin\walk"/>
+      <ani name="run" ani="cave_goblin\walk_run"/>
+      <ani name="action" ani="cave_goblin\attack_pickaxe"/>
+      <ani name="attack_spear" ani="cave_goblin\attack_spear"/>
+      <ani name="climb" ani="cave_goblin_back\climb_up"/>
+      <ani name="climb_idle" ani="cave_goblin_back\climb_main"/>
+      <ani name="climb_down" ani="cave_goblin_back\climb_down"/>
+      <ani name="jump" ani="cave_goblin\jump_point"/>
+      <ani name="swim" ani="cave_goblin\sweem"/>
+
+      <ani name="craft_back" ani="cave_goblin_back\craft_main"/>
+      <ani name="craft_back1" ani="cave_goblin_back\craft_main_02"/>
+      <ani name="craft_back2" ani="cave_goblin_back\craft_main_03"/>
+      <ani name="craft_back3" ani="cave_goblin_back\craft_main_04"/>
+      <ani name="landing" ani="cave_goblin\landing"/>
+
+      <ani name="dies_end" ani="cave_goblin\death"/>
+    </animations>
+    <spine_elements>
+      <show_hide slots="cloths"/>
+      <hide slots="shoulder,armor,helmet,helmet_back,weapon/goblin_shield,arm2_weapon"/>
+    </spine_elements>
+    <ani_tools>
+      <slot value="weapon">
+        <tool ani="weapon/goblin_picke" alias="pick" />
+        <tool ani="weapon/goblin_spear" alias="weapon" />
+      </slot>
+    </ani_tools>
+  </creature>
+
+  <creature name="cave_goblin_warrior">
+    <params>
+      <ico value="cave_goblin"/>
+      <ai value="cave_goblin"/>
+      <height value="50"/>
+      <width value="30"/>
+      <scale value="1.2"/>
+      <healt value="10"/>
+      <walk_speed value="70"/>
+      <laden_speed value="40"/>
+      <climbs_speed value="40"/>
+      <climbs_ladder_speed value="50"/>
+      <radius value="8"/>
+      <fall_height value="10"/>
+      <attack value="0.5"/>
+      <healt_restore value="0.16%"/>
+      <water_die_time value="180"/>
+      <shot_time value="1"/>
+      <use_jump_begin/>
+      <resources value="cave_goblin_saber-1-10,cave_goblin_saber1-1-6,cave_goblin_saber2-1-3,skin-1-15,rope-1-15,coal-1-10,silver-1-3,gold-1-2,mithril-1-2"/>
+      <skins value="cave_goblin_01,cave_goblin_02,cave_goblin_03"/>
+      <specialization value="warrior"/>
+    </params>
+    <sounds>
+      <ambient value="cave_goblin_ambient"/>
+      <die value="cave_goblin_death"/>
+    </sounds>
+    <animations>
+      <ani name="cantdo" ani="cave_goblin\main_02_shielder"/>
+      <ani name="stop" ani="cave_goblin\main_01_shielder"/>
+      <ani name="move" ani="cave_goblin\walk_shielder"/>
+      <ani name="run" ani="cave_goblin\walk_run_shielder"/>
+      <ani name="action" ani="cave_goblin\attack_shielder"/>
+      <ani name="climb" ani="cave_goblin_back\climb_up"/>
+      <ani name="climb_down" ani="cave_goblin_back\climb_down"/>
+      <ani name="jump" ani="cave_goblin\jump_point"/>
+      <ani name="swim" ani="cave_goblin\sweem_shielder"/>
+      <ani name="dies_end" ani="cave_goblin\death"/>
+      <ani name="landing" ani="cave_goblin\landing"/>
+    </animations>
+    <spine_elements>
+      <random slots="helmet,helmet_back" attach_count="3"/>
+      <show slot="shoulder" attach="armor/shoulder"/>
+      <show slot="armor/shoulder1_back" attach="armor/shoulder1_back"/>
+      <show slot="armor/shoulder2_back" attach="armor/shoulder2_back"/>
+      <!--<show slot="armor" attach="armor_01"/>-->
+      <random slots="armor" attach_count="1"/>
+      <show slot="weapon/goblin_shield" attach="weapon/goblin_shield"/>
+      <show slot="arm2_weapon" attach="weapon/goblin_sword"/>
+      <hide slots="cloths,weapon"/>
+    </spine_elements>
+  </creature>
+
+  <creature name="cave_goblin_green">
+    <params>
+      <ico value="goblin"/>
+      <ai value="cave_goblin"/>
+      <height value="50"/>
+      <width value="30"/>
+      <scale value="1"/>
+      <healt value="4"/>
+      <walk_speed value="70"/>
+      <climbs_speed value="40"/>
+      <radius value="8"/>
+      <fall_height value="10"/>
+      <attack value="0.3"/>
+      <healt_restore value="0.16%"/>
+      <water_die_time value="180"/>
+      <shot_time value="1"/>
+      <use_jump_begin/>
+      <resources value="goblin_spear-1-4"/>
+      <skins value="green_goblin_01,green_goblin_02,green_goblin_03"/>
+      <specialization value="invasion"/>
+    </params>
+    <sounds>
+      <ambient value="goblin_ambient"/>
+      <die value="goblin_death"/>
+    </sounds>
+    <animations>
+      <ani name="cantdo" ani="cave_goblin\main_02"/>
+      <ani name="stop" ani="cave_goblin\main_01"/>
+      <ani name="move" ani="cave_goblin\walk"/>
+      <ani name="run" ani="cave_goblin\walk_run"/>
+      <ani name="action" ani="cave_goblin\attack_spear"/>
+      <ani name="climb" ani="cave_goblin_back\climb_up"/>
+      <ani name="climb_down" ani="cave_goblin_back\climb_down"/>
+      <ani name="jump" ani="cave_goblin\jump_point"/>
+      <ani name="swim" ani="cave_goblin\sweem"/>
+
+      <ani name="craft_back" ani="cave_goblin_back\craft_main"/>
+      <ani name="craft_back1" ani="cave_goblin_back\craft_main_02"/>
+      <ani name="craft_back2" ani="cave_goblin_back\craft_main_03"/>
+      <ani name="craft_back3" ani="cave_goblin_back\craft_main_04"/>
+
+      <ani name="fly" ani="cave_goblin\fly"/>
+      <ani name="landing" ani="cave_goblin\landing"/>
+
+      <ani name="dies_end" ani="cave_goblin\death"/>
+    </animations>
+    <spine_elements>
+      <show_hide slots="cloths"/>
+      <hide slots="shoulder,armor,helmet,helmet_back,weapon/goblin_shield,arm2_weapon"/>
+      <!--<show slot="weapon" attach="weapon/goblin_spear"/>-->
+      <random_color slots="hair_skin">
+        <colors>
+          245, 45, 0,
+          255, 240, 0,
+          147, 8,  8,
+          200, 179, 82,
+          48, 152, 0,
+          255, 138, 0,
+        </colors>
+      </random_color>
+    </spine_elements>
+    <ani_tools>
+      <slot value="weapon">
+        <tool ani="weapon/goblin_picke" alias="pick" />
+        <tool ani="weapon/goblin_spear" alias="weapon" />
+      </slot>
+    </ani_tools>
+  </creature>
+
+    <creature name="altar_shaman">
+    <params>
+      <ai value="altar_shaman"/>
+      <height value="50"/>
+      <width value="30"/>
+      <scale value="1"/>
+      <healt value="999"/>
+      <walk_speed value="40"/>
+      <climbs_speed value="40"/>
+      <radius value="8"/>
+      <fall_height value="999"/>
+      <attack value="0"/>
+      <healt_restore value="0.16%"/>
+      <water_die_time value="0"/>
+      <use_jump_begin/>
+      <resources value="mithril-20,gold-20,silver-25,iron-30,money-50,jason_mask_adv-1-50,jason_mask_adv-1-50,jason_mask_adv-1-50,jason_mask_adv-1-50"/>
+      <skins value="green_goblin_shaman"/>
+    </params>
+    <sounds>
+      <ambient value="cave_goblin_ambient"/>
+      <die value="cave_goblin_death"/>
+    </sounds>
+    <animations>
+      <ani name="cantdo" ani="cave_goblin\shaman_main"/>
+      <ani name="stop" ani="cave_goblin\shaman_main"/>
+      <ani name="move" ani="cave_goblin\shaman_walk"/>
+      <ani name="run" ani="cave_goblin\shaman_walk_run"/>
+      <ani name="eat" ani="cave_goblin\shaman_talk"/>
+      <ani name="action" ani="cave_goblin\shaman_cave_god_dance"/>
+      <ani name="jump" ani="cave_goblin\shaman_jump_point"/>
+      <ani name="swim" ani="cave_goblin\sweem"/>
+      <ani name="dies_end" ani="cave_goblin\shaman_death"/>
+    </animations>
+  </creature>
+    
+  <creature name="orc">
+    <params>
+      <ai value="zombie"/>
+      <height value="70"/>
+      <width value="50"/>
+      <scale value="1" />
+      <healt value="10"/>
+      <!--<walk_speed value="70"/>-->
+      <walk_speed value="60"/>
+      <climbs_speed value="35"/>
+      <radius value="3"/>
+      <fall_height value="10"/>
+      <healt_restore value="0.166%"/>
+      <tour_distance value="3-4"/>
+      <fear_radius value="8"/>
+      <attack value="0.6"/>
+      <attack_push value="true"/>
+      <resources value="brains-1,bone-1-25,mucus-1-10,money-1-10"/>
+      <water_die_time value="0"/>
+      <life_time value="1.5"/>
+      <shot_time value="1.7"/>
+      <use_jump_begin/>
+      <day_not_kill/>
+      <can_sweem/>
+      <skins value="skin_01"/>
+      <use_parachut/>
+    </params>
+    <sounds>
+      <ambient value="orc_ambient"/>
+      <die value="orc_death"/>
+    </sounds>
+    <animations>
+      <ani name="idle" ani="orc\main"/>
+      <ani name="idle1" ani="orc\main_02"/>
+      <ani name="idle2" ani="orc\main_5_tolk"/>
+      <ani name="stop" ani="orc\main"/>
+      <ani name="move" ani="orc\walk"/>
+      <ani name="action" ani="orc\attack_02|attack_03|attack_04"/>
+      <ani name="climb" ani="orc\walk"/>
+      <ani name="jump" ani="orc\jump_point"/>
+      <ani name="dies_end" ani="orc\death"/>
+      <ani name="fly" ani="orc\fly"/>
+      <ani name="swim" ani="orc\sweem"/>
+      <ani name="landing" ani="orc\landing"/>
+    </animations>
+    <spine_elements>
+      <show slot="shields/shield_01" attach="shields/shield_01"/>
+      <random slots="helmet" attach_count="2" can_hide="true"/>
+      <random slots="armor/leg_plat2,armor/leg_plate1" attach_count="1" can_hide="true"/>
+      <show slot="armor" attach="armor/pants"/>
+      <show slot="armor/naruch1" attach="armor/naruch1"/>
+      <show slot="arm2_armor_back" attach="armor/naruch2_back"/>
+      <show slot="armor/naruch2" attach="armor/naruch2"/>
+    </spine_elements>
+  </creature>
+
+  <creature name="orc_boss">
+    <params>
+      <ico value="orc"/>
+      <beastiary_name value="orc"/>
+      <ai value="zombie"/>
+      <height value="70"/>
+      <width value="50"/>
+      <scale value="1.3" />
+      <healt value="15"/>
+      <!--<walk_speed value="70"/>-->
+      <walk_speed value="60"/>
+      <climbs_speed value="35"/>
+      <radius value="3"/>
+      <fall_height value="10"/>
+      <healt_restore value="0.166%"/>
+      <tour_distance value="3-4"/>
+      <fear_radius value="8"/>
+      <attack value="0.7"/>
+      <attack_push value="true"/>
+      <resources value="brains-1,bone-1-25,mucus-1-10,money-1-10"/>
+      <water_die_time value="400"/>
+      <life_time value="1.5"/>
+      <shot_time value="1.7"/>
+      <use_jump_begin/>
+      <day_not_kill/>
+      <skins value="skin_01"/>
+      <use_parachut/>
+    </params>
+    <sounds>
+      <ambient value="orc_ambient"/>
+      <die value="orc_death"/>
+    </sounds>
+    <animations>
+      <ani name="idle" ani="orc\main"/>
+      <ani name="idle1" ani="orc\main_02"/>
+      <ani name="idle2" ani="orc\main_5_tolk"/>
+      <ani name="stop" ani="orc\main"/>
+      <ani name="move" ani="orc\walk|walk_shielder"/>
+      <ani name="action" ani="orc\attack|attack_02|attack_03|attack_04"/>
+      <ani name="climb" ani="orc\walk"/>
+      <ani name="jump" ani="orc\jump_point"/>
+      <ani name="dies_end" ani="orc\death"/>
+      <ani name="fly" ani="orc\fly"/>
+      <ani name="landing" ani="orc\landing"/>
+    </animations>
+    <spine_elements>
+      <random slots="shields/shield_01" attach_count="2"/>
+      <random slots="helmet,low_jaw_armor" attach_count="2" />
+      <random slots="armor/leg_plat2,armor/leg_plate1" attach_count="1"/>
+
+      <show slot="armor" attach="armor/chest_plate"/>
+      <show slot="armor/shoulder_01" attach="armor/shoulder_01"/>
+
+      <show slot="armor/naruch1" attach="armor/naruch1"/>
+      <show slot="arm2_armor_back" attach="armor/naruch2_back"/>
+      <show slot="armor/naruch2" attach="armor/naruch2"/>
+    </spine_elements>
+  </creature>
+
+  <creature name="orc_skeleton">
+    <params>
+      <ai value="skeleton"/>
+      <height value="70"/>
+      <width value="50"/>
+      <scale value="1" />
+      <healt value="15"/>
+      <!--<walk_speed value="70"/>-->
+      <walk_speed value="60"/>
+      <climbs_speed value="35"/>
+      <radius value="3"/>
+      <fall_height value="10"/>
+      <healt_restore value="0.166%"/>
+      <tour_distance value="3-4"/>
+      <fear_radius value="8"/>
+      <attack value="3"/>
+      <attack_push value="true"/>
+      <resources value="brains-1,bone-1-25,mucus-1-10,money-1-10"/>
+      <water_die_time value="0"/>
+      <life_time value="3"/>
+      <shot_time value="1.7"/>
+      <use_jump_begin/>
+      <day_not_kill/>
+      <no_static value="true"/>
+      <skins value="skin_02"/>
+    </params>
+    <sounds>
+      <ambient value="orc_skeleton_ambient"/>
+      <die value="orc_skeleton_death"/>
+    </sounds>
+    <animations>
+      <ani name="idle" ani="orc\main"/>
+      <ani name="idle1" ani="orc\main_02"/>
+      <ani name="idle2" ani="orc\main_5_tolk"/>
+      <ani name="stop" ani="orc\main"/>
+      <ani name="move" ani="orc\walk"/>
+      <ani name="action" ani="orc\attack_02|attack_03|attack_04"/>
+      <ani name="climb" ani="orc\walk"/>
+      <ani name="jump" ani="orc\jump_point"/>
+      <ani name="dies_end" ani="orc\death"/>
+    </animations>
+    <spine_elements>
+      <show slot="shields/shield_01" attach="shields/shield_01"/>
+      <random slots="helmet" attach_count="2" can_hide="true"/>
+      <random slots="armor/leg_plat2,armor/leg_plate1" attach_count="1" can_hide="true"/>
+      <show slot="armor" attach="armor/pants"/>
+      <show slot="armor/naruch1" attach="armor/naruch1"/>
+      <show slot="arm2_armor_back" attach="armor/naruch2_back"/>
+      <show slot="armor/naruch2" attach="armor/naruch2"/>
+    </spine_elements>
+  </creature>
+
+  <creature name="orc_boss_skeleton">
+    <params>
+      <ico value="orc_skeleton"/>
+      <ai value="skeleton"/>
+      <height value="70"/>
+      <width value="50"/>
+      <scale value="1.3" />
+      <healt value="20"/>
+      <!--<walk_speed value="70"/>-->
+      <walk_speed value="60"/>
+      <climbs_speed value="35"/>
+      <radius value="3"/>
+      <fall_height value="10"/>
+      <healt_restore value="0.166%"/>
+      <tour_distance value="3-4"/>
+      <fear_radius value="8"/>
+      <attack value="4"/>
+      <attack_push value="true"/>
+      <resources value="brains-1,bone-1-25,mucus-1-10,money-1-10"/>
+      <water_die_time value="0"/>
+      <life_time value="3"/>
+      <shot_time value="1.7"/>
+      <use_jump_begin/>
+      <day_not_kill/>
+      <no_static value="true"/>
+      <skins value="skin_02"/>
+    </params>
+    <sounds>
+      <ambient value="orc_skeleton_ambient"/>
+      <die value="orc_skeleton_death"/>
+    </sounds>
+    <animations>
+      <ani name="idle" ani="orc\main"/>
+      <ani name="idle1" ani="orc\main_02"/>
+      <ani name="idle2" ani="orc\main_5_tolk"/>
+      <ani name="stop" ani="orc\main"/>
+      <ani name="move" ani="orc\walk"/>
+      <ani name="action" ani="orc\attack_02|attack_03|attack_04"/>
+      <ani name="climb" ani="orc\walk|walk_shielder"/>
+      <ani name="jump" ani="orc\jump_point"/>
+      <ani name="dies_end" ani="orc\death"/>
+    </animations>
+    <spine_elements>
+      <random slots="shields/shield_01" attach_count="2"/>
+      <random slots="helmet,low_jaw_armor" attach_count="2" />
+      <random slots="armor/leg_plat2,armor/leg_plate1" attach_count="1"/>
+
+      <show slot="armor" attach="armor/chest_plate"/>
+      <show slot="armor/shoulder_01" attach="armor/shoulder_01"/>
+
+      <show slot="armor/naruch1" attach="armor/naruch1"/>
+      <show slot="arm2_armor_back" attach="armor/naruch2_back"/>
+      <show slot="armor/naruch2" attach="armor/naruch2"/>
+    </spine_elements>
+  </creature>
+
+  <creature name="zombie_armorbreaker">
+    <params>
+      <ico value="orc"/>
+      <ai value="zombie"/>
+      <height value="70"/>
+      <width value="50"/>
+      <scale value="1" />
+      <healt value="15"/>
+      <walk_speed value="60"/>
+      <climbs_speed value="35"/>
+      <radius value="3"/>
+      <fall_height value="10"/>
+      <healt_restore value="0.166%"/>
+      <tour_distance value="3-4"/>
+      <fear_radius value="8"/>
+      <attack value="0.7"/>
+      <attack_push value="true"/>
+      <resources value="brains-1,bone-1-25,mucus-1-10,money-1-10"/>
+      <water_die_time value="0"/>
+      <life_time value="1.5"/>
+      <shot_time value="2"/>
+      <use_jump_begin/>
+      <can_sweem/>
+      <skins value="skin_armor,skin_armor2,skin_necked,skin_necked2"/>
+    </params>
+    <sounds>
+      <hit value="skeleton_boss_hit"/>
+      <die value="zombie_death"/>
+      <step value="zombie_step"/>
+      <ambient value="zombie_ambient"/>
+    </sounds>
+    <animations>
+      <ani name="idle" ani="zombie_armorbreaker\main"/>
+      <ani name="stop" ani="zombie_armorbreaker\main"/>
+      <ani name="move" ani="zombie_armorbreaker\walk|walk2|walk3"/>
+      <ani name="action" ani="zombie_armorbreaker\attack_01|attack_02"/>
+      <ani name="super_attack" ani="zombie_armorbreaker\attack_big"/>
+      <ani name="climb" ani="zombie_armorbreaker\walk"/>
+      <ani name="jump" ani="zombie_armorbreaker\jump"/>
+      <ani name="dies_end" ani="zombie_armorbreaker\death"/>
+      <ani name="swim" ani="zombie_armorbreaker\sweem"/>
+    </animations>
+  </creature>
+  
+    <creature name="zombie_crookshank">
+    <params>
+      <ico value="orc"/>
+      <ai value="zombie"/>
+      <height value="70"/>
+      <width value="50"/>
+      <scale value="1" />
+      <healt value="20"/>
+      <walk_speed value="40"/>
+      <climbs_speed value="35"/>
+      <radius value="5"/>
+      <fall_height value="10"/>
+      <healt_restore value="0.166%"/>
+      <tour_distance value="3-4"/>
+      <fear_radius value="8"/>
+      <attack value="0.7"/>
+      <attack_push value="true"/>
+      <resources value="brains-1,bone-1-25,mucus-1-10,money-1-10"/>
+      <water_die_time value="0"/>
+      <life_time value="1.5"/>
+      <shot_time value="1.5"/>
+      <use_jump_begin/>
+    </params>
+    <sounds>
+      <die value="zombie_death"/>
+      <step value="zombie_step"/>
+      <ambient value="zombie_ambient"/>
+    </sounds>
+    <animations>
+      <ani name="idle" ani="zombie_crookshank\main|main2"/>
+      <ani name="stop" ani="zombie_crookshank\main"/>
+      <ani name="move" ani="zombie_crookshank\walk_01|walk_02"/>
+      <ani name="action" ani="zombie_crookshank\attack"/>
+      <ani name="climb" ani="zombie_crookshank\walk_01"/>
+      <ani name="jump" ani="zombie_crookshank\jump"/>
+      <ani name="dies_end" ani="zombie_crookshank\death"/>
+      <ani name="catch_true" ani="zombie_crookshank\attack_catch_true"/>
+      <ani name="catch_false" ani="zombie_crookshank\attack_catch_false"/>
+      <ani name="catch_idle" ani="zombie_crookshank\catch_idle"/>
+    </animations>
+  </creature>
+
+  <creature name="thrower_giant">
+    <params>
+      <ico value="orc"/>
+      <ai value="thrower_giant"/>
+      <height value="110"/>
+      <width value="50"/>
+      <scale value="1" />
+      <healt value="50"/>
+      <walk_speed value="50"/>
+      <climbs_speed value="35"/>
+      <radius value="3"/>
+      <fall_height value="10"/>
+      <healt_restore value="0.166%"/>
+      <tour_distance value="3-4"/>
+      <fear_radius value="8"/>
+      <attack value="1.5"/>
+      <attack_push value="true"/>
+      <resources value="brains-1,bone-1-25,mucus-1-10,money-1-10"/>
+      <water_die_time value="0"/>
+      <life_time value="1.5"/>
+      <shot_time value="3"/>
+      <use_jump_begin/>
+    </params>
+    <sounds>
+      <hit value="skeleton_boss_hit"/>
+      <die value="yeti_death"/>
+      <step value="skeleton_boss_step"/>
+      <!--<ambient value="zombie_ambient"/>-->
+    </sounds>
+    <animations>
+      <ani name="idle" ani="thrower_giant\idle"/>
+      <ani name="stop" ani="thrower_giant\idle"/>
+      <ani name="move" ani="thrower_giant\walk"/>
+      <ani name="action" ani="thrower_giant\attack_01|attack_02"/>
+      <ani name="catch" ani="thrower_giant\attack_catch_throw_full"/>
+      <ani name="climb" ani="thrower_giant\walk"/>
+      <ani name="jump" ani="thrower_giant\jump"/>
+      <ani name="block_step" ani="thrower_giant\block_step"/>
+      <ani name="dies_end" ani="thrower_giant\death"/>
+    </animations>
+  </creature>
+
+  <creature name="golem">
+    <params>
+      <no_beastiary/>
+      <ico value="golem"/>
+      <ai value="golem"/>
+      <height value="110"/>
+      <width value="50"/>
+      <scale value="1" />
+      <healt value="70"/>
+      <walk_speed value="50"/>
+      <climbs_speed value="35"/>
+      <radius value="4"/>
+      <fall_height value="10"/>
+      <healt_restore value="0"/>
+      <tour_distance value="3-4"/>
+      <fear_radius value="8"/>
+      <attack value="2"/>
+      <attack_push value="true"/>
+      <resources value="iron-10|15,money-5|10,rune1-1-10,rune2-1-10,rune3-1-10,rune4-1-10,rune5-1-10,rune6-1-10,lightning_essence-1,magic_engine-1,auger_iron-1-25,rune1_desert-1-10,rune2_desert-1-10,rune3_desert-1-10,rune4_desert-1-10,rune5_desert-1-10,rune6_desert-1-10"/>
+      <water_die_time value="0"/>
+      <shot_time value="3"/>
+      <arrow_resist value="4"/>
+      <magic_resist value="4"/>
+      <skins value="ancient_golem"/>
+    </params>
+    <sounds>
+      <hit value="skeleton_boss_hit"/>
+      <step value="skeleton_boss_step"/>
+    </sounds>
+    <animations>
+      <ani name="idle" ani="golem\idle"/>
+      <ani name="stop" ani="golem\idle"/>
+      <ani name="move" ani="golem\walk"/>
+      <ani name="action" ani="golem\attack_01"/>
+      <ani name="activation" ani="golem\activation"/>
+      <ani name="deactivation" ani="golem\diactivation"/>
+      <ani name="inactive" ani="golem\diactivated"/>
+      <ani name="dies_end" ani="golem\death"/>
+    </animations>
+  </creature>
+
+  <creature name="temple_golem">
+    <params>
+      <no_beastiary/>
+      <ico value="golem"/>
+      <ai value="golem"/>
+      <height value="110"/>
+      <width value="50"/>
+      <scale value="1" />
+      <healt value="70"/>
+      <walk_speed value="50"/>
+      <climbs_speed value="35"/>
+      <radius value="4"/>
+      <fall_height value="10"/>
+      <healt_restore value="0"/>
+      <tour_distance value="3-4"/>
+      <fear_radius value="8"/>
+      <attack value="2"/>
+      <attack_push value="true"/>
+      <resources value="wood-10|15,living_tree-2|3"/>
+      <water_die_time value="0"/>
+      <shot_time value="3"/>
+      <arrow_resist value="4"/>
+      <magic_resist value="4"/>
+      <skins value="earth_golem"/>
+      <material value="stone"/>
+    </params>
+    <sounds>
+      <hit value="temple_golem_attack"/>
+      <action1 value="temple_golem_in"/>
+      <step value="skeleton_boss_step"/>
+    </sounds>
+    <animations>
+      <ani name="idle" ani="golem\idle"/>
+      <ani name="stop" ani="golem\idle"/>
+      <ani name="move" ani="golem\walk"/>
+      <ani name="action" ani="golem\attack_01"/>
+      <ani name="activation" ani="golem\activation"/>
+      <ani name="deactivation" ani="golem\diactivation"/>
+      <ani name="inactive" ani="golem\diactivated"/>
+      <ani name="dies_end" ani="golem\death"/>
+    </animations>
+  </creature>
+
+  <creature name="elf_archer">
+    <params>
+      <ai value="elf"/>
+      <height value="80"/>
+      <width value="40"/>
+      <scale value="1" />
+      <healt value="6"/>
+      <walk_speed value="80"/>
+      <climbs_speed value="35"/>
+      <radius value="6"/>
+      <fall_height value="10"/>
+      <fear_radius value="8"/>
+      <attack value="0.5"/>
+      <resources value="money-1-30,elven_armor-1-5,elven_boots-1-6,helm_elven-1-6,elven_bow-1-5"/>
+      <shot_time value="1"/>
+      <use_jump_begin/>
+      <day_not_kill/>
+      <skins value="archer_01"/>
+      <specialization value="archer"/>
+    </params>
+    <sounds>
+      <battle value="ice_elves_battlecry"/>
+      <die value="ice_elves_death"/>
+    </sounds>
+    <animations>
+      <ani name="idle" ani="elfs\archer_idle_01"/>
+      <ani name="idle1" ani="elfs\archer_idle_02"/>
+      <ani name="idle2" ani="elfs\archer_idle_03"/>
+      <ani name="stop" ani="elfs\archer_idle_01"/>
+      <ani name="move" ani="elfs\archer_walk|archer_walk2"/>
+      <ani name="bow" ani="elfs\archer_attack_01"/>
+      <ani name="bow_up" ani="elfs\archer_attack_03"/>
+      <ani name="bow_down" ani="elfs\archer_attack_02"/>
+      <ani name="climb" ani="elfs\archer_walk"/>
+      <ani name="jump" ani="elfs\archer_jump"/>
+      <ani name="dies_end" ani="elfs\archer_death"/>
+      <!--<ani name="landing" ani="elfs\landing"/>-->
+    </animations>
+  </creature>
+
+  <creature name="elf_spearman">
+    <params>
+      <ai value="elf"/>
+      <height value="80"/>
+      <width value="40"/>
+      <scale value="1.1" />
+      <healt value="15"/>
+      <walk_speed value="60"/>
+      <climbs_speed value="35"/>
+      <radius value="6"/>
+      <fall_height value="10"/>
+      <fear_radius value="8"/>
+      <attack value="0.4"/>
+      <resources value="money-1-30,elven_armor-1-5,elven_boots-1-6,helm_elven-1-6,elven_spear-1-5"/>
+      <shot_time value="1"/>
+      <use_jump_begin/>
+      <day_not_kill/>
+      <skins value="spearman_01"/>
+      <specialization value="spearman"/>
+    </params>
+    <sounds>
+      <battle value="ice_elves_battlecry"/>
+      <die value="ice_elves_death"/>
+    </sounds>
+    <animations>
+      <ani name="idle" ani="elfs\spearman_idle_01"/>
+      <ani name="idle1" ani="elfs\spearman_idle_02"/>
+      <ani name="stop" ani="elfs\spearman_idle_01"/>
+      <ani name="move" ani="elfs\walk_spearman"/>
+      <ani name="action" ani="elfs\spearman_attack_01_1|spearman_attack_02"/>
+      <ani name="climb" ani="elfs\walk_spearman"/>
+      <ani name="whip" ani="elfs\spearman_whip"/>
+      <ani name="jump" ani="elfs\spearman_jump"/>
+      <ani name="dies_end" ani="elfs\spearman_death"/>
+      <!--<ani name="landing" ani="elfs\landing"/>-->
+    </animations>
+  </creature>
+
+  <creature name="elf_witch">
+    <params>
+      <ai value="elf"/>
+      <height value="80"/>
+      <width value="40"/>
+      <scale value="0.86" />
+      <healt value="20"/>
+      <walk_speed value="90"/>
+      <climbs_speed value="35"/>
+      <radius value="8"/>
+      <fall_height value="10"/>
+      <fear_radius value="8"/>
+      <attack value="0.6"/>
+      <resources value=""/>
+      <shot_time value="1"/>
+      <day_not_kill/>
+      <skins value="witch_01"/>
+      <specialization value="witch"/>
+    </params>
+    <sounds>
+      <battle value="ice_witch_battlecry"/>
+      <die value="ice_witch_death"/>
+    </sounds>
+    <animations>
+      <ani name="air_idle" ani="elfs\witch_idle_02"/>
+      <ani name="stop" ani="elfs\witch_idle_01"/>
+      <ani name="move" ani="elfs\witch_walk"/>
+      <ani name="action" ani="elfs\witch_attack_01|witch_attack_02|witch_attack_03"/>
+      <ani name="air_attack" ani="elfs\witch_attack_01_fly|witch_attack_02_fly|witch_attack_03_fly"/>
+      <ani name="climb" ani="elfs\walk_spearman"/>
+      <ani name="dies_end" ani="elfs\witch_death"/>
+    </animations>
+  </creature>
+
+  <creature name="temple_witch">
+    <params>
+      <ai value="elf"/>
+      <height value="80"/>
+      <width value="40"/>
+      <scale value="0.86" />
+      <healt value="20"/>
+      <walk_speed value="90"/>
+      <climbs_speed value="35"/>
+      <radius value="8"/>
+      <fall_height value="10"/>
+      <fear_radius value="8"/>
+      <attack value="0.6"/>
+      <resources value="lightning_essence-1-30,money-1-30"/>
+      <shot_time value="1"/>
+      <day_not_kill/>
+      <skins value="temple_witch"/>
+      <specialization value="witch"/>
+    </params>
+    <sounds>
+      <battle value="ice_witch_battlecry"/>
+      <die value="ice_witch_death"/>
+    </sounds>
+    <animations>
+      <ani name="air_idle" ani="wind_witch\witch_idle_02"/>
+      <ani name="stop" ani="wind_witch\witch_idle_01"/>
+      <ani name="move" ani="wind_witch\witch_walk"/>
+      <ani name="action" ani="wind_witch\witch_attack_01|witch_attack_02|witch_attack_03"/>
+      <ani name="air_attack" ani="wind_witch\witch_attack_01_fly|witch_attack_02_fly|witch_attack_03_fly"/>
+      <ani name="climb" ani="wind_witch\walk_spearman"/>
+      <ani name="dies_end" ani="wind_witch\witch_death"/>
+    </animations>
+  </creature>
+
+  <creature name="yeti_biome">
+    <params>
+      <ai value="yeti_new"/>
+      <height value="55"/>
+      <width value="45"/>
+      <scale value="1" />
+      <healt value="10"/>
+      <walk_speed value="40"/>
+      <climbs_speed value="40"/>
+      <radius value="8"/>
+      <fall_height value="10"/>
+      <fear_radius value="8"/>
+      <attack value="0.8"/>
+      <resources value="money-1-30"/>
+      <shot_time value="1"/>
+      <day_not_kill/>
+      <use_jump_begin/>
+      <skins value="skin_02"/>
+      <free_skin value="skin_01"/>
+      <pet_skin value="skin_03"/>
+    </params>
+    <!--<sounds>
+      <ambient value="orc_ambient"/>
+      <die value="orc_death"/>
+    </sounds>-->
+    <animations>
+      <ani name="action" ani="prisoned_yetti\attack_01|attack_02"/>
+      <!--<ani name="idle" ani="prisoned_yetti\idle_01|idle_02|idle_03|idle_04"/>-->
+      <ani name="idle" ani="prisoned_yetti\idle_02|idle_03"/>
+      <ani name="stop" ani="prisoned_yetti\idle_03"/>
+      <ani name="move" ani="prisoned_yetti\walk_01|walk_02"/>
+
+      <ani name="stop_cargo" ani="prisoned_yetti\idle_carry"/>
+      <ani name="move_cargo" ani="prisoned_yetti\walk_carry_01|walk_carry_02"/>
+
+      <ani name="bclimb_up" ani="prisoned_yetti_back\climb_up"/>
+      <ani name="bclimb_up1" ani="prisoned_yetti_back\climb_up_cargo"/>
+      <ani name="bclimb_down" ani="prisoned_yetti_back\climb_down"/>
+      <ani name="bclimb_down1" ani="prisoned_yetti_back\climb_down_cargo"/>
+
+      <ani name="rock_climb" ani="prisoned_yetti\climb_up"/>
+      <ani name="rock_climb1" ani="prisoned_yetti\climb_up_carry"/>
+      <ani name="rock_climb_end" ani="prisoned_yetti\climb_end"/>
+      <ani name="rock_climb_end1" ani="prisoned_yetti\climb_end_carry"/>
+      <ani name="rock_climb_down" ani="prisoned_yetti\climb_down"/>
+      <ani name="rock_climb_down1" ani="prisoned_yetti\climb_down_carry"/>
+      <ani name="rock_climb_down_end" ani="prisoned_yetti\climb_end_down"/>
+      <ani name="rock_climb_down_end1" ani="prisoned_yetti\climb_end_down_carry"/>
+
+      <ani name="pain" ani="prisoned_yetti\damage_01|damage_02"/>
+      <ani name="jump" ani="prisoned_yetti\jump"/>
+      <ani name="dies_end" ani="prisoned_yetti\death"/>
+    </animations>
+  </creature>
+
+  <creature name="zombie_boost">
+    <params>
+      <ico_tc value="reptilian"/>
+      <ai value="zombie"/>
+      <height value="47"/>
+      <width value="30"/>
+      <healt value="15"/>
+      <scale value="1"/>
+      <walk_speed value="40"/>
+      <climbs_speed value="30"/>
+      <radius value="3"/>
+      <fall_height value="10"/>
+      <healt_restore value="0.166%"/>
+      <!--процент восстановления жизни при бездействии, в сек.-->
+      <tour_distance value="3-4"/>
+      <!--радиус прогулки монстра вокруг да около-->
+      <fear_radius value="8"/>
+      <!--радиус боязни человечков-->
+      <attack value="0.7"/>
+      <resources value="brains-1,bone-3"/>
+      <water_die_time value="0"/>
+      <attack_push value="true"/>
+      <!--отталкивает врага при ударе-->
+      <!--<pieces value="gfx\characters\zombie\piece_"/>-->
+      <!--<effect value="zombie_eff"/>-->
+      <shot_time value="1.3"/>
+      <skins value="zombie_dwarf"/>
+      <boost_guard/>
+    </params>
+    <sounds>
+      <die value="zombie_death"/>
+      <step value="zombie_step"/>
+      <ambient value="zombie_ambient"/>
+    </sounds>
+    <animations>
+      <ani name="cantdo" ani="zombie\main2"/>
+      <ani name="idle" ani="zombie\main2"/>
+      <ani name="stop" ani="zombie\main"/>
+      <ani name="move" ani="zombie\walk"/>
+      <ani name="move1" ani="zombie\walk2"/>
+      <ani name="move2" ani="zombie\walk3"/>
+      <ani name="move3" ani="zombie\walk4"/>
+      <ani name="action" ani="zombie\attack"/>
+      <ani name="climb" ani="zombie\walk"/>
+      <ani name="jump" ani="zombie\jump"/>
+      <!--<ani name="dies_end" ani="creature_dies"/>-->
+      <ani name="dies_end" ani="zombie\death"/>
+    </animations>
+    <spine_elements>
+      <random slots="body_scar" attach_count="4"/>
+      <show_hide slots="part1,part2,part3,part4,pert5,chain_forward,chain_back" random_hit="25%"/>
+      <random_color slots="eyebrows_c,hair_c">
+        <colors>
+          82,23,5,
+          137,71,0,
+          25,40,0,
+          15,10,5,
+          129,107,54,
+          135,135,135,
+        </colors>
+      </random_color>
+    </spine_elements>
+  </creature>
+
+  <creature name="zombie_solder">
+    <params>
+      <ico_tc value="reptilian"/>
+      <ai value="zombie"/>
+      <height value="47"/>
+      <width value="30"/>
+      <healt value="5"/>
+      <scale value="1"/>
+      <walk_speed value="40"/>
+      <climbs_speed value="30"/>
+      <radius value="3"/>
+      <fall_height value="10"/>
+      <healt_restore value="0.166%"/>
+      <tour_distance value="3-4"/>
+      <fear_radius value="8"/>
+      <attack value="0.5"/>
+      <resources value="brains-1,bone-3"/>
+      <water_die_time value="0"/>
+      <attack_push value="true"/>
+      <effect value="zombie_eff"/>
+      <shot_time value="1.3"/>
+      <skins value="zombie_dead_solder_01,zombie_dead_solder_02"/>
+      <hold_position/>
+    </params>
+    <sounds>
+      <die value="zombie_death"/>
+      <step value="zombie_step"/>
+      <ambient value="zombie_ambient"/>
+    </sounds>
+    <animations>
+      <ani name="cantdo" ani="zombie\solder_main"/>
+      <ani name="idle" ani="zombie\solder_main"/>
+      <ani name="stop" ani="zombie\solder_main"/>
+      <ani name="move" ani="zombie\solder_walk"/>
+      <ani name="move1" ani="zombie\solder_walk2"/>
+      <ani name="move2" ani="zombie\solder_walk3"/>
+      <ani name="action" ani="zombie\solder_attack_01|solder_attack_02"/>
+      <ani name="climb" ani="zombie\solder_walk"/>
+      <ani name="jump" ani="zombie\solder_jump"/>
+      <ani name="dies_end" ani="zombie\solder_death"/>
+    </animations>
+    <spine_elements>
+      <random slots="body_scar" attach_count="4"/>
+      <random slots="weapon" attach_count="2"/>
+      <show_hide slots="part1,part2,part3,part4,pert5,chain_forward,chain_back" random_hit="25%"/>
+      <random_color slots="eyebrows_c,hair_c">
+        <colors>
+          82,23,5,
+          137,71,0,
+          25,40,0,
+          15,10,5,
+          129,107,54,
+          135,135,135,
+        </colors>
+      </random_color>
+    </spine_elements>
+  </creature>
+  
+  <creature name="zombie_halloween1">
+    <params>
+      <no_beastiary/>
+      <ico value="zombie"/>
+      <ai value="zombie"/>
+      <height value="47"/>
+      <width value="30"/>
+      <healt value="5"/>
+      <scale value="1"/>
+      <walk_speed value="40"/>
+      <climbs_speed value="30"/>
+      <radius value="3"/>
+      <fall_height value="10"/>
+      <healt_restore value="0.166%"/>
+      <tour_distance value="3-4"/>
+      <fear_radius value="8"/>
+      <attack value="0.3"/>
+      <resources value="brains-1,bone-3"/>
+      <water_die_time value="0"/>
+      <attack_push value="true"/>
+      <effect value="zombie_eff"/>
+      <shot_time value="1.3"/>
+      <skins value="helloween_demoness,helloween_witch"/>
+    </params>
+    <sounds>
+      <die value="zombie_death"/>
+      <step value="zombie_step"/>
+      <ambient value="zombie_ambient"/>
+    </sounds>
+    <animations>
+      <ani name="cantdo" ani="zombie\solder_main"/>
+      <ani name="idle" ani="zombie\solder_main"/>
+      <ani name="stop" ani="zombie\solder_main"/>
+      <ani name="move" ani="zombie\solder_walk"/>
+      <ani name="move1" ani="zombie\solder_walk2"/>
+      <ani name="move2" ani="zombie\solder_walk3"/>
+      <ani name="action" ani="zombie\solder_attack_01|solder_attack_02"/>
+      <ani name="climb" ani="zombie\solder_walk"/>
+      <ani name="jump" ani="zombie\solder_jump"/>
+      <ani name="dies_end" ani="zombie\solder_death"/>
+    </animations>
+    <spine_elements>
+      <random_color slots="eyebrows_c,hair_c">
+        <colors>
+          82,23,5,
+          137,71,0,
+          25,40,0,
+          15,10,5,
+          129,107,54,
+          135,135,135,
+        </colors>
+      </random_color>
+    </spine_elements>
+  </creature>
+  
+  <creature name="zombie_halloween2">
+    <params>
+      <no_beastiary/>
+      <ico value="zombie"/>
+      <ai value="zombie"/>
+      <height value="47"/>
+      <width value="30"/>
+      <healt value="5"/>
+      <scale value="1"/>
+      <walk_speed value="40"/>
+      <climbs_speed value="30"/>
+      <radius value="3"/>
+      <fall_height value="10"/>
+      <healt_restore value="0.166%"/>
+      <tour_distance value="3-4"/>
+      <fear_radius value="8"/>
+      <attack value="0.3"/>
+      <resources value="brains-1,bone-3"/>
+      <water_die_time value="0"/>
+      <attack_push value="true"/>
+      <effect value="zombie_eff"/>
+      <shot_time value="1.3"/>
+      <skins value="helloween_frankenstain,helloween_vampire"/>
+    </params>
+    <sounds>
+      <die value="zombie_death"/>
+      <step value="zombie_step"/>
+      <ambient value="zombie_ambient"/>
+    </sounds>
+    <animations>
+      <ani name="cantdo" ani="zombie\main2"/>
+      <ani name="idle" ani="zombie\main2"/>
+      <ani name="stop" ani="zombie\main"/>
+      <ani name="move" ani="zombie\walk"/>
+      <ani name="move1" ani="zombie\walk2"/>
+      <ani name="move2" ani="zombie\walk3"/>
+      <ani name="move3" ani="zombie\walk4"/>
+      <ani name="action" ani="zombie\attack"/>
+      <ani name="climb" ani="zombie\walk"/>
+      <ani name="jump" ani="zombie\jump"/>
+      <ani name="dies_end" ani="zombie\death"/>
+    </animations>
+    <spine_elements>
+      <random_color slots="eyebrows_c,hair_c">
+        <colors>
+          82,23,5,
+          137,71,0,
+          25,40,0,
+          15,10,5,
+          129,107,54,
+          135,135,135,
+        </colors>
+      </random_color>
+    </spine_elements>
+  </creature>
+  
+  <creature name="beetle_queen">
+    <params>
+      <ai value="beetle_queen"/>
+      <height value="110"/>
+      <width value="60"/>
+      <healt value="40"/>
+      <scale value="1"/>
+      <walk_speed value="40"/>
+      <climbs_speed value="40"/>
+      <radius value="9"/>
+      <healt_restore value="1%"/>
+      <fall_height value="10"/>
+      <attack value="0.5"/>
+      <resources value="chitin-5,meat-5,mucus-1-30,fireball_elexir-3|5,mana_elexir-3|5,healt_elexir-3|5,mithril-3|5"/>
+      <water_die_time value="0"/>
+      <attack_push value="true"/>
+      <shot_time value="1.3"/>
+      <glow_slots slots="torse_light,body1_light,body2_light,body3_light" enemy_color="255|0|30" friend_color="0|110|255"/>
+    </params>
+    <sounds>
+      <ambient value="beetle_biome_ambient"/>
+    </sounds>
+    <animations>
+      <ani name="stop" ani="beetle_queen\idle_01"/>
+      <ani name="move" ani="beetle_queen\walk_01"/>
+      <ani name="action" ani="beetle_queen\attack_01_2"/>
+      <ani name="action_up" ani="beetle_queen\attack_02"/>
+      <ani name="jump" ani="beetle_queen\idle_01"/>
+      <ani name="craft" ani="beetle_queen\put_egg"/>
+      <ani name="dies_end" ani="beetle_queen\death"/>
+    </animations>
+  </creature>
+  
+    <creature name="beetle_boss_stage1">
+    <params>
+      <ico value="spider_greate_mother"/>
+      <ai value="beetle_boss"/>
+      <height value="120"/>
+      <width value="120"/>
+      <healt value="50"/>
+      <scale value="1"/>
+      <walk_speed value="40"/>
+      <climbs_speed value="40"/>
+      <radius value="9"/>
+      <fall_height value="10"/>
+      <attack value="0.5"/>
+      <water_die_time value="0"/>
+      <attack_push value="true"/>
+      <shot_time value="1.3"/>
+      <stage value="stage1"/>
+    </params>
+    <sounds>
+    </sounds>
+    <animations>
+      <ani name="stop" ani="beetle_boss\idle"/>
+      <ani name="move" ani="beetle_boss\idle"/>
+      <ani name="action" ani="beetle_boss\idle"/>
+      <ani name="jump" ani="beetle_boss\idle"/>
+      <ani name="craft" ani="beetle_boss\put_egg"/>
+      <ani name="dies_end" ani="beetle_boss\falling"/>
+    </animations>
+  </creature>
+
+  <creature name="beetle_boss_stage2">
+    <params>
+      <ico value="spider_greate_mother"/>
+      <ai value="beetle_boss"/>
+      <height value="110"/>
+      <width value="110"/>
+      <healt value="800"/>
+      <scale value="1"/>
+      <walk_speed value="40"/>
+      <climbs_speed value="40"/>
+      <radius value="9"/>
+      <fall_height value="30"/>
+      <attack value="0.35"/>
+      <water_die_time value="0"/>
+      <attack_push value="true"/>
+      <shot_time value="1.3"/>
+      <stage value="stage2"/>
+    </params>
+    <sounds>
+    </sounds>
+    <animations>
+      <ani name="stop" ani="beetle_boss_stage2\idle"/>
+      <ani name="move" ani="beetle_boss_stage2\walk"/>
+      <ani name="attack_midfront" ani="beetle_boss_stage2\attack_01"/>
+      <ani name="attack_front" ani="beetle_boss_stage2\attack_02"/>
+      <ani name="attack_back" ani="beetle_boss_stage2\attack_03"/>
+      <ani name="fall" ani="beetle_boss_stage2\landing"/>
+      <ani name="dies_end" ani="beetle_boss_stage2\death"/>
+    </animations>
+  </creature>
+  
+  <creature name="beetle_worker">
+    <params>
+      <ai value="beetle_child"/>
+      <height value="50"/>
+      <width value="30"/>
+      <healt value="10"/>
+      <scale value="1"/>
+      <walk_speed value="100"/>
+      <climbs_speed value="70"/>
+      <radius value="3"/>
+      <fall_height value="10"/>
+      <attack value="0.3"/>
+      <resources value="chitin-2,meat-1,mucus-1-30"/>
+      <water_die_time value="120"/>
+      <shot_time value="1.3"/>
+      <activity_radius value="25"/>
+      <specialization value="worker"/>
+      <day_not_kill/>
+      <glow_slots slots="torse_light,head_light" enemy_color="255|0|30" friend_color="0|110|255"/>
+      <skins value="01,02,03,04,05"/>
+    </params>
+    <sounds>
+      <ambient value="beetle_biome_ambient"/>
+    </sounds>
+    <animations>
+      <ani name="cantdo" ani="beetle_worker\fly_idle"/>
+      <ani name="idle" ani="beetle_worker\fly_idle"/>
+      <ani name="stop" ani="beetle_worker\fly_idle"/>
+      <ani name="climb" ani="beetle_worker\fly_up"/>
+      <ani name="move" ani="beetle_worker\fly_forw"/>
+      <ani name="action" ani="beetle_worker\attack/dig"/>
+      <ani name="jump" ani="beetle_worker\fly_idle"/>
+      <ani name="dies_end" ani="beetle_worker\death"/>
+    </animations>
+  </creature>
+  
+  <creature name="beetle_warrior">
+    <params>
+      <ai value="beetle_child"/>
+      <height value="47"/>
+      <width value="50"/>
+      <healt value="5"/>
+      <scale value="1"/>
+      <walk_speed value="50"/>
+      <climbs_speed value="70"/>
+      <radius value="3"/>
+      <fall_height value="10"/>
+      <attack value="0.5"/>
+      <resources value="chitin-2,meat-1,mucus-1-30"/>
+      <water_die_time value="120"/>
+      <shot_time value="1.3"/>
+      <activity_radius value="25"/>
+      <specialization value="warrior"/>
+      <day_not_kill/>
+      <use_jump_begin/>
+      <glow_slots slots="torse_light,head_light" enemy_color="255|0|30" friend_color="0|110|255"/>
+      <skins value="01,02,03,04,05"/>
+    </params>
+    <sounds>
+      <ambient value="beetle_biome_ambient"/>
+    </sounds>
+    <animations>
+      <ani name="cantdo" ani="beetle_warrior\idle_01"/>
+      <ani name="idle" ani="beetle_warrior\idle_01|idle_02"/>
+      <ani name="stop" ani="beetle_warrior\idle_02"/>
+      <ani name="move" ani="beetle_warrior\walk"/>
+      <ani name="action" ani="beetle_warrior\attack_01|attack_02"/>
+      <ani name="jump" ani="beetle_warrior\jump_02"/>
+      <ani name="climb" ani="beetle_warrior\walk"/>
+      <ani name="dies_end" ani="beetle_warrior\death_01|death_02"/>
+    </animations>
+  </creature>
+
+  <creature name="rat">
+    <params>
+      <ai value="rat"/>
+      <height value="25"/>
+      <width value="40"/>
+      <healt value="2"/>
+      <scale value="1"/>
+      <walk_speed value="50"/>
+      <climbs_speed value="40"/>
+      <satiety value="10"/>
+      <satiety_drain_time value="180"/>
+      <radius value="3"/>
+      <fall_height value="10"/>
+      <attack value="0.1"/>
+      <resources value="meat-1-30,skin-1-30"/>
+      <water_die_time value="120"/>
+      <shot_time value="1"/>
+      <day_not_kill/>
+      <use_jump_begin/>
+      <skins value="skin_01,skin_02,skin_3"/>
+    </params>
+    <sounds>
+      <ambient value="rat_ambient"/>
+    </sounds>
+    <animations>
+      <ani name="idle" ani="rat\idle"/>
+      <ani name="action" ani="rat\attack"/>
+      <ani name="stop" ani="rat\idle"/>
+      <ani name="move" ani="rat\walk"/>
+      <ani name="jump" ani="rat\jump"/>
+      <ani name="craft" ani="rat\feed"/>
+      <ani name="craft_short" ani="rat\catched"/>
+      <ani name="dies_end" ani="rat\death|death_2"/>
+      <ani name="rock_climb" ani="rat\climb_1"/>
+      <ani name="rock_climb1" ani="rat\climb_2"/>
+      <ani name="rock_climb_end" ani="rat\climb_3"/>
+      <ani name="swim" ani="rat\sweem"/>
+      <!--<ani name="rock_climb_down" ani="rat\climb_down"/>
+      <ani name="rock_climb_down_end" ani="rat\climb_end_down"/>-->
+    </animations>
+  </creature>
+  
+  <creature name="basilisk_pet">
+    <params>
+      <ai value="pet"/>
+      <height value="50"/>
+      <width value="50"/>
+      <healt value="20"/>
+      <scale value="1"/>
+      <walk_speed value="40"/>
+      <climbs_speed value="40"/>
+      <radius value="5"/>
+      <fall_height value="10"/>
+      <attack value="0.8"/>
+      <resources value="meat-1-30,skin-1-30"/>
+      <water_die_time value="0"/>
+      <shot_time value="1.8"/>
+      <day_not_kill/>
+      <use_jump_begin/>
+      <skins value="skin_01,skin_02,skin_03"/>
+      <booth_radius value="10"/>
+    </params>
+    <sounds>
+      <ambient value="basilisk_idle"/>
+      <attack value="basilisk_bite"/>
+      <action1 value="basilisk_attack"/>
+      <action2 value="basilisk_smell"/>
+      <action3 value="basilisk_tongue"/>
+    </sounds>
+    <animations>
+      <ani name="idle" ani="basilisk\idle_01|idle_02|idle_03|idle_04"/>
+      <ani name="action" ani="basilisk\attack"/>
+      <ani name="attack_rat" ani="basilisk\attack_rat"/>
+      <ani name="stop" ani="basilisk\idle_03"/>
+      <ani name="move" ani="basilisk\walk"/>
+      <ani name="run" ani="basilisk\run"/>
+      <ani name="jump" ani="basilisk\jump"/>
+      <ani name="dies_end" ani="basilisk\death"/>
+      <ani name="big_jump" ani="basilisk\jump_climb"/>
+      <ani name="sleep_begin" ani="basilisk\sleep_begin"/>
+      <ani name="sleep_idle" ani="basilisk\sleep_cycle"/>
+      <ani name="sleep_end" ani="basilisk\sleep_end"/>
+      <ani name="swim" ani="basilisk\sweem"/>
+    </animations>
+  </creature>
+  
+    <creature name="catowl_pet">
+    <params>
+      <ai value="pet"/>
+      <height value="50"/>
+      <width value="50"/>
+      <healt value="17"/>
+      <scale value="1"/>
+      <walk_speed value="50"/>
+      <climbs_speed value="50"/>
+      <radius value="5"/>
+      <fall_height value="10"/>
+      <attack value="0.9"/>
+      <resources value="meat-1-30,skin-1-30"/>
+      <water_die_time value="120"/>
+      <shot_time value="1.8"/>
+      <day_not_kill/>
+      <use_jump_begin/>
+      <habits_of_cats/>
+      <skins value="skin_01,skin_02,skin_03"/>
+      <booth_radius value="10"/>
+    </params>
+    <sounds>
+      <attack value="owlcat_punch"/>
+      <action1 value="owlcat_attack"/>
+      <action2 value="owlcat_love"/>
+    </sounds>
+    <animations>
+      <ani name="idle" ani="catowl\main_idle_01|main_idle_02"/>
+      <ani name="craft" ani="catowl\main_idle_03"/>
+      <ani name="action" ani="catowl\attack_01|attack_02"/>
+      <ani name="attack_rat" ani="catowl\attack_rat"/>
+      <ani name="stop" ani="catowl\prof_idle"/>
+      <ani name="move" ani="catowl\walk_01|walk_02"/>
+      <ani name="run" ani="catowl\run"/>
+      <ani name="jump" ani="catowl\jump_up"/>
+      <ani name="dies_end" ani="catowl\death"/>
+      <ani name="big_jump" ani="catowl\jump_up"/>
+      <ani name="sleep_begin" ani="catowl\sleep_begin"/>
+      <ani name="sleep_idle" ani="catowl\sleep_cycle"/>
+      <ani name="sleep_end" ani="catowl\sleep_end"/>
+      <ani name="swim" ani="catowl\sweem"/>
+    </animations>
+  </creature>
+
+  <creature name="crip_catowl_pet">
+    <params>
+      <no_beastiary/>
+      <ai value="pet"/>
+      <height value="50"/>
+      <width value="50"/>
+      <healt value="25"/>
+      <scale value="1"/>
+      <walk_speed value="50"/>
+      <climbs_speed value="50"/>
+      <radius value="5"/>
+      <fall_height value="10"/>
+      <attack value="0.9"/>
+      <resources value="meat-1-30,skin-1-30"/>
+      <water_die_time value="120"/>
+      <shot_time value="1.8"/>
+      <day_not_kill/>
+      <use_jump_begin/>
+      <habits_of_cats/>
+      <skins value="helloween_skin"/>
+      <booth_radius value="10"/>
+    </params>
+    <sounds>
+      <attack value="owlcat_punch"/>
+      <action1 value="owlcat_attack"/>
+      <action2 value="owlcat_love"/>
+    </sounds>
+    <animations>
+      <ani name="idle" ani="catowl\main_idle_01|main_idle_02"/>
+      <ani name="craft" ani="catowl\main_idle_03"/>
+      <ani name="action" ani="catowl\attack_01|attack_02"/>
+      <ani name="attack_rat" ani="catowl\attack_rat"/>
+      <ani name="stop" ani="catowl\prof_idle"/>
+      <ani name="move" ani="catowl\walk_01|walk_02"/>
+      <ani name="run" ani="catowl\run"/>
+      <ani name="jump" ani="catowl\jump_up"/>
+      <ani name="dies_end" ani="catowl\death"/>
+      <ani name="big_jump" ani="catowl\jump_up"/>
+      <ani name="sleep_begin" ani="catowl\sleep_begin"/>
+      <ani name="sleep_idle" ani="catowl\sleep_cycle"/>
+      <ani name="sleep_end" ani="catowl\sleep_end"/>
+      <ani name="swim" ani="catowl\sweem"/>
+    </animations>
+  </creature>
+  
+  <!-- ***************************** Spawn creatures ***************************** -->
+  <spawn name="rat">
+    <params>
+      <min_spawn_comfort value="50%"/>
+      <wait_time_for_comfort value="1200"/> <!--600 -->-->
+    </params>
+  </spawn>
+  <spawn name="black_fluffy">
+    <params>
+      <spawn_time value="120"/>         <!--время определения положения нового монстра, по умолч. 120сек--> 
+      <spawn_place value="-5"/>         <!--позиция появления монстра, +- от уровня горизонта-->
+      <spawn_radius value="5"/>         <!--радиус появления относительно человечка-->
+      <spawn_radius1 value="5"/>        <!--минимальное расстояние до других подобных существ при рождении-->
+      <max_count value="5"/>            <!--максимальное кол-во монстров данного вида на уровне-->
+    </params>
+  </spawn>
+  <spawn name="zombie">
+    <params>
+      <spawn_time value="30"/>          <!--время появления монстров после наступления темного времени суток-->
+      <spawn_radius value="7"/>        <!--минимальное расстояние появления от ближайшего дома или склада -->
+      <between_distance value="2-4"/>   <!--расстояние между монстрами-->
+      <boss_ratio value="5"/>           <!--на сколько зомби 1 босс-->
+    </params>
+  </spawn>
+  <spawn name="skeleton">
+    <params>
+      <spawn_time value="50"/>      <!--время появления монстров после наступления темного времени суток-->
+      <reborn_max value="50"/>      <!--максимальное кол-во возрожденных скелетов, родившихся вместо закаменелых-->
+      <shielder_chance value="20%"/>
+      <builder_chance value="30%"/>
+    </params>
+  </spawn>
+  <spawn name="animal">
+    <params>
+      <spawn_time value="60"/>          <!--базовый интервал появления зверя-->
+      <territory value="10"/>           <!--минимальная территория для зверя-->
+      <spawn_count value="50%"/>        <!--количество зверей в процентах от максимального, при старте уровня-->
+      <animals value="chicken-1,sheep-1,yak-1"/>
+    </params>
+  </spawn>
+  <spawn name="fish">
+    <params>
+      <spawn_time value="30"/>          <!-- время между появлениями особей рыб -->
+      <range value="4"/>                <!-- минимальная площадь для одной рыбы -->
+    </params>
+  </spawn>
+  <spawn name="ghost">
+    <params>
+      <spawn_time value="60-120"/>     <!--интервал появления между призраками-->
+    </params>
+  </spawn>
+  <spawn name="slug">
+    <params>
+      <spawn_time value="120"/>      <!--время определения положения нового монстра, по умолч. 60сек-->
+      <spawn_radius value="10"/>    <!--появляется на расстоянии от гнома-->
+      <max_count value="3"/>        <!--максимальное кол-во в пределах указанного радиуса-->
+    </params>
+  </spawn>
+  <spawn name="mite">
+    <params>
+      <distance value="3"/>         <!--расстояние от дерева в пределах которого нападает на гнома-->
+      <tree_height value="3"/>      <!--минимальная высота дерева для клеща-->
+    </params>
+  </spawn>
+  <spawn name="goblin">
+    <params>
+      <level value="5"/>                <!--уровень игрока, после которого начинают приходить, по умолч. 5 уровень-->
+      <spawn_count value="120%"/>        <!--появляеются отрядом в процентах от кол-ва гномов-->
+      <distance value="20"/>            <!--расстояние около склада-->
+      <success_raid_time value="5" />   <!--время следующего появления в днях при удачном набеге-->
+      <killed_raid_time value="10" />   <!--время следующего появления в днях когда всех убили-->
+      <raid_time value="2-4" />         <!--время следующего появления в днях-->
+    </params>
+  </spawn>
+  <spawn name="frostling">
+    <params>
+      <spawn_count value="120%"/>
+      <distance value="20"/>          <!--расстояние около склада-->
+      <respawn_time value="2-4" />
+      <spawn_time value="300"/>
+      <hostility_time value="60"/>
+    </params>
+  </spawn>
+  <spawn name="worm">
+    <params>
+      <crash_count value="20"/>           <!--кол-во добытых блоков для появления-->
+      <estimated_time value="300" />      <!--время в течении которого нужно добыть указаное кол-во блоков-->
+      <spawn_time value="1200" />         <!--интервал появления червя-->
+      <killed_spawn_time value="3600" />  <!--интервал появления червя после его убийства-->
+      <spawn_deep value="75%" />          <!--глубина появления червя, в процентах от высоты уровня-->
+    </params>
+  </spawn>
+  <spawn name="spider">
+    <params>
+      <spawn_deep value="20%"/>      <!--глубина прокопки гномами в процентах от уровня для появления пауков-->
+      <spawn_radius value="30"/>    <!--расстояние до других пауков-->
+      <unattended_time value="300"/>     <!--время непосещения гномами блоков, в которых может появиться паук-->
+      <spawn_web_time value="60"/>
+    </params>
+  </spawn>
+  <spawn name="beetle">
+    <params>
+      <spawn_radius value="7"/>     <!--расстояние до гнома-->
+      <spawn_time value="2"/>      <!--время определения положения нового монстра, по умолч. 60сек-->
+    </params>
+  </spawn>
+  <spawn name="little_dragon">
+    <params>
+      <egg_spawn_time value="600"/>
+      <rise_ratio value="3"/>
+    </params>
+  </spawn>
+  <spawn name="larva">
+    <params>
+      <spawn_deep value="7%"/>
+      <spawn_population value="0.3%"/>
+      <spawn_radius value="6"/>
+    </params>
+  </spawn>
+  <spawn name="scorpion">
+    <params>
+      <chance value="7%"/>      <!--chance to spawn-->
+    </params>
+  </spawn>
+  <spawn name="vampire_guard">
+    <params>
+    </params>
+  </spawn>
+  <spawn name="cave_goblin">
+    <params>
+      <spawn_radius value="20"/>
+      <check_pop_radius value="30"/>
+      <spawn_cave_area value="150"/>
+    </params>
+  </spawn>
+  <spawn name="octopus">
+    <params>
+      <width_for_one value="20"/>
+    </params>
+  </spawn>
+</root>

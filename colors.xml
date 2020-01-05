@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<colors>
+  <survival color="255|70|20" scale="1.10"/>
+  <creative color="0|180|0" scale="1.10"/>
+  <red color="255|70|20" scale="1.2"/>
+  <green color="0|255|0" />
+  <yellow color="255|255|127" />
+  <size60 scale="0.60"/>  
+  <sizeb scale="1.30"/>  
+  <sizem scale="0.90"/> 
+  <red1 color="255|255|255" scale="0.80"/>
+  <nickname color="255|0|0" scale="1.0"/>
+
+  <pl1 color="255|35|35" scale="1.0"/>
+  <pl2 color="25|186|7" scale="1.0"/>
+  <pl3 color="30| 115| 255" scale="1.0"/>
+  <pl4 color="255|14|138" scale="1.0"/>
+  <pl5 color="255|111|0" scale="1.0"/>
+  <pl6 color="143|255|0" scale="1.0"/>
+  <pl7 color="123|0|235" scale="1.0"/>
+  <pl8 color="220|0|255" scale="1.0"/>
+  <pl9 color="255|220|0" scale="1.0"/>
+  <pl10 color="0|212|240" scale="1.0"/>
+
+  <dinfo color="255|255|127" scale="1.1" />
+</colors>

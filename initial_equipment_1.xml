@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<root>
+    <equip name="point_click" levels="1" include="all" exclude="" slot="-1" count="1" enable_recipe="false" />
+</root>

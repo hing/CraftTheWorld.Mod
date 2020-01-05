@@ -1,0 +1,14 @@
+<root>
+    <cloud_image value="gfx/characters/Ico_Char_emot/cloud"/>
+    <offset value="0,-100"/>
+    <items>
+        <text key="error" local="elven_mage_error" duration="10"/>
+        <image key="hint" duration="10" >
+            <file value="gfx\level_tiles\craft_res\coal3"/>
+            <file value="gfx\level_tiles\craft_res\iron"/>
+            <file value="gfx\level_tiles\craft_res\mfrl"/>
+            <file value="gfx\level_tiles\craft_res\silver"/>
+            <file value="gfx\level_tiles\craft_res\gold"/>
+        </image>
+    </items>
+</root>

@@ -1,0 +1,6 @@
+<root>
+    <switches>
+        <switch state="idle" to="idle2" interval="3,5" />
+        <switch state="sleep" to="vibra" interval="3,5" />
+    </switches>
+</root>

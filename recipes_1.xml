@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<root>
+    <recipe name="dig_machine_crystal" ingredients="glass-1,magic_engine-2,silver_ingot-3,auger_crystal-4,dig_machine_chassis-5,plank-6,iron_wheel-7,steel-8,iron_wheel-9" produce="dig_machine_crystal" group="3" craft_need="smithy" />
+    <recipe name="pirate_ship" ingredients="" produce="pirate_ship" group="1" />
+    <recipe name="service_ladder" ingredients="" produce="service_ladder" group="1" />
+    <recipe name="service_bridge" ingredients="" produce="service_bridge" group="1" />
+    <recipe name="service_block" ingredients="" produce="service_block" group="1" />
+    <recipe name="sea_water" ingredients="" produce="sea_water" group="1" />
+    <recipe name="pirate_cannon" ingredients="cannon_barrel-2,plank-4,plank-5,steel-7,steel-8,wood_wheel-9" produce="pirate_cannon" group="3" craft_need="smithy" />
+    <recipe name="cannon_ammo" ingredients="iron-2,nail-4,clay_vase-5,nail-6,coal-8" produce="cannon_ammo=5" group="3" craft_need="smithy" />
+    <recipe name="tech_book_craft" ingredients="paper-1,brains-2,ink-4" produce="tech_book_craft" group="1" craft_need="library" />
+    <recipe name="tech_book_health" ingredients="paper-1,brains-2,ink-5" produce="tech_book_health" group="1" craft_need="library" />
+    <recipe name="tech_book_mana" ingredients="brains-2,paper-4,ink-5" produce="tech_book_mana" group="1" craft_need="library" />
+    <recipe name="tech_book_skills" ingredients="brains-1,paper-4,ink-5" produce="tech_book_skills" group="1" craft_need="library" />
+    <recipe name="ink" ingredients="resin-1,water-2,coal-4,empty_bottle-5" produce="ink=5" group="2" craft_need="kitchen" />
+    <recipe name="lighthouse" ingredients="" produce="lighthouse" group="1" />
+    <recipe name="library" ingredients="plank-1,torch-2,iron-3,plank-4,pen-5,ink-6,wood-7,table_wooden-8,chair-9" produce="library" group="2" craft_need="workbench" />
+    <recipe name="library_china" ingredients="plank-1,torch-2,iron-3,plank-4,pen-5,ink-6,wood-7,table_china-8,chair_china-9" produce="library" group="2" craft_need="workbench" />
+    <recipe name="service_pirate_spawner" ingredients="" produce="service_pirate_spawner" group="1" />
+    <recipe name="fire_staff" ingredients="gold-1,fire_essence-2,plank-5,plank-8" produce="fire_staff" group="1" craft_need="lab" />
+    <recipe name="Rhinoceros_boots" ingredients="durable_shell-5,iron_boots-8,nail-9" produce="Rhinoceros_boots" group="4" craft_need="workbench" />
+    <recipe name="Rhinoceros_chest" ingredients="nail-1,rope-2,durable_shell-4,steel_chain_armor-5,durable_shell-6" produce="Rhinoceros_chest" group="4" craft_need="workbench" />
+    <recipe name="Rhinoceros_helmet" ingredients="rope-1,durable_shell-2,helm_steel-5" produce="Rhinoceros_helmet" group="4" craft_need="workbench" />
+    <recipe name="sword_soul_reaper" ingredients="gold-1,portal_krs_green-2,gold-4,portal_krs_green-5,mithril-8" produce="sword_soul_reaper" group="1" craft_need="smithy" />
+    <recipe name="thunderbolt_bow" ingredients="silver_ingot-2,plank-4,lightning_essence-5,rope-6,silver_ingot-8" produce="thunderbolt_bow" group="3" craft_need="smithy" />
+    <recipe name="lighthouse_part1" ingredients="stone_wall-1,plank-2,nail-3,plank-4,stone_wall-5,plank-6,stone-7,door_wooden-8,stone-9" produce="lighthouse_part1" group="1" craft_need="" />
+    <recipe name="lighthouse_part2" ingredients="gargoyle-1,stone-2,gargoyle2-3,collumn-4,stone_wall-5,collumn-6,portal_krs_green-7,stone-8,portal_krs_blue-9" produce="lighthouse_part2" group="1" craft_need="" />
+    <recipe name="lighthouse_part3" ingredients="iron-2,iron-4,round_window-5,iron-6,stone_wall-7,stone-8,stone_wall-9" produce="lighthouse_part3" group="1" craft_need="" />
+    <recipe name="lighthouse_chest" ingredients="" produce="lighthouse_chest" group="1" />
+    <recipe name="lighthouse_activator" ingredients="glass-2,lamp-4,quartz-5,lamp-6,glass-8" produce="lighthouse_activator" group="1" craft_need="" />
+    <recipe name="service_light" ingredients="" produce="service_light" group="1" />
+    <recipe name="service_remover" ingredients="" produce="service_remover" group="1" />
+    <recipe name="service_pirate_aggro_marker" ingredients="" produce="service_pirate_aggro_marker" group="1" />
+    <recipe name="spawn_pirate_boss" ingredients="" produce="spawn_pirate_boss" group="1" />
+    <recipe name="scorpio_base" ingredients="" produce="scorpio_base" group="1" />
+    <recipe name="wall_mine" ingredients="" produce="wall_mine" group="1" />
+    <recipe name="ladder_mine" ingredients="" produce="ladder_mine" group="1" />
+    <recipe name="box_mine_01" ingredients="" produce="box_mine_01" group="1" />
+    <recipe name="box_mine_02" ingredients="" produce="box_mine_02" group="1" />
+    <recipe name="door_mine" ingredients="" produce="door_mine" group="1" />
+    <recipe name="luke_mine" ingredients="" produce="luke_mine" group="1" />
+    <recipe name="rails_mine_01" ingredients="" produce="rails_mine_01" group="1" />
+    <recipe name="rails_mine_02" ingredients="" produce="rails_mine_02" group="1" />
+    <recipe name="rails_mine_03" ingredients="" produce="rails_mine_03" group="1" />
+    <recipe name="trolley_01" ingredients="" produce="trolley_01" group="1" />
+    <recipe name="trolley_02" ingredients="" produce="trolley_02" group="1" />
+    <recipe name="trolley_03" ingredients="" produce="trolley_03" group="1" />
+    <recipe name="incubator" ingredients="wheat-1,wheat-3,plank-4,wheat-5,plank-6,stone_wall-7,kitchen_wood-8,stone_wall-9" produce="incubator" group="4" />
+    <recipe name="incubator_china" ingredients="rice-1,rice-3,plank-4,rice-5,plank-6,stone_wall-7,kitchen_wood-8,stone_wall-9" produce="incubator" group="4" />
+    <recipe name="box_mine_03" ingredients="" produce="box_mine_03" group="1" />
+    <recipe name="barrel_mine_01" ingredients="" produce="barrel_mine_01" group="1" />
+    <recipe name="barrel_mine_02" ingredients="" produce="barrel_mine_02" group="1" />
+    <recipe name="barrel_mine_03" ingredients="" produce="barrel_mine_03" group="1" />
+    <recipe name="barrel_mine_04" ingredients="" produce="barrel_mine_04" group="1" />
+    <recipe name="barrel_mine_05" ingredients="" produce="barrel_mine_05" group="1" />
+    <recipe name="barrel_mine_06" ingredients="" produce="barrel_mine_06" group="1" />
+    <recipe name="chair_mine_01" ingredients="" produce="chair_mine_01" group="1" />
+    <recipe name="chair_mine_02" ingredients="" produce="chair_mine_02" group="1" />
+    <recipe name="chair_mine_03" ingredients="" produce="chair_mine_03" group="1" />
+    <recipe name="table_mine_01" ingredients="" produce="table_mine_01" group="1" />
+    <recipe name="table_mine_02" ingredients="" produce="table_mine_02" group="1" />
+    <recipe name="table_mine_03" ingredients="" produce="table_mine_03" group="1" />
+    <recipe name="rock_01" ingredients="" produce="rock_01" group="1" />
+    <recipe name="rails_mine_04" ingredients="" produce="rails_mine_04" group="1" />
+    <recipe name="column_mine" ingredients="" produce="column_mine" group="1" />
+    <recipe name="rock_02" ingredients="" produce="rock_02" group="1" />
+    <recipe name="rock_03" ingredients="" produce="rock_03" group="1" />
+    <recipe name="rock_04" ingredients="" produce="rock_04" group="1" />
+    <recipe name="rock_coal_01" ingredients="" produce="rock_coal_01" group="1" />
+    <recipe name="rock_coal_02" ingredients="" produce="rock_coal_02" group="1" />
+    <recipe name="rock_coal_03" ingredients="" produce="rock_coal_03" group="1" />
+    <recipe name="skeleton_01" ingredients="" produce="skeleton_01" group="1" />
+    <recipe name="bag_mine_01" ingredients="" produce="bag_mine_01" group="1" />
+    <recipe name="bag_mine_02" ingredients="" produce="bag_mine_02" group="1" />
+    <recipe name="bag_mine_03" ingredients="" produce="bag_mine_03" group="1" />
+    <recipe name="chain_mine" ingredients="" produce="chain_mine" group="1" />
+    <recipe name="chain_lamp_mine" ingredients="" produce="chain_lamp_mine" group="1" />
+    <recipe name="skeleton_02" ingredients="" produce="skeleton_02" group="1" />
+    <recipe name="cupboard_01" ingredients="" produce="cupboard_01" group="1" />
+    <recipe name="cupboard_02" ingredients="" produce="cupboard_02" group="1" />
+    <recipe name="cupboard_03" ingredients="" produce="cupboard_03" group="1" />
+    <recipe name="cupboard_04" ingredients="" produce="cupboard_04" group="1" />
+    <recipe name="anti_lycathropin" ingredients="water-2,pink_mushroom-4,wolf_heart-5,mucus-6,healt_elexir-8" produce="anti_lycathropin=3" group="1" craft_need="lab" />
+    <recipe name="wolf_heart" ingredients="" produce="wolf_heart" group="1" />
+    <recipe name="flamethrower" ingredients="gold_ingot-4,fire_essence-5,steel-6,gold_ingot-8,steel-9" produce="flamethrower" group="1" craft_need="smithy" />
+    <recipe name="flame_fuel" ingredients="" produce="flame_fuel" group="1" />
+    <recipe name="vivern_firebreath" ingredients="" produce="vivern_firebreath" group="1" />
+    <recipe name="rune1_desert" ingredients="" produce="rune1_desert" group="1" />
+    <recipe name="rune2_desert" ingredients="" produce="rune2_desert" group="1" />
+    <recipe name="rune3_desert" ingredients="" produce="rune3_desert" group="1" />
+    <recipe name="rune4_desert" ingredients="" produce="rune4_desert" group="1" />
+    <recipe name="rune5_desert" ingredients="" produce="rune5_desert" group="1" />
+    <recipe name="rune6_desert" ingredients="" produce="rune6_desert" group="1" />
+    <recipe name="lighting_arrow" ingredients="" produce="lighting_arrow" group="1" />
+    <recipe name="service_sand_temple" ingredients="" produce="service_sand_temple" group="1" />
+    <recipe name="flame_fuel_heat" ingredients="mucus-4,resin-5,clay_vase-7,oil_berries-8" produce="flame_fuel_heat=25" group="3" craft_need="lab" />
+    <recipe name="cannon_barrel" ingredients="" produce="cannon_barrel" group="1" />
+    <recipe name="tunder_bolt" ingredients="quartz-5,silver-7,glass-8" produce="tunder_bolt=25" group="3" craft_need="smithy" />
+    <recipe name="iron_wheel" ingredients="nail-4,steel-5,nail-8" produce="iron_wheel" group="3" craft_need="smithy" />
+    <recipe name="wood_wheel" ingredients="nail-4,wood-5,iron-8" produce="wood_wheel" group="2" craft_need="workbench" />
+    <recipe name="dig_machine_chassis" ingredients="miners_lamp-1,plank-2,empty_bottle-3,steel-4,steel-5,steel-6" produce="dig_machine_chassis" group="3" craft_need="smithy" />
+    <recipe name="auger_crystal" ingredients="portal_krs_red-4,steel-5,iron-6" produce="auger_crystal" group="3" craft_need="smithy" />
+    <recipe name="auger_iron" ingredients="steel-4,steel-5,iron-6" produce="auger_iron" group="3" craft_need="smithy" />
+    <recipe name="dig_machine" produce="dig_machine" ingredients="glass-1,magic_engine-2,steel-3,auger_iron-4,dig_machine_chassis-5,plank-6,wood_wheel-7,steel-8,wood_wheel-9" group="3" craft_need="smithy" />
+    <recipe name="technology_learning_books_01" produce="technology_learning_books_01" ingredients="ink-2,pen-3,paper-5" craft_need="library" />
+    <recipe name="technology_learning_books_02" produce="technology_learning_books_02" ingredients="paper-5,pen-6,ink-8" craft_need="library" />
+    <recipe name="technology_learning_books_03" produce="technology_learning_books_03" ingredients="pen-2,ink-4,paper-5" craft_need="library" />
+    <recipe name="technology_learning_books_04" produce="technology_learning_books_04" ingredients="pen-4,paper-5,ink-6" craft_need="library" />
+    <recipe name="sarcophagus_02" ingredients="" produce="sarcophagus_02" group="1" />
+    <recipe name="statue_desert" ingredients="" produce="statue_desert" group="1" />
+    <recipe name="torch_desert" ingredients="" produce="torch_desert" group="1" />
+    <recipe name="vase_01_desert" ingredients="" produce="vase_01_desert" group="1" />
+    <recipe name="vase_02_desert" ingredients="" produce="vase_02_desert" group="1" />
+    <recipe name="vase_03_desert" ingredients="" produce="vase_03_desert" group="1" />
+    <recipe name="vase_04_desert" ingredients="" produce="vase_04_desert" group="1" />
+    <recipe name="block_01_desert_temple" ingredients="" produce="block_01_desert_temple" group="1" />
+    <recipe name="block_02_desert_temple" ingredients="" produce="block_02_desert_temple" group="1" />
+    <recipe name="ladder_desert_temple" ingredients="" produce="ladder_desert_temple" group="1" />
+    <recipe name="column_desert_temple" ingredients="" produce="column_desert_temple" group="1" />
+    <recipe name="door_desert_temple" ingredients="" produce="door_desert_temple" group="1" />
+    <recipe name="pen" produce="pen=5" ingredients="feather-5,wood-8" craft_need="workbench" group="2" />
+    <recipe name="magic_engine" ingredients="" produce="magic_engine" group="1" />
+    <recipe name="sand_room_door" ingredients="" produce="sand_room_door" group="1" />
+    <recipe name="sand_rune_door" ingredients="" produce="sand_rune_door" group="1" />
+    <recipe name="rusty_gun" ingredients="sulfur-3,iron-5" produce="rusty_gun" group="1" />
+    <recipe name="tick_staff" ingredients="gold-1,portal_krs_red-2,living_tree-5,living_tree-8" produce="tick_staff" group="1" craft_need="workbench" />
+</root>

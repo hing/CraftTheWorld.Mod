@@ -1,0 +1,17 @@
+name;count;rows;position;size;
+512x256
+block;5;1;0x0;500x100
+corner_left;1;1;0x100;100x100
+corner_right;1;1;100x100;100x100
+wall_left;1;1;200x100;50x100
+wall_right;1;1;300x100;50x100
+ceiling;1;1;0x200;100x56
+stubs;4;1;100x201;200x50
+border_left;1;1;400x100;28x100
+border_right;1;1;456x100;28x100
+border_top;1;1;400x200;100x28
+border_bottom;1;1;300x200;100x28
+border_left_gr;1;1;428x100;28x100
+border_right_gr;1;1;484x100;28x100
+border_top_gr;1;1;400x228;100x28
+border_bottom_gr;1;1;300x228;100x28

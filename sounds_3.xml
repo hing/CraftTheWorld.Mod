@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<root>
+    <sound name="bank safe" file="sfx/Highland/Others/bank safe.ogg" properties="distance=0.50" pak="Highland DLC" />
+    <sound name="bookcase fall" file="sfx/Highland/Others/bookcase fall.ogg" properties="distance=0.50" pak="Highland DLC" />
+    <sound name="breaking a bag" file="sfx/Highland/Others/breaking a bag.ogg" properties="distance=0.50" pak="Highland DLC" />
+    <sound name="breaking ceramics" file="sfx/Highland/Others/breaking ceramics.ogg" properties="distance=0.50" pak="Highland DLC" />
+    <sound name="breaking dishes" file="sfx/Highland/Others/breaking dishes.ogg" properties="distance=0.50" pak="Highland DLC" />
+    <sound name="breaking steel box" file="sfx/Highland/Others/breaking steel box.ogg" properties="distance=0.50" pak="Highland DLC" />
+    <sound name="breaking wooden box" file="sfx/Highland/Others/breaking wooden box.ogg" properties="distance=0.50" pak="Highland DLC" />
+    <sound name="breaks the flag" file="sfx/Highland/Others/breaks the flag.ogg" properties="distance=0.50" pak="Highland DLC" />
+    <sound name="Elf Merchant Book" file="sfx/Highland/Elf/Elf Merchant Book.ogg" properties="distance=0.50" pak="Highland DLC" />
+    <sound name="Elf Merchant cough" file="sfx/Highland/Elf/Elf Merchant cough 1.ogg,sfx/Highland/Elf/Elf Merchant cough 2.ogg,sfx/Highland/Elf/Elf Merchant cough 3.ogg" properties="distance=0.50" pak="Highland DLC" />
+    <sound name="Elf Merchant Sigh_fin" file="sfx/Highland/Elf/Elf Merchant Sigh_fin.ogg" properties="distance=0.50" pak="Highland DLC" />
+    <sound name="ambience moria" file="sfx/Highland/Full track/ambience moria 1.ogg,sfx/Highland/Full track/ambience moria 2.ogg,sfx/Highland/Full track/ambience moria 3.ogg" properties="distance=0.50,ambient,replace" pak="Highland DLC" />
+    <sound name="monsters wave" file="sfx/Highland/Full track/monsters wave.ogg" properties="distance=0.00,ambient,music,replace,count=1,volume=x1.69" pak="Highland DLC" />
+    <sound name="Totem 10 sec" file="sfx/Highland/Full track/Totem 10 sec.ogg" properties="distance=0.50" pak="Highland DLC" />
+    <sound name="Orc - fem - battle cry" file="sfx/Highland/Orc/Orc - fem - battle cry.ogg" properties="distance=0.50" pak="Highland DLC" />
+    <sound name="Orc - fem - death" file="sfx/Highland/Orc/Orc - fem - death.ogg" properties="distance=0.50" pak="Highland DLC" />
+    <sound name="Orc - fem - idle - speech" file="sfx/Highland/Orc/Orc - fem - idle - speech.ogg" properties="distance=0.50,count=1" pak="Highland DLC" />
+    <sound name="Orc - fem - idle" file="sfx/Highland/Orc/Orc - fem - idle.ogg" properties="distance=0.50,loop=20.00,time=10.00,count=2" pak="Highland DLC" />
+    <sound name="Orc - fem - punch" file="sfx/Highland/Orc/Orc - fem - punch.ogg" properties="distance=0.50" pak="Highland DLC" />
+    <sound name="Orc - man - battle cry" file="sfx/Highland/Orc/Orc - man - battle cry 1.ogg,sfx/Highland/Orc/Orc - man - battle cry 2.ogg" properties="distance=0.50" pak="Highland DLC" />
+    <sound name="Orc - man - death" file="sfx/Highland/Orc/Orc - man - death 1.ogg,sfx/Highland/Orc/Orc - man - death 2.ogg" properties="distance=0.50" pak="Highland DLC" />
+    <sound name="Orc - man - idle - speech" file="sfx/Highland/Orc/Orc - man - idle - speech 1.ogg,sfx/Highland/Orc/Orc - man - idle - speech 2.ogg" properties="distance=0.50,count=1" pak="Highland DLC" />
+    <sound name="Orc - man - idle" file="sfx/Highland/Orc/Orc - man - idle 1.ogg,sfx/Highland/Orc/Orc - man - idle 2.ogg" properties="distance=0.50,loop=20.00,time=10.00,count=2" pak="Highland DLC" />
+    <sound name="Orc - man - punch" file="sfx/Highland/Orc/Orc - man - punch 1.ogg,sfx/Highland/Orc/Orc - man - punch 2.ogg,sfx/Highland/Orc/Orc - man - punch 3.ogg" properties="distance=0.50" pak="Highland DLC" />
+    <sound name="Troll - battle cry" file="sfx/Highland/Troll/Troll - battle cry 1.ogg,sfx/Highland/Troll/Troll - battle cry 2.ogg" properties="distance=0.50,count=2" pak="Highland DLC" />
+    <sound name="Troll - IDLE" file="sfx/Highland/Troll/Troll - IDLE 1.ogg,sfx/Highland/Troll/Troll - IDLE 2.ogg" properties="distance=0.50" pak="Highland DLC" />
+    <sound name="Troll - Scream of Death" file="sfx/Highland/Troll/Troll - Scream of Death 1.ogg,sfx/Highland/Troll/Troll - Scream of Death 2.ogg" properties="distance=0.50" pak="Highland DLC" />
+    <sound name="Troll punch" file="sfx/Highland/Troll/troll punch 1.ogg,sfx/Highland/Troll/troll punch 2.ogg" properties="distance=0.50" pak="Highland DLC" />
+    <sound name="Troll step" file="sfx/Highland/Troll/troll step L1.ogg,sfx/Highland/Troll/troll step L2.ogg,sfx/Highland/Troll/troll step R1.ogg,sfx/Highland/Troll/troll step R2.ogg" properties="distance=0.50" pak="Highland DLC" />
+    <sound name="Garklan_death" file="sfx/Highland/Animals/Garklan_death_1.ogg,sfx/Highland/Animals/Garklan_death_2.ogg" properties="distance=0.50" pak="Highland DLC" />
+    <sound name="Garklan_scream" file="sfx/Highland/Animals/Garklan_scream_1.ogg,sfx/Highland/Animals/Garklan_scream_2.ogg" properties="distance=0.50,time=10.00,loop=20.00,count=2" pak="Highland DLC" />
+    <sound name="Kozel death" file="sfx/Highland/Animals/Kozel death.ogg" properties="distance=0.50" pak="Highland DLC" />
+    <sound name="Kozel jumped down" file="sfx/Highland/Animals/Kozel jumped down.ogg" properties="distance=0.50" pak="Highland DLC" />
+    <sound name="Kozel jumped" file="sfx/Highland/Animals/Kozel jumped.ogg" properties="distance=0.50" pak="Highland DLC" />
+    <sound name="Kozel scream" file="sfx/Highland/Animals/Kozel scream 1.ogg,sfx/Highland/Animals/Kozel scream 2.ogg,sfx/Highland/Animals/Kozel scream 3.ogg" properties="distance=0.50,time=10.00,loop=20.00,count=2" pak="Highland DLC" />
+    <sound name="Kozel snow step" file="sfx/Highland/Animals/Kozel snow step L 1.ogg,sfx/Highland/Animals/Kozel snow step L 2.ogg,sfx/Highland/Animals/Kozel snow step L 3.ogg,sfx/Highland/Animals/Kozel snow step R 1.ogg,sfx/Highland/Animals/Kozel snow step R 2.ogg,sfx/Highland/Animals/Kozel snow step R 3.ogg" properties="distance=0.50" pak="Highland DLC" />
+    <sound name="Kozel step" file="sfx/Highland/Animals/Kozel step L 1.ogg,sfx/Highland/Animals/Kozel step L 2.ogg,sfx/Highland/Animals/Kozel step L 3.ogg,sfx/Highland/Animals/Kozel step R 1.ogg,sfx/Highland/Animals/Kozel step R 2.ogg,sfx/Highland/Animals/Kozel step R 3.ogg" properties="distance=0.50" pak="Highland DLC" />
+</root>

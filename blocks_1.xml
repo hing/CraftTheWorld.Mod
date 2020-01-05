@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<root>
+    <block name="dig_machine" type="entity" item="dig_machine" properties="" resource="dig_machine" build="1" extract="1" />
+    <block name="dig_machine_crystal" type="entity" item="dig_machine_crystal" properties="" resource="dig_machine_crystal" build="1" extract="1" />
+    <block name="pirate_ship" type="entity" properties="editor=service,service_item" spine="pirate_ship" spine_ani="idle" spine_skin="default" resource="pirate_ship" build="1" extract="1" item="pirate_ship" />
+    <block name="service_ladder" type="simple" properties="editor=service,can_climb,ladder=x1,no_break,service_item,ani_time_offset=0.00" resource="" through="true" file="gfx/level_tiles/craft_constructions/ladder.png" draw_layer="normal" build="1" extract="1" stayon="true" />
+    <block name="service_bridge" type="simple" properties="editor=service,no_break,service_item,ani_time_offset=0.00,draw_align=up,scale_xaxis" resource="" through="true" file="gfx/level_tiles/craft_constructions/bridge_wood_small.png" draw_layer="normal" build="1" extract="1" stayon="true" />
+    <block name="service_block" type="simple" properties="editor=service,no_break,service_item,ani_time_offset=0.00" file="gfx/level_tiles/tile/granite/granite.png" resource="" draw_layer="normal" build="1" extract="1" />
+    <block name="sea_water" type="simple" properties="editor=service,ani_time_offset=0.069" spine="water" spine_ani="animation" resource="sea_water" draw_layer="normal" build="1" extract="1" />
+    <block name="pirate_cannon" type="entity" item="pirate_cannon" properties="ani_time_offset=0.00" resource="pirate_cannon" build="1" extract="1" />
+    <block name="lighthouse" type="entity" item="lighthouse" properties="ani_time_offset=0.00" resource="lighthouse" build="1" extract="1" />
+    <block name="library" type="entity" item="library" properties="ani_time_offset=0.00" resource="library" build="5" extract="1" />
+    <block name="service_pirate_spawner" type="simple" properties="ani_time_offset=0.00,editor=service,service_item,behaviour_only" resource="" draw_layer="normal" build="1" extract="1" file="gfx/MonstersDLC/item_icons/fire_essence.png" through="true">
+        <gameobject>
+            <behaviour value="PirateSpawner" config="PirateSpawner.xml">
+                <drop value="false" />
+            </behaviour>
+        </gameobject>
+    </block>
+    <block name="lighthouse_chest" type="simple" properties="editor=service,metallic,can_fall,draw_align=down,scale_xaxis" file="gfx/level_tiles/map_obj/Ancient_rooms/chest.png" through="true" extract="20" draw_layer="normal" build="1" resource="">
+        <events>
+            <OnCrash script="lighthouse_chest_OnCrash.lua" />
+        </events>
+    </block>
+    <block name="service_light" type="simple" properties="editor=service,service_item,no_break,light=5,scale=0.39,scale_xaxis" file="gfx/level_tiles/craft_constructions/light/lamp.png" resource="" draw_layer="normal" build="1" extract="1" through="true" />
+    <block name="service_remover" type="simple" properties="editor=service,service_item,behaviour_only" resource="" file="gfx/ui/buttons/obj_square.png" through="true" draw_layer="normal" build="1" extract="1">
+        <gameobject>
+            <behaviour value="BlockCrashBehaviour">
+                <drop value="false" />
+            </behaviour>
+        </gameobject>
+    </block>
+    <block name="service_pirate_aggro_marker" type="simple" gameobject="SaveableGameObject" properties="editor=service,service_item" file="gfx/ui/new_interface/iphone_tile/arrow_aim.png" resource="" draw_layer="normal" build="1" extract="1" through="true" ontop="true" />
+    <block name="spawn_pirate_boss" type="simple" properties="editor=service,service_item,spawn=pirate_boss,user_mirror_switch,draw_align=down,scale=1.66" resource="" through="true" draw_layer="normal" build="1" extract="1" file="gfx/level_tiles/monsters/pistol_skel.png" />
+    <block name="scorpio_base" type="entity" item="scorpio_base" properties="" resource="scorpio_base" build="1" extract="1" />
+    <block name="incubator" type="entity" item="incubator" properties="" resource="incubator" build="1" extract="1" />
+    <block name="rune1_desert" type="simple" properties="rune,no_fade" through="true" resource="rune1_desert" draw_layer="normal" build="1" extract="1">
+        <file path="gfx/level_tiles/map_obj/rune/temple_rune_1_1.png" />
+        <file path="gfx/level_tiles/map_obj/rune/temple_rune_1_2.png" />
+        <file path="gfx/level_tiles/map_obj/rune/temple_rune_1_3.png" />
+    </block>
+    <block name="rune2_desert" type="simple" properties="rune,no_fade" through="true" resource="rune2_desert" draw_layer="normal" build="1" extract="1">
+        <file path="gfx/level_tiles/map_obj/rune/temple_rune_2_1.png" />
+        <file path="gfx/level_tiles/map_obj/rune/temple_rune_2_2.png" />
+        <file path="gfx/level_tiles/map_obj/rune/temple_rune_2_3.png" />
+    </block>
+    <block name="rune3_desert" type="simple" properties="rune,no_fade" through="true" resource="rune3_desert" draw_layer="normal" build="1" extract="1">
+        <file path="gfx/level_tiles/map_obj/rune/temple_rune_3_1.png" />
+        <file path="gfx/level_tiles/map_obj/rune/temple_rune_3_2.png" />
+        <file path="gfx/level_tiles/map_obj/rune/temple_rune_3_3.png" />
+    </block>
+    <block name="rune4_desert" type="simple" properties="rune,no_fade" through="true" resource="rune4_desert" draw_layer="normal" build="1" extract="1">
+        <file path="gfx/level_tiles/map_obj/rune/temple_rune_4_1.png" />
+        <file path="gfx/level_tiles/map_obj/rune/temple_rune_4_2.png" />
+        <file path="gfx/level_tiles/map_obj/rune/temple_rune_4_3.png" />
+    </block>
+    <block name="rune5_desert" type="simple" properties="rune,no_fade" through="true" resource="rune5_desert" draw_layer="normal" build="1" extract="1">
+        <file path="gfx/level_tiles/map_obj/rune/temple_rune_5_1.png" />
+        <file path="gfx/level_tiles/map_obj/rune/temple_rune_5_2.png" />
+        <file path="gfx/level_tiles/map_obj/rune/temple_rune_5_3.png" />
+    </block>
+    <block name="rune6_desert" type="simple" properties="rune,no_fade" resource="rune6_desert" through="true" draw_layer="normal" build="1" extract="1">
+        <file path="gfx/level_tiles/map_obj/rune/temple_rune_6_1.png" />
+        <file path="gfx/level_tiles/map_obj/rune/temple_rune_6_2.png" />
+        <file path="gfx/level_tiles/map_obj/rune/temple_rune_6_3.png" />
+    </block>
+    <block name="service_sand_temple" type="entity" properties="editor=service,service_item" spine="sand_temple" spine_ani="off" resource="" item="service_sand_temple" />
+    <block name="arch_01" type="simple" properties="editor=DLC_monsters,user_mirror_switch,draw_align=down,scale=2.50" through="true" file="gfx/MonstersDLC/blocks/arch_01.png" resource="stone-3|5,portal_krs_red-1|2,sand-1|2,gold-1|3,gold-1|2-50" draw_layer="normal" build="10" extract="100" ontop="true" />
+    <block name="arch_02" type="simple" properties="editor=DLC_monsters,user_mirror_switch,draw_align=down,scale=3.00" file="gfx/MonstersDLC/blocks/arch_02.png" resource="stone-1|5,portal_krs_red-1|2,sand-1|2,iron-1|2,gold-2|4,gold-2|4-50" draw_layer="normal" build="10" extract="100" through="true" ontop="true" />
+    <block name="chafing_dish_01" type="simple" properties="editor=DLC_monsters,light=4,can_fall,draw_align=down" through="true" effect="fire.xml" effect_scale="0.75" file="gfx/MonstersDLC/blocks/chafing_dish_01.png" resource="stone-1|3,oil_berries-1|2,iron-1-50,gold" draw_layer="normal" build="10" extract="30" effect_offset="0.00,-0.50" ontop="true" />
+    <block name="chafing_dish_02" type="simple" properties="editor=DLC_monsters,light=4,can_fall,draw_align=down" through="true" effect="fire.xml" file="gfx/MonstersDLC/blocks/chafing_dish_02.png" resource="stone-1|3,oil_berries-1|2,gold" draw_layer="normal" build="10" extract="30" effect_scale="0.91" effect_offset="0.00,-0.10" ontop="true" />
+    <block name="chest" type="simple" properties="editor=DLC_monsters,user_mirror_switch,can_fall,draw_align=down" through="true" file="gfx/MonstersDLC/blocks/chest.png" resource="stone-1|3,portal_krs_red,iron-1-50,gold" draw_layer="normal" build="10" extract="30" ontop="true" />
+    <block name="sarcophagus_01" type="simple" properties="editor=DLC_monsters,user_mirror_switch,can_fall,draw_align=down,scale=2.11" file="gfx/MonstersDLC/blocks/sarcophagus_01.png" resource="stone-1|3,sand,iron-1-50,gold-1|3,gold-2|4-50" draw_layer="normal" build="10" extract="80" through="true" ontop="true" />
+    <block name="sarcophagus_02" type="simple" properties="editor=DLC_monsters,user_mirror_switch,can_fall,draw_align=down,scale=3.00" through="true" file="gfx/MonstersDLC/blocks/sarcophagus_02.png" resource="stone-1|3,sand,iron-1-50,gold-2|3,gold-2|3-50" draw_layer="normal" build="10" extract="80" ontop="true" />
+    <block name="statue_desert" type="simple" properties="editor=DLC_monsters,user_mirror_switch,can_fall,draw_align=down,scale=3.00" through="true" file="gfx/MonstersDLC/blocks/statue.png" resource="stone-1|3,money-3|8,gold-3|6,gold-2|4-50" draw_layer="normal" build="10" extract="120" ontop="true" />
+    <block name="torch_desert" type="simple" properties="editor=DLC_monsters,light=3,scale=0.50" effect="torch.xml" effect_scale="0.46" file="gfx/MonstersDLC/blocks/torch.png" resource="oil_berries,iron-1|2" draw_layer="normal" build="1" extract="1" effect_offset="0.00,-0.23" through="true" backneed="true" ontop="true" />
+    <block name="vase_01_desert" type="simple" properties="editor=DLC_monsters,user_mirror_switch,can_fall,draw_align=down,scale=0.84" file="gfx/MonstersDLC/blocks/vase_01.png" resource="clay-1|3,money-1|3-30" through="true" draw_layer="normal" build="1" extract="1" ontop="true" />
+    <block name="vase_02_desert" type="simple" properties="editor=DLC_monsters,user_mirror_switch,can_fall,draw_align=down,scale=0.84" file="gfx/MonstersDLC/blocks/vase_02.png" resource="clay-1|3,money-1|3-30" through="true" draw_layer="normal" build="1" extract="1" ontop="true" />
+    <block name="vase_03_desert" type="simple" properties="editor=DLC_monsters,user_mirror_switch,can_fall,draw_align=down,scale=0.89" file="gfx/MonstersDLC/blocks/vase_03.png" resource="clay-1|3,money-1|3-30" through="true" draw_layer="normal" build="1" extract="1" ontop="true" />
+    <block name="vase_04_desert" type="simple" properties="editor=DLC_monsters,user_mirror_switch,can_fall,draw_align=down,scale=0.90" file="gfx/MonstersDLC/blocks/vase_04.png" resource="clay-1|3,money-1|3-50" through="true" draw_layer="normal" build="1" extract="1" ontop="true" />
+    <block name="block_01_desert_temple" atlas="gfx/MonstersDLC/blocks/block_01_desert_temple.png" type="wall" properties="editor=DLC_monsters,can_replace,stony" atlas_element="block" resource="block_01_desert_temple" draw_layer="front_a9" extract="80" build="10" crack="true">
+        <wall>
+            <block name="top" atlas_element="corner_left" properties="collide=up|left,offset=25%,narrow" build="10" extract="80" through="true" crack="true" />
+            <block name="trunk" atlas_element="ceiling" properties="collide=up,draw_align=up,offset=25%,narrow,scale_xaxis" build="10" extract="80" through="true" crack="true" />
+            <block name="bottom" atlas_element="corner_right" properties="collide=right|up,offset=25%,narrow" build="10" extract="80" through="true" crack="true" />
+            <block name="middle_left" atlas_element="wall_left" properties="collide=left,draw_align=left,offset=25%,narrow,scale_yaxis" build="10" extract="80" through="true" crack="true" />
+            <block name="middle_right" atlas_element="wall_right" properties="collide=right,draw_align=right,offset=25%,narrow,scale_yaxis" build="10" extract="80" through="true" crack="true" />
+        </wall>
+    </block>
+    <block name="block_02_desert_temple" atlas="gfx/MonstersDLC/blocks/block_02_desert_temple.png" type="wall" properties="editor=DLC_monsters,can_replace,stony" atlas_element="block" resource="block_01_desert_temple" draw_layer="front_a3" extract="80" build="10" crack="true">
+        <wall>
+            <block name="top" atlas_element="corner_left" properties="collide=up|left,offset=25%,narrow" build="10" extract="80" through="true" crack="true" />
+            <block name="trunk" atlas_element="ceiling" properties="collide=up,draw_align=up,offset=25%,narrow,scale_xaxis" build="10" extract="80" through="true" crack="true" />
+            <block name="bottom" atlas_element="corner_right" properties="collide=right|up,offset=25%,narrow" build="10" extract="80" through="true" crack="true" />
+            <block name="middle_left" atlas_element="wall_left" properties="collide=left,draw_align=left,offset=25%,narrow,scale_yaxis" build="10" extract="80" through="true" crack="true" />
+            <block name="middle_right" atlas_element="wall_right" properties="collide=right,draw_align=right,offset=25%,narrow,scale_yaxis" build="10" extract="80" through="true" crack="true" />
+        </wall>
+    </block>
+    <block name="ladder_desert_temple" atlas="gfx/MonstersDLC/blocks/ladder_desert_temple.png" type="column" properties="editor=DLC_monsters,stony,ladder=x1.5,=true,=true,=true" atlas_element="column_base" resource="stone-1|2" ontop="true" stayon="true" build="10" extract="10">
+        <collumn>
+            <block name="top" atlas_element="column_top" properties="ladder=x1.5" build="10" extract="10" through="true" crack="false" ontop="true" stayon="true" />
+            <block name="trunk" atlas_element="column_tile" properties="ladder=x1.5" build="10" extract="10" through="true" crack="false" ontop="true" stayon="true" />
+            <block name="bottom" atlas_element="column_bottom" properties="ladder=x1.5" build="10" extract="10" through="true" crack="false" ontop="true" stayon="true" />
+        </collumn>
+    </block>
+    <block name="column_desert_temple" atlas="gfx/MonstersDLC/blocks/column_desert_temple.png" type="column" properties="editor=DLC_monsters,stony" atlas_element="column_base" resource="stone-1|2" ontop="true" stayon="true" build="20" extract="50">
+        <collumn>
+            <block name="top" atlas_element="column_top" properties="" build="20" extract="50" through="true" crack="false" ontop="true" stayon="true" />
+            <block name="trunk" atlas_element="column_tile" properties="" build="20" extract="50" through="true" crack="false" ontop="true" stayon="true" />
+            <block name="bottom" atlas_element="column_bottom" properties="" build="20" extract="50" through="true" crack="false" ontop="true" stayon="true" />
+        </collumn>
+    </block>
+    <block name="door_desert_temple" type="simple" properties="editor=DLC_monsters,switch,door=door,narrow,user_mirror_switch,bricken,two_layers" resource="stone-1|3" draw_layer="normal" build="20" extract="80" backneed="true" through="true" crack="true">
+        <file path="gfx/MonstersDLC/blocks/door_desert_temple_close.png" />
+        <file path="gfx/MonstersDLC/blocks/door_desert_temple_opened.png" />
+        <layers count="1">
+            <layer file="gfx/MonstersDLC/blocks/door_desert_temple_forw.png" properties="" />
+        </layers>
+    </block>
+    <block name="sand_room_door" type="entity" item="sand_room_door" properties="editor=DLC_monsters" resource="sand_room_door" />
+    <block name="sand_rune_door" type="entity" item="sand_rune_door" properties="editor=DLC_monsters" resource="sand_rune_door" />
+
+</root>

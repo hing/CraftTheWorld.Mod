@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<root>
+    <animations>
+        <prison_door_mine path="gfx/RoomsDLC/spine/room_mine_door" json="door_mine_room.json" scale="0.538000" mirror="false">
+            <mixing all="true" />
+        </prison_door_mine>
+        <zombie_mine path="gfx/RoomsDLC/spine/zombie_spine" json="zombie_mine.json" scale="0.296000" mirror="true">
+            <mixing all="true" />
+            <settings>
+                <walk for_speed="18" />
+                <walk2 for_speed="18" />
+                <walk3 for_speed="18" />
+            </settings>
+        </zombie_mine>
+    </animations>
+</root>

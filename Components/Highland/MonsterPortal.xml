@@ -1,0 +1,15 @@
+<root>
+    <stay_population_ratio value="0.2"/>
+    <guardian_spawn_count value="3"/>
+    <max_population_default value="10"/>
+    <max_population_ratio value="0.10"/>
+    <neighbours_radius value="10"/>
+</root>
+
+<!-- 
+stay_population_ratio - процент остающихся мобов, вышедших из волны
+guardian_spawn_count - кол-во защитников для каждого лаза при инициализации игры
+max_population_default - максимальная популяция на лаз, при невозможности ее посчитать от объема комнаты
+max_population_ratio - коэф. от объема комнаты для расчета макс. популяции
+neighbours_radius - радиус для определения соседних лазов 
+-->

@@ -1,0 +1,12 @@
+<root>
+   <size value="90"/>
+   <bone value="tant_right_spot"/>
+   <group value="0"/>
+   <static_part value="true"/>
+   <damage_resist value="0.1"/>
+
+   <states>
+      <state name="idle" ani="right_tant_ground_idle " loop="true"/>
+      <state name="hit" ani="right_tant_ground_cut" loop="false" next="idle"/>
+   </states>
+</root>

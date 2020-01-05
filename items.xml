@@ -1,0 +1,882 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Предметы -->
+<!-- Описание парамметров: -->
+<!-- 'resource' - из какого ресурса строится предмет в мире -->
+<!-- 'scale_to_block' - вписывать картинку в блок или оставлять оригинальный размер -->
+<!-- 'prize' - награждает игрока одним из указанных типов ресурсов -->
+<!-- 'spawn' - рождает существо -->
+<!--
+'properties':
+  dead_radius - в пределах радиуса ничего не растет и не стоит
+  nodig_under - нельзя копать в радиусе
+  elevator  - объект является лифтом
+  trolley - объект тележка ж/д
+  trolley_switch - объект переключатель ж/д
+  goblins_camp - объект лагерь гоблинов
+  destructable - можно разрушить
+  magic_portal - магический портад
+  magic - метка, что объект магический, не учитывается при проверке на строительство
+  time - задать время
+  
+-->
+<root>
+    <item name="home" spine="dwarf_base" spine_ani="" spine_skin="skin_normal" size="120" align="down" offsety="15" properties="main_portal,warehouse,healt=200,nodig_under=2,dead_radius_x=2,dead_radius_y=1" light="4" light_intensity="0.9" pak="">
+        <params>
+            <param name="skin_normal" value="skin_normal" />
+            <param name="skin_biom" value="skin_biom" />
+            <param name="skin_normal1" value="skin_normal_damage_5" />
+            <param name="skin_normal2" value="skin_normal_damage_25" />
+            <param name="skin_normal3" value="skin_normal_damage_50" />
+            <param name="skin_normal4" value="skin_normal_damage_75" />
+            <param name="event_portal" value="e" />
+            <param name="event_spawn" value="p" />
+        </params>
+        <states>
+            <state name="none" />
+            <state name="cut" loop="false" ani="cut,cut2,cut3" next_state="idle" />
+            <state name="idle" loop="true" ani="main" />
+            <state name="arrival" loop="false" ani="arrival" next_state="idle" />
+            <state name="portaling" loop="false" ani="new_dwarf" next_state="idle" />
+            <state name="portaling_biome" loop="false" ani="new_dwarf" next_state="biome_search_begin" />
+            <state name="biome_search_begin" loop="false" ani="biom_portal_begin" next_state="biome_search" />
+            <state name="biome_search" loop="true" ani="biom_portal" />
+            <state name="biome_search_end" loop="false" ani="biom_portal_end" next_state="idle" />
+            <state name="die" loop="false" ani="explosion" next_state="dead" />
+            <state name="dead" loop="true" ani="main" />
+        </states>
+    </item>
+    <item name="home_add" file="gfx\extra\dwarf_base_02" size="120" align="down" offsety="0" properties="warehouse,nodig_under=2,removable,dead_radius_x=2,dead_radius_y=1,lost=0.33" pak="" />
+    <item name="home_enemy" file="gfx\extra\dwarf_base_02" size="120" align="down" offsety="0" properties="nodig_under=2,dead_radius_x=2,dead_radius_y=1" pak="" />
+    <item name="truemp_warehouse" spine="players_chest" spine_ani="idle" size="120" align="down" offsety="0" properties="truemp_warehouse,nodig_under=2,removable,dead_radius_x=2,dead_radius_y=1,user_color_slot=bottom_wood|top_wood|flag" pak="">
+        <!--<params>
+        <param name="color_slots" value="bottom_wood,top_wood,flag"/>
+      </params>-->
+    </item>
+    <item name="truemp_warehouse_fake" spine="players_chest" spine_ani="idle" size="120" align="down" offsety="0" properties="truemp_warehouse_fake,nodig_under=2,dead_radius_x=2,dead_radius_y=1,user_color_slot=bottom_wood|top_wood|flag" pak="" />
+    <!--<item name="shop" file="gfx\extra\shop" size="280" align="down" offsety="5" properties="nodig_under=1.5"/>-->
+    <item name="shop" file="gfx\extra\shop" layout="extra_shop" size="200" layout_size="291,298" align="down" offsety="0" properties="shop,nodig_under=3,dead_radius=3" light="4" light_intensity="0.5" pak="" />
+    <item name="shop_goblin" spine="shop_goblin" spine_ani="main_01,main_02" size="200" align="down" offsety="0" properties="shop,nodig_under=2,dead_radius=2" light="4" light_intensity="0.5" pak="" />
+    <!--<item name="portal" file="gfx\level_tiles\tile\Portal\portal_test" layout="obj_portal" layout_size="495,370" size="350" align="down" offsety="3" nodigunder="true" light="true" properties="level_portal,sound=portal">-->
+    <item name="god_altar" spine="god_altar" spine_ani="disabled" size="180" align="down" offsety="0" properties="god_altar,nodig_under=3,dead_radius_x=3,dead_radius_y=1,count=10" light="7" light_intensity="0.9" pak="" />
+    <item name="cave_god" spine="cave_god" spine_ani="main_01" size="720" align="down" offsety="0" properties="cave_god,count=2" pak="">
+        <params>
+            <param name="idle" value="main_01" />
+            <param name="idle_angry" value="main_01_angry" />
+            <param name="show" value="arrive" />
+            <param name="hide" value="hide" />
+            <param name="hide_angry" value="hide_angry" />
+            <param name="angry" value="main_angry" />
+            <param name="happy" value="main_happy" />
+            <param name="earthquake" value="earthquake" />
+            <param name="gift" value="gift" />
+            <param name="earthquake_event" value="earthquake" />
+            <param name="hit_event" value="earthquake_02" />
+            <param name="gift_event" value="gift_begin" />
+            <param name="left_event" value="left_destroy" />
+            <param name="right_event" value="right_destroy" />
+            <param name="gift_bone" value="arm1_IK" />
+            <param name="div_slot" value="horizon" />
+            <param name="idle_time" value="60" />
+        </params>
+    </item>
+    <item name="portal" file="gfx\level_tiles\tile\Portal\portal_test" layout="obj_portal" size="350" align="down" offsety="0" nodigunder="true" light="4" properties="level_portal,sound=portal,nodig_under=4,dead_radius=3" pak="">
+        <parts complete="gate">
+            <part name="block1" resource="portal_block1" />
+            <part name="block2" resource="portal_block2" />
+            <part name="block3" resource="portal_block3" />
+            <part name="block4" resource="portal_block4" />
+            <part name="block5" resource="portal_block5" />
+            <!--<part name="krs_blue" resource="portal_krs_blue"/>
+        <part name="krs_red" resource="portal_krs_red"/>
+        <part name="krs_dblue" resource="portal_krs_dblue"/>
+        <part name="krs_green" resource="portal_krs_green"/>
+        <part name="krs_violet" resource="portal_krs_violet"/>-->
+        </parts>
+    </item>
+    <item name="fluffy" file="gfx\level_tiles\map_obj\mini\black_fluffy" size="50" spawn="black_fluffy" pak="" />
+    <item name="zombie" file="gfx\level_tiles\map_obj\mini\zombie" size="50" spawn="zombie" pak="" />
+    <item name="skeleton" file="gfx\level_tiles\map_obj\mini\skeleton" size="60" spawn="skeleton" pak="" />
+    <item name="beholder" file="gfx\level_tiles\map_obj\mini\beholder" size="120" align="down" spawn="beholder" pak="" />
+    <item name="vampire_guard" file="gfx\level_tiles\map_obj\mini\vampire_guard" size="60" spawn="vampire_guard" pak="" />
+    <item name="dead_lord" file="gfx\level_tiles\map_obj\mini\vampire_guard" size="60" spawn="dead_lord" pak="" />
+    <item name="zombie_solder" file="gfx\level_tiles\map_obj\mini\zombie" size="50" spawn="zombie_solder" pak="" />
+    <item name="elevator" properties="speed=2,elevator,dead_radius=2,removable,max_height=30" spine="elevator" spine_ani="off" size="170" align="down" offsety="0" light="4" light_intensity="0.7" pak="">
+        <params>
+            <param name="tunnel_end" value="elevator_bottom" />
+            <param name="sound" value="elevator" />
+            <param name="idle" value="off" />
+            <param name="working" value="on" />
+        </params>
+        <images>
+            <image file="gfx\Spine\buildings\elevator\ropes" />
+            <image file="gfx\Spine\buildings\elevator\edge" />
+            <image file="gfx\Spine\buildings\elevator\vagon_back" />
+            <image file="gfx\Spine\buildings\elevator\vagon_front" />
+        </images>
+    </item>
+    <!--<item name="elevator" properties="speed=450,elevator,dead_radius=2,removable,max_height=30" file="gfx\level_tiles\craft_constructions\elevator\elevator" size="170" align="down" offsety="0">
+      <images>
+        <image file="gfx\level_tiles\craft_constructions\elevator\elevator_2"/>
+        <image file="gfx\level_tiles\craft_constructions\elevator\elevator_ropes"/>
+        <image file="gfx\level_tiles\craft_constructions\elevator\elevator_bottom"/>
+        <image file="gfx\level_tiles\craft_constructions\bridge_log1"/>
+      </images>
+    </item>-->
+    <item name="trolley" properties="trolley,speed=300,removable,server_entity,draw_align=down,scale_xaxis" size="1.00,1.00" align="down" offsety="-12" pak="">
+        <params>
+            <param name="wheelspark" value="steel_spark" />
+        </params>
+        <images>
+            <image file="gfx\level_tiles\craft_constructions\trolley\trolley" />
+        </images>
+    </item>
+    <item name="totem" properties="totem,healt=50,removable,dead_radius_x=1,dead_radius_y=2,create_sound=set_totem" file="gfx\level_tiles\craft_constructions\totem\totem" spine="totem" spine_ani="neutral" size="60,85" align="down" light="4" light_intensity="1" pak="">
+        <params>
+            <param name="mood0" value="angry" />
+            <param name="mood1" value="sad" />
+            <param name="mood2" value="neutral" />
+            <param name="mood3" value="smile" />
+            <param name="mood4" value="happy" />
+        </params>
+    </item>
+    <item name="totem_china" properties="totem,healt=50,removable,dead_radius_x=1,dead_radius_y=2,create_sound=set_totem" file="gfx\level_tiles\craft_constructions\totem\totem" spine="totem_china" spine_ani="neutral" size="60,85" align="down" light="4" light_intensity="1" pak="">
+        <params>
+            <param name="mood0" value="angry" />
+            <param name="mood1" value="sad" />
+            <param name="mood2" value="neutral" />
+            <param name="mood3" value="smile" />
+            <param name="mood4" value="happy" />
+        </params>
+        <images>
+            <image file="gfx\level_tiles\craft_constructions\totem\totem" />
+        </images>
+    </item>
+    <item name="trolley_switch" properties="trolley_switch,removable" file="gfx\level_tiles\craft_constructions\trolley\switch_3" size="60" pak="">
+        <images>
+            <image file="gfx\level_tiles\craft_constructions\trolley\switch_1" />
+            <image file="gfx\level_tiles\craft_constructions\trolley\switch_2" />
+        </images>
+    </item>
+    <item name="goblin_camp" spine="goblins_camp" spine_ani="animation" size="200" properties="goblins_camp,destructable,healt=50,nodig_under=2,dead_radius=2,exclude_editor,sound=fire" light="3" pak="">
+        <params>
+            <param name="fire" value="camp_fire" />
+            <param name="sleep" value="sleep" />
+        </params>
+    </item>
+    <item name="christmass_goblin_camp" spine="christmass_goblin_camp" spine_ani="idle" size="200" properties="goblins_camp,destructable,healt=50,nodig_under=2,dead_radius=2,exclude_editor,sound=fire" light="3" pak="">
+        <params>
+            <param name="fire" value="camp_fire" />
+            <param name="sleep" value="sleep" />
+        </params>
+    </item>
+    <item name="frostling_camp" spine="frostling_camp" spine_ani="main" size="200" properties="frostling_camp,destructable,healt=50,nodig_under=2,dead_radius=2,exclude_editor" light="3" pak="" />
+    <item name="cave_goblins_camp" spine="cave_goblins_camp" spine_ani="main_01,main_02,main_3" size="200" properties="cave_goblins_camp,destructable,healt=300,nodig_under=2,dead_radius=2,exclude_editor" pak="">
+        <params>
+            <param name="populated" value="main_01,main_02,main_3" />
+            <param name="impty" value="main_3" />
+            <param name="skins_count" value="3" />
+        </params>
+    </item>
+    <item name="cave_goblins_hatch1" spine="cave_goblins_hatch1" spine_ani="full_main" size="60" properties="cave_goblins_hatch,destructable,healt=50,nodig_under=1,dead_radius=1,exclude_editor" pak="" />
+    <item name="cave_goblins_hatch2" spine="cave_goblins_hatch2" spine_ani="full_main" size="60" properties="cave_goblins_hatch,destructable,healt=50,nodig_under=1,dead_radius=1,exclude_editor" pak="" />
+    <item name="cave_goblins_hatch3" spine="cave_goblins_hatch3" spine_ani="full_main" size="120" properties="cave_goblins_hatch,destructable,healt=100,nodig_under=2,dead_radius=2,exclude_editor" pak="" />
+    <item name="staging" file="gfx\level_tiles\craft_constructions\building_back" size="60" align="down" offsety="0" draw_to_chunks="true" properties="staging,can_fall,stayon,ladder,user_entity,draw_all,user_color_img=2" pak="">
+        <images>
+            <image file="gfx\level_tiles\craft_constructions\building" />
+            <image file="gfx\level_tiles\craft_constructions\building_color" />
+        </images>
+    </item>
+    <!--<item name="beware" file="gfx\level_tiles\craft_constructions\sign1" layout_size="100,100" size="60" align="down" offsety="0" properties="staging,beware=6,user_entity"/>-->
+    <item name="beware" spine="signs" spine_ani="idle" spine_skin="not_walk" size="60" align="down" offsety="0" properties="staging,beware=6,user_entity,user_color_slot=tablet_color" pak="">
+        <this>
+            <behaviour value="UIDrawBewareBehaviour">
+                <color value="1|0.3|0.01|0.2" />
+            </behaviour>
+        </this>
+    </item>
+    <item name="sign" file="" layout="extra_signBlue" layout_size="150,80" size="100" align="down" offsety="0" properties="sign,exclude_editor" pak="" />
+    <item name="octopus_nest" file="" size="60" align="down" offsety="0" properties="octopus_nest,destructable,healt=40,nodig_under=1,dead_radius=1,exclude_editor,time=300" pak="">
+        <images>
+            <image file="gfx\level_tiles\map_obj\octopus_nest_empty" />
+            <image file="gfx\level_tiles\map_obj\octopus_nest_full" />
+        </images>
+    </item>
+    <item name="rat_nest" file="gfx\level_tiles\map_obj\hole" size="60" align="down" offsety="0" properties="rat_nest,destructable,healt=40,nodig_under=1,dead_radius=1,exclude_editor,scale_xaxis" pak="" />
+    <!--<item name="smithy" file="gfx\level_tiles\craft_obj\workshops\smithy" size="70" align="down" offsety="0" properties="nodig_under=1,removable"/>-->
+    <!--<item name="smithy" file="gfx\level_tiles\craft_obj\workshops\smithy" size="120" align="down" offsety="0" properties="smithy,nodig_under=2,dead_radius=2,removable"/>-->
+    <item name="stone_stove" file="gfx\level_tiles\craft_obj\workshops\kitchen_stone" layout="extra_stone_stove" size="60" align="down" offsety="0" properties="device,kitchen,efficiency=x2,sound=fire,nodig_under=1,removable,dead_radius_x=1,dead_radius_y=2,crash_after_fall,can_fall" light="2" pak="">
+        <params>
+            <param name="dust" value="trash_stone_small" />
+            <param name="sound_work" value="craft_food" />
+        </params>
+    </item>
+    <item name="big_stove" file="gfx\level_tiles\craft_obj\workshops\kitchen_stone_big" layout="extra_big_stove" size="120" align="down" offsety="0" properties="device,kitchen,efficiency=x3,sound=fire,nodig_under=2,dead_radius=2,removable,crash_after_fall,can_fall" light="2" pak="">
+        <params>
+            <param name="dust" value="trash_stone" />
+            <param name="sound_work" value="craft_food" />
+        </params>
+    </item>
+    <item name="kitchen" file="gfx\level_tiles\craft_obj\workshops\kitchen_wood" layout="extra_kitchen" size="60" align="down" offsety="0" properties="device,kitchen,efficiency=x1,sound=fire,nodig_under=1,dead_radius=1,removable,crash_after_fall,can_fall" light="2" pak="">
+        <params>
+            <param name="dust" value="trash_stone_small" />
+            <param name="sound_work" value="craft_food" />
+        </params>
+    </item>
+    <item name="magic_cauldron" size="3.00,3.00" align="down" offsety="0" properties="device,lab,nodig_under=2,dead_radius=2,removable" light="2" spine="lab" spine_ani="main_off" pak="">
+        <params>
+            <param name="front_spine" value="lab_table" />
+            <param name="front_off" value="main_off" />
+            <param name="front_on" value="main_on,main_on2" />
+            <param name="back_spine" value="lab" />
+            <param name="back_off" value="main_off" />
+            <param name="back_on" value="main_on" />
+            <param name="effects" value="steam\cold_steam\on" />
+            <param name="dust" value="trash_wood" />
+        </params>
+        <images>
+            <image file="gfx\Spine\buildings\lab\laboratory_prev" />
+        </images>
+    </item>
+    <item name="smithy" size="3.00,3.00" align="down" offsety="0" properties="device,smithy,nodig_under=2,dead_radius=2,removable" spine="smithy" spine_ani="work_off" pak="">
+        <params>
+            <param name="front_spine" value="smithy_front" />
+            <param name="front_off" value="main" />
+            <param name="front_on" value="main" />
+            <param name="back_spine" value="smithy" />
+            <param name="back_off" value="work_off" />
+            <param name="back_on" value="work_on" />
+            <param name="dust" value="trash_stone" />
+            <param name="sound_work" value="craft_metall" />
+        </params>
+        <images>
+            <image file="gfx\level_tiles\craft_obj\workshops\smithy_prev" />
+        </images>
+    </item>
+    <item name="workbench" size="2.67,2.67" align="down" offsety="0" properties="device,workbench,nodig_under=2,dead_radius_x=2,dead_radius_y=1,removable,draw_align=down,scale=1.74,scale_yaxis" spine="joiner_workbench" spine_ani="off" pak="">
+        <params>
+            <param name="front_spine" value="joiner_workbench_front" />
+            <param name="front_off" value="main" />
+            <param name="front_on" value="main" />
+            <param name="back_spine" value="joiner_workbench" />
+            <param name="back_off" value="off" />
+            <param name="back_on" value="on" />
+            <param name="dust" value="trash_wood" />
+            <param name="sound_work" value="craft_wood" />
+        </params>
+        <images>
+            <image file="gfx\level_tiles\craft_obj\workshops\joiner_workbench_prev" />
+        </images>
+    </item>
+    <item name="workshop" size="2.33,2.33" align="down" offsety="0" properties="device,workshop,nodig_under=2,dead_radius_x=2,dead_radius_y=1,removable" spine="scabbler_workshop" spine_ani="off" pak="">
+        <params>
+            <param name="back_spine" value="scabbler_workshop" />
+            <param name="back_off" value="off" />
+            <param name="back_on" value="on" />
+            <param name="dust" value="trash_stone" />
+            <param name="sound_work" value="craft_wood" />
+        </params>
+        <images>
+            <image file="gfx\Spine\buildings\scabbler_workshop\scabbler_workshop_prev" />
+        </images>
+    </item>
+    <item name="millstone" size="1.17,1.17" align="down" offsety="0" properties="device,millstone,nodig_under=1,dead_radius_x=1,dead_radius_y=1,removable" spine="millstone" spine_ani="off" pak="">
+        <params>
+            <param name="back_spine" value="millstone" />
+            <param name="back_off" value="off" />
+            <param name="back_on" value="on" />
+            <param name="dust" value="trash_stone" />
+        </params>
+        <images>
+            <image file="gfx\Spine\buildings\millstone\mill_prev" />
+        </images>
+    </item>
+    <item name="ftp_craft" size="1.17,1.17" align="down" offsety="0" properties="device,ftp_craft,nodig_under=1,removable,can_fall,draw_align=down,scale_xaxis" pak="">
+        <images>
+            <image file="gfx\level_tiles\craft_obj\workshops\craft_table" />
+        </images>
+    </item>
+    <item name="ftp_craft2" file="gfx\level_tiles\craft_obj\workshops\craft_table_big" size="120" align="down" offsety="0" properties="device,ftp_craft,nodig_under=1,dead_radius_x=2,dead_radius_y=1,removable" pak="" />
+    <item name="hell_portal" effect="portal_red" size="120" properties="hell_portal,exclude_editor" light="5" light_intensity="0.7" pak="" />
+    <item name="pyramid_spawner" spine="pyr_wiz" spine_ani="born" size="120" properties="pyramid_spawner,exclude_editor,time=180,removable,dead_radius_x=1,dead_radius_y=3,param1=broken,param2=broken_process" pak="" />
+    <item name="pyramid_treasury" file="gfx\level_tiles\map_obj\piram_chest" size="120" properties="removable" pak="" />
+    <!--time - время между выстрелами-->
+    <!--lost - часть ресурсов теряется-->
+    <!--stayon в tesla_tower для того, чтобы куски башен нельзя было строить в воздухе, если под ней ничего нет-->
+    <!--<item name="tesla_tower1" file="gfx\level_tiles\craft_constructions\tower\tower_lv1" effect="lightning_spot" size="60" align="down" offsety="0" light="3" properties="tesla_tower=1,removable,healt=11,radius=5,attack=0.16,time=1.0,lost=0.33,nodig_under=1,self_crash_res,offset=-20,color=130|255|255,can_fall,stayon"/>
+    <item name="tesla_tower2" file="gfx\level_tiles\craft_constructions\tower\tower_lv2" effect="lightning_spot" size="60,120" align="down" offsety="0" light="4" properties="tesla_tower=2,removable,healt=28,radius=5,attack=0.4,time=1.0,lost=0.33,nodig_under=1,self_crash_res,offset=-20,color=130|255|255,can_fall,stayon"/>
+    <item name="tesla_tower3" file="gfx\level_tiles\craft_constructions\tower\tower_lv3" effect="lightning_spot" size="60,180" align="down" offsety="0" light="4" properties="tesla_tower=3,removable,healt=44,radius=6,attack=0.8,time=0.9,lost=0.33,nodig_under=1,self_crash_res,color=130|255|255,can_fall,stayon"/>-->
+    <item name="tesla_tower1" spine="tesla_tower1" spine_ani="main" file="gfx\level_tiles\craft_constructions\tower\tower_lv1" effect="lightning_spot" size="60" align="down" offsety="0" light="3" properties="tesla_tower=1,removable,healt=11,radius=5,time=0.76,lost=0.33,nodig_under=1,offset=-20,color=130|255|255,can_fall,stayon,crash_after_fall,server_entity" pak="">
+        <params>
+            <param name="idle" value="main" />
+            <param name="attack" value="attack" />
+            <param name="barrel" value="lightning" />
+        </params>
+    </item>
+    <item name="tesla_tower2" spine="tesla_tower2" spine_ani="main" effect="lightning_spot" size="60,120" align="down" offsety="0" light="4" properties="tesla_tower=2,removable,healt=28,radius=5,time=0.76,lost=0.33,nodig_under=1,offset=-20,color=130|255|255,can_fall,stayon,crash_after_fall,server_entity" pak="">
+        <params>
+            <param name="idle" value="main" />
+            <param name="attack" value="attack" />
+            <param name="barrel" value="lightning" />
+        </params>
+    </item>
+    <item name="tesla_tower3" spine="tesla_tower3" spine_ani="main" effect="lightning_spot" size="60,180" align="down" offsety="0" light="4" properties="tesla_tower=3,removable,healt=44,radius=6,time=0.76,lost=0.33,nodig_under=1,color=130|255|255,can_fall,stayon,crash_after_fall,server_entity" pak="">
+        <params>
+            <param name="idle" value="main" />
+            <param name="attack" value="attack" />
+            <param name="barrel" value="lightning" />
+        </params>
+    </item>
+    <item name="tesla_spark1" properties="magic_spark,healt=-0.3,creature=creature" pak="" />
+    <item name="tesla_spark2" properties="magic_spark,healt=-0.5,creature=creature" pak="" />
+    <item name="tesla_spark3" properties="magic_spark,healt=-1,creature=creature" pak="" />
+    <item name="arrow_wood_tower" spine="wood_tower" spine_ani="main" size="1.00,1.00" align="down" offsety="0" properties="arrow_tower,removable,healt=15,radius=8,time=0.76,lost=0.33,nodig_under=1,can_fall,crash_after_fall,server_entity">
+        <params>
+            <param name="idle" value="main" />
+            <param name="attack_up_30" value="attack_high2" />
+            <param name="attack_up_60" value="attack_high" />
+            <param name="attack" value="attack_forw" />
+            <param name="attack_down_30" value="attack_down2" />
+            <param name="attack_down_60" value="attack_down" />
+            <param name="barrel_bone" value="arrow_point" />
+            <param name="sound_shot" value="bow" />
+            <param name="bullet" value="tower_arrow" />
+            <param name="damage" value="0.4" />
+            <param name="event_attack" value="attack" />
+        </params>
+        <images>
+            <image file="gfx\level_tiles\craft_constructions\tower\wooden_tower" />
+        </images>
+    </item>
+    <item name="arrow_wood_tower_2" spine="wood_tower_2" spine_ani="main" spine_skin="wood_tower_2" size="1.00,1.00" align="down" offsety="0" properties="arrow_tower,removable,healt=25,radius=9,time=0.76,lost=0.33,nodig_under=1,can_fall,crash_after_fall,server_entity" pak="">
+        <params>
+            <param name="idle" value="main" />
+            <param name="attack_up_30" value="attack_high2" />
+            <param name="attack_up_60" value="attack_high" />
+            <param name="attack" value="attack_forw" />
+            <param name="attack_down_30" value="attack_down2" />
+            <param name="attack_down_60" value="attack_down" />
+            <param name="barrel_bone" value="arrow_point" />
+            <param name="sound_shot" value="bow" />
+            <param name="bullet" value="tower_arrow" />
+            <param name="damage" value="0.7" />
+            <param name="event_attack" value="attack" />
+        </params>
+        <images>
+            <image file="gfx\level_tiles\craft_constructions\tower\wooden_tower_2" />
+        </images>
+    </item>
+    <item name="wooden_trap" file="gfx\level_tiles\craft_constructions\trap_wood" spine="traps" spine_ani="wooden_trap" size="60" align="down" properties="trap,removable,crash_after_fall,healt=-2,creature=monster|animal,can_fall,count=3" pak="">
+        <params>
+            <param name="attack" value="wooden_trap_closing" />
+            <param name="sound_action" value="wood_trap" />
+        </params>
+    </item>
+    <item name="iron_trap" file="gfx\level_tiles\craft_constructions\trap_iron" spine="traps" spine_ani="iron_trap" size="60" align="down" properties="trap,removable,crash_after_fall,healt=-5,creature=monster|animal,can_fall,count=6" pak="">
+        <params>
+            <param name="attack" value="iron_trap_closing" />
+            <param name="sound_action" value="iron_trap" />
+        </params>
+    </item>
+    <!--****************** magic ******************-->
+    <!--<item name="mportal"  effect="portal" size="60" properties="magic,magic_portal,time=240,use_mana=2,radius=1,stayin" light="4">-->
+    <item name="mportal" effect="portal" layout="extra_portal" size="80" align="down" properties="magic,magic_portal,time=240,use_mana=2,radius=1,stayin" light="4" pak="">
+        <params>
+            <param name="decrease_time" value="5" />
+        </params>
+    </item>
+    <item name="mportal_fake" effect="portal" size="60" properties="stayin,magic_portal_fake" light="4" pak="" />
+    <item name="portal_biome" effect="portal_orange" size="60" properties="magic,magic_portal_biome,time=-1,use_mana=0,radius=1" light="4" pak="">
+        <params>
+            <param name="waiting" value="portal_waiting" />
+            <param name="waiting_ani" value="animation" />
+        </params>
+    </item>
+    <item name="portal_biome_green" effect="portal_green" size="60" properties="magic,magic_portal_biome_green,time=-1,use_mana=0,radius=1" light="4" pak="">
+        <params>
+            <param name="waiting" value="portal_waiting" />
+            <param name="waiting_ani" value="animation" />
+        </params>
+    </item>
+    <item name="mlight" effect="spell_light" size="60" properties="magic,magic_light,time=180,radius=1,use_mana=1" light="4" pak="" />
+    <!--time-время жизни, radius-макс. расстояние от исследоной территории-->
+    <item name="mforest" effect="spell_forest" size="60" properties="magic,magic_forest,count=5,range=2-4,use_mana=4" light="4" pak="" />
+    <item name="mcompas" effect="compas" effect_scale="0.5" properties="magic,magic_compas,time=180,use_mana=10" light="4" pak="">
+        <params>
+            <param name="arrow" value="gfx/ui/extra/compas_arrow" />
+            <param name="arrow_scale" value="0.5" />
+        </params>
+    </item>
+    <item name="mhorn" layout="extra_horn" size="80" align="down" properties="magic,magic_horn,time=180,use_mana=0,create_sound=horn" pak="" />
+    <item name="mimp" effect="spell_imps" size="60" properties="magic,magic_imp,use_mana=3,count=10,max_count=20" light="4" pak="" />
+    <item name="god_forest" size="60" properties="magic_forest,count=5,range=2-4" pak="" />
+    <!--взрывается нанося повреждения 90% (healt) от жизни скелета в радиусе 2 (radius) блоков от цели нескольким (не более 5, count) недружественным юнитам (монстрам, зверям creature).-->
+    <item name="mfireball" effect="spell_fireball_tail" size="120" properties="magic,magic_fireball,healt=-1.8,radius=2,count=5,creature=workers_enemies,use_mana=5" pak="">
+        <params>
+            <param name="effect_done" value="spell_fireball" />
+            <param name="sound_done" value="fireball_explode" />
+            <param name="sound_cast" value="fireball" />
+        </params>
+    </item>
+    <!--<item name="mfireball" effect="spell_ice_arrow_tail" size="120" properties="magic,magic_fireball,healt=-1.8,radius=2,count=5,creature=creature,use_mana=5"/>-->
+    <item name="mspark" properties="magic,magic_spark,healt=-0.3,creature=workers_enemies" pak="" />
+    <item name="micearrow" effect="spell_ice_arrow_tail" properties="magic,magic_icearrow,radius=2,count=5,creature=workers_enemies,healt=15,use_mana=5,speed=0,time=5" pak="">
+        <params>
+            <param name="effect_done" value="spell_ice_arrow" />
+            <param name="effect_frozen" value="ice_block" />
+            <param name="sound_done" value="snow_magic" />
+            <param name="sound_cast" value="" />
+        </params>
+    </item>
+    <item name="mtransform" effect="spell_transform" size="60" properties="magic,magic_transform,healt=6,creature=monster,radius=2" light="4" pak="">
+        <params>
+            <param name="dest_creature" value="slug" />
+        </params>
+    </item>
+    <item name="mrain" properties="magic,magic_rain,use_mana=3" pak="" />
+    <item name="mcollect" effect="spell_res" properties="magic,magic_collect,use_mana=3,time=6,radius=5" light="4" pak="" />
+    <item name="mexplosion" properties="magic,magic_explosion,use_mana=20,radius=2,attack=10" light="6" pak="" />
+    <item name="dragon_fire" effect="spell_fireball_tail" size="120" properties="magic_fireball,healt=-0.1,radius=2,count=5,creature=worker|tesla_tower|arrow_tower" pak="">
+        <params>
+            <param name="effect_done" value="spell_fireball" />
+            <param name="sound_done" value="fireball_explode" />
+            <param name="sound_cast" value="fireball" />
+        </params>
+    </item>
+    <item name="dragon_fire1" effect="spell_fireball_tail" size="120" properties="magic_fireball,healt=-0.5,radius=2,count=5,creature=worker|tesla_tower|arrow_tower" pak="">
+        <params>
+            <param name="effect_done" value="spell_fireball" />
+            <param name="sound_done" value="fireball_explode" />
+            <param name="sound_cast" value="fireball" />
+        </params>
+    </item>
+    <item name="queen_fire" effect="mother_strike_tail" size="120" properties="magic_fireball,healt=-0.5,radius=2,count=5,crash_blocks,creature=worker|tesla_tower|arrow_tower" pak="">
+        <params>
+            <param name="effect_done" value="mother_strike_expl" />
+            <param name="sound_done" value="fireball_explode" />
+            <param name="sound_cast" value="fireball" />
+        </params>
+    </item>
+    <item name="vampire_fire" effect="spell_fireball_tail" size="120" properties="magic_fireball,healt=-1,radius=2,count=5,creature=worker|tesla_tower|arrow_tower" pak="">
+        <params>
+            <param name="effect_done" value="spell_fireball" />
+            <param name="sound_done" value="fireball_explode" />
+            <param name="sound_cast" value="fireball" />
+        </params>
+    </item>
+    <item name="vampire_spark" properties="magic_spark,healt=-2,creature=worker|tesla_tower|arrow_tower" pak="" />
+    <item name="shaman_fire" effect="spell_fireball_tail" size="120" properties="magic_fireball,healt=-1,radius=2,count=5,crash_blocks,creature=worker|tesla_tower|arrow_tower|animal" pak="">
+        <params>
+            <param name="effect_done" value="spell_fireball" />
+            <param name="sound_done" value="fireball_explode" />
+            <param name="sound_cast" value="fireball" />
+        </params>
+    </item>
+    <item name="parcel" properties="parcel,scale_xaxis,draw_align=down,scale=0.7" size="50" >
+        <images>
+            <image file="gfx\level_tiles\map_obj\package_gift" />
+            <image file="gfx\level_tiles\map_obj\package_parachute" />
+        </images>
+    </item>
+    <item name="parcel_mp" properties="parcel,scale_xaxis,draw_align=down,scale=0.7" size="50">
+        <images>
+            <image file="gfx\level_tiles\map_obj\package_multiplayer" />
+            <image file="gfx\level_tiles\map_obj\package_parachute" />
+        </images>
+    </item>
+    <item name="parcel_halloween" properties="parcel,scale_xaxis,draw_align=down,scale=0.7" size="50">
+        <images>
+            <image file="gfx\level_tiles\map_obj\package_halloween" />
+            <image file="gfx\level_tiles\map_obj\package_parachute" />
+        </images>
+        <params>
+            <param name="parachute_spine" value="parcel_parachute" />
+            <param name="parachute_idle" value="main" />
+            <param name="parachute_land" value="landing" />
+        </params>
+    </item>
+    <item name="beetle_nest" spine="spider_nest" spine_ani="animation" properties="animated_entity" pak="" />
+    <item name="dragon_egg" spine="dragon_egg" properties="dragon_egg,time=600,can_fall,removable" pak="">
+        <params>
+            <param name="stage1" value="first_stage" />
+            <param name="stage2" value="second_stage" />
+            <param name="stage3" value="third_stage" />
+        </params>
+    </item>
+    <item name="tornado" properties="tornado,time=2,sound=tornado" pak="">
+        <images>
+            <image file="gfx\level_tiles\weather\torn1" />
+            <image file="gfx\level_tiles\weather\torn2" />
+            <image file="gfx\level_tiles\weather\torn3" />
+            <!--<image file="gfx\level_tiles\weather\tornado"/>-->
+        </images>
+    </item>
+    <item name="animal_trap" spine="animal_trap" spine_ani="closed" size="1.00,1.00" align="down" properties="animal_trap,removable,can_fall,count=3" offsety="0">
+        <params>
+            <param name="open" value="main" />
+            <param name="closed" value="closed" />
+            <param name="closing" value="closing" />
+            <param name="opening" value="opening" />
+        </params>
+        <images>
+            <image file="gfx\Spine\buildings\animal_trap\animal_trap_prev" />
+        </images>
+    </item>
+    <item name="biome1_crystal" spine="biome1_crystal" spine_ani="" size="300" align="down" offsety="0" nodigunder="true" light="3" properties="biome1_crystal,nodig_under=3,dead_radius_x=5,dead_radius_y=8,destructable,healt=100" pak="">
+        <params>
+            <param name="idle" value="idle_01" />
+            <param name="damage1_idle" value="idle_02" />
+            <param name="damage2_idle" value="idle_03" />
+            <param name="damage1" value="damage_01" />
+            <param name="damage2" value="damage_02" />
+            <param name="death" value="death" />
+            <param name="death_idle" value="death_idle" />
+            <param name="earthquake_event" value="earthquake" />
+            <param name="prize_event" value="prize" />
+            <param name="back_effect" value="cryst_smoke" />
+            <param name="back_effect_bone" value="cryst" />
+        </params>
+    </item>
+    <item name="elf_ice_tower" spine="elf_ice_tower" spine_ani="" size="60,120" align="down" offsety="0" properties="stay_tower,destructable,healt=10,nodig_under=3,dead_radius=3" tags="enemy_priority" pak="">
+        <params>
+            <param name="idle" value="idle" />
+            <param name="on_attack" value="damage" />
+            <param name="death" value="death" />
+            <param name="death_idle" value="death_idle" />
+        </params>
+    </item>
+    <item name="elf_ice_tent" spine="elf_ice_tent" spine_ani="" size="180,60" align="down" offsety="0" properties="std_building,destructable,healt=30,nodig_under=3,dead_radius=3" pak="">
+        <params>
+            <param name="idle" value="idle" />
+            <param name="on_attack" value="damage" />
+            <param name="death" value="death" />
+            <param name="random_skin" value="skin_01,skin_02" />
+        </params>
+    </item>
+    <item name="soul_keep" file="gfx\level_tiles\craft_obj\soul_keep" spine="soul_keep" spine_ani="idle" size="180,240" align="down" properties="soul_keep,msg_controlled,removable,nodig_under=3,dead_radius=3" light="4" pak="">
+        <params>
+            <param name="states" value="idle,alive-idle" />
+            <param name="idle" value="idle" />
+            <param name="alive" value="dwarf_alive" />
+        </params>
+    </item>
+    <item name="boost_chest" file="" spine="boost_chest" spine_ani="locked" size="60" align="down" properties="boost_chest,chest,removable" pak="">
+        <params>
+            <param name="closed" value="locked" />
+            <param name="opening" value="unlock" />
+            <param name="open" value="unlocked" />
+            <param name="on_attack" value="cut_01" />
+        </params>
+    </item>
+    <item name="goblin_chest" file="" spine="goblin_chest" spine_ani="locked" size="60" align="down" properties="biome_main_chest,chest,removable,healt=60" light="3" pak="">
+        <params>
+            <param name="closed" value="locked" />
+            <param name="opening" value="unlock" />
+            <param name="open" value="unlocked" />
+            <param name="on_attack" value="cut_01" />
+        </params>
+    </item>
+    <item name="chest_lev1_coop" spine="tomb_chest" spine_ani="locked" size="300" align="down" properties="biome_main_chest,chest,removable,healt=60" light="3" pak="">
+        <params>
+            <param name="closed" value="locked" />
+            <param name="opening" value="unlock" />
+            <param name="open" value="unlocked" />
+            <param name="on_attack" value="cut_01" />
+        </params>
+    </item>
+    <item name="knight_throne" layout="extra_knight_throne" file="gfx\level_tiles\map_obj\knight_throne" size="300" align="down" properties="color" light="3" pak="" />
+    <item name="goblin_horn" file="" spine="goblin_horn" spine_ani="idle_01" size="60" align="down" properties="goblin_horn,msg_controlled_v2" light="3" pak="">
+        <states>
+            <state name="idle" loop="true" ani="idle_01-5,idle_02-1" />
+            <state name="action" loop="false" next_state="idle" ani="action" />
+        </states>
+        <sounds>
+            <sound play="horn_deep" on_event="horn_on" />
+        </sounds>
+    </item>
+    <item name="dwarf_ghost" file="" spine="dwarf_spirit" spine_ani="" size="60" align="down" properties="dwarf_spirit" pak="">
+        <states>
+            <state name="arrive" loop="false" ani="arrive" next_state="fly" />
+            <state name="fly" loop="true" ani="fly" />
+        </states>
+        <!-- <params>
+        <param name="arrive" value="arrive"/>
+        <param name="fly" value="fly"/>
+      </params> -->
+    </item>
+    <item name="long_banner" file="gfx\Spine\environment\long_banner\cotton" spine="long_banner" spine_ani="idle" size="60" align="down" properties="" pak="" />
+    <item name="wall_hole" file="gfx\level_tiles\map_obj\wall_hole" size="180" align="down" properties="" pak="" />
+    <item name="beetle_egg" spine="beetle_egg" spine_ani="arrive" properties="beetle_egg,can_fall,healt=10" pak="">
+        <states>
+            <state name="arrive" loop="false" ani="first_stage" next_state="stage1" />
+            <state name="stage1" loop="true" ani="fase_01" />
+            <state name="stage2" loop="true" ani="fase_02" />
+            <state name="stage3" loop="true" ani="fase_03" />
+            <state name="stage4" loop="true" ani="fase_04" />
+            <state name="hatch" loop="false" ani="expl" next_state="off" />
+            <state name="off" loop="true" ani="off" />
+        </states>
+    </item>
+    <item name="worker_ladder" file="" size="60" align="down" draw_to_chunks="true" properties="crash_time=5-8,stayon,stayin,ladder,need_to_stay" pak="">
+        <images>
+            <image file="gfx\level_tiles\craft_constructions\portable_ladder_top" />
+            <image file="gfx\level_tiles\craft_constructions\portable_ladder_trunk" />
+            <image file="gfx\level_tiles\craft_constructions\portable_ladder_buttom" />
+        </images>
+    </item>
+    <item name="basilisk_pet_house" spine="basilisk_house" spine_ani="house_raptor_signboard_and_cloth" size="60" align="down" properties="pet_house,removable,nodig_under=2,dead_radius_x=2,dead_radius_y=1" pak="">
+        <states>
+            <state name="idle" loop="true" ani="house_raptor_signboard_and_cloth" />
+            <state name="empty" loop="true" ani="house_raptor_signboard_and_cloth" />
+        </states>
+        <params>
+            <param name="creature" value="basilisk_pet" />
+        </params>
+    </item>
+    <item name="cat_pet_house" spine="cat_house" spine_ani="house_cat_signboard" size="60" align="down" properties="pet_house,removable,nodig_under=2,dead_radius_x=2,dead_radius_y=1" pak="">
+        <states>
+            <state name="idle" loop="true" ani="house_cat_signboard" />
+            <state name="empty" loop="true" ani="house_cat_signboard" />
+        </states>
+        <params>
+            <param name="creature" value="catowl_pet" />
+        </params>
+    </item>
+    <item name="crip_cat_pet_house" spine="catowl_skeleton_house" spine_ani="idle_catowl_live" size="60" align="down" properties="pet_house,removable,nodig_under=2,dead_radius_x=2,dead_radius_y=1" pak="">
+        <states>
+            <state name="idle" loop="true" ani="idle_catowl_live" />
+            <state name="empty" loop="true" ani="idle_catowl_dead" />
+        </states>
+        <params>
+            <param name="creature" value="crip_catowl_pet" />
+        </params>
+    </item>
+    <item name="wine_barrel_dlc" spine="wine" spine_ani="process" size="60" align="down" properties="wine_barrel,time=300-900,count=30,removable,nodig_under=1,dead_radius_x=1,dead_radius_y=1" pak="">
+        <states>
+            <state name="idle" loop="false" ani="process" next_state="drop" />
+            <state name="drop" loop="false" ani="drop" next_state="idle" />
+            <state name="death" loop="false" ani="death" next_state="death_idle" />
+            <state name="death_idle" loop="true" ani="death_idle" />
+        </states>
+    </item>
+    <item name="catapult_tower" spine="catapult" spine_ani="idle" properties="catapult_tower,removable,healt=20,radius=5,radius2=20,count=3,time=2,lost=0.33,nodig_under=2,can_fall,dead_radius_x=2,dead_radius_y=2,server_entity" size="1.00,1.00" offsety="0">
+        <params>
+            <param name="core_slot" value="core" />
+            <param name="charge_event" value="core_on" />
+            <param name="attack_event" value="core_off" />
+        </params>
+        <states>
+            <state name="idle" loop="true" ani="idle" next_state="" />
+            <state name="attack" loop="false" ani="attack" next_state="idle" />
+            <state name="death" loop="false" ani="dead" next_state="" />
+        </states>
+    </item>
+    <item name="catapult_ball" spine="core" spine_ani="fly" size="60" properties="magic_fireball,healt=-1,radius=2,count=5,creature=monster,shake" pak="">
+        <params>
+            <param name="effect_done" value="catapult_strike_01" />
+            <param name="sound_done" value="catapult_hit" />
+            <param name="ani_done" value="hit" />
+            <param name="sound_offset" value="0" />
+        </params>
+    </item>
+    <item name="catapult_ball_fake" spine="core" spine_ani="fly" size="60" properties="magic_fireball,shake" pak="">
+        <params>
+            <param name="effect_done" value="catapult_strike_01" />
+            <param name="sound_done" value="catapult_hit" />
+            <param name="ani_done" value="hit" />
+            <param name="sound_offset" value="0" />
+        </params>
+    </item>
+    <item name="beholder_fire" effect="spell_fireball_tail" size="120" properties="magic_fireball,healt=-0.3,radius=2,count=5,creature=worker|tesla_tower|arrow_tower" pak="">
+        <params>
+            <param name="effect_done" value="spell_fireball" />
+            <param name="sound_done" value="fireball_explode" />
+            <param name="sound_cast" value="fireball" />
+        </params>
+    </item>
+    <item name="prison_door" file="gfx\level_tiles\map_obj\Ancient_rooms\prison_door" spine="room_door" spine_ani="closed" spine_skin="" size="60" align="down" offsety="0" properties="prison_door,nodig_under=1,dead_radius_x=1,dead_radius_y=2,no_dig_x=1,no_dig_y=1,healt=100" pak="">
+        <states>
+            <state name="closed" loop="true" ani="closed" />
+            <state name="open" loop="false" ani="open" next_state="opened" />
+            <state name="opened" loop="true" ani="opened" />
+        </states>
+        <params>
+            <!--<param name="drop" value="regen_ring1,regen_ring2,regen_ring3,skills_ring1,skills_ring2,skills_ring3,undead_amulet1,undead_amulet2,undead_amulet3,miner_amulet1,miner_amulet2,miner_amulet3"/>-->
+            <param name="drop" value="rune1,rune2,rune3,rune4,rune5,rune6" />
+            <param name="baseChance" value="5" />
+            <param name="crash_drop" value="stone-5|10,iron-4|6" />
+        </params>
+    </item>
+    <item name="spawn_cube" file="" spine="spawn_cube" spine_ani="off" spine_skin="" size="60" align="down" offsety="0" properties="spawn_cube,nodig_under=1,dead_radius_x=1,dead_radius_y=2,count=20,staging,no_user_identity,user_entity,crash_after_fall,can_fall,user_color_slot=front_glow|front_unglow,server_entity" pak="">
+        <states>
+            <state name="idle" loop="true" ani="off" />
+            <state name="spawn" loop="false" ani="off_to_on" next_state="_active" />
+            <state name="_active" loop="false" ani="on_1,on_2" next_state="_stop" />
+            <state name="_stop" loop="false" ani="on_to_off" next_state="idle" />
+        </states>
+    </item>
+    <!--<item name="spawn_cube_portal" effect="portal_red" size="120" properties="exclude_editor,remove_after_load" light="5" light_intensity="0.7" />-->
+    <item name="greate_portal" file="" spine="greate_portal" spine_ani="disable" spine_skin="basic_portal" size="60" align="down" offsety="0" light="5" properties="greate_portal,sound=portal,nodig_under=6,dead_radius_x=5,dead_radius_y=8" pak="">
+        <states>
+            <state name="_disable" loop="true" ani="disable" />
+            <state name="disable_to_idle" loop="false" ani="disable_to_idle" next_state="idle" />
+            <state name="idle" loop="true" ani="idle" />
+            <state name="finish" loop="false" ani="finish" next_state="idle" />
+        </states>
+    </item>
+    <item name="portal_shard" file="" spine="portal_shard" spine_ani="idle" spine_skin="" size="60" offsety="0" properties="portal_shard" pak="">
+        <states>
+            <state name="idle" loop="true" ani="idle" />
+            <state name="activate" loop="false" ani="activate" next_state="_remove" />
+            <state name="_remove" loop="false" ani="" />
+        </states>
+    </item>
+    <item name="achive_pennant" file="" spine="achive_pennant" spine_ani="animation" size="60" offsety="0" properties="achievement,removable,user_color_slot=color,show_title_tooltip" pak="" />
+    <item name="mana_generator" spine="mana_generator" spine_ani="idle" size="60" offsety="0" properties="mana_generator,removable,nodig_under=2,dead_radius_x=2,dead_radius_y=2,use_mana=1,radius=5,time=0.76,color=130|255|255" pak="">
+        <states>
+            <state name="idle" loop="false" ani="idle" next_state="idle" />
+        </states>
+        <sounds>
+            <sound play="pump_up" on_event="PumpUp" />
+            <sound play="pump_down" on_event="PumpDown" />
+        </sounds>
+    </item>
+    <item name="mana_expander" spine="mana_expander" spine_ani="idle" size="60" offsety="0" properties="mana_expander=20,removable,nodig_under=1,dead_radius_x=1,dead_radius_y=1,random_time" pak="">
+        <sounds>
+            <sound play="bubbles" on_event="Bubbles" />
+        </sounds>
+    </item>
+    <item name="static_portal" file="gfx\level_tiles\shop_obj\portal" spine="static_portal" spine_ani="on" size="60" offsety="0" properties="static_portal,removable,nodig_under=2,dead_radius_x=2,dead_radius_y=2,use_mana=1,server_entity" pak="">
+        <params>
+            <param name="sound_on" value="gate_on" />
+            <param name="sound_off" value="gate_off" />
+            <param name="use_mana" value="1" />
+            <param name="effect_portal_entity" value="mportal_s" />
+        </params>
+        <states>
+            <state name="off_idle" loop="true" ani="off" next_state="" />
+            <state name="on" loop="false" ani="off_to_on" next_state="on_idle" />
+            <state name="on_idle" loop="false" ani="on" next_state="on_idle" />
+            <state name="off" loop="false" ani="on_to_off" next_state="off_idle" />
+        </states>
+        <images>
+            <image file="gfx\level_tiles\shop_obj\portal" />
+        </images>
+    </item>
+    <item name="mportal_s" effect="portal" layout="extra_portal" size="80" align="down" properties="magic,magic_portal,radius=1,stayin,time=-1" light="4" pak="" />
+    <item name="warrior_training" spine="warrior_training_front" spine_ani="idle" size="180" offsety="0" properties="training_device,can_move,skill=swordsman,speed=1,radius=1.1,removable,efficiency=3,dead_radius_x=2,dead_radius_y=1,draw_full_build_preview,nodig_under=2б,count=3" pak="">
+        <params>
+            <param name="bg_spine" value="warrior_training_back" />
+        </params>
+        <states>
+            <state name="idle" loop="true" ani="idle" next_state="" />
+            <state name="hit" loop="false" ani="cut" next_state="idle" />
+            <state name="walk" loop="true" ani="walk" next_state="" />
+        </states>
+    </item>
+    <item name="warrior_training_simple" spine="warrior_training" spine_ani="idle_01" spine_skin="" size="180" offsety="0" properties="training_device,skill=swordsman,removable,nodig_under=1,count=1" pak="">
+        <states>
+            <state name="idle" loop="true" ani="idle_01" />
+            <state name="hit" loop="false" ani="cut" next_state="idle" />
+        </states>
+    </item>
+    <item name="archer_training" spine="acher_training_front" spine_ani="idle_down" spine_skin="" size="180" offsety="0" properties="training_device,can_move,skill=archer,can_updown,speed=1,radius=1.1,removable,efficiency=3,dead_radius=2,draw_full_build_preview,nodig_under=2,count=3" pak="">
+        <states>
+            <state name="idle_down" loop="true" ani="idle_down" />
+            <state name="idle_up" loop="true" ani="idle_up" />
+            <state name="hit_up" loop="false" ani="cut_up" next_state="idle_up" />
+            <state name="hit_down" loop="false" ani="cut_down" next_state="idle_down" />
+            <state name="up" loop="false" ani="up" next_state="idle_up" />
+            <state name="down" loop="false" ani="down" next_state="idle_down" />
+            <state name="walk" loop="true" ani="walk" />
+        </states>
+        <params>
+            <param name="bg_spine" value="archer_training_back" />
+            <param name="target_bone" value="axis" />
+        </params>
+    </item>
+    <item name="archer_training_simple" spine="archer_training" spine_ani="idle" spine_skin="" size="180" offsety="0" properties="training_device,skill=archer,removable,nodig_under=1,count=1" pak="">
+        <states>
+            <state name="idle" loop="true" ani="idle" />
+            <state name="hit" loop="false" ani="cut" next_state="idle" />
+        </states>
+    </item>
+    <item name="mana_pylon" spine="mana_pylon" spine_ani="idle" size="180" offsety="0" properties="msg_controlled_v2,reset_mana_drain,removable" light="3" pak="">
+        <states>
+            <state name="on" loop="false" ani="activation" next_state="idle" />
+            <state name="idle" loop="true" ani="idle" next_state="" />
+        </states>
+    </item>
+    <item name="magician_training" spine="magician_training2" spine_ani="idle_down" spine_skin="" size="180" offsety="0" properties="training_device,can_move,skill=mage,can_updown,speed=1,radius=1.1,removable,efficiency=3,dead_radius=2,draw_full_build_preview,nodig_under=2,count=3" pak="">
+        <states>
+            <state name="idle_down" loop="true" ani="idle_down" />
+            <state name="idle_up" loop="true" ani="idle_up" />
+            <state name="hit_up" loop="false" ani="cut_up" next_state="idle_up" />
+            <state name="hit_down" loop="false" ani="cut_down" next_state="idle_down" />
+            <state name="up" loop="false" ani="up" next_state="idle_up" />
+            <state name="down" loop="false" ani="down" next_state="idle_down" />
+            <state name="walk" loop="true" ani="walk" />
+        </states>
+        <params>
+            <param name="bg_spine" value="magician_training2_back" />
+            <param name="target_bone" value="upper" />
+        </params>
+    </item>
+    <item name="magician_training_simple" spine="magician_training" spine_ani="idle" spine_skin="" size="180" offsety="0" properties="training_device,skill=mage,removable,nodig_under=1,count=1" pak="">
+        <states>
+            <state name="idle" loop="true" ani="idle" />
+            <state name="hit" loop="false" ani="cut" next_state="idle" />
+        </states>
+        <params>
+            <param name="target_bone" value="axis" />
+        </params>
+    </item>
+    <item name="ancient_door" file="gfx\level_tiles\map_obj\Ancient_rooms\prison_door" spine="rune_door" spine_ani="closed" spine_skin="" size="60" align="down" offsety="0" properties="ancient_door,nodig_under=1,dead_radius_x=1,dead_radius_y=2,no_dig_x=1,no_dig_y=1,healt=100" pak="">
+        <states>
+            <state name="closed" loop="true" ani="closed" />
+            <state name="open" loop="false" ani="open" next_state="opened" />
+            <state name="opened" loop="true" ani="opened" />
+        </states>
+        <params>
+            <param name="drop" value="regen_ring1,regen_ring2,regen_ring3,skills_ring1,skills_ring2,skills_ring3,undead_amulet1,undead_amulet2,undead_amulet3,miner_amulet1,miner_amulet2,miner_amulet3" />
+            <param name="baseChance" value="20" />
+            <param name="crash_drop" value="stone-5|10,iron-4|6" />
+            <param name="runes" value="rune1,rune2,rune3,rune4,rune5,rune6" />
+        </params>
+    </item>
+    <item name="new_year_tree" spine="new_year_tree" spine_ani="idle" size="180" offsety="0" properties="new_year_tree,removable,nodig_under=2,dead_radius_x=2,dead_radius_y=3" light="1" light_intensity="0.5" pak="" />
+    <item name="fireworks" spine="fireworks" spine_ani="idle" size="180" offsety="0" properties="fireworks,removable,count=5,can_fall" pak="">
+        <states>
+            <state name="idle" loop="true" ani="idle" />
+            <state name="action" loop="false" ani="action" next_state="end" />
+            <state name="end" loop="true" ani="end" />
+        </states>
+        <params>
+            <param name="bone_prefix" value="fireworks" />
+            <param name="event" value="attack" />
+            <param name="distance" value="8" />
+            <param name="fly_time" value="0.5" />
+            <param name="explode_duration" value="5" />
+            <param name="light_curve" value="0,0.2,1,0.7,0.5,0.2,0" />
+            <param name="sparks" value="fireworks_spark1,fireworks_spark2,fireworks_spark3,fireworks_spark4" />
+            <param name="sound_shot" value="fireworks_shot" />
+            <param name="sound_spark" value="fireworks_spark" />
+        </params>
+    </item>
+    <item name="fireworks_spark1" effect="finish_firework2" properties="radius=6" pak="" />
+    <item name="fireworks_spark2" effect="finish_firework3" properties="radius=6" pak="" />
+    <item name="fireworks_spark3" effect="finish_firework4" properties="radius=6" pak="" />
+    <item name="fireworks_spark4" effect="finish_firework5" properties="radius=6" pak="" />
+    <item name="temples" spine="temples" spine_ani="deactivated" spine_skin="ground" size="180" offsety="0" properties="temple,nodig_under=2,dead_radius_x=2,dead_radius_y=3" light="3" light_intensity="0.6" pak="">
+        <states>
+            <state name="disabled" loop="true" ani="deactivated" />
+            <state name="activate" loop="false" ani="activation" next_state="active" />
+            <state name="active" loop="true" ani="activated" />
+        </states>
+        <params>
+            <param name="air" value="air" />
+            <param name="fire" value="fire" />
+            <param name="ground" value="ground" />
+            <param name="water" value="water" />
+        </params>
+    </item>
+</root>

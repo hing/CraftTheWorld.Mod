@@ -1,0 +1,7 @@
+<root>
+    <radius value="2" />
+    <color value="1|0.3|0.01|0.2"/>
+    <on_mouse_hover value="true"/>
+    <filled value="true"/>
+    <draw_circle value="false"/>
+</root>

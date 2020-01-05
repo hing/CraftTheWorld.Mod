@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!--{"cold", "any", "any", "1_coldAA"},
+  {"normal", "low", "plain,hills", "2_dry_plate"},
+  {"normal", "low", "mountains", "3_dry_mountains"},
+  {"normal", "normal,high", "any", "4_wet"},
+  {"hot", "low,normal", "plain,hills", "5_hot"},
+  {"hot", "high", "mountains", "6_hot_wet_mountains"}-->
+
+  <!--temp - температура, hum - влажность, topo - ландшафт-->
+  
+  <ico temp="cold" hum="any" topo="any" file="1_coldAA" />
+  <ico temp="hot,normal" hum="low" topo="plain,hills" file="2_dry_plate" />
+  <ico temp="normal" hum="low" topo="mountains" file="3_dry_mountains" />
+  <ico temp="normal" hum="normal,high" topo="any" file="4_wet" />
+  <ico temp="hot" hum="normal" topo="plain,hills" file="5_hot" />
+  <ico temp="hot" hum="high" topo="mountains" file="6_hot_wet_mountains" />
+  <ico temp="any" hum="any" topo="any" planet="dlc_temples" file="7_china" />
+  <ico temp="any" hum="any" topo="any" planet="lonely_mountain" file="8_Highland" />
+</root>

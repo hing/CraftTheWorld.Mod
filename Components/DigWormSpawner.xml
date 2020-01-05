@@ -1,0 +1,9 @@
+<root>
+    <spawn_period value="5"/>
+    <required_level value="6"/>
+    <neighbour_distance value="40"/>
+    <warehouse_distance value="30"/>
+    <depth value="20"/>
+    <max_population value="3"/>
+    <sound value="dig_worm_spawn"/>
+</root>

@@ -1,0 +1,8 @@
+<root>
+    <population>
+        <monster value="orc_mountain_warrior" weight="10"/>
+        <monster value="orc_mountain_archer" weight="7"/>
+        <monster value="goblin_mountain_worker" weight="15"/>
+        <monster value="troll" weight="1" count="1"/>
+    </population>
+</root>

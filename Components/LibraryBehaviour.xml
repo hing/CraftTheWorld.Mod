@@ -1,0 +1,13 @@
+<root>
+    <GameObjectName value="LibraryBehaviour"/>
+    <technologies>
+        <library_craft level="4" step="10" resource="tech_book_craft"/>
+        <library_healt level="6" step="5" resource="tech_book_health"/>
+        <library_mana level="8" step="10" resource="tech_book_mana"/>
+        <library_skill level="10" step="5" resource="tech_book_skills"/>
+    </technologies>
+
+    <k1 value="0.01"/>
+    <k2 value="55"/>
+    <min_progress value="0.9"/>
+</root>

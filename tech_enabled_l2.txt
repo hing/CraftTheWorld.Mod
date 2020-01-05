@@ -1,0 +1,8 @@
+basic_timber_works
+basic_iron_works
+basic_illuminating
+basic_tools_making
+basic_armouring
+basic_constructing
+basic_cooking
+basic_householding

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<root>
+    <animations>
+        <liana_grottoes_spine path="gfx/GrottoesDLC/spine/liana_grottoes_spine" json="liana_grottoes_spine.json" scale="0.400000" mirror="false" offset="0.00,-150.00">
+            <mixing all="true" />
+        </liana_grottoes_spine>
+        <elven_mage_of_nature path="gfx/GrottoesDLC/spine/elven_mage_of_nature/elfs" json="elven_mage_of_nature.json" scale="0.250000" mirror="false">
+            <mixing all="true" />
+        </elven_mage_of_nature>
+        <glowing_growth path="gfx/GrottoesDLC/spine/glowing_growth" json="glowing_growth.json" scale="0.457000" mirror="false" offset="0.00,-130.00">
+            <mixing all="true" />
+        </glowing_growth>
+        <magic_tree path="gfx/GrottoesDLC/spine/magic_tree" json="magic_tree.json" scale="0.300000" mirror="false">
+            <mixing all="true" />
+        </magic_tree>
+        <elf_magic_table path="gfx/GrottoesDLC/spine/elf_magic_table" json="elf_magic_table.json" scale="0.565000" mirror="false">
+            <mixing all="true" />
+        </elf_magic_table>
+    </animations>
+</root>

@@ -1,0 +1,14 @@
+<root>
+   <resources value="durable_shell-3|4,mucus-5|10"/>
+   <spines>
+      <spine name="spider_nest" weight="2"/>
+      <spine name="ant_queen" weight="1"/>
+   </spines>
+
+   <states>
+      <state name="idle" ani="animation" loop="true"/>
+      <state name="spawn" ani="spawn" loop="false" next="idle"/>
+      <state name="die" ani="death" loop="false"/>
+      <state name="attack" ani="attack" loop="false" next="idle"/>
+   </states>
+</root>

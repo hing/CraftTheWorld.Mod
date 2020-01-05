@@ -1,0 +1,159 @@
+<root>
+  <planets>
+    <!--Put here new lines for creating a new planets-->
+    <planet name="lonely_mountain" default="true" local="lonely_mountain_local" temp="cold" fauna="lonely_mountain" landscape="mountains" file="levels/lonely_mountain.xml" />
+  </planets>
+
+  <behaviours>
+    <lonely_mountain>
+      <behaviour value="HighlandMonstersWaveBehaviour" config="Highland/MonstersWaves.xml" saveable="true"/>
+    </lonely_mountain>
+  </behaviours>
+
+  <sizes merge="partial">
+    <small value="230,100" local="SizeSmall" exclude="underground,lonely_mountain"/>
+    <normal value="260,140" local="SizeMedium" exclude="underground,lonely_mountain"/>
+    <large value="320,160" local="SizeLarge" exclude="underground,lonely_mountain"/>
+    <large_vertical value="200,220" local="SizeLarge" exclude="lonely_mountain" include="underground"/>
+
+    <lonely_mountain value="" local="SizeLarge" include="lonely_mountain"/>
+  </sizes>
+
+  <block_replace>
+    <lonely_mountain>
+      <dirt1 to="block_stone_01"/>
+    </lonely_mountain>
+  </block_replace>
+
+  <creatures>
+    <lonely_mountain>
+      <yak bind="kozel"/>
+      <chicken bind="garklan"/>
+    </lonely_mountain>
+  </creatures>
+
+  <backgrounds>
+    <lonely_mountain>
+      <!-- name of planet -->
+      <layers>
+        <!-- standart layer for sky background-->
+        <layer fullscreen="true">
+          <day file="gfx\level_tiles\BG\sky_day"/>
+          <sunset file="gfx\level_tiles\BG\sky_sunset"/>
+          <night file="gfx\level_tiles\BG\sky_night"/>
+        </layer>
+
+        <!-- 
+        layer for background image
+          attributes:
+        offset - image offset
+        spine - spine`s json file name from path: gfx
+        -->
+        <layer repeat="true" scale="1" offset="0,20" spine="bg_plan_3" spine_size="2048,1024" parallax_ratio="0.02,0.01">
+          <anims>
+            <day anim="day"/>
+            <night anim="night"/>
+            <day_night anim="day_to_night"/>
+            <night_day anim="night_to_day"/>
+          </anims>
+        </layer>
+        <layer repeat="true" scale="1" offset="0,10" spine="bg_plan_2" spine_size="2048,1024" parallax_ratio="0.04,0.04">
+          <anims>
+            <day anim="day"/>
+            <night anim="night"/>
+            <day_night anim="day_to_night"/>
+            <night_day anim="night_to_day"/>
+          </anims>
+        </layer>
+        <layer repeat="true" scale="1" offset="0,0" spine="bg_plan_1" spine_size="2048,1024" parallax_ratio="0.11,0.11">
+          <anims>
+            <day anim="day"/>
+            <night anim="night"/>
+            <day_night anim="day_to_night"/>
+            <night_day anim="night_to_day"/>
+          </anims>
+        </layer>
+
+
+        <!-- standart layer for clouds. Can be replaced or removed -->
+        <layer velocity="5,15" type="cloud" spine="gfx/Spine/environment/backgrounds/clouds/new_hope_cloud_01.json" spine_size="334,74">
+          <anims>
+            <day anim="day"/>
+            <night anim="night"/>
+            <day_night anim="day_to_night"/>
+            <night_day anim="night_to_day"/>
+          </anims>
+        </layer>
+        <layer velocity="5,15" type="cloud" spine="gfx/Spine/environment/backgrounds/clouds/new_hope_cloud_02.json" spine_size="615,198">
+          <anims>
+            <day anim="day"/>
+            <night anim="night"/>
+            <day_night anim="day_to_night"/>
+            <night_day anim="night_to_day"/>
+          </anims>
+        </layer>
+        <layer velocity="5,15" type="cloud" spine="gfx/Spine/environment/backgrounds/clouds/new_hope_cloud_03.json" spine_size="568,157">
+          <anims>
+            <day anim="day"/>
+            <night anim="night"/>
+            <day_night anim="day_to_night"/>
+            <night_day anim="night_to_day"/>
+          </anims>
+        </layer>
+      </layers>
+    </lonely_mountain>
+  </backgrounds>
+
+  <fauna merge="partial">
+    <lonely_mountain enableAll="false">
+      <creature name="slug" enabled="true"/>
+      <creature name="yak" enabled="true"/>
+      <creature name="duck" enabled="true"/>
+      <creature name="orc_mountain_warrior" enabled="true"/>
+      <creature name="orc_mountain_archer" enabled="true"/>
+      <creature name="goblin_mountain_worker" enabled="true"/>
+      <creature name="kozel" enabled="true"/>
+      <creature name="imp" enabled="true"/>
+      <creature name="garklan" enabled="true"/>
+      <creature name="troll" enabled="true"/>
+
+      <creature name="mite" enabled="true"/>
+      <creature name="larva" enabled="true"/>
+      <creature name="black_fluffy" enabled="true"/>
+      <creature name="spider" enabled="true"/>
+      <creature name="vampire_guard" enabled="true"/>
+      <creature name="little_dragon" enabled="true"/>
+      <creature name="piranha" enabled="true"/>
+      <creature name="piranha_deep" enabled="true"/>
+      <creature name="fish_red" enabled="true"/>
+      <creature name="fish_yellow" enabled="true"/>
+      <creature name="ghost" enabled="true"/>
+      <creature name="imp" enabled="true"/>
+      <creature name="imp_cargo" enabled="true"/>
+      <creature name="rat" enabled="true"/>
+      <creature name="basilisk_pet" enabled="true"/>
+      <creature name="catowl_pet" enabled="true"/>
+      <creature name="ball_fish" enabled="true"/>
+
+      <creature name="dwarf_tick" enabled="true"/>
+      <creature name="vampire_guard" enabled="true"/>
+      <creature name="worm_dig" enabled="true"/>
+      <creature name="lurker" enabled="true"/>
+
+      <creature name="skeleton" enabled="true"/>
+      <creature name="zombie" enabled="true"/>
+      <creature name="zombie_solder" enabled="true"/>
+      <creature name="zombie_boost" enabled="true"/>
+
+    </lonely_mountain>
+  </fauna>
+  <vegetation merge="partial">
+    <lonely_mountain>
+      <item name="high_tree_pine" points="9%" height="1-5"/>
+      <item name="high_tree_black" points="9%" height="1-5"/>
+      <item name="high_tree_fir" points="5%" height="1-2"/>
+      <item name="high_bush_snow" points="4%" height="1"/>
+      <item name="high_bush_snow1" points="4%" height="1"/>
+    </lonely_mountain>
+  </vegetation>
+</root>

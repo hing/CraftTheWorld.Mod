@@ -1,0 +1,1017 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--place - расположение бордюров:
+ 1
+2 3
+ 4
+--> 
+<root>
+  <!--<border name="dirt" offset="-3,-3" align="1234" align_back="1234">
+    <files>
+      <file path="gfx/level_tiles/borders/border_ground1"/>
+      <file path="gfx/level_tiles/borders/border_ground2"/>
+    </files>
+  </border>-->
+
+  <border name="snow" >
+    <layers>
+      <layer offset="0,0" align="1" align_back="1">
+        <file path="gfx\level_tiles\tile\snow_ground\border_top"/>
+      </layer>
+      <layer offset="0,0" align="3" align_back="3">
+        <file path="gfx\level_tiles\tile\snow_ground\border_right"/>
+      </layer>
+      <layer offset="0,0" align="2" align_back="2">
+        <file path="gfx\level_tiles\tile\snow_ground\border_left"/>
+      </layer>
+      <layer offset="0,0" align="4" align_back="4">
+        <file path="gfx\level_tiles\tile\snow_ground\border_bottom"/>
+      </layer>
+
+      <layer offset="0,0" align_front="1">
+        <file path="gfx\level_tiles\tile\snow_ground\border_top_gr"/>
+      </layer>
+      <layer offset="0,0" align_front="3">
+        <file path="gfx\level_tiles\tile\snow_ground\border_right_gr"/>
+      </layer>
+      <layer offset="0,0" align_front="2">
+        <file path="gfx\level_tiles\tile\snow_ground\border_left_gr"/>
+      </layer>
+      <layer offset="0,0" align_front="4">
+        <file path="gfx\level_tiles\tile\snow_ground\border_bottom_gr"/>
+      </layer>
+    </layers>
+  </border>
+
+  <border name="ice" >
+    <layers>
+      <layer offset="0,0" align="1" align_back="1">
+        <file path="gfx\level_tiles\tile\ice_ground\border_top"/>
+      </layer>
+      <layer offset="0,0" align="3" align_back="3">
+        <file path="gfx\level_tiles\tile\ice_ground\border_right"/>
+      </layer>
+      <layer offset="0,0" align="2" align_back="2">
+        <file path="gfx\level_tiles\tile\ice_ground\border_left"/>
+      </layer>
+      <layer offset="0,0" align="4" align_back="4">
+        <file path="gfx\level_tiles\tile\ice_ground\border_bottom"/>
+      </layer>
+
+      <layer offset="0,0" align_front="1">
+        <file path="gfx\level_tiles\tile\ice_ground\border_top_gr"/>
+      </layer>
+      <layer offset="0,0" align_front="3">
+        <file path="gfx\level_tiles\tile\ice_ground\border_right_gr"/>
+      </layer>
+      <layer offset="0,0" align_front="2">
+        <file path="gfx\level_tiles\tile\ice_ground\border_left_gr"/>
+      </layer>
+      <layer offset="0,0" align_front="4">
+        <file path="gfx\level_tiles\tile\ice_ground\border_bottom_gr"/>
+      </layer>
+    </layers>
+  </border>
+
+  <border name="dirt1" >
+    <layers>
+      <layer offset="0,0" align="1" align_back="1">
+        <file path="gfx\level_tiles\tile\dirt_ground\border_top"/>
+      </layer>
+      <layer offset="0,0" align="3" align_back="3">
+        <file path="gfx\level_tiles\tile\dirt_ground\border_right"/>
+      </layer>
+      <layer offset="0,0" align="2" align_back="2">
+        <file path="gfx\level_tiles\tile\dirt_ground\border_left"/>
+      </layer>
+      <layer offset="0,0" align="4" align_back="4">
+        <file path="gfx\level_tiles\tile\dirt_ground\border_bottom"/>
+      </layer>
+
+      <layer offset="0,0" align_front="1">
+        <file path="gfx\level_tiles\tile\dirt_ground\border_top_gr"/>
+      </layer>
+      <layer offset="0,0" align_front="3">
+        <file path="gfx\level_tiles\tile\dirt_ground\border_right_gr"/>
+      </layer>
+      <layer offset="0,0" align_front="2">
+        <file path="gfx\level_tiles\tile\dirt_ground\border_left_gr"/>
+      </layer>
+      <layer offset="0,0" align_front="4">
+        <file path="gfx\level_tiles\tile\dirt_ground\border_bottom_gr"/>
+      </layer>
+    </layers>
+  </border>
+
+  <border name="dirt2" >
+    <layers>
+      <layer offset="0,0" align="1" align_back="1">
+        <file path="gfx\level_tiles\tile\dirt_ground_2\border_top"/>
+      </layer>
+      <layer offset="0,0" align="3" align_back="3">
+        <file path="gfx\level_tiles\tile\dirt_ground_2\border_right"/>
+      </layer>
+      <layer offset="0,0" align="2" align_back="2">
+        <file path="gfx\level_tiles\tile\dirt_ground_2\border_left"/>
+      </layer>
+      <layer offset="0,0" align="4" align_back="4">
+        <file path="gfx\level_tiles\tile\dirt_ground_2\border_bottom"/>
+      </layer>
+
+      <layer offset="0,0" align_front="1">
+        <file path="gfx\level_tiles\tile\dirt_ground_2\border_top_gr"/>
+      </layer>
+      <layer offset="0,0" align_front="3">
+        <file path="gfx\level_tiles\tile\dirt_ground_2\border_right_gr"/>
+      </layer>
+      <layer offset="0,0" align_front="2">
+        <file path="gfx\level_tiles\tile\dirt_ground_2\border_left_gr"/>
+      </layer>
+      <layer offset="0,0" align_front="4">
+        <file path="gfx\level_tiles\tile\dirt_ground_2\border_bottom_gr"/>
+      </layer>
+    </layers>
+  </border>
+
+  <border name="dirt3" >
+    <layers>
+      <layer offset="0,0" align="1" align_back="1">
+        <file path="gfx\level_tiles\tile\dirt_ground_3\border_top"/>
+      </layer>
+      <layer offset="0,0" align="3" align_back="3">
+        <file path="gfx\level_tiles\tile\dirt_ground_3\border_right"/>
+      </layer>
+      <layer offset="0,0" align="2" align_back="2">
+        <file path="gfx\level_tiles\tile\dirt_ground_3\border_left"/>
+      </layer>
+      <layer offset="0,0" align="4" align_back="4">
+        <file path="gfx\level_tiles\tile\dirt_ground_3\border_bottom"/>
+      </layer>
+
+      <layer offset="0,0" align_front="1">
+        <file path="gfx\level_tiles\tile\dirt_ground_3\border_top_gr"/>
+      </layer>
+      <layer offset="0,0" align_front="3">
+        <file path="gfx\level_tiles\tile\dirt_ground_3\border_right_gr"/>
+      </layer>
+      <layer offset="0,0" align_front="2">
+        <file path="gfx\level_tiles\tile\dirt_ground_3\border_left_gr"/>
+      </layer>
+      <layer offset="0,0" align_front="4">
+        <file path="gfx\level_tiles\tile\dirt_ground_3\border_bottom_gr"/>
+      </layer>
+    </layers>
+  </border>
+
+  <border name="dirt4" >
+    <layers>
+      <layer offset="0,0" align="1" align_back="1">
+        <file path="gfx\level_tiles\tile\dirt_ground_4\border_top"/>
+      </layer>
+      <layer offset="0,0" align="3" align_back="3">
+        <file path="gfx\level_tiles\tile\dirt_ground_4\border_right"/>
+      </layer>
+      <layer offset="0,0" align="2" align_back="2">
+        <file path="gfx\level_tiles\tile\dirt_ground_4\border_left"/>
+      </layer>
+      <layer offset="0,0" align="4" align_back="4">
+        <file path="gfx\level_tiles\tile\dirt_ground_4\border_bottom"/>
+      </layer>
+
+      <layer offset="0,0" align_front="1">
+        <file path="gfx\level_tiles\tile\dirt_ground_4\border_top_gr"/>
+      </layer>
+      <layer offset="0,0" align_front="3">
+        <file path="gfx\level_tiles\tile\dirt_ground_4\border_right_gr"/>
+      </layer>
+      <layer offset="0,0" align_front="2">
+        <file path="gfx\level_tiles\tile\dirt_ground_4\border_left_gr"/>
+      </layer>
+      <layer offset="0,0" align_front="4">
+        <file path="gfx\level_tiles\tile\dirt_ground_4\border_bottom_gr"/>
+      </layer>
+    </layers>
+  </border>
+
+  <border name="dirt5" >
+    <layers>
+      <layer offset="0,0" align="1" align_back="1">
+        <file path="gfx\level_tiles\tile\dirt_ground_5\border_top"/>
+      </layer>
+      <layer offset="0,0" align="3" align_back="3">
+        <file path="gfx\level_tiles\tile\dirt_ground_5\border_right"/>
+      </layer>
+      <layer offset="0,0" align="2" align_back="2">
+        <file path="gfx\level_tiles\tile\dirt_ground_5\border_left"/>
+      </layer>
+      <layer offset="0,0" align="4" align_back="4">
+        <file path="gfx\level_tiles\tile\dirt_ground_5\border_bottom"/>
+      </layer>
+
+      <layer offset="0,0" align_front="1">
+        <file path="gfx\level_tiles\tile\dirt_ground_5\border_top_gr"/>
+      </layer>
+      <layer offset="0,0" align_front="3">
+        <file path="gfx\level_tiles\tile\dirt_ground_5\border_right_gr"/>
+      </layer>
+      <layer offset="0,0" align_front="2">
+        <file path="gfx\level_tiles\tile\dirt_ground_5\border_left_gr"/>
+      </layer>
+      <layer offset="0,0" align_front="4">
+        <file path="gfx\level_tiles\tile\dirt_ground_5\border_bottom_gr"/>
+      </layer>
+    </layers>
+  </border>
+
+
+  <border name="dirt1_under" >
+    <layers>
+      <layer offset="0,0" align="1" align_back="1">
+        <file path="gfx\level_tiles\tile\dirt_underground\border_top"/>
+      </layer>
+      <layer offset="0,0" align="3" align_back="3">
+        <file path="gfx\level_tiles\tile\dirt_underground\border_right"/>
+      </layer>
+      <layer offset="0,0" align="2" align_back="2">
+        <file path="gfx\level_tiles\tile\dirt_underground\border_left"/>
+      </layer>
+      <layer offset="0,0" align="4" align_back="4">
+        <file path="gfx\level_tiles\tile\dirt_underground\border_bottom"/>
+      </layer>
+
+      <layer offset="0,0" align_front="1">
+        <file path="gfx\level_tiles\tile\dirt_underground\border_top_gr"/>
+      </layer>
+      <layer offset="0,0" align_front="3">
+        <file path="gfx\level_tiles\tile\dirt_underground\border_right_gr"/>
+      </layer>
+      <layer offset="0,0" align_front="2">
+        <file path="gfx\level_tiles\tile\dirt_underground\border_left_gr"/>
+      </layer>
+      <layer offset="0,0" align_front="4">
+        <file path="gfx\level_tiles\tile\dirt_underground\border_bottom_gr"/>
+      </layer>
+    </layers>
+  </border>
+
+  <border name="dirt2_under" >
+    <layers>
+      <layer offset="0,0" align="1" align_back="1">
+        <file path="gfx\level_tiles\tile\dirt_underground_2\border_top"/>
+      </layer>
+      <layer offset="0,0" align="3" align_back="3">
+        <file path="gfx\level_tiles\tile\dirt_underground_2\border_right"/>
+      </layer>
+      <layer offset="0,0" align="2" align_back="2">
+        <file path="gfx\level_tiles\tile\dirt_underground_2\border_left"/>
+      </layer>
+      <layer offset="0,0" align="4" align_back="4">
+        <file path="gfx\level_tiles\tile\dirt_underground_2\border_bottom"/>
+      </layer>
+
+      <layer offset="0,0" align_front="1">
+        <file path="gfx\level_tiles\tile\dirt_underground_2\border_top_gr"/>
+      </layer>
+      <layer offset="0,0" align_front="3">
+        <file path="gfx\level_tiles\tile\dirt_underground_2\border_right_gr"/>
+      </layer>
+      <layer offset="0,0" align_front="2">
+        <file path="gfx\level_tiles\tile\dirt_underground_2\border_left_gr"/>
+      </layer>
+      <layer offset="0,0" align_front="4">
+        <file path="gfx\level_tiles\tile\dirt_underground_2\border_bottom_gr"/>
+      </layer>
+    </layers>
+  </border>
+
+  <border name="dirt3_under" >
+    <layers>
+      <layer offset="0,0" align="1" align_back="1">
+        <file path="gfx\level_tiles\tile\dirt_underground_3\border_top"/>
+      </layer>
+      <layer offset="0,0" align="3" align_back="3">
+        <file path="gfx\level_tiles\tile\dirt_underground_3\border_right"/>
+      </layer>
+      <layer offset="0,0" align="2" align_back="2">
+        <file path="gfx\level_tiles\tile\dirt_underground_3\border_left"/>
+      </layer>
+      <layer offset="0,0" align="4" align_back="4">
+        <file path="gfx\level_tiles\tile\dirt_underground_3\border_bottom"/>
+      </layer>
+
+      <layer offset="0,0" align_front="1">
+        <file path="gfx\level_tiles\tile\dirt_underground_3\border_top_gr"/>
+      </layer>
+      <layer offset="0,0" align_front="3">
+        <file path="gfx\level_tiles\tile\dirt_underground_3\border_right_gr"/>
+      </layer>
+      <layer offset="0,0" align_front="2">
+        <file path="gfx\level_tiles\tile\dirt_underground_3\border_left_gr"/>
+      </layer>
+      <layer offset="0,0" align_front="4">
+        <file path="gfx\level_tiles\tile\dirt_underground_3\border_bottom_gr"/>
+      </layer>
+    </layers>
+  </border>
+
+  <border name="dirt_biome1" >
+    <layers>
+      <layer offset="0,0" align="1" align_back="1">
+        <file path="gfx\level_tiles\tile\biom_ground_1\border_top"/>
+      </layer>
+      <layer offset="0,0" align="3" align_back="3">
+        <file path="gfx\level_tiles\tile\biom_ground_1\border_right"/>
+      </layer>
+      <layer offset="0,0" align="2" align_back="2">
+        <file path="gfx\level_tiles\tile\biom_ground_1\border_left"/>
+      </layer>
+      <layer offset="0,0" align="4" align_back="4">
+        <file path="gfx\level_tiles\tile\biom_ground_1\border_bottom"/>
+      </layer>
+
+      <layer offset="0,0" align_front="1">
+        <file path="gfx\level_tiles\tile\biom_ground_1\border_top_gr"/>
+      </layer>
+      <layer offset="0,0" align_front="3">
+        <file path="gfx\level_tiles\tile\biom_ground_1\border_right_gr"/>
+      </layer>
+      <layer offset="0,0" align_front="2">
+        <file path="gfx\level_tiles\tile\biom_ground_1\border_left_gr"/>
+      </layer>
+      <layer offset="0,0" align_front="4">
+        <file path="gfx\level_tiles\tile\biom_ground_1\border_bottom_gr"/>
+      </layer>
+    </layers>
+  </border>
+  <border name="dirt_biome2" >
+    <layers>
+      <layer offset="0,0" align="1" align_back="1">
+        <file path="gfx\level_tiles\tile\biom_ground_2\border_top"/>
+      </layer>
+      <layer offset="0,0" align="3" align_back="3">
+        <file path="gfx\level_tiles\tile\biom_ground_2\border_right"/>
+      </layer>
+      <layer offset="0,0" align="2" align_back="2">
+        <file path="gfx\level_tiles\tile\biom_ground_2\border_left"/>
+      </layer>
+      <layer offset="0,0" align="4" align_back="4">
+        <file path="gfx\level_tiles\tile\biom_ground_2\border_bottom"/>
+      </layer>
+
+      <layer offset="0,0" align_front="1">
+        <file path="gfx\level_tiles\tile\biom_ground_2\border_top_gr"/>
+      </layer>
+      <layer offset="0,0" align_front="3">
+        <file path="gfx\level_tiles\tile\biom_ground_2\border_right_gr"/>
+      </layer>
+      <layer offset="0,0" align_front="2">
+        <file path="gfx\level_tiles\tile\biom_ground_2\border_left_gr"/>
+      </layer>
+      <layer offset="0,0" align_front="4">
+        <file path="gfx\level_tiles\tile\biom_ground_2\border_bottom_gr"/>
+      </layer>
+    </layers>
+  </border>
+  <border name="dirt_biome3" >
+    <layers>
+      <layer offset="0,0" align="1" align_back="1">
+        <file path="gfx\level_tiles\tile\biom_ground_3\border_top"/>
+      </layer>
+      <layer offset="0,0" align="3" align_back="3">
+        <file path="gfx\level_tiles\tile\biom_ground_3\border_right"/>
+      </layer>
+      <layer offset="0,0" align="2" align_back="2">
+        <file path="gfx\level_tiles\tile\biom_ground_3\border_left"/>
+      </layer>
+      <layer offset="0,0" align="4" align_back="4">
+        <file path="gfx\level_tiles\tile\biom_ground_3\border_bottom"/>
+      </layer>
+
+      <layer offset="0,0" align_front="1">
+        <file path="gfx\level_tiles\tile\biom_ground_3\border_top_gr"/>
+      </layer>
+      <layer offset="0,0" align_front="3">
+        <file path="gfx\level_tiles\tile\biom_ground_3\border_right_gr"/>
+      </layer>
+      <layer offset="0,0" align_front="2">
+        <file path="gfx\level_tiles\tile\biom_ground_3\border_left_gr"/>
+      </layer>
+      <layer offset="0,0" align_front="4">
+        <file path="gfx\level_tiles\tile\biom_ground_3\border_bottom_gr"/>
+      </layer>
+    </layers>
+  </border>
+
+  <border name="default" >
+    <layers>
+      <layer offset="0,0" align="1" align_back="1">
+        <file path="border_top"/>
+      </layer>
+      <layer offset="0,0" align="3" align_back="3">
+        <file path="border_right"/>
+      </layer>
+      <layer offset="0,0" align="2" align_back="2">
+        <file path="border_left"/>
+      </layer>
+      <layer name="down" offset="0,0" align="4" align_back="4">
+        <file path="border_bottom"/>
+      </layer>
+
+      <layer offset="0,0" align_front="1">
+        <file path="border_top_gr"/>
+      </layer>
+      <layer offset="0,0" align_front="3">
+        <file path="border_right_gr"/>
+      </layer>
+      <layer offset="0,0" align_front="2">
+        <file path="border_left_gr"/>
+      </layer>
+      <layer offset="0,0" align_front="4">
+        <file path="border_bottom_gr"/>
+      </layer>
+    </layers>
+  </border>
+
+  <border name="stone_ancient" >
+    <layers import="default" import_path="gfx\level_tiles\map_obj\Ancient_rooms\ancient_stone_tiles"/>
+  </border>
+   <border name="dirt_china" >
+    <layers import="default" import_path="gfx\level_tiles\tile\China_earth"/>
+  </border> 
+  <border name="stone_china" >
+    <layers import="default" import_path="gfx\level_tiles\tile\China_rock"/>
+  </border>
+    <border name="asian_wood_wall" >
+    <layers import="default" import_path="gfx\level_tiles\craft_constructions\block\asian_wood_wall"/>
+  </border>
+  
+  <border name="ice_biome1" >
+    <layers import="default" import_path="gfx\level_tiles\tile\ice_1"/>
+  </border>
+  <border name="ice_biome2" >
+    <layers import="default" import_path="gfx\level_tiles\tile\ice_2"/>
+  </border>
+  <border name="ice_biome3" >
+    <layers import="default" import_path="gfx\level_tiles\tile\ice_3"/>
+  </border>
+  
+  <border name="obsidian_ground" >
+    <layers import="default" import_path="gfx\level_tiles\tile\obsidian_ground"/>
+  </border>
+
+  <border name="tomb_wall" >
+    <layers import="default" import_path="gfx\level_tiles\craft_constructions\block\tomb_wall"/>
+  </border>
+
+  <border name="biome_spider_dirt1" >
+    <layers import="default" import_path="gfx\level_tiles\tile\spider_biom_ground1"/>
+  </border>
+  <border name="biome_spider_dirt2" >
+    <layers import="default" import_path="gfx\level_tiles\tile\spider_biom_ground2"/>
+  </border>
+  <border name="biome_spider_dirt3" >
+    <layers import="default" import_path="gfx\level_tiles\tile\spider_biom_ground3"/>
+  </border>
+
+  <border name="biome_spider_stalactite1" >
+    <layers import="default" import_path="gfx\level_tiles\tile\spider_biom_ground1" exclude="down">
+      <layer offset="10,10" align="4">
+        <file path="gfx/level_tiles/borders/stalaktites"/>
+        <file path="gfx/level_tiles/borders/stalaktites2"/>
+        <file path="gfx/level_tiles/borders/stalaktites3"/>
+      </layer>
+    </layers>
+  </border>
+  <border name="biome_spider_stalactite2" >
+    <layers import="default" import_path="gfx\level_tiles\tile\spider_biom_ground2" exclude="down">
+      <layer offset="10,10" align="4">
+        <file path="gfx/level_tiles/borders/stalaktites"/>
+        <file path="gfx/level_tiles/borders/stalaktites2"/>
+        <file path="gfx/level_tiles/borders/stalaktites3"/>
+      </layer>
+    </layers>
+  </border>
+  <border name="biome_spider_stalactite3" >
+    <layers import="default" import_path="gfx\level_tiles\tile\spider_biom_ground3" exclude="down">
+      <layer offset="10,10" align="4">
+        <file path="gfx/level_tiles/borders/stalaktites"/>
+        <file path="gfx/level_tiles/borders/stalaktites2"/>
+        <file path="gfx/level_tiles/borders/stalaktites3"/>
+      </layer>
+    </layers>
+  </border>
+
+  <border name="ice_stalactite1" >
+    <layers import="default" import_path="gfx\level_tiles\tile\ice_1" exclude="down">
+      <layer offset="19,19" align="4">
+        <file path="gfx/level_tiles/borders/led" ontop="true"/>
+        <file path="gfx/level_tiles/borders/led1" ontop="true"/>
+        <file path="gfx/level_tiles/borders/led2" ontop="true"/>
+      </layer>
+    </layers>
+  </border>
+  <border name="ice_stalactite2" >
+    <layers import="default" import_path="gfx\level_tiles\tile\ice_2" exclude="down">
+      <layer offset="19,19" align="4">
+        <file path="gfx/level_tiles/borders/led" ontop="true"/>
+        <file path="gfx/level_tiles/borders/led1" ontop="true"/>
+        <file path="gfx/level_tiles/borders/led2" ontop="true"/>
+      </layer>
+    </layers>
+  </border>
+  <border name="ice_stalactite3" >
+    <layers import="default" import_path="gfx\level_tiles\tile\ice_3" exclude="down">
+      <layer offset="19,19" align="4">
+        <file path="gfx/level_tiles/borders/led" ontop="true"/>
+        <file path="gfx/level_tiles/borders/led1" ontop="true"/>
+        <file path="gfx/level_tiles/borders/led2" ontop="true"/>
+      </layer>
+    </layers>
+  </border>
+  
+
+  <border name="sand" >
+    <layers>
+      <layer offset="0,0" align="1" align_back="1">
+        <file path="gfx\level_tiles\tile\sand_ground\border_top"/>
+      </layer>
+      <layer offset="0,0" align="3" align_back="3">
+        <file path="gfx\level_tiles\tile\sand_ground\border_right"/>
+      </layer>
+      <layer offset="0,0" align="2" align_back="2">
+        <file path="gfx\level_tiles\tile\sand_ground\border_left"/>
+      </layer>
+      <layer offset="0,0" align="4" align_back="4">
+        <file path="gfx\level_tiles\tile\sand_ground\border_bottom"/>
+      </layer>
+
+      <layer offset="0,0" align_front="1">
+        <file path="gfx\level_tiles\tile\sand_ground\border_top_gr"/>
+      </layer>
+      <layer offset="0,0" align_front="3">
+        <file path="gfx\level_tiles\tile\sand_ground\border_right_gr"/>
+      </layer>
+      <layer offset="0,0" align_front="2">
+        <file path="gfx\level_tiles\tile\sand_ground\border_left_gr"/>
+      </layer>
+      <layer offset="0,0" align_front="4">
+        <file path="gfx\level_tiles\tile\sand_ground\border_bottom_gr"/>
+      </layer>
+    </layers>
+  </border>
+  
+  <!--<border name="stone" offset="-2,-2" align="1234" align_back="1234">
+    <files>
+      <file path="gfx/level_tiles/borders/border_stone1"/>
+    </files>
+  </border>-->
+  <border name="stone" >
+    <layers>
+      <layer offset="0,0" align="1" align_back="1">
+        <file path="gfx\level_tiles\tile\stone_ground\stone_ground_border_top"/>
+      </layer>
+      <layer offset="0,0" align="3" align_back="3">
+        <file path="gfx\level_tiles\tile\stone_ground\stone_ground_border_right"/>
+      </layer>
+      <layer offset="0,0" align="2" align_back="2">
+        <file path="gfx\level_tiles\tile\stone_ground\stone_ground_border_left"/>
+      </layer>
+      <layer offset="0,0" align="4" align_back="4">
+        <file path="gfx\level_tiles\tile\stone_ground\stone_ground_border_low"/>
+      </layer>
+
+      <layer offset="0,0" align_front="1">
+        <file path="gfx\level_tiles\tile\stone_ground\stone_ground_border_top_gr"/>
+      </layer>
+      <layer offset="0,0" align_front="3">
+        <file path="gfx\level_tiles\tile\stone_ground\stone_ground_border_right_gr"/>
+      </layer>
+      <layer offset="0,0" align_front="2">
+        <file path="gfx\level_tiles\tile\stone_ground\stone_ground_border_left_gr"/>
+      </layer>
+      <layer offset="0,0" align_front="4">
+        <file path="gfx\level_tiles\tile\stone_ground\stone_ground_border_low_gr"/>
+      </layer>
+    </layers>
+  </border>
+
+  <border name="brick" >
+    <layers>
+      <layer offset="0,0" align="1" align_back="1">
+        <file path="gfx\level_tiles\craft_constructions\block\brick_wall\top"/>
+      </layer>
+      <layer offset="0,0" align="3" align_back="3">
+        <file path="gfx\level_tiles\craft_constructions\block\brick_wall\right"/>
+      </layer>
+      <layer offset="0,0" align="2" align_back="2">
+        <file path="gfx\level_tiles\craft_constructions\block\brick_wall\left"/>
+      </layer>
+      <layer offset="0,0" align="4" align_back="4">
+        <file path="gfx\level_tiles\craft_constructions\block\brick_wall\bottom"/>
+      </layer>
+
+      <layer offset="0,0" align_front="1">
+        <file path="gfx\level_tiles\craft_constructions\block\brick_wall\top_gr"/>
+      </layer>
+      <layer offset="0,0" align_front="3">
+        <file path="gfx\level_tiles\craft_constructions\block\brick_wall\right_gr"/>
+      </layer>
+      <layer offset="0,0" align_front="2">
+        <file path="gfx\level_tiles\craft_constructions\block\brick_wall\left_gr"/>
+      </layer>
+      <layer offset="0,0" align_front="4">
+        <file path="gfx\level_tiles\craft_constructions\block\brick_wall\bottom_gr"/>
+      </layer>
+    </layers>
+  </border>
+  <!--<border name="sand" align="1234" align_back="1234">
+    <files>
+      <file path="gfx/level_tiles/borders/sand1"/>
+      <file path="gfx/level_tiles/borders/sand2"/>
+    </files>
+  </border>-->
+  <!--<border name="grass" offset="0,3" align="1" align_back="1">
+    <files>
+      <file path="gfx/level_tiles/borders/border_grass1"/>
+      <file path="gfx/level_tiles/borders/border_grass2"/>
+      <file path="gfx/level_tiles/borders/border_grass3"/>
+      <file path="gfx/level_tiles/borders/border_grass4"/>
+    </files>
+    <animations>
+      <ani name="ani" file="gfx/level_tiles/borders/border_grass1anim" frames="3" framerate="5" order="1213" continuously="false" remove="true"/>
+    </animations>
+  </border>-->
+  <!--<border name="grass" offset="0,3" align="1" align_back="1">
+    <files>
+      <file path="gfx/level_tiles/borders/snow_up"/>
+    </files>
+  </border>-->
+  <border name="lava" offset="0,3" align="1" align_back="1" auto_animate="true" random_animate="0.1">
+    <animations>
+      <ani name="ani" file="gfx/level_tiles/tile/lava/lava_a" frames="9" framerate="5" continuously="true" remove="false"/>
+    </animations>
+  </border>
+  <border name="sea" offset="0,-31" align="1" align_back="1" row_animate="true" hide_block_on_animate="true">
+    <animations>
+      <ani name="ani" file="gfx/level_tiles/tile/seawater/seawater_up_movie" frames="4" framerate="5" continuously="true" remove="false"/>
+    </animations>
+  </border>
+
+  <border name="stalactite" >
+    <layers>
+      <layer offset="0,0" align="1" align_back="1">
+        <file path="gfx\level_tiles\tile\dirt_ground\border_top"/>
+      </layer>
+      <layer offset="0,0" align="3" align_back="3">
+        <file path="gfx\level_tiles\tile\dirt_ground\border_right"/>
+      </layer>
+      <layer offset="0,0" align="2" align_back="2">
+        <file path="gfx\level_tiles\tile\dirt_ground\border_left"/>
+      </layer>
+
+      <layer offset="0,0" align_front="1">
+        <file path="gfx\level_tiles\tile\dirt_ground\border_top_gr"/>
+      </layer>
+      <layer offset="0,0" align_front="3">
+        <file path="gfx\level_tiles\tile\dirt_ground\border_right_gr"/>
+      </layer>
+      <layer offset="0,0" align_front="2">
+        <file path="gfx\level_tiles\tile\dirt_ground\border_left_gr"/>
+      </layer>
+      <layer offset="0,0" align_front="4">
+        <file path="gfx\level_tiles\tile\dirt_ground\border_bottom_gr"/>
+      </layer>
+      
+      <!--<layer offset="27,27" align="4">-->
+      <layer offset="10,10" align="4">
+        <file path="gfx/level_tiles/borders/stalaktites"/>
+        <file path="gfx/level_tiles/borders/stalaktites2"/>
+        <file path="gfx/level_tiles/borders/stalaktites3"/>
+      </layer>
+    </layers>
+  </border>
+
+  <border name="under_stalactite" >
+    <layers>
+      <layer offset="0,0" align="1" align_back="1">
+        <file path="gfx\level_tiles\tile\dirt_underground\border_top"/>
+      </layer>
+      <layer offset="0,0" align="3" align_back="3">
+        <file path="gfx\level_tiles\tile\dirt_underground\border_right"/>
+      </layer>
+      <layer offset="0,0" align="2" align_back="2">
+        <file path="gfx\level_tiles\tile\dirt_underground\border_left"/>
+      </layer>
+
+      <layer offset="0,0" align_front="1">
+        <file path="gfx\level_tiles\tile\dirt_underground\border_top_gr"/>
+      </layer>
+      <layer offset="0,0" align_front="3">
+        <file path="gfx\level_tiles\tile\dirt_underground\border_right_gr"/>
+      </layer>
+      <layer offset="0,0" align_front="2">
+        <file path="gfx\level_tiles\tile\dirt_underground\border_left_gr"/>
+      </layer>
+      <layer offset="0,0" align_front="4">
+        <file path="gfx\level_tiles\tile\dirt_underground\border_bottom_gr"/>
+      </layer>
+
+      <!--<layer offset="27,27" align="4">-->
+      <layer offset="10,10" align="4">
+        <file path="gfx/level_tiles/borders/underground1_stalaktites"/>
+        <file path="gfx/level_tiles/borders/underground1_stalaktites2"/>
+        <file path="gfx/level_tiles/borders/underground1_stalaktites3"/>
+      </layer>
+    </layers>
+  </border>
+
+  <border name="stalagmite" >
+    <layers>
+      <layer offset="0,0" align="3" align_back="3">
+        <file path="gfx\level_tiles\tile\dirt_ground\border_right"/>
+      </layer>
+      <layer offset="0,0" align="2" align_back="2">
+        <file path="gfx\level_tiles\tile\dirt_ground\border_left"/>
+      </layer>
+      <layer offset="0,0" align="4" align_back="4">
+        <file path="gfx\level_tiles\tile\dirt_ground\border_bottom"/>
+      </layer>
+
+      <layer offset="0,0" align_front="1">
+        <file path="gfx\level_tiles\tile\dirt_ground\border_top_gr"/>
+      </layer>
+      <layer offset="0,0" align_front="3">
+        <file path="gfx\level_tiles\tile\dirt_ground\border_right_gr"/>
+      </layer>
+      <layer offset="0,0" align_front="2">
+        <file path="gfx\level_tiles\tile\dirt_ground\border_left_gr"/>
+      </layer>
+      <layer offset="0,0" align_front="4">
+        <file path="gfx\level_tiles\tile\dirt_ground\border_bottom_gr"/>
+      </layer>
+      
+      <layer offset="10,10" align="1">
+        <file path="gfx/level_tiles/borders/stalagmites"/>
+        <file path="gfx/level_tiles/borders/stalagmites2"/>
+        <file path="gfx/level_tiles/borders/stalagmites3"/>
+      </layer>
+    </layers>
+  </border>
+
+  <border name="under_stalagmite" >
+    <layers>
+      <layer offset="0,0" align="3" align_back="3">
+        <file path="gfx\level_tiles\tile\dirt_underground\border_right"/>
+      </layer>
+      <layer offset="0,0" align="2" align_back="2">
+        <file path="gfx\level_tiles\tile\dirt_underground\border_left"/>
+      </layer>
+      <layer offset="0,0" align="4" align_back="4">
+        <file path="gfx\level_tiles\tile\dirt_underground\border_bottom"/>
+      </layer>
+
+      <layer offset="0,0" align_front="1">
+        <file path="gfx\level_tiles\tile\dirt_underground\border_top_gr"/>
+      </layer>
+      <layer offset="0,0" align_front="3">
+        <file path="gfx\level_tiles\tile\dirt_underground\border_right_gr"/>
+      </layer>
+      <layer offset="0,0" align_front="2">
+        <file path="gfx\level_tiles\tile\dirt_underground\border_left_gr"/>
+      </layer>
+      <layer offset="0,0" align_front="4">
+        <file path="gfx\level_tiles\tile\dirt_underground\border_bottom_gr"/>
+      </layer>
+
+      <layer offset="10,10" align="1">
+        <file path="gfx/level_tiles/borders/underground1_stalagmites"/>
+        <file path="gfx/level_tiles/borders/underground1_stalagmites2"/>
+        <file path="gfx/level_tiles/borders/underground1_stalagmites3"/>
+        <file path="gfx/level_tiles/borders/underground1_stalagmites4"/>
+      </layer>
+    </layers>
+  </border>
+
+  <border name="grass">
+    <layers>
+      <layer offset="0,0" align="1" align_back="1">
+        <file path="gfx/level_tiles/borders/grass_border1"/>
+        <file path="gfx/level_tiles/borders/grass_border2"/>
+        <file path="gfx/level_tiles/borders/grass_border3"/>
+        <file path="gfx/level_tiles/borders/grass_border4"/>
+        <file path="gfx/level_tiles/borders/grass_border5"/>
+      </layer>
+    </layers>
+    <!--<animations>
+      <ani name="ani" file="gfx/level_tiles/borders/border_grass1anim" frames="3" framerate="5" order="1213" continuously="false" remove="true"/>
+    </animations>-->
+  </border>
+
+  <border name="moh">
+    <layers>
+      <layer offset="0,0" align="1" align_back="1">
+        <file path="gfx/level_tiles/borders/moh1"/>
+        <file path="gfx/level_tiles/borders/moh2"/>
+        <file path="gfx/level_tiles/borders/moh3"/>
+        <file path="gfx/level_tiles/borders/moh4"/>
+      </layer>
+    </layers>
+  </border>
+
+  <border name="slime_grass">
+    <layers>
+      <layer offset="0,5" align="1" align_back="1">
+        <file path="gfx\level_tiles\tile\BeetleBiome/grass"/>
+      </layer>
+    </layers>
+  </border>
+  
+  <border name="mushrooms">
+    <layers>
+      <layer offset="0,0" align="1" align_back="1">
+        <file path="gfx/level_tiles/borders/mashroom_border1"/>
+        <file path="gfx/level_tiles/borders/mashroom_border2"/>
+        <file path="gfx/level_tiles/borders/mashroom_border3"/>
+        <file path="gfx/level_tiles/borders/mashroom_border4"/>
+        <file path="gfx/level_tiles/borders/mashroom_border5"/>
+      </layer>
+    </layers>
+  </border>
+  
+  <!--<border name="grass">
+    <layers>
+      <layer offset="0,3" align="1" align_back="1" animate="ani">
+        <file path="gfx/level_tiles/borders/border_grass1"/>
+        <file path="gfx/level_tiles/borders/border_grass2"/>
+        <file path="gfx/level_tiles/borders/border_grass3"/>
+        <file path="gfx/level_tiles/borders/border_grass4"/>
+      </layer>
+    </layers>
+    <animations>
+      <ani name="ani" file="gfx/level_tiles/borders/border_grass1anim" frames="3" framerate="5" order="1213" continuously="false" remove="true"/>
+    </animations>
+  </border>-->
+  
+  <!--<border name="snow">
+    <layers>
+      <layer offset="-5,-5" align="234" align_back="234">
+        <file path="gfx/level_tiles/borders/snow_b"/>
+        <file path="gfx/level_tiles/borders/snow_b2"/>
+      </layer>
+      <layer offset="0,0" align="1" align_back="1">
+        <file path="gfx/level_tiles/borders/snow_up"/>
+      </layer>
+    </layers>
+  </border>-->
+  
+  
+  <!--отключил пока-->
+  <!--<border name="snow_surface" offset="0,3" align="1" align_back="1">
+    <files>
+      <file path="gfx/level_tiles/borders/snow/snow_up"/>
+    </files>
+  </border>-->
+  
+  <border name="trapdoor_ancient" >
+    <layers>
+      <layer offset="0,10" align="4" ontop="true">
+        <file path="gfx\level_tiles\map_obj\Ancient_rooms\doors/trapdoor_ancient_bottom"/>
+      </layer>
+    </layers>
+  </border>
+  
+  <border name="trapdoor" >
+    <layers>
+      <layer offset="0,13" align="4" ontop="true">
+        <file path="gfx/level_tiles/borders/border_trapdoor"/>
+      </layer>
+    </layers>
+  </border>
+
+  <border name="trapdoor_steel" >
+    <layers>
+      <layer offset="0,13" align="4" ontop="true">
+        <file path="gfx/level_tiles/borders/border_trapdoor_steel"/>
+      </layer>
+    </layers>
+  </border>
+
+  <border name="wooden_block" >
+    <layers>
+      <layer offset="0,0" align="1" align_back="1">
+        <file path="gfx\level_tiles\craft_constructions\block\wood_wall\border_top"/>
+      </layer>
+      <layer offset="0,0" align="3" align_back="3">
+        <file path="gfx\level_tiles\craft_constructions\block\wood_wall\border_right"/>
+      </layer>
+      <layer offset="0,0" align="2" align_back="2">
+        <file path="gfx\level_tiles\craft_constructions\block\wood_wall\border_left"/>
+      </layer>
+      <layer offset="0,0" align="4" align_back="4">
+        <file path="gfx\level_tiles\craft_constructions\block\wood_wall\border_bottom"/>
+      </layer>
+
+      <layer offset="0,0" align_front="1">
+        <file path="gfx\level_tiles\craft_constructions\block\wood_wall\border_top_gr"/>
+      </layer>
+      <layer offset="0,0" align_front="3">
+        <file path="gfx\level_tiles\craft_constructions\block\wood_wall\border_right_gr"/>
+      </layer>
+      <layer offset="0,0" align_front="2">
+        <file path="gfx\level_tiles\craft_constructions\block\wood_wall\border_left_gr"/>
+      </layer>
+      <layer offset="0,0" align_front="4">
+        <file path="gfx\level_tiles\craft_constructions\block\wood_wall\border_bottom_gr"/>
+      </layer>
+    </layers>
+  </border>
+  
+  <border name="steel_wall">
+    <layers>
+      <layer offset="0,0" align="1" align_back="1">
+        <file path="gfx\level_tiles\craft_constructions\block\steel_wall\border_top"/>
+      </layer>
+      <layer offset="0,0" align="3" align_back="3">
+        <file path="gfx\level_tiles\craft_constructions\block\steel_wall\border_right"/>
+      </layer>
+      <layer offset="0,0" align="2" align_back="2">
+        <file path="gfx\level_tiles\craft_constructions\block\steel_wall\border_left"/>
+      </layer>
+      <layer offset="0,0" align="4" align_back="4">
+        <file path="gfx\level_tiles\craft_constructions\block\steel_wall\border_bottom"/>
+      </layer>
+
+      <layer offset="0,0" align_front="1">
+        <file path="gfx\level_tiles\craft_constructions\block\steel_wall\border_top_gr"/>
+      </layer>
+      <layer offset="0,0" align_front="3">
+        <file path="gfx\level_tiles\craft_constructions\block\steel_wall\border_right_gr"/>
+      </layer>
+      <layer offset="0,0" align_front="2">
+        <file path="gfx\level_tiles\craft_constructions\block\steel_wall\border_left_gr"/>
+      </layer>
+      <layer offset="0,0" align_front="4">
+        <file path="gfx\level_tiles\craft_constructions\block\steel_wall\border_bottom_gr"/>
+      </layer>
+    </layers>
+  </border>
+  
+  <border name="granite" >
+    <layers>
+      <layer offset="0,0" align="1" align_back="1">
+        <file path="gfx\level_tiles\tile\granite\border_top"/>
+      </layer>
+      <layer offset="0,0" align="3" align_back="3">
+        <file path="gfx\level_tiles\tile\granite\border_right"/>
+      </layer>
+      <layer offset="0,0" align="2" align_back="2">
+        <file path="gfx\level_tiles\tile\granite\border_left"/>
+      </layer>
+      <layer offset="0,0" align="4" align_back="4">
+        <file path="gfx\level_tiles\tile\granite\border_bottom"/>
+      </layer>
+
+      <layer offset="0,0" align_front="1">
+        <file path="gfx\level_tiles\tile\granite\border_top_gr"/>
+      </layer>
+      <layer offset="0,0" align_front="3">
+        <file path="gfx\level_tiles\tile\granite\border_right_gr"/>
+      </layer>
+      <layer offset="0,0" align_front="2">
+        <file path="gfx\level_tiles\tile\granite\border_left_gr"/>
+      </layer>
+      <layer offset="0,0" align_front="4">
+        <file path="gfx\level_tiles\tile\granite\border_bottom_gr"/>
+      </layer>
+    </layers>
+  </border>
+
+  <border name="pyramid" >
+    <layers>
+      <layer offset="0,0" align="1" align_back="1">
+        <file path="gfx\level_tiles\tile\piramid_stone\border_top"/>
+      </layer>
+      <layer offset="0,0" align="3" align_back="3">
+        <file path="gfx\level_tiles\tile\piramid_stone\border_right"/>
+      </layer>
+      <layer offset="0,0" align="2" align_back="2">
+        <file path="gfx\level_tiles\tile\piramid_stone\border_left"/>
+      </layer>
+      <layer offset="0,0" align="4" align_back="4">
+        <file path="gfx\level_tiles\tile\piramid_stone\border_bottom"/>
+      </layer>
+
+      <layer offset="0,0" align_front="1">
+        <file path="gfx\level_tiles\tile\piramid_stone\border_top_gr"/>
+      </layer>
+      <layer offset="0,0" align_front="3">
+        <file path="gfx\level_tiles\tile\piramid_stone\border_right_gr"/>
+      </layer>
+      <layer offset="0,0" align_front="2">
+        <file path="gfx\level_tiles\tile\piramid_stone\border_left_gr"/>
+      </layer>
+      <layer offset="0,0" align_front="4">
+        <file path="gfx\level_tiles\tile\piramid_stone\border_bottom_gr"/>
+      </layer>
+    </layers>
+  </border>
+</root>

@@ -1,0 +1,4 @@
+<root>
+    <radius value="10" />
+    <skip_water value="true" />
+</root>

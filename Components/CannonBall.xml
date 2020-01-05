@@ -1,0 +1,37 @@
+<root>
+<!-- CannonBehaviour -->
+    <max_distance value="20" />
+    <muzzle_bone value="aim" />
+    <rotate_bone value="cannon" />
+    <attack_event value="attack" />
+    <ball_config value="CannonBall.xml"/>
+    <shot_light_on_event value="explosion_light_on" />
+    <shot_light_off_event value="explosion_light_off" />
+    <shot_sound value="cannon_shot" />
+    <max_ammunition value="10" />
+    <projectile_behaviours>
+        <beaviour value="RigidBodySimplyfied" config="PirateShipCannonBall.xml" />
+        <beaviour value="CannonBall" config="CannonBall.xml"/>
+    </projectile_behaviours>
+
+<!-- RigidBodySimplyfied -->
+    <dampingByWater value="true"/>
+    <bounceRatio value="0.1,0.5"/>
+    <bounceVelocityClamp value="80"/>
+    <velocityDamping value="2000"/>
+    <!-- <gravity value="0,400"/> -->
+    <gravity value="0,100"/>
+
+<!-- CannonBall -->
+    <ball_image value="gfx/MonstersDLC/spine/builds/cannon/core"/>
+    <hit_effect value="cannon_strike"/>
+    <ball_size value="20"/>
+    <ball_damage value="8"/>
+    <ball_push_velocity value="150"/>
+    <ball_enemy_dampig value="0.2"/>
+    <start_velocity value="900"/>
+    <push_decrease_healt value="10"/>
+    <push_decrease_ratio value="1"/>
+    <targets value="workers_enemies" />
+
+</root>

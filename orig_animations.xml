@@ -1,0 +1,824 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--Анимация персонажей-->
+<!--
+'frames' - фактическое кол-во кадров
+'framerate' - частота кадров в сек.
+'order' - последовательность показа кадров
+'continuously' - повторяющаяся анимация, по умолчанию вкл.
+-->
+<root>
+  <!--Worker-->
+  <ani name="worker_idle" frames="5" framerate="5" order="123454545454321" continuously="false" >
+    <layers>
+      <layer file="gfx\characters\idol_3" frames="1" scale="0.7"/>
+      <layer name="helm" frames="1" scale="0.7">
+        <moves>
+          <move pos="-9,-28" angle="0" frame="1"/>
+          <move pos="-10,-28" angle="0" frame="2"/>
+          <move pos="-10,-28" angle="0" frame="3"/>
+          <move pos="-10,-28" angle="0" frame="4"/>
+        </moves>
+      </layer>
+      <layer name="arms" file="gfx\characters\arms_idol_3" mask="gfx\characters\arms_idol_3_c" frames="4" order="12344" scale="0.7">
+        <moves>
+          <!--<move pos="6,3" angle="0" />-->
+          <move pos="-9,4" angle="0" />
+          <move pos="-2,4" angle="0" />
+          <move pos="0,4" angle="0" />
+          <move pos="0,4" angle="0" />
+        </moves>
+      </layer>
+      <layer name="boots" file="gfx\characters\boots" frames="5" scale="0.7" order="11113">
+        <moves>
+          <move pos="1,29"  angle="0" frame="1"/>
+          <move pos="2,29"  angle="0" frame="5"/>
+        </moves>
+      </layer>
+    </layers>
+  </ani>
+  <ani name="worker_idle2" frames="4" framerate="5" order="123434343434321" continuously="false">
+    <layers>
+      <layer file="gfx\characters\idol_1" frames="4" scale="0.7"/>
+      <layer name="helm" frames="1" scale="0.7">
+        <moves>
+          <move pos="-10,-28" angle="0" frame="1"/>
+        </moves>
+      </layer>
+      <layer name="arms" file="gfx\characters\arms_idol_1" mask="gfx\characters\arms_idol_1_c" frames="4" scale="0.7">
+        <moves>
+          <move pos="-9,4" angle="0" />
+          <move pos="-6,4" angle="0" />
+          <move pos="-7,-1" angle="0" />
+          <move pos="-5,-1" angle="0" />
+        </moves>
+      </layer>
+      <layer name="boots" file="gfx\characters\boots" frames="5" scale="0.7" order="1">
+        <moves>
+          <move pos="0,28" angle="0" frame="1"/>
+        </moves>
+      </layer>
+    </layers>
+  </ani>  
+  <ani name="worker_cantdo" frames="4" framerate="5" order="12343434321" continuously="false">
+    <layers>
+      <layer file="gfx\characters\idol_2" frames="1" scale="0.7">
+        <moves>
+          <move pos="-2,0"/>
+        </moves>
+      </layer>
+      <layer name="helm" frames="1" scale="0.7">
+        <moves>
+          <move pos="-8,-29" angle="0" frame="1"/>
+		  <move pos="-8,-29" angle="-1" frame="4"/>
+        </moves>
+      </layer>
+      <layer name="arms" file="gfx\characters\arms_idol_2" mask="gfx\characters\arms_idol_2_c" frames="4" scale="0.7">
+        <moves>
+          <move pos="-10,-3" angle="0" />
+          <move pos="-11,-3" angle="0" />
+          <move pos="-12,-4" angle="0" />
+          <move pos="-12,-4" angle="0" />
+        </moves>
+      </layer>
+      <layer name="boots" file="gfx\characters\boots" frames="5" order="1" scale="0.7">
+        <moves>
+          <move pos="1,29" angle="0" frame="1"/>
+        </moves>
+      </layer>
+    </layers>    
+  </ani>
+  <ani name="worker_stop" frames="1" framerate="1" order="1">
+    <layers>
+      <layer file="gfx\characters\idol_1" frames="4" scale="0.7"/>
+      <layer name="helm" frames="1" scale="0.7">
+        <moves>
+          <move pos="-10,-28" angle="0" frame="1"/>
+        </moves>
+      </layer>
+      <!--<layer name="tool" frames="1" scale="0.67">
+        <moves>
+          <move pos="18,18" angle="-40"/>
+        </moves>
+      </layer>-->
+      <layer name="arms" file="gfx\characters\arms_idol_1" mask="gfx\characters\arms_idol_1_c" frames="4" scale="0.7">
+        <moves>
+          <move pos="-8,6" angle="0" />
+        </moves>
+      </layer>
+      <layer name="boots" file="gfx\characters\boots" frames="5" scale="0.7" order="1">
+        <moves>
+          <move pos="0,28" angle="0" frame="1"/>
+        </moves>
+      </layer>
+    </layers>
+  </ani>
+  <ani name="worker_sleep" frames="1" framerate="1" order="1">
+    <layers>
+      <layer file="gfx\characters\idol_1" frames="4" scale="0.7">
+        <moves>
+          <move pos="0,-5" angle="90" />
+        </moves>
+      </layer>
+      <layer file="gfx\characters\gnome_head" frames="1" scale="0.7">
+        <moves>
+          <move pos="-25,4" angle="90" frame="1"/>
+        </moves>
+      </layer>
+      <layer name="arms" file="gfx\characters\arms_idol_1" mask="gfx\characters\arms_idol_1_c" frames="4" scale="0.7">
+        <moves>
+          <move pos="4,4" angle="90" />
+        </moves>
+      </layer>
+      <layer name="boots" file="gfx\characters\boots" frames="5" scale="0.7" order="1">
+        <moves>
+          <move pos="28,-5" angle="90" frame="1"/>
+        </moves>
+      </layer>
+      <layer name="helm" frames="1" scale="0.6">
+        <moves>
+          <move pos="-35,27" angle="-25" frame="1"/>
+        </moves>
+      </layer>
+    </layers>
+  </ani>
+  <ani name="worker_move" frames="6" framerate="10" order="123456">
+    <layers>
+      <layer file="gfx\characters\move" frames="6" scale="0.7">
+        <moves>
+          <move pos="0,0" angle="0" frame="1"/>
+        </moves>
+      </layer>
+      <layer name="helm" frames="1" scale="0.7">
+        <moves>
+          <move pos="-7,-29" angle="0" frame="1"/>
+		      <move pos="-6,-29" angle="0" frame="2"/>
+          <move pos="-7,-28" angle="0" frame="3"/>
+          <move pos="-7,-29" angle="0" frame="4"/>
+          <move pos="-6,-29" angle="0" frame="5"/>
+          <move pos="-7,-28" angle="0" frame="6"/>
+        </moves>        
+      </layer>
+      <layer name="tool" frames="1" scale="0.67">
+        <moves>
+          <move pos="18,18" angle="-40"/>
+          <move pos="25,5" angle="-20"/>
+          <move pos="29,-7" angle="-5"/>
+          <move pos="25,5" angle="-20"/>
+          <move pos="25,15" angle="-35"/>
+          <move pos="18,18" angle="-40"/>
+        </moves>
+      </layer>      
+      <layer name="arms" file="gfx\characters\arms_move" mask="gfx\characters\arms_move_c" frames="6" scale="0.7">
+        <moves>
+          <move pos="-8,4" angle="0" frame="1"/>
+          <move pos="-7,5" angle="0" frame="2"/>
+          <move pos="-6,5" angle="0" frame="3"/>
+          <move pos="-6,4" angle="0" frame="4"/>
+          <move pos="-5,5" angle="0" frame="5"/>
+          <move pos="-5,5" angle="0" frame="6"/>
+        </moves>
+      </layer>
+      <layer name="boots" file="gfx\characters\boots_move" frames="6" scale="0.7">
+        <moves>
+          <move pos="0,27" angle="0" frame="1"/>
+          <move pos="0,25" angle="0" frame="3"/>
+        </moves>
+      </layer>
+    </layers>
+  </ani>
+  <ani name="worker_run" frames="4" framerate="10">
+    <layers>
+      <layer file="gfx\characters\run" frames="4" scale="0.7">
+        <moves>
+          <move pos="0,3" angle="0" frame="1"/>
+        </moves>
+      </layer>
+      <layer name="helm" frames="1" scale="0.7">
+        <moves>
+          <move pos="-9,-27" angle="0" frame="1"/>
+          <move pos="-8,-27" angle="0" frame="2"/>
+          <move pos="-9,-27" angle="0" frame="3"/>
+          <move pos="-8,-27" angle="0" frame="4"/>
+        </moves>
+      </layer>
+      <layer name="arms" file="gfx\characters\arms_run" mask="gfx\characters\arms_run_c" frames="4" scale="0.7">
+        <moves>
+          <move pos="-5,-9" angle="0" />
+          <move pos="-4,-9" angle="0" />
+          <move pos="-3,-9" angle="0" />
+          <move pos="-4,-9" angle="0" />
+        </moves>
+      </layer>
+      <layer name="boots" file="gfx\characters\boots_run" frames="4" scale="0.7" >
+        <moves>
+          <move pos="-1,23" angle="0" frame="1"/>
+          <move pos="1,20" angle="0" frame="2"/>
+          <move pos="2,20" angle="0" frame="4"/>
+        </moves>
+      </layer>
+      <!--<layer name="tool" frames="1" scale="0.67">
+        <moves>
+          <move pos="25,2" angle="-20"/>
+          <move pos="22,-4" angle="0"/>
+          <move pos="11,-21" angle="50"/>
+          <move pos="-20,-7" angle="180"/>
+        </moves>
+      </layer>-->
+    </layers>
+  </ani>
+  <ani name="worker_action" file="gfx\characters\action" frames="4" framerate="10" order="123431" scale="0.7">
+    <layers>
+      <layer name="helm" frames="1" scale="0.7">
+        <moves>
+          <move pos="-9,-26" angle="0" frame="1"/>
+          <move pos="-9,-27" angle="0" frame="2"/>
+          <move pos="-8,-28" angle="3" frame="3"/>
+          <move pos="-8,-28" angle="5" frame="4"/>
+        </moves>
+      </layer>
+      <!--<layer name="tool" file="gfx\level_tiles\craft_tools\pick\pick_steel" frames="1" scale="0.67">-->
+      <!--<layer name="tool" file="gfx\level_tiles\craft_tools\sword\sword_iron" frames="1" scale="0.60">-->
+      <!--layer name="tool" file="gfx\level_tiles\craft_tools\dagger_stone" frames="1" scale="0.67">-->
+  	 <layer name="tool" frames="1" scale="0.67">
+        <moves>
+          <move pos="43,18" angle="-40"/>
+          <move pos="45,-2" angle="-20"/>
+          <move pos="20,-50" angle="50"/>
+          <move pos="-58,-20" angle="160"/>
+        </moves>
+      </layer>
+      <layer name="arms" file="gfx\characters\arms_action" mask="gfx\characters\arms_action_c" frames="4" scale="0.7">
+        <moves>
+          <move pos="-9,-9" angle="0" />
+          <move pos="-8,-9" angle="0" />
+          <move pos="-7,-9" angle="0" />
+          <move pos="-7,-8" angle="0" />
+        </moves>
+      </layer>
+      <layer name="boots" file="gfx\characters\boots" frames="5" scale="0.7" order="1122">
+        <moves>
+          <move pos="0,28" angle="0" frame="1"/>
+		  <move pos="2,29" angle="0" frame="2"/>
+        </moves>
+      </layer>
+    </layers>
+    <events>
+      <event name="eff" frame="3"/>
+      <event name="shot" frame="6"/>
+    </events>
+  </ani>
+  <ani name="worker_fishing" frames="4" framerate="1" order="1">
+    <layers>
+      <layer file="gfx\characters\idol_1" frames="4" scale="0.7"  order="4"/>
+      <layer name="helm" frames="1" scale="0.7">
+        <moves>
+          <move pos="-10,-28" angle="0" frame="1"/>
+        </moves>
+      </layer>
+	        <layer name="boots" file="gfx\characters\boots" frames="5" scale="0.7" order="1">
+        <moves>
+          <move pos="0,28" angle="0" frame="1"/>
+        </moves>
+      </layer>
+      <layer name="tool" file="gfx\level_tiles\craft_tools\rod2" frames="1" scale="0.4">
+        <!--<layer name="tool" frames="1" size="0.6">-->
+        <moves>
+          <move pos="68,-15" angle="0"/>
+        </moves>
+      </layer>  
+      <layer name="arms" file="gfx\characters\arms_idol_1" mask="gfx\characters\arms_idol_1_c" frames="4" scale="0.7" order="4">
+        <moves>
+          <move pos="-5,-1" angle="0" />
+        </moves>
+      </layer>
+      <layer name="line">
+        <moves>
+          <move pos="64,-3" angle="0"/>
+        </moves>
+      </layer>      
+    </layers>
+  </ani>
+  <ani name="worker_fish_catch" frames="4" framerate="10" order="123" continuously="false">
+    <layers>
+      <layer file="gfx\characters\action" frames="4" framerate="10" order="123" scale="0.7">
+      </layer>
+      <layer name="helm" frames="1" scale="0.7">
+        <moves>
+          <move pos="-9,-26" angle="0" frame="1"/>
+          <move pos="-9,-26" angle="0" frame="2"/>
+          <move pos="-8,-30" angle="0" frame="3"/>
+          <move pos="-9,-28" angle="0" frame="4"/>
+        </moves>
+      </layer> 
+	  <layer name="boots" file="gfx\characters\boots" frames="5" scale="0.7" order="1122">
+        <moves>
+          <move pos="0,28" angle="0" frame="1"/>
+          <move pos="1,29" angle="0" frame="2"/>
+        </moves>
+      </layer>    
+	  <layer name="tool" file="gfx\level_tiles\craft_tools\rod2" frames="1" scale="0.4">
+      <!--<layer name="tool" frames="1" scale="0.3">-->
+        <moves>
+          <move pos="75,20" angle="-20"/>
+          <move pos="75,-4" angle="0"/>
+          <move pos="50,-75" angle="50"/>
+          <move pos="-10,-7" angle="180"/>
+
+          <!--<move pos="25,2" angle="-20"/>
+          <move pos="22,-4" angle="0"/>
+          <move pos="11,-21" angle="50"/>
+          <move pos="-20,-7" angle="180"/>-->
+        </moves>
+      </layer>
+      <layer name="arms" file="gfx\characters\arms_action" mask="gfx\characters\arms_action_c" frames="4" scale="0.7">
+        <moves>
+          <move pos="-11,-9" angle="0" />
+          <move pos="-9,-9" angle="0" />
+          <move pos="-8,-9" angle="0" />
+          <move pos="-13,-13" angle="0" />
+        </moves>
+      </layer>
+      <layer name="line">
+        <moves>
+          <move pos="63,22" angle="0"/>
+          <move pos="66,0" angle="0"/>
+          <move pos="45,-55" angle="0"/>
+          <move pos="55,-30" angle="0"/>
+        </moves>
+      </layer>
+    </layers>
+  </ani>
+  <ani name="worker_climb" frames="3" framerate="10" order="112332">
+    <layers>
+      <layer file="gfx\characters\climb" frames="3" scale="0.7">
+        <moves>
+          <move pos="0,18" angle="0" frame="1"/>
+        </moves>
+      </layer>      
+      <layer name="arms" file="gfx\characters\arms_climb" mask="gfx\characters\arms_climb_c" frames="3" scale="0.7">
+        <moves>
+          <move pos="-2,2" angle="0"/>
+          <move pos="0,1" angle="0"/>
+          <move pos="-1,1" angle="0"/>
+        </moves>
+      </layer>
+      <layer name="helm_c" frames="1" scale="0.7">
+        <moves>
+          <move pos="0,-10" angle="0" frame="1"/>
+		  <move pos="-1,-10" angle="0" frame="2"/>
+          <move pos="-2,-10" angle="0" frame="3"/>
+        </moves>
+      </layer>
+      <layer name="boots" file="gfx\characters\boots_climb" frames="3" order="321" scale="0.7">
+        <moves>
+         <move pos="0,23" angle="0" frame="1"/>
+		 <move pos="0,28" angle="0" frame="2"/>
+		 <move pos="-2,24" angle="0" frame="3"/>
+        </moves>
+      </layer>      
+    </layers>
+  </ani>
+  <ani name="worker_jump" frames="2" framerate="15" order="111122222222222222222222222222222222222222">
+    <layers>
+      <layer file="gfx\characters\move" frames="6" scale="0.7" order="13">
+        <moves>
+          <move pos="0,0" angle="0" frame="1"/>
+        </moves>
+      </layer>
+      <layer name="helm" frames="1" scale="0.7">
+        <moves>
+          <move pos="-7,-29" angle="0" frame="1"/>
+          <move pos="-6,-28" angle="0" frame="2"/>
+        </moves>
+      </layer>
+      <layer name="tool" frames="1" scale="0.67">
+        <moves>
+          <move pos="18,18" angle="-40"/>
+          <move pos="29,-7" angle="-5"/>
+        </moves>
+      </layer>
+      <layer name="arms" file="gfx\characters\arms_move" mask="gfx\characters\arms_move_c" frames="6" scale="0.7" order="13">
+        <moves>
+          <move pos="-8,4" angle="0" />
+          <move pos="-6,5" angle="0" />
+        </moves>
+      </layer>
+      <layer name="boots" file="gfx\characters\boots_move" frames="6" scale="0.7" order="12">
+        <moves>
+          <move pos="1,27" angle="0" frame="1"/>
+          <move pos="-6,28" angle="-14" frame="2"/>
+        </moves>
+      </layer>
+    </layers>
+  </ani>
+  <ani name="worker_jump_end" frames="1" framerate="5" order="11" continuously="false">
+    <layers>
+      <layer file="gfx\characters\sits" frames="1" scale="0.7" order="1">
+        <moves>
+          <move pos="0,0" angle="0" frame="1"/>
+        </moves>
+      </layer>
+      <layer name="helm" frames="1" scale="0.7">
+        <moves>
+          <move pos="-7,-29" angle="0" frame="1"/>
+        </moves>
+      </layer>
+      <layer name="tool" frames="1" scale="0.67">
+        <moves>
+          <move pos="35 ,-15" angle="5"/>
+        </moves>
+      </layer>
+      <layer name="arms" file="gfx\characters\arms_sits" mask="gfx\characters\arms_sits_c" frames="1" scale="0.7" order="1">
+        <moves>
+          <move pos="0,0" angle="0" />
+        </moves>
+      </layer>
+      <layer name="boots" file="gfx\characters\boots" frames="5" scale="0.7" order="1">
+        <moves>
+          <move pos="-3,28" angle="5" frame="1"/>
+        </moves>
+      </layer>
+    </layers>
+  </ani>
+  <ani name="worker_dies" frames="5" framerate="10" continuously="false">
+    <layers>
+      <layer file="gfx\characters\dead" frames="5" scale="0.7">
+        <moves>
+          <move pos="-5,0" angle="0" frame="1"/>
+        </moves>
+      </layer>
+      <layer name="helm" frames="1" scale="0.7" order="11122">
+        <moves>
+          <move pos="-3,-29" angle="0" frame="1"/>
+          <move pos="-2,-27" angle="0" frame="2"/>
+          <move pos="-2,-18" angle="0" frame="3"/>
+        </moves>
+      </layer>
+      <layer name="tool" frames="1" scale="0.67" order="11222">
+        <moves>
+          <move pos="25,18" angle="-40"/>
+          <move pos="26,19" angle="-40"/>
+        </moves>
+      </layer>
+      <layer name="arms" file="gfx\characters\arms_idol_1" mask="gfx\characters\arms_idol_1_c" frames="4" scale="0.7" order="11555">
+        <moves>
+          <move pos="-1,4" angle="0" />
+		  <move pos="0,5" angle="0" />
+        </moves>
+      </layer>
+      <layer name="boots" file="gfx\characters\boots_move" frames="6" scale="0.7" order="11777">
+        <moves>
+          <move pos="3,26" angle="-5" frame="1"/>
+          <move pos="3,26" angle="-7" frame="2"/>
+        </moves>
+      </layer>
+    </layers>
+  </ani>
+  <ani name="worker_pain" frames="2" framerate="7" continuously="false" order="122">
+    <layers>
+      <layer file="gfx\characters\pain" frames="2" scale="0.7">
+        <moves>
+          <move pos="-5,0" angle="0" frame="1"/>
+        </moves>
+      </layer>
+      <layer name="helm" frames="1" scale="0.7">
+        <moves>
+          <move pos="-20,-30" angle="25" frame="1"/>
+          <move pos="-10,-33" angle="5" frame="2"/>
+        </moves>
+      </layer>
+      <layer name="boots" file="gfx\characters\boots_pain" frames="2" scale="0.7">
+        <moves>
+          <move pos="-6,25" angle="-5" frame="1"/>
+          <move pos="-7,25" angle="-7" frame="2"/>
+        </moves>
+      </layer>
+      <layer name="tool" frames="1" scale="0.67">
+        <moves>
+          <move pos="0,27" angle="-60"/>
+          <move pos="10,23" angle="-45"/>
+        </moves>
+      </layer>
+      <layer name="arms" file="gfx\characters\arms_pain" mask="gfx\characters\arms_pain_c" frames="2" scale="0.7">
+        <moves>
+          <move pos="-6,0" angle="0" />
+          <move pos="-6,0" angle="0" />
+        </moves>
+      </layer>
+    </layers>
+  </ani>  
+  <ani name="worker_eat" frames="5" framerate="10" order="123444333444333444521" continuously="false">
+    <layers>
+      <layer file="gfx\characters\eat" frames="5" scale="0.7">
+        <moves>
+          <move pos="0,-2" angle="0" frame="1"/>
+        </moves>
+      </layer>
+      <layer name="helm" frames="1" scale="0.7">
+        <moves>
+          <move pos="-10,-31" angle="0" frame="1"/>
+		  <move pos="-9,-31" angle="0" frame="2"/>
+		  <move pos="-8,-31" angle="0" frame="4"/>
+        </moves>
+      </layer>
+      <layer name="arms" file="gfx\characters\arms_eat" mask="gfx\characters\arms_eat_c" frames="5" scale="0.7">
+        <moves>
+          <move pos="-12,4" angle="0" />
+          <move pos="-13,3" angle="0" />
+          <move pos="-11,3" angle="0" />
+          <move pos="-11,3" angle="0" />
+        </moves>
+      </layer>
+      <layer name="boots" file="gfx\characters\boots" frames="5" scale="0.7" order="1">
+        <moves>
+          <move pos="0,29" angle="0" frame="1"/>
+        </moves>
+      </layer>      
+    </layers>
+  </ani>
+  <ani name="worker_fall" frames="3" framerate="10" order="12323232323">
+    <layers>
+      <layer file="gfx\characters\fall" frames="2" order="122"  scale="0.7"/>
+      <layer name="helm" frames="1" scale="0.7">
+        <moves>
+          <move pos="-10,-28" angle="0" frame="1"/>
+		  <move pos="-9,-29" angle="0" frame="1"/>
+        </moves>
+      </layer>
+      <layer name="arms" file="gfx\characters\arms_fall" mask="gfx\characters\arms_fall_c" frames="2" order="121" scale="0.7">
+        <moves>
+          <move pos="-7,-4" angle="0" />
+          <move pos="-5,-4" angle="0" />
+          <move pos="-7,-5" angle="0" />
+        </moves>
+      </layer>
+      <layer name="boots" file="gfx\characters\boots" frames="5" scale="0.7" order="155">
+        <moves>
+          <move pos="1,28" angle="0" frame="1"/>
+          <move pos="8,22" angle="0" frame="2"/>
+        </moves>
+      </layer>
+    </layers>
+  </ani>
+  <ani name="worker_fall_end" frames="8" framerate="12" continuously="false" >
+    <layers>
+      <layer file="gfx\characters\sit" frames="3" framerate="1" order="12222223"  scale="0.7">
+        <moves>
+          <move pos="0,7" angle="0" frame="1"/>
+          <move pos="0,0" angle="0" frame="2"/>
+        </moves>       
+      </layer>
+      <layer name="helm" frames="1" scale="0.7">
+        <moves>
+          <move pos="-12,-26" angle="0" frame="1"/>
+          <move pos="-7,-18" angle="-10" frame="2"/>
+          <move pos="-4,-27" angle="-27" frame="8"/>
+        </moves>
+      </layer>
+      <layer name="boots" file="gfx\characters\boots_sit" frames="3" scale="0.7" order="12222223">
+        <moves>
+          <move pos="19,25" angle="0" frame="1"/>
+          <move pos="17,21" angle="0" frame="2"/>
+          <move pos="5,23" angle="0" frame="8"/>
+        </moves>
+      </layer>
+      <layer name="arms" file="gfx\characters\arms_sit" mask="gfx\characters\arms_sit_c" frames="3" order="13333332" scale="0.7">
+        <moves>
+          <move pos="-16,5" angle="0" frame="2"/>
+          <move pos="-16,14" angle="0" frame="2"/>
+          <move pos="-13,3" angle="0" frame="8"/>
+        </moves>
+      </layer>
+      <layer file="gfx\characters\sit_extra" frames="4" order="01234000"  scale="0.7">
+        <moves>
+          <move pos="0,-25" angle="0" frame="1"/>
+        </moves>
+      </layer>
+    </layers>
+  </ani>
+  <ani name="worker_bow" file="gfx\characters\action" frames="4" framerate="10" order="1233321111111" scale="0.7">
+    <layers>
+      <layer name="helm" frames="1" scale="0.7">
+        <moves>
+          <move pos="-8,-27" angle="0" frame="1"/>
+          <move pos="-8,-27" angle="0" frame="2"/>
+          <move pos="-10,-28" angle="5" frame="3"/>
+          <move pos="-10,-28" angle="5" frame="4"/>
+        </moves>
+      </layer>
+      <layer name="tool" file="gfx\level_tiles\craft_tools\bow\bow_wooden" frames="1" scale="0.67">
+        <moves>
+          <move pos="7,7" angle="100"/>
+          <move pos="10,5" angle="110"/>
+          <move pos="9,-12" angle="160"/>
+        </moves>
+      </layer>
+      <layer name="arms" file="gfx\characters\arms_action" mask="gfx\characters\arms_action_c" frames="4" scale="0.7">
+        <moves>
+          <move pos="-10,-9" angle="0" />
+          <move pos="-8,-9" angle="0" />
+          <move pos="-8,-8" angle="0" />
+        </moves>
+      </layer>
+      <layer name="boots" file="gfx\characters\boots" frames="5" scale="0.7" order="1122">
+        <moves>
+          <move pos="0,28" angle="0" frame="1"/>
+        </moves>
+      </layer>
+    </layers>
+    <events>
+      <event name="load" frame="1"/>
+      <event name="shot" frame="5"/>
+    </events>
+  </ani>
+  
+  <!--Monsters-->
+  <!--fluffy-->
+  <ani name="fluffy_idle" file="gfx\characters\black_fluffy\BlackFluffy_move" frames="3" framerate="1" order="11112321111" isnew="false"/>
+  <ani name="fluffy_move" file="gfx\characters\black_fluffy\BlackFluffy_move" frames="3" framerate="15" order="11112341111" isnew="false"/>
+  <ani name="fluffy_attack" file="gfx\characters\black_fluffy\BlackFluffy_attack" frames="4" framerate="10" order="12341111" isnew="false">
+    <events>
+      <event name="shot" frame="4"/>
+    </events>
+  </ani>
+  <!--zombie-->
+  <ani name="zombie_move" file="gfx\characters\zombie\zombie_move" frames="4" framerate="5" isnew="false">
+    <events>
+       <!--<event name="b" frame="2"/
+       <event name="e" frame="4"/>-->
+    </events>
+  </ani>
+  <ani name="zombie_stop" file="gfx\characters\zombie\zombie" frames="1" framerate="10" isnew="false"/>
+  <ani name="zombie_attack" file="gfx\characters\zombie\zombie_attack" frames="4" framerate="4" isnew="false">
+    <events>
+      <event name="eff" frame="1"/>
+      <event name="shot" frame="3"/>
+    </events>    
+  </ani>
+  <!--zombie boss-->
+  <ani name="zombie_boss_move" file="gfx\characters\zombie\zombie_move" frames="4" framerate="5" isnew="true" scale="0.7">
+    <layers>
+      <layer file="gfx\characters\zombie\zombie-boss" frames="1" scale="0.6">
+        <moves>
+          <move pos="15,-30" angle="0" frame="1"/>
+          <move pos="17,-28" angle="0"/>
+          <move pos="17,-26" angle="0"/>
+          <move pos="16,-26" angle="0"/>
+        </moves>
+      </layer>
+    </layers>
+  </ani>
+  <ani name="zombie_boss_stop" file="gfx\characters\zombie\zombie" frames="1" framerate="10" scale="0.7">
+    <layers>
+      <layer file="gfx\characters\zombie\zombie-boss" frames="1" scale="0.6">
+        <moves>
+          <move pos="10,-30" angle="0" frame="1"/>
+        </moves>
+      </layer>
+    </layers>
+  </ani>
+  <ani name="zombie_boss_attack" file="gfx\characters\zombie\zombie_attack" frames="4" framerate="4" scale="0.7">
+    <layers>
+      <layer file="gfx\characters\zombie\zombie-boss" frames="1" scale="0.6">
+        <moves>
+          <move pos="6,-31" angle="0"/>
+          <move pos="15,-30" angle="0"/>
+          <move pos="18,-30" angle="0"/>
+          <move pos="15,-30" angle="0"/>
+        </moves>
+      </layer>
+    </layers>
+    <events>
+      <event name="eff" frame="1"/>
+      <event name="shot" frame="3"/>
+    </events>
+  </ani>  
+  <!--ghost-->
+  <ani name="ghost_stop" file="gfx\characters\ghost\ghost_anim" frames="3" framerate="1" order="1" isnew="false"/>
+  <ani name="ghost_move" file="gfx\characters\ghost\ghost_anim" frames="3" framerate="5" order="1" continuously="true" isnew="false"/>
+  <ani name="ghost_run" file="gfx\characters\ghost\ghost_anim" frames="3" framerate="10" order="1" continuously="true" isnew="false"/>
+  <!--slug-->
+  <ani name="slug_stop" file="gfx\characters\slug\slug" frames="1" framerate="1" isnew="false"/>
+  <ani name="slug_move" file="gfx\characters\slug\slug_a" frames="3" framerate="5" isnew="false">
+    <events>
+      <event name="b" frame="1"/>
+      <event name="e" frame="2"/>
+    </events>
+  </ani>
+  <!--skeleton-->
+  <ani name="skeleton_move" file="gfx\characters\skeleton\scltn_go" frames="5" framerate="10" isnew="false"/>
+  <ani name="skeleton_stop" file="gfx\characters\skeleton\scltn" frames="1" framerate="1" isnew="false"/>
+  <ani name="skeleton_attack" file="gfx\characters\skeleton\scltn_attack" frames="4" framerate="8" order="12341111" isnew="false">
+    <events>
+      <event name="eff" frame="1"/>
+      <event name="shot" frame="3"/>
+    </events>
+  </ani>
+  <!--imp-->
+  <ani name="imp_move" file="gfx\characters\spider\spider_jmp" frames="5" framerate="10" order="123452" isnew="false"/>
+  <ani name="imp_stop" file="gfx\characters\spider\imp" frames="1" framerate="1" isnew="false"/>
+  <ani name="imp_attack" file="gfx\characters\spider\spider_attack" frames="8" framerate="10" order="1234567683" continuously="false" isnew="false">
+    <events>
+      <event name="eff" frame="5"/>
+      <event name="shot" frame="7"/>
+    </events>
+  </ani>
+  <!--goblin-->
+  <ani name="goblin_move" file="gfx\characters\goblin\goblin3" frames="3" framerate="5" order="213" isnew="false" />
+  <ani name="goblin_stop" file="gfx\characters\goblin\goblin3" frames="3" framerate="1" order="1" isnew="false"/>
+  <ani name="goblin_attack" file="gfx\characters\goblin\goblin3_attack" frames="4" framerate="7" order="1234411" isnew="false">
+    <events>
+      <event name="shot" frame="3"/>
+    </events>
+  </ani>
+  <!--beholder-->
+  <ani name="beholder_move" frames="5" framerate="3" scale="1.2">
+    <layers>
+      <layer file="gfx\characters\beholder\beholder_anim" frames="5" order="11114" scale="1.2">
+        <moves>
+          <move pos="30,0"/>
+        </moves>
+      </layer>
+    </layers>
+  </ani>
+  <ani name="beholder_stop" file="gfx\characters\beholder\beholder" frames="1" framerate="1" scale="1.2"/>
+  <ani name="beholder_attack" frames="5" framerate="10" order="12324532">
+    <layers>
+      <layer file="gfx\characters\beholder\beholder_anim" frames="5" order="12324532" scale="1.2">
+        <!--<moves>
+          <move pos="30,0"/>
+        </moves>-->
+      </layer>
+    </layers>
+  <events>
+      <!--<event name="eff" frame="1"/>-->
+      <event name="shot" frame="4"/>
+    </events>
+  </ani>
+  <!--worm-->
+  <ani name="worm_face" file="gfx\characters\worm\worm_face_a" frames="3" framerate="5" isnew="false"/>
+  <ani name="worm_stop" file="gfx\characters\worm\worm_head_a" frames="3" framerate="1" order="3" isnew="false">
+    <layers>
+      <layer file="gfx\characters\worm\worm_tbody" frames="1" scale="1">
+        <moves>
+          <move pos="-59,0" frame="1"/>
+        </moves>
+      </layer>
+      <layer file="gfx\characters\worm\worm_tail" frames="1" scale="1">
+        <moves>
+          <move pos="-119,0" frame="1"/>
+        </moves>
+      </layer>
+    </layers>
+  </ani>
+  <ani name="worm_move" file="gfx\characters\worm\worm_head_a" frames="3" framerate="5" order="321" isnew="false">
+    <layers>
+      <layer file="gfx\characters\worm\worm_tbody" frames="1" scale="1">
+        <moves>
+          <move pos="-59,0" frame="1"/>
+        </moves>
+      </layer>
+      <layer file="gfx\characters\worm\worm_tail" frames="1" scale="1">
+        <moves>
+          <move pos="-119,0" frame="1"/>
+        </moves>
+      </layer>
+    </layers>
+    <events>
+      <event name="shot" frame="3"/>
+    </events>
+  </ani>
+  <!--spider-->
+  <ani name="spider_move" file="gfx\characters\spider\spider_a" frames="3" framerate="6" scale="0.3" />
+  <ani name="spider_stop" file="gfx\characters\spider\spider_a" frames="3" framerate="1" order="1" scale="0.3" />
+  <ani name="spider_attack" file="gfx\characters\spider\spider_a" frames="3" framerate="6" order="1313" scale="0.3">
+    <events>
+      <event name="shot" frame="4"/>
+    </events>
+  </ani>
+    
+  <!--Creatures-->
+  <ani name="creature_dies" file="gfx\characters\dead_anm" frames="6" framerate="7" continuously="false" scale="0.5" />
+
+  <!--Animals-->  
+  <!--chicken-->
+  <ani name="chicken_move" file="gfx\characters\animal\chicken" frames="2" framerate="15" isnew="false"/>
+  <ani name="chicken_stop" file="gfx\characters\animal\chicken" frames="2" framerate="15" order="2" isnew="false"/>
+  <!--sheep-->
+  <ani name="sheep_move" file="gfx\characters\animal\lamb_go" frames="3" framerate="10" order="1213" isnew="false"/>
+  <ani name="sheep_stop" file="gfx\characters\animal\lamb_go" frames="3" framerate="10" order="1" isnew="false"/>
+  <!--yak-->
+  <ani name="yak_move" file="gfx\characters\animal\boar_go" frames="3" framerate="10" order="1213" isnew="false" />
+  <ani name="yak_stop" file="gfx\characters\animal\boar_go" frames="3" framerate="10" order="1" isnew="false"/>
+
+  <!--Fishes-->
+  <!--piranha-->
+  <ani name="piranha_move" file="gfx\characters\piranha\piranha_go" frames="2" framerate="6" isnew="false"/>
+  <ani name="piranha_stop" file="gfx\characters\piranha\piranha" frames="1" framerate="1" isnew="false" />
+  <ani name="piranha_eat" file="gfx\characters\piranha\piranha_eat" frames="6" framerate="15" isnew="false"/>
+
+  <!--piranha_deep-->
+  <ani name="piranha_deep_move" file="gfx\characters\lightfish\lightfish_go" frames="3" framerate="6" isnew="false"/>
+  <ani name="piranha_deep_stop" file="gfx\characters\lightfish\lightfish_go" frames="3" framerate="1" order="1"  isnew="false" />
+
+</root>

@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<root>
+    <item name="dig_machine" gameobject="DigMachineEntity" properties="removable,dig_machine,dead_radius_x=2,nodig_under=2,can_fall" spine="dig_machine" spine_ani="off" spine_skin="base" size="180,120">
+        <params>
+            <param name="wheel_bones" value="wheel1,wheel2,wheel1_back,wheel2_back" />
+            <param name="dig_effect" value="dig_machine_dig" />
+            <param name="smoke_effect" value="dig_machine_smoke" />
+            <param name="smoke_bone" value="body" />
+            <param name="dig_ratio" value="0.5" />
+            <param name="start_velocity" value="15" />
+            <param name="move_velocity" value="10" />
+            <param name="wheel_radius_coeff" value="3" />
+            <param name="rail_capacity" value="" />
+            <param name="rail_res" value="" />
+            <param name="bridge_capacity" value="" />
+            <param name="bridge_res" value="" />
+            <param name="mana" value="1" />
+            <param name="mana_interval" value="60" />
+            <param name="auger_skin" value="iron_auger" />
+            <param name="wheel_skin" value="wheels_tree" />
+            <param name="light_on_event" value="light_on" />
+            <param name="light_off_event" value="light_off" />
+            <param name="light_bone" value="lamp2" />
+            <param name="sound_boring" value="dig_machine_boring" />
+            <param name="sound_move" value="dig_machine_move" />
+            <param name="sound_off" value="dig_machine_off" />
+            <param name="draw_offset" value="0,0" />
+            <param name="panel" value="extra_dig_machine_simple_panel" />
+        </params>
+        <states>
+            <state name="off" loop="true" ani="off" next_state="" />
+            <state name="warning" loop="true" ani="off_warning" next_state="" />
+            <state name="move" loop="true" ani="on" next_state="" />
+            <state name="dig" loop="true" ani="on_dig" next_state="" />
+            <state name="turning_on" loop="false" ani="off_to_on" next_state="move" />
+            <state name="turning_off" loop="false" ani="on_to_off" next_state="off" />
+        </states>
+        <images>
+            <image file="gfx/MonstersDLC/item_icons/iron_auger.png" />
+        </images>
+    </item>
+    <item name="dig_machine_crystal" gameobject="DigMachineEntity" properties="removable,dig_machine,dead_radius_x=2,nodig_under=2,buildonp=rail,can_fall" spine="dig_machine" spine_ani="off" spine_skin="base" size="180,120">
+        <params>
+            <param name="wheel_bones" value="wheel1,wheel2,wheel1_back,wheel2_back" />
+            <param name="dig_effect" value="dig_machine_dig" />
+            <param name="smoke_effect" value="dig_machine_smoke" />
+            <param name="smoke_bone" value="body" />
+            <param name="dig_ratio" value="0.1" />
+            <param name="start_velocity" value="15" />
+            <param name="move_velocity" value="10" />
+            <param name="wheel_radius_coeff" value="3" />
+            <param name="rail_capacity" value="30" />
+            <param name="rail_res" value="rail" />
+            <param name="bridge_capacity" value="10" />
+            <param name="bridge_res" value="stone_bridge" />
+            <param name="mana" value="1" />
+            <param name="mana_interval" value="60" />
+            <param name="auger_skin" value="crystal_auger" />
+            <param name="wheel_skin" value="wheels_iron" />
+            <param name="light_on_event" value="light_on" />
+            <param name="light_off_event" value="light_off" />
+            <param name="light_bone" value="lamp2" />
+            <param name="sound_boring" value="dig_machine_boring" />
+            <param name="sound_move" value="dig_machine_move" />
+            <param name="sound_off" value="dig_machine_off" />
+            <param name="draw_offset" value="0,-11" />
+            <param name="panel" value="extra_dig_machine_panel" />
+        </params>
+        <states>
+            <state name="off" loop="true" ani="off" next_state="" />
+            <state name="warning" loop="true" ani="off_warning" next_state="" />
+            <state name="move" loop="true" ani="on" next_state="" />
+            <state name="dig" loop="true" ani="on_dig" next_state="" />
+            <state name="turning_on" loop="false" ani="off_to_on" next_state="move" />
+            <state name="turning_off" loop="false" ani="on_to_off" next_state="off" />
+        </states>
+        <images>
+            <image file="gfx/MonstersDLC/item_icons/crystal_auger.png" />
+        </images>
+    </item>
+    <item name="pirate_ship" properties="static,item_part_lighting,sound=pirate_ship_ambient" spine="pirate_ship" spine_ani="idle" size="1300,900">
+        <behaviours>
+            <behaviour value="SpineSpliter" config="PirateShipSplit.xml" />
+            <behaviour value="AnimationBehaviour">
+                <track value="1" />
+                <states>
+                    <state name="idle" loop="true" ani="cannon_idle" next="" />
+                    <state name="reload" loop="false" ani="cannon_idle" next="aim" />
+                    <state name="aim" loop="true" ani="cannon_idle" next="" />
+                    <state name="attack" loop="false" ani="cannon_attack" next="idle" />
+                </states>
+            </behaviour>
+            <behaviour value="CannonBehaviour" config="PirateShipCannonBall.xml" />
+            <behaviour value="ShipCannonBehaviour">
+                <max_angle value="20" />
+                <min_enemy_count value="5" />
+                <interval value="4,6" />
+                <cannon_bone value="cannon_ground" />
+            </behaviour>
+            <behaviour value="UITimerBehaviour" />
+        </behaviours>
+    </item>
+    <item name="pirate_cannon" gameobject="CannonEntity" properties="pirate_cannon,removable,nodig_under=2,dead_radius=2,can_fall" spine="pirate_cannon" spine_ani="idle" size="180,60">
+        <behaviours>
+            <behaviour value="ItemEntityInfoPanel">
+                <layout value="extra_cannon_panel" />
+            </behaviour>
+            <behaviour value="AnimationBehaviour">
+                <states>
+                    <state name="idle" loop="true" ani="idle" next="" />
+                    <state name="reload" loop="false" ani="charge" next="aim" />
+                    <state name="aim" loop="true" ani="aim" next="" />
+                    <state name="attack" loop="false" ani="attack" next="idle" />
+                    <state name="warning" loop="true" ani="off_warning" next="" />
+                </states>
+            </behaviour>
+            <behaviour value="CannonBehaviour" config="CannonBall.xml" />
+        </behaviours>
+        <params>
+            <param name="interval" value="5" />
+            <param name="max_angle" value="20" />
+            <param name="min_enemy_count" value="3" />
+            <param name="ammunition_refil_item" value="cannon_ammo" />
+            <param name="light_bone" value="root" />
+            <param name="light_on_event" value="light_on" />
+            <param name="light_off_event" value="light_off" />
+        </params>
+    </item>
+    <!-- <item name="pirate_cannon" gameobject="PirateCannonEntity" properties="pirate_cannon,removable,nodig_under=2,dead_radius=2" spine="pirate_cannon" spine_ani="idle" size="180,60">
+        <params>
+            <param name="interval" value="5" />
+            <param name="damage" value="1" />
+            <param name="attack_event" value="attack" />
+            <param name="core_off_event" value="core_off" />
+            <param name="light_on_event" value="light_on" />
+            <param name="light_off_event" value="light_off" />
+            <param name="shot_light_on_event" value="explosion_light_on" />
+            <param name="shot_light_off_event" value="explosion_light_off" />
+            <param name="shot_sound" value="cannon_shot" />
+            <param name="rotate_bone" value="cannon" />
+            <param name="max_angle" value="20" />
+            <param name="max_distance" value="20" />
+            <param name="muzzle_bone" value="aim" />
+            <param name="min_enemy_count" value="3" />
+            <param name="light_bone" value="root" />
+            <param name="max_ammunition" value="10" />
+            <param name="ammunition_refil_item" value="cannon_ammo" />
+        </params>
+        <states>
+            <state name="idle" loop="true" ani="idle" next_state="" />
+            <state name="reload" loop="false" ani="charge" next_state="aim" />
+            <state name="aim" loop="true" ani="aim" next_state="" />
+            <state name="attack" loop="false" ani="attack" next_state="idle" />
+            <state name="warning" loop="true" ani="off_warning" next_state="" />
+        </states>
+    </item> -->
+    <item name="lighthouse" gameobject="PirateLighthouseEntity" properties="pirate_lighthouse,nodig_under=2" spine="lighthouse" spine_ani="lighthouse" spine_skin="forest_basics" size="180,300">
+        <params>
+            <param name="forest_prefix" value="forest_" />
+            <param name="winter_prefix" value="winter_" />
+            <param name="ruins_postfix" value="_ruins" />
+            <param name="common_part" value="basics" />
+            <param name="parts" value="bottom,middle,top" />
+            <param name="parts_books" value="lighthouse_part1,lighthouse_part2,lighthouse_part3" />
+            <param name="activator" value="lighthouse_activator" />
+            <param name="ship" value="pirate_ship.map" />
+            <param name="spawn_sound" value="pirate_ship_mooring" />
+            <param name="tutorial" value="pirate" />
+            <param name="light_bone" value="crystal" />
+            <param name="build_effect" value="lighthouse_hummers" />
+            <param name="build_bones" value="effect1,effect2,effect3,effect4,effect5" />
+        </params>
+        <states>
+            <state name="inactive" loop="true" ani="lighthouse" next_state="" />
+            <state name="off" loop="false" ani="lighthouse_off" next_state="inactive" />
+            <state name="on" loop="false" ani="lighthouse_on" next_state="active" />
+            <state name="active" loop="true" ani="lighthouse_active" next_state="" />
+        </states>
+        <sounds>
+            <sound play="lighthouse_on" on_event="sound_on" />
+            <sound play="lighthouse_off" on_event="sound_off" />
+        </sounds>
+    </item>
+    <item name="library" properties="nodig_under=2,dead_radius=2,removable,device,library,efficiency=x0.2,can_fall" light="2" spine="library" spine_ani="off" size="180">
+        <params>
+            <param name="front_spine" value="" />
+            <param name="front_off" value="" />
+            <param name="front_on" value="" />
+            <param name="back_spine" value="library" />
+            <param name="back_off" value="off" />
+            <param name="back_on" value="on" />
+            <param name="dust" value="trash_stone" />
+            <param name="sound_work" value="library" />
+        </params>
+        <images>
+            <image file="gfx/MonstersDLC/item_icons/Library_icon.png" />
+        </images>
+    </item>
+    <item name="scorpio_base" properties="scorpio_base,nodig_under=3" size="420" gameobject="ScorpioBaseEntity" spine="scorpio_base" spine_ani="idle">
+        <params>
+            <param name="elevator_bone" value="sphinx" />
+            <param name="attack_bone" value="cyrcle" />
+            <param name="attack_magic_item" value="sphinx_fireball" />
+            <param name="attack_magic_count" value="3" />
+            <param name="self_luminate" value="cyrcle,glow_words,glow_figure" />
+            <param name="attack_interval" value="10" />
+            <param name="appear_sound" value="sphinx_appearance" />
+        </params>
+        <states>
+            <state name="idle" loop="true" ani="idle" next_state="" />
+            <state name="show" loop="false" ani="arrive" next_state="idle" />
+            <state name="hide" loop="false" ani="death" next_state="" />
+            <state name="attack" loop="false" ani="idle" next_state="idle" />
+        </states>
+    </item>
+    <item name="incubator" properties="nodig_under=1,removable,incubator,can_fall,dead_radius_y=2" spine="incubator" spine_ani="off" gameobject="IncubatorEntity">
+        <behaviours>
+            <behaviour value="IncubatorBehaviour" config="IncubatorBehaviour.xml" />
+            <behaviour value="LayoutHintBehaviour" config="IncubatorHint.xml" />
+        </behaviours>
+        <params>
+            <param name="fire_bone" value="root" />
+            <param name="egg_bone" value="egg" />
+        </params>
+        <states>
+            <state name="off" loop="true" ani="off" next_state="" />
+            <state name="on" loop="true" ani="on" next_state="" />
+        </states>
+    </item>
+    <item name="sphinx_fireball" effect="spell_fireball_tail" size="120" properties="magic_fireball,healt=-1,radius=2,count=5,creature=worker|tesla_tower|arrow_tower|animal">
+        <params>
+            <param name="effect_done" value="spell_fireball" />
+            <param name="sound_done" value="fireball_explode" />
+            <param name="sound_cast" value="fireball" />
+        </params>
+    </item>
+    <item name="service_sand_temple" properties="static,item_part_lighting" spine="sand_temple" offsety="" spine_ani="off" size="420,360">
+        <behaviours>
+            <behaviour value="SpineSpliter">
+                <split_slot value="bottom" />
+                <first_layer value="15" />
+                <second_layer value="88" />
+            </behaviour>
+            <behaviour value="ScorpioTempleBehaviour">
+                <torch_effect value="fire" />
+                <torch_bones value="fire_left,fire_right" />
+                <runes value="rune1_desert,rune2_desert,rune3_desert,rune4_desert,rune5_desert,rune6_desert" />
+                <states>
+                    <state name="off" ani="off" loop="true" />
+                    <state name="on" ani="on" loop="true" />
+                </states>
+            </behaviour>
+        </behaviours>
+    </item>
+    <item name="sand_room_door" properties="nodig_under=1,prison_door,healt=100,dead_radius_x=1,dead_radius_y=2,no_dig_x=1,no_dig_y=1" spine="sand_room_door" spine_ani="closed">
+        <params>
+            <param name="drop" value="rune1_desert,rune2_desert,rune3_desert,rune4_desert,rune5_desert,rune6_desert" />
+            <param name="baseChance" value="5" />
+            <param name="crash_drop" value="stone-5|10,iron-4|6" />
+            <param name="low_monsters" value="skeleton,zombie,zombie_solder,scarab_defender,gorgoyle_mummy,mummy" />
+            <param name="high_monsters" value="zombie_boost,zombie,scarab_defender,gorgoyle_mummy,mummy" />
+        </params>
+        <states>
+            <state name="closed" loop="true" ani="closed" next_state="" />
+            <state name="open" loop="false" ani="open" next_state="opened" />
+            <state name="opened" loop="true" ani="opened" next_state="" />
+        </states>
+    </item>
+    <item name="sand_rune_door" properties="nodig_under=1,ancient_door,dead_radius_x=1,dead_radius_y=2,no_dig_x=1,no_dig_y=1" spine="sand_rune_door" spine_ani="closed">
+        <params>
+            <param name="drop" value="regen_ring1,regen_ring2,regen_ring3,skills_ring1,skills_ring2,skills_ring3,undead_amulet1,undead_amulet2,undead_amulet3,miner_amulet1,miner_amulet2,miner_amulet3" />
+            <param name="baseChance" value="20" />
+            <param name="crash_drop" value="stone-5|10,iron-4|6" />
+            <param name="runes" value="rune1_desert,rune2_desert,rune3_desert,rune4_desert,rune5_desert,rune6_desert" />
+        </params>
+        <states>
+            <state name="closed" loop="true" ani="closed" next_state="" />
+            <state name="open" loop="false" ani="open" next_state="opened" />
+            <state name="opened" loop="true" ani="opened" next_state="" />
+        </states>
+    </item>
+</root>

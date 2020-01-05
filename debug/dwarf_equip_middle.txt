@@ -1,0 +1,4 @@
+steel_chain_armor,hitin_armor
+helm_steel,helm_silver
+iron_boots,silver_boots
+sword_iron,mstaff,rifle,bow_long,sword_silver

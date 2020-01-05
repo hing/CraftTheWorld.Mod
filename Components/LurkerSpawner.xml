@@ -1,0 +1,28 @@
+<root>
+
+    <!-- conditions -->
+    <visit_freq value="0.1"/>
+    <visit_duration_min value="2"/>
+    <active_duration_min value="10"/>
+    <level value="7"/>
+
+    <!-- colony -->
+    <population value="2,5"/>
+    <visible_units_p value="30,60"/>
+    <spawn_interval_min value="20"/>
+    <distance value="15"/>
+    <distance_to_warehouse value="30"/>
+    <max_colonies value="4"/>
+
+    <!-- wakeup scores for LurkerColonyAwakener -->
+    <score_radius value="3"/>
+    <score_dig value="3"/>
+    <score_walk value="2"/>
+    <score_build value="1"/>
+
+    <wakeup_duration value="0.5"/>
+    <mob value="lurker"/>
+
+    <!-- common -->
+    <event_position_change value="DwarfBlockChange"/>
+</root>

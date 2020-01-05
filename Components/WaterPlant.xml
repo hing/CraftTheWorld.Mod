@@ -1,0 +1,20 @@
+<root>
+    <behaviours>
+        <beaviour value="SpineBehaviour" saveable="true">
+            <spine value="water_plant"/>
+            <skins value="1_skin,2_skin,3_skin,4_skin,5_skin"/>
+            <animation value="animation"/>
+            <pause_instead_fake value="true"/>
+        </beaviour>
+        <beaviour value="SpineRenderBehaviour"  saveable="true">
+            <draw_order value="15"/>
+            <offset value="0,0.5"/>
+        </beaviour>
+        <beaviour value="DestroyWaterEmptyBehaviour" saveable="true" >
+            <fade value="1"/>
+        </beaviour>
+        <beaviour value="DestroyOnCrashBehaviour" saveable="true" >
+            <offset value="0,1"/>
+        </beaviour>    
+    </behaviours>
+</root>

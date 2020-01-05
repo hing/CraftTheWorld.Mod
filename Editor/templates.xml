@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+  Warning!!! 
+All unused parameters that are given here for an example should be deleted in order to avoid errors 
+-->
+<root>
+
+  <!-- new planets type
+    attributes:
+  name - unique planet name
+  default - if true, allows the use of all items in the game, which do not have a binding to planetary types, in most cases the value must be true
+  local - title of planet, binds to lang/[current_language]/data/local.xml
+  temp - temperature template
+  fauna - fauna template
+  landscape - landscape template
+  file - level config file
+  file_tmp - level config file for multiplayer mode
+   -->
+  <planets>
+    <!--Put here new lines for creating a new planets-->
+    <planet name="my_planet" default="true" local="my_planet_locale" temp="normal" fauna="normal" landscape="mountains" file="levels/my_planet.xml" file_tmp="levels/my_planet_truemp.xml"/>
+  </planets>
+
+  <!-- replace block in planets -->
+   <!-- 
+   For each type of planet, you can specify a list of replacement blocks for other
+    -->
+  <block_replace>
+    <my_planet> 
+    <!-- for example, replace 'dirt' blocks to 'dirt_new' in planet 'my_planet' -->
+      <dirt to="dirt_new"/>
+    </my_planet>  
+  </block_replace>
+
+
+  <!-- patterns for vegetation -->
+  <!-- 
+    For each planet you need to specify one or more types of vegetation
+      attributes:
+    name - name of tree block
+    points - percentage of filling the level with this type of tree
+    height - range of trees height
+  -->
+  <vegetation>
+    <my_planet> <!-- name of planet -->
+      <item name="tree" points="5%" height="1-4"/>
+      <item name="tree_pine" points="8%" height="1-5"/>
+    </my_planet>
+  </vegetation>
+
+  <!--
+  generation of a surface from a specific type of block for the specified planets
+    attributes:
+  planets - list of planet types separated by comma
+  range - height of surface layer
+  oasis - percentage of the size of the surface occupied by dirt oases
+  oasisRange - range of oases width
+  block - block used to fill the surface
+  -->
+  <surfaces>
+    <surface planets="my_planet" range="2-5" oasis="20%" oasisRange="5-15" block="sand"/>
+  </surfaces>
+
+ <!--
+  planet sizes
+    attributes:
+  [node name] - name of size, in example 'my_size'
+  value - level size [width,height]
+  local - title of size, binds to lang/[current_language]/data/local.xml
+  exclude - comma separated exclude planet types
+  include - comma separated include planet types
+  -->
+  <sizes>
+    <my_size value="200,100" local="my_size_local" exclude="underground"/>
+    <my_second_size value="250,140" local="my_size1_local" exclude="underground"/>
+  </sizes>
+
+ <!--
+  custom humidity templates
+    attributes:
+  [node name] - name of humidity template, in example 'my_humidity'
+  rainInterval - interval between rains
+  rainDuration - rain duration
+  mrain - Chance of mushroom rain
+  rain - Chance of rain
+  storm - Chance of storm Rain
+  waterAbsorb - basic water absorption time
+  smallWARatio - coefficient. for the base time of water absorption in the formula for a single water strip
+  waterPondsArea - percentage of the length of reservoirs from the length of the level
+  waterPondHeight - maximum depth of pond
+  waterPondWidth - maximum width of pond
+  -->
+  <humidity>
+    <my_humidity local="my_humidity_locale">
+      <rainInterval value="100-500"/>
+      <rainDuration value="10-30"/>
+      <mrain value="65%"/>
+      <rain value="30%"/>
+      <storm value="5%"/>
+      <waterAbsorb value="200"/>
+      <smallWARatio value="0.2"/>
+      <waterPondsArea value="5%"/>
+      <waterPondHeight value="2-4"/>
+      <waterPondWidth value="5-10"/>
+    </my_humidity>
+  </humidity>
+</root>
+
+ <!--
+  replacement of creatures depending on the type of planet
+  -->
+  <creatures>
+    <my_planet> <!-- planet type name -->
+      <chicken bind="duck"/>  <!-- replace chicken to duck -->
+      <slug bind="toad"/>
+    </my_planet>
+  </creatures>
+
+
+    <!--
+    patterns of fauna or creatures, determine the availability of creatures for each planet
+      attributes:
+    enableAll - the default accessibility of all creatures for a given planet
+    name - name of creature
+    enabled - enable or disable creature
+    -->
+  <fauna>
+    <my_planet enableAll="false">
+      <creature name="sheep" enabled="true"/>
+      <creature name="yak" enabled="true"/>
+      <creature name="skeleton" enabled="true"/>
+    </my_planet>
+  </fauna>
+
+
+    <!--
+    template for the backgrounds of the planets
+    -->
+  <backgrounds>
+    <my_planet>   <!-- name of planet -->
+      <layers>
+         <!-- standart layer for sky background-->
+        <layer fullscreen="true"> 
+          <day file="gfx\level_tiles\BG\sky_day"/>
+          <sunset file="gfx\level_tiles\BG\sky_sunset"/>
+          <night file="gfx\level_tiles\BG\sky_night"/>
+        </layer>
+
+        <!-- 
+        layer for background image
+          attributes:
+        offset - image offset
+        spine - spine`s json file name from path: gfx
+        -->
+        <layer repeat="true" scale="1" offset="0,300" spine="gfx/bg/background.json" spine_size="1920,670" parallax_ratio="0.11,0.11">
+          <anims>
+            <day anim="day"/>
+            <night anim="night"/>
+            <day_night anim="day_to_night"/>
+            <night_day anim="night_to_day"/>
+          </anims>
+        </layer>
+
+      <!-- standart layer for clouds. Can be replaced or removed -->
+        <layer velocity="5,15" type="cloud" spine="gfx/Spine/environment/backgrounds/clouds/new_hope_cloud_01.json" spine_size="334,74">
+          <anims>
+            <day anim="day"/>
+            <night anim="night"/>
+            <day_night anim="day_to_night"/>
+            <night_day anim="night_to_day"/>
+          </anims>
+        </layer>
+        <layer velocity="5,15" type="cloud" spine="gfx/Spine/environment/backgrounds/clouds/new_hope_cloud_02.json" spine_size="615,198">
+          <anims>
+            <day anim="day"/>
+            <night anim="night"/>
+            <day_night anim="day_to_night"/>
+            <night_day anim="night_to_day"/>
+          </anims>
+        </layer>
+        <layer velocity="5,15" type="cloud" spine="gfx/Spine/environment/backgrounds/clouds/new_hope_cloud_03.json" spine_size="568,157">
+          <anims>
+            <day anim="day"/>
+            <night anim="night"/>
+            <day_night anim="day_to_night"/>
+            <night_day anim="night_to_day"/>
+          </anims>
+        </layer>
+      </layers>
+    </my_planet>
+  </backgrounds>

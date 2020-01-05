@@ -1,0 +1,38 @@
+<root>
+  <border name="grottoes_stalactite">
+    <layers>
+        <layer offset="10,28" align="4">
+            <file path="gfx\GrottoesDLC\borders/borders_stalactite_01"/>
+            <file path="gfx\GrottoesDLC\borders/borders_stalactite_02"/>
+            <file path="gfx\GrottoesDLC\borders/borders_stalactite_03"/>
+        </layer>
+    </layers>
+  </border>
+    <border name="grottoes_stalactite_all">
+    <layers>
+        <layer offset="10,28" align="4">
+            <file path="gfx\GrottoesDLC\borders/borders_stalactite_all_01"/>
+            <file path="gfx\GrottoesDLC\borders/borders_stalactite_all_02"/>
+            <file path="gfx\GrottoesDLC\borders/borders_stalactite_all_03"/>
+        </layer>
+    </layers>
+  </border>
+  <border name="grottoes_stalagmite">
+    <layers>
+        <layer offset="10,10" align="1">
+            <file path="gfx\GrottoesDLC\borders/borders_stalagmite_01"/>
+            <file path="gfx\GrottoesDLC\borders/borders_stalagmite_02"/>
+            <file path="gfx\GrottoesDLC\borders/borders_stalagmite_03"/>
+        </layer>
+    </layers>
+  </border>
+  <border name="grottoes_stalagmite_all">
+    <layers>
+        <layer offset="10,10" align="1">
+            <file path="gfx\GrottoesDLC\borders/borders_stalagmite_all_01"/>
+            <file path="gfx\GrottoesDLC\borders/borders_stalagmite_all_02"/>
+            <file path="gfx\GrottoesDLC\borders/borders_stalagmite_all_03"/>
+        </layer>
+    </layers>
+  </border>  
+</root>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <ratios>
+    <ratio name="gargoyley" weight="1.5" count="4" level="8"/>
+    <ratio name="beholder" weight="2" />
+    <ratio name="zombie_boss" weight="4" exclude_planets="underground"/>
+    <ratio name="zombie" weight="10" exclude_planets="underground"/>
+    <ratio name="skeleton" weight="15" necessarily="true"/>
+    <ratio name="skeleton_boss" weight="1" />
+
+    <ratio name="skeleton_archer" weight="15"  exclude_planets="underground"/>
+    <ratio name="zombie_armorbreaker" weight="2"  exclude_planets="underground"/>
+    <ratio name="thrower_giant" weight="1" exclude_planets="underground"/>
+
+    <ratio name="cave_goblin_green" weight="15"/>
+    <ratio name="cave_beast_invasion" weight="10"/>
+    <ratio name="orc" weight="6"/>
+    <ratio name="orc_boss" weight="2"/>
+  </ratios>
+</root>

@@ -1,0 +1,155 @@
+group;name;title;type;min;max;required_property;values;equipment slots;exclude equipment slots;tooltip;default;none;parent
+// name prefix
+// ! - use as attribute
+// * - use as param
+// & - set value to all childrens
+// # - can multiple values separated by |
+// @ - hide slide bar
+
+food;satiety;;float;0;10;;;;;;0
+food;healt;amount of health to restore;float;0;5;;;;;;0
+food;@time;effect time;float;0;9999;;;;;;0
+food;elixir;;check;0;0;;;;;note: the item should be used on a dwarf, one-off
+food;aura;aura effect;switch;0;0;elixir;spell_speed,spell_slowdown,spell_rage
+food;bone;aura effect place;switch;0;0;elixir;effect
+food;speed;speed up;ratio;1;5;elixir
+separator
+
+all;!dlc;dlc;string;0;0
+separator
+
+equip;level;item level;int;0;5;;;item;;visual display of the item level;0
+equip;add_res;add item;string;0;0;;;;;as soon as this item appears in the inventory, adds the indicated item to the inventory (basically used to add arrows or bullets) 
+equip;container_for;container for;string;0;0;;;item;;use this item as a container for another item during mining or collection
+equip;regen_healt;health regen speed;procent;0;0;;;item;;percentage of maximum health per minute
+equip;slowdown;slowdown;procent;0;30;;;;;percentage of the effect of reducing the speed of owner movement
+separator
+equip;attack;attack;ratio;0;10;;;pick,axe,weapon;;damage given by the coefficient to the base attack
+equip;speed;tool speed;ratio;1;30;;;pick,axe;;speed of mining or cutting
+equip;poison;poisoning damage;float;0;10;;;pick,axe,weapon;;additionally inflicts poison damage;0
+equip;get_healt;return health;procent;0;50;;;pick,axe,weapon;;percentage of damage that restores the health of the owner
+separator
+equip;missile;ranged weapon;check;0;0;;;weapon
+equip;accuracy;ranged weapon accuracy;float;0;1;missile;;weapon;;;0
+equip;distance;ranged weapon distance;int;0;10;missile;;weapon;;;0
+separator
+equip;pistol;is pistol;check;1;0;missile;;weapon
+sameline
+equip;rifle;is rifle;check;1;0;missile;;weapon
+equip;spine;gun weapon spine;spine;0;10;pistol,rifle;;weapon;;gun weapon spine animation prefab
+equip;*idle;gun idle ani;ani;0;10;pistol,rifle;;weapon;;;;;spine
+equip;*action;gun shot ani;ani;0;10;pistol,rifle;;weapon;;;;;spine
+equip;*sound_shot;gun shot sound;sound;0;10;missile;;weapon;;
+equip;*sound_reload;gun reload sound;sound;0;10;pistol,rifle;;weapon;;
+equip;*ammo;used ammo;string;0;0;missile;;weapon;;comma separated list of used ammo items
+skip;flamethrower;flamethrower;file_list;0;10;rifle;gfx/particles/*.xml;weapon;;
+separator
+equip;heavy;is heavy weapon;check;1;0;missile;;weapon
+equip;heavy;heavy projectile count;int;0;10;heavy;;weapon;;;0
+equip;magic_staff;is magic staff;check;1;0;missile;;weapon
+equip;magic_staff;magic staff lighting sparks count;int;0;10;magic_staff;;weapon;;;0
+equip;arrow;is arrow;check;0;0;;;weapon;;arrow use second image for draw arrow in game
+equip;bullet;is bullet;check;0;0;;;weapon;;bullet use second image for draw bullet in game
+equip;size;ammo size;float;0;1;arrow,bullet;;weapon;;;0
+equip;life;ammo lifetime;float;0;50;arrow,bullet;;weapon;;;0
+equip;hit_sound;arrow hit sound;sound;0;0;arrow,bullet;;weapon
+equip;light;enable lighting;check;0;0;arrow,bullet;;weapon
+equip;light;light radius;int;1;5;light;;weapon;;;0
+equip;intensity;light intensity;float;0;1;light;;weapon;;;0
+separator
+equip;*sound_hit_metall;hit metall sound;sound;0;10;!missile,!arrow,!bullet;;weapon,pick,axe;;leave empty for default values
+equip;*sound_hit_stone;hit stone sound;sound;0;10;!missile,!arrow,!bullet;;weapon,pick,axe;;leave empty for default values
+equip;*sound_hit_body;hit body sound;sound;0;10;!missile,!arrow,!bullet;;weapon,pick,axe;;leave empty for default values
+equip;*sound_hit_other;hit other sound;sound;0;10;!missile,!arrow,!bullet;;weapon,pick,axe;;leave empty for default values
+separator
+equip;armor;armor;procent;0;300;;;helmet,armor,boots,item;;percentage of base armor
+equip;capacity;;int;0;3;;;item;;increase the number of items a dwarf can carry;0
+separator
+equip;apply_tool1;use as Pick;check;0;0;;;pick,axe;;dwarfs can use this item for mining
+sameline
+equip;apply_tool2;use as Axe;check;0;0;;;pick,axe;;dwarf can use this item to cut trees 
+equip;miner_drop;chance to get more ore when mining;procent;0;0;apply_tool1;;pick;none
+equip;iron;apply Iron material(for sound effects);check;0;0;;;pick,axe,weapon
+sameline
+equip;mithril;apply Mithril damage on some creatures;check;0;0;;;pick,axe,weapon
+equip;sword;apply Sword animation;check;0;0;;;pick,axe,weapon
+sameline
+equip;mace;apply Mace animation;check;0;0;;;pick,axe,weapon
+equip;spear;apply Spear animation;check;0;0;;;pick,axe,weapon
+sameline
+equip;dagger;apply Dagger animation;check;0;0;;;pick,axe,weapon
+separator
+equip;base_weapon;base weapon;check;0;0;;;pick,axe,weapon
+equip;base_helmet;base helmet;check;0;0;;;helmet
+equip;base_cloth;base cloth;check;0;0;;;armor,boots
+equip;female;for female;check;0;0;base_helmet,base_cloth;;armor,boots,helmet;;;
+equip;jetpack;give jetpack;check;0;0;;;item
+equip;parachute;give parachute;check;0;0;;;item;;
+equip;autoladders;give auto ladders;check;0;0;;;item;;
+equip;hair_enable;don`t hide hairs;check;0;0;;;helmet;;do not hide the gnome's hair when equip a helmet
+equip;hide_beard;hide beard;check;0;0;;;helmet;;hide the gnome's beard when equip a helmet
+equip;infinity_count;infinity count;check;0;0;
+equip;constant_hat;forbid to take off helmet;check;0;0;;;helmet;;forbid dwarven women to take off this helmet
+equip;disable_drag;forbid to drag item in inventory;check;0;0;
+separator
+
+equip;magic_elexir;spell elixir;check;0;0;;;none;;allows the mage to cast a spell
+equip;magic_item;spell;switch;0;9;magic_elexir;magic_fireball,magic_spark,magic_icearrow,magic_transform;none
+equip;attack;is attack spell;check;0;0;magic_elexir;;none;;
+
+separator
+equip;elixir;;check;0;0;;;none;;note: the item should be used on a dwarf, one-off
+equip;mana;;int;0;100;elixir;;none;;amount of mana regenerated;0
+equip;healt;amount of health to restore;float;0;10;elixir;;none;;;0
+equip;time;effect time;float;0;1000;elixir;;none;;;0
+equip;satiety;;float;0;10;elixir;;none;;;0
+equip;aura;aura effect;switch;0;0;elixir;spell_speed,spell_slowdown,spell_rage;none
+equip;bone;aura effect place;switch;0;0;elixir;effect;none
+equip;speed;speed up;ratio;1;5;elixir;;none
+equip;damage;increase damage ratio;ratio;1;5;elixir;;none
+equip;forget;forget all skills;check;0;0;elixir;;none;;after using the dwarf forgets all his skills
+equip;revival;resurrects the dwarf;check;0;0;elixir;;none
+equip;lycanthrope;lycanthrope;float;-100;100;elixir;;none;;;0
+equip;undead_armor;undead armor;procent;0;100;;;;none;percentage reduction of undead damage (passive)
+separator
+equip;skill_value;skill change value;procent;0;100;;;;none;increase selected skills on this percentage value (passive)
+equip;skill_scroll;scroll of skill;check;0;0;;;none;;note: the item should be used on a dwarf, one-off
+equip;skill;skills;multi_select;0;9;;logger,miner,fisher,swordsman,archer,cook,smith,carpenter,mage,miller,hunter,climber,swimmer,stonecutter
+separator
+equip;dskin;skin(deprecated);switch;0;0;;armor_dragon,armor_elven,armor_funny_sceleton,armor_gold,armor_hitin,armor_knight,armor_leather,armor_mithril,armor_santa,armor_scaled_armor,armor_silver,armor_steel,armor_wood,boots_desert_sandals,boots_desert_shoes,boots_dragon,boots_elven,boots_funny_sceleton,boots_gold,boots_hitin,boots_knight,boots_leather,boots_mithril,boots_scaled_armor,boots_silver,boots_steel,boots_winter_boots,boots_winter_shoes,bow_elven_bow,bow_frostling_bow,bow_iron_bow,bow_mechanical_bow,bow_wooden_bow,cloth_01,cloth_02,cloth_03,cloth_04,cloth_asian_01,cloth_asian_02,hat_angel_costume,hat_asian_hat_01,hat_asian_hat_02,hat_basick_hat,hat_bat,hat_beret_hat,hat_cloak_hat,hat_demon_costume,hat_demon_hunter,hat_desert_hat_01,hat_desert_hat_02,hat_diver_helm,hat_dragon,hat_elven_helmet,hat_funny_sceleton,hat_gold_helmet,hat_hitin_helmet,hat_jason_mask,hat_knight_helmet,hat_leather_helmet,hat_mask,hat_mithril_helmet,hat_northman_hat,hat_pirate,hat_pumpkin,hat_rusty_sceleton_helmet,hat_santa_hat,hat_scaled_armor_helmet,hat_shaman_cloak,hat_silver_helmet,hat_spider,hat_steel_helmet,hat_tinker_hat,hat_wint_cloak_hat,hat_witch,hat_witch2,hat_wood_helmet,hat_woodman_hat,shield_01,shield_02,shield_03,shield_funny_sceleton,weapon_axe,weapon_beatle_poisonous_club,weapon_cave_goblin_excellent_saber,weapon_cave_goblin_picke,weapon_cave_goblin_saber,weapon_cave_goblin_spear,weapon_cave_goblin_wornout_saber,weapon_club,weapon_dragon_sword,weapon_elven_spear,weapon_frostling_spear,weapon_funny_sceleton_club,weapon_goblin_spear,weapon_godeus_sword,weapon_iron_club,weapon_knight_sword,weapon_mithril_axe,weapon_mithril_hammer,weapon_mithril_pickaxe,weapon_mithril_staff,weapon_mithril_sword,weapon_orc_sword,weapon_rusty_mummy_saber,weapon_rusty_sceleton_heavy_mace,weapon_rusty_sceleton_mace,weapon_rusty_sceleton_saber,weapon_shaman_staff,weapon_silver_sword,weapon_staff,weapon_steel_sword,weapon_stone_axe,weapon_stone_dagger,weapon_stone_picke,weapon_wooden_staff,weapon_zombie_spear,weapon_zombie_spear_02,backpack_01,backpack_02;;;the name of the skin of the item from the predefined values
+sameline
+equip;dskin_gender_depend;skin gender depend (deprecated);check;0;0;;;;;adds at the end of the name of the skin "_male" or "_female"
+separator
+
+block;comfort;;float;0;5;;;;;;0
+block;wall;show durability;check;0;0;;;;;show durability in workshop inventory
+separator
+furniture;comfort;;float;0;5;;;;;;0
+separator
+
+mining;rune;rune;check;0;0;
+separator
+
+all;allow_craft;allow craft;check;0;0;;;;;forcibly allow you to craft an item even if it is not in the technology tree 
+all;no_shop;remove from Shop;check;0;0
+sameline
+all;no_char_inv;remove from Character inventory;check;0;0
+sameline
+all;no_inv;remove from Workshop inventory;check;0;0
+all;no_back_craft;forbid item disassemble;check;0;0
+sameline
+all;shine;shine effect;check;0;0
+all;library_book;library book;check;0;0;;
+all;tech_scroll;technology scroll;check;0;0;;
+all;tech_ratio;technology ratio;ratio;0;10;;;;;technology flow rate when crafting
+all;secret_item;secret item;check;0;0;;
+all;max_count;limit the maximum amount;check;0;0;;;;;;
+all;max_count;count;int;0;9999;max_count;;;;;0
+all;magic;magic;check;0;0;;
+all;point_click;point click action;check;0;0;magic;
+all;vip;unique item;check;0;0;;
+
+skip;metallic
+skip;ani_items
+skip;no_as_bonus
+skip;wooden

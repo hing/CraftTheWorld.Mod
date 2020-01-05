@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <ratios>
+    <ratio name="skeleton_heavy" weight="6" level="8" exclude_planets="underground"/>
+    <ratio name="vivern_boss_underworld" weight="2" level="8"/>
+ </ratios>
+</root>

@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<root>
+    <recipe name="block_land_01" ingredients="" produce="block_land_01" group="1" pak="Highland DLC" />
+    <recipe name="block_stone_01" ingredients="" produce="block_stone_01" group="1" pak="Highland DLC" />
+    <recipe name="bookcase" ingredients="rags_hl-1,plank-4,nail-5,wood-6,wood-7,bookcase_broken-8,plank-9" produce="bookcase" group="1" craft_need="workbench" pak="Highland DLC" />
+    <recipe name="bookshelf_lm" ingredients="wood-1,paper-2,nail-3,paper-4,bookshelf_lm_broken-5,rags_hl-6,plank-7,paper-8,wood-9" produce="bookshelf_lm" group="1" craft_need="workbench" pak="Highland DLC" />
+    <recipe name="chest_ordinary" ingredients="nail-4,plank-5,steel-7,chest_ordinary_broken-8,rags_hl-9" produce="chest_ordinary" group="1" craft_need="workbench" pak="Highland DLC" />
+    <recipe name="column_luxury" ingredients="stone-4,column_luxury_broken-5,grinding_stone-7" produce="column_luxury=2" group="1" pak="Highland DLC" />
+    <recipe name="column_ordinary" ingredients="stone-4,column_ordinary_broken-5,stone-7" produce="column_ordinary=2" group="1" pak="Highland DLC" />
+    <recipe name="interroom_door" ingredients="plank-4,interroom_door_broken-5,nail-7,wood-8,padlock-9" produce="interroom_door" group="1" craft_need="workshop" pak="Highland DLC" />
+    <recipe name="lamp_wall" ingredients="fat-4,iron-7,plank-8" produce="lamp_wall=5" group="1" pak="Highland DLC" />
+    <recipe name="middle_wall_01" ingredients="clay-4,middle_wall_broken-5,stone-7,stone-8" produce="middle_wall_01=2" group="1" craft_need="workshop" pak="Highland DLC" />
+    <recipe name="ordinary_chair" ingredients="plank-4,ordinary_chair_broken-5,wood-7,nail-8,rags_hl-9" produce="ordinary_chair" group="1" craft_need="workbench" pak="Highland DLC" />
+    <recipe name="pennant" ingredients="fabric-4,pennant_broken-5,needle-7" produce="pennant" group="1" craft_need="workbench" pak="Highland DLC" />
+    <recipe name="picture_lm" ingredients="wood-4,picture_lm_broken_01-5,nail-6,paint-8,rags_hl-9" produce="picture_lm" group="1" pak="Highland DLC" />
+    <recipe name="stained_window" ingredients="plank-4,paint-5,nail-7,plank-8" produce="stained_window" group="1" pak="Highland DLC" />
+    <recipe name="staircase_with_railinge" ingredients="iron-4,staircase_with_railinge_broken-5,steel-7" produce="staircase_with_railinge=2" group="1" pak="Highland DLC" />
+    <recipe name="strong_hatch" ingredients="steel-4,strong_hatch_broken-5,steel-6,stone_wall-7,padlock-8,stone-9" produce="strong_hatch" group="1" craft_need="smithy" pak="Highland DLC" />
+    <recipe name="bookcase_broken" ingredients="wood-2,wood-3,nail-4,plank-5,plank-6,nail-7,plank-8,plank-9" produce="bookcase_broken" group="1" pak="Highland DLC" />
+    <recipe name="flowers_in_a_pot" ingredients="" produce="flowers_in_a_pot" group="1" pak="Highland DLC" />
+    <recipe name="pennant_broken" ingredients="rags_hl-1,rags_hl-4,fabric-5,fabric-6,rags_hl-7,wood-8,paint-9" produce="pennant_broken" group="1" pak="Highland DLC" />
+    <recipe name="bookshelf_lm_broken" ingredients="paper-1,splinters_hl-2,money-3,wood-4,paper-5,splinters_hl-6,nail-7,plank-8,paper-9" produce="bookshelf_lm_broken" group="1" pak="Highland DLC" />
+    <recipe name="chest_ordinary_broken" ingredients="padlock-4,plank-5,steel-6,plank-7,wood-8,nail-9" produce="chest_ordinary_broken" group="1" pak="Highland DLC" />
+    <recipe name="chest_ordinary_closed" ingredients="" produce="chest_ordinary_closed" group="1" pak="Highland DLC" />
+    <recipe name="comfortable_bed" ingredients="rags_hl-2,plank-4,comfortable_bed_broken-5,wool-6,needle-7,nail-9" produce="comfortable_bed" group="1" craft_need="workbench" pak="Highland DLC" />
+    <recipe name="comfortable_bed_broken" ingredients="steel-1,rags_hl-2,money-3,plank-4,wool-5,rags_hl-6,plank-7,nail-8,steel-9" produce="comfortable_bed_broken" group="1" pak="Highland DLC" />
+    <recipe name="ordinary_chair_broken" ingredients="plank-4,plank-5,wood-6,nail-7,nail-8,wood-9" produce="ordinary_chair_broken" group="1" pak="Highland DLC" />
+    <recipe name="middle_wall_broken" ingredients="stone-4,bricks_block-5,stone-7,stone-8" produce="middle_wall_broken" group="1" pak="Highland DLC" />
+    <recipe name="poor_wall_01" ingredients="nail-4,wood-5,plank-7,poor_wall_broken_01-8" produce="poor_wall_01=2" group="1" pak="Highland DLC" />
+    <recipe name="poor_wall_02" ingredients="stone-4,wood-5,wood-7,poor_wall_broken_02-8,wood-9" produce="poor_wall_02=2" group="1" craft_need="workshop" pak="Highland DLC" />
+    <recipe name="poor_wall_broken_01" ingredients="wood-4,plank-5,wood-6,nail-7,wood-8" produce="poor_wall_broken_01" group="1" pak="Highland DLC" />
+    <recipe name="poor_wall_broken_02" ingredients="wood-4,stone-5,stone-7,wood-8" produce="poor_wall_broken_02" group="1" pak="Highland DLC" />
+    <recipe name="poor_wall_plaster" ingredients="clay-4,nail-5,plank-7,poor_wall_plaster_broken-8" produce="poor_wall_plaster" group="1" craft_need="workbench" pak="Highland DLC" />
+    <recipe name="food_bags_01" ingredients="" produce="food_bags_01" group="1" pak="Highland DLC" />
+    <recipe name="food_bags_02" ingredients="" produce="food_bags_02" group="1" pak="Highland DLC" />
+    <recipe name="food_bags_03" ingredients="" produce="food_bags_03" group="1" pak="Highland DLC" />
+    <recipe name="food_bags_04" ingredients="" produce="food_bags_04" group="1" pak="Highland DLC" />
+    <recipe name="food_bags_05" ingredients="" produce="food_bags_05" group="1" pak="Highland DLC" />
+    <recipe name="rack_with_utensils_01" ingredients="" produce="rack_with_utensils_01" group="1" pak="Highland DLC" />
+    <recipe name="rack_with_utensils_02" ingredients="" produce="rack_with_utensils_02" group="1" pak="Highland DLC" />
+    <recipe name="rack_with_utensils_03" ingredients="" produce="rack_with_utensils_03" group="1" pak="Highland DLC" />
+    <recipe name="stacks_of_dishes_01" ingredients="" produce="stacks_of_dishes_01" group="1" pak="Highland DLC" />
+    <recipe name="stacks_of_dishes_02" ingredients="" produce="stacks_of_dishes_02" group="1" pak="Highland DLC" />
+    <recipe name="stacks_of_dishes_03" ingredients="" produce="stacks_of_dishes_03" group="1" pak="Highland DLC" />
+    <recipe name="block_strong_stone_01" ingredients="" produce="block_strong_stone_01" group="1" pak="Highland DLC" />
+    <recipe name="stacks_of_dishes_04" ingredients="" produce="stacks_of_dishes_04" group="1" pak="Highland DLC" />
+    <recipe name="stacks_of_dishes_05" ingredients="" produce="stacks_of_dishes_05" group="1" pak="Highland DLC" />
+    <recipe name="stacks_of_dishes_06" ingredients="" produce="stacks_of_dishes_06" group="1" pak="Highland DLC" />
+    <recipe name="flowers_on_a_stand" ingredients="" produce="flowers_on_a_stand" group="1" pak="Highland DLC" />
+    <recipe name="kitchen_cabinet_01" ingredients="plank-1,clay_vase-2,rags_hl-3,kitchen_cabinet_broken_01-4,nail-5,plank-6,plank-7,wood-8,tea-9" produce="kitchen_cabinet_01" group="1" pak="Highland DLC" />
+    <recipe name="kitchen_cabinet_02" ingredients="plank-1,clay_vase-2,rags_hl-3,kitchen_cabinet_broken_01-4,nail-5,tea-6,plank-7,wood-8,tea-9" produce="kitchen_cabinet_02" group="1" pak="Highland DLC" />
+    <recipe name="rich_wall_01" ingredients="clay-4,rich_wall_broken_01-5,stone-7,stone-8" produce="rich_wall_01=2" group="1" craft_need="workshop" pak="Highland DLC" />
+    <recipe name="rich_wall_broken_01" ingredients="bricks_block-4,clay-5,stone-7,stone-8" produce="rich_wall_broken_01" group="1" pak="Highland DLC" />
+    <recipe name="armor_stand_01" ingredients="" produce="armor_stand_01" group="1" pak="Highland DLC" />
+    <recipe name="armor_stand_02" ingredients="" produce="armor_stand_02" group="1" pak="Highland DLC" />
+    <recipe name="armor_stand_03" ingredients="" produce="armor_stand_03" group="1" pak="Highland DLC" />
+    <recipe name="bed_barracks_01" ingredients="rags_hl-2,plank-4,bed_barracks_01_broken-5,fabric-6,wood-7,nail-8,wood-9" produce="bed_barracks_01" group="1" craft_need="workbench" pak="Highland DLC" />
+    <recipe name="bed_barracks_02" ingredients="rags_hl-1,fabric-2,wood-3,plank-4,bed_barracks_02_broken-5,ladder-6,wood-7,nail-9" produce="bed_barracks_02" group="1" craft_need="workbench" pak="Highland DLC" />
+    <recipe name="weapon_stand_01" ingredients="" produce="weapon_stand_01" group="1" pak="Highland DLC" />
+    <recipe name="weapon_stand_02" ingredients="" produce="weapon_stand_02" group="1" pak="Highland DLC" />
+    <recipe name="weapon_stand_03" ingredients="" produce="weapon_stand_03" group="1" pak="Highland DLC" />
+    <recipe name="bed_barracks_01_broken" ingredients="money-1,rags_hl-4,rags_hl-5,rags_hl-6,wood-7,nail-8,plank-9" produce="bed_barracks_01_broken" group="1" pak="Highland DLC" />
+    <recipe name="bed_barracks_02_broken" ingredients="money-1,rags_hl-2,rags_hl-3,rags_hl-4,wood-5,nail-6,wood-7,nail-8,plank-9" produce="bed_barracks_02_broken" group="1" pak="Highland DLC" />
+    <recipe name="luxury_bed" ingredients="fabric-2,rags_hl-3,steel-4,luxury_bed_broken-5,wool-6,stone-7,plank-8,stone-9" produce="luxury_bed" group="1" craft_need="workshop" pak="Highland DLC" />
+    <recipe name="luxury_bed_broken" ingredients="rags_hl-2,money-3,plank-4,wool-5,rags_hl-6,steel-7,steel-8,stone-9" produce="luxury_bed_broken" group="1" pak="Highland DLC" />
+    <recipe name="staircase_without_railings" ingredients="iron-4,staircase_without_railings_broken-5,iron-7" produce="staircase_without_railings=2" group="1" pak="Highland DLC" />
+    <recipe name="corridor_light" ingredients="iron-4,oil_berries-5,iron-8" produce="corridor_light=5" group="1" craft_need="workbench" pak="Highland DLC" />
+    <recipe name="vase" ingredients="" produce="vase" group="1" pak="Highland DLC" />
+    <recipe name="column_prop" ingredients="wood-4,column_prop_broken-5,nail-7,plank-8" produce="column_prop=2" group="1" craft_need="workbench" pak="Highland DLC" />
+    <recipe name="statue_01" ingredients="" produce="statue_01" group="1" pak="Highland DLC" />
+    <recipe name="statue_02" ingredients="" produce="statue_02" group="1" pak="Highland DLC" />
+    <recipe name="statue_03" ingredients="" produce="statue_03" group="1" pak="Highland DLC" />
+    <recipe name="statue_04" ingredients="" produce="statue_04" group="1" pak="Highland DLC" />
+    <recipe name="statue_05" ingredients="" produce="statue_05" group="1" pak="Highland DLC" />
+    <recipe name="statue_06" ingredients="" produce="statue_06" group="1" pak="Highland DLC" />
+    <recipe name="statue_07" ingredients="" produce="statue_07" group="1" pak="Highland DLC" />
+    <recipe name="statue_08" ingredients="" produce="statue_08" group="1" pak="Highland DLC" />
+    <recipe name="statue_09" ingredients="" produce="statue_09" group="1" pak="Highland DLC" />
+    <recipe name="chair_wooden" ingredients="chair_wooden_broken-4,wood-7,nail-8" produce="chair_wooden" group="1" craft_need="" pak="Highland DLC" />
+    <recipe name="chair_wooden_broken" ingredients="nail-7,wood-8,plank-9" produce="chair_wooden_broken" group="1" pak="Highland DLC" />
+    <recipe name="wooden_table" ingredients="rags_hl-2,wood-4,wooden_table_broken-5,plank-6,nail-7,resin-9" produce="wooden_table" group="1" craft_need="workbench" pak="Highland DLC" />
+    <recipe name="wooden_table_broken" ingredients="plank-4,plank-5,nail-6,wood-7,wood-9" produce="wooden_table_broken" group="1" pak="Highland DLC" />
+    <recipe name="chair_wooden_02" ingredients="chair_wooden_02_broken-4,plank-5,wood-7,nail-8,rags_hl-9" produce="chair_wooden_02" group="1" craft_need="workbench" pak="Highland DLC" />
+    <recipe name="chair_wooden_02_broken" ingredients="plank-4,wood-7,nail-8,plank-9" produce="chair_wooden_02_broken" group="1" pak="Highland DLC" />
+    <recipe name="wooden_chest" ingredients="nail-4,plank-5,plank-7,wooden_chest_broken-8,rags_hl-9" produce="wooden_chest" group="1" craft_need="workshop" pak="Highland DLC" />
+    <recipe name="wooden_chest_closed" ingredients="" produce="wooden_chest_closed" group="1" pak="Highland DLC" />
+    <recipe name="wooden_chest_broken" ingredients="padlock-4,steel-5,wood-6,wood-7,plank-8,nail-9" produce="wooden_chest_broken" group="1" pak="Highland DLC" />
+    <recipe name="kitchen_light" ingredients="fat-4,iron-7,wood-8" produce="kitchen_light=5" group="1" pak="Highland DLC" />
+    <recipe name="compatible_boxes_01" ingredients="" produce="compatible_boxes_01" group="1" pak="Highland DLC" />
+    <recipe name="compatible_boxes_02" ingredients="" produce="compatible_boxes_02" group="1" pak="Highland DLC" />
+    <recipe name="ordinary_armchair" ingredients="skin-4,ordinary_armchair_broken-5,needle-7,plank-8,rags_hl-9" produce="ordinary_armchair" group="1" craft_need="workbench" pak="Highland DLC" />
+    <recipe name="ordinary_armchair_broken" ingredients="web-1,plank-4,skin-5,money-6,plank-7,nail-8,wood-9" produce="ordinary_armchair_broken" group="1" pak="Highland DLC" />
+    <recipe name="interroom_ordinary_door" ingredients="stone-4,interroom_ordinary_door_broken-5,grinding_stone-6,padlock-7,stone_wall-8,steel-9" produce="interroom_ordinary_door" group="1" craft_need="workshop" pak="Highland DLC" />
+    <recipe name="corridor_light_broken" ingredients="" produce="corridor_light_broken" group="1" pak="Highland DLC" />
+    <recipe name="interroom_door_broken" ingredients="plank-4,plank-5,steel-6,wood-7,nail-8,iron-9" produce="interroom_door_broken" group="1" pak="Highland DLC" />
+    <recipe name="barrel_hl_01" ingredients="wood-4,barrel_hl_02-5,resin-7,nail-8" produce="barrel_hl_01" group="1" craft_need="workbench" pak="Highland DLC" />
+    <recipe name="barrel_hl_02" ingredients="nail-4,iron-5,wood-7,plank-8,plank-9" produce="barrel_hl_02" group="1" pak="Highland DLC" />
+    <recipe name="barrel_hl_03" ingredients="" produce="barrel_hl_03" group="1" pak="Highland DLC" />
+    <recipe name="compatible_boxes_03" ingredients="" produce="compatible_boxes_03" group="1" pak="Highland DLC" />
+    <recipe name="compatible_boxes_04" ingredients="" produce="compatible_boxes_04" group="1" pak="Highland DLC" />
+    <recipe name="food_shelf_01" ingredients="" produce="food_shelf_01" group="1" pak="Highland DLC" />
+    <recipe name="food_shelf_02" ingredients="" produce="food_shelf_02" group="1" pak="Highland DLC" />
+    <recipe name="picture_lm_broken_01" ingredients="wood-7,web-8,nail-9" produce="picture_lm_broken_01" group="1" pak="Highland DLC" />
+    <recipe name="rock_hl_01" ingredients="" produce="rock_hl_01" group="1" pak="Highland DLC" />
+    <recipe name="rock_hl_02" ingredients="" produce="rock_hl_02" group="1" pak="Highland DLC" />
+    <recipe name="rock_hl_03" ingredients="" produce="rock_hl_03" group="1" pak="Highland DLC" />
+    <recipe name="rock_hl_04" ingredients="" produce="rock_hl_04" group="1" pak="Highland DLC" />
+    <recipe name="rock_hl_05" ingredients="" produce="rock_hl_05" group="1" pak="Highland DLC" />
+    <recipe name="rock_hl_06" ingredients="" produce="rock_hl_06" group="1" pak="Highland DLC" />
+    <recipe name="wine_shelf_01" ingredients="" produce="wine_shelf_01" group="1" pak="Highland DLC" />
+    <recipe name="poor_wall_plaster_broken" ingredients="wood-4,stone-5,clay-7,plank-8,nail-9" produce="poor_wall_plaster_broken" group="1" pak="Highland DLC" />
+    <recipe name="interroom_ordinary_door_broken" ingredients="stone-4,iron-5,stone_wall-7,steel-8,stone-9" produce="interroom_ordinary_door_broken" group="1" pak="Highland DLC" />
+    <recipe name="column_prop_broken" ingredients="plank-4,wood-5,nail-6,wood-7,plank-8,nail-9" produce="column_prop_broken" group="1" pak="Highland DLC" />
+    <recipe name="kitchen_light_broken" ingredients="" produce="kitchen_light_broken" group="1" pak="Highland DLC" />
+    <recipe name="column_ordinary_broken" ingredients="stone-4,stone-5,bricks_block-7,stone-8" produce="column_ordinary_broken" group="1" pak="Highland DLC" />
+    <recipe name="lamp_wall_broken" ingredients="" produce="lamp_wall_broken" group="1" pak="Highland DLC" />
+    <recipe name="staircase_with_railinge_broken" ingredients="iron-4,steel-5,nail-7,iron-8" produce="staircase_with_railinge_broken" group="1" pak="Highland DLC" />
+    <recipe name="staircase_without_railings_broken" ingredients="iron-4,nail-5,iron-7,iron-8" produce="staircase_without_railings_broken" group="1" pak="Highland DLC" />
+    <recipe name="strong_hatch_broken" ingredients="iron-4,stone-5,steel-6,steel-7,stone-8,iron-9" produce="strong_hatch_broken" group="1" pak="Highland DLC" />
+    <recipe name="column_luxury_broken" ingredients="stone-4,stone-7,iron-8" produce="column_luxury_broken" group="1" pak="Highland DLC" />
+    <recipe name="big_carpenter_hl" ingredients="" produce="big_carpenter_hl" group="1" pak="Highland DLC" />
+    <recipe name="big_forge_hl" ingredients="" produce="big_forge_hl" group="1" pak="Highland DLC" />
+    <recipe name="big_kitchen_hl" ingredients="" produce="big_kitchen_hl" group="1" pak="Highland DLC" />
+    <recipe name="kitchen_hl" ingredients="" produce="kitchen_hl" group="1" pak="Highland DLC" />
+    <recipe name="kitchen_hl_broken" ingredients="" produce="kitchen_hl_broken" group="1" pak="Highland DLC" />
+    <recipe name="big_laboratory_hl" ingredients="" produce="big_laboratory_hl" group="1" pak="Highland DLC" />
+    <recipe name="big_workshop_hl" ingredients="" produce="big_workshop_hl" group="1" pak="Highland DLC" />
+    <recipe name="metal_wall" ingredients="iron-4,nail-5,steel-7,metal_wall_broken-8" produce="metal_wall=2" group="1" craft_need="smithy" pak="Highland DLC" />
+    <recipe name="metal_wall_broken" ingredients="iron-4,nail-5,steel-7,iron-8" produce="metal_wall_broken" group="1" pak="Highland DLC" />
+    <recipe name="drilling_machine_01" ingredients="" produce="drilling_machine_01" group="1" pak="Highland DLC" />
+    <recipe name="drilling_machine_02" ingredients="" produce="drilling_machine_02" group="1" pak="Highland DLC" />
+    <recipe name="boiler_broken_01" ingredients="" produce="boiler_broken_01" group="1" pak="Highland DLC" />
+    <recipe name="boiler_broken_02" ingredients="" produce="boiler_broken_02" group="1" pak="Highland DLC" />
+    <recipe name="boiler_broken_03" ingredients="" produce="boiler_broken_03" group="1" pak="Highland DLC" />
+    <recipe name="brazier_hl_01" ingredients="" produce="brazier_hl_01" group="1" pak="Highland DLC" />
+    <recipe name="brazier_hl_02" ingredients="" produce="brazier_hl_02" group="1" pak="Highland DLC" />
+    <recipe name="column_entrance" ingredients="" produce="column_entrance" group="1" pak="Highland DLC" />
+    <recipe name="entrance_rock_01" ingredients="" produce="entrance_rock_01" group="1" pak="Highland DLC" />
+    <recipe name="entrance_rock_02" ingredients="" produce="entrance_rock_02" group="1" pak="Highland DLC" />
+    <recipe name="entrance_rock_big_01" ingredients="" produce="entrance_rock_big_01" group="1" pak="Highland DLC" />
+    <recipe name="entrance_rock_big_02" ingredients="" produce="entrance_rock_big_02" group="1" pak="Highland DLC" />
+    <recipe name="entrance_rock_big_03" ingredients="" produce="entrance_rock_big_03" group="1" pak="Highland DLC" />
+    <recipe name="entrance_rock_big_04" ingredients="" produce="entrance_rock_big_04" group="1" pak="Highland DLC" />
+    <recipe name="main_gnome_statue_01" ingredients="" produce="main_gnome_statue_01" group="1" pak="Highland DLC" />
+    <recipe name="main_gnome_statue_02" ingredients="" produce="main_gnome_statue_02" group="1" pak="Highland DLC" />
+    <recipe name="main_gate_hl" ingredients="" produce="main_gate_hl" group="1" pak="Highland DLC" />
+    <recipe name="big_safe" ingredients="steel-4,big_safe_broken-5,rags_hl-6,padlock-7,steel-8,oil_berries-9" produce="big_safe" group="1" craft_need="smithy" pak="Highland DLC" />
+    <recipe name="big_safe_broken" ingredients="steel_wall-1,steel-2,steel_wall-3,steel-4,padlock-5,door_steel-6,steel_wall-7,steel-8,padlock-9" produce="big_safe_broken" group="1" craft_need="" pak="Highland DLC" />
+    <recipe name="big_safe_closed" ingredients="" produce="big_safe_closed" group="1" pak="Highland DLC" />
+    <recipe name="bookcase_closed" ingredients="" produce="bookcase_closed" group="1" pak="Highland DLC" />
+    <recipe name="armor_stand_04" ingredients="" produce="armor_stand_04" group="1" pak="Highland DLC" />
+    <recipe name="kitchen_cabinet_broken_01" ingredients="plank-1,splinters_hl-2,wood-3,splinters_hl-4,web-5,wood-6,plank-7,nail-8,nail-9" produce="kitchen_cabinet_broken_01" group="1" pak="Highland DLC" />
+    <recipe name="rack_with_utensils_broken_01" ingredients="" produce="rack_with_utensils_broken_01" group="1" pak="Highland DLC" />
+    <recipe name="stacks_of_dishes_broken_01" ingredients="" produce="stacks_of_dishes_broken_01" group="1" pak="Highland DLC" />
+    <recipe name="stacks_of_dishes_broken_02" ingredients="" produce="stacks_of_dishes_broken_02" group="1" pak="Highland DLC" />
+    <recipe name="stacks_of_dishes_broken_03" ingredients="" produce="stacks_of_dishes_broken_03" group="1" pak="Highland DLC" />
+    <recipe name="rock_hl_08" ingredients="" produce="rock_hl_08" group="1" pak="Highland DLC" />
+    <recipe name="rock_hl_09" ingredients="" produce="rock_hl_09" group="1" pak="Highland DLC" />
+    <recipe name="rock_hl_10" ingredients="" produce="rock_hl_10" group="1" pak="Highland DLC" />
+    <recipe name="rock_hl_11" ingredients="" produce="rock_hl_11" group="1" pak="Highland DLC" />
+    <recipe name="rock_hl_12" ingredients="" produce="rock_hl_12" group="1" pak="Highland DLC" />
+    <recipe name="rock_hl_13" ingredients="" produce="rock_hl_13" group="1" pak="Highland DLC" />
+    <recipe name="rock_hl_14" ingredients="" produce="rock_hl_14" group="1" pak="Highland DLC" />
+    <recipe name="rock_hl_15" ingredients="" produce="rock_hl_15" group="1" pak="Highland DLC" />
+    <recipe name="rock_hl_16" ingredients="" produce="rock_hl_16" group="1" pak="Highland DLC" />
+    <recipe name="rock_hl_17" ingredients="" produce="rock_hl_17" group="1" pak="Highland DLC" />
+    <recipe name="rock_hl_18" ingredients="" produce="rock_hl_18" group="1" pak="Highland DLC" />
+    <recipe name="rock_hl_19" ingredients="" produce="rock_hl_19" group="1" pak="Highland DLC" />
+    <recipe name="rock_hl_20" ingredients="" produce="rock_hl_20" group="1" pak="Highland DLC" />
+    <recipe name="rags_hl" ingredients="fabric-5" produce="rags_hl=3" group="1" pak="Highland DLC" />
+    <recipe name="splinters_hl" ingredients="clay-5,clay-6,sand-7,sand-8,sand-9" produce="splinters_hl" group="1" pak="Highland DLC" />
+    <recipe name="water_bottle_hl" ingredients="water-1,water-2,water-3,water-4,water-5,water-6,water-7,water-8,water-9" produce="water_bottle_hl" group="1" pak="Highland DLC" />
+    <recipe name="arch_hl" ingredients="" produce="arch_hl" group="1" pak="Highland DLC" />
+    <recipe name="service_warehouse_spawn_place" ingredients="" produce="service_warehouse_spawn_place" group="1" pak="Highland DLC" />
+    <recipe name="boot_guardians_mountain" ingredients="gold_ingot-4,boot_guardians_mountain_broken-5,skin-7,nail-8" produce="boot_guardians_mountain" group="1" craft_need="smithy" pak="Highland DLC" />
+    <recipe name="cuirass_guardians_mountain" ingredients="rope-1,gold_ingot-2,gold_ingot-4,cuirass_guardians_mountain_broken-5,skin-7" produce="cuirass_guardians_mountain" group="1" craft_need="smithy" pak="Highland DLC" />
+    <recipe name="helmet_guardians_mountain" ingredients="gold_ingot-4,helmet_guardians_mountain_broken-5,skin-7" produce="helmet_guardians_mountain" group="1" craft_need="smithy" pak="Highland DLC" />
+    <recipe name="shield_guardians_mountain" ingredients="gold_ingot-4,shield_guardians_mountain_broken-5,plank-7,nail-8" produce="shield_guardians_mountain" group="1" craft_need="smithy" pak="Highland DLC" />
+    <recipe name="weapon_guardians_mountain" ingredients="gold_ingot-4,weapon_guardians_mountain_broken-5,wood-7,gold_ingot-8" produce="weapon_guardians_mountain" group="1" craft_need="smithy" pak="Highland DLC" />
+    <recipe name="service_shop_spawn_place" ingredients="" produce="service_shop_spawn_place" group="1" pak="Highland DLC" />
+    <recipe name="shop_elf" ingredients="" produce="shop_elf" group="1" pak="Highland DLC" />
+    <recipe name="totem_goblins" ingredients="" produce="totem_goblins" group="1" pak="Highland DLC" />
+    <recipe name="hidden_hole" ingredients="" produce="hidden_hole" group="1" pak="Highland DLC" />
+    <recipe name="loading_crane_01" ingredients="" produce="loading_crane_01" group="1" pak="Highland DLC" />
+    <recipe name="loading_crane_02" ingredients="" produce="loading_crane_02" group="1" pak="Highland DLC" />
+    <recipe name="lot_of_ore_01" ingredients="" produce="lot_of_ore_01" group="1" pak="Highland DLC" />
+    <recipe name="lot_of_ore_02" ingredients="" produce="lot_of_ore_02" group="1" pak="Highland DLC" />
+    <recipe name="lot_of_ore_03" ingredients="" produce="lot_of_ore_03" group="1" pak="Highland DLC" />
+    <recipe name="many_ingots_01" ingredients="" produce="many_ingots_01" group="1" pak="Highland DLC" />
+    <recipe name="many_ingots_02" ingredients="" produce="many_ingots_02" group="1" pak="Highland DLC" />
+    <recipe name="melting_plant_01" ingredients="" produce="melting_plant_01" group="1" pak="Highland DLC" />
+    <recipe name="melting_plant_02" ingredients="" produce="melting_plant_02" group="1" pak="Highland DLC" />
+    <recipe name="tractor_bucket_01" ingredients="" produce="tractor_bucket_01" group="1" pak="Highland DLC" />
+    <recipe name="trolley_hl_01" ingredients="" produce="trolley_hl_01" group="1" pak="Highland DLC" />
+    <recipe name="large_crystal_of_the_main_hall" ingredients="" produce="large_crystal_of_the_main_hall" group="1" pak="Highland DLC" />
+    <recipe name="rock_hl_21" ingredients="" produce="rock_hl_21" group="1" pak="Highland DLC" />
+    <recipe name="royal_throne_dwarves" ingredients="" produce="royal_throne_dwarves" group="1" pak="Highland DLC" />
+    <recipe name="elevator_blockage_01" ingredients="" produce="elevator_blockage_01" group="1" pak="Highland DLC" />
+    <recipe name="engine_compartment_01" ingredients="" produce="engine_compartment_01" group="1" pak="Highland DLC" />
+    <recipe name="stones_for_machine_tools_01" ingredients="" produce="stones_for_machine_tools_01" group="1" pak="Highland DLC" />
+    <recipe name="stones_for_machine_tools_02" ingredients="" produce="stones_for_machine_tools_02" group="1" pak="Highland DLC" />
+    <recipe name="stones_for_machine_tools_03" ingredients="" produce="stones_for_machine_tools_03" group="1" pak="Highland DLC" />
+    <recipe name="stones_for_machine_tools_04" ingredients="" produce="stones_for_machine_tools_04" group="1" pak="Highland DLC" />
+    <recipe name="production_box_01" ingredients="" produce="production_box_01" group="1" pak="Highland DLC" />
+    <recipe name="production_box_02" ingredients="" produce="production_box_02" group="1" pak="Highland DLC" />
+    <recipe name="production_box_03" ingredients="" produce="production_box_03" group="1" pak="Highland DLC" />
+    <recipe name="production_container_01" ingredients="" produce="production_container_01" group="1" pak="Highland DLC" />
+    <recipe name="production_container_02" ingredients="" produce="production_container_02" group="1" pak="Highland DLC" />
+    <recipe name="production_container_03" ingredients="" produce="production_container_03" group="1" pak="Highland DLC" />
+    <recipe name="Additional_warehouse_hl" ingredients="" produce="Additional_warehouse_hl" group="1" pak="Highland DLC" />
+    <recipe name="boot_patrol_mountain" ingredients="skin-4,boot_patrol_mountain_broken-5,needle-7" produce="boot_patrol_mountain" group="1" craft_need="smithy" pak="Highland DLC" />
+    <recipe name="cuirass_patrol_mountain" ingredients="skin-4,cuirass_patrol_mountain_broken-5,needle-7,steel-8" produce="cuirass_patrol_mountain" group="1" craft_need="smithy" pak="Highland DLC" />
+    <recipe name="helmet_patrol_mountain" ingredients="skin-4,helmet_patrol_mountain_broken-5,needle-7,iron-8" produce="helmet_patrol_mountain" group="1" craft_need="smithy" pak="Highland DLC" />
+    <recipe name="weapon_patrol_mountain" ingredients="steel-4,weapon_patrol_mountain_broken-5,grinding_stone-7,silver_ingot-8" produce="weapon_patrol_mountain" group="1" craft_need="smithy" pak="Highland DLC" />
+    <recipe name="bow_patrol_mountain" ingredients="rope-4,bow_patrol_mountain_broken-5,plank-7,wood-8" produce="bow_patrol_mountain" group="1" craft_need="workbench" pak="Highland DLC" />
+    <recipe name="service_hidden_ladder" ingredients="" produce="service_hidden_ladder" group="1" pak="Highland DLC" />
+    <recipe name="cave_orcs_camp" ingredients="" produce="cave_orcs_camp" group="1" pak="Highland DLC" />
+    <recipe name="cave_orcs_hatch_01" ingredients="" produce="cave_orcs_hatch_01" group="1" pak="Highland DLC" />
+    <recipe name="cave_orcs_hatch_02" ingredients="" produce="cave_orcs_hatch_02" group="1" pak="Highland DLC" />
+    <recipe name="cave_orcs_hatch_03" ingredients="" produce="cave_orcs_hatch_03" group="1" pak="Highland DLC" />
+    <recipe name="torch_orcs_01" ingredients="" produce="torch_orcs_01" group="1" pak="Highland DLC" />
+    <recipe name="torch_orcs_02" ingredients="" produce="torch_orcs_02" group="1" pak="Highland DLC" />
+    <recipe name="torch_orcs_03" ingredients="" produce="torch_orcs_03" group="1" pak="Highland DLC" />
+    <recipe name="workbench_hl" ingredients="wood-5,stone-8" produce="workbench_hl" group="1" pak="Highland DLC" />
+    <recipe name="boot_guardians_mountain_broken" ingredients="gold_ingot-4,skin-5,skin-7,nail-8" produce="boot_guardians_mountain_broken" group="1" craft_need="smithy" pak="Highland DLC" />
+    <recipe name="boot_patrol_mountain_broken" ingredients="skin-4,needle-5,needle-7" produce="boot_patrol_mountain_broken" group="1" craft_need="smithy" pak="Highland DLC" />
+    <recipe name="bow_patrol_mountain_broken" ingredients="rope-4,rope-5,plank-7,wood-8,wood-9" produce="bow_patrol_mountain_broken" group="1" craft_need="workbench" pak="Highland DLC" />
+    <recipe name="cuirass_guardians_mountain_broken" ingredients="rope-1,gold_ingot-4,gold_ingot-5,skin-7,skin-8" produce="cuirass_guardians_mountain_broken" group="1" craft_need="smithy" pak="Highland DLC" />
+    <recipe name="cuirass_patrol_mountain_broken" ingredients="skin-4,skin-5,needle-7,steel-8,iron-9" produce="cuirass_patrol_mountain_broken" group="1" craft_need="smithy" pak="Highland DLC" />
+    <recipe name="helmet_guardians_mountain_broken" ingredients="gold_ingot-4,skin-5,skin-7" produce="helmet_guardians_mountain_broken" group="1" craft_need="smithy" pak="Highland DLC" />
+    <recipe name="helmet_patrol_mountain_broken" ingredients="skin-4,skin-5,needle-7,iron-8" produce="helmet_patrol_mountain_broken" group="1" craft_need="smithy" pak="Highland DLC" />
+    <recipe name="shield_guardians_mountain_broken" ingredients="gold_ingot-4,nail-5,plank-7,nail-8" produce="shield_guardians_mountain_broken" group="1" craft_need="smithy" pak="Highland DLC" />
+    <recipe name="weapon_guardians_mountain_broken" ingredients="gold_ingot-4,wood-5,wood-7,gold_ingot-8" produce="weapon_guardians_mountain_broken" group="1" craft_need="smithy" pak="Highland DLC" />
+    <recipe name="weapon_patrol_mountain_broken" ingredients="steel-4,steel-5,grinding_stone-7,silver_ingot-8,silver_ingot-9" produce="weapon_patrol_mountain_broken" group="1" craft_need="smithy" pak="Highland DLC" />
+    <recipe name="ceiling_chandelier_broken" ingredients="stone-4,steel-5,fat-6,iron-7,iron-8,fat-9" produce="ceiling_chandelier_broken" group="1" pak="Highland DLC" />
+    <recipe name="ceiling_chandelier" ingredients="stone-4,ceiling_chandelier_broken-5,iron-7" produce="ceiling_chandelier" group="1" pak="Highland DLC" />
+    <recipe name="disable_device" ingredients="plank-5,wood-8" produce="disable_device" group="1" pak="Highland DLC" />
+    <recipe name="hand_flare" ingredients="resin-5,wood-9" produce="hand_flare=3" group="1" pak="Highland DLC" />
+</root>

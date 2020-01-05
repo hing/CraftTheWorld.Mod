@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<root>
+    <recipe name="stone_with_moss" ingredients="" produce="stone_with_moss" group="1" />
+    <recipe name="statue_hill" ingredients="" produce="statue_hill" group="1" />
+    <recipe name="elven_bridge" ingredients="" produce="elven_bridge" group="1" />
+    <recipe name="column_grottoes_stalactite" ingredients="" produce="column_grottoes_stalactite" group="1" />
+    <recipe name="big_crystal_01" ingredients="" produce="big_crystal_01" group="1" />
+    <recipe name="big_crystal_02" ingredients="" produce="big_crystal_02" group="1" />
+    <recipe name="elven_chest" ingredients="" produce="elven_chest" group="1" />
+    <recipe name="stone_with_moss_gr" ingredients="" produce="stone_with_moss_gr" group="1" />
+    <recipe name="waterfall_01" ingredients="" produce="waterfall_01" group="1" />
+    <recipe name="stone_with_moss_liana_block" ingredients="" produce="stone_with_moss_liana_block" group="1" />
+    <recipe name="stone_with_moss_all" ingredients="" produce="stone_with_moss_all" group="1" />
+    <recipe name="stone_with_moss_all_liana" ingredients="" produce="stone_with_moss_all_liana" group="1" />
+    <recipe name="stone_with_moss_all_liana_spine" ingredients="" produce="stone_with_moss_all_liana_spine" group="1" />
+    <recipe name="stone_with_moss_all_stalactite" ingredients="" produce="stone_with_moss_all_stalactite" group="1" />
+    <recipe name="stone_with_moss_all_stalagmite" ingredients="" produce="stone_with_moss_all_stalagmite" group="1" />
+    <recipe name="stone_with_moss_liana_spine" ingredients="" produce="stone_with_moss_liana_spine" group="1" />
+    <recipe name="stone_with_moss_stalactite" ingredients="" produce="stone_with_moss_stalactite" group="1" />
+    <recipe name="stone_with_moss_stalagmite" ingredients="" produce="stone_with_moss_stalagmite" group="1" />
+    <recipe name="big_elixir_health" ingredients="" produce="big_elixir_health" group="1" />
+    <recipe name="big_elixir_mana" ingredients="" produce="big_elixir_mana" group="1" />
+    <recipe name="glowing_liana1" ingredients="" produce="glowing_liana1" group="1" />
+    <recipe name="glowing_liana2" ingredients="" produce="glowing_liana2" group="1" />
+    <recipe name="glowing_liana3" ingredients="" produce="glowing_liana3" group="1" />
+    <recipe name="elfen_mage_spawner" ingredients="" produce="elfen_mage_spawner" group="1" />
+    <recipe name="statue_hill_male" ingredients="" produce="statue_hill_male" group="1" />
+    <recipe name="glowing_growth_pink_01" ingredients="" produce="glowing_growth_pink_01" group="1" />
+    <recipe name="glowing_growth_blue_01" ingredients="" produce="glowing_growth_blue_01" group="1" />
+    <recipe name="glowing_growth_blue_02" ingredients="" produce="glowing_growth_blue_02" group="1" />
+    <recipe name="glowing_growth_blue_03" ingredients="" produce="glowing_growth_blue_03" group="1" />
+    <recipe name="glowing_growth_green_01" ingredients="" produce="glowing_growth_green_01" group="1" />
+    <recipe name="glowing_growth_green_02" ingredients="" produce="glowing_growth_green_02" group="1" />
+    <recipe name="glowing_growth_green_03" ingredients="" produce="glowing_growth_green_03" group="1" />
+    <recipe name="glowing_growth_pink_02" ingredients="" produce="glowing_growth_pink_02" group="1" />
+    <recipe name="glowing_growth_pink_03" ingredients="" produce="glowing_growth_pink_03" group="1" />
+    <recipe name="magic_tree" ingredients="" produce="magic_tree" group="1" />
+    <recipe name="gold_apple" ingredients="" produce="gold_apple" group="1" />
+    <recipe name="elf_mine_table" ingredients="" produce="elf_mine_table" group="1" />
+</root>

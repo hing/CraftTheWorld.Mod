@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--описание звуков для блоков
+где, 
+раздел 'hit' - при ударе по блоку для добычи
+раздел 'break' - при разрушении блока-->
+<root>
+  <hit>
+    <bind props="stone,stony" sound="pick_stone" />
+    <bind props="dirt,snow" sound="pick_dirt" />
+    <bind props="sand" sound="hit_sand" />
+    <bind blocks="bush,bush_desert,bush_desert_wood,bush_snow,bush_junglem,bush_fantasy,bush_flower,wheat,plants,predator" sound="hit_bush" />
+    <bind blocks="tree_mushroom1,tree_mushroom2,tree_mushroom3,tree_mushroom4,tree_mushroom5,beetle_biome_bush2,beetle_biome_bush3,beetle_biome_bush4" sound="mushroom_chop" />
+    <bind blocks="bush_und1,bush_und2,bush_und3,down_roots1,down_roots2,down_roots3,beetle_biome_bush1" sound="hit_bush" />
+    <bind props="tree,wooden" sound="chopper" />
+    <bind props="metallic" sound="hit_metall_metall" />
+  </hit>
+  <break>
+    <bind props="dirt,snow" sound="dirt_breaks" />
+    <bind props="sand" sound="sand_breaks" />
+    <bind props="stone,stony" sound="stone_breaks" />
+    <bind props="bricken" sound="brick_breaks" />
+    <bind props="wooden" sound="wood_breaks" />
+    <bind blocks="bush,bush_desert,bush_desert_wood,bush_snow,bush_junglem,bush_fantasy,bush_flower,wheat,plants,predator" sound="bush_breaks" />
+    <bind props="tree" sound="tree_crash" />
+  </break>
+  <open>
+    <bind blocks="door_wooden" sound="wood_door_open" />
+    <bind blocks="door_iron" sound="iron_door_open" />
+    <bind blocks="door_steel" sound="iron_door_open" />
+    <bind blocks="hatch_wooden" sound="wood_hatch_open" />
+    <bind blocks="hatch_iron" sound="iron_hatch_open" />
+  </open>
+  <close>
+    <bind blocks="door_wooden" sound="wood_door_close" />
+    <bind blocks="door_iron" sound="iron_door_close" />
+    <bind blocks="door_steel" sound="iron_door_close" />
+    <bind blocks="hatch_wooden" sound="wood_hatch_close" />
+    <bind blocks="hatch_iron" sound="iron_hatch_close" />
+  </close>
+  <build>
+    <bind props="wooden" sound="build_wood" />
+    <bind props="metallic" sound="build_metall" />
+    <bind props="bricken" sound="build_brick" />
+    <bind props="stony" sound="build_stone" />
+    <bind props="ladder" sound="build_ladder" />
+    <bind blocks="torch,torch_oil,torch_mucus" sound="build_torch_wood" />
+    <bind props="ladder" sound="build_ladder" />
+ </build>
+</root>

@@ -1,0 +1,28 @@
+<root>
+    <radius value="15" />
+    <max_population_ratio value="0.12"/>
+    <start_population_ratio value="0.35"/>
+    <next_colony_population_ratio value="0.2"/>
+    <limit_population value="100"/>
+
+    <!-- <fake_totem name="fake_cave_orcs_totem" tags="fake_cave_orc_totem">
+        <behaviour value="FakeTotemColonyBehaviour" saveable="true"/>
+        <gameobject name="Area Scanner" saveable="true">
+            <transform parent_depended="true" />
+            <behaviour value="AreaScanAsyncBehaviour" config="TotemAreaScanner.xml" saveable="true" />
+        </gameobject>
+    </fake_totem> -->
+
+    <colony_object name="Colony" saveable="true">
+        <behaviour value="ColonyBehaviour" saveable="true"/>
+        <behaviour value="AreaScanAsyncBehaviour" config="Highland/ColonyAreaScanner.xml" saveable="true" />
+    </colony_object>
+</root>
+
+<!-- 
+radius - радис действия колонии (также стоит поменять радиус сканера тотема в TotemAreaScanner.xml)
+max_population_ratio - коэф. расчета максимальной популяции от объема комнаты
+start_population_ratio - коэф. начальной популяций от максимальной
+next_colony_population_ratio - процент увеличения макс. популяции от уровня колонии
+limit_population - ограничение макс. популяции колонии
+ -->

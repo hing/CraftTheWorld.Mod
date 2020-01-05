@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<root>
+    <sound name="dig_worm_digging" file="sfx/Monsters/worm/worm_digging.ogg" properties="distance=0.70,volume=x1.05,count=1" />
+    <sound name="dig_machine_boring" file="sfx/Monsters/dig_machine/machine_boring.ogg" properties="distance=0.70,loop=0" />
+    <sound name="dig_machine_move" file="sfx/Monsters/dig_machine/machine_active.ogg" properties="distance=0.70,loop=0" />
+    <sound name="cannon_shot" file="sfx/Monsters/cannon_shot_1.ogg,sfx/Monsters/cannon_shot_2.ogg" properties="distance=1.50,count=2,volume=x1.75" />
+    <sound name="pirate_cannon_shot" file="sfx/Monsters/cannon_shot_1.ogg,sfx/Monsters/cannon_shot_2.ogg" properties="distance=999,count=2,volume=x1.75" />
+    <sound name="dig_worm_spawn" file="sfx/Monsters/worm/worm_spawn.ogg" properties="distance=1.56" />
+    <sound name="dig_worm_attack" file="sfx/Monsters/worm/worm_attack.ogg" properties="distance=0.50" />
+    <sound name="dig_worm_die" file="sfx/Monsters/worm/worm_death.ogg" properties="distance=0.50" />
+    <sound name="dig_worm_allotment" file="sfx/Monsters/worm/worm_allotment.ogg" properties="distance=0.50" />
+    <sound name="library" file="sfx/Monsters/library.ogg" properties="distance=0.50,loop=0,count=1" />
+    <sound name="lighthouse_on" file="sfx/Monsters/lighthouse/lighthouse_on.ogg" properties="distance=0.99" />
+    <sound name="lighthouse_off" file="sfx/Monsters/lighthouse/lighthouse_off.ogg" properties="distance=1.02" />
+    <sound name="pirate_ship_mooring" file="sfx/Monsters/ship/ship_mooring.ogg" properties="distance=0.00" />
+    <sound name="pirate_ship_ambient" file="sfx/Monsters/ship/ship_ambient.ogg" properties="distance=1.34,count=1" />
+    <sound name="vivern_boss_wing" file="sfx/Monsters/vivern/wyvern_wing_1.ogg,sfx/Monsters/vivern/wyvern_wing_2.ogg" properties="distance=0.94,count=2" />
+    <sound name="vivern_boss_fire" file="sfx/Monsters/vivern/wyvern_fire.ogg" properties="distance=1.02" />
+    <sound name="vivern_boss_fall" file="sfx/Monsters/vivern/chief_fall.ogg" properties="distance=0.50" />
+    <sound name="vivern_jetpack" file="sfx/Monsters/vivern/wyveropter_1.ogg,sfx/Monsters/vivern/wyveropter_2.ogg" properties="distance=0.50,count=3" />
+    <sound name="captain_die" file="sfx/Monsters/pirate_captain/capitan_death.ogg" properties="distance=0.50" />
+    <sound name="captain_order" file="sfx/Monsters/pirate_captain/capitan_order_1.ogg,sfx/Monsters/pirate_captain/capitan_order_2.ogg" properties="distance=0.67" />
+    <sound name="dig_machine_off" file="sfx/Monsters/dig_machine/machine_off.ogg" properties="distance=0.83" />
+    <sound name="lurker_attack" file="sfx/Monsters/lurker/lurker_attack_1.ogg,sfx/Monsters/lurker/lurker_attack_2.ogg" properties="distance=0.50,count=3" />
+    <sound name="lurker_ambush" file="sfx/Monsters/lurker/lurker_ambush.ogg" properties="distance=0.50,count=3" />
+    <sound name="lurker_death" file="sfx/Monsters/lurker/lurker_death.ogg" properties="distance=0.50,count=2" />
+    <sound name="lurker_hide" file="sfx/Monsters/lurker/lurker_hide.ogg" properties="distance=0.50,count=2" />
+    <sound name="lurker_vibration" file="sfx/Monsters/lurker/lurker_vibration.ogg" properties="distance=0.50,count=3,volume=x0.78" />
+    <sound name="lurker_step" file="sfx/Monsters/lurker/lurker_step_1.ogg,sfx/Monsters/lurker/lurker_step_2.ogg" properties="distance=0.50,count=4" />
+    <sound name="kraken_spitting" file="sfx/Monsters/kraken/kraken_spitting.ogg" properties="distance=0.50" />
+    <sound name="kraken_gulp" file="sfx/Monsters/kraken/kraken_gulp.ogg" properties="distance=0.50" />
+    <sound name="kraken_death" file="sfx/Monsters/kraken/kraken_death.ogg" properties="distance=0.50" />
+    <sound name="tentacle_body" file="sfx/Monsters/tentacle/tentacle_body_1.ogg,sfx/Monsters/tentacle/tentacle_body_2.ogg" properties="distance=0.50" />
+    <sound name="tentacle_ground" file="sfx/Monsters/tentacle/tentacle_ground_1.ogg,sfx/Monsters/tentacle/tentacle_ground_2.ogg,sfx/Monsters/tentacle/tentacle_stone_1.ogg,sfx/Monsters/tentacle/tentacle_stone_2.ogg" properties="distance=0.50" />
+    <sound name="tentacle_pinch" file="sfx/Monsters/tentacle/tentacle_pinch_1.ogg,sfx/Monsters/tentacle/tentacle_pinch_2.ogg" properties="distance=0.50" />
+    <sound name="tentacle_spittle" file="sfx/Monsters/tentacle/tentacle_spittle_1.ogg,sfx/Monsters/tentacle/tentacle_spittle_2.ogg" properties="distance=0.50" />
+    <sound name="tentacle_stone" file="sfx/Monsters/tentacle/tentacle_stone_1.ogg,sfx/Monsters/tentacle/tentacle_stone_2.ogg" properties="distance=0.50" />
+    <sound name="sphinx_appearance" file="sfx/Monsters/sphinx/sphinx_appearance.ogg" properties="distance=2.50" />
+    <sound name="sphinx_attack" file="sfx/Monsters/sphinx/sphinx_attack_1.ogg,sfx/Monsters/sphinx/sphinx_attack_2.ogg" properties="distance=0.50" />
+    <sound name="sphinx_burp" file="sfx/Monsters/sphinx/sphinx_burp.ogg" properties="distance=0.50" />
+    <sound name="sphinx_death" file="sfx/Monsters/sphinx/sphinx_death.ogg" properties="distance=0.50" />
+    <sound name="sphinx_scream" file="sfx/Monsters/sphinx/sphinx_scream.ogg" properties="distance=0.50" />
+    <sound name="pirate_shot" file="sfx/Monsters/pirate_shot_1.ogg,sfx/Monsters/pirate_shot_2.ogg" properties="distance=0.5" />
+</root>
