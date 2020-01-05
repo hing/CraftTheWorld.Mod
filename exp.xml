@@ -1,22 +1,23 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
   <experience>
-    <exp cmd="crash_block" first="20" value="1" />
-    <exp cmd="dig_inclusion" first="50" value="2" />
-    <exp cmd="new_recipe" first="50" value="50" />
-    <exp cmd="kill_animal" first="20" value="10" />
-    <exp cmd="kill_monster" first="150" value="100" />
-    <exp cmd="craft_recipe" first="20" value="5" />
-    <exp cmd="build_block" first="10" value="2" />
+    <exp cmd="crash_block" first="20000" value="2000" />
+    <exp cmd="dig_inclusion" first="50000" value="5000" />
+    <exp cmd="new_recipe" first="50000" value="5000" />
+    <exp cmd="kill_animal" first="20000" value="2000" />
+    <exp cmd="kill_monster" first="30000" value="3000" />
+    <exp cmd="craft_recipe" first="20000" value="2000" />
+    <exp cmd="build_block" first="10000" value="1000" />
   </experience>
   <achievements>
-    <achi cmd="crash_block" count="100" first="200"/>
-    <achi cmd="crash_block" count="1000" first="1000"/>
-    <achi cmd="build_house" count="100" first="1000"/>
-    <achi cmd="kill_monster" count="10" first="100"/>
-    <achi cmd="kill_monster" count="100" first="1000"/>
-    <achi cmd="kill_monster" count="1000" first="10000"/>
-    <achi cmd="new_recipe" count="10" first="100"/>
-    <achi cmd="new_recipe" count="100" first="1000"/>
+    <achi cmd="crash_block" count="10" first="1000"/>
+    <achi cmd="crash_block" count="100" first="10000"/>
+    <achi cmd="build_house" count="10" first="1000"/>
+    <achi cmd="build_house" count="100" first="10000"/>
+    <achi cmd="new_recipe" count="10" first="1000"/>
+    <achi cmd="new_recipe" count="100" first="10000"/>
+    <achi cmd="kill_monster" count="1" first="100"/>
+    <achi cmd="kill_monster" count="10" first="1000"/>
+    <achi cmd="kill_monster" count="100" first="10000"/>
   </achievements>
 </root>
