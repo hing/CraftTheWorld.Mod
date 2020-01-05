@@ -130,7 +130,7 @@
             <image file="gfx\level_tiles\craft_constructions\trolley\trolley" />
         </images>
     </item>
-    <item name="totem" properties="totem,healt=50,removable,dead_radius_x=1,dead_radius_y=2,create_sound=set_totem" file="gfx\level_tiles\craft_constructions\totem\totem" spine="totem" spine_ani="neutral" size="60,85" align="down" light="4" light_intensity="1" pak="">
+    <item name="totem" properties="totem,healt=50,removable,dead_radius_x=1,dead_radius_y=1,create_sound=set_totem" file="gfx\level_tiles\craft_constructions\totem\totem" spine="totem" spine_ani="neutral" size="60,85" align="down" light="100" light_intensity="1" pak="">
         <params>
             <param name="mood0" value="angry" />
             <param name="mood1" value="sad" />
@@ -139,7 +139,7 @@
             <param name="mood4" value="happy" />
         </params>
     </item>
-    <item name="totem_china" properties="totem,healt=50,removable,dead_radius_x=1,dead_radius_y=2,create_sound=set_totem" file="gfx\level_tiles\craft_constructions\totem\totem" spine="totem_china" spine_ani="neutral" size="60,85" align="down" light="4" light_intensity="1" pak="">
+    <item name="totem_china" properties="totem,healt=50,removable,dead_radius_x=1,dead_radius_y=1,create_sound=set_totem" file="gfx\level_tiles\craft_constructions\totem\totem" spine="totem_china" spine_ani="neutral" size="60,85" align="down" light="100" light_intensity="1" pak="">
         <params>
             <param name="mood0" value="angry" />
             <param name="mood1" value="sad" />
@@ -379,7 +379,7 @@
     </item>
     <!--****************** magic ******************-->
     <!--<item name="mportal"  effect="portal" size="60" properties="magic,magic_portal,time=240,use_mana=2,radius=1,stayin" light="4">-->
-    <item name="mportal" effect="portal" layout="extra_portal" size="80" align="down" properties="magic,magic_portal,time=3600,use_mana=1,radius=1,stayin" light="10" pak="">
+    <item name="mportal" effect="portal" layout="extra_portal" size="80" align="down" properties="magic,magic_portal,time=3600,use_mana=1,radius=1,stayin" light="100" pak="">
         <params>
             <param name="decrease_time" value="5" />
         </params>
@@ -745,7 +745,7 @@
             <sound play="bubbles" on_event="Bubbles" />
         </sounds>
     </item>
-    <item name="static_portal" file="gfx\level_tiles\shop_obj\portal" spine="static_portal" spine_ani="on" size="60" offsety="0" properties="static_portal,removable,nodig_under=2,dead_radius_x=2,dead_radius_y=2,use_mana=1,server_entity" pak="">
+    <item name="static_portal" file="gfx\level_tiles\shop_obj\portal" spine="static_portal" spine_ani="on" size="60" offsety="0" properties="static_portal,removable,nodig_under=1,dead_radius_x=1,dead_radius_y=1,use_mana=1,server_entity" pak="">
         <params>
             <param name="sound_on" value="gate_on" />
             <param name="sound_off" value="gate_off" />
