@@ -10,36 +10,36 @@
 <!-- 'satiety' - макс. значение сытности  -->
 
 <root>
-  <creature name="worker">
+  <creature name="worker">    <!--雄性矮人-->
     <params>
       <ai value="worker"/>
       <!--<height value="57"/>-->
       <height value="50"/>
-      <width value="27"/>
+      <width value="25"/>
       <!--<ratio value="0.6"/>      -->      <!--пропорция ширины к высоте-->
       <scale value="1"/>      <!--скейл для всех анимаций-->
-      <healt value="10"/>
-      <satiety value="10"/>
-      <walk_speed value="105"/>      <!--<walk_speed value="80"/>-->
-      <climbs_speed value="55"/>
-      <climbs_ladder_speed value="80"/>
-      <radius value="4"/>
-      <fall_height value="3"/>
-      <capacity value="3"/>
-      <rest_healt value="40%"/>      <!--'rest_healt' - мин. процент жизни, чтобы идти отдыхать-->
-      <attack value="0.3"/>      <!--сила атаки без оружия-->
+      <healt value="100"/>    <!--健康度-->
+      <satiety value="100"/>    <!--满意度-->
+      <walk_speed value="500"/>      <!--行走速度-->
+      <climbs_speed value="300"/>    <!--攀爬速度-->
+      <climbs_ladder_speed value="200"/>    <!--爬梯速度-->
+      <radius value="10"/>    <!--探索范围-->
+      <fall_height value="10"/>    <!--跌落高度-->
+      <capacity value="10"/>    <!--携带容量-->
+      <rest_healt value="10%"/>      <!--休息体力比例-->
+      <attack value="10"/>      <!--攻击力-->
       <attack_healt value="0.5"/>      <!--коэф. от макс. жизни, при которой гном может атаковать врагов-->
       <fatal_attack_healt value="0.4"/>      <!--коэф. от макс. жизни, при которой гном может атаковать врагов, если их скорость выше собственной-->
-      <escape_alone_healt value="0.25"/>      <!--коэф. от макс. жизни, при которой гном бежит от врагов, если он бьется один-->
-      <escape_most_healt value="0.15"/>      <!--коэф. от макс. жизни, при которой гном бежит от врагов, если он бьется не один-->
-      <call_help_radius value="12"/>      <!--радиус, в пределах которого гном зовет на помощь других гномов, если вступил в битву-->
-      <water_die_time value="180"/>      
-      <retreat value="3"/>      <!--отбегает на расстояние, при атаке, когда в руках метательное оружие-->
-      <base_armor value="0.2"/>      <!--учавствует в процентном определении защиты для брони-->
+      <escape_alone_healt value="0.3"/>      <!--коэф. от макс. жизни, при которой гном бежит от врагов, если он бьется один-->
+      <escape_most_healt value="0.2"/>      <!--коэф. от макс. жизни, при которой гном бежит от врагов, если он бьется не один-->
+      <call_help_radius value="10"/>      <!--呼叫范围-->
+      <water_die_time value="300"/>    <!--溺水时限-->
+      <retreat value="3"/>      <!--远攻后退距离-->
+      <base_armor value="10"/>      <!--防御力-->
       <magic_stuff_end_bone value="staff_end"/>
       <fishing_pole_end_bone value="pole_end" />
       <resources_end_bone value="for_resurses" />
-      <shot_time value="1.3"/>
+      <shot_time value="1"/>    <!--射击间隔时间-->
       <glow_slots slots="torse_light,arm1_light,arm2_light,head_light" enemy_color="255|0|30" friend_color="0|110|255"/>
       <mp_color_slots value="torse_cloth_color,cloth_arm1_1_color,cloth_arm2_1_color,cloth_torse_color,cloth_arm1_1_color,cloth_arm2_1_color,cloth_body_color,cloth_arm1_1_up_color,cloth_arm1_down_color,cloth_arm2_1_up_color,cloth_arm2_down_color,hat_color"/>
       <gender value="male"/>
@@ -253,38 +253,37 @@
   
   <creature name="worker_female">
     <params>
-      <ico value="worker_fem"/>
+      <ico value="worker_fem"/>    <!--雌性矮人-->
       <ai value="worker"/>
       <height value="50"/>
-      <width value="27"/>
+      <width value="25"/>
       <scale value="1"/>
-      <healt value="8"/>
-      <satiety value="10"/>
-      <walk_speed value="120"/>
-      <climbs_speed value="60"/>
-      <climbs_ladder_speed value="80"/>
-      <radius value="4"/>
-      <fall_height value="3"/>
-      <capacity value="3"/>
-      <rest_healt value="40%"/>      <!--'rest_healt' - мин. процент жизни, чтобы идти отдыхать-->
-      <attack value="0.3"/>      <!--сила атаки без оружия-->
+      <healt value="100"/>    <!--健康度-->
+      <satiety value="100"/>    <!--满意度-->
+      <walk_speed value="500"/>      <!--行走速度-->
+      <climbs_speed value="300"/>    <!--攀爬速度-->
+      <climbs_ladder_speed value="200"/>    <!--爬梯速度-->
+      <radius value="10"/>    <!--探索范围-->
+      <fall_height value="10"/>    <!--跌落高度-->
+      <capacity value="10"/>    <!--携带容量-->
+      <rest_healt value="10%"/>      <!--休息体力比例-->
+      <attack value="10"/>      <!--攻击力-->
       <attack_healt value="0.5"/>      <!--коэф. от макс. жизни, при которой гном может атаковать врагов-->
       <fatal_attack_healt value="0.4"/>      <!--коэф. от макс. жизни, при которой гном может атаковать врагов, если их скорость выше собственной-->
-      <escape_alone_healt value="0.29"/>      <!--коэф. от макс. жизни, при которой гном бежит от врагов, если он бьется один-->
-      <escape_most_healt value="0.19"/>      <!--коэф. от макс. жизни, при которой гном бежит от врагов, если он бьется не один-->
-      <call_help_radius value="12"/>      <!--радиус, в пределах которого гном зовет на помощь других гномов, если вступил в битву-->
-      <water_die_time value="180"/> 
-      <retreat value="3"/>      <!--отбегает на расстояние, при атаке, когда в руках метательное оружие-->
-      <base_armor value="0.18"/>      <!--учавствует в процентном определении защиты для брони-->
+      <escape_alone_healt value="0.3"/>      <!--коэф. от макс. жизни, при которой гном бежит от врагов, если он бьется один-->
+      <escape_most_healt value="0.2"/>      <!--коэф. от макс. жизни, при которой гном бежит от врагов, если он бьется не один-->
+      <call_help_radius value="10"/>      <!--呼叫范围-->
+      <water_die_time value="300"/>    <!--溺水时限-->
+      <retreat value="3"/>      <!--远攻后退距离-->
+      <base_armor value="10"/>      <!--防御力-->
       <magic_stuff_end_bone value="staff_end"/>
       <fishing_pole_end_bone value="pole_end" />
       <resources_end_bone value="for_resurses" />
-      <shot_time value="1.3"/>
+      <shot_time value="1"/>    <!--射击间隔时间-->
       <glow_slots slots="torse_light,arm1_light,arm2_light,head_light" enemy_color="255|0|30" friend_color="0|110|255"/>
       <mp_color_slots value="torse_cloth_color,cloth_arm1_1_color,cloth_arm2_1_color,cloth_torse_color,cloth_arm1_1_color,cloth_arm2_1_color,cloth_body_color,cloth_arm1_1_up_color,cloth_arm1_down_color,cloth_arm2_1_up_color,cloth_arm2_down_color,hat_color"/>
       <gender value="female"/>
       <use_jump_begin/>
-
     </params>
     <!--*****************************************************************-->
     <!--*********** новые параметры скинованных персонажей **************-->
