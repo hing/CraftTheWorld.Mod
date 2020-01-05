@@ -231,10 +231,10 @@
 
   <!--время восстановления единицы маны-->
   <!--<param name="ManaRestoreTime" value="300"/>-->
-  <param name="ManaRestoreTime" value="180"/>
+  <param name="ManaRestoreTime" value="3"/>    <!--魔力值恢复时间-->
 
   <!--максимальное время жизни портала -->
-  <param name="DefaultMagicPortalTime" value="300"/>
+  <param name="DefaultMagicPortalTime" value="3600"/>    <!--魔法传送门持续时间-->
   <!--<param name="DefaultMagicPortalTime" value="30"/>-->
 
   <!--Если нет подходящего инструмента для добычи ресурса и гном оказывается в пределах заданного параметром радиуса (по умолчанию 5) от места добычи и пытается взять задачу, то выводит фразу -->

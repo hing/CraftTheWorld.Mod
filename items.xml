@@ -379,7 +379,7 @@
     </item>
     <!--****************** magic ******************-->
     <!--<item name="mportal"  effect="portal" size="60" properties="magic,magic_portal,time=240,use_mana=2,radius=1,stayin" light="4">-->
-    <item name="mportal" effect="portal" layout="extra_portal" size="80" align="down" properties="magic,magic_portal,time=240,use_mana=2,radius=1,stayin" light="4" pak="">
+    <item name="mportal" effect="portal" layout="extra_portal" size="80" align="down" properties="magic,magic_portal,time=3600,use_mana=1,radius=1,stayin" light="10" pak="">
         <params>
             <param name="decrease_time" value="5" />
         </params>
