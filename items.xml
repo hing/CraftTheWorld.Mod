@@ -745,7 +745,7 @@
             <sound play="bubbles" on_event="Bubbles" />
         </sounds>
     </item>
-    <item name="static_portal" file="gfx\level_tiles\shop_obj\portal" spine="static_portal" spine_ani="on" size="60" offsety="0" properties="static_portal,removable,nodig_under=1,dead_radius_x=1,dead_radius_y=1,use_mana=1,server_entity" pak="">
+    <item name="static_portal" file="gfx\level_tiles\shop_obj\portal" spine="static_portal" spine_ani="on" size="60" offsety="0" properties="static_portal,removable,nodig_under=1,dead_radius_x=1,dead_radius_y=1,use_mana=1,server_entity" light="100" pak="">
         <params>
             <param name="sound_on" value="gate_on" />
             <param name="sound_off" value="gate_off" />
