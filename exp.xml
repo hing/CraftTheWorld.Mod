@@ -6,8 +6,8 @@
     <exp cmd="dig_inclusion" first="5000" value="500" />
     <exp cmd="craft_recipe" first="3000" value="300" />
     <exp cmd="new_recipe" first="5000" value="500" />
-    <exp cmd="kill_animal" first="10000" value="1000" />
-    <exp cmd="kill_monster" first="20000" value="2000" />
+    <exp cmd="kill_animal" first="30000" value="3000" />
+    <exp cmd="kill_monster" first="50000" value="5000" />
   </experience>
   <achievements>
     <achi cmd="crash_block" count="10" first="1000"/>
