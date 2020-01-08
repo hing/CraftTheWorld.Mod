@@ -27,7 +27,7 @@
       <fall_height value="10"/>    <!--跌落高度-->
       <capacity value="10"/>    <!--携带容量-->
       <rest_healt value="10%"/>      <!--休息体力比例-->
-      <attack value="10"/>      <!--攻击力-->
+      <attack value="1"/>      <!--攻击力-->
       <attack_healt value="0.5"/>      <!--коэф. от макс. жизни, при которой гном может атаковать врагов-->
       <fatal_attack_healt value="0.4"/>      <!--коэф. от макс. жизни, при которой гном может атаковать врагов, если их скорость выше собственной-->
       <escape_alone_healt value="0.3"/>      <!--коэф. от макс. жизни, при которой гном бежит от врагов, если он бьется один-->
@@ -35,7 +35,7 @@
       <call_help_radius value="10"/>      <!--呼叫范围-->
       <water_die_time value="300"/>    <!--溺水时限-->
       <retreat value="3"/>      <!--远攻后退距离-->
-      <base_armor value="10"/>      <!--防御力-->
+      <base_armor value="1"/>      <!--防御力-->
       <magic_stuff_end_bone value="staff_end"/>
       <fishing_pole_end_bone value="pole_end" />
       <resources_end_bone value="for_resurses" />
@@ -267,7 +267,7 @@
       <fall_height value="10"/>    <!--跌落高度-->
       <capacity value="10"/>    <!--携带容量-->
       <rest_healt value="10%"/>      <!--休息体力比例-->
-      <attack value="10"/>      <!--攻击力-->
+      <attack value="1"/>      <!--攻击力-->
       <attack_healt value="0.5"/>      <!--коэф. от макс. жизни, при которой гном может атаковать врагов-->
       <fatal_attack_healt value="0.4"/>      <!--коэф. от макс. жизни, при которой гном может атаковать врагов, если их скорость выше собственной-->
       <escape_alone_healt value="0.3"/>      <!--коэф. от макс. жизни, при которой гном бежит от врагов, если он бьется один-->
@@ -275,7 +275,7 @@
       <call_help_radius value="10"/>      <!--呼叫范围-->
       <water_die_time value="300"/>    <!--溺水时限-->
       <retreat value="3"/>      <!--远攻后退距离-->
-      <base_armor value="10"/>      <!--防御力-->
+      <base_armor value="1"/>      <!--防御力-->
       <magic_stuff_end_bone value="staff_end"/>
       <fishing_pole_end_bone value="pole_end" />
       <resources_end_bone value="for_resurses" />
