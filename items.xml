@@ -397,7 +397,7 @@
             <param name="waiting_ani" value="animation" />
         </params>
     </item>
-    <item name="mlight" effect="spell_light" size="60" properties="magic,magic_light,time=180,radius=1,use_mana=1" light="4" pak="" />
+    <item name="mlight" effect="spell_light" size="60" properties="magic,magic_light,time=3600,radius=1,use_mana=1" light="100" pak="" />
     <!--time-время жизни, radius-макс. расстояние от исследоной территории-->
     <item name="mforest" effect="spell_forest" size="60" properties="magic,magic_forest,count=5,range=2-4,use_mana=4" light="4" pak="" />
     <item name="mcompas" effect="compas" effect_scale="0.5" properties="magic,magic_compas,time=180,use_mana=10" light="4" pak="">
