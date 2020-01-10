@@ -137,7 +137,7 @@
 
       <creature name="dwarf_tick" enabled="true"/>
       <creature name="vampire_guard" enabled="true"/>
-      <creature name="worm_dig" enabled="true"/>
+      <creature name="worm_dig" enabled="false"/>
       <creature name="lurker" enabled="true"/>
 
       <creature name="skeleton" enabled="true"/>

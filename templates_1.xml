@@ -34,7 +34,7 @@
             <creature name="vivern_escort" enabled="true"/>
             <creature name="skeleton_heavy" enabled="true"/>
             <creature name="ent" enabled="true"/>
-            <creature name="worm_dig" enabled="true"/>
+            <creature name="worm_dig" enabled="false"/>
             <creature name="reinforced_tick" enabled="true"/>
             <creature name="pirate_skeleton_1" enabled="true"/>
             <creature name="pirate_skeleton_2" enabled="true"/>
@@ -47,14 +47,14 @@
             <creature name="tentacles_weak" enabled="true"/>
             <creature name="tentacles_middle" enabled="true"/>
             <creature name="tentacles_strong" enabled="true"/>
-            <creature name="worm_dig" enabled="true"/>
+            <creature name="worm_dig" enabled="false"/>
             <creature name="lurker" enabled="true"/>
             <creature name="vivern_boss_underworld" enabled="true"/>
         </underground>
         <desert>
             <creature name="dwarf_tick" enabled="true"/>
             <creature name="skeleton_heavy" enabled="true"/>
-            <creature name="worm_dig" enabled="true"/>
+            <creature name="worm_dig" enabled="false"/>
             <creature name="scorpio_sphinx" enabled="true"/>
             <creature name="gorgoyle_mummy" enabled="true"/>
             <creature name="scarab_defender" enabled="true"/>
@@ -64,7 +64,7 @@
         <snow>
             <creature name="dwarf_tick" enabled="true"/>
             <creature name="skeleton_heavy" enabled="true"/>
-            <creature name="worm_dig" enabled="true"/>
+            <creature name="worm_dig" enabled="false"/>
             <creature name="pirate_skeleton_1" enabled="true"/>
             <creature name="pirate_skeleton_2" enabled="true"/>
             <creature name="pirate_boss" enabled="true"/>
@@ -79,7 +79,7 @@
             <creature name="vivern_goblin" enabled="true"/>
             <creature name="vivern_escort" enabled="true"/>
             <creature name="skeleton_heavy" enabled="true"/>
-            <creature name="worm_dig" enabled="true"/>
+            <creature name="worm_dig" enabled="false"/>
             <creature name="reinforced_tick" enabled="true"/>
             <creature name="lurker" enabled="true"/>
       </dlc_temples>
